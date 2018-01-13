@@ -2,7 +2,6 @@
 Pointers to my data structures and algorithms repositories in no particular order. Work in progress.
 
 ## Books
-
 1. [CC](https://github.com/manastalukdar/cci)
 1. [EP](https://github.com/manastalukdar/epi)
 
@@ -14,6 +13,8 @@ Pointers to my data structures and algorithms repositories in no particular orde
 1. [LC](https://github.com/manastalukdar/lec)
 1. [HiT](https://github.com/manastalukdar/hit)
 1. [Gd](https://github.com/manastalukdar/gd)
+
+## Courses
 
 ## Other
 1. [Algorithms-yuanbin](https://github.com/manastalukdar/Algorithms-yuanbin)
