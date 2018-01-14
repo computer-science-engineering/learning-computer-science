@@ -8,11 +8,11 @@ Links to my data structures and algorithms repositories in no particular order. 
 1. [EP](https://github.com/manastalukdar/epi)
 
 ### Sites
-1. [Hacker Rank](https://github.com/manastalukdar/hacker-rank)
-1. [Top Coder](https://github.com/manastalukdar/top-coder)
-1. [Hacker Earth](https://github.com/manastalukdar/hacker-earth)
+1. [HackerRank](https://github.com/manastalukdar/hacker-rank)
+1. [TopCoder](https://github.com/manastalukdar/top-coder)
+1. [HackerEarth](https://github.com/manastalukdar/hacker-earth)
 1. [IB](https://github.com/manastalukdar/ib)
-1. [LC](https://github.com/manastalukdar/lec)
+1. [LeetCode](https://github.com/manastalukdar/leet-code)
 1. [HiT](https://github.com/manastalukdar/hit)
 1. [Glassdoor](https://github.com/manastalukdar/glassdoor)
 
