@@ -19,5 +19,5 @@ Links to my data structures and algorithms repositories in no particular order. 
 ### Courses
 
 ### Other
-1. [Algorithms-yuanbin](https://github.com/manastalukdar/data-structures_algorithms_yuanbin)
+1. [Data Structures and Algorithms - yuanbin](https://github.com/manastalukdar/data-structures_algorithms_yuanbin)
 
