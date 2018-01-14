@@ -17,6 +17,7 @@ Links to my data structures and algorithms repositories in no particular order. 
 1. [Glassdoor](https://github.com/manastalukdar/glassdoor)
 
 ### Courses
+1. [Coursera, Algorithms - 1 (Princeton University)](https://github.com/manastalukdar/coursera_algorithms-1_princeton)
 
 ### Other
 1. [Data Structures and Algorithms - yuanbin](https://github.com/manastalukdar/data-structures_algorithms_yuanbin)
