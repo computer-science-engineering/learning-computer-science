@@ -14,7 +14,7 @@ Links to my data structures and algorithms repositories in no particular order. 
 1. [IB](https://github.com/manastalukdar/ib)
 1. [LC](https://github.com/manastalukdar/lec)
 1. [HiT](https://github.com/manastalukdar/hit)
-1. [Gd](https://github.com/manastalukdar/gd)
+1. [Glassdoor](https://github.com/manastalukdar/glassdoor)
 
 ### Courses
 
