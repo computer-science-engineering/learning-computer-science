@@ -1,0 +1,149 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.1'
+    }
+}
+
+repositories { 
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+ext.junit4Version        = '4.12'
+ext.junitVintageVersion  = '4.12.1'
+ext.junitPlatformVersion = '1.0.1'
+ext.junitJupiterVersion  = '5.0.3'
+ext.log4jVersion         = '2.9.0'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+compileTestJava {
+   sourceCompatibility = 1.8
+   targetCompatibility = 1.8
+   options.compilerArgs += '-parameters'
+}
+
+// http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle
+junitPlatform {
+    details 'tree'
+    platformVersion "${junitPlatformVersion}"
+    filters {
+        engines {
+            // include 'junit-jupiter', 'junit-vintage'
+            // exclude 'custom-engine'
+        }
+        tags {
+            // include 'fast'
+            // exclude 'slow'
+        }
+        // includeClassNamePattern '.*Test'
+        // includeClassNamePatterns '.*Test', '*test2'
+    }
+    // enableStandardTestTask true
+    // reportsDir file('build/test-results/junit-platform') // this is the default
+    // logManager 'org.apache.logging.log4j.jul.LogManager'
+}
+
+dependencies {
+    // JUnit Jupiter API and TestEngine implementation
+	testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+
+    // Enable use of the JUnitPlatform Runner within the IDE
+	testCompile("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
+    // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
+	testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+    
+	// To avoid compiler warnings about @API annotations in JUnit code
+	testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
+    compile('org.apiguardian:apiguardian-api:1.0.0')
+
+    // If you also want to support JUnit 3 and JUnit 4 tests
+	testCompile("junit:junit:${junit4Version}")
+	testRuntime("org.junit.vintage:junit-vintage-engine:${junitVintageVersion}")
+
+    // To use Log4J's LogManager
+	testRuntime("org.apache.logging.log4j:log4j-core:${log4jVersion}")
+	testRuntime("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
+
+    compile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    compile 'junit:junit:4.12'
+}
+
+mainClassName = ' '
+
+/*
+Default:
+src/main/java
+src/main/resources
+src/test/java
+src/test/resources
+*/
+sourceSets {
+   main {
+      java {
+         srcDirs = ['cracking_the_coding_interview/src', 'interview-bit/src']
+      }
+   }
+   test {
+       java {
+           srcDirs = ['cracking_the_coding_interview/src', 'interview-bit/src']
+      }
+   }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+/*
+https://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
+This does not work with junit5 yet: https://github.com/gradle/gradle/issues/1037
+*/
+tasks.withType(Test) {
+    testLogging {        
+        // set options for log level LIFECYCLE
+        events TestLogEvent.FAILED,
+               TestLogEvent.PASSED,
+               TestLogEvent.SKIPPED,
+               TestLogEvent.STANDARD_ERROR,
+               TestLogEvent.STANDARD_OUT
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
+        showStandardStreams true
+
+        // set options for log level DEBUG and INFO
+        debug {
+            events TestLogEvent.STARTED,
+                   TestLogEvent.FAILED,
+                   TestLogEvent.PASSED,
+                   TestLogEvent.SKIPPED,
+                   TestLogEvent.STANDARD_ERROR,
+                   TestLogEvent.STANDARD_OUT
+            exceptionFormat TestExceptionFormat.FULL
+        }
+        info.events = debug.events
+        info.exceptionFormat = debug.exceptionFormat
+        
+        afterSuite { desc, result ->
+        if (!desc.parent) { // will match the outermost suite            
+                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+                def startItem = '|  ', endItem = '  |'
+                def repeatLength = startItem.length() + output.length() + endItem.length()
+                println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
+            }
+        }
+    }
+}

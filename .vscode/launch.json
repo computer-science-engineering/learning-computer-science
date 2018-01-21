@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) Java",
+            "request": "launch",
+            "mainClass": "IX_InterviewQuestions.DataStructures.Ch01_ArraysAndStrings.Q1_IsUnique.Java.Solution2",
+            "args": "",
+            //"preLaunchTask": "gradle-build"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach) Java",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 0
+        }
+    ]
+}

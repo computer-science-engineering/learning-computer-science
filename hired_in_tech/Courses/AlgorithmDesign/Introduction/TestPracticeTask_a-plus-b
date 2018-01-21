@@ -1,0 +1,13 @@
+class Solution {
+    public static int compute_sum(int a, int b) {
+        // Write your solution here
+
+        // This method will be called like that:
+
+        // Solution solution = new Solution();
+
+        // solution.compute_sum(500, -5);
+
+        return a+b;
+    }
+}
