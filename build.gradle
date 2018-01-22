@@ -91,12 +91,12 @@ src/test/resources
 sourceSets {
    main {
       java {
-         srcDirs = ['cracking_the_coding_interview/src', 'interview-bit/src']
+         srcDirs = ['src']
       }
    }
    test {
        java {
-           srcDirs = ['cracking_the_coding_interview/src', 'interview-bit/src']
+           srcDirs = ['src']
       }
    }
 }

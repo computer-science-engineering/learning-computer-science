@@ -1,3 +1,27 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "cSpell.words": [
+        "Adhoc",
+        "Bloomberg",
+        "Combinatorics",
+        "Expedia",
+        "Goldbach’s",
+        "Groupon",
+        "Hashtable",
+        "Healthgroup",
+        "Inplace",
+        "Leet",
+        "Millis",
+        "Nvidia",
+        "Wipro",
+        "atoi",
+        "gitlens",
+        "i'th",
+        "junit",
+        "linkedlist",
+        "maxarea",
+        "println",
+        "restructuredtext",
+        "strstr"
+    ]
 }
