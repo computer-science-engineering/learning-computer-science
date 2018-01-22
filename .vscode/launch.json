@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "IX_InterviewQuestions.DataStructures.Ch01_ArraysAndStrings.Q1_IsUnique.Java.Solution2",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level4_LinkedLists.Problems.PointerMove.ReorderList.Java",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
@@ -18,6 +18,30 @@
             "request": "attach",
             "hostName": "localhost",
             "port": 0
+        },
+        {
+            "name": "Debug (Launch) Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${file}",
+            "cwd": "${workspaceRoot}",
+            "env": {},
+            "envFile": "${workspaceRoot}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ]
+        },
+        {
+            "name": "Attach (Remote Debug) Python",
+            "type": "python",
+            "request": "attach",
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "${workspaceRoot}",
+            "port": 3000,
+            "secret": "my_secret",
+            "host": "localhost"
         }
     ]
 }
