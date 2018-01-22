@@ -21,18 +21,18 @@ public class Solution {
     }
 
     public static ListNode addTwoNumbers(ListNode A, ListNode B) {
-        int carry =0;
+        int carry = 0;
   
         ListNode newHead = new ListNode(0);
-        ListNode p1 = A, p2 = B, p3=newHead;
+        ListNode p1 = A, p2 = B, p3 = newHead;
 
-        while(p1 != null || p2 != null){
-            if(p1 != null){
+        while(p1 != null || p2 != null) {
+            if(p1 != null) {
                 carry += p1.val;
                 p1 = p1.next;
             }
 
-            if(p2 != null){
+            if(p2 != null) {
                 carry += p2.val;
                 p2 = p2.next;
             }
@@ -42,8 +42,8 @@ public class Solution {
             carry /= 10;
         }
 
-        if(carry==1) {
-            p3.next=new ListNode(1);
+        if(carry == 1) {
+            p3.next = new ListNode(1);
         }
 
         return newHead.next;
