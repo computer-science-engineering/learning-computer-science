@@ -7,10 +7,12 @@ public class Solution {
         ListNode a3 = new ListNode(3);
         ListNode a4 = new ListNode(4);
         ListNode a5 = new ListNode(5);
+        ListNode a6 = new ListNode(6);
         a1.next = a2;
         a2.next = a3;
         a3.next = a4;
         a4.next = a5;
+        a5.next = a6;
         ListNode result = reorderList(a1);
         while(result.next != null) {
             System.out.print(result.val + "->");
@@ -47,8 +49,8 @@ public class Solution {
         }
 
         //Start reorder one by one  1->2->3->6->5->4 to 1->6->2->5->3->4
-        p1=A;
-        p2=endFirstHalf.next;
+        p1 = A;
+        p2 = endFirstHalf.next;
         while(p1 != endFirstHalf) {
             endFirstHalf.next = p2.next;
             p2.next = p1.next;
