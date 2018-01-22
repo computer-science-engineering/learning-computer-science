@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D20_Sorting;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -14,6 +13,7 @@ public class Solution {
         String[] parts = input.split(" ");
         int[] a = Solution.SanitizeArray(n, parts);
         Solution.DoJob(n, a);
+        scan.close();
     }
 
     public static void DoJob(int n, int[] a){

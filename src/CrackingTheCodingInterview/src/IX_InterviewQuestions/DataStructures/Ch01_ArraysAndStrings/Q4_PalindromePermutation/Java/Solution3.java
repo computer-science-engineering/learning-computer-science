@@ -26,7 +26,7 @@ public class Solution3 {
     }
 
     /* Check that exactly one bit is set by subtracting one from the
-     * integer and ANDing it with the original integer. */
+     * integer and AND-ing it with the original integer. */
     public static boolean checkExactlyOneBitSet(int bitVector) {
         return (bitVector & (bitVector - 1)) == 0;
     }
@@ -37,7 +37,7 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        String pali = "Rats live on no evil star";
-        System.out.println(isPermutationOfPalindrome(pali));
+        String palindrome = "Rats live on no evil star";
+        System.out.println(isPermutationOfPalindrome(palindrome));
     }
 }

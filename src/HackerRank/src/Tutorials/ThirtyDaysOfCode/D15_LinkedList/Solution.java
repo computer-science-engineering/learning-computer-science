@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D15_LinkedList;
 
-import java.io.*;
 import java.util.*;
 
 class Solution {

@@ -1,10 +1,6 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D16_Exceptions_StringToInteger;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
@@ -17,5 +13,6 @@ public class Solution {
         catch(Exception ex){
             System.out.println("Bad String");
         }
+        in.close();
     }
 }

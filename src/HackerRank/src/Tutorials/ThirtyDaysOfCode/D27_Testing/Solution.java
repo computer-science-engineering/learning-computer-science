@@ -1,7 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D27_Testing;
 
-import java.io.*;
-import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Solution {

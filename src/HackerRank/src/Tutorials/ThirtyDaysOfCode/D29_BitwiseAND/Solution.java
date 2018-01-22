@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D29_BitwiseAND;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -13,6 +12,7 @@ public class Solution {
             int k = scan.nextInt();
             CalculateBitwiseAND(s, k);
         }
+        scan.close();
     }
 
     public static void CalculateBitwiseAND(int s, int k){

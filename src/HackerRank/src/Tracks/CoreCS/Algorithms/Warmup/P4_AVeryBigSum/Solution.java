@@ -1,6 +1,5 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P4_AVeryBigSum;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -16,5 +15,6 @@ public class Solution {
             total += Long.parseLong(numbers[i]);
         }
         System.out.println(total);
+        scan.close();
     }
 }

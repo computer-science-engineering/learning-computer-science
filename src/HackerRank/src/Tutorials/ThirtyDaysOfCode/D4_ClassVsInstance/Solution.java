@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D4_ClassVsInstance;
 
-import java.io.*;
 import java.util.*;
 
 class Person {

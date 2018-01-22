@@ -1,6 +1,5 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P2_SimpleArraySum;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -13,5 +12,6 @@ public class Solution {
             res = res + scan.nextInt();
         }
         System.out.println(res); 
+        scan.close();
     }
 }

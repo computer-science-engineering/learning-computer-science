@@ -1,7 +1,6 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P6_PlusMinus;
 //https://www.hackerrank.com/challenges/plus-minus
 
-import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
 

@@ -9,7 +9,7 @@ public class PrimeSieveBasic {
     public static List<Integer> generatePrimes(int n){
         List<Integer> primes = new ArrayList<>();
         // isPrime.get(p) represents if p is prime or not. Initially, set each to true,
-        // excepting 0 and 1. Then use sieving to eliminate nonprimes.
+        // excepting 0 and 1. Then use sieving to eliminate non-primes.
         List<Boolean> isPrime = new ArrayList<>(Collections.nCopies(n+1, true));
         isPrime.set(0, false);
         isPrime.set(1, false);

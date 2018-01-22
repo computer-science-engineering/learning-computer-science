@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D9_Recursion;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {

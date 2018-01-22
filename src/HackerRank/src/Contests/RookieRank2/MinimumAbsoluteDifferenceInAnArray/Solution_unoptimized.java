@@ -1,10 +1,6 @@
 package HackerRank.src.Contests.RookieRank2.MinimumAbsoluteDifferenceInAnArray;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution_unoptimized {
 
@@ -28,5 +24,6 @@ public class Solution_unoptimized {
             }
         }
         System.out.println(minDiff);
+        in.close();
     }
 }

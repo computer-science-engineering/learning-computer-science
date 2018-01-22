@@ -1,10 +1,6 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P3_CompareTheTriplets;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
@@ -24,5 +20,6 @@ public class Solution {
             }
         }
         System.out.println(aliceScore + " " + bobScore);
+        scan.close();
     }
 }

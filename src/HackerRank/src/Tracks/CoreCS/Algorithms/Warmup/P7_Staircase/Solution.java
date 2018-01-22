@@ -1,7 +1,6 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P7_Staircase;
 //https://www.hackerrank.com/challenges/staircase
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {

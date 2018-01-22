@@ -20,7 +20,7 @@ public class Solution1 {
     }
 
     public static void main(String[] args) {
-        String pali = "Rats live on no evil star";
-        System.out.println(isPermutationOfPalindrome(pali));
+        String palindrome = "Rats live on no evil star";
+        System.out.println(isPermutationOfPalindrome(palindrome));
     }
 }

@@ -1,10 +1,6 @@
 package HackerRank.src.Contests.RookieRank2.HackerRankInAString.Java;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 

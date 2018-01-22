@@ -1,10 +1,6 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D14_Scope;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 
 class Main {
