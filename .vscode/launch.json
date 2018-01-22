@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level4_LinkedLists.Problems.PointerMove.ReorderList.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level4_LinkedLists.Problems.ListMath.AddTwoNumbersAsLists.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
