@@ -28,7 +28,7 @@ public class Solution {
         //System.out.println("************");
         List<int[][]> hourGlassArrays = new ArrayList<>();
         List<Integer> sumArray = new ArrayList<>();
-        int sum = 0;
+        //int sum = 0;
         for (int r = 0; r<rowSize-2; r++){
             for (int c = 0; c<colSize-2; c++){
                 hourGlassArrays.add(GetHourGlass(myArray, r, c));

@@ -9,7 +9,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
-        List<String> result = new ArrayList();
+        List<String> result = new ArrayList<String>();
         scan.nextLine();
         for (int i=0; i< num; i++){
             String temp = ParseString(scan.nextLine());
