@@ -9,7 +9,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int numOfElements = scan.nextInt();
+        //int numOfElements = scan.nextInt();
         int numOfRotations = scan.nextInt();
         int numOfQueries = scan.nextInt();
         scan.nextLine();

@@ -38,12 +38,12 @@ class Main {
 }
 
 class Solution {
-    private Stack stk;
-    private LinkedList queue;
+    private Stack<Character> stk;
+    private LinkedList<Character> queue;
 
     Solution(){
-        stk = new Stack();
-        queue = new LinkedList();
+        stk = new Stack<Character>();
+        queue = new LinkedList<Character>();
     }
 
     public void pushCharacter(char c){
