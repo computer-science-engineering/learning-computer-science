@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D10_BinaryNumbers;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -10,6 +9,7 @@ public class Solution {
         int num = scan.nextInt();
         String binNum = ConvertToBinary(num);
         System.out.println(NumOfConsecutiveOnes(binNum));
+        scan.close();
     }
     
     public static String ConvertToBinary(int n){

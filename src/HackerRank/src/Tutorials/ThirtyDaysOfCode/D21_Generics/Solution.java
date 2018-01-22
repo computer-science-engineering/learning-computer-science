@@ -25,6 +25,7 @@ public class Solution {
         if(Printer.class.getDeclaredMethods().length > 1){
             System.out.println("The Printer class should only have 1 method named printArray.");
         }
+        scanner.close();
     }
 }
 

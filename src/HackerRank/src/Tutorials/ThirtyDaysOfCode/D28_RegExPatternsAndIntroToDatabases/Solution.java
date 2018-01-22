@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D28_RegExPatternsAndIntroToDatabases;
 
-import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,6 +22,7 @@ public class Solution {
         for(int j=0; j<result.size(); j++){
             System.out.println(result.get(j));
         }
+        scan.close();
     }
 
     public static String ParseString(String myString){

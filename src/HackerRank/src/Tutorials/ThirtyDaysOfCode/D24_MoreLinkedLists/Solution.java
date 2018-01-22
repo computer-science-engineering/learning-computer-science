@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D24_MoreLinkedLists;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -16,6 +15,7 @@ public class Solution {
         }
         head=removeDuplicates(head);
         display(head);
+        sc.close();
     }
 
     public static Node removeDuplicates(Node head) {

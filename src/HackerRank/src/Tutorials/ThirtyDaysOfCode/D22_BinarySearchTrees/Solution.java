@@ -14,6 +14,7 @@ public class Solution {
         }
         int height=getHeight(root);
         System.out.println(height);
+        sc.close();
     }
 
     public static Node insert(Node root,int data){

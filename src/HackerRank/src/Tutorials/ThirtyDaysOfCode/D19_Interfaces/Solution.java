@@ -1,7 +1,6 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D19_Interfaces;
 
 import java.util.*;
-import java.io.*;
 
 
 public class Solution {

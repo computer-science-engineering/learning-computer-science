@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D25_RunningTimeAndComplexity;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -17,6 +16,7 @@ public class Solution {
         for(int i=0; i<inputs.size(); i++){
             CheckIfPrime(inputs.get(i));
         }
+        scan.close();
     }
 
     public static void CheckIfPrime(int num){

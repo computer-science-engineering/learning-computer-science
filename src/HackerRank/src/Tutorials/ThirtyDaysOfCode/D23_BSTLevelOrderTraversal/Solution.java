@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D23_BSTLevelOrderTraversal;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -15,6 +14,7 @@ public class Solution {
             root=insert(root,data);
         }
         levelOrder(root);
+        sc.close();
     }
 
     static void levelOrder(Node root){

@@ -1,10 +1,6 @@
 package HackerRank.src.Contests.RookieRank2.KnightLOnAChessboard;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
@@ -21,6 +17,7 @@ public class Solution {
 
             }
         }
+        in.close();
     }
 
     public static int[] GetNextPosition(int[] currentPos, int[] increment){

@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D6_LetsReview;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {

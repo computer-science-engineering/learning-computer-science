@@ -1,7 +1,6 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P5_DiagonalDifference;
 //https://www.hackerrank.com/challenges/diagonal-difference
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {

@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D26_NestedLogic;
 
-import java.io.*;
 import java.util.*;
 
 public class Solution {
@@ -30,5 +29,6 @@ public class Solution {
         }
 
         System.out.println(fine);
+        sc.close();
     }
 }

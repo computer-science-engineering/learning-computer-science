@@ -1,6 +1,5 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D7_Arrays;
 
-import java.io.*;
 import java.util.*;
 
 

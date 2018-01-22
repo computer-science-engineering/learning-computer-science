@@ -1,7 +1,6 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D17_MoreExceptions;
 
 import java.util.*;
-import java.io.*;
 
 
 public class Solution {
@@ -25,11 +24,12 @@ public class Solution {
                 System.out.println(e.getMessage());
             }
         }
+        in.close();
     }
 }
 
 class Calculator {
-    public static int power(int n, int p) throws Exception {
+    public int power(int n, int p) throws Exception {
         if (n<0 || p<0) {
             throw new Exception("n and p should be non-negative");
         }

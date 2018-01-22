@@ -1,10 +1,6 @@
 package HackerRank.src.Tracks.CoreCS.Algorithms.Warmup.P1_SolveMeFirst;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
@@ -22,5 +18,6 @@ public class Solution {
         int sum;
         sum = solveMeFirst(a, b);
         System.out.println(sum);
+        in.close();
    }
 }

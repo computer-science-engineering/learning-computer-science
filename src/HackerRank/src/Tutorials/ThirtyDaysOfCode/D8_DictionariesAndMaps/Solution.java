@@ -1,10 +1,9 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D8_DictionariesAndMaps;
 
 import java.util.*;
-import java.io.*;
 
 class Solution{
-    public static void main(String []argh){
+    public static void main(String [] args){
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         Map<String, Integer> phoneMap = new HashMap<String, Integer>(); 

@@ -8,7 +8,7 @@ public class PermutationArray1 {
     public static void applyPermutation(List<Integer> perm, List<Integer> A){
         for(int i=0; i<A.size(); ++i){
             // Check if the element at index i has not been moved by checking if
-            // perm.get(i) is nonnegative.
+            // perm.get(i) is non-negative.
             int next=i;
             while(perm.get(next) >= 0){
                 Collections.swap(A, i, perm.get(next));

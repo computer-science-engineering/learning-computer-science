@@ -1,10 +1,6 @@
 package HackerRank.src.Contests.RookieRank2.MigratoryBirds;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 
@@ -21,6 +17,7 @@ public class Solution {
             Solution.TrackBird(types[i]);
         }
         System.out.println(Solution.GetMax());
+        in.close();
     }
 
     public static void TrackBird(int i){

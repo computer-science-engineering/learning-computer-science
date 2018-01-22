@@ -1,7 +1,6 @@
 package HackerRank.src.Tutorials.ThirtyDaysOfCode.D18_QueuesAndStacks;
 
 import java.util.*;
-import java.io.*;
 
 
 class Main {

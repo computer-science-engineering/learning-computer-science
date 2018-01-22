@@ -12,6 +12,7 @@ class Main {
         int price=sc.nextInt();
         Book new_novel=new MyBook(title,author,price);
         new_novel.display();
+        sc.close();
     }
 }
 
