@@ -28,6 +28,7 @@ For example, given height = [2,1,5,6,2,3], return 10.
 1. [LeetCode discussion](https://discuss.leetcode.com/topic/7599/o-n-stack-based-java-solution)
 1. [GeeksForGeeks post 1](https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/)
 1. [GeeksForGeeks post 2](https://www.geeksforgeeks.org/largest-rectangle-under-histogram/)
+1. [Jackson Gabbard YouTube video](https://www.youtube.com/watch?v=VNbkzsnllsU)
 
 ### Why the i--
 
