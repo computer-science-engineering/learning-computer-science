@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level4_StacksAndQueues.Examples.GenerateAllParentheses.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level4_StacksAndQueues.Examples.ReverseString.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
