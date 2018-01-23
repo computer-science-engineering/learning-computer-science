@@ -4,7 +4,8 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] input = new int[]{2,1,5,6,2,3};
+        //int[] input = new int[]{2, 1, 5, 6, 2, 3};
+        int[] input = new int[]{6, 2, 5, 4, 5, 1, 6};
         System.out.println(largestRectangleArea(input));
     }
     
@@ -18,7 +19,8 @@ public class Solution {
                 s.push(i);
             } else {
                 int tp = s.pop();
-                maxArea = Math.max(maxArea, A[tp] * (s.isEmpty() ? i : i - 1 - s.peek()));
+                int area = A[tp] * (s.isEmpty() ? i : i - s.peek() - 1);
+                maxArea = Math.max(maxArea, area);
                 i--;
             }
         }
