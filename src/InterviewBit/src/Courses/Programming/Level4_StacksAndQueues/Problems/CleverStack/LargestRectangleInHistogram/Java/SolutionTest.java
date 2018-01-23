@@ -30,4 +30,14 @@ public class SolutionTest {
             assertEquals(expected, actual);
         });
     }
+
+    @Test
+    public void TrivialCase2() {
+        int[] input = new int[]{6, 2, 5, 4, 5, 1, 6};
+        assertTimeout(Duration.ofMillis(200), () -> {
+            int expected = 12;
+            int actual = Solution.largestRectangleArea(input);
+            assertEquals(expected, actual);
+        });
+    }
 }
