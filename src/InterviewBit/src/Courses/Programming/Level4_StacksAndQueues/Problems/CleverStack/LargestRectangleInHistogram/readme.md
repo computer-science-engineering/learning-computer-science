@@ -30,6 +30,6 @@ For example, given height = [2,1,5,6,2,3], return 10.
 1. [GeeksForGeeks post 2](https://www.geeksforgeeks.org/largest-rectangle-under-histogram/)
 1. [Jackson Gabbard YouTube video](https://www.youtube.com/watch?v=VNbkzsnllsU)
 
-### Why the i--
+### Explanation
 
-When we are in the else branch, means the h (height[i]) is smaller than height[s.peek()], what we do is updating the maxArea, but the height[i] is still waiting to be put into the stack, we do i-- to counteract the i++ statement in the for loop, so that we will get the same i in the next time. [ref](https://discuss.leetcode.com/post/123631)
+[This](https://discuss.leetcode.com/post/223558)
