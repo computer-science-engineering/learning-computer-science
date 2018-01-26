@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level4_StacksAndQueues.Problems.CleverStack.LargestRectangleInHistogram.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level4_StacksAndQueues.Problems.StackMath.EvaluateExpression.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
