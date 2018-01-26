@@ -19,7 +19,7 @@ public class Solution {
                 s.push(i);
             } else {
                 int tp = s.pop();
-                int area = A[tp] * (s.isEmpty() ? i : i - s.peek() - 1);
+                int area = A[tp] * (s.isEmpty() ? i : i - s.peek() - 1); // The width = index of right boundary - index of left boundary + 1 = (i - 1) - (stack.peek() + 1) + 1 = i - 1 - stack.peek().
                 maxArea = Math.max(maxArea, area);
                 i--;
             }
