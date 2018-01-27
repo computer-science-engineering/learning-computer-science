@@ -1,4 +1,4 @@
-package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q2_IncrementAnArbitaryPrecisionInteger.Java;
+package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q2_IncrementAnArbitraryPrecisionInteger.Java;
 
 import java.util.ArrayList;
 import java.util.List;

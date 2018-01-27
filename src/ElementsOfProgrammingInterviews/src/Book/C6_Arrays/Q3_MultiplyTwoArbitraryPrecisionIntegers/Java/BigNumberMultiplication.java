@@ -1,4 +1,4 @@
-package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q3_MultipleTwoArbitaryPrecisionIntegers.Java;
+package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q3_MultiplyTwoArbitraryPrecisionIntegers.Java;
 
 import java.util.*;
 

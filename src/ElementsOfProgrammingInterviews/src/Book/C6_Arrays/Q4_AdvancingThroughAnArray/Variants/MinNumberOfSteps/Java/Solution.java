@@ -1,11 +1,9 @@
-package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q4_AdvancingThroughAnArray.Variants.Java;
-
-// http://www.geeksforgeeks.org/minimum-number-of-jumps-to-reach-end-of-a-given-array/
+package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q4_AdvancingThroughAnArray.Variants.MinNumberOfSteps.Java;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MinNumberOfSteps {
+public class Solution {
     public static int minSteps(List<Integer> input){
         int furthestReachSoFar = 0, lastIndex = input.size()-1;
         int result = 0;
