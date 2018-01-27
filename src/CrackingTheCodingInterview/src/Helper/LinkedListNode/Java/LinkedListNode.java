@@ -1,4 +1,4 @@
-package CrackingTheCodingInterview.src.Helper.Java;;
+package CrackingTheCodingInterview.src.Helper.LinkedListNode.Java;;
 
 public class LinkedListNode {
     public LinkedListNode next;

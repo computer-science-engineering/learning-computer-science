@@ -1,6 +1,9 @@
-package CrackingTheCodingInterview.src.Helper.Java;
+package CrackingTheCodingInterview.src.Helper.Utility.Java;
 
 import java.util.*;
+import CrackingTheCodingInterview.src.Helper.LinkedListNode.Java.LinkedListNode;
+import CrackingTheCodingInterview.src.Helper.TreeNode.Java.TreeNode;
+import CrackingTheCodingInterview.src.Helper.Trie.Java.Trie;
 import java.awt.*;
 
 public class Utility {
