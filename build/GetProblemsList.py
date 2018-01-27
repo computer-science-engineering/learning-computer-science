@@ -48,7 +48,7 @@ def update_problems_list(files):
         problem_origin = re.sub('src\\\\', '', item[0]).split('\\')[0]
 
         clean_path = os.path.normpath(item[0]).replace("\\", "/")
-        link = os.path.join(prefix_constant, clean_path)
+        link = os.path.join(clean_path)
         tags = get_tags(clean_path, soup)
         tags_string = ", ".join(tags)
         companies = get_companies(soup)
