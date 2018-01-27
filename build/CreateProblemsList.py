@@ -48,7 +48,7 @@ def create_problems_list(files):
 
         clean_path = os.path.normpath(item[0]).replace("\\", "/")
         link = os.path.join(clean_path)
-        tags = get_tags(clean_path, soup)
+        tags = get_tags(soup)
         tags_string = ", ".join(tags)
         companies = get_companies(soup)
         companies_string = ", ".join(companies)
@@ -58,7 +58,7 @@ def create_problems_list(files):
     print(f"Total problems: {count}")
     file_to_update.close()
        
-def get_tags(path, soup):
+def get_tags(soup):
     result = []
     """
     if "InterviewBit" in path:
@@ -72,9 +72,12 @@ def get_tags(path, soup):
     index = 0
     for content in soup.contents:
         if (hasattr(content, 'text') and "Tags" in content.text):
-            tags = soup.contents[index+2].text  
-            result = tags.split('\n')  
-            result = list(filter(None, result))        
+            tags = soup.contents[index+2]
+            if (tags.name == "h2"):
+                return result
+            else:
+                result = tags.text.split('\n')  
+                result = list(filter(None, result))        
         index = index+1
     return result
 
