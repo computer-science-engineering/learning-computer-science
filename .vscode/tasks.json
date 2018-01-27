@@ -12,6 +12,11 @@
             "label": "gradle-build",
             "type": "shell",
             "command": "gradle build" // -p build 
+        }, 
+        {
+            "label": "create-problems-list",
+            "type": "shell",
+            "command": "python build\\GetProblemsList.py" // -p build 
         }
     ]
 }
