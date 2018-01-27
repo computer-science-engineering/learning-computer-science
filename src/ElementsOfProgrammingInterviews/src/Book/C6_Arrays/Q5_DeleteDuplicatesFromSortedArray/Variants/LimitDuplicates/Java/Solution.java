@@ -1,9 +1,9 @@
-package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q5_DeleteDuplicatesFromSortedArray.Variants.Java;
+package ElementsOfProgrammingInterviews.src.Book.C6_Arrays.Q5_DeleteDuplicatesFromSortedArray.Variants.LimitDuplicates.Java;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LimitDuplicates {
+public class Solution {
     public static int limitDups(List<Integer> input, int m){
         if (input.isEmpty()){
             return 0;

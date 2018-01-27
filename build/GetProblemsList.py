@@ -9,7 +9,6 @@ import re
 import markdown
 from bs4 import BeautifulSoup
 
-prefix_constant = "https://github.com/manastalukdar/learning_computer-science/tree/master/"
 problems_list_file = "problems_list.md"
 
 def find_files():
