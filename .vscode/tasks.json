@@ -12,7 +12,12 @@
             "label": "gradle-build",
             "type": "shell",
             "command": "gradle build" // -p build 
-        }, 
+        },
+        {
+            "label": "gradle-test",
+            "type": "shell",
+            "command": "gradle test" // -p build 
+        },  
         {
             "label": "create-problems-list",
             "type": "shell",
