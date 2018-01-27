@@ -23,7 +23,7 @@ def find_files():
                 result[root] = file
     return result
 
-def update_problems_list(files):
+def create_problems_list(files):
     open(problems_list_file, "w").close() #first clear contents of file
     file_to_update = open(problems_list_file, "a")
     table_header1 = "| Sl. No. | Problem | Origin | Tags | Companies |"
@@ -95,7 +95,7 @@ def get_companies(soup):
 
 def main():
     files = find_files()
-    update_problems_list(files)
+    create_problems_list(files)
 
 if __name__ == '__main__':
     main()
