@@ -1,5 +1,5 @@
 """
-Script to get list of all problems by parsing readme.md from all subdirectories under ..\src\
+Script to get list of all problems by parsing readme.md from all subdirectories under ..\\src\\
 pip install markdown
 pip install BeautifulSoup4
 """
@@ -9,9 +9,10 @@ import re
 import markdown
 from bs4 import BeautifulSoup
 
-problems_list_file = "build/problems_list.md"
+PROBLEMS_LIST_FILE = "build/problems_list.md"
 
 def find_files():
+    """Return the list of files to process."""
     result = {}
     root_dir = "src"
     cwd = os.getcwd()
@@ -24,14 +25,15 @@ def find_files():
     return result
 
 def create_problems_list(files):
-    open(problems_list_file, "w").close() #first clear contents of file
-    file_to_update = open(problems_list_file, "a")
+    """Creates the list of problems in markdown file."""
+    file_to_update = open(PROBLEMS_LIST_FILE, "w")
+    file_to_update.write("# List of problems\n")
+    file_to_update.close()
+    file_to_update = open(PROBLEMS_LIST_FILE, "a")
     table_header1 = "| Sl. No. | Problem | Origin | Categories | Tags | Companies |"
     table_header2 = "|---------|---------|--------|------------|------|-----------|"
     file_to_update.write("\n" + table_header1)
-    file_to_update.write("\n" + table_header2)    
-    #print(table_header1)
-    #print(table_header2)
+    file_to_update.write("\n" + table_header2)
     count = 0
     for item in files.items():
         count = count+1
@@ -58,54 +60,57 @@ def create_problems_list(files):
 
         text = f"| {count} | [{problem_name}]({link}) | {problem_origin} | {categories_string} | {tags_string} | {companies_string} |"
         file_to_update.write("\n" + text)
-        #print(text)
     print(f"Total problems: {count}")
     file_to_update.close()
 
 def get_categories(soup):
+    """Return the categories for a problem."""
     result = []
     index = 0
     for content in soup.contents:
-        if (hasattr(content, 'text') and "Categories" in content.text):
+        if hasattr(content, 'text') and "Categories" in content.text:
             categories = soup.contents[index+2]
-            if (categories.name == "h2"):
+            if categories.name == "h2":
                 return result
             else:
-                result = categories.text.split('\n')  
-                result = list(filter(None, result))        
+                result = categories.text.split('\n')
+                result = list(filter(None, result))
         index = index+1
     return result
-       
+
 def get_tags(soup):
+    """Return the tags for a problem."""
     result = []
     index = 0
     for content in soup.contents:
-        if (hasattr(content, 'text') and "Tags" in content.text):
+        if hasattr(content, 'text') and "Tags" in content.text:
             tags = soup.contents[index+2]
-            if (tags.name == "h2"):
+            if tags.name == "h2":
                 return result
             else:
-                result = tags.text.split('\n')  
-                result = list(filter(None, result))        
+                result = tags.text.split('\n')
+                result = list(filter(None, result))
         index = index+1
     return result
 
 def get_companies(soup):
+    """Return the companies for a problem."""
     result = []
     index = 0
     for content in soup.contents:
-        if (hasattr(content, 'text') and "Companies" in content.text):
+        if hasattr(content, 'text') and "Companies" in content.text:
             companies = soup.contents[index+2]
-            if (companies.name == "h2"):
+            if companies.name == "h2":
                 return result
             else:
-                result = companies.text.split('\n')  
-                result = list(filter(None, result))        
+                result = companies.text.split('\n')
+                result = list(filter(None, result))
         index = index+1
     return result
 
 
 def main():
+    """main method."""
     files = find_files()
     create_problems_list(files)
 
