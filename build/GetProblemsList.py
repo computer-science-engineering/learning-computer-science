@@ -30,8 +30,8 @@ def update_problems_list(files):
     table_header2 = "|---------|---------|--------|------|-----------|"
     file_to_update.write("\n" + table_header1)
     file_to_update.write("\n" + table_header2)    
-    print(table_header1)
-    print(table_header2)
+    #print(table_header1)
+    #print(table_header2)
     count = 0
     for item in files.items():
         count = count+1
@@ -54,7 +54,8 @@ def update_problems_list(files):
         companies_string = ", ".join(companies)
         text = f"| {count} | [{problem_name}]({link}) | {problem_origin} | {tags_string} | {companies_string} |"
         file_to_update.write("\n" + text)
-        print(text)
+        #print(text)
+    print(f"Total problems: {count}")
     file_to_update.close()
        
 def get_tags(path, soup):
