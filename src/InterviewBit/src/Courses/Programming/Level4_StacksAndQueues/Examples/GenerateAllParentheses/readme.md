@@ -12,9 +12,14 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem
 
-## Companies asked in
+## Companies
 
 1. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -26,7 +26,7 @@ A. Return INT_MAX if the number is positive, INT_MIN otherwise.
 Warning : DO NOT USE LIBRARY FUNCTION FOR ATOI.
 If you do, we will disqualify your submission retroactively and give you penalty points.
 
-## Companies asked in
+## Companies
 
 1. Adobe
 1. Nvidia
@@ -36,6 +36,11 @@ If you do, we will disqualify your submission retroactively and give you penalty
 1. Apple
 1. Microsoft
 1. Groupon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -20,10 +20,15 @@ Output : 2
 
 2^3 % 3 = 8 % 3 = 2.
 
-## Companies asked in
+## Companies
 
 1. Google
 1. LinkedIn
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

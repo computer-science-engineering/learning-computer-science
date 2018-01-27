@@ -18,10 +18,15 @@ The largest rectangle is shown in the shaded area, which has area = 10 unit.
 
 For example, given height = [2,1,5,6,2,3], return 10.
 
-## Companies asked in
+## Companies
 
 1. Google
 1. Facebook
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

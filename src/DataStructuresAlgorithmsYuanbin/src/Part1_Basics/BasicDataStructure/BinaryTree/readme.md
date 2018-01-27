@@ -1,4 +1,4 @@
-# Q14 Compute Random Subset
+# Binary Tree
 
 ## Link
 
@@ -8,10 +8,8 @@
 
 ## Categories
 
-1. Book
-
 ## Tags
 
-1. Arrays
+1. Binary Tree
 
 ## Notes

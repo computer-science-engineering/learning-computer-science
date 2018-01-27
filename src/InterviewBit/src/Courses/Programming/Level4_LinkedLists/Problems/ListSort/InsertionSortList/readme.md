@@ -18,10 +18,15 @@ Input : 1 -> 3 -> 2
 
 Return 1 -> 2 -> 3
 
-## Companies asked in
+## Companies
 
 1. Microsoft
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

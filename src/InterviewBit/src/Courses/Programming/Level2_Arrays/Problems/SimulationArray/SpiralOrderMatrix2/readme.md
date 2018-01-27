@@ -22,11 +22,16 @@ You should return the following matrix:
 ]
 ```
 
-## Companies asked in
+## Companies
 
 1. Microsoft
 2. JP Morgan
 3. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

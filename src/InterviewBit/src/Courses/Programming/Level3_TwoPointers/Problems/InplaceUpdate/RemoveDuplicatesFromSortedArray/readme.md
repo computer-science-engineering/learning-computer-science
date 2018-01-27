@@ -20,13 +20,18 @@ Given input array A = [1,1,2],
 
 Your function should return length = 2, and A is now [1,2].
 
-## Companies asked in
+## Companies
 
 1. United Healthgroup
 1. Amazon
 1. Google
 1. Microsoft
 1. Expedia
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

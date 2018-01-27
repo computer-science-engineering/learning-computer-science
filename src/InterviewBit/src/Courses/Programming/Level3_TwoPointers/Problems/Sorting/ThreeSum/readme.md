@@ -17,11 +17,16 @@ and target = 1.
 
 The sum that is closest to the target is 2. (-1 + 2 + 1 = 2)
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Amazon
 1. Microsoft
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -22,11 +22,16 @@ Given m, n satisfy the following condition: 1 ≤ m ≤ n ≤ length of list.
 
 Usually the version often seen in the interviews is reversing the whole linked list which is obviously an easier version of this question.
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Microsoft
 1. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -16,7 +16,12 @@ Return : 2
 2^3 % 3 = 8 % 3 = 2
 ```
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

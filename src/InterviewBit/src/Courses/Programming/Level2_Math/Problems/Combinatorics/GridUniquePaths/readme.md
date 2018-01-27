@@ -26,12 +26,17 @@ Output : 2
               OR  : (0, 0) -> (1, 0) -> (1, 1)
 ```
 
-## Companies asked in
+## Companies
 
 1. Google
 1. Amazon
 1. Microsoft
 1. Adobe
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -22,10 +22,15 @@ GCD(m, n) : 3
 
 NOTE: DO NOT USE LIBRARY FUNCTIONS
 
-## Companies asked in
+## Companies
 
 1. Google
 1. NetApp
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

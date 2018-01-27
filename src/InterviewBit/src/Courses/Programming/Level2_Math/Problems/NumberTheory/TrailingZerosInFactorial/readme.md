@@ -19,11 +19,16 @@ Number of trailing zeros = 1
 So, return 1
 ```
 
-## Companies asked in
+## Companies
 
 1. Microsoft
 1. Jabong
 1. Zillow
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -14,7 +14,12 @@ factors = {1, 2, 3, 6}
 
 Make sure the returned array is sorted.
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

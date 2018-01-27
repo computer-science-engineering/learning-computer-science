@@ -34,7 +34,12 @@ Constraints:
     1 <= B <= 9, 0 <= C <= 1e9 & 0 <= A[i] <= 9
 ```
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

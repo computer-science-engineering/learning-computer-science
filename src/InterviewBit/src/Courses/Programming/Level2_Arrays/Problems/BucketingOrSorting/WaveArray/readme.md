@@ -17,10 +17,15 @@ Another possible answer : [4, 1, 3, 2]
 NOTE : If there are multiple answers possible, return the one thats lexicographically smallest.
 So, in example case, you will return [2, 1, 4, 3]
 
-## Companies asked in
+## Companies
 
 1. Google
 1. Adobe
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

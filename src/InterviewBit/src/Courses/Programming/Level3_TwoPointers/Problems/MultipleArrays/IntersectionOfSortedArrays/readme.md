@@ -28,10 +28,15 @@ Output : [3 5]
 
 NOTE : For the purpose of this problem ( as also conveyed by the sample case ), assume that elements that appear more than once in both arrays should be included multiple times in the final output.
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

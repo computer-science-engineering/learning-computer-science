@@ -21,7 +21,12 @@ The output
 [2 3 4 5 6 1]
 ```
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

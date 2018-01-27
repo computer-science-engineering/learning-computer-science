@@ -6,6 +6,13 @@
 
 ## Description
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Contests
+1. RookieRank 2
+
+## Tags
 
 ## Notes

@@ -34,7 +34,12 @@ public class Solution {
 
 However, the code has a small bug. Correct the bug and submit the code.
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

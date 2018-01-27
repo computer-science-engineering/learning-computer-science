@@ -23,11 +23,16 @@ Input :
 Return the node corresponding to node 3.
 ```
 
-## Companies asked in
+## Companies
 
 1. Amazon
 1. Microsoft
 1. NetApp
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

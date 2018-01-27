@@ -20,12 +20,17 @@ Return : 14
 Input : "XX"
 Output : 20
 
-## Companies asked in
+## Companies
 
 1. Amazon
 1. Facebook
 1. Microsoft
 1. Twitter
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

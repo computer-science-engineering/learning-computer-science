@@ -6,11 +6,16 @@
 
 ## Description
 
-## Companies asked in
+## Companies
 
 1. Google
 2. Facebook
 3. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

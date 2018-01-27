@@ -17,10 +17,15 @@ Given
 
 Your algorithm should run in O(n) time and use constant space.
 
-## Companies asked in
+## Companies
 
 1. Model N
 1. InMobi
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

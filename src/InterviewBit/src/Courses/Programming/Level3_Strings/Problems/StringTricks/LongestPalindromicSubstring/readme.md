@@ -23,11 +23,16 @@ Example :
 Input : "aaaabaaa"
 Output : "aaabaaa"
 
-## Companies asked in
+## Companies
 
 1. Amazon
 1. Microsoft
 1. Groupon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

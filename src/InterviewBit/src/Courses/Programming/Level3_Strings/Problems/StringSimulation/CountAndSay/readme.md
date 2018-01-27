@@ -23,9 +23,14 @@ Example:
 if n = 2,
 the sequence is 11.
 
-## Companies asked in
+## Companies
 
 1. Facebook
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

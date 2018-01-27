@@ -24,12 +24,17 @@ Sample Output
 NOTE: IF the number of elements in the merged array is even, then the median is the average of n / 2 th and n/2 + 1th element. 
 For example, if the array is [1 2 3 4], the median is (2 + 3) / 2.0 = 2.5
 
-## Companies asked in
+## Companies
 
 1. Amazon
 1. VMWare
 1. Google
 1. Microsoft
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -27,10 +27,15 @@ The answer might not fit in an integer, so return your answer % 1000003
 NOTE: 1000003 is a prime number
 NOTE: Assume the number of characters in string < 1000003
 
-## Companies asked in
+## Companies
 
 1. Housing
 1. Zenefits
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -20,9 +20,14 @@ Examples:
 
 **Constraints:** 2 <= N <= 100 000, 0 <= A[i] <= 1 000 000 000
 
-## Companies asked in
+## Companies
 
 1. Booking.com
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 
