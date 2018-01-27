@@ -14,3 +14,11 @@ Example :
 
 Input : 7
 Output : True
+
+## Companies asked in
+
+## Tags
+
+1. Math
+
+## Notes

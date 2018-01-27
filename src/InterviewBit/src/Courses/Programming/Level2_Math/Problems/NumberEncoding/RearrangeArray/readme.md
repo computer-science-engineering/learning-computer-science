@@ -23,6 +23,10 @@ Lets say N = size of the array. Then, following holds true:
 
 1. Facebook
 
+## Tags
+
+1. Math
+
 ## Notes
 
 1. [GfG problem](http://www.geeksforgeeks.org/rearrange-given-array-place/)

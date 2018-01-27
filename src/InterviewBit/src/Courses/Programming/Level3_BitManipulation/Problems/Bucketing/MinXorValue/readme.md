@@ -24,4 +24,8 @@ Examples:
 
 1. Booking.com
 
+## Tags
+
+1. Bit Manipulation
+
 ## Notes

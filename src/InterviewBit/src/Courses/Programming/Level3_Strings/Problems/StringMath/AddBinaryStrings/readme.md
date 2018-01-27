@@ -20,6 +20,10 @@ Return a + b = “111”.
 
 1. Facebook
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Geeks for Geeks problem](http://www.geeksforgeeks.org/add-two-bit-strings/)

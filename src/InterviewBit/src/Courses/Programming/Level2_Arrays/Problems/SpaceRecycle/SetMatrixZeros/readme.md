@@ -25,3 +25,14 @@ On returning, the array A should be :
 1 0 1
 
 Note that this will be evaluated on the extra memory used. Try to minimize the space and time complexity.
+
+## Companies asked in
+
+1. Oracle
+2. Amazon
+
+## Tags
+
+1. Arrays
+
+## Notes

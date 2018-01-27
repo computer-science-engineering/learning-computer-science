@@ -22,6 +22,10 @@ We will retroactively disqualify such submissions and the submissions will incur
 1. Microsoft
 1. Google
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Program Creek](https://www.programcreek.com/2014/05/leetcode-multiply-strings-java/)

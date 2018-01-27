@@ -27,6 +27,10 @@ Explanation: We get the minimum difference for a=5, b=6, c=6 as | max(a,b,c) - m
 
 ## Companies asked in
 
+## Tags
+
+1. Two Pointers
+
 ## Notes
 
 1. [careerCup](https://www.careercup.com/question?id=14805690)

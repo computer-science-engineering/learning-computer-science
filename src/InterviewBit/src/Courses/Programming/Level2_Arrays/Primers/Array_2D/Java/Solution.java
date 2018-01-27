@@ -2,9 +2,6 @@ package InterviewBit.src.Courses.Programming.Level2_Arrays.Primers.Array_2D.Java
 
 import java.util.*;
 
-/**
- * https://www.interviewbit.com/problems/array2d/
-*/
 public class Solution {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

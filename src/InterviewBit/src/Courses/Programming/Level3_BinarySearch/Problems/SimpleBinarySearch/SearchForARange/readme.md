@@ -25,6 +25,10 @@ return [3, 4].
 1. Google
 1. Microsoft
 
+## Tags
+
+1. Binary Search
+
 ## Notes
 
 1. [Life in Code](http://www.lifeincode.net/programming/leetcode-search-for-a-range-java/)

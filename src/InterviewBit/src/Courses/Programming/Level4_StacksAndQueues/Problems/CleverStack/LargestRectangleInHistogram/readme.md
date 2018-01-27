@@ -23,6 +23,11 @@ For example, given height = [2,1,5,6,2,3], return 10.
 1. Google
 1. Facebook
 
+## Tags
+
+1. Stacks
+1. Queues
+
 ## Notes
 
 1. [LeetCode discussion](https://discuss.leetcode.com/topic/7599/o-n-stack-based-java-solution)

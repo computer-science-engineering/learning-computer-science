@@ -30,6 +30,10 @@ f(5, 1) + f(5, 3) + f(5, 5) =
 
 1. Google
 
+## Tags
+
+1. Bit Manipulation
+
 ## Notes
 
 This is similar to InterviewBit.src.Courses.Programming.Level2_Math.Problems.Adhoc.SumOfPairwiseHammingDistance.

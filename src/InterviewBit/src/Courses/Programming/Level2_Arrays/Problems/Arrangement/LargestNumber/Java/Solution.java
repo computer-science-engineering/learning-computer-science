@@ -1,6 +1,3 @@
-/**
- * https://www.interviewbit.com/problems/largest-number/
- */
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.Arrangement.LargestNumber.Java;
 
 import java.util.*;

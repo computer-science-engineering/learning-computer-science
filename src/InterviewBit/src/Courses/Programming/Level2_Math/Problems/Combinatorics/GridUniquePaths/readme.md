@@ -33,6 +33,10 @@ Output : 2
 1. Microsoft
 1. Adobe
 
+## Tags
+
+1. Math
+
 ## Notes
 
 ### Basic algorithm

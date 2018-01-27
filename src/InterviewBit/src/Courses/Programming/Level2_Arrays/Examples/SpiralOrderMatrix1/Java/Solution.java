@@ -2,9 +2,6 @@ package InterviewBit.src.Courses.Programming.Level2_Arrays.Examples.SpiralOrderM
 
 import java.util.*;
 
-/**
- * https://www.interviewbit.com/problems/spiral-order-matrix-i
-*/
 public class Solution {
 
     public static void main(String[] args) {

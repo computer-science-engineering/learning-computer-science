@@ -25,6 +25,10 @@ Lets look at how we can calculate the number of times the array is rotated.
 
 1. Facebook
 
+## Tags
+
+1. Binary Search
+
 ## Notes
 
 1. [YouTube Video](https://www.youtube.com/watch?v=4qjprDkJrjY)

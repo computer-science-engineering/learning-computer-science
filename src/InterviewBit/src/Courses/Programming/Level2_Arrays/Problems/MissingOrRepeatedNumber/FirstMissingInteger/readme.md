@@ -16,3 +16,14 @@ Given
 [-8, -7, -6] returns 1
 
 Your algorithm should run in O(n) time and use constant space.
+
+## Companies asked in
+
+1. Model N
+1. InMobi
+
+## Tags
+
+1. Arrays
+
+## Notes

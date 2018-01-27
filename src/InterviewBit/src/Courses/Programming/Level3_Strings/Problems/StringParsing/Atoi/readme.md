@@ -37,6 +37,10 @@ If you do, we will disqualify your submission retroactively and give you penalty
 1. Microsoft
 1. Groupon
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Program Creek](https://www.programcreek.com/2012/12/leetcode-string-to-integer-atoi/)

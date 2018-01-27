@@ -2,9 +2,6 @@ package InterviewBit.src.Courses.Programming.Level2_Arrays.Primers.Array_impl1.J
 
 import java.util.*;
 
-/**
- * https://www.interviewbit.com/problems/arrayimpl1/
-*/
 public class Solution {
 	public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

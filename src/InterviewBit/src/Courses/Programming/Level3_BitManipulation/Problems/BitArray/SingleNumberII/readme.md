@@ -26,6 +26,10 @@ Output : 4
 1. Google
 1. Amazon
 
+## Tags
+
+1. Bit Manipulation
+
 ## Notes
 
 1. [LeetCode discussion](https://leetcode.com/problems/single-number/discuss/42997)

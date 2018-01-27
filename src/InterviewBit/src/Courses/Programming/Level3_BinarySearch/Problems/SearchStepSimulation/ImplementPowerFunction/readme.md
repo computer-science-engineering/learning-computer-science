@@ -25,6 +25,10 @@ Output : 2
 1. Google
 1. LinkedIn
 
+## Tags
+
+1. Binary Search
+
 ## Notes
 
 1. [Geeks for geeks](http://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/)

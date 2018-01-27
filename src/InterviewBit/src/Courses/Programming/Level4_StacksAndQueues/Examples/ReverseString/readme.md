@@ -16,6 +16,11 @@ Return "cba"
 
 ## Companies asked in
 
+## Tags
+
+1. Stacks
+1. Queues
+
 ## Notes
 
 1. [CodeSchool video](https://www.youtube.com/watch?v=hNP72JdOIgY)

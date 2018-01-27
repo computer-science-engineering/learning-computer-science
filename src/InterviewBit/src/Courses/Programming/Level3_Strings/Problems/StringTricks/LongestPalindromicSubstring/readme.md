@@ -29,6 +29,10 @@ Output : "aaabaaa"
 1. Microsoft
 1. Groupon
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Geeks for Geeks](http://www.geeksforgeeks.org/longest-palindrome-substring-set-1/)

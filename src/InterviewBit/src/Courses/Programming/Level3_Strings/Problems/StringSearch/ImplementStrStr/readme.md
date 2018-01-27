@@ -27,4 +27,8 @@ NOTE: Good clarification questions:
 1. Wipro
 1. Microsoft
 
+## Tags
+
+1. Strings
+
 ## Notes

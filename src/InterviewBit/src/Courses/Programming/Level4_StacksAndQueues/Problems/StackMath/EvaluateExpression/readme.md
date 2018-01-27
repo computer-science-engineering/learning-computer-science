@@ -23,6 +23,11 @@ Valid operators are +, -, *, /. Each operand may be an integer or another expres
 1. Google
 1. Facebook
 
+## Tags
+
+1. Stacks
+1. Queues
+
 ## Notes
 
 1. [ProgramCreek](https://www.programcreek.com/2012/12/leetcode-evaluate-reverse-polish-notation/)

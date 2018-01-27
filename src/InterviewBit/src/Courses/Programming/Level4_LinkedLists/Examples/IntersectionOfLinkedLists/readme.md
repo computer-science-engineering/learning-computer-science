@@ -34,6 +34,10 @@ begin to intersect at node c1.
 1. NetApp
 1. Apache Design
 
+## Tags
+
+1. Linked Lists
+
 ## Notes
 
 1. [MyCodeSchool video](https://www.youtube.com/watch?v=gE0GopCq378)

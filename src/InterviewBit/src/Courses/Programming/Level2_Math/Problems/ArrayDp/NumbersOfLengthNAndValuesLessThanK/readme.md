@@ -36,6 +36,10 @@ Constraints:
 
 ## Companies asked in
 
+## Tags
+
+1. Math
+
 ## Notes
 
 ### Solution approach

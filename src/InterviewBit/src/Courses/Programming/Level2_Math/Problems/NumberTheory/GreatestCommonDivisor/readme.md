@@ -27,6 +27,10 @@ NOTE: DO NOT USE LIBRARY FUNCTIONS
 1. Google
 1. NetApp
 
+## Tags
+
+1. Math
+
 ## Notes
 
 ### Euclid’s Algorithm for the greatest common divisor
