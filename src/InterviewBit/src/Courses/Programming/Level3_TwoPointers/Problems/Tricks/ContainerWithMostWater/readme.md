@@ -31,6 +31,10 @@ So total area = 3 * 2 = 6
 1. Facebook
 1. Google
 
+## Tags
+
+1. Two Pointers
+
 ## Notes
 
 1. [LeetCode article](https://leetcode.com/articles/container-most-water/)

@@ -23,6 +23,10 @@ Return 1 -> 2 -> 3
 1. Microsoft
 1. Google
 
+## Tags
+
+1. Linked Lists
+
 ## Notes
 
 1. [LeetCode discussion](https://discuss.leetcode.com/topic/8570/an-easy-and-clear-way-to-sort-o-1-space)

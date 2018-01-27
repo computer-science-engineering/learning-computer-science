@@ -37,6 +37,10 @@ f(6, 2) + f(6, 4) + f(6, 6) =
 
 1. Google
 
+## Tags
+
+1. Math
+
 ## Notes
 
 1. [SO post](https://stackoverflow.com/questions/21388448/sum-of-xor-values-of-all-pairs)

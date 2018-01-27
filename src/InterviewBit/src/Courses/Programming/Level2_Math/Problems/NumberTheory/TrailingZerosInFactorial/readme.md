@@ -25,6 +25,10 @@ So, return 1
 1. Jabong
 1. Zillow
 
+## Tags
+
+1. Math
+
 ## Notes
 
 1. [Algorithm @ purplemath](http://www.purplemath.com/modules/factzero.htm)

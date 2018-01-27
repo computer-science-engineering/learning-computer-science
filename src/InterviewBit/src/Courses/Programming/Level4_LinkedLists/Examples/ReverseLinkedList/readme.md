@@ -16,6 +16,10 @@ return 5->4->3->2->1->NULL.
 
 ## Companies asked in
 
+## Tags
+
+1. Linked Lists
+
 ## Notes
 
 1. [MyCodeSchool video](https://www.youtube.com/watch?v=sYcOK51hl-A)

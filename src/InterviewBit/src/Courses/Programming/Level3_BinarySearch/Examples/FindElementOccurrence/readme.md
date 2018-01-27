@@ -16,4 +16,8 @@ return 2.
 
 ## Companies asked in
 
+## Tags
+
+1. Binary Search
+
 ## Notes

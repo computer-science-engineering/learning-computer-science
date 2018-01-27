@@ -23,6 +23,10 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2)
 1. Amazon
 1. Microsoft
 
+## Tags
+
+1. Two Pointers
+
 ## Notes
 
 1. [ProgramCreek](https://www.programcreek.com/2013/02/leetcode-3sum-closest-java/)

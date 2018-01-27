@@ -27,6 +27,10 @@ Output : 20
 1. Microsoft
 1. Twitter
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [SO post](https://stackoverflow.com/questions/9073150/converting-roman-numerals-to-decimal)

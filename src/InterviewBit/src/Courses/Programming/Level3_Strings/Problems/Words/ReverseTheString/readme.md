@@ -26,4 +26,8 @@ If there are multiple spaces between words, reduce them to a single space in the
 1. Cisco
 1. Facebook
 
+## Tags
+
+1. Strings
+
 ## Notes

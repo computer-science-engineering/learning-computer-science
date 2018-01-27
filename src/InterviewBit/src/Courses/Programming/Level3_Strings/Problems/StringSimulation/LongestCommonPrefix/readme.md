@@ -32,6 +32,10 @@ The answer would be “a”.
 
 1. Google
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Quora post](https://www.quora.com/What-is-the-easiest-way-to-find-the-longest-common-prefix-or-suffix-of-two-sequences-in-Python)

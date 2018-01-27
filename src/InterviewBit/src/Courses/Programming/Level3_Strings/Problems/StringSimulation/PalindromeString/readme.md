@@ -18,6 +18,10 @@ Return 0 / 1 ( 0 for false, 1 for true ) for this problem
 
 ## Companies asked in
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [blog - java artifacts](http://www.javaartifacts.com/efficient-way-check-string-palindrome/)

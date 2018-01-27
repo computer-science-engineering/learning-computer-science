@@ -24,6 +24,10 @@ DO NOT USE SQRT FUNCTION FROM STANDARD LIBRARY
 1. Amazon
 1. Microsoft
 
+## Tags
+
+1. Binary Search
+
 ## Notes
 
 1. [SO Post](https://stackoverflow.com/questions/3766020/binary-search-to-compute-square-root-java)

@@ -31,6 +31,10 @@ For example, if the array is [1 2 3 4], the median is (2 + 3) / 2.0 = 2.5
 1. Google
 1. Microsoft
 
+## Tags
+
+1. Binary Search
+
 ## Notes
 
 1. [Geeks for Geeks problem](http://www.geeksforgeeks.org/median-of-two-sorted-arrays/)

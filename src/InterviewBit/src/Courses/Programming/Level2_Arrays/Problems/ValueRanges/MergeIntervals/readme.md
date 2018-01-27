@@ -18,3 +18,13 @@ Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] would result in [
 
 This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
 Make sure the returned intervals are also sorted.
+
+## Companies asked in
+
+1. Google
+
+## Tags
+
+1. Arrays
+
+## Notes

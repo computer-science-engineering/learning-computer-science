@@ -21,3 +21,11 @@ public class Solution {
     }
 }
 ```
+
+## Companies asked in
+
+## Tags
+
+1. Math
+
+## Notes

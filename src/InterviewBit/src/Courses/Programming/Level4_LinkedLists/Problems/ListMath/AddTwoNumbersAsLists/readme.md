@@ -24,6 +24,10 @@ So, 7 -> 0 -> 8 -> 0 is not a valid response even though the value is still 807.
 1. Microsoft
 1. Facebook
 
+## Tags
+
+1. Linked Lists
+
 ## Notes
 
 1. [ProgramCreek](https://www.programcreek.com/2012/12/add-two-numbers/)

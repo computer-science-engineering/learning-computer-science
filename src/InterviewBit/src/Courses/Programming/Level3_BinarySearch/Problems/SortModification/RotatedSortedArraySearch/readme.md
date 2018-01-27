@@ -25,6 +25,10 @@ NOTE : Think about the case when there are duplicates. Does your current solutio
 1. Google
 1. Microsoft
 
+## Tags
+
+1. Binary Search
+
 ## Notes
 
 1. [LeetCode article](https://articles.leetcode.com/searching-element-in-rotated-array/)

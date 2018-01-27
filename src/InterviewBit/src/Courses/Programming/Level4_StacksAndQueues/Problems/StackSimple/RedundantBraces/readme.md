@@ -29,4 +29,9 @@ Example:
 
 1. Amazon
 
+## Tags
+
+1. Stacks
+1. Queues
+
 ## Notes

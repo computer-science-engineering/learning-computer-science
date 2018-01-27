@@ -16,6 +16,11 @@ Return 0 / 1 ( 0 for false, 1 for true ) for this problem
 
 1. Amazon
 
+## Tags
+
+1. Stacks
+1. Queues
+
 ## Notes
 
 1. [CodeSchool video](https://www.youtube.com/watch?v=QZOLb0xHB_Q)

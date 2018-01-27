@@ -1,1 +1,0 @@
-https://www.hackerrank.com/contests/rookierank-2/challenges

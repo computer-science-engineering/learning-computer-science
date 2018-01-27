@@ -40,6 +40,10 @@ Return the formatted lines as:
 1. LinkedIn
 1. Google
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Code Sniper](https://codesniper.blogspot.com/2015/03/68-text-justification-leetcode.html)

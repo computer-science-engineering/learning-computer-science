@@ -1,6 +1,3 @@
-/**
- * https://www.interviewbit.com/problems/rotate-matrix/
- */
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.Arrangement.RotateMatrix.Java;
 
 import java.util.*;

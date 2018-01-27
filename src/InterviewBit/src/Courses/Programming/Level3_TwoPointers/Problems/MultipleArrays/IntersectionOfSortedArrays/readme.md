@@ -33,6 +33,10 @@ NOTE : For the purpose of this problem ( as also conveyed by the sample case ), 
 1. Facebook
 1. Google
 
+## Tags
+
+1. Two Pointers
+
 ## Notes
 
 1. [GeeksForGeeks](https://www.geeksforgeeks.org/union-and-intersection-of-two-sorted-arrays-2/)

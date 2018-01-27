@@ -18,6 +18,10 @@ Return : 2
 
 ## Companies asked in
 
+## Tags
+
+1. Backtracking
+
 ## Notes
 
 1. [Modular exponential using recursion - CodeSchool](https://www.youtube.com/watch?v=nO7_qu2kd1Q)

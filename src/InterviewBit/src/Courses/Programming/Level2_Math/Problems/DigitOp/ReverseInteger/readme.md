@@ -27,6 +27,10 @@ Return 0 if the result overflows and does not fit in a 32 bit signed integer
 1. HCL
 1. Bloomberg
 
+## Tags
+
+1. Math
+
 ## Notes
 
 1. [SO post](https://stackoverflow.com/questions/3806126/java-reverse-an-int-value-without-using-array)

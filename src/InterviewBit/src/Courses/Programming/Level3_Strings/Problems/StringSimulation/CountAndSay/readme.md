@@ -27,6 +27,10 @@ the sequence is 11.
 
 1. Facebook
 
+## Tags
+
+1. Strings
+
 ## Notes
 
 1. [Geeks for Geeks](http://www.geeksforgeeks.org/look-and-say-sequence/)

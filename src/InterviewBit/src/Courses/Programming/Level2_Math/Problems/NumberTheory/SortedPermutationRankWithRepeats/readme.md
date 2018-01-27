@@ -32,6 +32,10 @@ NOTE: Assume the number of characters in string < 1000003
 1. Housing
 1. Zenefits
 
+## Tags
+
+1. Math
+
 ## Notes
 
 1. [SO Post](https://stackoverflow.com/questions/22642151/finding-the-ranking-of-a-word-permutations-with-duplicate-letters)

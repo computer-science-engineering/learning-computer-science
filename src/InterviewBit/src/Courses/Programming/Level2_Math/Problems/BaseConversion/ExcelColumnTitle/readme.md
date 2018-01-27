@@ -24,6 +24,10 @@ For example:
 
 1. Amazon
 
+## Tags
+
+1. Math
+
 ## Notes
 
 This is just like base 26 number conversion.

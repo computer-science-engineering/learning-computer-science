@@ -28,6 +28,10 @@ Your function should return length = 2, and A is now [1,2].
 1. Microsoft
 1. Expedia
 
+## Tags
+
+1. Two Pointers
+
 ## Notes
 
 1. [ProgramCreek](https://www.programcreek.com/2013/01/leetcode-remove-duplicates-from-sorted-array-java/)

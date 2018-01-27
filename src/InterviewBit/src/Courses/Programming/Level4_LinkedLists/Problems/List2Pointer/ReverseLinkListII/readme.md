@@ -28,6 +28,10 @@ Usually the version often seen in the interviews is reversing the whole linked l
 1. Microsoft
 1. Amazon
 
+## Tags
+
+1. Linked Lists
+
 ## Notes
 
 1. [LeetCode discussion](https://leetcode.com/problems/reverse-linked-list-ii/discuss/30666)
