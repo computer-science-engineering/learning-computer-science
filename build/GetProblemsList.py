@@ -9,7 +9,7 @@ import re
 import markdown
 from bs4 import BeautifulSoup
 
-problems_list_file = "problems_list.md"
+problems_list_file = "build/problems_list.md"
 
 def find_files():
     result = {}
