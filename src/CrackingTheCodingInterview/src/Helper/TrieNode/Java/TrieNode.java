@@ -1,4 +1,4 @@
-package CrackingTheCodingInterview.src.Helper.Java;
+package CrackingTheCodingInterview.src.Helper.TrieNode.Java;
 
 import java.util.HashMap;
 

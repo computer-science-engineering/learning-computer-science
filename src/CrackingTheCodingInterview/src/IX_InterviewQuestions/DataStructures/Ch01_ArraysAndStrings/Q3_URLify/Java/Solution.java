@@ -1,6 +1,6 @@
 package CrackingTheCodingInterview.src.IX_InterviewQuestions.DataStructures.Ch01_ArraysAndStrings.Q3_URLify.Java;
 
-import CrackingTheCodingInterview.src.Helper.Java.Utility;
+import CrackingTheCodingInterview.src.Helper.Utility.Java.Utility;;
 
 public class Solution {
     // Assume string has sufficient free space at the end

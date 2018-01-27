@@ -1,5 +1,6 @@
-package CrackingTheCodingInterview.src.Helper.Java;
+package CrackingTheCodingInterview.src.Helper.Trie.Java;
 
+import CrackingTheCodingInterview.src.Helper.TrieNode.Java.TrieNode;
 import java.util.ArrayList;
 
 
