@@ -6,6 +6,16 @@
 
 ## Description
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Tracks
+1. CoreCS
+1. Data Structures
+
+## Tags
+
+1. Arrays
 
 ## Notes

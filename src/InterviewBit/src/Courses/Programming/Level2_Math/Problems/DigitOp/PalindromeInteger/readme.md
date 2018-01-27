@@ -21,9 +21,14 @@ Input : 123
 Output : False
 ```
 
-## Companies asked in
+## Companies
 
 1. HCL
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

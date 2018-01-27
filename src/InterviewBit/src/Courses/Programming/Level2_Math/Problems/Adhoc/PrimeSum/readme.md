@@ -26,9 +26,14 @@ and [c, d] is another solution with c <= d, then
 If a < c OR a==c AND b < d.
 ```
 
-## Companies asked in
+## Companies
 
 1. Epic Systems
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

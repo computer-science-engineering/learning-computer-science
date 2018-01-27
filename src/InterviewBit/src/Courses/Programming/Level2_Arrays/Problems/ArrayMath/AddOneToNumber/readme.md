@@ -29,9 +29,14 @@ Q : Can the output have 0’s before the most significant digit? Or in other wor
 A : For the purpose of this question, NO. Even if the input has zeroes before the most significant digit.
 ```
 
-## Companies asked in
+## Companies
 
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

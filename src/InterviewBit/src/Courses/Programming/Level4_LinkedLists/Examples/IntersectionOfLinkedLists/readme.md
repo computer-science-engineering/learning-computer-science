@@ -27,12 +27,17 @@ begin to intersect at node c1.
 * You may assume there are no cycles anywhere in the entire linked structure.
 * Your code should preferably run in O(n) time and use only O(1) memory.
 
-## Companies asked in
+## Companies
 
 1. Amazon
 1. Microsoft
 1. NetApp
 1. Apache Design
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

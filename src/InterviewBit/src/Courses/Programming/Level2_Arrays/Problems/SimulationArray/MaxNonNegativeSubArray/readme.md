@@ -6,9 +6,14 @@
 
 ## Description
 
-## Companies asked in
+## Companies
 
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

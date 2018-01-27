@@ -20,12 +20,17 @@ Return : "XIV"
 
 Note : This question has a lot of scope of clarification from the interviewer. Please take a moment to think of all the needed clarifications and see the expected response using “See Expected Output” For the purpose of this question, https://projecteuler.net/about=roman_numerals has very detailed explanations.
 
-## Companies asked in
+## Companies
 
 1. Amazon
 1. Facebook
 1. Microsoft
 1. Twitter
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -19,9 +19,14 @@ Lets say N = size of the array. Then, following holds true:
 * All elements in the array are in the range [0, N-1]
 * N * N does not overflow for a signed integer
 
-## Companies asked in
+## Companies
 
 1. Facebook
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

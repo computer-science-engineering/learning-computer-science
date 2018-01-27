@@ -21,10 +21,15 @@ Input : [1, 2, 4, 3, 3, 2, 2, 3, 1, 1]
 Output : 4
 ```
 
-## Companies asked in
+## Companies
 
 1. Google
 1. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

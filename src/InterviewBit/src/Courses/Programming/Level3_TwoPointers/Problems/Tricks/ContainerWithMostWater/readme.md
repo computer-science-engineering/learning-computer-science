@@ -26,10 +26,15 @@ Explanation : 5 and 3 are distance 2 apart. So size of the base = 2. Height of c
 So total area = 3 * 2 = 6
 ```
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

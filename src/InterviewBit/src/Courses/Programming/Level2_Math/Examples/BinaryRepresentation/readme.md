@@ -13,7 +13,12 @@ Example:
 if N = 6,
 binary form = 110
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

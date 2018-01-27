@@ -45,6 +45,13 @@ s = hereiamstackerrank: The characters of hackerrank are bolded in the string ab
 
 s = hackerworld does not contain the last three characters of hackerrank, so we print NO on a new line.
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Contests
+1. RookieRank 2
+
+## Tags
 
 ## Notes

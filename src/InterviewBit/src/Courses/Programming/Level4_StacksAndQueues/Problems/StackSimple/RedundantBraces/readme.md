@@ -25,9 +25,14 @@ Example:
 (a + (a + b)) doesn't have have any redundant braces so answer will be 0
 ```
 
-## Companies asked in
+## Companies
 
 1. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

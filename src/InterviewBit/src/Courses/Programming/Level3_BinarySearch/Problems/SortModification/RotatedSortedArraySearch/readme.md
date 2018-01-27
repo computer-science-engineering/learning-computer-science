@@ -19,11 +19,16 @@ Output : 0
 
 NOTE : Think about the case when there are duplicates. Does your current solution work? How does the time complexity change?*
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Google
 1. Microsoft
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

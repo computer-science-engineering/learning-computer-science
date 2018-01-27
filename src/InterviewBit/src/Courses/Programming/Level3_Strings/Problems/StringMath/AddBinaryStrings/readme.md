@@ -16,9 +16,14 @@ b = "11"
 Return a + b = “111”.
 ```
 
-## Companies asked in
+## Companies
 
 1. Facebook
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

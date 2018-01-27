@@ -22,7 +22,12 @@ public class Solution {
 }
 ```
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

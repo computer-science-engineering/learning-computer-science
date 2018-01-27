@@ -26,9 +26,14 @@ f(5, 1) + f(5, 3) + f(5, 5) =
 1 + 2 + 0 = 8
 ```
 
-## Companies asked in
+## Companies
 
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

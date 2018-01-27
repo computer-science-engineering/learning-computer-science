@@ -14,7 +14,12 @@ If the target is not found in the array, return 0
 Given [5, 7, 7, 8, 8, 10] and target value 8,
 return 2.
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

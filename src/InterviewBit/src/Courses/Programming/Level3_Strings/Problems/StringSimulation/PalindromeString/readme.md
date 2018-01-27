@@ -16,7 +16,12 @@ Example:
 
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

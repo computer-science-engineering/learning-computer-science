@@ -33,9 +33,14 @@ f(6, 2) + f(6, 4) + f(6, 6) =
 1 + 1 + 0 = 8
 ```
 
-## Companies asked in
+## Companies
 
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

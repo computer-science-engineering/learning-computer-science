@@ -19,13 +19,18 @@ NOTE: Good clarification questions:
 * What if both haystack and needle are empty?
 * For the purpose of this problem, assume that the return value should be -1 in both cases.
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Amazon
 1. Qualcomm
 1. Wipro
 1. Microsoft
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

@@ -20,9 +20,14 @@ For example:
     28 -> AB
 ```
 
-## Companies asked in
+## Companies
 
 1. Amazon
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

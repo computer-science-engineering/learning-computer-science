@@ -22,10 +22,15 @@ return -321
 
 Return 0 if the result overflows and does not fit in a 32 bit signed integer
 
-## Companies asked in
+## Companies
 
 1. HCL
 1. Bloomberg
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

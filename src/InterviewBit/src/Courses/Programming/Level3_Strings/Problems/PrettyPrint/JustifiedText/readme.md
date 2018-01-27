@@ -35,10 +35,15 @@ Return the formatted lines as:
 
  Note: Each word is guaranteed not to exceed L in length.
 
-## Companies asked in
+## Companies
 
 1. LinkedIn
 1. Google
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

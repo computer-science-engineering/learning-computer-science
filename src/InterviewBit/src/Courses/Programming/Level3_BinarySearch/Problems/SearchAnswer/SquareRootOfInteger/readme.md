@@ -18,11 +18,16 @@ Input : 11
 Output : 3
 DO NOT USE SQRT FUNCTION FROM STANDARD LIBRARY
 
-## Companies asked in
+## Companies
 
 1. Facebook
 1. Amazon
 1. Microsoft
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 

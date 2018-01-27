@@ -15,7 +15,12 @@ Example :
 Input : 7
 Output : True
 
-## Companies asked in
+## Companies
+
+## Categories
+
+1. Courses
+1. Programming
 
 ## Tags
 
