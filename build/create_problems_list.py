@@ -6,10 +6,21 @@ pip install BeautifulSoup4
 
 import os
 import re
+import json
 import markdown
 from bs4 import BeautifulSoup
 
-PROBLEMS_LIST_FILE = "build/problems_list.md"
+PROBLEMS_LIST_FILE_MD = "build/problems_list.md"
+PROBLEMS_LIST_FILE_JSON = "build/problems_list.json"
+
+PROBLEM_NUMBER_STRING = "Number"
+PROBLEM_NAME_STRING = "Problem"
+PROBLEM_LINK_STRING = "Link"
+PROBLEM_ORIGIN_STRING = "Origin"
+PROBLEM_COMPANIES_STRING = "Companies"
+PROBLEM_CATEGORIES_STRING = "Categories"
+PROBLEM_TAGS_STRING = "Tags"
+PROBLEM_LANGUAGES_STRING = "Languages"
 
 def find_files():
     """Return the list of files to process."""
@@ -27,48 +38,65 @@ def find_files():
 
 def create_problems_list(files):
     """Creates the list of problems in markdown file."""
-    file_to_update = open(PROBLEMS_LIST_FILE, "w")
-    file_to_update.write("# List of problems\n")
-    file_to_update.close()
-    file_to_update = open(PROBLEMS_LIST_FILE, "a")
-    table_header1 = "| Sl. No. | Problem | Origin | Companies | Categories | Tags | Languages |"
-    table_header2 = "|---------|---------|--------|-----------|------------|------|-----------|"
-    file_to_update.write("\n" + table_header1)
-    file_to_update.write("\n" + table_header2)
+    file_to_update_md = open(PROBLEMS_LIST_FILE_MD, "w")
+    file_to_update_md.write("# List of problems\n")
+    file_to_update_md.close()
+    file_to_update_md = open(PROBLEMS_LIST_FILE_MD, "a")
+    table_header1 = "| PROBLEM_NUMBER_STRING | PROBLEM_NAME_STRING | PROBLEM_ORIGIN_STRING | PROBLEM_COMPANIES_STRING | PROBLEM_CATEGORIES_STRING | PROBLEM_TAGS_STRING | PROBLEM_LANGUAGES_STRING |"
+    table_header2 = "|-----------------------|---------------------|-----------------------|--------------------------|---------------------------|---------------------|--------------------------|"
+    file_to_update_md.write("\n" + table_header1)
+    file_to_update_md.write("\n" + table_header2)
     count = 0
+    data_all = []
     for item in files.items():
+        data = {}
         count = count+1
+        data[PROBLEM_NUMBER_STRING] = count
+
         input_file = open(item[1][0], mode="r", encoding="utf-8")
         text = input_file.read()
         html = markdown.markdown(text)
         soup = BeautifulSoup(html, 'html.parser')
-
+        
         problem_name = soup.contents[0].text
+        data[PROBLEM_NAME_STRING] = problem_name
 
         problem_origin = re.sub('src\\\\', '', item[0]).split('\\')[0]
         problem_origin = cleanup_problem_origin(problem_origin)
+        data[PROBLEM_ORIGIN_STRING] = problem_origin
 
         clean_path = os.path.normpath(item[0]).replace("\\", "/")
         link = os.path.join(clean_path)
-
-        categories = get_categories(soup)
-        categories_string = ", ".join(categories)
-
-        tags = get_tags(soup)
-        tags_string = ", ".join(tags)
+        data[PROBLEM_LINK_STRING] = link
 
         companies = get_companies(soup)
         companies_string = ", ".join(companies)
+        data[PROBLEM_COMPANIES_STRING] = companies
+
+        categories = get_categories(soup)
+        categories_string = ", ".join(categories)
+        data[PROBLEM_CATEGORIES_STRING] = categories
+
+        tags = get_tags(soup)
+        tags_string = ", ".join(tags)
+        data[PROBLEM_TAGS_STRING] = tags
 
         languages = item[1][1]
         if "Variants" in languages:
             languages.remove("Variants")
         languages_string = ", ".join(languages)
+        data[PROBLEM_LANGUAGES_STRING] = languages
+
+        data_all.append(data)
 
         text = f"| {count} | [{problem_name}]({link}) | {problem_origin} | {companies_string} | {categories_string} | {tags_string} | {languages_string} |"
-        file_to_update.write("\n" + text)
+        file_to_update_md.write("\n" + text)
     print(f"Total problems: {count}")
-    file_to_update.close()
+    json_data = json.dumps(data_all, indent=2)
+    file_to_update_json = open(PROBLEMS_LIST_FILE_JSON, "w")
+    file_to_update_json.write(json_data)
+    file_to_update_json.close()
+    file_to_update_md.close()
 
 def cleanup_problem_origin(problem_origin):
     """Return the cleaned up problem origin."""
