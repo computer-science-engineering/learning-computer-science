@@ -1,4 +1,4 @@
-# D20_Sorting
+# D20 Sorting
 
 ## Link
 

@@ -1,4 +1,4 @@
-# D18_QueuesAndStacks
+# D18 Queues And Stacks
 
 ## Link
 

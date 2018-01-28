@@ -1,4 +1,4 @@
-# D22_BinarySearchTrees
+# D22 Binary Search Trees
 
 ## Link
 

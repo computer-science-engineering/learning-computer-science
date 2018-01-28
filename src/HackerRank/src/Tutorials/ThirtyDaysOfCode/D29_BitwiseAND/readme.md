@@ -1,4 +1,4 @@
-# D29_BitwiseAND
+# D29 Bitwise AND
 
 ## Link
 

@@ -1,4 +1,4 @@
-# D15_LinkedList
+# D15 Linked List
 
 ## Link
 

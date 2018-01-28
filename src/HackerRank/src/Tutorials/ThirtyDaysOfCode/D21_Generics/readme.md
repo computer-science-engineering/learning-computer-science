@@ -1,4 +1,4 @@
-# D21_Generics
+# D21 Generics
 
 ## Link
 

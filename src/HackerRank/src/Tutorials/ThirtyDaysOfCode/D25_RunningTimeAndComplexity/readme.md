@@ -1,4 +1,4 @@
-# D25_RunningTimeAndComplexity
+# D25 Running Time And Complexity
 
 ## Link
 
