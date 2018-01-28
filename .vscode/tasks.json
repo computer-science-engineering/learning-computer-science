@@ -21,7 +21,7 @@
         {
             "label": "create-problems-list",
             "type": "shell",
-            "command": "python build\\CreateProblemsList.py" // -p build 
+            "command": "python build\\create_problems_list.py" // -p build 
         }
     ]
 }
