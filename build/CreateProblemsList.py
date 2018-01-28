@@ -20,8 +20,9 @@ def find_files():
     for root, dirs, files in os.walk(root_dir):
         for file in files:
             if file.endswith(".md"):
+                languages = dirs
                 file = os.path.join(cwd, root, file)
-                result[root] = file
+                result[root] = (file, languages)
     return result
 
 def create_problems_list(files):
@@ -30,14 +31,14 @@ def create_problems_list(files):
     file_to_update.write("# List of problems\n")
     file_to_update.close()
     file_to_update = open(PROBLEMS_LIST_FILE, "a")
-    table_header1 = "| Sl. No. | Problem | Origin | Categories | Tags | Companies |"
-    table_header2 = "|---------|---------|--------|------------|------|-----------|"
+    table_header1 = "| Sl. No. | Problem | Origin | Companies | Categories | Tags | Languages |"
+    table_header2 = "|---------|---------|--------|-----------|------------|------|-----------|"
     file_to_update.write("\n" + table_header1)
     file_to_update.write("\n" + table_header2)
     count = 0
     for item in files.items():
         count = count+1
-        input_file = open(item[1], mode="r", encoding="utf-8")
+        input_file = open(item[1][0], mode="r", encoding="utf-8")
         text = input_file.read()
         html = markdown.markdown(text)
         soup = BeautifulSoup(html, 'html.parser')
@@ -59,19 +60,25 @@ def create_problems_list(files):
         companies = get_companies(soup)
         companies_string = ", ".join(companies)
 
-        text = f"| {count} | [{problem_name}]({link}) | {problem_origin} | {categories_string} | {tags_string} | {companies_string} |"
+        languages = item[1][1]
+        if "Variants" in languages:
+            languages.remove("Variants")
+        languages_string = ", ".join(languages)
+
+        text = f"| {count} | [{problem_name}]({link}) | {problem_origin} | {companies_string} | {categories_string} | {tags_string} | {languages_string} |"
         file_to_update.write("\n" + text)
     print(f"Total problems: {count}")
     file_to_update.close()
 
 def cleanup_problem_origin(problem_origin):
     """Return the cleaned up problem origin."""
-    origins_to_clean = ["ElementsOfProgrammingInterviews", "CrackingTheCodingInterview", "DataStructuresAlgorithmsYuanbin"]
+    origins_to_clean = ["ElementsOfProgrammingInterviews",
+                        "CrackingTheCodingInterview",
+                        "DataStructuresAlgorithmsYuanbin"]
     if problem_origin in origins_to_clean:
         items = filter(None, re.split("([A-Z][^A-Z]*)", problem_origin))
         return " ".join(items)
-    else:
-        return problem_origin
+    return problem_origin
 
 def get_categories(soup):
     """Return the categories for a problem."""
