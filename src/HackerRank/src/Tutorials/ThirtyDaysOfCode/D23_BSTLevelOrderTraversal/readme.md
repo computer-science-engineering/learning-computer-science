@@ -1,4 +1,4 @@
-# D23_BSTLevelOrderTraversal
+# D23 BST Level Order Traversal
 
 ## Link
 

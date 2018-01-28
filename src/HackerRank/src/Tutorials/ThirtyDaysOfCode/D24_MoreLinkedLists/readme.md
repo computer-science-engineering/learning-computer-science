@@ -1,4 +1,4 @@
-# D24_MoreLinkedLists
+# D24 More Linked Lists
 
 ## Link
 

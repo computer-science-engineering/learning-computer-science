@@ -1,4 +1,4 @@
-# D10_BinaryNumbers
+# D10 Binary Numbers
 
 ## Link
 

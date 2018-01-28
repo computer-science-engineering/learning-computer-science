@@ -1,4 +1,4 @@
-# D12_Inheritance
+# D12 Inheritance
 
 ## Link
 

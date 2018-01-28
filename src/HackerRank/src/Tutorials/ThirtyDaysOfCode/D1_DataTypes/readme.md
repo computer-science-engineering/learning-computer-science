@@ -1,4 +1,4 @@
-# D1_DataTypes
+# D1 Data Types
 
 ## Link
 

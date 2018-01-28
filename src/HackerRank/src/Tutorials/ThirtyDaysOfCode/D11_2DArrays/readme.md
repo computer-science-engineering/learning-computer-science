@@ -1,4 +1,4 @@
-# D11_2DArrays
+# D11 2D Arrays
 
 ## Link
 
