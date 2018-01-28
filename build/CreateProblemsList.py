@@ -45,6 +45,7 @@ def create_problems_list(files):
         problem_name = soup.contents[0].text
 
         problem_origin = re.sub('src\\\\', '', item[0]).split('\\')[0]
+        problem_origin = cleanup_problem_origin(problem_origin)
 
         clean_path = os.path.normpath(item[0]).replace("\\", "/")
         link = os.path.join(clean_path)
@@ -62,6 +63,15 @@ def create_problems_list(files):
         file_to_update.write("\n" + text)
     print(f"Total problems: {count}")
     file_to_update.close()
+
+def cleanup_problem_origin(problem_origin):
+    """Return the cleaned up problem origin."""
+    origins_to_clean = ["ElementsOfProgrammingInterviews", "CrackingTheCodingInterview", "DataStructuresAlgorithmsYuanbin"]
+    if problem_origin in origins_to_clean:
+        items = filter(None, re.split("([A-Z][^A-Z]*)", problem_origin))
+        return " ".join(items)
+    else:
+        return problem_origin
 
 def get_categories(soup):
     """Return the categories for a problem."""
