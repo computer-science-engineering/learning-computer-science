@@ -2,14 +2,36 @@
 <html>
     <head>
         <title>Learning Computer Science</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="js/third-party/chosen/chosen.css">
+        <link rel="stylesheet" href="js/third-party/footable/footable-standalone.latest/css/footable.standalone.css">
+        <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.core.standalone.css">
+        <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.paging.css">
+        <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.filtering.css">
+        <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.sorting.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.default.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
     </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='js/app.js'></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/third-party/chosen/chosen.jquery.js" type="text/javascript"></script> 
+    <script src="https://use.fontawesome.com/aee99fcf4a.js"></script>
+    <script src="js/third-party/momentjs/moment.js" type="text/javascript"></script> 
+    <script src="js/third-party/footable/footable-standalone.latest/js/footable.js" type="text/javascript"></script>
+    <script src="js/third-party/footable/footable-components.latest/js/footable.paging.js" type="text/javascript"></script>
+    <script src="js/third-party/footable/footable-components.latest/js/footable.filtering.js" type="text/javascript"></script>
+    <script src="js/third-party/footable/footable-components.latest/js/footable.sorting.js" type="text/javascript"></script>
+    <script src="js/third-party/footable/footable-components.latest/js/footable.state.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js" type="text/javascript"></script>
     <body>
         <br>
         Under Construction<br><br>
-        <!-- <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
-        <div id="showData"></div> -->
+        <!-- <input type="button" onclick="CreateTableFromJson()" value="Create Table From JSON" /> -->
+        <input type="text" id="input-companies"/>
+        <div id="showData">
+            <table class="table" id="problems_list_table" data-paging="true" data-state="true"></table> <!--data-sorting="true"  data-filtering="true"-->
+        </div>
     </body>
 </html>
