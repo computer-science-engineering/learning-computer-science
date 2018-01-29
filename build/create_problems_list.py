@@ -11,7 +11,7 @@ import markdown
 from bs4 import BeautifulSoup
 
 PROBLEMS_LIST_FILE_MD = "build/problems_list.md"
-PROBLEMS_LIST_FILE_JSON = "build/problems_list.json"
+PROBLEMS_LIST_FILE_JSON = "docs/problems_list.json"
 
 PROBLEM_NUMBER_STRING = "Number"
 PROBLEM_NAME_STRING = "Problem"
