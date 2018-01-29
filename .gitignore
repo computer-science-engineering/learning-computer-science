@@ -21,7 +21,6 @@ hs_err_pid*
 !/build/build.gradle
 !/build/.gitkeep
 !/build/*.py
-!/build/problems_list.json
 .settings
 .classpath
 .project
