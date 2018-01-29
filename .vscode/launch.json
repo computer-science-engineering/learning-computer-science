@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Backtracking.Examples.ReverseLinkedListRecursion.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.Subsets.CombinationSum.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
@@ -42,6 +42,20 @@
             "port": 3000,
             "secret": "my_secret",
             "host": "localhost"
+        },
+        {
+            "name": "Launch index.html (disable sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+            "sourceMaps": false,
+            "file": "${workspaceFolder}/docs/index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://127.0.0.1:8081",
+            "webRoot": "${workspaceFolder}/docs"
         }
     ]
 }

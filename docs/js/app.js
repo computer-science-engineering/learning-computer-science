@@ -1,5 +1,8 @@
+json_data = {}
+
 function CreateTableFromJSON() {
-    fetch('problems_list.json')
+    fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/master/docs/problems_list.json',
+        {mode: 'cors'}) //'problems_list.json'
         .then(res => res.json())
         .then(json_data => {
             //json variable contains object with data
@@ -22,9 +25,11 @@ function CreateTableFromJSON() {
             var tr = table.insertRow(-1); // TABLE ROW.
 
             for (var i = 0; i < col.length; i++) {
-                var th = document.createElement("th"); // TABLE HEADER.
-                th.innerHTML = col[i];
-                tr.appendChild(th);
+                if (col[i] != "Link") {
+                    var th = document.createElement("th"); // TABLE HEADER.
+                    th.innerHTML = col[i];
+                    tr.appendChild(th);
+                }
             }
 
             // ADD JSON DATA TO THE TABLE AS ROWS.
