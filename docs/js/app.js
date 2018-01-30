@@ -1,7 +1,7 @@
 /*jslint es6 */
 
-var adapted_json_data = [];
-var filtered_json_data = [];
+var global_adapted_json_data = [];
+var global_filtered_json_data = [];
 var origin = [];
 var companies = [];
 var categories = [];
@@ -19,23 +19,54 @@ var getJson = new Promise(function (resolve, reject) {
 
 //https://stackoverflow.com/a/35318609/420827
 
-function createTable(adapted_json_data) {
+function createTable(json_data) {
     "use strict";
     return new Promise(function (resolve, reject) {
-        var columnJson = $.map(Object.getOwnPropertyNames(adapted_json_data[0]), function (column) {
+        var columnJson = $.map(Object.getOwnPropertyNames(json_data[0]), function (column) {
             return {"name": column,"title": column};
         });
 
         var count;
-        if (adapted_json_data.length === 1 && adapted_json_data[0].Problem === "") {
+        if (json_data.length === 1 && json_data[0].Problem === "") {
             count = 0;
         }
         else {
-            count = adapted_json_data.length;
+            count = json_data.length;
         }
-        createFooTable(columnJson, adapted_json_data)
+
+        stringifyNestedJsonArrays(json_data)
+            .then((nested_arrays_removed_json) => createFooTable(columnJson, nested_arrays_removed_json))
             .then(updateRetrievedCount(count))
             .then(resolve("Success!"));
+    });
+}
+
+function stringifyNestedJsonArrays(json_data) {
+    "use strict";
+    var temp_json_data = JSON.parse(JSON.stringify(json_data));
+    return new Promise(function (resolve, reject) {
+        temp_json_data.forEach(function (element) {
+            if ("Companies" in element) {
+                var temp = element.Companies.join(", ");
+                element.Companies = temp;
+            }
+
+            if ("Categories" in element) {
+                var temp = element.Categories.join(", ");
+                element.Categories = temp;
+            }
+
+            if ("Tags" in element) {
+                var temp = element.Tags.join(", ");
+                element.Tags = temp;
+            }
+
+            if ("Languages" in element) {
+                var temp = element.Languages.join(", ");
+                element.Languages = temp;
+            }
+        });
+        resolve(temp_json_data);
     });
 }
 
@@ -93,8 +124,8 @@ function adaptJsonData(json_data) {
                 });
             }
         });
-        adapted_json_data = json_data;
-        resolve(adapted_json_data);
+        global_adapted_json_data = json_data;
+        resolve(json_data);
     });
 }
 
@@ -228,7 +259,7 @@ function populateFiltersDropdown() {
 function getFilteredJson() {
     "use strict";
     return new Promise(function (resolve, reject) {
-        filtered_json_data = [];
+        global_filtered_json_data = [];
 
         var filter_origins = $('#input-origin').val().split(",");
         var filter_companies = $('#input-companies').val().split(",");
@@ -257,23 +288,23 @@ function getFilteredJson() {
         var and_or_categories_tags = $('#input-and-or-categories-tags').val();
         var and_or_tags_languages = $('#input-and-or-tags-languages').val();
 
-        var temp_origins = _.filter(adapted_json_data, function (item) {
+        var temp_origins = _.filter(global_adapted_json_data, function (item) {
             return isItemInArray(filter_origins, item.Origin);
         });
 
-        var temp_companies = _.filter(adapted_json_data, function (item) {
+        var temp_companies = _.filter(global_adapted_json_data, function (item) {
             return isFilterSatisfied(filter_companies, item.Companies);
         });
 
-        var temp_categories = _.filter(adapted_json_data, function (item) {
+        var temp_categories = _.filter(global_adapted_json_data, function (item) {
             return isFilterSatisfied(filter_categories, item.Categories);
         });
 
-        var temp_tags = _.filter(adapted_json_data, function (item) {
+        var temp_tags = _.filter(global_adapted_json_data, function (item) {
             return isFilterSatisfied(filter_tags, item.Tags);
         });
 
-        var temp_languages = _.filter(adapted_json_data, function (item) {
+        var temp_languages = _.filter(global_adapted_json_data, function (item) {
             return isFilterSatisfied(filter_languages, item.Languages);
         });
 
@@ -314,8 +345,8 @@ function getFilteredJson() {
                 "Languages": []
             }];
         }
-        filtered_json_data = filtered_data;
-        resolve(filtered_json_data);
+        global_filtered_json_data = filtered_data;
+        resolve(global_filtered_json_data);
     });
 }
 
@@ -331,7 +362,7 @@ function applyFilters() {
 function clearFilters() {
     "use strict";
     if (filters_applied) {
-        createTable(adapted_json_data)
+        createTable(global_adapted_json_data)
             .then(function () {
                 $('#input-origin')[0].selectize.clear();
                 $('#input-companies')[0].selectize.clear();
@@ -340,7 +371,7 @@ function clearFilters() {
                 $('#input-languages')[0].selectize.clear();
             })
             .then(function() {
-                filtered_json_data = [];
+                global_filtered_json_data = [];
                 filters_applied = false;
             });
     }
@@ -388,7 +419,7 @@ jQuery(function ($) {
     "use strict";
     getJson
         .then((json_data) => adaptJsonData(json_data))
-        .then((adapted_json_data) => createTable(adapted_json_data))
+        .then((changed_json_data) => createTable(changed_json_data))
         .then(function () {
             populateFiltersDropdown();
         });
