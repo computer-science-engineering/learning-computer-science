@@ -27,7 +27,8 @@ function createTable(adapted_json_data) {
         });
 
         createFooTable(columnJson, adapted_json_data)
-            .then(() => resolve("Success!"));
+            .then(updateRetrievedCount(adapted_json_data.length))
+            .then(resolve("Success!"));
     });
 }
 
@@ -336,6 +337,11 @@ function clearFilters() {
                 filters_applied = false;
             });
     }
+}
+
+function updateRetrievedCount(count) {
+    "use strict";
+    $('#retrieved_count').html("Retrieved Count: " + count);
 }
 
 function isItemInArray(arr, item) {
