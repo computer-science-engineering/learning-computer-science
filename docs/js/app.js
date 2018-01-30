@@ -26,8 +26,15 @@ function createTable(adapted_json_data) {
             return {"name": column,"title": column};
         });
 
+        var count;
+        if (adapted_json_data.length === 1 && adapted_json_data[0].Name !== "") {
+            count = 0;
+        }
+        else {
+            count = adapted_json_data.length;
+        }
         createFooTable(columnJson, adapted_json_data)
-            .then(updateRetrievedCount(adapted_json_data.length))
+            .then(updateRetrievedCount(count))
             .then(resolve("Success!"));
     });
 }
