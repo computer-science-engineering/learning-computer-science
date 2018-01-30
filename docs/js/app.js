@@ -27,7 +27,7 @@ function createTable(adapted_json_data) {
         });
 
         var count;
-        if (adapted_json_data.length === 1 && adapted_json_data[0].Name !== "") {
+        if (adapted_json_data.length === 1 && adapted_json_data[0].Problem === "") {
             count = 0;
         }
         else {
