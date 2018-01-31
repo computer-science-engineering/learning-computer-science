@@ -200,7 +200,7 @@ function populateFiltersDropdown() {
                 ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
                 button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
                 filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
-                filterClearBtn: '<span class="input-group-btn"><button class="btn btn-secondary multiselect-clear-filter" type="button"><i class="fas fa-minus-circle"></i></button></span>'
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
             },
             onChange: function () {
                 var brands = $('#input-origin option:selected');
@@ -209,9 +209,11 @@ function populateFiltersDropdown() {
                     selected.push($(this).val());
                 });
                 if (selected.length === 0) {
-                    $('#filter_query_origin').html(global_filter_query_origin_default);
+                    $('#filter-query-origin').html(global_filter_query_origin_default);
                 } else {
-                    $('#filter_query_origin').html(selected.join(", "));
+                    var arrayAsString = selected.join(", ");
+                    var text = "(" + arrayAsString + ")";
+                    $('#filter-query-origin').html(text);
                 }
             }
         });
@@ -470,7 +472,7 @@ function clearFilters() {
             .then(function () {
                 global_filtered_json_data = [];
                 global_filters_applied = false;
-                $('#filter_query_origin').html(global_filter_query_origin_default);
+                $('#filter-query-origin').html(global_filter_query_origin_default);
             });
     }
 }
