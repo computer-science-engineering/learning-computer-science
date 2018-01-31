@@ -16,12 +16,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src='js/app.min.js'></script>
+    <script src='js/app.js'></script>
     <!-- <script src="https://unpkg.com/lunr/lunr.js"></script> -->
     <!-- <script src="js/third-party/underscore/underscore-min.js" type="text/javascript"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js" type="text/javascript"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <!-- <script src="https://use.fontawesome.com/aee99fcf4a.js"></script> -->
+    <script src="https://use.fontawesome.com/aee99fcf4a.js"></script>
     <script src="js/third-party/momentjs/moment.js" type="text/javascript"></script> 
     <script src="js/third-party/footable/footable-standalone.latest/js/footable.min.js" type="text/javascript"></script>
     <script src="js/third-party/footable/footable-components.latest/js/footable.paging.min.js" type="text/javascript"></script>
@@ -67,16 +66,24 @@
                 </div>                  
             </div>
             <br>
-            <div class="row alert alert-info" role="alert" id="filter_query">
-                <div id="filter_query_origin">any origin</div>
-                <div id="filter_query_and_or_origin_companies">----AND----</div>
-                <div id="filter_query_companies">any company</div>
-                <div id="filter_query_and_or_companies_categories">----AND----</div>
-                <div id="filter_query_categories">any category</div>
-                <div id="filter_query_and_or_categories_tags">----AND----</div>
-                <div id="filter_query_tags">any tag</div>
-                <div id="filter_query_and_or_tags_languages">----AND----</div>
-                <div id="filter_query_languages">any language</div>
+            <div>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filter-query" aria-expanded="false" aria-controls="filter-query">
+                        Show filter query
+                </button>
+            </div>            
+            <br>
+            <div class="row collapse" id="filter-query">
+                <div class="card card-body">
+                    <div id="filter-query-origin">(any origin)</div>
+                    <div id="filter-query-and-or-origin-companies">AND</div>
+                    <div id="filter-query-companies">(any company)</div>
+                    <div id="filter-query-and-or-companie-categories">AND</div>
+                    <div id="filter-query-categories">(any category)</div>
+                    <div id="filter-query-and-or-categories-tags">AND</div>
+                    <div id="filter-query-tags">(any tag)</div>
+                    <div id="filter-query-and-or-tags-languages">AND</div>
+                    <div id="filter-query-languages">(any language)</div>
+                </div>            
             </div>            
             <br>
             <div class="row">
