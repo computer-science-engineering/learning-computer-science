@@ -2,12 +2,23 @@
 
 var global_adapted_json_data = [];
 var global_filtered_json_data = [];
-var origin = [];
-var companies = [];
-var categories = [];
-var tags = [];
-var languages = [];
-var filters_applied = false;
+
+var global_problem_id_string = "Id";
+var global_problem_name_string = "Name";
+var global_problem_link_string = "Link";
+var global_problem_origin_string = "Origin";
+var global_problem_companies_string = "Companies";
+var global_problem_categories_string = "Categories";
+var global_problem_tags_string = "Tags";
+var global_problem_languages_string = "Languages";
+
+
+var global_origin = [];
+var global_companies = [];
+var global_categories = [];
+var global_tags = [];
+var global_languages = [];
+var global_filters_applied = false;
 
 var getJson = new Promise(function (resolve, reject) {
     "use strict";
@@ -57,23 +68,24 @@ function stringifyNestedJsonArrays(json_data) {
     var temp_json_data = JSON.parse(JSON.stringify(json_data));
     return new Promise(function (resolve, reject) {
         temp_json_data.forEach(function (element) {
-            if ("Companies" in element) {
-                var temp = element.Companies.join(", ");
+            var temp;
+            if (element.hasOwnProperty(global_problem_companies_string)) {
+                temp = element.Companies.join(", ");
                 element.Companies = temp;
             }
 
-            if ("Categories" in element) {
-                var temp = element.Categories.join(", ");
+            if (element.hasOwnProperty(global_problem_categories_string)) {
+                temp = element.Categories.join(", ");
                 element.Categories = temp;
             }
 
-            if ("Tags" in element) {
-                var temp = element.Tags.join(", ");
+            if (element.hasOwnProperty(global_problem_tags_string)) {
+                temp = element.Tags.join(", ");
                 element.Tags = temp;
             }
 
-            if ("Languages" in element) {
-                var temp = element.Languages.join(", ");
+            if (element.hasOwnProperty(global_problem_languages_string)) {
+                temp = element.Languages.join(", ");
                 element.Languages = temp;
             }
         });
@@ -85,52 +97,53 @@ function adaptJsonData(json_data) {
     "use strict";
     return new Promise(function (resolve, reject) {
         json_data.forEach(function (element) {
-            if ("Problem" in element && "Link" in element) {
-                var problem_name = element.Problem;
+            if (global_problem_name_string in element && "Link" in element) {
+                var problem_name = element.Name;
                 var link = "https://github.com/manastalukdar/learning_computer-science/tree/master/" + element.Link;
-                element.Problem = "<a href=\"" + link + "\" target=\"_blank\">" + problem_name + "</a>";
+                element.Name = "<a href=\"" + link + "\" target=\"_blank\">" + problem_name + "</a>";
                 delete element.Link;
             }
 
-            if ("Origin" in element) {
+            if (element.hasOwnProperty(global_problem_origin_string)) {
                 var item = element.Origin;
-                if (origin.indexOf(item) === -1) {
-                    origin.push(item);
+                if (global_origin.indexOf(item) === -1) {
+                    global_origin.push(item);
                 }
             }
 
-            if ("Companies" in element) {
-                var values = element.Companies;
+            var values;
+            if (element.hasOwnProperty(global_problem_companies_string)) {
+                values = element.Companies;
                 values.forEach(function (item) {
-                    if (companies.indexOf(item) === -1) {
-                        companies.push(item);
+                    if (global_companies.indexOf(item) === -1) {
+                        global_companies.push(item);
                     }
                 });
             }
 
-            if ("Categories" in element) {
+            if (element.hasOwnProperty(global_problem_categories_string)) {
                 values = element.Categories;
-                values.forEach(function(item) {
-                    if (categories.indexOf(item) === -1) {
-                        categories.push(item);
+                values.forEach(function (item) {
+                    if (global_categories.indexOf(item) === -1) {
+                        global_categories.push(item);
                     }
                 });
             }
 
-            if ("Tags" in element) {
+            if (element.hasOwnProperty(global_problem_tags_string)) {
                 values = element.Tags;
-                values.forEach(function(item) {
-                    if (tags.indexOf(item) === -1) {
-                        tags.push(item);
+                values.forEach(function (item) {
+                    if (global_tags.indexOf(item) === -1) {
+                        global_tags.push(item);
                     }
                 });
             }
 
-            if ("Languages" in element) {
+            if (element.hasOwnProperty(global_problem_languages_string)) {
                 values = element.Languages;
-                values.forEach(function(item) {
-                    if (languages.indexOf(item) === -1) {
-                        languages.push(item);
+                values.forEach(function (item) {
+                    if (global_languages.indexOf(item) === -1) {
+                        global_languages.push(item);
                     }
                 });
             }
@@ -154,7 +167,7 @@ function createFooTable(columns, row_data) {
 function populateFiltersDropdown() {
     "use strict";
     return new Promise(function (resolve, reject) {
-        var items = origin.map(function (x) {
+        var items = global_origin.map(function (x) {
             return {item: x};
         });
         $('#input-origin').selectize({
@@ -167,7 +180,7 @@ function populateFiltersDropdown() {
             sortField: 'item'
         });
 
-        items = companies.map(function (x) {
+        items = global_companies.map(function (x) {
             return {item: x};
         });
         $('#input-companies').selectize({
@@ -180,7 +193,7 @@ function populateFiltersDropdown() {
             sortField: 'item'
         });
 
-        items = categories.map(function (x) {
+        items = global_categories.map(function (x) {
             return {item: x};
         });
         $('#input-categories').selectize({
@@ -193,7 +206,7 @@ function populateFiltersDropdown() {
             sortField: 'item'
         });
 
-        items = tags.map(function (x) {
+        items = global_tags.map(function (x) {
             return {item: x};
         });
         $('#input-tags').selectize({
@@ -206,7 +219,7 @@ function populateFiltersDropdown() {
             sortField: 'item'
         });
 
-        items = languages.map(function (x) {
+        items = global_languages.map(function (x) {
             return {item: x};
         });
         $('#input-languages').selectize({
@@ -321,39 +334,39 @@ function getFilteredJson() {
 
         var filtered_data = [];
         if (and_or_origin_companies === "and") {
-            filtered_data = _.intersectionBy(temp_origins, temp_companies, "Number");
+            filtered_data = _.intersectionBy(temp_origins, temp_companies, "Id");
         } else if (and_or_origin_companies === "or") {
-            filtered_data = _.unionBy(temp_origins, temp_companies, "Number");
+            filtered_data = _.unionBy(temp_origins, temp_companies, "Id");
         }
 
         if (and_or_companies_categories === "and") {
-            filtered_data = _.intersectionBy(filtered_data, temp_categories, "Number");
+            filtered_data = _.intersectionBy(filtered_data, temp_categories, "Id");
         } else if (and_or_companies_categories === "or") {
-            filtered_data = _.unionBy(filtered_data, temp_categories, "Number");
+            filtered_data = _.unionBy(filtered_data, temp_categories, "Id");
         }
 
         if (and_or_categories_tags === "and") {
-            filtered_data = _.intersectionBy(filtered_data, temp_tags, "Number");
+            filtered_data = _.intersectionBy(filtered_data, temp_tags, "Id");
         } else if (and_or_categories_tags === "or") {
-            filtered_data = _.unionBy(filtered_data, temp_tags, "Number");
+            filtered_data = _.unionBy(filtered_data, temp_tags, "Id");
         }
 
         if (and_or_tags_languages === "and") {
-            filtered_data = _.intersectionBy(filtered_data, temp_languages, "Number");
+            filtered_data = _.intersectionBy(filtered_data, temp_languages, "Id");
         } else if (and_or_tags_languages === "or") {
-            filtered_data = _.unionBy(filtered_data, temp_languages, "Number");
+            filtered_data = _.unionBy(filtered_data, temp_languages, "Id");
         }
 
         if (filtered_data.length === 0) {
             filtered_data = [{
-                "Number": "",
-                "Problem": "",
-                "Origin": "",
-                "Link": "",
-                "Companies": [],
-                "Categories": [],
-                "Tags": [],
-                "Languages": []
+                global_problem_id_string: "",
+                global_problem_name_string: "",
+                global_problem_origin_string: "",
+                global_problem_link_string: "",
+                global_problem_companies_string: [],
+                global_problem_categories_string: [],
+                global_problem_tags_string: [],
+                global_problem_languages_string: []
             }];
         }
         global_filtered_json_data = filtered_data;
@@ -366,13 +379,13 @@ function applyFilters() {
     getFilteredJson()
         .then((filtered_json_data) => createTable(filtered_json_data))
         .then(function () {
-            filters_applied = true;
+            global_filters_applied = true;
         });
 }
 
 function clearFilters() {
     "use strict";
-    if (filters_applied) {
+    if (global_filters_applied) {
         createTable(global_adapted_json_data)
             .then(function () {
                 $('#input-origin')[0].selectize.clear();
@@ -381,9 +394,9 @@ function clearFilters() {
                 $('#input-tags')[0].selectize.clear();
                 $('#input-languages')[0].selectize.clear();
             })
-            .then(function() {
+            .then(function () {
                 global_filtered_json_data = [];
-                filters_applied = false;
+                global_filters_applied = false;
             });
     }
 }
