@@ -1,4 +1,8 @@
 /*jslint es6 */
+/*global jQuery */
+/*global $ _ fetch */
+/*jslint browser: true, devel: true */
+/*jslint bitwise: true */
 
 var global_adapted_json_data = [];
 var global_filtered_json_data = [];
@@ -28,40 +32,21 @@ var getJson = new Promise(function (resolve, reject) {
         .then((json_data) => resolve(json_data));
 });
 
-//https://stackoverflow.com/a/35318609/420827
-
-function createTable(json_data) {
+function createFooTable(columns, row_data) {
     "use strict";
     return new Promise(function (resolve, reject) {
-        var columnJson = $.map(Object.getOwnPropertyNames(json_data[0]), function (column) {
-            return {"name": column,"title": column};
+        $('.table').footable({
+            columns: columns,
+            rows: row_data
         });
-
-        var count;
-        if (json_data.length === 1 && json_data[0].Name === "") {
-            count = 0;
-        }
-        else {
-            count = json_data.length;
-        }
-
-        stringifyNestedJsonArrays(json_data)
-            .then((nested_arrays_removed_json) => createFooTable(columnJson, nested_arrays_removed_json))
-            .then(updateRetrievedCount(count))
-            .then(resolve("Success!"));
+        resolve("Success!");
     });
 }
 
-// [
-//     {"name":"id","title":"ID","breakpoints":"xs sm","type":"number","style":{"width":80,"maxWidth":80}},
-//     {"name":"firstName","title":"First Name"},
-//     {"name":"lastName","title":"Last Name"},
-//     {"name":"something","title":"Never seen but always around","visible":false,"filterable":false},
-//     {"name":"jobTitle","title":"Job Title","breakpoints":"xs sm","style":{"maxWidth":200,"overflow":"hidden","textOverflow":"ellipsis","wordBreak":"keep-all","whiteSpace":"nowrap"}},
-//     {"name":"started","title":"Started On","type":"date","breakpoints":"xs sm md","formatString":"MMM YYYY"},
-//     {"name":"dob","title":"Date of Birth","type":"date","breakpoints":"xs sm md","formatString":"DD MMM YYYY"},
-//     {"name":"status","title":"Status"}
-// ]
+function updateRetrievedCount(count) {
+    "use strict";
+    $('#retrieved_count').html("Retrieved Count: " + count);
+}
 
 function stringifyNestedJsonArrays(json_data) {
     "use strict";
@@ -93,11 +78,53 @@ function stringifyNestedJsonArrays(json_data) {
     });
 }
 
+//https://stackoverflow.com/a/35318609/420827
+function createTable(json_data) {
+    "use strict";
+    return new Promise(function (resolve, reject) {
+        var columnJson = $.map(Object.getOwnPropertyNames(json_data[0]), function (column) {
+            if (column === global_problem_id_string) {
+                return {"name": column, "title": column, "breakpoints": "xs sm", "type": "number", "style": {"width": 80, "maxWidth": 80}};
+            } else if (column === global_problem_name_string || column === global_problem_tags_string) {
+                return {"name": column, "title": column};
+            } else if (column === global_problem_categories_string) {
+                return {"name": column, "title": column, "breakpoints": "xs sm"};
+            } else {
+                return {"name": column, "title": column, "breakpoints": "xs sm"};
+            }
+        });
+
+        var count;
+        if (json_data.length === 1 && json_data[0].Name === "") {
+            count = 0;
+        } else {
+            count = json_data.length;
+        }
+
+        stringifyNestedJsonArrays(json_data)
+            .then((nested_arrays_removed_json) => createFooTable(columnJson, nested_arrays_removed_json))
+            .then(updateRetrievedCount(count))
+            .then(resolve("Success!"));
+    });
+}
+
+// [
+//     {"name":"id","title":"ID","breakpoints":"xs sm","type":"number","style":{"width":80,"maxWidth":80}},
+//     {"name":"firstName","title":"First Name"},
+//     {"name":"lastName","title":"Last Name"},
+//     {"name":"something","title":"Never seen but always around","visible":false,"filterable":false},
+//     {"name":"jobTitle","title":"Job Title","breakpoints":"xs sm","style":{"maxWidth":200,"overflow":"hidden","textOverflow":"ellipsis","wordBreak":"keep-all","whiteSpace":"nowrap"}},
+//     {"name":"started","title":"Started On","type":"date","breakpoints":"xs sm md","formatString":"MMM YYYY"},
+//     {"name":"dob","title":"Date of Birth","type":"date","breakpoints":"xs sm md","formatString":"DD MMM YYYY"},
+//     {"name":"status","title":"Status"}
+// ]
+
+
 function adaptJsonData(json_data) {
     "use strict";
     return new Promise(function (resolve, reject) {
         json_data.forEach(function (element) {
-            if (global_problem_name_string in element && "Link" in element) {
+            if (element.hasOwnProperty(global_problem_name_string) && element.hasOwnProperty(global_problem_link_string)) {
                 var problem_name = element.Name;
                 var link = "https://github.com/manastalukdar/learning_computer-science/tree/master/" + element.Link;
                 element.Name = "<a href=\"" + link + "\" target=\"_blank\">" + problem_name + "</a>";
@@ -150,17 +177,6 @@ function adaptJsonData(json_data) {
         });
         global_adapted_json_data = json_data;
         resolve(json_data);
-    });
-}
-
-function createFooTable(columns, row_data) {
-    "use strict";
-    return new Promise(function (resolve, reject) {
-        $('.table').footable({
-            columns: columns,
-            rows: row_data
-        });
-        resolve("Success!");
     });
 }
 
@@ -278,6 +294,31 @@ function populateFiltersDropdown() {
         });
         resolve("Success!");
     });
+}
+
+function isItemInArray(arr, item) {
+    "use strict";
+    if (arr.length === 0) {
+        return true;
+    }
+    return (arr.indexOf(item) !== -1);
+}
+
+function isFilterSatisfied(filters, items) {
+    "use strict";
+    if (filters.length === 0 && items.length === 0) {
+        return true;
+    }
+    if (filters.length === 0 && items.length !== 0) {
+        return true;
+    }
+    if (filters.length !== 0 && items.length === 0) {
+        return false;
+    }
+    if (filters.length !== 0 && items.length !== 0) {
+        var result = _.intersection(items, filters).length > 0;
+        return result;
+    }
 }
 
 function getFilteredJson() {
@@ -400,46 +441,15 @@ function clearFilters() {
             });
     }
 }
-
-function updateRetrievedCount(count) {
-    "use strict";
-    $('#retrieved_count').html("Retrieved Count: " + count);
-}
-
-function isItemInArray(arr, item) {
-    "use strict";
-    if (arr.length === 0) {
-        return true;
-    }
-    return (arr.indexOf(item) !== -1);
-}
-
-function isFilterSatisfied(filters, items) {
-    "use strict";
-    if (filters.length === 0 && items.length === 0) {
-        return true;
-    }
-    if (filters.length === 0 && items.length !== 0) {
-        return true;
-    }
-    if (filters.length !== 0 && items.length === 0) {
-        return false;
-    }
-    if (filters.length !== 0 && items.length !== 0) {
-        var result = _.intersection(items, filters).length > 0;
-        return result;
-    }
-}
-
 //https://github.com/lodash/lodash/issues/1743#issuecomment-298957228
-function arrayContainsArray (superset, subset) {
+function arrayContainsArray(superset, subset) {
     "use strict";
     return subset.every(function (value) {
         return (superset.indexOf(value) >= 0);
     });
-  }
+}
 
-jQuery(function ($) {
+jQuery(function () {
     "use strict";
     getJson
         .then((json_data) => adaptJsonData(json_data))
