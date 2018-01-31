@@ -38,7 +38,7 @@ function createTable(json_data) {
         });
 
         var count;
-        if (json_data.length === 1 && json_data[0].Problem === "") {
+        if (json_data.length === 1 && json_data[0].Name === "") {
             count = 0;
         }
         else {
@@ -69,22 +69,22 @@ function stringifyNestedJsonArrays(json_data) {
     return new Promise(function (resolve, reject) {
         temp_json_data.forEach(function (element) {
             var temp;
-            if (element.hasOwnProperty(global_problem_companies_string)) {
+            if (element.hasOwnProperty(global_problem_companies_string) && element[global_problem_companies_string] !== "") {
                 temp = element.Companies.join(", ");
                 element.Companies = temp;
             }
 
-            if (element.hasOwnProperty(global_problem_categories_string)) {
+            if (element.hasOwnProperty(global_problem_categories_string) && element[global_problem_categories_string] !== "") {
                 temp = element.Categories.join(", ");
                 element.Categories = temp;
             }
 
-            if (element.hasOwnProperty(global_problem_tags_string)) {
+            if (element.hasOwnProperty(global_problem_tags_string) && element[global_problem_tags_string] !== "") {
                 temp = element.Tags.join(", ");
                 element.Tags = temp;
             }
 
-            if (element.hasOwnProperty(global_problem_languages_string)) {
+            if (element.hasOwnProperty(global_problem_languages_string) && element[global_problem_languages_string] !== "") {
                 temp = element.Languages.join(", ");
                 element.Languages = temp;
             }
