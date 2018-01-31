@@ -359,14 +359,14 @@ function getFilteredJson() {
 
         if (filtered_data.length === 0) {
             filtered_data = [{
-                global_problem_id_string: "",
-                global_problem_name_string: "",
-                global_problem_origin_string: "",
-                global_problem_link_string: "",
-                global_problem_companies_string: [],
-                global_problem_categories_string: [],
-                global_problem_tags_string: [],
-                global_problem_languages_string: []
+                [global_problem_id_string]: "",
+                [global_problem_name_string]: "",
+                [global_problem_origin_string]: "",
+                [global_problem_link_string]: "",
+                [global_problem_companies_string]: [],
+                [global_problem_categories_string]: [],
+                [global_problem_tags_string]: [],
+                [global_problem_languages_string]: []
             }];
         }
         global_filtered_json_data = filtered_data;
