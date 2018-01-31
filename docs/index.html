@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.paging.min.css">
         <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.filtering.min.css">
         <link rel="stylesheet" href="js/third-party/footable/footable-components.latest/css/footable.sorting.min.css">
+        <link rel="stylesheet" href="js/third-party/bootstrap-multiselect/css/bootstrap-multiselect.css">  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.default.min.css">
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,13 +20,15 @@
     <!-- <script src="https://unpkg.com/lunr/lunr.js"></script> -->
     <!-- <script src="js/third-party/underscore/underscore-min.js" type="text/javascript"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js" type="text/javascript"></script>
-    <script src="https://use.fontawesome.com/aee99fcf4a.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- <script src="https://use.fontawesome.com/aee99fcf4a.js"></script> -->
     <script src="js/third-party/momentjs/moment.js" type="text/javascript"></script> 
     <script src="js/third-party/footable/footable-standalone.latest/js/footable.min.js" type="text/javascript"></script>
     <script src="js/third-party/footable/footable-components.latest/js/footable.paging.min.js" type="text/javascript"></script>
     <script src="js/third-party/footable/footable-components.latest/js/footable.filtering.min.js" type="text/javascript"></script>
     <script src="js/third-party/footable/footable-components.latest/js/footable.sorting.min.js" type="text/javascript"></script>
     <script src="js/third-party/footable/footable-components.latest/js/footable.state.min.js" type="text/javascript"></script>
+    <script src="js/third-party/bootstrap-multiselect/js/bootstrap-multiselect.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js" type="text/javascript"></script>
     <body>
         <div class="container">
@@ -33,7 +36,7 @@
             <br>
             <div class="row">
                 <div class="col">
-                    <input type="text" id="input-origin" placeholder="Origin"/>
+                    <input type="text" id="input-origin" placeholder="Origin" multiple="multiple"/>
                 </div>
                 <div class="col">
                     <input type="text" id="input-and-or-origin-companies" value="and" placeholder="and/or"/>
@@ -63,6 +66,18 @@
                     <input type="text" id="input-languages" placeholder="Languages"/>
                 </div>                  
             </div>
+            <br>
+            <div class="row alert alert-info" role="alert" id="filter_query">
+                <div id="filter_query_origin">any origin</div>
+                <div id="filter_query_and_or_origin_companies">----AND----</div>
+                <div id="filter_query_companies">any company</div>
+                <div id="filter_query_and_or_companies_categories">----AND----</div>
+                <div id="filter_query_categories">any category</div>
+                <div id="filter_query_and_or_categories_tags">----AND----</div>
+                <div id="filter_query_tags">any tag</div>
+                <div id="filter_query_and_or_tags_languages">----AND----</div>
+                <div id="filter_query_languages">any language</div>
+            </div>            
             <br>
             <div class="row">
                 <div class="col-sm">

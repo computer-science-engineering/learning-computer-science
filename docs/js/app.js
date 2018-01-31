@@ -1,6 +1,6 @@
 /*jslint es6 */
 /*global jQuery */
-/*global $ _ fetch */
+/*global $ _ fetch this*/
 /*jslint browser: true, devel: true */
 /*jslint bitwise: true */
 
@@ -16,6 +16,8 @@ var global_problem_categories_string = "Categories";
 var global_problem_tags_string = "Tags";
 var global_problem_languages_string = "Languages";
 
+var global_filter_query_origin_default = "any origin";
+
 
 var global_origin = [];
 var global_companies = [];
@@ -26,8 +28,8 @@ var global_filters_applied = false;
 
 var getJson = new Promise(function (resolve, reject) {
     "use strict";
-    //fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/master/docs/problems_list.json', {mode: 'cors'})// uncomment for debugging
-    fetch('problems_list.json', {mode: 'no-cors'})
+    fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/master/docs/problems_list.json', {mode: 'cors'})// uncomment for debugging
+    //fetch('problems_list.json', {mode: 'no-cors'})
         .then((res) => res.json())
         .then((json_data) => resolve(json_data));
 });
@@ -184,22 +186,52 @@ function populateFiltersDropdown() {
     "use strict";
     return new Promise(function (resolve, reject) {
         var items = global_origin.map(function (x) {
-            return {item: x};
+            return {label: x, title: x, value: x};
         });
-        $('#input-origin').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item'
+        $('#input-origin').multiselect({
+            //includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            numberDisplayed: 0,
+            nonSelectedText: 'Origin',
+            maxHeight: 300,
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button class="btn btn-secondary multiselect-clear-filter" type="button"><i class="fas fa-minus-circle"></i></button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-origin option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter_query_origin').html(global_filter_query_origin_default);
+                } else {
+                    $('#filter_query_origin').html(selected.join(", "));
+                }
+            }
         });
+        $('#input-origin').multiselect('dataprovider', items);
+
+        // $('#input-origin').selectize({
+        //     delimiter: ',',
+        //     persist: false,
+        //     options: items,
+        //     labelField: "item",
+        //     valueField: "item",
+        //     searchField: 'item',
+        //     sortField: 'item'
+        // });
 
         items = global_companies.map(function (x) {
             return {item: x};
         });
         $('#input-companies').selectize({
+            plugins: ['remove_button'],
             delimiter: ',',
             persist: false,
             options: items,
@@ -429,7 +461,7 @@ function clearFilters() {
     if (global_filters_applied) {
         createTable(global_adapted_json_data)
             .then(function () {
-                $('#input-origin')[0].selectize.clear();
+                //$('#input-origin')[0].selectize.clear();
                 $('#input-companies')[0].selectize.clear();
                 $('#input-categories')[0].selectize.clear();
                 $('#input-tags')[0].selectize.clear();
@@ -438,6 +470,7 @@ function clearFilters() {
             .then(function () {
                 global_filtered_json_data = [];
                 global_filters_applied = false;
+                $('#filter_query_origin').html(global_filter_query_origin_default);
             });
     }
 }
