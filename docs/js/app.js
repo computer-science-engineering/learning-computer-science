@@ -211,7 +211,7 @@ function populateFiltersDropdown() {
                 if (selected.length === 0) {
                     $('#filter-query-origin').html(global_filter_query_origin_default);
                 } else {
-                    var arrayAsString = selected.join(", ");
+                    var arrayAsString = selected.join(" OR ");
                     var text = "(" + arrayAsString + ")";
                     $('#filter-query-origin').html(text);
                 }
@@ -463,6 +463,8 @@ function clearFilters() {
     if (global_filters_applied) {
         createTable(global_adapted_json_data)
             .then(function () {
+                $('#input-origin').multiselect('deselectAll', false);
+                $('#input-origin').multiselect('updateButtonText');
                 //$('#input-origin')[0].selectize.clear();
                 $('#input-companies')[0].selectize.clear();
                 $('#input-categories')[0].selectize.clear();
