@@ -1,9 +1,16 @@
+jdk:
+  - oraclejdk9
+  - openjdk9
+
 matrix:
   include:
     - language: python
       python: 3.6
 
     - language: java
-      jdk: 
+      jdk:
         - oraclejdk9
         - openjdk9
+      after_script:
+        - gradle test
+        - python build/create_problems_list.py
