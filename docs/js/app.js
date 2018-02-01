@@ -17,6 +17,11 @@ var global_problem_tags_string = "Tags";
 var global_problem_languages_string = "Languages";
 
 var global_filter_query_origin_default = "any origin";
+var global_filter_query_companies_default = "any origin";
+var global_filter_query_categories_default = "any origin";
+var global_filter_query_tags_default = "any origin";
+var global_filter_query_languages_default = "any origin";
+var global_filter_query_and_or_default = "AND";
 
 
 var global_origin = [];
@@ -28,8 +33,8 @@ var global_filters_applied = false;
 
 var getJson = new Promise(function (resolve, reject) {
     "use strict";
-    fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/master/docs/problems_list.json', {mode: 'cors'})// uncomment for debugging
-    //fetch('problems_list.json', {mode: 'no-cors'})
+    //fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/master/docs/problems_list.json', {mode: 'cors'})// uncomment for debugging
+    fetch('problems_list.json', {mode: 'no-cors'})
         .then((res) => res.json())
         .then((json_data) => resolve(json_data));
 });
@@ -86,13 +91,11 @@ function createTable(json_data) {
     return new Promise(function (resolve, reject) {
         var columnJson = $.map(Object.getOwnPropertyNames(json_data[0]), function (column) {
             if (column === global_problem_id_string) {
-                return {"name": column, "title": column, "breakpoints": "xs sm", "type": "number", "style": {"width": 80, "maxWidth": 80}};
-            } else if (column === global_problem_name_string || column === global_problem_tags_string) {
+                return {"name": column, "title": column, "breakpoints": "xs", "type": "number", "style": {"width": 80, "maxWidth": 80}};
+            } else if (column === global_problem_name_string || column === global_problem_companies_string || column === global_problem_tags_string) {
                 return {"name": column, "title": column};
-            } else if (column === global_problem_categories_string) {
-                return {"name": column, "title": column, "breakpoints": "xs sm"};
             } else {
-                return {"name": column, "title": column, "breakpoints": "xs sm"};
+                return {"name": column, "title": column, "breakpoints": "xs"};
             }
         });
 
@@ -189,7 +192,7 @@ function populateFiltersDropdown() {
             return {label: x, title: x, value: x};
         });
         $('#input-origin').multiselect({
-            //includeSelectAllOption: true,
+            includeSelectAllOption: true,
             enableFiltering: true,
             enableCaseInsensitiveFiltering: true,
             numberDisplayed: 0,
@@ -219,113 +222,250 @@ function populateFiltersDropdown() {
         });
         $('#input-origin').multiselect('dataprovider', items);
 
-        // $('#input-origin').selectize({
-        //     delimiter: ',',
-        //     persist: false,
-        //     options: items,
-        //     labelField: "item",
-        //     valueField: "item",
-        //     searchField: 'item',
-        //     sortField: 'item'
-        // });
-
         items = global_companies.map(function (x) {
-            return {item: x};
+            return {label: x, title: x, value: x};
         });
-        $('#input-companies').selectize({
-            plugins: ['remove_button'],
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item'
+        $('#input-companies').multiselect({
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            numberDisplayed: 0,
+            nonSelectedText: 'Companies',
+            maxHeight: 300,
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-companies option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-companies').html(global_filter_query_companies_default);
+                } else {
+                    var arrayAsString = selected.join(" OR ");
+                    var text = "(" + arrayAsString + ")";
+                    $('#filter-query-companies').html(text);
+                }
+            }
         });
+        $('#input-companies').multiselect('dataprovider', items);
 
         items = global_categories.map(function (x) {
-            return {item: x};
+            return {label: x, title: x, value: x};
         });
-        $('#input-categories').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item'
+        $('#input-categories').multiselect({
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            numberDisplayed: 0,
+            nonSelectedText: 'Categories',
+            maxHeight: 300,
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-categories option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-categories').html(global_filter_query_categories_default);
+                } else {
+                    var arrayAsString = selected.join(" OR ");
+                    var text = "(" + arrayAsString + ")";
+                    $('#filter-query-categories').html(text);
+                }
+            }
         });
+        $('#input-categories').multiselect('dataprovider', items);
 
         items = global_tags.map(function (x) {
-            return {item: x};
+            return {label: x, title: x, value: x};
         });
-        $('#input-tags').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item'
+        $('#input-tags').multiselect({
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            numberDisplayed: 0,
+            nonSelectedText: 'Tags',
+            maxHeight: 300,
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-tags option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-tags').html(global_filter_query_tags_default);
+                } else {
+                    var arrayAsString = selected.join(" OR ");
+                    var text = "(" + arrayAsString + ")";
+                    $('#filter-query-tags').html(text);
+                }
+            }
         });
+        $('#input-tags').multiselect('dataprovider', items);
 
         items = global_languages.map(function (x) {
-            return {item: x};
+            return {label: x, title: x, value: x};
         });
-        $('#input-languages').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item'
+        $('#input-languages').multiselect({
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            numberDisplayed: 0,
+            nonSelectedText: 'Languages',
+            maxHeight: 300,
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-languages option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-languages').html(global_filter_query_languages_default);
+                } else {
+                    var arrayAsString = selected.join(" OR ");
+                    var text = "(" + arrayAsString + ")";
+                    $('#filter-query-languages').html(text);
+                }
+            }
         });
+        $('#input-languages').multiselect('dataprovider', items);
 
         var items_temp = ["and", "or"];
         items = items_temp.map(function (x) {
-            return {item: x};
+            return {label: x, title: x, value: x};
         });
-        $('#input-and-or-origin-companies').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item',
-            maxItems: 1
+        $('#input-and-or-origin-companies').multiselect({
+            nonSelectedText: 'and/or',
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-and-or-origin-companies option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-and-or-origin-companies').html(global_filter_query_and_or_default);
+                } else {
+                    var arrayAsString = selected.join("");
+                    $('#filter-query-and-or-origin-companies').html(arrayAsString);
+                }
+            }
         });
-        $('#input-and-or-companies-categories').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item',
-            maxItems: 1
+        $('#input-and-or-origin-companies').multiselect('dataprovider', items);
+        $('#input-and-or-origin-companies').multiselect('select', ['and']);
+
+        $('#input-and-or-companies-categories').multiselect({
+            nonSelectedText: 'and/or',
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-and-or-companies-categories option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-and-or-companies-categories').html(global_filter_query_and_or_default);
+                } else {
+                    var arrayAsString = selected.join("");
+                    $('#filter-query-and-or-companies-categories').html(arrayAsString);
+                }
+            }
         });
-        $('#input-and-or-categories-tags').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item',
-            maxItems: 1
+        $('#input-and-or-companies-categories').multiselect('dataprovider', items);
+        $('#input-and-or-companies-categories').multiselect('select', ['and']);
+
+        $('#input-and-or-categories-tags').multiselect({
+            nonSelectedText: 'and/or',
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-and-or-categories-tags option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-and-or-categories-tags').html(global_filter_query_and_or_default);
+                } else {
+                    var arrayAsString = selected.join("");
+                    $('#filter-query-and-or-companies-categories').html(arrayAsString);
+                }
+            }
         });
-        $('#input-and-or-tags-languages').selectize({
-            delimiter: ',',
-            persist: false,
-            options: items,
-            labelField: "item",
-            valueField: "item",
-            searchField: 'item',
-            sortField: 'item',
-            maxItems: 1
+        $('#input-and-or-categories-tags').multiselect('dataprovider', items);
+        $('#input-and-or-categories-tags').multiselect('select', ['and']);
+
+        $('#input-and-or-tags-languages').multiselect({
+            nonSelectedText: 'and/or',
+            templates: {
+                li: '<li><a class="dropdown-item"><label class="m-0 pl-2 pr-0"></label></a></li>',
+                ul: ' <ul class="multiselect-container dropdown-menu p-1 m-0"></ul>',
+                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown" data-flip="false"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                filter: '<li class="multiselect-item filter"><div class="input-group m-0"><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button type="button" class="btn btn-secondary multiselect-clear-filter">&times;</button></span>'
+            },
+            onChange: function () {
+                var brands = $('#input-and-or-tags-languages option:selected');
+                var selected = [];
+                $(brands).each(function () {
+                    selected.push($(this).val());
+                });
+                if (selected.length === 0) {
+                    $('#filter-query-and-or-tags-languages').html(global_filter_query_and_or_default);
+                } else {
+                    var arrayAsString = selected.join("");
+                    $('#filter-query-and-or-tags-languages').html(arrayAsString);
+                }
+            }
         });
+        $('#input-and-or-tags-languages').multiselect('dataprovider', items);
+        $('#input-and-or-tags-languages').multiselect('select', ['and']);
+
         resolve("Success!");
     });
 }
@@ -359,12 +499,41 @@ function getFilteredJson() {
     "use strict";
     return new Promise(function (resolve, reject) {
         global_filtered_json_data = [];
-
-        var filter_origins = $('#input-origin').val().split(",");
-        var filter_companies = $('#input-companies').val().split(",");
-        var filter_categories = $('#input-categories').val().split(",");
-        var filter_tags = $('#input-tags').val().split(",");
-        var filter_languages = $('#input-languages').val().split(",");
+        var filter_origins = [];
+        var temp = $('#input-origin option:selected').map(function (a, item) {
+            return item.value;
+        });
+        _.forEach(temp, function (item) {
+            filter_origins.push(item);
+        });
+        var filter_companies = [];
+        temp = $('#input-companies option:selected').map(function (a, item) {
+            return item.value;
+        });
+        _.forEach(temp, function (item) {
+            filter_companies.push(item);
+        });
+        var filter_categories = [];
+        temp = $('#input-categories option:selected').map(function (a, item) {
+            return item.value;
+        });
+        _.forEach(temp, function (item) {
+            filter_categories.push(item);
+        });
+        var filter_tags = [];
+        temp = $('#input-tags option:selected').map(function (a, item) {
+            return item.value;
+        });
+        _.forEach(temp, function (item) {
+            filter_tags.push(item);
+        });
+        var filter_languages = [];
+        temp = $('#input-languages option:selected').map(function (a, item) {
+            return item.value;
+        });
+        _.forEach(temp, function (item) {
+            filter_languages.push(item);
+        });
 
         if (filter_origins.length === 1 && filter_origins[0] === "") {
             filter_origins = [];
@@ -382,10 +551,22 @@ function getFilteredJson() {
             filter_languages = [];
         }
 
-        var and_or_origin_companies = $('#input-and-or-origin-companies').val();
-        var and_or_companies_categories = $('#input-and-or-companies-categories').val();
-        var and_or_categories_tags = $('#input-and-or-categories-tags').val();
-        var and_or_tags_languages = $('#input-and-or-tags-languages').val();
+        temp = $('#input-and-or-origin-companies option:selected').map(function (a, item) {
+            return item.value;
+        });
+        var and_or_origin_companies = _.join(temp, "");
+        temp = $('#input-and-or-companies-categories option:selected').map(function (a, item) {
+            return item.value;
+        });
+        var and_or_companies_categories = _.join(temp, "");
+        temp = $('#input-and-or-categories-tags option:selected').map(function (a, item) {
+            return item.value;
+        });
+        var and_or_categories_tags = _.join(temp, "");
+        temp = $('#input-and-or-tags-languages option:selected').map(function (a, item) {
+            return item.value;
+        });
+        var and_or_tags_languages = _.join(temp, "");
 
         var temp_origins = _.filter(global_adapted_json_data, function (item) {
             return isItemInArray(filter_origins, item.Origin);
@@ -465,11 +646,22 @@ function clearFilters() {
             .then(function () {
                 $('#input-origin').multiselect('deselectAll', false);
                 $('#input-origin').multiselect('updateButtonText');
-                //$('#input-origin')[0].selectize.clear();
-                $('#input-companies')[0].selectize.clear();
-                $('#input-categories')[0].selectize.clear();
-                $('#input-tags')[0].selectize.clear();
-                $('#input-languages')[0].selectize.clear();
+                $('#input-companies').multiselect('deselectAll', false);
+                $('#input-companies').multiselect('updateButtonText');
+                $('#input-categories').multiselect('deselectAll', false);
+                $('#input-categories').multiselect('updateButtonText');
+                $('#input-tags').multiselect('deselectAll', false);
+                $('#input-tags').multiselect('updateButtonText');
+                $('#input-languages').multiselect('deselectAll', false);
+                $('#input-languages').multiselect('updateButtonText');
+                $('#input-and-or-origin-companies').multiselect('deselectAll', false);
+                $('#input-and-or-origin-companies').multiselect('updateButtonText');
+                $('#input-and-or-companies-categories').multiselect('deselectAll', false);
+                $('#input-and-or-companies-categories').multiselect('updateButtonText');
+                $('#input-and-or-categories-tags').multiselect('deselectAll', false);
+                $('#input-and-or-categories-tags').multiselect('updateButtonText');
+                $('#input-and-or-tags-languages').multiselect('deselectAll', false);
+                $('#input-and-or-tags-languages').multiselect('updateButtonText');
             })
             .then(function () {
                 global_filtered_json_data = [];
