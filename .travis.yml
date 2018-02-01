@@ -1,0 +1,9 @@
+matrix:
+  include:
+    - language: python
+      python: 3.6
+
+    - language: java
+      jdk: 
+        - oraclejdk9
+        - openjdk9
