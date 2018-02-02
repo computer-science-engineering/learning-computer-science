@@ -6,6 +6,10 @@ jdk:
   # https://github.com/travis-ci/travis-ci/issues/8975
   #- oraclejdk9
 
+before_install:
+  - sudo apt-get update -y
+  - sudo apt-get install python3.6 -y
+
 script:
   - gradle test
   - python3 --version
