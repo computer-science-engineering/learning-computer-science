@@ -33,7 +33,7 @@ var global_filters_applied = false;
 
 var getJson = new Promise(function (resolve, reject) {
     "use strict";
-    //fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/master/docs/problems_list.json', {mode: 'cors'})// uncomment for debugging
+    //fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/gh-pages/problems_list.json', {mode: 'cors'})// uncomment for debugging
     fetch('problems_list.json', {mode: 'no-cors'})
         .then((res) => res.json())
         .then((json_data) => resolve(json_data));
