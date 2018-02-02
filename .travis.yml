@@ -7,8 +7,9 @@ jdk:
   #- oraclejdk9
 
 before_install:
+  - sudo add-apt-repository ppa:jonathonf/python-3.6 -y
   - sudo apt-get update -y
-  - sudo apt-get install python3.6 -y
+  - sudo apt-get install python3.6 libpython3.6 -y
 
 script:
   - gradle test
