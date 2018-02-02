@@ -1,14 +1,16 @@
 language: java
 
 jdk:
-  - oraclejdk9
+  - oraclejdk8
+  #- openjdk9
+  # https://github.com/travis-ci/travis-ci/issues/8975
+  #- oraclejdk9
 
 before_install:
-  - sudo apt-get install gradle -y
-  - sudo add-apt-repository ppa:cwchien/gradle -y
-  - sudo apt-get update -q
-  - sudo apt upgrade gradle -y
-  #- openjdk9
+  #  - sudo apt-get install gradle -y
+  #  - sudo add-apt-repository ppa:cwchien/gradle -y
+  #  - sudo apt-get update -q
+  #  - sudo apt upgrade gradle -y
 
 script:  
   - python --version
