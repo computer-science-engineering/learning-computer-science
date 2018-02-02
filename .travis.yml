@@ -11,10 +11,6 @@ before_install:
   - sudo apt-get update -y
   - sudo apt-get install python3.6 libpython3.6 -y
 
-install:
-  - pip install --user markdown
-  - pip install --user BeautifulSoup4
-
 script:
   - gradle test
   - python3.6 --version
