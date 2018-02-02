@@ -1,5 +1,8 @@
 language: java
 
+python: 
+  - "3.6"
+
 jdk:
   - oraclejdk8
   #- openjdk9
@@ -18,6 +21,8 @@ install:
 script:
   - gradle test
   - python3.6 --version
+  - pyenv versions
+  #- pyenv global 3.6
   - python3.6 build/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
