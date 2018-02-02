@@ -13,5 +13,5 @@ before_install:
 
 script:
   - gradle test
-  - python3 --version
-  - python3 build/create_problems_list.py
+  - python3.6 --version
+  - python3.6 build/create_problems_list.py
