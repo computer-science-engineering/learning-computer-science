@@ -29,6 +29,7 @@ def find_files():
     cwd = os.getcwd()
     #print(os.listdir(root_dir))
     for root, dirs, files in os.walk(root_dir):
+        dirs.sort()
         for file in files:
             if file.endswith(".md"):
                 languages = dirs
