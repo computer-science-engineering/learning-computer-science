@@ -4,10 +4,10 @@ jdk:
   - oraclejdk9
 
 before_install:
-  - sudo apt-get install gradle
-  - sudo add-apt-repository ppa:cwchien/gradle
+  - sudo apt-get install gradle -y
+  - sudo add-apt-repository ppa:cwchien/gradle -y
   - sudo apt-get update -q
-  - sudo apt upgrade gradle
+  - sudo apt upgrade gradle -y
   #- openjdk9
 
 script:  
