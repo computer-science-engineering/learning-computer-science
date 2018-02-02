@@ -48,14 +48,14 @@
             "type": "chrome",
             "request": "launch",
             "sourceMaps": false,
-            "file": "${workspaceFolder}/docs/index.html"
+            "file": "${workspaceFolder}/website/index.html"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://127.0.0.1:8081",
-            "webRoot": "${workspaceFolder}/docs"
+            "webRoot": "${workspaceFolder}/website"
         }
     ]
 }
