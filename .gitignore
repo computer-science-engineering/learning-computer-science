@@ -25,6 +25,7 @@ hs_err_pid*
 .classpath
 .project
 bin
+website/problems_list.json
 
 # Ignore Gradle GUI config
 gradle-app.setting
