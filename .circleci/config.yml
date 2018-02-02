@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk-node-browsers
+      # - image: circleci/python:3.6.1
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -42,10 +43,19 @@ jobs:
       - run: gradle test
 
       - run:
-        name: python script
         command: |
           python3 -m venv venv
           . venv/bin/activate
           pip install markdown
+
+      - run:
+        command: |
+          python3 -m venv venv
+          . venv/bin/activate
           pip install BeautifulSoup4
+
+      - run:
+        command: |
+          python3 -m venv venv
+          . venv/bin/activate
           python3 build/create_problems_list.py
