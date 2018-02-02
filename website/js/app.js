@@ -191,6 +191,7 @@ function populateFiltersDropdown() {
         var items = global_origin.map(function (x) {
             return {label: x, title: x, value: x};
         });
+        items = _.orderBy(items, ['label'], ['asc']);
         $('#input-origin').multiselect({
             includeSelectAllOption: true,
             enableFiltering: true,
@@ -225,6 +226,7 @@ function populateFiltersDropdown() {
         items = global_companies.map(function (x) {
             return {label: x, title: x, value: x};
         });
+        items = _.orderBy(items, ['label'], ['asc']);
         $('#input-companies').multiselect({
             includeSelectAllOption: true,
             enableFiltering: true,
@@ -259,6 +261,7 @@ function populateFiltersDropdown() {
         items = global_categories.map(function (x) {
             return {label: x, title: x, value: x};
         });
+        items = _.orderBy(items, ['label'], ['asc']);
         $('#input-categories').multiselect({
             includeSelectAllOption: true,
             enableFiltering: true,
@@ -293,6 +296,7 @@ function populateFiltersDropdown() {
         items = global_tags.map(function (x) {
             return {label: x, title: x, value: x};
         });
+        items = _.orderBy(items, ['label'], ['asc']);
         $('#input-tags').multiselect({
             includeSelectAllOption: true,
             enableFiltering: true,
@@ -327,6 +331,7 @@ function populateFiltersDropdown() {
         items = global_languages.map(function (x) {
             return {label: x, title: x, value: x};
         });
+        items = _.orderBy(items, ['label'], ['asc']);
         $('#input-languages').multiselect({
             includeSelectAllOption: true,
             enableFiltering: true,
@@ -362,6 +367,7 @@ function populateFiltersDropdown() {
         items = items_temp.map(function (x) {
             return {label: x, title: x, value: x};
         });
+        items = _.orderBy(items, ['label'], ['asc']);
         $('#input-and-or-origin-companies').multiselect({
             nonSelectedText: 'and/or',
             templates: {
