@@ -43,19 +43,19 @@ jobs:
       - run: gradle test
 
       - run:
-        command: |
-          python3 -m venv venv
-          . venv/bin/activate
-          pip install markdown
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install markdown
 
       - run:
-        command: |
-          python3 -m venv venv
-          . venv/bin/activate
-          pip install BeautifulSoup4
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install BeautifulSoup4
 
       - run:
-        command: |
-          python3 -m venv venv
-          . venv/bin/activate
-          python3 build/create_problems_list.py
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            python3 build/create_problems_list.py
