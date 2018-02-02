@@ -61,11 +61,12 @@ def create_problems_list(files):
         problem_name = soup.contents[0].text
         data[PROBLEM_NAME_STRING] = problem_name
 
-        problem_origin = re.sub('src\\\\', '', item[0]).split('\\')[0]
+        pathSeparator = os.sep
+        problem_origin = item[0].split(pathSeparator)[1]
         problem_origin = cleanup_problem_origin(problem_origin)
         data[PROBLEM_ORIGIN_STRING] = problem_origin
 
-        clean_path = os.path.normpath(item[0]).replace("\\", "/")
+        clean_path = os.path.normpath(item[0]).replace(pathSeparator, "/")
         link = os.path.join(clean_path)
         data[PROBLEM_LINK_STRING] = link
 
