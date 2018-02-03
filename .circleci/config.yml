@@ -5,6 +5,9 @@
 version: 2
 jobs:
   build_test_java:
+    branches:
+      only:
+        - master
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk-node-browsers
@@ -42,6 +45,9 @@ jobs:
       - run: gradle test      
 
   build_test_python:
+    branches:
+      only:
+        - master
     docker:      
       - image: circleci/python:3.6.1
 
