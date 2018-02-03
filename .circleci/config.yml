@@ -55,7 +55,6 @@ jobs:
             . venv/bin/activate
             pip install markdown
             pip install BeautifulSoup4
-            pip install -e .
             python3 build/create_problems_list.py
             python3 build/run_unit_tests.py
 
