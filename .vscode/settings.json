@@ -69,5 +69,13 @@
         "twelvehourtime",
         "uncomment",
         "unoptimized"
-    ]
+    ],
+    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test.py"
+      ]
 }

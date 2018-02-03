@@ -22,6 +22,11 @@
             "label": "create-problems-list",
             "type": "shell",
             "command": "python build\\create_problems_list.py" // -p build 
+        },  
+        {
+            "label": "run-python-unit-tests",
+            "type": "shell",
+            "command": "python build\\run_unit_tests.py" // -p build 
         }
     ]
 }
