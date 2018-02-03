@@ -22,7 +22,6 @@ script:
   - pyenv global 3.6
   - pip install --user markdown
   - pip install --user BeautifulSoup4
-  - pip install -e .
   - python3.6 build/create_problems_list.py
   - python3.6 build/run_unit_tests.py
 
