@@ -33,8 +33,7 @@ def main():
         runTests()
         print("Finished running unit tests.")
     except Exception as error:
-        print("Failure in unit test run.")
-        sys.exit(error)
+        sys.exit("Failure in unit test run.")
 
 if __name__ == '__main__':
     main()
