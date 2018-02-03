@@ -4,11 +4,10 @@
 #
 version: 2
 jobs:
-  build:
+  build_test_java:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk-node-browsers
-      # - image: circleci/python:3.6.1
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -40,16 +39,30 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
       # run tests!
-      - run: gradle test
+      - run: gradle test      
 
+  build_test_python:
+    docker:      
+      - image: circleci/python:3.6.1
+
+    steps:
       - run:
-          command: |
-            sudo add-apt-repository ppa:jonathonf/python-3.6 -y
-            sudo apt-get update -y
-            sudo apt-get install python3.6 libpython3.6 -y
-            sudo apt-get install python3-venv
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install markdown
-            pip install BeautifulSoup4
-            python3 build/create_problems_list.py
+        command: |
+          # sudo add-apt-repository ppa:jonathonf/python-3.6 -y
+          # sudo apt-get update -y
+          # sudo apt-get install python3.6 libpython3.6 -y
+          # sudo apt-get install python3-venv
+          python3 -m venv venv
+          . venv/bin/activate
+          pip install markdown
+          pip install BeautifulSoup4
+          python3 build/create_problems_list.py
+
+workflows:
+  version: 2
+  build-test:
+    jobs:
+      - build_test_java
+      - build_test_python:
+          requires:
+            - build_test_java
