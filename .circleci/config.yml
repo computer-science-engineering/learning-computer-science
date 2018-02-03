@@ -56,6 +56,7 @@ jobs:
             pip install markdown
             pip install BeautifulSoup4
             python3 build/create_problems_list.py
+            python3 build/run_unit_tests.py
 
 workflows:
   version: 2
