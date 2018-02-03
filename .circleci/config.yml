@@ -47,16 +47,16 @@ jobs:
 
     steps:
       - run:
-        command: |
-          # sudo add-apt-repository ppa:jonathonf/python-3.6 -y
-          # sudo apt-get update -y
-          # sudo apt-get install python3.6 libpython3.6 -y
-          # sudo apt-get install python3-venv
-          python3 -m venv venv
-          . venv/bin/activate
-          pip install markdown
-          pip install BeautifulSoup4
-          python3 build/create_problems_list.py
+          command: |
+            # sudo add-apt-repository ppa:jonathonf/python-3.6 -y
+            # sudo apt-get update -y
+            # sudo apt-get install python3.6 libpython3.6 -y
+            # sudo apt-get install python3-venv
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install markdown
+            pip install BeautifulSoup4
+            python3 build/create_problems_list.py
 
 workflows:
   version: 2
