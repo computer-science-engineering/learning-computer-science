@@ -23,6 +23,7 @@ script:
   - pip install --user markdown
   - pip install --user BeautifulSoup4
   - python3.6 build/create_problems_list.py
+  - python3.6 build/run_unit_tests.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
 deploy:
