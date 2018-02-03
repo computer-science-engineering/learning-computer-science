@@ -23,7 +23,7 @@ def runTests():
       suite = unittest.TestSuite()
       suite = loader.discover(path)
       testresult = unittest.TextTestRunner().run(suite)
-      if len(testresult.failures) > 0:
+      if len(testresult.failures) > 0 or len(testresult.errors) > 0:
           raise Exception()
 
 def main():
@@ -32,7 +32,7 @@ def main():
         print("Running unit tests...")
         runTests()
         print("Finished running unit tests.")
-    except Exception as error:
+    except Exception:
         sys.exit("Failure in unit test run.")
 
 if __name__ == '__main__':
