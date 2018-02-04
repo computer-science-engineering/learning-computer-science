@@ -24,6 +24,7 @@ def runTests():
       suite = unittest.TestSuite()
       suite = loader.discover(path)
       testresult = unittest.TextTestRunner().run(suite)
+      sys.path.remove(path)
       if len(testresult.failures) > 0 or len(testresult.errors) > 0:
           raise Exception()
 
