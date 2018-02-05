@@ -19,27 +19,21 @@ def runTests():
     #loop through subdirectories and run individually
     for path in lsPaths:
       sys.path.append(path)
-      print("runner: " + os.getcwd())
-      os.chdir(path)
       loader = unittest.TestLoader()
       suite = unittest.TestSuite()
       suite = loader.discover(path)
       testresult = unittest.TextTestRunner().run(suite)
       sys.path.remove(path)
-      os.chdir(cwd)
       if len(testresult.failures) > 0 or len(testresult.errors) > 0:
           raise Exception()
 
 def main():
     """main method."""
-    cwd = os.getcwd()  
     try:              
         print("Running unit tests...")
         runTests()
-        os.chdir(cwd)
         print("Finished running unit tests.")
     except Exception:
-        os.chdir(cwd)
         sys.exit("Failure in unit test run.")
 
 if __name__ == '__main__':
