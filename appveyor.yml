@@ -8,10 +8,6 @@ skip_tags: true
 
 image: Visual Studio 2017
 
-environment:
-  PYTHON: "C:\\Python36-x64"
-  JDK9: "C:\\Program Files\\Java\\jdk9"
-
 install:
   - cmd: choco install gradle
   - cmd: gradle -version
@@ -33,6 +29,3 @@ after_build:
   - cmd: gradle test
   # - cmd: python build\\run_unit_tests.py
   - cmd: python build\\create_problems_list.py
-
-cache:
-  - C:\Users\appveyor\.gradle
