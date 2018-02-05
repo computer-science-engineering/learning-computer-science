@@ -20,7 +20,7 @@ def runTests():
     #loop through subdirectories and run individually
     for path in lsPaths:
       sys.path.append(path)
-      print(cwd = os.getcwd())
+      print("runner: " + os.getcwd())
       loader = unittest.TestLoader()
       suite = unittest.TestSuite()
       suite = loader.discover(path)
