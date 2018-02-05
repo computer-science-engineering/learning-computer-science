@@ -29,7 +29,7 @@ build_script:
 
 after_build:
   - cmd: gradle test
-  - cmd: python build\\run_unit_tests.py
+  # - cmd: python build\\run_unit_tests.py
   - cmd: python build\\create_problems_list.py
 
 cache:
