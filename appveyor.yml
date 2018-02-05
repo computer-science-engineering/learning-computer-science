@@ -25,7 +25,9 @@ install:
 build_script:
   - cmd: gradle build
 
-after_build:
+test_script:
   - cmd: gradle test
   # - cmd: python build\\run_unit_tests.py
+
+after_test:
   - cmd: python build\\create_problems_list.py
