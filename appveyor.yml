@@ -15,17 +15,19 @@ environment:
 install:
   - cmd: choco install gradle
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
-  - cmd: "SET python3=C:\\Python36-x64"
+  - cmd: SET PATH=%JAVA_HOME%;%path%
+  - cmd: "SET PYTHON3=C:\\Python36-x64"
+  - cmd: SET PATH=%PYTHON3%;%path%
   - cmd: java -version
-  - cmd: python3 --version"
+  - cmd: python --version"
 
 build_script:
   - cmd: gradle build
 
 after_build:
   - cmd: gradle test
-  - cmd: python3 build\\run_unit_tests.py
-  - cmd: python3 build\\create_problems_list.py
+  - cmd: python build\\run_unit_tests.py
+  - cmd: python build\\create_problems_list.py
 
 cache:
   - C:\Users\appveyor\.gradle
