@@ -9,6 +9,7 @@
 | Linux | Circle CI | Build, Test | [![CircleCI](https://circleci.com/gh/manastalukdar/learning_computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/manastalukdar/learning_computer-science/tree/master) |
 | N/A | CodeClimate | Check for code maintainability | [![Maintainability](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/maintainability)](https://codeclimate.com/github/manastalukdar/learning_computer-science/maintainability) |
 | N/A | CodeClimate | Check for test coverage using Circle CI | [![Test Coverage](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/test_coverage)](https://codeclimate.com/github/manastalukdar/learning_computer-science/test_coverage) |
+| N/A | Codacy | Code analysis/quality check | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f9326796aa44a3a9eac1fe9c13cc24)](https://www.codacy.com/app/manastalukdar/learning_computer-science?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=manastalukdar/learning_computer-science&amp;utm_campaign=Badge_Grade) |
 
 ## Project
 
