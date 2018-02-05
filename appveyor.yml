@@ -1,0 +1,27 @@
+version: 1.0.{build}
+
+branches:
+  except:
+  - gh-pages
+
+skip_tags: true
+
+image: Visual Studio 2017
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python36-x64"
+
+install:
+  - cmd: choco install gradle
+
+build_script:
+  - cmd: gradle build
+
+test_script:
+  - pwsh: >-
+      gradle test
+
+      %PYTHON%\\python.exe build\\run_unit_tests.py
+
+      %PYTHON%\\python.exe build\\create_problems_list.py
