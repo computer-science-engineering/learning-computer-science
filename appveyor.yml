@@ -23,8 +23,8 @@ install:
   - cmd: "SET PATH=%PYTHON3%;%path%"
   - cmd: java -version
   - cmd: python --version"
-  - cmd: pip install markdown
-  - cmd: pip install BeautifulSoup4
+  - cmd: python -m pip install markdown
+  - cmd: python -m pip install BeautifulSoup4
 
 build_script:
   - cmd: gradle build
