@@ -10,11 +10,11 @@ image: Visual Studio 2017
 
 environment:
   PYTHON: "C:\\Python36-x64"
-  JDK9: "C:\Program Files\Java\jdk9"
+  JDK9: "C:\\Program Files\\Java\\jdk9"
 
 install:
   - cmd: choco install gradle
-  - cmd: "SET JAVA_HOME=C:\Program Files\Java\jdk9"
+  - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
   - cmd: "SET python3=C:\\Python36-x64"
   - cmd: java -version
   - cmd: python --version"
