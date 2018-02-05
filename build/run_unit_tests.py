@@ -3,13 +3,12 @@ import unittest
 import traceback
 import sys
 
-
 def runTests():
     lsPaths = []
+    cwd = os.getcwd()        
 
     #Find all relevant subdirectories that contain unit tests
-    root_dir = "src"    
-    cwd = os.getcwd()
+    root_dir = "src"
     for root, dirs, files in os.walk(root_dir):
         dirs.sort()
         for file in files:
@@ -21,21 +20,26 @@ def runTests():
     for path in lsPaths:
       sys.path.append(path)
       print("runner: " + os.getcwd())
+      os.chdir(path)
       loader = unittest.TestLoader()
       suite = unittest.TestSuite()
       suite = loader.discover(path)
       testresult = unittest.TextTestRunner().run(suite)
       sys.path.remove(path)
+      os.chdir(cwd)
       if len(testresult.failures) > 0 or len(testresult.errors) > 0:
           raise Exception()
 
 def main():
     """main method."""
-    try:        
+    cwd = os.getcwd()  
+    try:              
         print("Running unit tests...")
         runTests()
+        os.chdir(cwd)
         print("Finished running unit tests.")
     except Exception:
+        os.chdir(cwd)
         sys.exit("Failure in unit test run.")
 
 if __name__ == '__main__':
