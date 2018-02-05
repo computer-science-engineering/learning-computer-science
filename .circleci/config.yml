@@ -19,22 +19,10 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
-      TERM: dumb      
-      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
+      TERM: dumb
     
     steps:
       - checkout
-
-      - run:
-        name: Setup dependencies
-        command: |
-          sudo composer self-update
-          composer install -n --prefer-dist
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
 
       # Download and cache dependencies
       - restore_cache:
@@ -52,38 +40,16 @@ jobs:
         
       - ./cc-test-reporter before-build
       # run tests!
-      - run: gradle test   
-      
-      - run:
-        name: Run tests for CodeClimate
-          command: |
-            sudo docker-php-ext-enable xdebug
-            ./cc-test-reporter before-build
-            sudo vendor/bin/phpunit --coverage-clover clover.xml
-            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+      - run: gradle test
 
   build_test_python:
     docker:      
       - image: circleci/python:3.6.1
 
     working_directory: ~/repo
-        
-    environment:
-      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
 
     steps:
       - checkout
-
-      - run:
-        name: Setup dependencies
-        command: |
-          sudo composer self-update
-          composer install -n --prefer-dist
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
 
       - run:
           command: |
