@@ -3,7 +3,7 @@ import os
  
 for p in sys.path:
     print(p)
-print(cwd = os.getcwd())
+print("test: " + os.getcwd())
 import solution
 import unittest
 
