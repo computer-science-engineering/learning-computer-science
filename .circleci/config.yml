@@ -5,9 +5,6 @@
 version: 2
 jobs:
   build_test_java:
-    environment:
-      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
-
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk-node-browsers
@@ -16,13 +13,14 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
-
+    
     working_directory: ~/repo
 
     environment:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
-      TERM: dumb
+      TERM: dumb      
+      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
     
     steps:
       - checkout
@@ -65,13 +63,13 @@ jobs:
             ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
   build_test_python:
-    environment:
-      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
-
     docker:      
       - image: circleci/python:3.6.1
 
     working_directory: ~/repo
+        
+    environment:
+      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
 
     steps:
       - checkout
