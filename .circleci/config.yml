@@ -58,11 +58,11 @@ jobs:
       
       - run:
         name: Run tests for CodeClimate
-        command: |
-          sudo docker-php-ext-enable xdebug
-          ./cc-test-reporter before-build
-          sudo vendor/bin/phpunit --coverage-clover clover.xml
-          ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+          command: |
+            sudo docker-php-ext-enable xdebug
+            ./cc-test-reporter before-build
+            sudo vendor/bin/phpunit --coverage-clover clover.xml
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
   build_test_python:
     environment:
@@ -98,11 +98,11 @@ jobs:
 
       - run:
         name: Run tests for CodeClimate
-        command: |
-          sudo docker-php-ext-enable xdebug
-          ./cc-test-reporter before-build
-          sudo vendor/bin/phpunit --coverage-clover clover.xml
-          ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+          command: |
+            sudo docker-php-ext-enable xdebug
+            ./cc-test-reporter before-build
+            sudo vendor/bin/phpunit --coverage-clover clover.xml
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
 workflows:
   version: 2
