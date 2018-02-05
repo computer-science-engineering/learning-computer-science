@@ -1,3 +1,8 @@
+import sys
+ 
+for p in sys.path:
+    print(p)
+
 import solution
 import unittest
 
