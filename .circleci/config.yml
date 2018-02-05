@@ -38,7 +38,6 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
-      - ./cc-test-reporter before-build
       # run tests!
       - run: gradle test
 
@@ -59,14 +58,6 @@ jobs:
             pip install BeautifulSoup4
             python3 build/create_problems_list.py
             # python3 build/run_unit_tests.py
-
-      - run:
-        name: Run tests for CodeClimate
-          command: |
-            sudo docker-php-ext-enable xdebug
-            ./cc-test-reporter before-build
-            sudo vendor/bin/phpunit --coverage-clover clover.xml
-            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
 workflows:
   version: 2
