@@ -12,6 +12,6 @@
 | N/A | Codacy | Code analysis/quality check | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f9326796aa44a3a9eac1fe9c13cc24)](https://www.codacy.com/app/manastalukdar/learning_computer-science?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=manastalukdar/learning_computer-science&amp;utm_campaign=Badge_Grade) |
 | N/A | CodeBeat | Static code analysis | [![codebeat badge](https://codebeat.co/badges/20e3b84d-3b8b-447a-bdfe-44daded446fc)](https://codebeat.co/projects/github-com-manastalukdar-learning_computer-science-master) |
 
-## Project
+## Project Management
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/manastalukdar/learning_computer-science.svg?columns=all)](https://waffle.io/manastalukdar/learning_computer-science)
