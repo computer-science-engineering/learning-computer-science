@@ -1,9 +1,3 @@
-import sys
-import os
- 
-for p in sys.path:
-    print(p)
-print("test: " + os.getcwd())
 import solution
 import unittest
 
