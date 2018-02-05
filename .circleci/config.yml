@@ -5,6 +5,9 @@
 version: 2
 jobs:
   build_test_java:
+    environment:
+      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
+
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk-node-browsers
@@ -24,6 +27,17 @@ jobs:
     steps:
       - checkout
 
+      - run:
+        name: Setup dependencies
+        command: |
+          sudo composer self-update
+          composer install -n --prefer-dist
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -38,10 +52,22 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
+      - ./cc-test-reporter before-build
       # run tests!
-      - run: gradle test      
+      - run: gradle test   
+      
+      - run:
+        name: Run tests for CodeClimate
+        command: |
+          sudo docker-php-ext-enable xdebug
+          ./cc-test-reporter before-build
+          sudo vendor/bin/phpunit --coverage-clover clover.xml
+          ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
   build_test_python:
+    environment:
+      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
+
     docker:      
       - image: circleci/python:3.6.1
 
@@ -49,6 +75,18 @@ jobs:
 
     steps:
       - checkout
+
+      - run:
+        name: Setup dependencies
+        command: |
+          sudo composer self-update
+          composer install -n --prefer-dist
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
       - run:
           command: |
             python3 -m venv venv
@@ -57,6 +95,14 @@ jobs:
             pip install BeautifulSoup4
             python3 build/create_problems_list.py
             # python3 build/run_unit_tests.py
+
+      - run:
+        name: Run tests for CodeClimate
+        command: |
+          sudo docker-php-ext-enable xdebug
+          ./cc-test-reporter before-build
+          sudo vendor/bin/phpunit --coverage-clover clover.xml
+          ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
 
 workflows:
   version: 2
