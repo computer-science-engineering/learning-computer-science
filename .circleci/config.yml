@@ -70,14 +70,14 @@ jobs:
             coverage-3.6 xml
             python3 scripts/create_problems_list.py
 
-      # upload test coverage to codacy
+      # upload test coverage to codecov
+      - run: bash <(curl -s https://codecov.io/bash)
+      
+            # upload test coverage to codacy
       # - run:
       #     command: |
       #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
       #       python3 -m python-codacy-coverage -r coverage.xml
-
-      # upload test coverage to codecov
-      - codecov
 
 workflows:
   version: 2
