@@ -39,7 +39,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
       # run tests!
-      - run: gradle test
+      - run: gradle test jacocoJupTestReport
 
   build_test_python:
     docker:      
@@ -55,7 +55,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-            python3 scripts/run_unit_tests.py
+            coverage3.6 run scripts/run_unit_tests.py
             python3 scripts/create_problems_list.py
 
 workflows:
