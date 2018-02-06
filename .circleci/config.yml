@@ -67,7 +67,7 @@ jobs:
             python3 scripts/create_problems_list.py
 
         # upload test coverage to codacy
-        - run:
+      - run:
           command: |
             export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
             python-codacy-coverage -r coverage.xml
