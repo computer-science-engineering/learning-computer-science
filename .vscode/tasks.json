@@ -17,7 +17,17 @@
             "label": "gradle-test",
             "type": "shell",
             "command": "gradle test" // -p build 
-        },  
+        },
+        {
+            "label": "gradle-clean",
+            "type": "shell",
+            "command": "gradle clean" // -p build 
+        },
+        {
+            "label": "gradle-test-jacoco",
+            "type": "shell",
+            "command": "gradle test jacocoJupTestReport" // -p build 
+        },
         {
             "label": "create-problems-list",
             "type": "shell",
@@ -27,6 +37,11 @@
             "label": "run-python-unit-tests",
             "type": "shell",
             "command": "python scripts\\run_unit_tests.py" // -p build 
+        },  
+        {
+            "label": "run-python-unit-tests-coverage",
+            "type": "shell",
+            "command": "coverage run scripts\\run_unit_tests.py" // -p build 
         }
     ]
 }
