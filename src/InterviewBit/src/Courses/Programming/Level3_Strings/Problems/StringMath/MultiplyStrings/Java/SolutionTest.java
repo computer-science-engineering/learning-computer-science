@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "120";
             String actual = Solution.multiply("12", "10");
             assertEquals(expected, actual);

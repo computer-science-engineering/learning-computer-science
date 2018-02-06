@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {        
         int[] A = {5, 7, 7, 8, 8, 10};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 2;
             int actual = Solution.findCount(A, 8);
             assertEquals(expected, actual);

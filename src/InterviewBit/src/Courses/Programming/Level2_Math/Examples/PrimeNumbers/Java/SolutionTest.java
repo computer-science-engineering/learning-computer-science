@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 6;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] actual = Solution.sieve(input);
             int[] expected = {2, 3, 5};
             assertArrayEquals(expected, actual);

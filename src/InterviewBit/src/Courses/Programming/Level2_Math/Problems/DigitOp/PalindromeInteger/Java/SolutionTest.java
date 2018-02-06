@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 12345;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 0;
             int actual = Solution.isPalindrome(input);
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int input = 123454321;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 1;
             int actual = Solution.isPalindrome(input);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void NegativeNumberCase() {
         int input = -2147447412;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 0;
             int actual = Solution.isPalindrome(input);
             assertEquals(expected, actual);

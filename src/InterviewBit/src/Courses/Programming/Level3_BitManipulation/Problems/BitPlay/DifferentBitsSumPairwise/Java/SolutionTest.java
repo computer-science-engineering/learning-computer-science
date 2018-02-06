@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] input = {1, 3, 5};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 8;
             int actual = Solution.cntBits(input);
             assertEquals(expected, actual);

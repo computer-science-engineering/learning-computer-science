@@ -28,7 +28,7 @@ public class SolutionTest {
         ListNode a3 = new ListNode(3);
         a1.next = a2;
         a2.next = a3;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] expected = {2, 3, 4};
             int[] actual = new int[3];
             ListNode result = Solution.insertionSortList(a1);

@@ -26,7 +26,7 @@ public class SolutionTest {
         int[] A = {1, 4, 5, 8, 10}; 
         int[] B = {6, 9, 15};
         int[] C = {2, 3, 6, 6};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 1;
             int actual = Solution.solve(A, B, C);
             assertEquals(expected, actual);

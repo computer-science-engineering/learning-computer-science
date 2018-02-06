@@ -30,7 +30,7 @@ public class SolutionTest {
         a1.next = a2;
         a2.next = a3;
         a3.next = a4;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 3;
             int actual = Solution.reverseList(a1).val;
             assertEquals(expected, actual);

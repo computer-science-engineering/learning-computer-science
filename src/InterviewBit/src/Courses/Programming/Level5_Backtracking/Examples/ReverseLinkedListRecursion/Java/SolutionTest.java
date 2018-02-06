@@ -30,7 +30,7 @@ public class SolutionTest {
         a1.next = a2;
         a2.next = a3;
         a3.next = a4;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] expected = {3, 5, 8, 1};
             ListNode result = Solution.reverseList(a1);
             int[] actual = new int[4];

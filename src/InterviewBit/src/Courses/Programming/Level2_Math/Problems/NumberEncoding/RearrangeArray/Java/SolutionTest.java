@@ -25,7 +25,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(3, 2, 0, 1));
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 0, 3, 2));;
             Solution.arrange(input);;
             assertEquals(expected, input);

@@ -25,7 +25,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] A = {-1, 2, 1, -4};
         int B = 1;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 2;
             int actual = Solution.threeSumClosest(A, B);
             assertEquals(expected, actual);

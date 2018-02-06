@@ -32,7 +32,7 @@ public class SolutionTest {
         a2.next = a3;
         a3.next = a4;
         a4.next = a5;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] expected = {1, 4, 3, 2, 5};
             ListNode result = Solution.reverseBetween(a1, 2, 4);
             int[] actual = new int[5];

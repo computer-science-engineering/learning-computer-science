@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] input = {1, 2, 3, 4};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] actual = Solution.wave(input);
             int[] expected = {2, 1, 4, 3};
             assertArrayEquals(expected, actual);

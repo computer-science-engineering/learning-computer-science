@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String input = "A man, a plan, a canal: Panama";
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 1;
             int actual = Solution.isPalindrome(input);
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String input = "race a car";
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 0;
             int actual = Solution.isPalindrome(input);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         String input = "1a2";
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 0;
             int actual = Solution.isPalindrome(input);
             assertEquals(expected, actual);

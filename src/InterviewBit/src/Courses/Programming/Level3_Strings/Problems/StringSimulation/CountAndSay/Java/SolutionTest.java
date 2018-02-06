@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "1211";
             String actual = Solution.countAndSay(4);
             assertEquals(expected, actual);
@@ -32,7 +32,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase2() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "11";
             String actual = Solution.countAndSay(2);
             assertEquals(expected, actual);

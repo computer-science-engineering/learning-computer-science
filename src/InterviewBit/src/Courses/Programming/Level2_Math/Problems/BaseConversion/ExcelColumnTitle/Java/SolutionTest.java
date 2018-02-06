@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 10;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String actual = Solution.convertToTitle(input);
             String expected = "J";
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int input = 260;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String actual = Solution.convertToTitle(input);
             String expected = "IZ";
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         int input = 943566;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String actual = Solution.convertToTitle(input);
             String expected = "BAQTZ";
             assertEquals(expected, actual);

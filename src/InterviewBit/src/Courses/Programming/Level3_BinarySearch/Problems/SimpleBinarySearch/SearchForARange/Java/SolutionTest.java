@@ -25,7 +25,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         List<Integer> input = Arrays.asList(5, 7, 7, 8, 8, 10);        
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(3, 4));
             ArrayList<Integer> actual = Solution.searchRange(input, 8);
             assertEquals(expected, actual);

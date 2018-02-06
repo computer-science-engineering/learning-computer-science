@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 10;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int actual = Solution.isPrime(input);
             int expected = 0;
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int input = 5;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int actual = Solution.isPrime(input);
             int expected = 1;
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         int input = 1;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int actual = Solution.isPrime(input);
             int expected = 0;
             assertEquals(expected, actual);
