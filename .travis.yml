@@ -21,7 +21,7 @@ script:
   - pyenv versions
   - pyenv global 3.6
   - pip install -r requirements.txt
-  - coverage3.6 run scripts/run_unit_tests.py
+  - coverage-3.6 run scripts/run_unit_tests.py
   - python3.6 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/

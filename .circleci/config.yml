@@ -55,7 +55,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-            coverage3.6 run scripts/run_unit_tests.py
+            coverage-3.6 run scripts/run_unit_tests.py
             python3 scripts/create_problems_list.py
 
 workflows:
