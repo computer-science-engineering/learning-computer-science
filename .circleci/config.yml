@@ -70,6 +70,7 @@ jobs:
         # upload test coverage to codacy
       - run:
           command: |
+            python3 -m pip install -r requirements.txt
             export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
             python3 -m python-codacy-coverage -r coverage.xml
 
