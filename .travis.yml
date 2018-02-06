@@ -22,7 +22,7 @@ script:
   - pyenv global 3.6
   - pip install --user markdown
   - pip install --user BeautifulSoup4
-  # - python3.6 scripts/run_unit_tests.py
+  - python3.6 scripts/run_unit_tests.py
   - python3.6 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
