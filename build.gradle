@@ -28,15 +28,6 @@ apply plugin: 'org.junit.platform.gradle.plugin'
 
 //https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
-jacoco {
-    toolVersion = '0.7.9'
-    applyTo junitPlatformTest
-}
-junitPlatformTest {
-    jacoco {
-        destinationFile = file("$buildDir/jacoco/test.exec")
-    }
-}
 jacocoTestCoverageVerification {
     violationRules {
         rule {
@@ -125,6 +116,32 @@ sourceSets {
 repositories {
     mavenLocal()
     mavenCentral()
+}
+
+//https://github.com/junit-team/junit5/issues/1024#issuecomment-354384992
+afterEvaluate {
+    def junitPlatformTestTask = (JavaExec) project.tasks.getByName('junitPlatformTest')
+
+    jacoco {
+        applyTo(junitPlatformTestTask)
+    }
+
+    project.task(type: JacocoReport, "jacocoJupTestReport") {
+        executionData(junitPlatformTestTask)
+        sourceSets(sourceSets.main)
+        sourceDirectories = files(sourceSets.main.allSource.srcDirs)
+        classDirectories = files("${buildDir}/classes/java/test")
+        //files(sourceSets.main.output)
+
+        reports {
+            xml.enabled true
+            xml.destination file("${buildDir}/jacoco/report.xml")
+            html.enabled true
+            html.destination file("${buildDir}/jacoco/html")
+        }
+    }
+
+    check.dependsOn jacocoJupTestReport
 }
 
 /*
