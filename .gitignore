@@ -26,7 +26,11 @@ hs_err_pid*
 .project
 bin
 website/problems_list.json
+scripts/problems_list.md
 
+.coverage
+package-lock.json
+node_modules
 __pycache__
 
 # Ignore Gradle GUI config
