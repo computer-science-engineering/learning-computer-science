@@ -41,13 +41,16 @@ jobs:
       # run tests!
       - run: gradle test jacocoJupTestReport
 
+      #upload test coverage to codecov
+      - run: bash <(curl -s https://codecov.io/bash)
+
       # upload test coverage to codacy
       # - run: 
       #     command: |
       #       wget -O codacy-coverage-reporter-assembly.jar https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
-      #       java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/jacoco/report.xml
+      #       java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/report.xml
       #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
-      #       codacy-coverage-reporter -l Java -r build/jacoco/report.xml
+      #       codacy-coverage-reporter -l Java -r build/reports/jacoco/report.xml
 
   build_test_python:
     docker:      
@@ -72,6 +75,9 @@ jobs:
       #     command: |
       #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
       #       python3 -m python-codacy-coverage -r coverage.xml
+
+      # upload test coverage to codecov
+      - run: codecov
 
 workflows:
   version: 2

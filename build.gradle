@@ -135,9 +135,9 @@ afterEvaluate {
 
         reports {
             xml.enabled true
-            xml.destination file("${buildDir}/jacoco/report.xml")
+            xml.destination file("${buildDir}/reports/jacoco/report.xml")
             html.enabled true
-            html.destination file("${buildDir}/jacoco/html")
+            html.destination file("${buildDir}/reports/jacoco/html")
         }
     }
 
