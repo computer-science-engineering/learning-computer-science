@@ -77,7 +77,7 @@ jobs:
       #       python3 -m python-codacy-coverage -r coverage.xml
 
       # upload test coverage to codecov
-      - run: codecov
+      - codecov
 
 workflows:
   version: 2
