@@ -19,7 +19,8 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
-      TERM: dumb
+      TERM: dumbenvironment:
+      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
     
     steps:
       - checkout
@@ -43,6 +44,25 @@ jobs:
 
       #upload test coverage to codecov
       - run: bash <(curl -s https://codecov.io/bash)
+
+      # upload test coverage to code climate
+      - run:
+          name:  Download cc-test-reporter
+          command: |
+            mkdir -p tmp/
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+            chmod +x ./tmp/cc-test-reporter
+            #./tmp/cc-test-reporter before-build
+      - persist_to_workspace:
+          root: tmp
+          paths:
+            - cc-test-reporter
+      - run: 
+          name: Upload to cc
+          command: |
+            #./tmp/cc-test-reporter format-coverage -t jacoco -o build/reports/jacoco/report.xml
+            ./tmp/cc-test-reporter upload-coverage -i build/reports/jacoco/report.xml
+      
 
       # upload test coverage to codacy
       # - run: 
