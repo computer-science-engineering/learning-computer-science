@@ -25,6 +25,8 @@ bin
 website/problems_list.json
 scripts/problems_list.md
 
+!resources/codacy-coverage-reporter-*.jar
+
 htmlcov
 .coverage
 coverage.xml
