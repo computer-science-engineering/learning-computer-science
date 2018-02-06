@@ -73,7 +73,7 @@ jobs:
       # upload test coverage to codecov
       - run: bash <(curl -s https://codecov.io/bash)
       
-            # upload test coverage to codacy
+      # upload test coverage to codacy
       # - run:
       #     command: |
       #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
