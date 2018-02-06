@@ -20,7 +20,6 @@ jobs:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
       TERM: dumb
-      CC_TEST_REPORTER_ID: CC_TEST_REPORTER_ID
     
     steps:
       - checkout
@@ -63,7 +62,9 @@ jobs:
             cd ./src/
             ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../coverage/codeclimate.json
             cd ..
-            ./tmp/cc-test-reporter upload-coverage -r ${CC_TEST_REPORTER_ID}      
+            ./tmp/cc-test-reporter upload-coverage
+          environment:
+            CC_TEST_REPORTER_ID: ${CC_TEST_REPORTER_ID}
 
       # upload test coverage to codacy
       # - run: 
