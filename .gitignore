@@ -17,10 +17,7 @@ hs_err_pid*
 .vscode/.ropeproject
 
 .gradle
-/build/*
-!/build/build.gradle
-!/build/.gitkeep
-!/build/*.py
+build
 .settings
 .classpath
 .project
