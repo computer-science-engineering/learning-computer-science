@@ -62,7 +62,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements.txt
+            python3 -m pip install -r requirements.txt
             coverage-3.6 run scripts/run_unit_tests.py
             coverage-3.6 xml
             python3 scripts/create_problems_list.py
@@ -71,7 +71,7 @@ jobs:
       - run:
           command: |
             export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
-            python-codacy-coverage -r coverage.xml
+            python3 -m python-codacy-coverage -r coverage.xml
 
 workflows:
   version: 2
