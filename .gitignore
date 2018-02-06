@@ -28,6 +28,7 @@ bin
 website/problems_list.json
 scripts/problems_list.md
 
+htmlcov
 .coverage
 package-lock.json
 node_modules
