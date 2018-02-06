@@ -101,12 +101,12 @@ jobs:
 
       # upload test coverage to code climate
       - run:
-        name:  Download cc-test-reporter
-        command: |
-          mkdir -p tmp/
-          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
-          chmod +x ./tmp/cc-test-reporter
-          #./tmp/cc-test-reporter before-build
+          name:  Download cc-test-reporter
+          command: |
+            mkdir -p tmp/
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
+            chmod +x ./tmp/cc-test-reporter
+            #./tmp/cc-test-reporter before-build
       - persist_to_workspace:
           root: tmp
           paths:
