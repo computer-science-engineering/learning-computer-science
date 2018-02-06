@@ -33,7 +33,7 @@ public class SolutionTest {
         a3.next = a4;
         a4.next = a5;
         a5.next = a4;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 4;
             int actual = Solution.detectCycle(a1).val;
             assertEquals(expected, actual);

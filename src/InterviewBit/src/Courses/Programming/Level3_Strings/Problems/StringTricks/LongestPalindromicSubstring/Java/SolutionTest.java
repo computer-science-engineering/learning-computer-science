@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String input = "aaaabaaa";
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "aaabaaa";
             String actual = Solution.longestPalindrome(input);
             assertEquals(expected, actual);

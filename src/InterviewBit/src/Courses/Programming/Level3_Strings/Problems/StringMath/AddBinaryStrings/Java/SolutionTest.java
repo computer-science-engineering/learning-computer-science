@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "111";
             String actual = Solution.addBinary("100", "11");
             assertEquals(expected, actual);

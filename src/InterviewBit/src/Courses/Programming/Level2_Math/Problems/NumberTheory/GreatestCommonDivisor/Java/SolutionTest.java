@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 4;
             int actual = Solution.gcd(4, 16);
             assertEquals(expected, actual);

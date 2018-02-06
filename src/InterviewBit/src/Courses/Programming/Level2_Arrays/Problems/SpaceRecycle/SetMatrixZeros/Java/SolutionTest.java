@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[][] input = {{1, 0, 1}, {1, 1, 1}, {1, 1, 1}};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[][] actual = Solution.setZeroes(input);
             int[][] expected = {{0, 0, 0}, {1, 0, 1}, {1, 0, 1}};
             assertArrayEquals(expected, actual);
@@ -62,7 +62,7 @@ public class SolutionTest {
             {1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0},
             {0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1}
         };
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[][] actual = Solution.setZeroes(input);
             int[][] expected =
             {

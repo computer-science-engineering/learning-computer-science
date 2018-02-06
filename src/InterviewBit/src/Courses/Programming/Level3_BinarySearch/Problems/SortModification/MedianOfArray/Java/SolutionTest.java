@@ -26,7 +26,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         List<Integer> a = Arrays.asList(1, 4, 5);
         List<Integer> b = Arrays.asList(2, 3);
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             double expected = 3.0;
             double actual = Solution.findMedianSortedArrays(a, b);
             assertEquals(expected, actual);

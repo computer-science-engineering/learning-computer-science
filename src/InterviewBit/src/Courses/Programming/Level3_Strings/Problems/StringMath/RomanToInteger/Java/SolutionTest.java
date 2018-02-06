@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String input = "XIV";
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 14;
             int actual = Solution.romanToInt(input);
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String input = "XX";
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 20;
             int actual = Solution.romanToInt(input);
             assertEquals(expected, actual);

@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 200;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String actual = Solution.findDigitsInBinary(input);
             String expected = "11001000";
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         int input = 0;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String actual = Solution.findDigitsInBinary(input);
             String expected = "0";
             assertEquals(expected, actual);

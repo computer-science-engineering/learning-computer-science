@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 502900;
             int actual = Solution.findRank("asasdsdsadasdadsadasdsa");
             assertEquals(expected, actual);
@@ -32,7 +32,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase2() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 356974;
             int actual = Solution.findRank("IhSKbdvuqfmGHh");
             assertEquals(expected, actual);

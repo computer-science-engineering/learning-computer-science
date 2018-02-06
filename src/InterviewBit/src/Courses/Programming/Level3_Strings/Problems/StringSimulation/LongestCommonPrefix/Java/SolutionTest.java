@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {        
         String[] input = new String[] {"abcdefgh", "aefghijk", "abcefgh"};  
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "a";
             String actual = Solution.longestCommonPrefix(input);
             assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {           
         String[] input = new String[] {"ABCD"};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "ABCD";
             String actual = Solution.longestCommonPrefix(input);
             assertEquals(expected, actual);

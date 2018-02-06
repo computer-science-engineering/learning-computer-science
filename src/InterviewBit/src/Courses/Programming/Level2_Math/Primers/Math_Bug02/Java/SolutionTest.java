@@ -25,7 +25,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 20;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             ArrayList<ArrayList<Integer>> actual = Solution.squareSum(input);
             ArrayList<ArrayList<Integer>> expected = new ArrayList<ArrayList<Integer>>();
             expected.add(new ArrayList<Integer>() {private static final long serialVersionUID = 1L;

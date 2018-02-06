@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 2;
             int actual = Solution.pow(2, 3, 3);
             assertEquals(expected, actual);
@@ -32,7 +32,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase2() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 19;
             int actual = Solution.pow(-1, 1, 20);
             assertEquals(expected, actual);
@@ -41,7 +41,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 20805472;
             int actual = Solution.pow(71045970, 41535484, 64735492);
             assertEquals(expected, actual);

@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void Test1() {
         int[] input = {1, 2, 3, 4};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             // This method should run in less than specified timeout
             int actual = Solution.solve(input);            
             int expected = 1;

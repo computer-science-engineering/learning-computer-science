@@ -32,7 +32,7 @@ public class SolutionTest {
         a2.next = a3;
         a3.next = a4;
         a4.next = a5;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] expected = {1, 5, 2, 4, 3};
             ListNode result = Solution.reorderList(a1);
             int[] actual = new int[5];
@@ -49,7 +49,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         ListNode a1 = new ListNode(1);
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int[] expected = {1};
             ListNode result = Solution.reorderList(a1);
             int[] actual = new int[1];

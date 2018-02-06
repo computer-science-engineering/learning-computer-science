@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] input = {1, 2, 0};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int actual = Solution.findMissingPositive(input);
             int expected = 3;
             assertEquals(expected, actual);

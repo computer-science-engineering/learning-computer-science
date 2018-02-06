@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] input = {1, 5, 4, 3};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 6;
             int actual = Solution.maxArea(input);
             assertEquals(expected, actual);

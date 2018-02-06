@@ -33,7 +33,7 @@ public class SolutionTest {
         ListNode b3 = new ListNode(4);
         b1.next = b2;
         b2.next = b3;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             long expected = 708;
             ListNode actualListNode = Solution.addTwoNumbers(a1, b1);
             long actual = Solution.getNumber(actualListNode);

@@ -25,7 +25,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 10;
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(3, 7));
             ArrayList<Integer> actual = Solution.primeSum(input);
             assertEquals(expected, actual);

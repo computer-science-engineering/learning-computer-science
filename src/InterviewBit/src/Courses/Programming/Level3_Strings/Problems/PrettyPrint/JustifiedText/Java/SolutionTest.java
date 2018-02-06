@@ -24,7 +24,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String[] input = {"This", "is", "an", "example", "of", "text", "justification."};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String[] expected = {"This    is    an",  "example  of text", "justification.  "};
             String[] actual = Solution.fullJustify(input, 16);;
             assertArrayEquals(expected, actual);
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String[] input = {"What", "must", "be", "shall", "be."};
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             String[] expected = {"What must be", "shall be.   "};
             String[] actual = Solution.fullJustify(input, 12);;
             assertArrayEquals(expected, actual);

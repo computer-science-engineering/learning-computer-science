@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 3;
             int actual = Solution.sqrt(9);
             assertEquals(expected, actual);
@@ -32,7 +32,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase2() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 3;
             int actual = Solution.sqrt(11);
             assertEquals(expected, actual);
@@ -41,7 +41,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase1() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 30506;
             int actual = Solution.sqrt(930675566);
             assertEquals(expected, actual);
@@ -50,7 +50,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase2() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 1;
             int actual = Solution.sqrt(1);
             assertEquals(expected, actual);
@@ -59,7 +59,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase3() {
-        assertTimeout(Duration.ofMillis(200), () -> {
+        assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 13003;
             int actual = Solution.sqrt(169078009);
             assertEquals(expected, actual);
