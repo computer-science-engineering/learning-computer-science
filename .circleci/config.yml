@@ -60,7 +60,9 @@ jobs:
       - run: 
           name: Upload to cc
           command: |
-            ./tmp/cc-test-reporter format-coverage -t jacoco build/reports/jacoco/report.xml --add-prefix "./src/"
+            cd ./src/
+            ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml --add-prefix "./src/"
+            cd ..
             ./tmp/cc-test-reporter upload-coverage
       
 
