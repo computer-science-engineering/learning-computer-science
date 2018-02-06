@@ -43,7 +43,7 @@ jobs:
       - run: gradle test jacocoJupTestReport
 
       #upload test coverage to codecov
-      - run: bash <(curl -s https://codecov.io/bash)
+      #- run: bash <(curl -s https://codecov.io/bash)
 
       # upload test coverage to code climate
       - run:
@@ -60,8 +60,8 @@ jobs:
       - run: 
           name: Upload to cc
           command: |
-            ./tmp/cc-test-reporter format-coverage -t jacoco -o coverage/codeclimate.json build/reports/jacoco/report.xml
-            ./tmp/cc-test-reporter upload-coverage -i coverage/codeclimate.json
+            ./tmp/cc-test-reporter format-coverage -t jacoco build/reports/jacoco/report.xml
+            ./tmp/cc-test-reporter upload-coverage
       
 
       # upload test coverage to codacy
