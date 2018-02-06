@@ -24,7 +24,8 @@ install:
 build_script:
   - cmd: gradle build
 
-test_script:
+test_script:  
+  - cmd: "set path=C:\\ProgramData\\chocolatey\\lib\\gradle\\tools\\gradle-4.5\\bin;%path%"
   - cmd: gradle test jacocoJupTestReport
   - cmd: coverage-3.6 run scripts\\run_unit_tests.py
 
