@@ -15,3 +15,5 @@
 ## Project Management
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/manastalukdar/learning_computer-science.svg?columns=all)](https://waffle.io/manastalukdar/learning_computer-science)
+
+[![ZenHub](https://zenhub.com)](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)
