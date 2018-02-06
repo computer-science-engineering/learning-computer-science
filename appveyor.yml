@@ -16,7 +16,7 @@ install:
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
   - cmd: "SET PATH=%JAVA_HOME%\\bin;%path%"
   - cmd: "SET PYTHON3=C:\\Python36-x64"
-  - cmd: "SET PATH=%PYTHON3%;%path%"
+  - cmd: "SET PATH=%PYTHON3%;%PYTHON3%\\Scripts;%path%"
   - cmd: java -version
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
@@ -26,8 +26,7 @@ build_script:
 
 test_script:
   - cmd: gradle test jacocoJupTestReport
-  - cmd: python -m pip install -r requirements.txt
-  - cmd: coverage run scripts\\run_unit_tests.py
+  - cmd: coverage-3.6 run scripts\\run_unit_tests.py
 
 after_test:
   - cmd: python scripts\\create_problems_list.py
