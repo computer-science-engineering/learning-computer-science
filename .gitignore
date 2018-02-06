@@ -27,6 +27,7 @@ scripts/problems_list.md
 
 htmlcov
 .coverage
+coverage.xml
 package-lock.json
 node_modules
 __pycache__

@@ -41,6 +41,13 @@ jobs:
       # run tests!
       - run: gradle test jacocoJupTestReport
 
+      # upload test coverage to codacy
+      - run: 
+          command: |
+            java -cp resources/codacy-coverage-reporter-2.0.2-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/jacoco/report.xml
+            export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
+            codacy-coverage-reporter -l Java -r build/jacoco/report.xml
+
   build_test_python:
     docker:      
       - image: circleci/python:3.6.1
@@ -56,7 +63,14 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
             coverage-3.6 run scripts/run_unit_tests.py
+            coverage-3.6 xml
             python3 scripts/create_problems_list.py
+
+        # upload test coverage to codacy
+        - run:
+          command: |
+            export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
+            python-codacy-coverage -r coverage.xml
 
 workflows:
   version: 2

@@ -1,3 +1,4 @@
 markdown
 BeautifulSoup4
 coverage
+codacy-coverage
