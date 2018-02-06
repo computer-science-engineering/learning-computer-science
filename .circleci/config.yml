@@ -65,7 +65,7 @@ jobs:
             cd ./src/
             ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../coverage/codeclimate.json
             cd ..
-            export CC_TEST_REPORTER_ID = $CC_TEST_REPORTER_ID
+            export CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
             ./tmp/cc-test-reporter upload-coverage
 
       # upload test coverage to codacy
