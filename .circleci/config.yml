@@ -10,6 +10,8 @@ version: 2
 jobs:
   download_code_climate_reporter:
     <<: *defaults
+    machine: true
+    working_directory: ~/repo
     steps:
       - run:
         name:  Download cc-test-reporter
