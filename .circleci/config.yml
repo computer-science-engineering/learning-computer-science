@@ -77,7 +77,11 @@ jobs:
           command: |
             cd ./src/
             ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/coverage/codeclimate.java.json
-
+      - persist_to_workspace:
+          root: tmp
+          paths: 
+            - codeclimate.java.json
+    
       # upload test coverage to codacy
       # - run: 
       #     command: |
@@ -119,7 +123,11 @@ jobs:
           command: |
             cd ./src/
             ../tmp/cc-test-reporter format-coverage -t coverage.py ../coverage.xml -o ../tmp/coverage/codeclimate.python.json
-      
+      - persist_to_workspace:
+          root: tmp
+          paths: 
+            - codeclimate.java.json
+
       # upload test coverage to codacy
       # - run:
       #     command: |
