@@ -103,6 +103,7 @@ jobs:
       - image: circleci/python:3.6.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
+          COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
 
     working_directory: ~/repo
 
@@ -139,6 +140,7 @@ jobs:
       - run:
           name: Upload to coveralls
           command: |
+            pip install coveralls
             coveralls
 
       # upload test coverage to codacy
