@@ -126,7 +126,7 @@ jobs:
       - persist_to_workspace:
           root: tmp
           paths: 
-            - codeclimate.java.json
+            - codeclimate.python.json
 
       # upload test coverage to codacy
       # - run:
