@@ -12,7 +12,7 @@
 | N/A | Codacy | Code analysis/quality check | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f9326796aa44a3a9eac1fe9c13cc24)](https://www.codacy.com/app/manastalukdar/learning_computer-science?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=manastalukdar/learning_computer-science&amp;utm_campaign=Badge_Grade) |
 | N/A | CodeBeat | Static code analysis | [![codebeat badge](https://codebeat.co/badges/20e3b84d-3b8b-447a-bdfe-44daded446fc)](https://codebeat.co/projects/github-com-manastalukdar-learning_computer-science-master) |
 | N/A | Codecov | Code coverage using Circle CI | [![codecov](https://codecov.io/gh/manastalukdar/learning_computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning_computer-science) |
-| N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning_computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning_computer-science?branch=master) |
+| N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning_computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning_computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning_computer-science/issues/35)|
 
 ## Project Management
 
