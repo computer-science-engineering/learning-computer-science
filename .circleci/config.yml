@@ -8,7 +8,7 @@ defaults: &defaults
 
 version: 2
 jobs:
-  download_code_climate_reporter:
+  download_from_code_climate:
     <<: *defaults
     machine: true
     working_directory: ~/repo
@@ -138,8 +138,9 @@ jobs:
     <<: *defaults
     machine: 
       enabled: true
-      environment:
-        CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
+      image: circleci/classic:latest
+        environment:
+          CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
     environment: 
       - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
@@ -156,7 +157,7 @@ workflows:
   version: 2
   build-test:
     jobs:
-      - download_code_climate_reporter:
+      - download_from_code_climate:
           filters:
             branches:
               only:
@@ -167,14 +168,14 @@ workflows:
               only:
                 - master
           requires:
-            - download_code_climate_reporter
+            - download_from_code_climate
       - build_test_python:        
           filters:
             branches:
               only:
                 - master
           requires:
-            - download_code_climate_reporter
+            - download_from_code_climate
       - upload_to_code_climate:        
           filters:
             branches:
