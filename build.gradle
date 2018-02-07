@@ -44,7 +44,7 @@ jacocoTestCoverageVerification {
 compileTestJava {
    sourceCompatibility = 1.8
    targetCompatibility = 1.8
-   options.compilerArgs += '-parameters'
+   options.compilerArgs += ['-parameters', '-g']
 }
 
 // http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle
