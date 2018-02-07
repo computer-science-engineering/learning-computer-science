@@ -5,8 +5,6 @@
 
 defaults: &defaults
   working_directory: /tmp
-  environment: 
-    - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
 
 version: 2
 jobs:
@@ -138,10 +136,11 @@ jobs:
 
   upload_to_code_climate:
     <<: *defaults
-    machine: true
+    docker:      
+      - image: circleci/python:3.6.1
+        environment:
+          CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
-    environment: 
-      - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     steps:
       - attach_workspace:
           at: ~/repo/tmp
