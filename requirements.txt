@@ -4,4 +4,3 @@ coverage
 codacy-coverage
 codecov
 coveralls
-python-coveralls
