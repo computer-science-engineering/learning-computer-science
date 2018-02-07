@@ -91,12 +91,12 @@ jobs:
             gradle test jacocoJupTestReport coveralls
       
       # upload test coverage to codacy
-      - run: 
-          command: |
-            wget -O codacy-coverage-reporter-assembly.jar https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
-            java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/report.xml
-            export CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN
-            codacy-coverage-reporter -l Java -r build/reports/jacoco/report.xml
+      # - run: 
+      #     command: |
+      #       wget -O codacy-coverage-reporter-assembly.jar https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
+      #       java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/report.xml
+      #       export CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN
+      #       codacy-coverage-reporter -l Java -r build/reports/jacoco/report.xml
 
   build_test_python:
     <<: *defaults
@@ -149,7 +149,7 @@ jobs:
       # upload test coverage to codacy
       # - run:
       #     command: |
-      #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
+      #       export CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN
       #       python3 -m codacy-coverage -r coverage.xml
 
   upload_to_code_climate:
