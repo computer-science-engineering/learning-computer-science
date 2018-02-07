@@ -139,7 +139,7 @@ jobs:
       - run:
           name: Upload to coveralls
           command: |
-            python3 -m coveralls
+            coveralls
 
       # upload test coverage to codacy
       # - run:
