@@ -140,7 +140,7 @@ jobs:
       - run:
           name: Upload to coveralls
           command: |
-            python3 -m pip install coveralls
+            pip install python-coveralls #coveralls
             coveralls
 
       # upload test coverage to codacy
