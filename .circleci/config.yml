@@ -33,6 +33,7 @@ jobs:
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
+          CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -90,12 +91,12 @@ jobs:
             gradle test jacocoJupTestReport coveralls
       
       # upload test coverage to codacy
-      # - run: 
-      #     command: |
-      #       wget -O codacy-coverage-reporter-assembly.jar https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
-      #       java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/report.xml
-      #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
-      #       codacy-coverage-reporter -l Java -r build/reports/jacoco/report.xml
+      - run: 
+          command: |
+            wget -O codacy-coverage-reporter-assembly.jar https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
+            java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/report.xml
+            export CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN
+            codacy-coverage-reporter -l Java -r build/reports/jacoco/report.xml
 
   build_test_python:
     <<: *defaults
@@ -104,6 +105,7 @@ jobs:
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
+          CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN
 
     working_directory: ~/repo
 
