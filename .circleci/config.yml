@@ -5,6 +5,8 @@
 
 defaults: &defaults
   working_directory: /tmp
+  environment: 
+    - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
 
 version: 2
 jobs:
