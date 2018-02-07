@@ -68,8 +68,6 @@ jobs:
           command: |
             cd ./src/
             ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/coverage/codeclimate.java.json
-            cd ..
-            ./tmp/cc-test-reporter upload-coverage
 
       # upload test coverage to codacy
       # - run: 
@@ -120,8 +118,6 @@ jobs:
           command: |
             cd ./src/
             ../tmp/cc-test-reporter format-coverage -t coverage.py ../coverage.xml -o ../tmp/coverage/codeclimate.python.json
-            cd ..
-            ./tmp/cc-test-reporter upload-coverage
       
       # upload test coverage to codacy
       # - run:
