@@ -136,11 +136,9 @@ jobs:
 
   upload_to_code_climate:
     <<: *defaults
-    machine: 
-      enabled: true
-      image: circleci/classic:latest
-        environment:
-          CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
+    machine: true
+      environment:
+        CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
     environment: 
       - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
