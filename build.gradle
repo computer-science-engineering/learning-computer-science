@@ -142,6 +142,10 @@ afterEvaluate {
     check.dependsOn jacocoJupTestReport
 }
 
+coveralls {
+  jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
+}
+
 /*
 https://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
 This does not work with junit5 yet: https://github.com/gradle/gradle/issues/1037
