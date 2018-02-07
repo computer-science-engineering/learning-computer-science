@@ -3,3 +3,4 @@ BeautifulSoup4
 coverage
 codacy-coverage
 codecov
+coveralls
