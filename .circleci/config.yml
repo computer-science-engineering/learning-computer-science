@@ -140,7 +140,9 @@ jobs:
       - run:
           name: Upload to coveralls
           command: |
-            pip install python-coveralls #coveralls
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install coveralls
             coveralls
 
       # upload test coverage to codacy
