@@ -131,6 +131,8 @@ jobs:
 
   upload_to_code_climate:
     <<: *defaults
+    machine: true
+    working_directory: ~/repo
     environment: 
       - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     steps:
