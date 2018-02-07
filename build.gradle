@@ -142,6 +142,7 @@ afterEvaluate {
     check.dependsOn jacocoJupTestReport
 }
 
+//https://github.com/ben-manes/caffeine/blob/master/build.gradle
 coveralls {
   jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
 }
