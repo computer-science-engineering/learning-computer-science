@@ -136,7 +136,10 @@ jobs:
 
   upload_to_code_climate:
     <<: *defaults
-    machine: true
+    machine: 
+      enabled: true
+      environment:
+        CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
     environment: 
       - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
