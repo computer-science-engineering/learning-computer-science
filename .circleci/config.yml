@@ -93,7 +93,7 @@ jobs:
   build_test_python:
     <<: *defaults
     docker:      
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.6.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
 
@@ -137,7 +137,7 @@ jobs:
   upload_to_code_climate:
     <<: *defaults
     docker:      
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.6.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
