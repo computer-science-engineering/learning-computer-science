@@ -2,9 +2,14 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
+
+defaults: &defaults
+  working_directory: /tmp
+
 version: 2
 jobs:
   build_test_java:
+    <<: *defaults
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk-node-browsers
@@ -58,13 +63,11 @@ jobs:
           root: tmp
           paths:
             - cc-test-reporter
-      - attach_workspace:
-          at: ~/repo/tmp
       - run: 
           name: Upload to cc
           command: |
             cd ./src/
-            ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../coverage/codeclimate.json
+            ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/coverage/codeclimate.java.json
             cd ..
             ./tmp/cc-test-reporter upload-coverage
 
@@ -77,6 +80,7 @@ jobs:
       #       codacy-coverage-reporter -l Java -r build/reports/jacoco/report.xml
 
   build_test_python:
+    <<: *defaults
     docker:      
       - image: circleci/python:3.6.1
         environment:
@@ -111,13 +115,11 @@ jobs:
           root: tmp
           paths:
             - cc-test-reporter
-      - attach_workspace:
-          at: ~/repo/tmp
       - run: 
           name: Upload to cc
           command: |
             cd ./src/
-            ../tmp/cc-test-reporter format-coverage -t coverage.py ../coverage.xml -o ../coverage/codeclimate.json
+            ../tmp/cc-test-reporter format-coverage -t coverage.py ../coverage.xml -o ../tmp/coverage/codeclimate.python.json
             cd ..
             ./tmp/cc-test-reporter upload-coverage
       
@@ -126,6 +128,19 @@ jobs:
       #     command: |
       #       export CODACY_PROJECT_TOKEN=%CODACY_PROJECT_TOKEN%
       #       python3 -m codacy-coverage -r coverage.xml
+
+  upload_to_code_climate:
+    <<: *defaults
+    environment: 
+      - CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
+    steps:
+      - attach_workspace:
+          at: ~/repo/tmp
+      - run:
+          name: Upload coverage results to Code Climate
+          command: |
+            ./tmp/cc-test-reporter sum-coverage ./tmp/coverage/codeclimate.*.json -p 2 -o ./tmp/coverage/codeclimate.total.json
+            ./tmp/cc-test-reporter upload-coverage -i ./tmp/coverage/codeclimate.total.json
 
 workflows:
   version: 2
@@ -141,5 +156,11 @@ workflows:
             branches:
               only:
                 - master
+      - build_test_python:        
+          filters:
+            branches:
+              only:
+                - master
           requires:
             - build_test_java
+            - build_test_python
