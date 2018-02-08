@@ -32,9 +32,14 @@ def find_files():
         dirs.sort()
         for file in files:
             if file.endswith(".md"):
-                languages = dirs
-                file = os.path.join(cwd, root, file)
-                result[root] = (file, languages)
+                metadatafile = os.path.join(cwd, root, "metadata.json")
+                if os.path.exists(metadatafile):
+                    contents = open(metadatafile)
+                    metadata = json.load(contents)
+                    if metadata["type"] == "problem":
+                        languages = dirs
+                        file = os.path.join(cwd, root, file)
+                        result[root] = (file, languages)
     return result
 
 def create_problems_list(files):
