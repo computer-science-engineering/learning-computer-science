@@ -1,10 +1,7 @@
-package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.ArrayMath.MinStepsInInfiniteGrid;
+package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.ArrayMath.MinStepsInInfiniteGrid.Java;
 
 import java.util.*;
 
-/**
- * https://www.interviewbit.com/problems/min-steps-in-infinite-grid/
- */
 public class Solution{
     public static void main(String[] args) {
         ArrayList<Integer> X = new ArrayList<Integer>();
