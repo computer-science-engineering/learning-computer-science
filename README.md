@@ -17,7 +17,3 @@
 ## Project Management
 
 [GitHub Projects](https://github.com/manastalukdar/learning_computer-science/projects)
-
-<!-- [![Waffle.io - Columns and their card count](https://badge.waffle.io/manastalukdar/learning_computer-science.svg?columns=all)](https://waffle.io/manastalukdar/learning_computer-science)
-
-<a href="https://zenhub.com"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a> -->
