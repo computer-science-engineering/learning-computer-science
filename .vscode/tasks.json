@@ -31,17 +31,17 @@
         {
             "label": "create-problems-list",
             "type": "shell",
-            "command": "python scripts\\create_problems_list.py" // -p build 
+            "command": "python3 ${workspaceFolder}/scripts/create_problems_list.py" // -p build 
         },  
         {
             "label": "run-python-unit-tests",
             "type": "shell",
-            "command": "python scripts\\run_unit_tests.py" // -p build 
+            "command": "python3 ${workspaceFolder}/scripts/run_unit_tests.py" // -p build 
         },  
         {
             "label": "run-python-unit-tests-coverage",
             "type": "shell",
-            "command": "coverage run scripts\\run_unit_tests.py" // -p build 
+            "command": "coverage3 run ${workspaceFolder}/scripts/run_unit_tests.py" // -p build 
         }
     ]
 }
