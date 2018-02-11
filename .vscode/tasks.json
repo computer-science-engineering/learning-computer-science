@@ -31,12 +31,12 @@
         {
             "label": "create-problems-list",
             "type": "shell",
-            "command": "python3 ${workspaceFolder}/scripts/create_problems_list.py" // -p build 
+            "command": "python ${workspaceFolder}/scripts/create_problems_list.py" // -p build 
         },  
         {
             "label": "run-python-unit-tests",
             "type": "shell",
-            "command": "python3 ${workspaceFolder}/scripts/run_unit_tests.py" // -p build 
+            "command": "python ${workspaceFolder}/scripts/run_unit_tests.py" // -p build 
         },  
         {
             "label": "run-python-unit-tests-coverage",
