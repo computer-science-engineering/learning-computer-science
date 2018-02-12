@@ -44,7 +44,7 @@ def find_files():
 
 def create_problems_list(files):
     """Creates the list of problems in markdown file."""
-    file_to_update_md = open(PROBLEMS_LIST_FILE_MD, "w")
+    file_to_update_md = open(PROBLEMS_LIST_FILE_MD, "w+")
     file_to_update_md.write("# List of problems\n")
     file_to_update_md.close()
     file_to_update_md = open(PROBLEMS_LIST_FILE_MD, "a")
@@ -100,7 +100,7 @@ def create_problems_list(files):
         file_to_update_md.write("\n" + text)
     print(f"Total problems: {count}")
     json_data = json.dumps(data_all)#, indent=2)
-    file_to_update_json = open(PROBLEMS_LIST_FILE_JSON, "w")
+    file_to_update_json = open(PROBLEMS_LIST_FILE_JSON, "w+")
     file_to_update_json.write(json_data)
     file_to_update_json.close()
     file_to_update_md.close()
