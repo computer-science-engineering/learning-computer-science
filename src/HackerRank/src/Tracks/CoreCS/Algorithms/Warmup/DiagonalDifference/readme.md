@@ -1,8 +1,8 @@
 # Diagonal Difference
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/diagonal-difference)
+[Link](https://www.hackerrank.com/challenges/diagonal-difference)
 
 ## Description
 

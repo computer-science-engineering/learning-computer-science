@@ -1,6 +1,6 @@
 # Q1 Compute Parity Of Word
 
-## Link
+## Origin
 
 ## Description
 

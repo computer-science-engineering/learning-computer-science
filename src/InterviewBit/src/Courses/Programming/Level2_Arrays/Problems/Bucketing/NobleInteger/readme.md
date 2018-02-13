@@ -1,8 +1,8 @@
 # Noble Integer
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/noble-integer/)
+[Link](https://www.interviewbit.com/problems/noble-integer/)
 
 ## Description
 

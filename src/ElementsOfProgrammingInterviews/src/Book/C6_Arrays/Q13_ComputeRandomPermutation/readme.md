@@ -1,6 +1,6 @@
 # Q13 Compute Random Permutation
 
-## Link
+## Origin
 
 ## Description
 

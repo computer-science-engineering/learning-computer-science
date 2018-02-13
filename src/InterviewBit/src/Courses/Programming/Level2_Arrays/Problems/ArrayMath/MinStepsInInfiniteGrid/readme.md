@@ -1,8 +1,8 @@
 # Min Steps In Infinite Grid
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/min-steps-in-infinite-grid/)
+[Link](https://www.interviewbit.com/problems/min-steps-in-infinite-grid/)
 
 ## Description
 

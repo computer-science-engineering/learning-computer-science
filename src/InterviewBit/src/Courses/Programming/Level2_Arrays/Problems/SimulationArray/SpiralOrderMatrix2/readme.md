@@ -1,8 +1,8 @@
 # Spiral Order Matrix 2
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/spiral-order-matrix-ii/)
+[Link](https://www.interviewbit.com/problems/spiral-order-matrix-ii/)
 
 ## Description
 

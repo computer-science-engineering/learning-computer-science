@@ -1,6 +1,6 @@
 # Q5 Multiply Without Arithmetical Operators
 
-## Link
+## Origin
 
 ## Description
 

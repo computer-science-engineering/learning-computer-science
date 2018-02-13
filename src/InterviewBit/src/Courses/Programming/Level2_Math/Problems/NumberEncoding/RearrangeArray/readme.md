@@ -1,8 +1,8 @@
 # Rearrange Array
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/rearrange-array/)
+[Link](https://www.interviewbit.com/problems/rearrange-array/)
 
 ## Description
 

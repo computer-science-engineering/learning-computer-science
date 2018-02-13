@@ -1,6 +1,6 @@
 # Q7 Buy And Sell Stock Twice
 
-## Link
+## Origin
 
 ## Description
 

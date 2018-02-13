@@ -1,6 +1,6 @@
 # Hash Table
 
-## Link
+## Origin
 
 ## Description
 

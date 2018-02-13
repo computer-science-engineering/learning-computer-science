@@ -1,8 +1,8 @@
 # Rotated Sorted Array Search
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/rotated-sorted-array-search/)
+[Link](https://www.interviewbit.com/problems/rotated-sorted-array-search/)
 
 ## Description
 

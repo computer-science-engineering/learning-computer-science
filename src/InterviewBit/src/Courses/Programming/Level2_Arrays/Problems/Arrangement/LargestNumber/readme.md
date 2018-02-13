@@ -1,8 +1,8 @@
 # Largest Number
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/largest-number/)
+[Link](https://www.interviewbit.com/problems/largest-number/)
 
 ## Description
 

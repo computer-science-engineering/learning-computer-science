@@ -1,8 +1,8 @@
 # Reverse Linked List Recursion
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/reverse-link-list-recursion/)
+[Link](https://www.interviewbit.com/problems/reverse-link-list-recursion/)
 
 ## Description
 

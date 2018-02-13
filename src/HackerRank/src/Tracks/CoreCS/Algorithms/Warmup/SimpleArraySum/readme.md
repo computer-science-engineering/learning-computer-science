@@ -1,8 +1,8 @@
 # Simple Array Sum
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/simple-array-sum)
+[Link](https://www.hackerrank.com/challenges/simple-array-sum)
 
 ## Description
 

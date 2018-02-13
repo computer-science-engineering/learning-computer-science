@@ -1,8 +1,8 @@
 # D29 Bitwise AND
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-bitwise-and)
+[Link](https://www.hackerrank.com/challenges/30-bitwise-and)
 
 ## Description
 

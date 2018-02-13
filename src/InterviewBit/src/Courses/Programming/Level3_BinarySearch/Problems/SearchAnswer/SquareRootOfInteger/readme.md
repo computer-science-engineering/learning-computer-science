@@ -1,8 +1,8 @@
 # Square Root Of Integer
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/square-root-of-integer/)
+[Link](https://www.interviewbit.com/problems/square-root-of-integer/)
 
 ## Description
 

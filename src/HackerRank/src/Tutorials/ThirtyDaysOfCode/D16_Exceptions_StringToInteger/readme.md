@@ -1,8 +1,8 @@
 # D16 Exceptions String To Integer
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-exceptions-string-to-integer)
+[Link](https://www.hackerrank.com/challenges/30-exceptions-string-to-integer)
 
 ## Description
 

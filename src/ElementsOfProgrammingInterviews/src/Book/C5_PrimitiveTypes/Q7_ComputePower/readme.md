@@ -1,6 +1,6 @@
 # Q7 Compute Power
 
-## Link
+## Origin
 
 ## Description
 

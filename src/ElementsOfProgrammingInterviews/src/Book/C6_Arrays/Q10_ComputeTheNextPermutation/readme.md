@@ -1,6 +1,6 @@
 # Q10 Compute The Next Permutation
 
-## Link
+## Origin
 
 ## Description
 

@@ -1,8 +1,8 @@
 # List Cycle
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/list-cycle/)
+[Link](https://www.interviewbit.com/problems/list-cycle/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # Modular Expression
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/modular-expression/)
+[Link](https://www.interviewbit.com/problems/modular-expression/)
 
 ## Description
 

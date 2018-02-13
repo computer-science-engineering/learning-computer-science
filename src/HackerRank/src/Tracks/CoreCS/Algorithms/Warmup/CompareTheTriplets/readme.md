@@ -1,8 +1,8 @@
 # Compare The Triplets
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/compare-the-triplets)
+[Link](https://www.hackerrank.com/challenges/compare-the-triplets)
 
 ## Description
 

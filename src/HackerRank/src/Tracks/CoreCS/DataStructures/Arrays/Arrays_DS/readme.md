@@ -1,8 +1,8 @@
 # Arrays_DS
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/arrays-ds)
+[Link](https://www.hackerrank.com/challenges/arrays-ds)
 
 ## Description
 

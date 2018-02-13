@@ -1,8 +1,8 @@
 # Sorted Permutation Rank With Repeats
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/sorted-permutation-rank-with-repeats/)
+[Link](https://www.interviewbit.com/problems/sorted-permutation-rank-with-repeats/)
 
 ## Description
 

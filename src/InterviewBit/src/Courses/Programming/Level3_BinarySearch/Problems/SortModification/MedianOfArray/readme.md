@@ -1,8 +1,8 @@
 # Median Of Array
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/median-of-array/)
+[Link](https://www.interviewbit.com/problems/median-of-array/)
 
 ## Description
 

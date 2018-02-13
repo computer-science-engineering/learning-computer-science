@@ -1,8 +1,8 @@
 # Largest Rectangle In Histogram
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/largest-rectangle-in-histogram/)
+[Link](https://www.interviewbit.com/problems/largest-rectangle-in-histogram/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # Three Sum
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/3-sum/)
+[Link](https://www.interviewbit.com/problems/3-sum/)
 
 ## Description
 

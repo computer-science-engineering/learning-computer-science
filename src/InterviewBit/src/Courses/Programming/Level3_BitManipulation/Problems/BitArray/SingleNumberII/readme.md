@@ -1,8 +1,8 @@
 # Single Number II
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/single-number-ii/)
+[Link](https://www.interviewbit.com/problems/single-number-ii/)
 
 ## Description
 

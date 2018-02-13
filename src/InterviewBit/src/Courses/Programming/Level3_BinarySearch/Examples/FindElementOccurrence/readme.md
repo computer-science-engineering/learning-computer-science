@@ -1,8 +1,8 @@
 # Find Element Occurrence
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/count-element-occurence/)
+[Link](https://www.interviewbit.com/problems/count-element-occurence/)
 
 ## Description
 

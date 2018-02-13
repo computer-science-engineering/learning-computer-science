@@ -1,8 +1,8 @@
 # Array Impl 1
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/arrayimpl1/)
+[Link](https://www.interviewbit.com/problems/arrayimpl1/)
 
 ## Description
 

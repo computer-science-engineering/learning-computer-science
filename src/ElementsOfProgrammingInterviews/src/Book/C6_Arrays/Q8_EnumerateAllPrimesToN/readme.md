@@ -1,6 +1,6 @@
 # Q8 Enumerate All Primes To N
 
-## Link
+## Origin
 
 ## Description
 

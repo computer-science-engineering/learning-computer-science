@@ -1,6 +1,6 @@
 # Q6 Compute Division
 
-## Link
+## Origin
 
 ## Description
 

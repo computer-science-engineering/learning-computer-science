@@ -1,8 +1,8 @@
 # Binary Representation
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/binary-representation/)
+[Link](https://www.interviewbit.com/problems/binary-representation/)
 
 ## Description
 

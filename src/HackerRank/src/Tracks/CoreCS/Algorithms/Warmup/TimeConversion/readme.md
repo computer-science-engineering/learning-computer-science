@@ -1,8 +1,8 @@
 # Time Conversion
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/time-conversion)
+[Link](https://www.hackerrank.com/challenges/time-conversion)
 
 ## Description
 

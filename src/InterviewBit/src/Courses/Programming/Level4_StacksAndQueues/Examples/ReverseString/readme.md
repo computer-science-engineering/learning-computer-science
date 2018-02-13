@@ -1,8 +1,8 @@
 # Reverse String
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/reverse-string/)
+[Link](https://www.interviewbit.com/problems/reverse-string/)
 
 ## Description
 

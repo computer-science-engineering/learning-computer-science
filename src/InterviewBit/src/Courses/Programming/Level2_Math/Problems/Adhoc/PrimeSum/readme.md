@@ -1,8 +1,8 @@
 # Prime Sum
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/prime-sum/)
+[Link](https://www.interviewbit.com/problems/prime-sum/)
 
 ## Description
 

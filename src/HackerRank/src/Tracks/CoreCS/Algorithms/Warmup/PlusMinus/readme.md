@@ -1,8 +1,8 @@
 # Plus Minus
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/plus-minus)
+[Link](https://www.hackerrank.com/challenges/plus-minus)
 
 ## Description
 

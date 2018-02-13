@@ -1,8 +1,8 @@
 # D11 2D Arrays
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-2d-arrays)
+[Link](https://www.hackerrank.com/challenges/30-2d-arrays)
 
 ## Description
 

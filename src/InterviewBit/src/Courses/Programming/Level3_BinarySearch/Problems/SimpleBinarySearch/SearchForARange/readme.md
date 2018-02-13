@@ -1,8 +1,8 @@
 # Search For A Range
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/search-for-a-range/)
+[Link](https://www.interviewbit.com/problems/search-for-a-range/)
 
 ## Description
 

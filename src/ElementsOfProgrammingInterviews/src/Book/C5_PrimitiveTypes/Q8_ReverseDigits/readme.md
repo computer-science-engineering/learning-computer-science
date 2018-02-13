@@ -1,6 +1,6 @@
 # Q8 Reverse Digits
 
-## Link
+## Origin
 
 ## Description
 

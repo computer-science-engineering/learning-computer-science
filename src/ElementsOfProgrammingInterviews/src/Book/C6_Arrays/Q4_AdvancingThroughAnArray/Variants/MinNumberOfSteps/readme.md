@@ -1,6 +1,6 @@
 # Min Number Of Steps
 
-## Link
+## Origin
 
 ## Description
 

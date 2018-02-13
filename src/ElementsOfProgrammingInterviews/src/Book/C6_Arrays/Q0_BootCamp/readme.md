@@ -1,6 +1,6 @@
 # Q0 Boot Camp
 
-## Link
+## Origin
 
 ## Description
 

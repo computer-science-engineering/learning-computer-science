@@ -1,8 +1,8 @@
 # Multiply Strings
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/multiply-strings/)
+[Link](https://www.interviewbit.com/problems/multiply-strings/)
 
 ## Description
 

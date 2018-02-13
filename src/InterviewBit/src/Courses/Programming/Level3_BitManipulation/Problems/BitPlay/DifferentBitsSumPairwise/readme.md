@@ -1,8 +1,8 @@
 # Different Bits Sum Pairwise
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/different-bits-sum-pairwise/)
+[Link](https://www.interviewbit.com/problems/different-bits-sum-pairwise/)
 
 ## Description
 

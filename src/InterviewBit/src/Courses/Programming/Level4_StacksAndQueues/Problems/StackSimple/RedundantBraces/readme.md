@@ -1,8 +1,8 @@
 # Redundant Braces
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/redundant-braces/)
+[Link](https://www.interviewbit.com/problems/redundant-braces/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D23 BST Level Order Traversal
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-binary-trees)
+[Link](https://www.hackerrank.com/challenges/30-binary-trees)
 
 ## Description
 

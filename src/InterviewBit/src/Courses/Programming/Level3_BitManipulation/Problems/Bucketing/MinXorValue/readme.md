@@ -1,8 +1,8 @@
 # Min XOR Value
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/min-xor-value/)
+[Link](https://www.interviewbit.com/problems/min-xor-value/)
 
 ## Description
 

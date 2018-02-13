@@ -1,8 +1,8 @@
 # Reorder List
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/reorder-list/)
+[Link](https://www.interviewbit.com/problems/reorder-list/)
 
 ## Description
 

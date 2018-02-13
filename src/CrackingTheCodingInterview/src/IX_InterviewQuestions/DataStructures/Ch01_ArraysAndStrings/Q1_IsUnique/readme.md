@@ -1,6 +1,6 @@
 # Q1 Is Unique
 
-## Link
+## Origin
 
 ## Description
 

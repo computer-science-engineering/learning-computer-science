@@ -1,8 +1,8 @@
 # Array 2D
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/array2d/)
+[Link](https://www.interviewbit.com/problems/array2d/)
 
 ## Description
 

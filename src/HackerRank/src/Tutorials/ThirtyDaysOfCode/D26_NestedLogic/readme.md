@@ -1,8 +1,8 @@
 # D26 Nested Logic
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-nested-logic)
+[Link](https://www.hackerrank.com/challenges/30-nested-logic)
 
 ## Description
 

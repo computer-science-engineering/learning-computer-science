@@ -1,6 +1,6 @@
 # Q14 Compute Random Subset
 
-## Link
+## Origin
 
 ## Description
 

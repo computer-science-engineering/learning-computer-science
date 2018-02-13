@@ -1,8 +1,8 @@
 # D25 Running Time And Complexity
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-running-time-and-complexity)
+[Link](https://www.hackerrank.com/challenges/30-running-time-and-complexity)
 
 ## Description
 

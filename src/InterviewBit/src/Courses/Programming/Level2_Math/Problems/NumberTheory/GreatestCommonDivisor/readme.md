@@ -1,8 +1,8 @@
 # Greatest Common Divisor
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/greatest-common-divisor/)
+[Link](https://www.interviewbit.com/problems/greatest-common-divisor/)
 
 ## Description
 

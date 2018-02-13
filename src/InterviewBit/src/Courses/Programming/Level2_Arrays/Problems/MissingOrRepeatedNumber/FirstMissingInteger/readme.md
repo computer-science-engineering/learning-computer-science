@@ -1,8 +1,8 @@
 # First Missing Integer
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/first-missing-integer/)
+[Link](https://www.interviewbit.com/problems/first-missing-integer/)
 
 ## Description
 

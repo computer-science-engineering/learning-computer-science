@@ -1,8 +1,8 @@
 # D5 Loops
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-loops)
+[Link](https://www.hackerrank.com/challenges/30-loops)
 
 ## Description
 

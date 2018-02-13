@@ -1,8 +1,8 @@
 # D13 Abstract Classes
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-abstract-classes)
+[Link](https://www.hackerrank.com/challenges/30-abstract-classes)
 
 ## Description
 

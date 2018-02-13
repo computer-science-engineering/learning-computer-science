@@ -1,8 +1,8 @@
 # Wave Array
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/wave-array/)
+[Link](https://www.interviewbit.com/problems/wave-array/)
 
 ## Description
 

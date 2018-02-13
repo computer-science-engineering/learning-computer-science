@@ -1,8 +1,8 @@
 # Spiral Order Matrix 1
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/spiral-order-matrix-i)
+[Link](https://www.interviewbit.com/problems/spiral-order-matrix-i)
 
 ## Description
 

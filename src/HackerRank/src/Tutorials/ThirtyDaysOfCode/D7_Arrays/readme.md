@@ -1,8 +1,8 @@
 # D7 Arrays
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-arrays)
+[Link](https://www.hackerrank.com/challenges/30-arrays)
 
 ## Description
 

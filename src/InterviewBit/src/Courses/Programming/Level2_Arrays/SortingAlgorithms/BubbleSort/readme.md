@@ -1,8 +1,8 @@
 # Bubble Sort
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/courses/programming/topics/arrays/)
+[Link](https://www.interviewbit.com/courses/programming/topics/arrays/)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Linked List
 
-## Link
+## Origin
 
 ## Description
 

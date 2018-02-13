@@ -1,8 +1,8 @@
 # D2 Operators
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-operators)
+[Link](https://www.hackerrank.com/challenges/30-operators)
 
 ## Description
 

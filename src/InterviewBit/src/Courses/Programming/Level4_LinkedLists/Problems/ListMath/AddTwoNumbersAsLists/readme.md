@@ -1,8 +1,8 @@
 # Add Two Numbers As Lists
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/add-two-numbers-as-lists/)
+[Link](https://www.interviewbit.com/problems/add-two-numbers-as-lists/)
 
 ## Description
 

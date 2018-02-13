@@ -1,8 +1,8 @@
 # Palindrome Integer
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/palindrome-integer/)
+[Link](https://www.interviewbit.com/problems/palindrome-integer/)
 
 ## Description
 

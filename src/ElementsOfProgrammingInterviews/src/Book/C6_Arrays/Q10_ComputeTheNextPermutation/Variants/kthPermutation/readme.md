@@ -1,6 +1,6 @@
 # kth Permutation
 
-## Link
+## Origin
 
 ## Description
 

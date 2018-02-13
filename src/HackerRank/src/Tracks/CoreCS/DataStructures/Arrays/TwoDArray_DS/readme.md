@@ -1,8 +1,8 @@
 # 2DArray_DS
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/2d-array)
+[Link](https://www.hackerrank.com/challenges/2d-array)
 
 ## Description
 

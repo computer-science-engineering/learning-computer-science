@@ -1,8 +1,8 @@
 # Intersection Of Sorted Arrays
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/intersection-of-sorted-arrays/)
+[Link](https://www.interviewbit.com/problems/intersection-of-sorted-arrays/)
 
 ## Description
 

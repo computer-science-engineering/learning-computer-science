@@ -1,8 +1,8 @@
 # Longest Palindromic Substring
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/longest-palindromic-substring/)
+[Link](https://www.interviewbit.com/problems/longest-palindromic-substring/)
 
 ## Description
 

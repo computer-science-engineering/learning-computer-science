@@ -1,8 +1,8 @@
 # D20 Sorting
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-sorting)
+[Link](https://www.hackerrank.com/challenges/30-sorting)
 
 ## Description
 

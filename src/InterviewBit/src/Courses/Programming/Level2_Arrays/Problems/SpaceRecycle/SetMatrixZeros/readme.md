@@ -1,8 +1,8 @@
 # Set Matrix Zeros
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/set-matrix-zeros/)
+[Link](https://www.interviewbit.com/problems/set-matrix-zeros/)
 
 ## Description
 

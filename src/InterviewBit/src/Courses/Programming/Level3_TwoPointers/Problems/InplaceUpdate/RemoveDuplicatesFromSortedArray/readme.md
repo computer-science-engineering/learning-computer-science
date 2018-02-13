@@ -1,8 +1,8 @@
 # Remove Duplicates From Sorted Array
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/)
+[Link](https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D9 Recursion
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-recursion)
+[Link](https://www.hackerrank.com/challenges/30-recursion)
 
 ## Description
 

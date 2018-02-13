@@ -1,8 +1,8 @@
 # Prime Numbers
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/prime-numbers/)
+[Link](https://www.interviewbit.com/problems/prime-numbers/)
 
 ## Description
 
