@@ -57,6 +57,42 @@
   * the CDN will serve that content if it has it locally available.
   * If it isn’t available, the CDN will query the back-end servers for the file and then
   * cache it locally and serve it to the requesting user.
-* Initially is system does not necessitate a CDN, future transition can be eased by serving the static media off a separate subdomain (e.g. static.yourservice.com) using a lightweight HTTP server like Nginx, and cut-over the DNS from your servers to a CDN later.
+* Initially is system does not necessitate a CDN, future transition can be eased by serving the static media off a separate subdomain (e.g. `static.yourservice.com`) using a lightweight HTTP server like Nginx, and cut-over the DNS from your servers to a CDN later.
 
-## cache Invalidation
+## Cache Invalidation
+
+* Cache needs to be kept coherent/in-sync with the original data store.
+* if data is modified in database, it should be invalided in the cache.
+
+Three main schemes of cache invalidation.
+
+### Write-through cache
+
+* Data is written into the cache and database at the same time.
+* Advantage
+  * Fast retrieval from cached data.
+  * Complete data consistency between cache and storage.
+  * Nothing will get lost in case of a crash, power failure, or other system disruptions since same data gets written to main data store.
+* Disadvantage - higher latency for write operations since every write operation has to be done twice before returning success to the client.
+
+### Write-around cache
+
+* Data is written directly to data store, bypassing the cache.
+* Advantage - reduces chance of cache being flooded with write operations that will not subsequently be re-read.
+* Disadvantage - read request for recently written data will create a "cache miss" and must be read from original data store at higher latency.
+
+### Write-back cache
+
+* Data is written to cache alone and completion is immediately confirmed to client.
+* Write to original data store is done at specific intervals or under certain conditions.
+* Advantage - low latency and high throughput for write-intensive operations.
+* Disadvantage - risk of data loss in case of crash or something similar since only copy of written data is in the cache.
+
+## Cache eviction policies
+
+1. **First In First Out (FIFO):** Evicts the first block accessed first, without any regard for how often or how many times it was accessed before.
+1. **Last In First Out (LIFO):** Evicts the block most recently accessed first, without any regard for how often or how many times it was accessed before.
+1. **Least Recently Used (LRU):** Discards the least recently used items first.
+1. **Most Recently Used (MRU):** Discards the most recently used items first.
+1. **Least Frequently Used (LFU):** Counts how often an item is needed. Those that are used least often are discarded first.
+1. **Random Replacement (RR):** Randomly selects a candidate item and discards it to make space when necessary.
