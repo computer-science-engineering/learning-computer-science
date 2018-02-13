@@ -45,6 +45,7 @@
         "cvsection",
         "cvsubsection",
         "dataset",
+        "datasets",
         "denormalize",
         "eval",
         "footable",
