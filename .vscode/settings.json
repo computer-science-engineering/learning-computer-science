@@ -57,6 +57,7 @@
         "linebreak",
         "linkedlist",
         "llloh",
+        "lucaslouca",
         "makeheader",
         "maxarea",
         "mcdowellcv",
@@ -79,7 +80,8 @@
         "tarroc",
         "twelvehourtime",
         "uncomment",
-        "unoptimized"
+        "unoptimized",
+        "zrzahid"
     ],
     "python.unitTest.unittestEnabled": false,
     "python.unitTest.unittestArgs": [
