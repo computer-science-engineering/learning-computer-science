@@ -1,8 +1,8 @@
 # Grid Unique Paths
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/grid-unique-paths/)
+[Link](https://www.interviewbit.com/problems/grid-unique-paths/)
 
 ## Description
 

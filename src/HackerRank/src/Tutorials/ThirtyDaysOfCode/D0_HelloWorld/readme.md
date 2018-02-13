@@ -1,8 +1,8 @@
 # D0 Hello World
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-hello-world)
+[Link](https://www.hackerrank.com/challenges/30-hello-world)
 
 ## Description
 

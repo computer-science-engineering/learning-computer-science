@@ -1,8 +1,8 @@
 # Trailing Zeros In Factorial
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/trailing-zeros-in-factorial/)
+[Link](https://www.interviewbit.com/problems/trailing-zeros-in-factorial/)
 
 ## Description
 

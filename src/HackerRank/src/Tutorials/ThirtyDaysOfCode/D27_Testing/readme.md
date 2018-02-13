@@ -1,8 +1,8 @@
 # D27 Testing
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-testing)
+[Link](https://www.hackerrank.com/challenges/30-testing)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # Verify Prime
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/verify-prime/)
+[Link](https://www.interviewbit.com/problems/verify-prime/)
 
 ## Description
 

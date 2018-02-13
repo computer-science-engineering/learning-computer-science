@@ -1,8 +1,8 @@
 # Minimum Absolute Difference In AnArray
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/contests/rookierank-2/challenges/minimum-absolute-difference-in-an-array)
+[Link](https://www.hackerrank.com/contests/rookierank-2/challenges/minimum-absolute-difference-in-an-array)
 
 ## Description
 

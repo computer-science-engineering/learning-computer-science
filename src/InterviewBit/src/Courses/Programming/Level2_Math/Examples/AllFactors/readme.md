@@ -1,8 +1,8 @@
 # All Factors
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/all-factors/)
+[Link](https://www.interviewbit.com/problems/all-factors/)
 
 ## Description
 

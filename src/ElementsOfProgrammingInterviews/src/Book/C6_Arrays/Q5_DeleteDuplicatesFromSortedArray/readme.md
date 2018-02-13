@@ -1,6 +1,6 @@
 # Q5 Delete Duplicates From Sorted Array
 
-## Link
+## Origin
 
 ## Description
 

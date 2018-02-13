@@ -1,8 +1,8 @@
 # Migratory Birds
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/contests/rookierank-2/challenges/migratory-birds)
+[Link](https://www.hackerrank.com/contests/rookierank-2/challenges/migratory-birds)
 
 ## Description
 

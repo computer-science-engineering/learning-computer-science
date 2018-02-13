@@ -1,8 +1,8 @@
 # Circular Array Rotation
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/circular-array-rotation)
+[Link](https://www.hackerrank.com/challenges/circular-array-rotation)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D18 Queues And Stacks
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-queues-stacks)
+[Link](https://www.hackerrank.com/challenges/30-queues-stacks)
 
 ## Description
 

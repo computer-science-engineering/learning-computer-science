@@ -1,8 +1,8 @@
 # D10 Binary Numbers
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-binary-numbers)
+[Link](https://www.hackerrank.com/challenges/30-binary-numbers)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # Justified Text
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/justified-text/)
+[Link](https://www.interviewbit.com/problems/justified-text/)
 
 ## Description
 

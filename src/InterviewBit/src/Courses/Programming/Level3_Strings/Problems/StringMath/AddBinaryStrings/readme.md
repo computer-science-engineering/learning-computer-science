@@ -1,8 +1,8 @@
 # Add Binary Strings
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/add-binary-strings/)
+[Link](https://www.interviewbit.com/problems/add-binary-strings/)
 
 ## Description
 

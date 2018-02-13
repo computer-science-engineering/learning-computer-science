@@ -1,8 +1,8 @@
 # Excel Column Title
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/excel-column-title/)
+[Link](https://www.interviewbit.com/problems/excel-column-title/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # A Very Big Sum
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/a-very-big-sum)
+[Link](https://www.hackerrank.com/challenges/a-very-big-sum)
 
 ## Description
 

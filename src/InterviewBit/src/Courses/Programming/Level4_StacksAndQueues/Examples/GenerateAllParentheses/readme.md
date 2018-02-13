@@ -1,8 +1,8 @@
 # Generate All Parentheses
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/generate-all-parentheses/)
+[Link](https://www.interviewbit.com/problems/generate-all-parentheses/)
 
 ## Description
 

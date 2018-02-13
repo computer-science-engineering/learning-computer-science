@@ -1,8 +1,8 @@
 # D3 Intro To Conditional Statements
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-conditional-statements)
+[Link](https://www.hackerrank.com/challenges/30-conditional-statements)
 
 ## Description
 

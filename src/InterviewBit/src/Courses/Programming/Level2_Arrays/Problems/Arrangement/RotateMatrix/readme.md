@@ -1,8 +1,8 @@
 # Rotate Matrix
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/rotate-matrix/)
+[Link](https://www.interviewbit.com/problems/rotate-matrix/)
 
 ## Description
 

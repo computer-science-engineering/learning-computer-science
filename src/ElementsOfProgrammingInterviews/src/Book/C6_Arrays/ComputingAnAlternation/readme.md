@@ -1,6 +1,6 @@
 # Computing An Alternation
 
-## Link
+## Origin
 
 ## Description
 

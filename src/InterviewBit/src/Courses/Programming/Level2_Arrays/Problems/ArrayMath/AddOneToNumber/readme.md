@@ -1,8 +1,8 @@
 # Add One To Number
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/add-one-to-number/)
+[Link](https://www.interviewbit.com/problems/add-one-to-number/)
 
 ## Description
 

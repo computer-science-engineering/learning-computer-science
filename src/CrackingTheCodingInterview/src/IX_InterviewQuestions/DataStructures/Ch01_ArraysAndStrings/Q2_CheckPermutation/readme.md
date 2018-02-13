@@ -1,6 +1,6 @@
 # Q2 Check Permutation
 
-## Link
+## Origin
 
 ## Description
 

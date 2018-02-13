@@ -1,6 +1,6 @@
 # Linked List Node
 
-## Link
+## Origin
 
 ## Description
 

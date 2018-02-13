@@ -1,8 +1,8 @@
 # D19 Interfaces
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-interfaces)
+[Link](https://www.hackerrank.com/challenges/30-interfaces)
 
 ## Description
 

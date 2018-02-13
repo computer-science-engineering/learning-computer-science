@@ -1,8 +1,8 @@
 # Longest Common Prefix
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/longest-common-prefix/)
+[Link](https://www.interviewbit.com/problems/longest-common-prefix/)
 
 ## Description
 

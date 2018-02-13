@@ -1,8 +1,8 @@
 # Merge Intervals
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/merge-intervals/)
+[Link](https://www.interviewbit.com/problems/merge-intervals/)
 
 ## Description
 

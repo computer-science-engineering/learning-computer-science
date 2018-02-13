@@ -1,8 +1,8 @@
 # Two Sum
 
-## Link
+## Origin
 
-[Here](https://leetcode.com/problems/two-sum)
+[Link](https://leetcode.com/problems/two-sum)
 
 ## Description
 

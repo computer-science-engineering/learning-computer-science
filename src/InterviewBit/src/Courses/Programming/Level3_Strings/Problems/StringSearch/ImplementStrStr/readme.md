@@ -1,8 +1,8 @@
 # Implement StrStr
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/implement-strstr/)
+[Link](https://www.interviewbit.com/problems/implement-strstr/)
 
 ## Description
 

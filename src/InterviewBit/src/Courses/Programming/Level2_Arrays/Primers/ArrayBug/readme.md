@@ -1,8 +1,8 @@
 # Array Bug
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/arraybug/)
+[Link](https://www.interviewbit.com/problems/arraybug/)
 
 ## Description
 

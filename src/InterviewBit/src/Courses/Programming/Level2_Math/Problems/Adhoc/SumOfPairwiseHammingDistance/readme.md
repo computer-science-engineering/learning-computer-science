@@ -1,8 +1,8 @@
 # Sum Of Pairwise Hamming Distance
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/)
+[Link](https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/)
 
 ## Description
 

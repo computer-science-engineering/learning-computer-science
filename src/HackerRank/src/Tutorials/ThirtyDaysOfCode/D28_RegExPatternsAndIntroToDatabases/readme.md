@@ -1,8 +1,8 @@
 # D28 RegEx Patterns And Intro To Databases
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-regex-patterns)
+[Link](https://www.hackerrank.com/challenges/30-regex-patterns)
 
 ## Description
 

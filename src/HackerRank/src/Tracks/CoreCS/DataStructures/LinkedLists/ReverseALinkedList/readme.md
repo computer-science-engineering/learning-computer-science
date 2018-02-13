@@ -1,8 +1,8 @@
 # Reverse A Linked List
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/reverse-a-linked-list)
+[Link](https://www.hackerrank.com/challenges/reverse-a-linked-list)
 
 ## Description
 

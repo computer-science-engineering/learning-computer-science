@@ -1,8 +1,8 @@
 # D4 Class Vs Instance
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-class-vs-instance)
+[Link](https://www.hackerrank.com/challenges/30-class-vs-instance)
 
 ## Description
 

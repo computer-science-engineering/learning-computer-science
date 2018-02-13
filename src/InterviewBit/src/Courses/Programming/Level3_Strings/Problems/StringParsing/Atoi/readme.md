@@ -1,8 +1,8 @@
 # Atoi
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/atoi/)
+[Link](https://www.interviewbit.com/problems/atoi/)
 
 ## Description
 

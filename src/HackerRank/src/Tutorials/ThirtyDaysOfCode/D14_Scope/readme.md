@@ -1,8 +1,8 @@
 # D14 Scope
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-scope)
+[Link](https://www.hackerrank.com/challenges/30-scope)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D12 Inheritance
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-inheritance)
+[Link](https://www.hackerrank.com/challenges/30-inheritance)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D1 Data Types
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-data-types)
+[Link](https://www.hackerrank.com/challenges/30-data-types)
 
 ## Description
 

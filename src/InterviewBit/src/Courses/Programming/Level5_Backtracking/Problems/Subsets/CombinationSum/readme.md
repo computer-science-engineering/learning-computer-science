@@ -1,8 +1,8 @@
 # Combination Sum
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/combination-sum/)
+[Link](https://www.interviewbit.com/problems/combination-sum/)
 
 ## Description
 

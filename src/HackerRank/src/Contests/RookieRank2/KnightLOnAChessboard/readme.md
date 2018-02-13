@@ -1,8 +1,8 @@
 # KnightL On A Chessboard
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/contests/rookierank-2/challenges/knightl-on-chessboard)
+[Link](https://www.hackerrank.com/contests/rookierank-2/challenges/knightl-on-chessboard)
 
 ## Description
 

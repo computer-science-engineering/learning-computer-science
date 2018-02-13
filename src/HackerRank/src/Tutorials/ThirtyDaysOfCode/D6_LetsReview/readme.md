@@ -1,8 +1,8 @@
 # D6 Lets Review
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-review-loop)
+[Link](https://www.hackerrank.com/challenges/30-review-loop)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D24 More Linked Lists
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-linked-list-deletion)
+[Link](https://www.hackerrank.com/challenges/30-linked-list-deletion)
 
 ## Description
 

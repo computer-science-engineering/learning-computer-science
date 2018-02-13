@@ -1,8 +1,8 @@
 # Count And Say
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/count-and-say/)
+[Link](https://www.interviewbit.com/problems/count-and-say/)
 
 ## Description
 

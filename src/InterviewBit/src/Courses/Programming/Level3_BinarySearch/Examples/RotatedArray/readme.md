@@ -1,8 +1,8 @@
 # Rotated Array
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/rotated-array/)
+[Link](https://www.interviewbit.com/problems/rotated-array/)
 
 ## Description
 

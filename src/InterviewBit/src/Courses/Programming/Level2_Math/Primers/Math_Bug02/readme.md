@@ -1,8 +1,8 @@
 # Math Bug02
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/mathbug02/)
+[Link](https://www.interviewbit.com/problems/mathbug02/)
 
 ## Description
 

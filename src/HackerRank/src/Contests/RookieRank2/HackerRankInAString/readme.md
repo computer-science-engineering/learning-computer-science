@@ -1,8 +1,8 @@
 # HackerRank In A String
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/contests/rookierank-2/challenges/hackerrank-in-a-string/problem)
+[Link](https://www.hackerrank.com/contests/rookierank-2/challenges/hackerrank-in-a-string/problem)
 
 ## Description
 

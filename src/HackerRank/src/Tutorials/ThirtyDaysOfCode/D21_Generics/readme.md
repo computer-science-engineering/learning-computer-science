@@ -1,8 +1,8 @@
 # D21 Generics
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-generics)
+[Link](https://www.hackerrank.com/challenges/30-generics)
 
 ## Description
 

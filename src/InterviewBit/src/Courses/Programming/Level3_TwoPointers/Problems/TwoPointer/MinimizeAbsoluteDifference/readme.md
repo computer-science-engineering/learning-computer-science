@@ -1,8 +1,8 @@
 # Minimize The Absolute Difference
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/minimize-the-absolute-difference/)
+[Link](https://www.interviewbit.com/problems/minimize-the-absolute-difference/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D17 More Exceptions
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-more-exceptions)
+[Link](https://www.hackerrank.com/challenges/30-more-exceptions)
 
 ## Description
 

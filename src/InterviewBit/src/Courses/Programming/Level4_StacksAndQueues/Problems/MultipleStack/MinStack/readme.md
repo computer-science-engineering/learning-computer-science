@@ -1,8 +1,8 @@
 # Min Stack
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/min-stack/)
+[Link](https://www.interviewbit.com/problems/min-stack/)
 
 ## Description
 

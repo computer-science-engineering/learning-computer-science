@@ -1,8 +1,8 @@
 # Numbers Of Length N And Values Less Than K
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/numbers-of-length-n-and-value-less-than-k/)
+[Link](https://www.interviewbit.com/problems/numbers-of-length-n-and-value-less-than-k/)
 
 ## Description
 

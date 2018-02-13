@@ -1,6 +1,6 @@
 # Q9 Decimal Integer Palindrome Check
 
-## Link
+## Origin
 
 ## Description
 

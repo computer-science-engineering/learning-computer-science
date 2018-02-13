@@ -1,6 +1,6 @@
 # Limit Duplicates
 
-## Link
+## Origin
 
 ## Description
 

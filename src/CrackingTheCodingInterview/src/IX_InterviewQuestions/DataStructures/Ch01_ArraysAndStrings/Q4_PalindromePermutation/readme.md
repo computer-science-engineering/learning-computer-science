@@ -1,6 +1,6 @@
 # Q4 Palindrome Permutation
 
-## Link
+## Origin
 
 ## Description
 

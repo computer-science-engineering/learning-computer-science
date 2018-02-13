@@ -1,8 +1,8 @@
 # D15 Linked List
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-linked-list)
+[Link](https://www.hackerrank.com/challenges/30-linked-list)
 
 ## Description
 

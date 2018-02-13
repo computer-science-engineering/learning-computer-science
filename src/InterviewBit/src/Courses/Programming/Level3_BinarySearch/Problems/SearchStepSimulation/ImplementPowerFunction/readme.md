@@ -1,8 +1,8 @@
 # Implement Power Function
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/implement-power-function/)
+[Link](https://www.interviewbit.com/problems/implement-power-function/)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # Staircase
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/staircase)
+[Link](https://www.hackerrank.com/challenges/staircase)
 
 ## Description
 

@@ -1,8 +1,8 @@
 # D22 Binary Search Trees
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/30-binary-search-trees)
+[Link](https://www.hackerrank.com/challenges/30-binary-search-trees)
 
 ## Description
 

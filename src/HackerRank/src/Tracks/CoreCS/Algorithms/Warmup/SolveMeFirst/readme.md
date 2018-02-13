@@ -1,8 +1,8 @@
 # Solve Me First
 
-## Link
+## Origin
 
-[Here](https://www.hackerrank.com/challenges/solve-me-first)
+[Link](https://www.hackerrank.com/challenges/solve-me-first)
 
 ## Description
 

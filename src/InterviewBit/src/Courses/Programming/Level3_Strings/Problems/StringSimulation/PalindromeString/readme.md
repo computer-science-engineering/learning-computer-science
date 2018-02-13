@@ -1,8 +1,8 @@
 # Palindrome String
 
-## Link
+## Origin
 
-[Here](https://www.interviewbit.com/problems/palindrome-string/)
+[Link](https://www.interviewbit.com/problems/palindrome-string/)
 
 ## Description
 
