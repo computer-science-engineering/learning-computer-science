@@ -3,6 +3,7 @@ package InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.Subset
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
+import java.util.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,11 +24,13 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(2,3,6,7));;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            ArrayList<ArrayList<Integer>> expected = new  ArrayList<ArrayList<Integer>>();
+            expected.add(new ArrayList<Integer>(Arrays.asList(2,2,3)));
+            expected.add(new ArrayList<Integer>(Arrays.asList(7)));
+            ArrayList<ArrayList<Integer>> actual = Solution.combinationSum(input, 7);
+            assertEquals(expected, actual);
         });
     }
 }
