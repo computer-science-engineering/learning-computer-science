@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.Subsets.CombinationSum.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.BruteforceBuilder.PalindromePartitioning.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
