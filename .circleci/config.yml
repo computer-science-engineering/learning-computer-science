@@ -12,6 +12,9 @@ jobs:
     <<: *defaults
     machine: true
     working_directory: ~/repo
+    branches:
+      only:
+        - master
     steps:
       - run:
           name:  Download cc-test-reporter
@@ -41,6 +44,9 @@ jobs:
       # - image: circleci/postgres:9.4
     
     working_directory: ~/repo
+    branches:
+      only:
+        - master
 
     environment:
       # Customize the JVM maximum heap limit
@@ -108,7 +114,10 @@ jobs:
           CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN
 
     working_directory: ~/repo
-
+    branches:
+      only:
+        - master
+        
     steps:
       - checkout
 
