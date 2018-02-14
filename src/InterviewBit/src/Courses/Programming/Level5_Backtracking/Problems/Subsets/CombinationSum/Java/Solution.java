@@ -19,27 +19,36 @@ public class Solution {
     }
 
     public static ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B) {
-        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> results = new ArrayList<>();
+        if(A == null || A.size() == 0) {
+            return results;
+        }
         Collections.sort(A);
-        backtrack(list, new ArrayList<>(), A, B, 0);
-        return list;
+        HashSet<ArrayList<Integer>> set = new  HashSet<ArrayList<Integer>>();
+        backtrack(results, new ArrayList<>(), A, B, 0, set);
+        return results;
     }
 
-    private static void backtrack(ArrayList<ArrayList<Integer>> list, List<Integer> tempList, ArrayList<Integer> nums, int remain, int start) {
-        if(remain < 0) {
+    private static void backtrack(ArrayList<ArrayList<Integer>> results, List<Integer> combination, ArrayList<Integer> nums, int target, int startIndex, HashSet<ArrayList<Integer>> set) {
+        if(target < 0) {
             return;
         }
-        else if(remain == 0) {
-            list.add(new ArrayList<>(tempList));
+        else if(target == 0) {
+            ArrayList<Integer> temp = new ArrayList<Integer>(combination);
+            if(!set.contains(temp)){
+                set.add(temp);
+                results.add(temp);
+            }
+            return;
         }
         else { 
-            for(int i = start; i < nums.size(); i++) {
-                if(remain < nums.get(i)) {
-                    return;
+            for(int i = startIndex; i < nums.size(); i++) {
+                if(nums.get(i) > target ) {
+                    break;
                 }
-                tempList.add(nums.get(i));
-                backtrack(list, tempList, nums, remain - nums.get(i), i); // not i + 1 because we can reuse same elements
-                tempList.remove(tempList.size() - 1);
+                combination.add(nums.get(i));
+                backtrack(results, combination, nums, target - nums.get(i), i, set); // not i + 1 because we can reuse same elements
+                combination.remove(combination.size() - 1);
             }
         }
     }    

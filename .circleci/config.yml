@@ -108,7 +108,7 @@ jobs:
           CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN
 
     working_directory: ~/repo
-
+        
     steps:
       - checkout
 

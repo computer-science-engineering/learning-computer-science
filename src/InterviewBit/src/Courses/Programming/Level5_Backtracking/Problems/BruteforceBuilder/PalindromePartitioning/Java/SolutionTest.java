@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.Subsets.CombinationSum.Java;
+package InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.BruteforceBuilder.PalindromePartitioning.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,12 +24,12 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(2,3,6,7));;
+        String input = "aab";
         assertTimeout(Duration.ofMillis(500), () -> {
-            ArrayList<ArrayList<Integer>> expected = new  ArrayList<ArrayList<Integer>>();
-            expected.add(new ArrayList<Integer>(Arrays.asList(2,2,3)));
-            expected.add(new ArrayList<Integer>(Arrays.asList(7)));
-            ArrayList<ArrayList<Integer>> actual = Solution.combinationSum(input, 7);
+            ArrayList<ArrayList<String>> expected = new ArrayList<ArrayList<String>>();
+            expected.add(new ArrayList<String>(Arrays.asList("a","a","b")));
+            expected.add(new ArrayList<String>(Arrays.asList("aa", "b")));
+            ArrayList<ArrayList<String>> actual = Solution.partition(input);
             assertEquals(expected, actual);
         });
     }

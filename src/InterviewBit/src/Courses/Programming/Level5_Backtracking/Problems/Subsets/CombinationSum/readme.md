@@ -55,3 +55,4 @@ If you do, we will disqualify your submission retroactively and give you penalty
 
 1. [LeetCode discussion](https://leetcode.com/problems/combination-sum/discuss/16502)
 1. [ProgramCreek](https://www.programcreek.com/2014/02/leetcode-combination-sum-java/)
+1. [GoodTeacher](http://www.goodtecher.com/leetcode-39-combination-sum-java/)
