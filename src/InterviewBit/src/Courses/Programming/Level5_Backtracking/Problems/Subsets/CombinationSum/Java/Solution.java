@@ -43,7 +43,7 @@ public class Solution {
         }
         else { 
             for(int i = startIndex; i < nums.size(); i++) {
-                if(target < nums.get(i)) {
+                if(nums.get(i) > target ) {
                     break;
                 }
                 combination.add(nums.get(i));
