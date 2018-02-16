@@ -18,6 +18,8 @@ firstNonRepeatedCharacter( "cdcd" ) --> null
 
 ## Categories
 
+1. Level1
+
 ## Tags
 
 1. Strings
