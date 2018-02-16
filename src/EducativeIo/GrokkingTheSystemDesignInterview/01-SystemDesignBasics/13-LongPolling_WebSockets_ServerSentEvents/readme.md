@@ -17,3 +17,8 @@ Client requests information from the server exactly as in normal polling, but th
 ## WebSockets
 
 * [Full duplex](https://en.wikipedia.org/wiki/Duplex_(telecommunications)#Full_duplex) communication channels over a single TCP connection.
+* Persistent connection between a client and a server - both parties can use to start sending data at any time.
+* Connection is establihed using WebSocket handshake, subsequent to which client and server can exchange data in eithe direction.
+* Websockets allow for low overhead messaging by providing a dtandardized wayto send messages and keeping connection open for messaging in either direction.
+
+## Server-Sent Events (SSEs)

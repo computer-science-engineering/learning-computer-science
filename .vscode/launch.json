@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.PrunedBuilder.GenerateAllParentheses2.Java.Solution",
+            "mainClass": "Firecode.src.Problems.Level1.BinarySearchOnArrayOfIntegers.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
