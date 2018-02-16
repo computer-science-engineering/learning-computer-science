@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "Firecode.src.Problems.Level1.ReverseAString.Java.Solution",
+            "mainClass": "Firecode.src.Problems.Level1.FindFirstNonDuplicateCharacterInAString.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
