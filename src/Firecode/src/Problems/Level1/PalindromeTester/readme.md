@@ -22,6 +22,8 @@ isStringPalindrome(null) -> true
 
 ## Categories
 
+1. Level1
+
 ## Tags
 
 1. Strings
