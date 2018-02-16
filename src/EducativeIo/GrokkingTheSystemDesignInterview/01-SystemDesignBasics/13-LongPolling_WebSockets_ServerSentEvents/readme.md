@@ -22,3 +22,9 @@ Client requests information from the server exactly as in normal polling, but th
 * Websockets allow for low overhead messaging by providing a dtandardized wayto send messages and keeping connection open for messaging in either direction.
 
 ## Server-Sent Events (SSEs)
+
+* Client establishes a persistent and long-term connection with the server. Server uses this connection to send data to a client.
+* If the client wants to send data to the server, it would require the use of another technology/protocol to do so.
+* SSEs are best when
+  * we need real-time traffic from the server to the client or
+  * if the server is generating data in a loop and will be sending multiple events to the client.
