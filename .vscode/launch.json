@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "Firecode.src.Problems.Level1.RepeatedElementsInAnArray.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.Permutations.Permutations.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },
