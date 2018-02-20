@@ -16,9 +16,11 @@ public class Solution {
     
     public static ArrayList<ArrayList<String>> solveNQueens(int a) {
         char[][] board = new char[a][a];
-        for(int i = 0; i < a; i++)
-            for(int j = 0; j < a; j++)
+        for(int i = 0; i < a; i++) {
+            for(int j = 0; j < a; j++) {
                 board[i][j] = '.';
+            }
+        }
         ArrayList<ArrayList<String>> res = new ArrayList<ArrayList<String>>();
         dfs(board, 0, res);
         return res;
