@@ -1,4 +1,4 @@
-# Single Number II
+# Single Number 2
 
 ## Origin
 
