@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level4_LinkedLists.Problems.List2Pointer.ReverseLinkListII.Java;
+package InterviewBit.src.Courses.Programming.Level4_LinkedLists.Problems.List2Pointer.ReverseLinkList2.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 

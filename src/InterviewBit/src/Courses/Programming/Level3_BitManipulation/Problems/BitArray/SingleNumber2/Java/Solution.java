@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level3_BitManipulation.Problems.BitArray.SingleNumberII.Java;
+package InterviewBit.src.Courses.Programming.Level3_BitManipulation.Problems.BitArray.SingleNumber2.Java;
 
 public class Solution {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-# Reverse Link List II
+# Reverse Link List 2
 
 ## Origin
 
