@@ -1,4 +1,4 @@
-# 2 Sum
+# Two Sum
 
 ## Origin
 
