@@ -78,7 +78,7 @@ jobs:
           name: Upload to cc
           command: |
             cd ./src/
-            ../tmp/cc-test-reporter format-coverage -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/codeclimate.java.json
+            ../tmp/cc-test-reporter format-coverage --debug -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/codeclimate.java.json
       - persist_to_workspace:
           root: tmp
           paths: 
@@ -132,7 +132,7 @@ jobs:
           name: Upload to cc
           command: |
             cd ./src/
-            ../tmp/cc-test-reporter format-coverage -t coverage.py ../coverage.xml -o ../tmp/codeclimate.python.json
+            ../tmp/cc-test-reporter format-coverage --debug -t coverage.py ../coverage.xml -o ../tmp/codeclimate.python.json
       - persist_to_workspace:
           root: tmp
           paths: 
@@ -165,8 +165,8 @@ jobs:
       - run:
           name: Upload coverage results to Code Climate
           command: |
-            ./tmp/cc-test-reporter sum-coverage ./tmp/codeclimate.*.json -p 2 -o ./tmp/codeclimate.total.json
-            ./tmp/cc-test-reporter upload-coverage -i ./tmp/codeclimate.total.json
+            ./tmp/cc-test-reporter sum-coverage --debug ./tmp/codeclimate.*.json -p 2 -o ./tmp/codeclimate.total.json
+            ./tmp/cc-test-reporter upload-coverage --debug -i ./tmp/codeclimate.total.json
 
 workflows:
   version: 2
