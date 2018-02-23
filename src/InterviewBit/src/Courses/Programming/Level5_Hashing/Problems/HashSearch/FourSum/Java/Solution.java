@@ -4,14 +4,23 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        ArrayList<Integer> nums = new ArrayList<Integer>(Arrays.asList(1, 0, -1, 0, -2, 2));
-        ArrayList<ArrayList<Integer>> result = fourSum(nums, 0);
+        ArrayList<Integer> nums1 = new ArrayList<Integer>(Arrays.asList(1, 0, -1, 0, -2, 2));
+        ArrayList<ArrayList<Integer>> result = fourSum(nums1, 0);
         for (ArrayList<Integer> internalList : result) {
             for (int i=0; i<internalList.size()-1; i++) {           
                 System.out.print(internalList.get(i) + ", ");
             }
             System.out.print(internalList.get(internalList.size()-1));
             System.out.println();          
+        }
+        System.out.println("***********");          
+        int[] nums2 = {1, 0, -1, 0, -2, 2};
+        int[][] res = fourSumEditorial(nums2, 0);
+        for(int i=0; i<res.length; i++) {
+            for (int j=0; j<res[0].length; j++) {
+                System.out.print(res[i][j] + " ");
+            }
+            System.out.println(); 
         }
     }
 
