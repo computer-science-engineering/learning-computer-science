@@ -15,45 +15,108 @@ public class Solution {
         }
     }
 
-    public static ArrayList<ArrayList<Integer>> fourSum(ArrayList<Integer> A, int B) {
-        Collections.sort(A);
-        return kSum(A, 0, 4, B);
-    }
-
-    private static ArrayList<ArrayList<Integer>> kSum (ArrayList<Integer> nums, int start, int k, int target) {
-        int len = nums.size();
-        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-        if(k == 2) { //two pointers from left and right
-            int left = start, right = len - 1;
-            while(left < right) {
-                int sum = nums.get(left) + nums.get(right);
-                if(sum == target) {
-                    ArrayList<Integer> path = new ArrayList<Integer>();
-                    path.add(nums.get(left));
-                    path.add(nums.get(right));
-                    res.add(path);
-                    while(left < right && nums.get(left) == nums.get(left+1)) left++;
-                    while(left < right && nums.get(right) == nums.get(right-1)) right--;
-                    left++;
-                    right--;
-                } else if (sum < target) { //move left
-                    left++;
-                } else { //move right
-                    right--;
+    public static int[][] fourSumEditorial(int[] A, int B) {
+        Arrays.sort(A);
+        
+        ArrayList<String> arr = new ArrayList<>();
+        
+        HashMap<String, Integer> map = new HashMap<>();
+        
+        for(int i = 0; i < A.length; i++) {
+            for(int j = i + 1; j < A.length; j++) {
+                for(int k = j + 1; k < A.length; k++) {
+                    for(int l = k + 1; l < A.length; l++) {
+                        if(A[i] + A[j] + A[k] + A[l] == B) {
+                            String inter = String.valueOf(A[i])+" "+String.valueOf(A[j])+" "
+                            +String.valueOf(A[k])+" "+String.valueOf(A[l]);
+                            
+                            if(map.containsKey(inter)) {
+                                //do nothing
+                            } else {
+                                map.put(inter, 1);
+                                arr.add(inter);
+                            }
+                        }
+                    }
                 }
             }
-        } else {
-            for(int i = start; i < len - (k - 1); i++) {
-                if(i > start && nums.get(i) == nums.get(i - 1)) {
-                    continue;
-                }
-                ArrayList<ArrayList<Integer>> temp = kSum(nums, i + 1, k - 1, target - nums.get(i));
-                for(List<Integer> t : temp) {
-                   t.add(0, nums.get(i));
-                }                    
-                res.addAll(temp);
+        }
+        
+        int [][] res = new int[arr.size()][4];
+        
+        for(int m = 0; m < arr.size(); m++) {
+            String [] temp = arr.get(m).split("\\s");
+            for(int h = 0; h < temp.length; h++) {
+                res[m][h] = Integer.parseInt(temp[h]);
             }
         }
         return res;
-    }    
+    }
+
+    public static ArrayList<ArrayList<Integer>> fourSum(ArrayList<Integer> A, int B) {
+        int[] a = new int[A.size()];
+        int i = 0;
+        for (Integer var : A) {
+            a[i++] = var;
+        }
+        return kSum_Trim(a, B, 4);
+    }
+
+    private static ArrayList<ArrayList<Integer>> kSum_Trim(int[] a, int target, int k) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        if (a == null || a.length < k || k < 2) return result;
+        Arrays.sort(a);
+        kSum(a, target, k, 0, result, new ArrayList<>());
+        return result;
+    }
+
+    private static void kSum(int[] a, int target, int k, int start, ArrayList<ArrayList<Integer>> result, List<Integer> path) {
+        int max = a[a.length - 1];
+        if (a[start] * k > target || max * k < target) return;
+        
+        if (k == 2) {                        // 2 Sum
+            int left = start;
+            int right = a.length - 1;
+            while (left < right) {
+                if (a[left] + a[right] < target) {
+                    left++;
+                }
+                else if (a[left] + a[right] > target) {
+                    right--;
+                }
+                else {
+                    result.add(new ArrayList<>(path));
+                    result.get(result.size() - 1).addAll(Arrays.asList(a[left], a[right]));
+                    left++; right--;
+                    while (left < right && a[left] == a[left - 1]) left++;
+                    while (left < right && a[right] == a[right + 1]) right--;
+                }
+            }
+        }
+        else {                        // k Sum
+            for (int i = start; i < a.length - k + 1; i++) {
+                if (i > start && a[i] == a[i - 1]) {
+                    continue;
+                }
+                if (a[i] + max * (k - 1) < target) {
+                    continue;
+                }
+                if (a[i] * k > target) {
+                    break;
+                }
+                if (a[i] * k == target) {
+                    if (a[i + k - 1] == a[i]) {
+                        result.add(new ArrayList<>(path));
+                        List<Integer> temp = new ArrayList<>();
+                        for (int x = 0; x < k; x++) temp.add(a[i]);
+                        result.get(result.size() - 1).addAll(temp);    // Add result immediately.
+                    }
+                    break;
+                }
+                path.add(a[i]);
+                kSum(a, target - a[i], k - 1, i + 1, result, path);
+                path.remove(path.size() - 1);        // Backtracking
+            }
+        }
+    }
 }
