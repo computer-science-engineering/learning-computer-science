@@ -81,9 +81,11 @@ public class Solution {
 
     private static void kSum(int[] a, int target, int k, int start, ArrayList<ArrayList<Integer>> result, List<Integer> path) {
         int max = a[a.length - 1];
-        if (a[start] * k > target || max * k < target) return;
+        if (a[start] * k > target || max * k < target) {
+            return;
+        }
         
-        if (k == 2) {                        // 2 Sum
+        if (k == 2) { // 2 Sum
             int left = start;
             int right = a.length - 1;
             while (left < right) {
@@ -97,12 +99,15 @@ public class Solution {
                     result.add(new ArrayList<>(path));
                     result.get(result.size() - 1).addAll(Arrays.asList(a[left], a[right]));
                     left++; right--;
-                    while (left < right && a[left] == a[left - 1]) left++;
-                    while (left < right && a[right] == a[right + 1]) right--;
+                    while (left < right && a[left] == a[left - 1]) {
+                        left++;
+                    }
+                    while (left < right && a[right] == a[right + 1]) {
+                        right--;
+                    }
                 }
             }
-        }
-        else {                        // k Sum
+        } else { // k Sum
             for (int i = start; i < a.length - k + 1; i++) {
                 if (i > start && a[i] == a[i - 1]) {
                     continue;
@@ -118,13 +123,13 @@ public class Solution {
                         result.add(new ArrayList<>(path));
                         List<Integer> temp = new ArrayList<>();
                         for (int x = 0; x < k; x++) temp.add(a[i]);
-                        result.get(result.size() - 1).addAll(temp);    // Add result immediately.
+                        result.get(result.size() - 1).addAll(temp); // Add result immediately.
                     }
                     break;
                 }
                 path.add(a[i]);
                 kSum(a, target - a[i], k - 1, i + 1, result, path);
-                path.remove(path.size() - 1);        // Backtracking
+                path.remove(path.size() - 1); // Backtracking
             }
         }
     }
