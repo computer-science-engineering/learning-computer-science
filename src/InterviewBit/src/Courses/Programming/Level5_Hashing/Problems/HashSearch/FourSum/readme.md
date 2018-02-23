@@ -50,3 +50,4 @@ Solution[i] < Solution[j] iff Solution[i][0] < Solution[j][0] OR (Solution[i][0]
 1. [LifeInCode](http://www.lifeincode.net/programming/leetcode-two-sum-3-sum-3-sum-closest-and-4-sum-java/)
 1. [LeetCode discussion](https://leetcode.com/problems/4sum/discuss/8547/7ms-java-code-win-over-100)
 1. [LeetCode discussion](https://leetcode.com/problems/4sum/discuss/8609/My-solution-generalized-for-kSums-in-JAVA)
+1. [YouTube - Tushar Roy - DP approach](https://www.youtube.com/watch?v=s6FhG--P7z0)
