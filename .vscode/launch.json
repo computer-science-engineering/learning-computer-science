@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Hashing.Problems.HashSearch.FourSum.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Hashing.Problems.KeyFormation.Equal.Java.Solution",
             "args": "",
             //"preLaunchTask": "gradle-build"
         },

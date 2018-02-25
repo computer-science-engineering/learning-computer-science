@@ -14,7 +14,7 @@ def runTests():
         for file in files:
             if "pycache" not in root and file.startswith("test_"):
                 test_folder = os.path.join(cwd, root)
-                lsPaths.append(test_folder)
+                lsPaths.append(test_folder)    
 
     #loop through subdirectories and run individually
     for path in lsPaths:
@@ -24,6 +24,8 @@ def runTests():
       suite = loader.discover(path)
       testresult = unittest.TextTestRunner().run(suite)
       sys.path.remove(path)
+      sys.modules.pop("test_solution")
+      sys.modules.pop("solution")
       if len(testresult.failures) > 0 or len(testresult.errors) > 0:
           raise Exception()
 
@@ -33,8 +35,8 @@ def main():
         print("Running unit tests...")
         runTests()
         print("Finished running unit tests.")
-    except Exception:
-        sys.exit("Failure in unit test run.")
+    except Exception as e:
+        sys.exit(f"Failure in unit test run. Exception: {e}.")
 
 if __name__ == '__main__':
     main()
