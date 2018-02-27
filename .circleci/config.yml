@@ -165,8 +165,8 @@ jobs:
       - run:
           name: Upload coverage results to Code Climate
           command: |
-            ./tmp/cc-test-reporter sum-coverage --debug --prefix /home/circleci/repo ./tmp/codeclimate.*.json -p 2 -o ./tmp/codeclimate.total.json
-            ./tmp/cc-test-reporter upload-coverage --debug --prefix /home/circleci/repo -i ./tmp/codeclimate.total.json
+            ./tmp/cc-test-reporter sum-coverage --debug ./tmp/codeclimate.*.json -p 2 -o ./tmp/codeclimate.total.json
+            ./tmp/cc-test-reporter upload-coverage --debug -i ./tmp/codeclimate.total.json
 
 workflows:
   version: 2
