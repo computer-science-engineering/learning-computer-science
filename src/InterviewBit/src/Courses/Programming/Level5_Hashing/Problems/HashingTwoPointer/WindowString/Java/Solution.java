@@ -15,13 +15,12 @@ public class Solution {
         for(char c : B.toCharArray()) {
             if(map.containsKey(c)) {
                 map.put(c,map.get(c)+1);
-            }
-            else {
+            } else {
                 return "";
             }
         }
         
-        int start =0, end=0, minStart=0,minLen = Integer.MAX_VALUE, counter = B.length();
+        int start=0, end=0, minStart=0, minLen=Integer.MAX_VALUE, counter=B.length();
         while(end < A.length()) {
             char c1 = A.charAt(end);
             if(map.get(c1) > 0) {
@@ -39,8 +38,9 @@ public class Solution {
                 char c2 = A.charAt(start);
                 map.put(c2, map.get(c2)+1);
                 
-                if(map.get(c2) > 0)
+                if(map.get(c2) > 0) {
                     counter++;
+                }
                 
                 start++;
             }
