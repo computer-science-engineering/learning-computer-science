@@ -77,8 +77,9 @@ jobs:
       - run: 
           name: Run CodeClimate
           command: |
-            cd ./src/
-            ../tmp/cc-test-reporter format-coverage --debug --prefix /home/circleci/repo/src -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/codeclimate.java.json
+            #cd ./src/
+            #../tmp/cc-test-reporter format-coverage --debug --prefix /home/circleci/repo/src -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/codeclimate.java.json
+            tmp/cc-test-reporter format-coverage --debug --prefix /home/circleci/repo -t jacoco build/reports/jacoco/report.xml -o tmp/codeclimate.java.json
       - persist_to_workspace:
           root: tmp
           paths: 
@@ -131,8 +132,9 @@ jobs:
       - run: 
           name: Run CodeClimate
           command: |
-            cd ./src/
-            ../tmp/cc-test-reporter format-coverage --debug --prefix /home/circleci/repo/src -t coverage.py ../coverage.xml -o ../tmp/codeclimate.python.json
+            #cd ./src/
+            #../tmp/cc-test-reporter format-coverage --debug --prefix /home/circleci/repo/src -t coverage.py ../coverage.xml -o ../tmp/codeclimate.python.json
+            tmp/cc-test-reporter format-coverage --debug --prefix /home/circleci/repo -t coverage.py coverage.xml -o tmp/codeclimate.python.json
       - persist_to_workspace:
           root: tmp
           paths: 
