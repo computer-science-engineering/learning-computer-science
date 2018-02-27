@@ -25,8 +25,10 @@ public class SolutionTest {
     public void TrivialCase1() {
         assertTimeout(Duration.ofMillis(500), () -> {
             String expected = "BANC";
-            String actual = Solution.minWindow("ADOBECODEBANC", "ABC");
-            assertEquals(expected, actual);
+            String actual1 = Solution.minWindow("ADOBECODEBANC", "ABC");
+            assertEquals(expected, actual1);
+            String actual2 = Solution.minWindow2("ADOBECODEBANC", "ABC");
+            assertEquals(expected, actual2);
         });
     }
 }
