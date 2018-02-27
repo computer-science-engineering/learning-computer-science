@@ -22,7 +22,7 @@ Note:
 
 If there is no such window in S that covers all characters in T, return the empty string ''.
 
-If there are multiple such windows, return the first occurring minimum window ( with minimum start index ).
+If there are multiple such windows, return the first occurring minimum window (with minimum start index).
 
 ## Companies
 
@@ -41,3 +41,6 @@ If there are multiple such windows, return the first occurring minimum window ( 
 ## Notes
 
 1. [LeetCode discussion - template for substring problems](https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems)
+1. [LeetCode discussion](https://leetcode.com/problems/minimum-window-substring/discuss/26810/Java-solution.-using-two-pointers-+-HashMap)
+1. [LifeInCode](http://www.lifeincode.net/programming/leetcode-minimum-window-substring-java/)
+1. [LeetCode discussion - Python](https://leetcode.com/problems/minimum-window-substring/discuss/26804/12-lines-Python)
