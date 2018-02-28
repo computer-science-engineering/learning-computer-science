@@ -24,3 +24,5 @@ Difficulty Level: Medium
 ## 7. Component Design
 
 ## 8. Reliability and Redundancy
+
+## 9. Data Sharding
