@@ -26,3 +26,9 @@ Difficulty Level: Medium
 ## 8. Reliability and Redundancy
 
 ## 9. Data Sharding
+
+## 10. Ranking and Timeline Generation
+
+## 11. Timeline Creation with Sharded Data
+
+## 12. Cache and Load balancing
