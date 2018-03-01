@@ -28,3 +28,27 @@ Difficulty Level: Medium
 ### Client
 
 ### Metadata Database
+
+### Synchronization Service
+
+### Message Queuing Service
+
+### Cloud/Block Storage
+
+## 7. File Processing Workflow
+
+## 8. Data Deduplication
+
+## 9. Metadata Partitioning
+
+### Vertical Partitioning
+
+### Range Based Partitioning
+
+### Hash-Based Partitioning
+
+## 10. Caching
+
+## 11. Load Balancer (LB)
+
+## 12. Security, Permissions and File Sharing
