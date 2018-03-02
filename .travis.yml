@@ -16,7 +16,7 @@ before_install:
   - sudo apt-get install python3.6 -y
 
 script:
-  - gradle test jacocoJupTestReport
+  - gradlew test jacocoJupTestReport
   - python3.6 --version
   - pyenv versions
   - pyenv global 3.6
