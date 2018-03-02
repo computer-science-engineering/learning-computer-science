@@ -14,10 +14,9 @@ before_install:
   - sudo add-apt-repository ppa:deadsnakes/ppa -y
   - sudo apt-get update -y
   - sudo apt-get install python3.6 -y
-  - sudo ./gradlew build
 
 script:
-  - gradlew test jacocoJupTestReport
+  - bash ./gradlew test jacocoJupTestReport
   - python3.6 --version
   - pyenv versions
   - pyenv global 3.6
