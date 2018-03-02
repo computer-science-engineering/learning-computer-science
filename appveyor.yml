@@ -12,7 +12,7 @@ install:
   - cmd: choco install gradle
   - cmd: gradle -version
   # https://github.com/appveyor/ci/issues/1745
-  - cmd: "set path=C:\\ProgramData\\chocolatey\\lib\\gradle\\tools\\gradle-4.5.1\\bin;%path%"
+  - cmd: "set path=C:\\ProgramData\\chocolatey\\lib\\gradle\\tools\\gradle-4.6\\bin;%path%"
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
   - cmd: "SET PATH=%JAVA_HOME%\\bin;%path%"
   - cmd: "SET PYTHON3=C:\\Python36-x64"
