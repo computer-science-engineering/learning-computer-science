@@ -60,7 +60,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: ./gradlew dependencies
+      - run: bash ./gradlew dependencies
 
       - save_cache:
           paths:
@@ -68,7 +68,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
       # run tests!
-      - run: ./gradlew test jacocoJupTestReport
+      - run: bash ./gradlew test jacocoJupTestReport
 
       #upload test coverage to codecov
       - run: bash <(curl -s https://codecov.io/bash) #-cF java
@@ -88,7 +88,7 @@ jobs:
       - run: 
           name: Upload to coveralls
           command: |
-            ./gradlew test jacocoJupTestReport coveralls
+            bash ./gradlew test jacocoJupTestReport coveralls
       
       # upload test coverage to codacy
       # - run: 
