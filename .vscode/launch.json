@@ -8,9 +8,8 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level5_Hashing.Problems.IncrementalHash.SubstringConcatenation.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_HeapsAndMaps.Problems.Heap.MergeKSortedLists.Java.Solution",
             "args": "",
-            //"preLaunchTask": "gradle-build"
         },
         {
             "type": "java",
