@@ -44,7 +44,7 @@ compileTestJava {
    options.compilerArgs += ['-parameters', '-g']
 }
 
-// gradle support from JUnit5 team that we removed after gradle native support for JUnit5: ttp://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle
+// gradle support from JUnit5 team that we removed after gradle native support for JUnit5: http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle
 test {
     // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html
     // Enable JUnit 5 (Gradle 4.6+).
