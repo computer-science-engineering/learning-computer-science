@@ -9,7 +9,7 @@ public class Solution {
     public static void main(String[] args) {
         String A = "barfoothefoobarman";
         List<String> B = new ArrayList<String>(Arrays.asList("foo", "bar"));
-        ArrayList<Integer> result = findSubstring(A, B);
+        ArrayList<Integer> result = findSubstring_Editorial(A, B);
         for (Integer item : result) {
             System.out.println(item);        
         }
@@ -25,7 +25,9 @@ public class Solution {
         int windowLen = wordLen * numWord;
         int sLen = A.length();
         HashMap<String, Integer> map = new HashMap<>();
-        for(String word : B) map.put(word, map.getOrDefault(word, 0) + 1);
+        for(String word : B) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
 
         for(int i = 0; i < wordLen; i++) {  // Run wordLen scans
             HashMap<String, Integer> curMap = new HashMap<>();
