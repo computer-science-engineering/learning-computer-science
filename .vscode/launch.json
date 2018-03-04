@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_HeapsAndMaps.Problems.Heap.MergeKSortedLists.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_HeapsAndMaps.Problems.Math.WaysToFormMaxHeap.Java.Solution",
             "args": "",
         },
         {
