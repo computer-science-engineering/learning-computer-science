@@ -28,6 +28,10 @@ public class Solution {
         
         long subResult = ((long)solve(l) * (long)solve(A - 1 - l)) % 1000000007;
         long res = (combinationNcK(l, A - 1) * subResult) % 1000000007;
+
+        //BigInteger subResult = BigInteger.valueOf(solve(l)).multiply(BigInteger.valueOf(solve(A - 1 - l))).divideAndRemainder(BigInteger.valueOf(1000000007))[1];
+        //BigInteger res = subResult.multiply(BigInteger.valueOf(combinationNcK(l, A - 1))).divideAndRemainder(BigInteger.valueOf(1000000007))[1];
+        //return (int)(res.intValue() % 1000000007);
             
         return (int)res;
     }
