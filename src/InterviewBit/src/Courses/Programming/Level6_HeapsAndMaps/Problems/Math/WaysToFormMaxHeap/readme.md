@@ -77,6 +77,7 @@ NOTE: Note that even though constraints are mentioned for this problem, for most
 1. [GitHub - DP approach](https://github.com/AndriyLytvynskyy/BrainFuck/blob/ac451a7f09dd2b57049a19634f8c39162ba04ca0/src/main/java/com/booking/interviewbit/heap/WaysToFormMaxHeap.java)
 1. [GitHub - semaserg's solution](https://github.com/Semaserg/LeetCodeProblems/blob/master/heap/WaysToFormMaxHeap_intbit/Solution.java)
 1. [GitHub -another DP approach](https://github.com/nazarmubeen/ProgramminInJava/blob/093c7de7fb59b629b106dbeff82a53c91fe93536/src/heaps/WaystoformMaxHeap.java)
+1. [Quora post](https://www.quora.com/How-many-Binary-heaps-can-be-made-from-N-distinct-elements)
 
 ### Solution Approach
 
