@@ -68,6 +68,7 @@ NOTE: Note that even though constraints are mentioned for this problem, for most
 
 ## Notes
 
+1. [SO post](https://cs.stackexchange.com/questions/6456/how-many-max-heaps-are-there)
 1. [Geeks for Geeks post](https://www.geeksforgeeks.org/number-ways-form-heap-n-distinct-integers/)
 1. [YouTube video - Yusuf Shakeel](https://www.youtube.com/watch?v=ixdWTKWSz7s)
 1. [techie delight blog - min and max heap in Java](http://www.techiedelight.com/min-heap-max-heap-implementation-in-java/)
