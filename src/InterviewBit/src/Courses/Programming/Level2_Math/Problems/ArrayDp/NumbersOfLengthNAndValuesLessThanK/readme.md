@@ -47,6 +47,8 @@ Constraints:
 
 ## Notes
 
+1. [GitHub - Ilya Ismagilov's solution](https://github.com/ismagilov/interviewbit/blob/84a7b463554b8351db4a6772753b781319cbcc1c/src/math/NumbersOfLengthNAndValueLessThanK.java)
+
 ### Solution approach
 
 Let us try to solve for all the possible cases.
