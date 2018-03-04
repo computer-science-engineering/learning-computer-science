@@ -32,7 +32,7 @@ public class Solution {
     }
     
     public static ListNode mergeKLists(ArrayList<ListNode> a) {
-        if(a.size()==0) {
+        if(a.size() == 0) {
             return null;
         }
         ListNode head = new ListNode(0);
