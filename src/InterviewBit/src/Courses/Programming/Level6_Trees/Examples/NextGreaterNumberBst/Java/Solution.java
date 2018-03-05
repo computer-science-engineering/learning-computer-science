@@ -6,5 +6,7 @@ public class Solution {
     }
     
     public static TreeNode getSuccessor(TreeNode a, int b) {
+        TreeNode successor = null;
+        return successor;
 	}
 }
