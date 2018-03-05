@@ -127,6 +127,7 @@ afterEvaluate {
     check.dependsOn jacocoJupTestReport
 }
 
+//https://github.com/codeclimate/test-reporter/issues/243
 // task jacocoFixForCodeClimate(type: Copy) {
 //     from 'build/reports/jacoco/report.xml'
 //     into '../'
