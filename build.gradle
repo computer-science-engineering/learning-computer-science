@@ -127,6 +127,15 @@ afterEvaluate {
     check.dependsOn jacocoJupTestReport
 }
 
+// task jacocoFixForCodeClimate(type: Copy) {
+//     from 'build/reports/jacoco/report.xml'
+//     into '../'
+//     rename { String fileName ->
+//         fileName.replace("report.xml", "jacoco.xml")
+//     }
+//     filter { line -> line.replaceAll("com/", "webapp/src/main/java/com/") }
+// }
+
 //https://github.com/ben-manes/caffeine/blob/master/build.gradle
 coveralls {
   jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
