@@ -17,7 +17,7 @@ public class Solution {
         //Level 3
         TreeNode d = new TreeNode(97);
         c1.right = d;
-        TreeNode result = getSuccessor(a, 97);
+        TreeNode result = getSuccessor_Editorial(a, 96);
         System.out.println(result.val);
     }
     
