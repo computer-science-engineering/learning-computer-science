@@ -43,3 +43,4 @@ Assume that the value is always present in the tree.
 ## Notes
 
 1. [YT - CodeSchool - Inorder Successor in a binary search tree](https://www.youtube.com/watch?v=5cPbNCrdotA)
+1. [YT - Vivekanand Khyade - Algorithm Every Day - INORDER SUCCESSOR in binary search tree](https://www.youtube.com/watch?v=JdmAYw5h3G8)
