@@ -63,9 +63,9 @@ public class SolutionTest {
     public void TrivialCase3() {        
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 100;
-            TreeNode actual1 = Solution.getSuccessor(a, 99);
+            int actual1 = Solution.getSuccessor(a, 99).val;
             assertEquals(expected, actual1);
-            TreeNode actual2 = Solution.getSuccessor_Editorial(a, 99);
+            int actual2 = Solution.getSuccessor_Editorial(a, 99).val;
             assertEquals(expected, actual2);
         });
     }
