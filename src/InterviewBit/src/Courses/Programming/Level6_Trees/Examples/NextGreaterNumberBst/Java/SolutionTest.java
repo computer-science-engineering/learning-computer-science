@@ -10,21 +10,13 @@ import org.junit.jupiter.api.BeforeEach;
 public class SolutionTest {
     
     Solution solution;
+    TreeNode a = null;
     
     @BeforeEach
     public void setUp() throws Exception {
         solution = new Solution();
-    }
-    
-    @AfterEach
-    public void tearDown() throws Exception {
-        solution = null;
-    }
-    
-    @Test
-    public void TrivialCase1() {
         //root level 0
-        TreeNode a = new TreeNode(100);
+        a = new TreeNode(100);
         //Level 1
         TreeNode b1 = new TreeNode(98);
         TreeNode b2 = new TreeNode(102);
@@ -38,6 +30,15 @@ public class SolutionTest {
         //Level 3
         TreeNode d = new TreeNode(97);
         c1.right = d;
+    }
+    
+    @AfterEach
+    public void tearDown() throws Exception {
+        solution = null;
+    }
+    
+    @Test
+    public void TrivialCase1() {        
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 98;
             int actual1 = Solution.getSuccessor(a, 97).val;
@@ -46,4 +47,37 @@ public class SolutionTest {
             assertEquals(expected, actual2);
         });
     }
+
+    @Test
+    public void TrivialCase2() {        
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 97;
+            int actual1 = Solution.getSuccessor(a, 96).val;
+            assertEquals(expected, actual1);
+            int actual2 = Solution.getSuccessor_Editorial(a, 96).val;
+            assertEquals(expected, actual2);
+        });
+    }
+
+    @Test
+    public void TrivialCase3() {        
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 100;
+            TreeNode actual1 = Solution.getSuccessor(a, 99);
+            assertEquals(expected, actual1);
+            TreeNode actual2 = Solution.getSuccessor_Editorial(a, 99);
+            assertEquals(expected, actual2);
+        });
+    }
+
+    @Test
+    public void SpecialCase1() {        
+        assertTimeout(Duration.ofMillis(500), () -> {
+            TreeNode expected = null;
+            TreeNode actual1 = Solution.getSuccessor(a, 102);
+            assertEquals(expected, actual1);
+            TreeNode actual2 = Solution.getSuccessor_Editorial(a, 102);
+            assertEquals(expected, actual2);
+        });
+    }    
 }
