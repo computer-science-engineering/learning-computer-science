@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_HeapsAndMaps.Problems.Math.WaysToFormMaxHeap.Java.Solution",
+            "mainClass": "InterviewCake.src.questions.KthToLastNodeInSinglyLinkedList.Java.Solution",
             "args": "",
         },
         {
