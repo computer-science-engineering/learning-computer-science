@@ -20,8 +20,7 @@ public class Solution {
             return true;
         }
 
-        if (node.val > minValue 
-        && node.val < maxValue
+        if (node.val > minValue && node.val < maxValue
         && isBstUtil(node.left, minValue, node.val)
         && isBstUtil(node.right, node.val, maxValue)) {
             return true;
