@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewCake.src.questions.MergeSortedArrays.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Examples.ValidBinarySearchTree.Java.Solution",
             "args": "",
         },
         {
