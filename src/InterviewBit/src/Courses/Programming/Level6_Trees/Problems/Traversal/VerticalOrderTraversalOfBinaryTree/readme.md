@@ -55,3 +55,4 @@ returns
 1. [Geeks for Geeks post](https://www.geeksforgeeks.org/print-binary-tree-vertical-order/)
 1. [ProgramCreek post](https://www.programcreek.com/2014/04/leetcode-binary-tree-vertical-order-traversal-java/)
 1. [YT - Vivekanand Khyade : Algorithm Every Day](https://www.youtube.com/watch?v=PQKkr036wRc)
+1. [YT - Vivekanand Khyade : Algorithm Every Day - Level Order Traversal of a Binary Tree](https://www.youtube.com/watch?v=NjdOhYKjFrU)
