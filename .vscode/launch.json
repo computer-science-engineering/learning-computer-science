@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewCake.src.questions.KthToLastNodeInSinglyLinkedList.Java.Solution",
+            "mainClass": "InterviewCake.src.questions.MergeSortedArrays.Java.Solution",
             "args": "",
         },
         {
