@@ -23,6 +23,14 @@ public class SolutionTest {
     }
     
     @Test
+    public void MainFunction() {
+        assertTimeout(Duration.ofMillis(500), () -> {
+            String[] args = new String[0];
+            assertAll(() -> Solution.main(args));
+        });
+    }
+    
+    @Test
     public void TrivialCase1() {
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 1, 2));
         assertTimeout(Duration.ofMillis(500), () -> {
