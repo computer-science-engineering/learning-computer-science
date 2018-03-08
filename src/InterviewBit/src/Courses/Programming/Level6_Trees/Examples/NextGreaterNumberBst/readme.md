@@ -43,4 +43,6 @@ Assume that the value is always present in the tree.
 ## Notes
 
 1. [YT - CodeSchool - Inorder Successor in a binary search tree](https://www.youtube.com/watch?v=5cPbNCrdotA)
+1. [CodeSchool C++ code](https://gist.github.com/mycodeschool/6515e1ec66482faf9d79)
 1. [YT - Vivekanand Khyade - Algorithm Every Day - INORDER SUCCESSOR in binary search tree](https://www.youtube.com/watch?v=JdmAYw5h3G8)
+1. [ProgramCreek](https://www.programcreek.com/2014/05/leetcode-inorder-successor-in-bst-java/)
