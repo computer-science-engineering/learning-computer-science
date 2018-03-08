@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(getPermutation(2147483647, 101));
+        System.out.println(getPermutation(2, 1)); //2147483647, 101
     }
     
     public static String getPermutation(int A, int B) {
