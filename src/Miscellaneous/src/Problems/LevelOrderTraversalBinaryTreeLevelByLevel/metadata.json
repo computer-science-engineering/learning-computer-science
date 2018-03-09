@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "problem",
+    "name": "Level Order Traversal Binary Tree Level By Level",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "",
+        ""
+    ],
+    "tags": [
+        "Binary Tree"
+    ]
 }
