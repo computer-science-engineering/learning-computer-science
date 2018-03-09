@@ -44,7 +44,7 @@ public class Solution {
         int minLevel = 0;
         int maxLevel = 0;
     
-        while(!queue.isEmpty()){
+        while(!queue.isEmpty()) {
             TreeNode p = queue.poll();
             int l = level.poll();
     
@@ -69,8 +69,7 @@ public class Solution {
                 queue.offer(p.right);
                 level.offer(l+1);
             }
-        }
-    
+        }    
     
         for(int i=minLevel; i<=maxLevel; i++){
             if(map.containsKey(i)) {
