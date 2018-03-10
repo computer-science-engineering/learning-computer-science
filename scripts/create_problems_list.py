@@ -84,6 +84,8 @@ def create_problems_list(files):
 
         categories = filter(None, jsonParsed["categories"])
         categories = getCategories(list(categories), [], "")
+        categories = filter(None, categories)
+        categories = list(categories)
         categories_string = ", ".join(categories)
         data[PROBLEM_CATEGORIES_STRING] = categories
 
