@@ -10,8 +10,10 @@
         ""
     ],
     "categories": [
-        "Book",
-        ""
+        {
+            "name": "Book",
+            "children": []
+        }
     ],
     "tags": [
         "Primitive Types"

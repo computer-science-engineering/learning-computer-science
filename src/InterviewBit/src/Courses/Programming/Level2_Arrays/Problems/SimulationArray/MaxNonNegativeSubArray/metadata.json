@@ -9,8 +9,15 @@
         "Google"
     ],
     "categories": [
-        "Courses",
-        "Programming"
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
     ],
     "tags": [
         "Arrays"

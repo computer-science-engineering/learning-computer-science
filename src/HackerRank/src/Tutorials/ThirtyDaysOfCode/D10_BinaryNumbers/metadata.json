@@ -10,8 +10,15 @@
         ""
     ],
     "categories": [
-        "Tutorials",
-        "Thirty Days of Code"
+        {
+            "name": "Tutorials",
+            "children": [
+                {
+                    "name": "Thirty Days of Code",
+                    "children": []
+                }
+            ]
+        }
     ],
     "tags": [
         ""

@@ -10,7 +10,10 @@
         ""
     ],
     "categories": [
-        "Questions"
+        {
+            "name": "Questions",
+            "children": []
+        }
     ],
     "tags": [
         "Arrays"

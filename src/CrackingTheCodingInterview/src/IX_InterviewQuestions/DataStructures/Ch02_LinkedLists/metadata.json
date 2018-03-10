@@ -10,8 +10,10 @@
         ""
     ],
     "categories": [
-        "",
-        ""
+        {
+            "name": "",
+            "children": []
+        }
     ],
     "tags": [
         "Linked Lists"

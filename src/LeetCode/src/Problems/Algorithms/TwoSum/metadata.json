@@ -9,8 +9,15 @@
         ""
     ],
     "categories": [
-        "Problems",
-        "Algorithms"
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        }
     ],
     "tags": [
         "Array",

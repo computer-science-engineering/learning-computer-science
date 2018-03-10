@@ -10,9 +10,20 @@
         ""
     ],
     "categories": [
-        "Tracks",
-        "CoreCS",
-        "Data Structures"
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "CoreCS",
+                    "children": [
+                        {
+                            "name": "Data Structures",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
     ],
     "tags": [
         "Linked Lists"
