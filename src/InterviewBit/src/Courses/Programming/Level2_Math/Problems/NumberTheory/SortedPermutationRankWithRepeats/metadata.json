@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Sorted Permutation Rank With Repeats",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/sorted-permutation-rank-with-repeats/"
+    },
+    "companies": [
+        "Housing",
+        "Zenefits"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        "Number Theory"
+    ]
 }

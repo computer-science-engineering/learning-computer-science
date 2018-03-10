@@ -1,17 +1,5 @@
-# Q8 Reverse Digits
-
-## Origin
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Book
-
-## Tags
-
-1. Primitive Types
 
 ## Notes

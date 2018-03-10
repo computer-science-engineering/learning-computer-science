@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Generate All Parentheses",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/generate-all-parentheses/"
+    },
+    "companies": [
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Stacks",
+        "Queues"
+    ],
+    "buckets": [
+        ""
+    ]
 }

@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "List Cycle",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/list-cycle/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft",
+        "NetApp"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Linked Lists"
+    ],
+    "buckets": [
+        "List Cycle"
+    ]
 }

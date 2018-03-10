@@ -1,8 +1,4 @@
-# Grid Unique Paths
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/grid-unique-paths/)
+# Problem Definition
 
 ## Description
 
@@ -25,22 +21,6 @@ Output : 2
 2 possible routes : (0, 0) -> (0, 1) -> (1, 1)
               OR  : (0, 0) -> (1, 0) -> (1, 1)
 ```
-
-## Companies
-
-1. Google
-1. Amazon
-1. Microsoft
-1. Adobe
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

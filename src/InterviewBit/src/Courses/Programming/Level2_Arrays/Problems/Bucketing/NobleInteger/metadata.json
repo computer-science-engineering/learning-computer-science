@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Noble Integer",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/noble-integer/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ],
+    "buckets": [
+        "Bucketing"
+    ]
 }

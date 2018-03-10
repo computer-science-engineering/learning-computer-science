@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Combination Sum",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/combination-sum/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon",
+        "Adobe"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Backtracking"
+    ],
+    "buckets": [
+        "Subsets"
+    ]
 }

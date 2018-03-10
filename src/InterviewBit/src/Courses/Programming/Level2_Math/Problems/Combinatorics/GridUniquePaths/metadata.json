@@ -1,3 +1,24 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Grid Unique Paths",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/grid-unique-paths/"
+    },
+    "companies": [
+        "Google",
+        "Amazon",
+        "Microsoft",
+        "Adobe"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        "Combinatorics"
+    ]
 }

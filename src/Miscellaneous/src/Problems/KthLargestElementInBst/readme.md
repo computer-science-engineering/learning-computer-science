@@ -1,17 +1,5 @@
-# Kth Largest Element In Bst
-
-## Origin
+# Problem Definition
 
 ## Description
-
-## Companies
-
-1. Aruba Networks
-
-## Categories
-
-## Tags
-
-1. Binary Tree
 
 ## Notes

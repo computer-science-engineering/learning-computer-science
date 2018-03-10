@@ -1,3 +1,24 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Merge K Sorted Lists",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/merge-k-sorted-lists/"
+    },
+    "companies": [
+        "Flipkart",
+        "Amazon",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Heaps",
+        "Maps"
+    ],
+    "buckets": [
+        "Heap"
+    ]
 }

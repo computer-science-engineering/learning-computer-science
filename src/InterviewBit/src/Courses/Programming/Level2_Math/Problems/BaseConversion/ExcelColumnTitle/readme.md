@@ -1,8 +1,4 @@
-# Excel Column Title
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/excel-column-title/)
+# Problem Definition
 
 ## Description
 
@@ -19,19 +15,6 @@ For example:
     27 -> AA
     28 -> AB
 ```
-
-## Companies
-
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

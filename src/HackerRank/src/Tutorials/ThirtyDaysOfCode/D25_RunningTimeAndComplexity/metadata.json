@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "D25 Running Time And Complexity",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-running-time-and-complexity"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tutorials",
+        "Thirty Days of Code"
+    ],
+    "tags": [
+        ""
+    ]
 }

@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Migratory Birds",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/contests/rookierank-2/challenges/migratory-birds"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Contests",
+        "RookieRank 2"
+    ],
+    "tags": [
+        ""
+    ]
 }

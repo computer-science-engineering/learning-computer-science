@@ -1,8 +1,4 @@
-# Minimize The Absolute Difference
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/minimize-the-absolute-difference/)
+# Problem Definition
 
 ## Description
 
@@ -24,17 +20,6 @@ Output:
 ```
 
 Explanation: We get the minimum difference for a=5, b=6, c=6 as | max(a,b,c) - min(a,b,c) | = |6-5| = 1.
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Two Pointers
 
 ## Notes
 

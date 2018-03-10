@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "D3 Intro To Conditional Statements",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-conditional-statements"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tutorials",
+        "Thirty Days of Code"
+    ],
+    "tags": [
+        ""
+    ]
 }

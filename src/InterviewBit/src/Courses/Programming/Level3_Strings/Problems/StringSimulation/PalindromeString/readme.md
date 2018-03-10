@@ -1,8 +1,4 @@
-# Palindrome String
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/palindrome-string/)
+# Problem Definition
 
 ## Description
 
@@ -15,17 +11,6 @@ Example:
 "race a car" is not a palindrome.
 
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

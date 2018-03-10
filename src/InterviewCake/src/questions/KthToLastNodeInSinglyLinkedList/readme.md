@@ -1,8 +1,4 @@
-# 25 Kth to Last Node in a Singly-Linked List
-
-## Origin
-
-[Link](https://www.interviewcake.com/question/java/kth-to-last-node-in-singly-linked-list)
+# Problem Definition
 
 ## Description
 
@@ -141,15 +137,5 @@ Can we trim down the number of steps in the "second trip"? One pointer will cert
 We listed two good solutions. One seemed to solve the problem in one pass, while the other took two passes. But the single-pass approach didn't take half as many steps, it just took the same steps in a different order.
 
 So don't be fooled: "one pass" isn't always fewer steps than "two passes." Always ask yourself, "Have I actually changed the number of steps?"
-
-## Companies
-
-## Categories
-
-1. Questions
-
-## Tags
-
-1. Linked List
 
 ## Notes

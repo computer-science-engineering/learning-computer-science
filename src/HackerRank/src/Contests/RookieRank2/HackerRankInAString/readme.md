@@ -1,8 +1,4 @@
-# HackerRank In A String
-
-## Origin
-
-[Link](https://www.hackerrank.com/contests/rookierank-2/challenges/hackerrank-in-a-string/problem)
+# Problem Definition
 
 ## Description
 
@@ -44,14 +40,5 @@ We perform the following  queries:
 s = hereiamstackerrank: The characters of hackerrank are bolded in the string above. Because the string contains all the characters in hackerrank in the same exact order as they appear in hackerrank, we print YES on a new line.
 
 s = hackerworld does not contain the last three characters of hackerrank, so we print NO on a new line.
-
-## Companies
-
-## Categories
-
-1. Contests
-1. RookieRank 2
-
-## Tags
 
 ## Notes

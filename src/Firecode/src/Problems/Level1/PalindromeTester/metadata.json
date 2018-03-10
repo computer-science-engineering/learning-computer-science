@@ -1,3 +1,20 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Palindrome Tester",
+    "origin": {
+        "name": "Firecode",
+        "link": "https://www.firecode.io/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Level1",
+        ""
+    ],
+    "tags": [
+        "Strings",
+        "Arrays"
+    ]
 }

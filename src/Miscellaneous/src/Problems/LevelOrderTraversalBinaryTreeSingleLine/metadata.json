@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Level Order Traversal Of Binary Tree in Single Line",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "",
+        ""
+    ],
+    "tags": [
+        "Binary Tree"
+    ]
 }

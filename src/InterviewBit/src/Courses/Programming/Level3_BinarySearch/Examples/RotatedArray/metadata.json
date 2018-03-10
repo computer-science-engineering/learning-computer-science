@@ -1,0 +1,21 @@
+{
+    "type": "Coding",
+    "name": "Rotated Array",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/rotated-array/"
+    },
+    "companies": [
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Binary Search"
+    ],
+    "buckets": [
+        ""
+    ]
+}

@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Q7 Buy And Sell Stock Twice",
+    "origin": {
+        "name": "Elements of Programming Interviews",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Book",
+        ""
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

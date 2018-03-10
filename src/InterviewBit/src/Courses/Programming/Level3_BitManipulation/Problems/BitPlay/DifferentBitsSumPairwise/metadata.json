@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Different Bits Sum Pairwise",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/different-bits-sum-pairwise/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Bit Manipulation"
+    ],
+    "buckets": [
+        "Bit Play"
+    ]
 }

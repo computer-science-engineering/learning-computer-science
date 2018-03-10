@@ -1,8 +1,4 @@
-# Rotated Sorted Array Search
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/rotated-sorted-array-search/)
+# Problem Definition
 
 ## Description
 
@@ -18,21 +14,6 @@ Input : [4 5 6 7 0 1 2] and target = 4
 Output : 0
 
 NOTE : Think about the case when there are duplicates. Does your current solution work? How does the time complexity change?*
-
-## Companies
-
-1. Facebook
-1. Google
-1. Microsoft
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Binary Search
 
 ## Notes
 

@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Rearrange Array",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/rearrange-array/"
+    },
+    "companies": [
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        "Number Encoding"
+    ]
 }

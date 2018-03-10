@@ -1,8 +1,4 @@
-# Sorted Permutation Rank With Repeats
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/sorted-permutation-rank-with-repeats/)
+# Problem Definition
 
 ## Description
 
@@ -26,20 +22,6 @@ The answer might not fit in an integer, so return your answer % 1000003
 
 NOTE: 1000003 is a prime number
 NOTE: Assume the number of characters in string < 1000003
-
-## Companies
-
-1. Housing
-1. Zenefits
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

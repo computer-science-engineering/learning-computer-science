@@ -1,8 +1,4 @@
-# List Cycle
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/list-cycle/)
+# Problem Definition
 
 ## Description
 
@@ -22,21 +18,6 @@ Input :
 
 Return the node corresponding to node 3.
 ```
-
-## Companies
-
-1. Amazon
-1. Microsoft
-1. NetApp
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

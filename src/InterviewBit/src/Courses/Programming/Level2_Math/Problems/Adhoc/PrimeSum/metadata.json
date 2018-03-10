@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Prime Sum",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/prime-sum/"
+    },
+    "companies": [
+        "Epic Systems"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        "Adhoc"
+    ]
 }

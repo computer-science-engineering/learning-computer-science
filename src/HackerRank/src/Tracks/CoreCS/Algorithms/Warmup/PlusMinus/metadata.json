@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Plus Minus",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/plus-minus"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tracks",
+        "CoreCS",
+        "Algorithms",
+        "Warmup"
+    ],
+    "tags": [
+        ""
+    ]
 }

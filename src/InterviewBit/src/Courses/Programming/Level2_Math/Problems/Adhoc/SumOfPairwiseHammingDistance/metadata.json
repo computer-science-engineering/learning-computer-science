@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Sum Of Pairwise Hamming Distance",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        "Adhoc"
+    ]
 }

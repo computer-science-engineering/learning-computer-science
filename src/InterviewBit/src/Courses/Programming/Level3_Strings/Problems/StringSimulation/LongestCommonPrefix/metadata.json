@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Longest Common Prefix",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/longest-common-prefix/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Strings"
+    ],
+    "buckets": [
+        "String Simulation"
+    ]
 }

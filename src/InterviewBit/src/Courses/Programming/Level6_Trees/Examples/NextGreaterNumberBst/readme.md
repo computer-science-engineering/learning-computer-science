@@ -1,8 +1,4 @@
-# Next Greater Number Bst
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/next-greater-number-bst/)
+# Problem Definition
 
 ## Description
 
@@ -28,17 +24,6 @@ Given `97`, you should return the node corresponding to `98` as thats the value 
 Using recursion is not allowed.
 
 Assume that the value is always present in the tree.
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Trees
 
 ## Notes
 

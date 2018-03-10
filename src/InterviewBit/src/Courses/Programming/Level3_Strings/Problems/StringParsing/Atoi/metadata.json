@@ -1,3 +1,28 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Atoi",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/atoi/"
+    },
+    "companies": [
+        "Adobe",
+        "Nvidia",
+        "Agilent Systems",
+        "Bloomberg",
+        "Amazon",
+        "Apple",
+        "Microsoft",
+        "Groupon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Strings"
+    ],
+    "buckets": [
+        "String Parsing"
+    ]
 }

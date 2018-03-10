@@ -1,3 +1,25 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Remove Duplicates From Sorted Array",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/"
+    },
+    "companies": [
+        "United Healthgroup",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Expedia"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Two Pointers"
+    ],
+    "buckets": [
+        "Inplace Update"
+    ]
 }

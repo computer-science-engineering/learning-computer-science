@@ -1,8 +1,4 @@
-# Implement Power Function
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/implement-power-function/)
+# Problem Definition
 
 ## Description
 
@@ -19,20 +15,6 @@ Input : x = 2, n = 3, d = 3
 Output : 2
 
 2^3 % 3 = 8 % 3 = 2.
-
-## Companies
-
-1. Google
-1. LinkedIn
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Binary Search
 
 ## Notes
 

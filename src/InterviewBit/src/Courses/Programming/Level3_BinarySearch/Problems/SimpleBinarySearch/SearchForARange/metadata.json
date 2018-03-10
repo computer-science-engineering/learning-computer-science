@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Search For A Range",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/search-for-a-range/"
+    },
+    "companies": [
+        "Google",
+        "Microsoft"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Binary Search"
+    ],
+    "buckets": [
+        "Simple Binary Search"
+    ]
 }

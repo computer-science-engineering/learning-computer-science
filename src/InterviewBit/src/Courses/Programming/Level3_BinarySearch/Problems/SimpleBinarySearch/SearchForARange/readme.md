@@ -1,8 +1,4 @@
-# Search For A Range
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/search-for-a-range/)
+# Problem Definition
 
 ## Description
 
@@ -19,20 +15,6 @@ Given [5, 7, 7, 8, 8, 10]
 and target value 8,
 
 return [3, 4].
-
-## Companies
-
-1. Google
-1. Microsoft
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Binary Search
 
 ## Notes
 

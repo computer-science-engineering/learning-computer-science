@@ -1,3 +1,18 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Array Impl 1",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/arrayimpl1/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

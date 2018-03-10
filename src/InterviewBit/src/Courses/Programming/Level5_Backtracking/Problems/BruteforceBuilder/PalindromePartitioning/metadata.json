@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Palindrome Partitioning",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/palindrome-partitioning/"
+    },
+    "companies": [
+        "Amazon",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Backtracking"
+    ],
+    "buckets": [
+        "Brute Force Builder"
+    ]
 }

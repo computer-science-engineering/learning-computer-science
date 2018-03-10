@@ -1,3 +1,20 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Q2 Check Permutation",
+    "origin": {
+        "name": "Cracking the Coding Interview",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "",
+        ""
+    ],
+    "tags": [
+        "Arrays",
+        "Strings"
+    ]
 }

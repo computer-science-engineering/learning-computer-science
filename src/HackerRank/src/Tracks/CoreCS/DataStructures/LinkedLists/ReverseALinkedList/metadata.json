@@ -1,0 +1,20 @@
+{
+    "type": "Coding",
+    "name": "Reverse A Linked List",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/reverse-a-linked-list"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tracks",
+        "CoreCS",
+        "Data Structures"
+    ],
+    "tags": [
+        "Linked Lists"
+    ]
+}

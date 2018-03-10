@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Insertion Sort List",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/insertion-sort-list/"
+    },
+    "companies": [
+        "Microsoft",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Linked Lists"
+    ],
+    "buckets": [
+        "List Sort"
+    ]
 }

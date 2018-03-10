@@ -1,8 +1,4 @@
-# Merge K Sorted Lists
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/merge-k-sorted-lists/)
+# Problem Definition
 
 ## Description
 
@@ -21,21 +17,6 @@ will result in
 ```text
 1 -> 3 -> 4 -> 8 -> 9 -> 10 -> 11 -> 13 -> 20
 ```
-
-## Companies
-
-1. Flipkart
-1. Amazon
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Heaps and Maps
 
 ## Notes
 

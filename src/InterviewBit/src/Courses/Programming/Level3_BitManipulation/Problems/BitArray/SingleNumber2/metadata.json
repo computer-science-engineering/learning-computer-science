@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Single Number 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/single-number-ii/"
+    },
+    "companies": [
+        "Google",
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Bit Manipulation"
+    ],
+    "buckets": [
+        "Bit Array"
+    ]
 }

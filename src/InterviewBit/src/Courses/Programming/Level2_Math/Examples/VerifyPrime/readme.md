@@ -1,8 +1,4 @@
-# Verify Prime
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/verify-prime/)
+# Problem Definition
 
 ## Description
 
@@ -14,16 +10,5 @@ Example :
 
 Input : 7
 Output : True
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes

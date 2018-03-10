@@ -1,8 +1,4 @@
-# Substring Concatenation
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/substring-concatenation/)
+# Problem Definition
 
 ## Description
 
@@ -18,19 +14,6 @@ L: ["foo", "bar"]
 ```
 
 You should return the indices: [0,9]. Order does not matter.
-
-## Companies
-
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Hashing
 
 ## Notes
 

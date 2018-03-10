@@ -1,8 +1,4 @@
-# Modular Expression
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/modular-expression/)
+# Problem Definition
 
 ## Description
 
@@ -15,17 +11,6 @@ Input : A = 2, B = 3, C = 3
 Return : 2
 2^3 % 3 = 8 % 3 = 2
 ```
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Backtracking
 
 ## Notes
 

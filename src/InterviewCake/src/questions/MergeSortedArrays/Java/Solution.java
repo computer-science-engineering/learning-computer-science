@@ -1,4 +1,4 @@
-package InterviewCake.src.questions.MergeSortedArrays.Java;
+package InterviewCake.src.Questions.MergeSortedArrays.Java;
 
 public class Solution {
     public static void main(String[] args) {

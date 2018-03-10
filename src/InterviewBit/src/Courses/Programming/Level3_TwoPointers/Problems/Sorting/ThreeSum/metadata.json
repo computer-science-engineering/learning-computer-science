@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Three Sum",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/3-sum/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon",
+        "Microsoft"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Two Pointers"
+    ],
+    "buckets": [
+        "Sorting"
+    ]
 }

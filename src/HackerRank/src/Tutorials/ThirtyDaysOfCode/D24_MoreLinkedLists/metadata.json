@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "D24 More Linked Lists",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-linked-list-deletion"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tutorials",
+        "Thirty Days of Code"
+    ],
+    "tags": [
+        ""
+    ]
 }

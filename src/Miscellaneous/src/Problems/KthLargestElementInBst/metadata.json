@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Kth Largest Element In Bst",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "Aruba Networks",
+        ""
+    ],
+    "categories": [
+        "",
+        ""
+    ],
+    "tags": [
+        "Binary Tree"
+    ]
 }

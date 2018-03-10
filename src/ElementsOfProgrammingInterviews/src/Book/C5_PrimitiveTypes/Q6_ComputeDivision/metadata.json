@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Q6 Compute Division",
+    "origin": {
+        "name": "Elements of Programming Interviews",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Book",
+        ""
+    ],
+    "tags": [
+        "Primitive Types"
+    ]
 }

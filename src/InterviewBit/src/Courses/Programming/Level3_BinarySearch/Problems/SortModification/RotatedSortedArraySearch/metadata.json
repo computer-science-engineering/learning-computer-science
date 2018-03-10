@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Rotated Sorted Array Search",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/rotated-sorted-array-search/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Microsoft"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Binary Search"
+    ],
+    "buckets": [
+        "Sort Modification"
+    ]
 }

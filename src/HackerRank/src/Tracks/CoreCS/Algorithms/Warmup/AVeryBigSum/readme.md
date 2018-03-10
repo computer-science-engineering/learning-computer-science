@@ -1,20 +1,5 @@
-# A Very Big Sum
-
-## Origin
-
-[Link](https://www.hackerrank.com/challenges/a-very-big-sum)
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Tracks
-1. CoreCS
-1. Algorithms
-1. Warmup
-
-## Tags
 
 ## Notes

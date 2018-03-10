@@ -1,3 +1,25 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Reverse The String",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/reverse-the-string/"
+    },
+    "companies": [
+        "Qualcomm",
+        "Amazon",
+        "Microsoft",
+        "Cisco",
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Strings"
+    ],
+    "buckets": [
+        "Words"
+    ]
 }

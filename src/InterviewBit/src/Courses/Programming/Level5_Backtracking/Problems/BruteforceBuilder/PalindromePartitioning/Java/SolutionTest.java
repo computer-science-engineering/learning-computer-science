@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.BruteforceBuilder.PalindromePartitioning.Java;
+package InterviewBit.src.Courses.Programming.Level5_Backtracking.Problems.BruteForceBuilder.PalindromePartitioning.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 

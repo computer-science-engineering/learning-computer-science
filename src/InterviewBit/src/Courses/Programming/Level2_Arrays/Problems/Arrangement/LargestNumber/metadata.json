@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Largest Number",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/largest-number/"
+    },
+    "companies": [
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ],
+    "buckets": [
+        "Arrangement"
+    ]
 }

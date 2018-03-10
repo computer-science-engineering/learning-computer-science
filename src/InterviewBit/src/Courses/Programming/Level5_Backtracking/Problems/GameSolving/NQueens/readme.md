@@ -1,8 +1,4 @@
-# NQueens
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/nqueens/)
+# Problem Definition
 
 ## Description
 
@@ -30,22 +26,6 @@ There exist two distinct solutions to the 4-queens puzzle:
   ".Q.."]
 ]
 ```
-
-## Companies
-
-1. Qualcomm
-1. Google
-1. Amazon
-1. Splunk
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Backtracking
 
 ## Notes
 

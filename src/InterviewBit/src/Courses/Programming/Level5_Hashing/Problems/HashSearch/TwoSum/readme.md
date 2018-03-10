@@ -1,8 +1,4 @@
-# Two Sum
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/2-sum/)
+# Problem Definition
 
 ## Description
 
@@ -16,20 +12,5 @@ If multiple solutions exist, output the one where index2 is minimum. If there ar
 Input: [2, 7, 11, 15], target=9
 
 Output: index1 = 1, index2 = 2
-
-## Companies
-
-1. Facebook
-1. Amazon
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Hashing
 
 ## Notes

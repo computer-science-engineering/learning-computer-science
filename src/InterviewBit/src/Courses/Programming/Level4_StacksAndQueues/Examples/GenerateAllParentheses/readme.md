@@ -1,8 +1,4 @@
-# Generate All Parentheses
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/generate-all-parentheses/)
+# Problem Definition
 
 ## Description
 
@@ -11,20 +7,6 @@ Given a string containing just the characters '(', ')', '{', '}', '[' and ']', d
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem
-
-## Companies
-
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Stacks
-1. Queues
 
 ## Notes
 

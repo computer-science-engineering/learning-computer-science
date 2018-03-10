@@ -1,8 +1,4 @@
-# Roman To Integer
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/roman-to-integer/)
+# Problem Definition
 
 ## Description
 
@@ -19,22 +15,6 @@ Return : 14
 
 Input : "XX"
 Output : 20
-
-## Companies
-
-1. Amazon
-1. Facebook
-1. Microsoft
-1. Twitter
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

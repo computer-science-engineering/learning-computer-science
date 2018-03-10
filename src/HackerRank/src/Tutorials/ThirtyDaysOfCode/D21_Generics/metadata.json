@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "D21 Generics",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-generics"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tutorials",
+        "Thirty Days of Code"
+    ],
+    "tags": [
+        ""
+    ]
 }

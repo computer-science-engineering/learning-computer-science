@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Q2 Increment An Arbitrary Precision Integer",
+    "origin": {
+        "name": "Elements of Programming Interviews",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Book",
+        ""
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

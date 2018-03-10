@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Intersection Of Sorted Arrays",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/intersection-of-sorted-arrays/"
+    },
+    "companies": [
+        "Facebook",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Two Pointers"
+    ],
+    "buckets": [
+        "Multiple Arrays"
+    ]
 }

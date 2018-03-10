@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Q1 Dutch National Flag",
+    "origin": {
+        "name": "Elements of Programming Interviews",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Book",
+        ""
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

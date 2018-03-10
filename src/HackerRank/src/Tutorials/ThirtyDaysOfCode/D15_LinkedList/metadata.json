@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "D15 Linked List",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-linked-list"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tutorials",
+        "Thirty Days of Code"
+    ],
+    "tags": [
+        ""
+    ]
 }

@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Spiral Order Matrix 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/spiral-order-matrix-ii/"
+    },
+    "companies": [
+        "Microsoft",
+        "JP Morgan",
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ],
+    "buckets": [
+        "Simulation Array"
+    ]
 }

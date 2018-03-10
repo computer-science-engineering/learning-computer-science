@@ -1,8 +1,4 @@
-# LRU Cache
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/lru-cache/)
+# Problem Definition
 
 ## Description
 
@@ -31,21 +27,6 @@ Input :
          set(6, 14)    this pushes out key = 5 as LRU is full.
          get(5)        returns -1
 ```
-
-## Companies
-
-1. Adobe
-1. Citigroup
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Heaps and Maps
 
 ## Notes
 

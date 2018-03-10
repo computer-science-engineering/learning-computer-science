@@ -1,3 +1,24 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Integer To Roman",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/integer-to-roman/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook",
+        "Microsoft",
+        "Twitter"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Strings"
+    ],
+    "buckets": [
+        "String Math"
+    ]
 }

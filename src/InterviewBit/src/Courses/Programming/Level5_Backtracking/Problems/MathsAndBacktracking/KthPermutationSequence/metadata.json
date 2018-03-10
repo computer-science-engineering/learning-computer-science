@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Kth Permutation Sequence",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/kth-permutation-sequence/"
+    },
+    "companies": [
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Backtracking"
+    ],
+    "buckets": [
+        "Maths and Backtracking"
+    ]
 }

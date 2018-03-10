@@ -1,8 +1,4 @@
-# Palindrome Integer
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/palindrome-integer/)
+# Problem Definition
 
 ## Description
 
@@ -20,19 +16,6 @@ Output : True
 Input : 123
 Output : False
 ```
-
-## Companies
-
-1. HCL
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

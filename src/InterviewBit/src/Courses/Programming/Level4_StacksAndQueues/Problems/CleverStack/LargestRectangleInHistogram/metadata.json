@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Largest Rectangle In Histogram",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/largest-rectangle-in-histogram/"
+    },
+    "companies": [
+        "Google",
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Stacks",
+        "Queues"
+    ],
+    "buckets": [
+        "Clever Stack"
+    ]
 }

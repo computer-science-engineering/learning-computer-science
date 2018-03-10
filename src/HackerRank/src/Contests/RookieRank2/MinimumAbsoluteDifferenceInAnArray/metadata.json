@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Minimum Absolute Difference In An Array",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/contests/rookierank-2/challenges/minimum-absolute-difference-in-an-array"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Contests",
+        "RookieRank 2"
+    ],
+    "tags": [
+        ""
+    ]
 }

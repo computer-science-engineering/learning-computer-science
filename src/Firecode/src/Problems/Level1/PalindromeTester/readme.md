@@ -1,8 +1,4 @@
-# Palindrome Tester
-
-## Origin
-
-[Link](https://www.firecode.io)
+# Problem Definition
 
 ## Description
 
@@ -17,16 +13,5 @@ isStringPalindrome("race car") -> false
 isStringPalindrome("") -> true
 isStringPalindrome(null) -> true
 ```
-
-## Companies
-
-## Categories
-
-1. Level1
-
-## Tags
-
-1. Strings
-1. Arrays
 
 ## Notes

@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Min XOR Value",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/min-xor-value/"
+    },
+    "companies": [
+        "Booking.com"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Bit Manipulation"
+    ],
+    "buckets": [
+        "Bucketing"
+    ]
 }

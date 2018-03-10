@@ -1,17 +1,5 @@
-# Q5 Multiply Without Arithmetical Operators
-
-## Origin
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Book
-
-## Tags
-
-1. Primitive Types
 
 ## Notes

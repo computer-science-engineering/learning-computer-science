@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Valid Binary Search Tree",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/valid-binary-search-tree/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        ""
+    ]
 }

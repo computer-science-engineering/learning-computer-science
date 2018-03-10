@@ -1,8 +1,4 @@
-# Implement StrStr
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/implement-strstr/)
+# Problem Definition
 
 ## Description
 
@@ -18,22 +14,5 @@ NOTE: Good clarification questions:
 * What should be the return value if the needle is empty?
 * What if both haystack and needle are empty?
 * For the purpose of this problem, assume that the return value should be -1 in both cases.
-
-## Companies
-
-1. Facebook
-1. Amazon
-1. Qualcomm
-1. Wipro
-1. Microsoft
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes

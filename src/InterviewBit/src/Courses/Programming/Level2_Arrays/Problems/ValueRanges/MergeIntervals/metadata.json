@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Merge Intervals",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/merge-intervals/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ],
+    "buckets": [
+        "Value Ranges"
+    ]
 }

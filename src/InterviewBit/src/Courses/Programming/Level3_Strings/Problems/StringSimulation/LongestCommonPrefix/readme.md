@@ -1,8 +1,4 @@
-# Longest Common Prefix
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/longest-common-prefix/)
+# Problem Definition
 
 ## Description
 
@@ -27,19 +23,6 @@ Given the array as:
 ]
 
 The answer would be “a”.
-
-## Companies
-
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

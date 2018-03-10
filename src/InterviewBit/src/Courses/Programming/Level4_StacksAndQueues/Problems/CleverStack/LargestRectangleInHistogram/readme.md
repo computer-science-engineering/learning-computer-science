@@ -1,8 +1,4 @@
-# Largest Rectangle In Histogram
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/largest-rectangle-in-histogram/)
+# Problem Definition
 
 ## Description
 
@@ -17,21 +13,6 @@ Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
 
 For example, given height = [2,1,5,6,2,3], return 10.
-
-## Companies
-
-1. Google
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Stacks
-1. Queues
 
 ## Notes
 

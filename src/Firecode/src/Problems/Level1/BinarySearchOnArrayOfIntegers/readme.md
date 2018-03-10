@@ -1,8 +1,4 @@
-# Binary Search On Array Of Integers
-
-## Origin
-
-[Link](https://www.firecode.io/)
+# Problem Definition
 
 ## Description
 
@@ -21,18 +17,5 @@ binarySearch({},9) -> false
 
    {} -> [Empty] Array
 ```
-
-## Companies
-
-1. Oracle
-
-## Categories
-
-1. Level1
-
-## Tags
-
-1. Strings
-1. Arrays
 
 ## Notes

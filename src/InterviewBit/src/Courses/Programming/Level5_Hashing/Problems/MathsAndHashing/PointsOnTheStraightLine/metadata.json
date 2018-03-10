@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Points On The Straight Line",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/points-on-the-straight-line/"
+    },
+    "companies": [
+        "Google",
+        "Amazon",
+        "InMobi"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Hashing"
+    ],
+    "buckets": [
+        "Maths and Hashing"
+    ]
 }

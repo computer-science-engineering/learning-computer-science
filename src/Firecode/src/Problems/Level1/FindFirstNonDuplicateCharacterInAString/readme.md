@@ -1,8 +1,4 @@
-# Find the First Non Duplicate Character in a String
-
-## Origin
-
-[Link](https://www.firecode.io)
+# Problem Definition
 
 ## Description
 
@@ -13,16 +9,5 @@ firstNonRepeatedCharacter( "abcdcd" ) --> 'a'
 firstNonRepeatedCharacter( "cbcd" ) --> 'b'
 firstNonRepeatedCharacter( "cdcd" ) --> null
 ```
-
-## Companies
-
-## Categories
-
-1. Level1
-
-## Tags
-
-1. Strings
-1. Hash Tables
 
 ## Notes

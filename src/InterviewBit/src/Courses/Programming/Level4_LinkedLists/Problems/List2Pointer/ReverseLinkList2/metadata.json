@@ -1,3 +1,25 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Reverse Link List 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/reverse-link-list-ii/"
+    },
+    "companies": [
+        "Facebook",
+        "Microsoft",
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Linked Lists"
+    ],
+    "buckets": [
+        "List 2 Pointer",
+        "Pointer Move",
+        "List Trick"
+    ]
 }

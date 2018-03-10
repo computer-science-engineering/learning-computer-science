@@ -1,8 +1,4 @@
-# Trailing Zeros In Factorial
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/trailing-zeros-in-factorial/)
+# Problem Definition
 
 ## Description
 
@@ -18,21 +14,6 @@ n! = 120
 Number of trailing zeros = 1
 So, return 1
 ```
-
-## Companies
-
-1. Microsoft
-1. Jabong
-1. Zillow
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

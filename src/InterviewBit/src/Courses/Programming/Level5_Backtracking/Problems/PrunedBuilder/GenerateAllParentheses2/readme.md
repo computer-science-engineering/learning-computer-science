@@ -1,8 +1,4 @@
-# Generated All Parentheses 2
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/generate-all-parentheses-ii/)
+# Problem Definition
 
 ## Description
 
@@ -15,20 +11,6 @@ For example, given n = 3, a solution set is:
 ```
 
 Make sure the returned list of strings are sorted.
-
-## Companies
-
-1. Facebook
-1. Microsoft
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Backtracking
 
 ## Notes
 

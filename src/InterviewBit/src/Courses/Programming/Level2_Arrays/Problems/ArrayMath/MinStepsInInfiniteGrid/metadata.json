@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Min Steps In Infinite Grid",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/min-steps-in-infinite-grid/"
+    },
+    "companies": [
+        "Directi"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ],
+    "buckets": [
+        "Array Math"
+    ]
 }

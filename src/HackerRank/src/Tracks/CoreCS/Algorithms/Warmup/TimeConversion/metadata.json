@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Time Conversion",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/time-conversion"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tracks",
+        "CoreCS",
+        "Algorithms",
+        "Warmup"
+    ],
+    "tags": [
+        ""
+    ]
 }

@@ -1,3 +1,20 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "1. Two Sum",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/two-sum"
+    },
+    "companies": [
+        "Aruba Networks",
+        ""
+    ],
+    "categories": [
+        "Problems",
+        "Algorithms"
+    ],
+    "tags": [
+        "Array",
+        "Hash Table"
+    ]
 }

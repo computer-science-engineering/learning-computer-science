@@ -1,8 +1,4 @@
-# Different Bits Sum Pairwise
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/different-bits-sum-pairwise/)
+# Problem Definition
 
 ## Description
 
@@ -25,19 +21,6 @@ f(5, 1) + f(5, 3) + f(5, 5) =
 1 + 0 + 2 +
 1 + 2 + 0 = 8
 ```
-
-## Companies
-
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Bit Manipulation
 
 ## Notes
 

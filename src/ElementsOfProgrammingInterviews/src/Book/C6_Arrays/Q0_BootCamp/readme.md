@@ -1,17 +1,5 @@
-# Q0 Boot Camp
-
-## Origin
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Book
-
-## Tags
-
-1. Arrays
 
 ## Notes

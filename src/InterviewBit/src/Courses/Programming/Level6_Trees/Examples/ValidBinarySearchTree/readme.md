@@ -1,8 +1,4 @@
-# Valid Binary Search Tree
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/valid-binary-search-tree/)
+# Problem Definition
 
 ## Description
 
@@ -34,20 +30,6 @@ Output : 1 or True
 ```
 
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem
-
-## Companies
-
-1. Amazon
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Trees
 
 ## Notes
 

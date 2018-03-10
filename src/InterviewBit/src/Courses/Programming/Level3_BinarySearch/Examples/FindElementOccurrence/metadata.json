@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Find Element Occurrence",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/count-element-occurence/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Binary Search"
+    ],
+    "buckets": [
+        ""
+    ]
 }

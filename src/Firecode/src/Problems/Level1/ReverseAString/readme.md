@@ -1,8 +1,4 @@
-# Reverse A String
-
-## Origin
-
-[Link](https://www.firecode.io)
+# Problem Definition
 
 ## Description
 
@@ -17,17 +13,5 @@ reverseString("") -> ""
 reverse("madam") -> "madam"
 reverse(null) -> null
 ```
-
-## Companies
-
-1. Microsoft
-
-## Categories
-
-1. Level1
-
-## Tags
-
-1. Strings
 
 ## Notes
