@@ -1,0 +1,22 @@
+{
+    "type": "Coding",
+    "name": "PostOrder Traversal",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/postorder-traversal/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "Traversal"
+    ]
+}
