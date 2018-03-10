@@ -34,8 +34,10 @@ public class SolutionTest {
         int input = 4;
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 3;
-            int actual = Solution.solve(input);
-            assertEquals(expected, actual);
+            int actual1 = Solution.solve(input);
+            assertEquals(expected, actual1);
+            int actual2 = solution.solve_Editorial(input);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -44,8 +46,10 @@ public class SolutionTest {
         int input = 20;
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 258365767;
-            int actual = Solution.solve(input);
-            assertEquals(expected, actual);
+            int actual1 = Solution.solve(input);
+            assertEquals(expected, actual1);
+            int actual2 = solution.solve_Editorial(input);
+            assertEquals(expected, actual2);
         });
     }
 }

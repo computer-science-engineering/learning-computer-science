@@ -38,8 +38,10 @@ public class SolutionTest {
         int C = 2;
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 2;
-            int actual = Solution.solve(A, B, C);
-            assertEquals(expected, actual);
+            int actual1 = Solution.solve(A, B, C);
+            assertEquals(expected, actual1);
+            int actual2 = Solution.solve_Editorial(A, B, C);
+            assertEquals(expected, actual2);
         });
     }
 
