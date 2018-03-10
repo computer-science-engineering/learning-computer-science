@@ -78,14 +78,17 @@ def create_problems_list(files):
         data[PROBLEM_LINK_STRING] = link
 
         companies = filter(None, jsonParsed["companies"])
+        companies = list(companies)
         companies_string = ", ".join(companies)
         data[PROBLEM_COMPANIES_STRING] = list(companies)
 
         categories = filter(None, jsonParsed["categories"])
+        categories = list(categories)
         categories_string = ", ".join(categories)
-        data[PROBLEM_CATEGORIES_STRING] = list(categories)
+        data[PROBLEM_CATEGORIES_STRING] = categories
 
         tags = filter(None, jsonParsed["tags"])
+        tags = list(tags)
         tags_string = ", ".join(tags)
         data[PROBLEM_TAGS_STRING] = list(tags)
 
