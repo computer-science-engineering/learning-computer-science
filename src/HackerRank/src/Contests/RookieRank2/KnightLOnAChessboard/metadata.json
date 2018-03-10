@@ -10,8 +10,15 @@
         ""
     ],
     "categories": [
-        "Contests",
-        "RookieRank 2"
+        {
+            "name": "Contests",
+            "children": [
+                {
+                    "name": "RookieRank 2",
+                    "children": []
+                }
+            ]
+        }    
     ],
     "tags": [
         ""

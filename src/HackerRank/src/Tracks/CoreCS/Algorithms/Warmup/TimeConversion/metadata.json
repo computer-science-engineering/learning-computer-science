@@ -10,10 +10,25 @@
         ""
     ],
     "categories": [
-        "Tracks",
-        "CoreCS",
-        "Algorithms",
-        "Warmup"
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "CoreCS",
+                    "children": [
+                        {
+                            "name": "Algorithms",
+                            "children": [
+                                {
+                                    "name": "Warmup",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     ],
     "tags": [
         ""

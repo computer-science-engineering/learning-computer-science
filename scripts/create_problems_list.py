@@ -83,7 +83,7 @@ def create_problems_list(files):
         data[PROBLEM_COMPANIES_STRING] = list(companies)
 
         categories = filter(None, jsonParsed["categories"])
-        categories = list(categories)
+        categories = getCategories(list(categories), [], "")
         categories_string = ", ".join(categories)
         data[PROBLEM_CATEGORIES_STRING] = categories
 
@@ -108,6 +108,19 @@ def create_problems_list(files):
     file_to_update_json.write(json_data)
     file_to_update_json.close()
     file_to_update_md.close()
+
+def getCategories(categories, result, category):
+    for item in categories:
+        if len(category) > 0:
+            category = category + " -> " + item["name"] if len(item["name"]) > 0 else ""
+        else:
+            category = item["name"] if len(item["name"]) > 0 else ""
+        children = item["children"]
+        if len(children) > 0:
+            getCategories(children, result, category)
+        else:
+            result.append(category)
+    return result
 
 def main():
     """main method."""

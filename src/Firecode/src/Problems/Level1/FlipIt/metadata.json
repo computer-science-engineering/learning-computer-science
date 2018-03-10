@@ -10,8 +10,10 @@
         ""
     ],
     "categories": [
-        "Level1",
-        ""
+        {
+            "name": "Level1",
+            "children": []
+        }
     ],
     "tags": [
         "Arrays",
