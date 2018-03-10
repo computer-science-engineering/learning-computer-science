@@ -72,7 +72,9 @@ def create_problems_list(files):
         problem_origin = jsonParsed["origin"]["name"]
         data[PROBLEM_ORIGIN_STRING] = problem_origin
 
-        link = jsonParsed["origin"]["link"]
+        pathSeparator = os.sep
+        clean_path = os.path.normpath(item[0]).replace(pathSeparator, "/")
+        link = os.path.join(clean_path)
         data[PROBLEM_LINK_STRING] = link
 
         companies = filter(None, jsonParsed["companies"])
