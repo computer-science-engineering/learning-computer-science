@@ -1,3 +1,24 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Intersection of Linked Lists",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/intersection-of-linked-lists/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft",
+        "NetApp",
+        "Apache Design"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Linked Lists"
+    ],
+    "buckets": [
+        ""
+    ]
 }

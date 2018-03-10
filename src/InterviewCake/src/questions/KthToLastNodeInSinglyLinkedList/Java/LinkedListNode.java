@@ -1,4 +1,4 @@
-package InterviewCake.src.questions.KthToLastNodeInSinglyLinkedList.Java;
+package InterviewCake.src.Questions.KthToLastNodeInSinglyLinkedList.Java;
 
 public class LinkedListNode {
     public String value;

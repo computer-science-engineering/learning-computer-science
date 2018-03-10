@@ -1,8 +1,4 @@
-# Reverse String
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/reverse-string/)
+# Problem Definition
 
 ## Description
 
@@ -13,18 +9,6 @@ Example :
 Input : "abc"
 
 Return "cba"
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Stacks
-1. Queues
 
 ## Notes
 

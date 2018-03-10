@@ -1,3 +1,24 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Evaluate Expression",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/evaluate-expression/"
+    },
+    "companies": [
+        "Yahoo",
+        "Google",
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Stacks",
+        "Queues"
+    ],
+    "buckets": [
+        "Stack Math"
+    ]
 }

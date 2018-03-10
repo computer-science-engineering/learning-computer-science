@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Reorder List",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/reorder-list/"
+    },
+    "companies": [
+        "Amazon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Linked Lists"
+    ],
+    "buckets": [
+        "Pointer Move",
+        "List 2 Pointer",
+        "List Trick"
+    ]
 }

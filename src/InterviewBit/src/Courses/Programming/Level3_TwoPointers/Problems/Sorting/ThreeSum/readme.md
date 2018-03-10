@@ -1,8 +1,4 @@
-# Three Sum
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/3-sum/)
+# Problem Definition
 
 ## Description
 
@@ -16,21 +12,6 @@ given array S = {-1 2 1 -4},
 and target = 1.
 
 The sum that is closest to the target is 2. (-1 + 2 + 1 = 2)
-
-## Companies
-
-1. Facebook
-1. Amazon
-1. Microsoft
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Two Pointers
 
 ## Notes
 

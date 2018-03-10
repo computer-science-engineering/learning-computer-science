@@ -1,8 +1,4 @@
-# Palindrome Partitioning
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/palindrome-partitioning/)
+# Problem Definition
 
 ## Description
 
@@ -33,20 +29,6 @@ Return
 
 In the given example,
 `["a", "a", "b"]` comes before `["aa", "b"]` because `len("a") < len("aa")`
-
-## Companies
-
-1. Amazon
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Backtracking
 
 ## Notes
 

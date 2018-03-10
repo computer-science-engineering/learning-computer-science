@@ -1,8 +1,4 @@
-# Math Bug02
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/mathbug02/)
+# Problem Definition
 
 ## Description
 
@@ -33,16 +29,5 @@ public class Solution {
 ```
 
 However, the code has a small bug. Correct the bug and submit the code.
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes

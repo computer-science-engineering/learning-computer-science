@@ -1,8 +1,4 @@
-# Insertion Sort List
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/insertion-sort-list/)
+# Problem Definition
 
 ## Description
 
@@ -17,20 +13,6 @@ Example :
 Input : 1 -> 3 -> 2
 
 Return 1 -> 2 -> 3
-
-## Companies
-
-1. Microsoft
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

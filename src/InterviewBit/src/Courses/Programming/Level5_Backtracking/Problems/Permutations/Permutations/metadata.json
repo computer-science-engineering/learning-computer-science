@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Permutations",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/permutations/"
+    },
+    "companies": [
+        "Microsoft",
+        "Adobe",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Backtracking"
+    ],
+    "buckets": [
+        "Permutations"
+    ]
 }

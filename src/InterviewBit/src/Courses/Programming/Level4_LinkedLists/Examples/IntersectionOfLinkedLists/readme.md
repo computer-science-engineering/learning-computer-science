@@ -1,8 +1,4 @@
-# Intersection of Linked Lists
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/intersection-of-linked-lists/)
+# Problem Definition
 
 ## Description
 
@@ -26,22 +22,6 @@ begin to intersect at node c1.
 * The linked lists must retain their original structure after the function returns.
 * You may assume there are no cycles anywhere in the entire linked structure.
 * Your code should preferably run in O(n) time and use only O(1) memory.
-
-## Companies
-
-1. Amazon
-1. Microsoft
-1. NetApp
-1. Apache Design
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

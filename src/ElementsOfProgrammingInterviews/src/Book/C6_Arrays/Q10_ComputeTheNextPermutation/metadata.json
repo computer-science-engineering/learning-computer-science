@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Q10 Compute The Next Permutation",
+    "origin": {
+        "name": "Elements of Programming Interviews",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Book",
+        ""
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

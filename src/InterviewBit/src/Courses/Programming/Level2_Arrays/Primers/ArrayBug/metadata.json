@@ -1,3 +1,18 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Array Bug",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/arraybug/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

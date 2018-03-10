@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Linked List",
+    "origin": {
+        "name": "Cracking the Coding Interview",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "",
+        ""
+    ],
+    "tags": [
+        "Linked Lists"
+    ]
 }

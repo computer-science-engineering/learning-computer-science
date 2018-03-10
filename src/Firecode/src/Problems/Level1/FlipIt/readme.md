@@ -1,8 +1,4 @@
-# Flip It
-
-## Origin
-
-[Link](https://www.firecode.io)
+# Problem Definition
 
 ## Description
 
@@ -19,18 +15,5 @@ Modified to :
               0 1
               0 1
 ```
-
-## Companies
-
-1. Infosys
-
-## Categories
-
-1. Level1
-
-## Tags
-
-1. Arrays
-1. Multi Dimensional Arrays
 
 ## Notes

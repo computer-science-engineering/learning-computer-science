@@ -1,8 +1,4 @@
-# Square Root Of Integer
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/square-root-of-integer/)
+# Problem Definition
 
 ## Description
 
@@ -17,21 +13,6 @@ Example :
 Input : 11
 Output : 3
 DO NOT USE SQRT FUNCTION FROM STANDARD LIBRARY
-
-## Companies
-
-1. Facebook
-1. Amazon
-1. Microsoft
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Binary Search
 
 ## Notes
 

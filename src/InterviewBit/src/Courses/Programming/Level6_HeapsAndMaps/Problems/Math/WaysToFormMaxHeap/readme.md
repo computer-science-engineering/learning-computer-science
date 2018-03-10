@@ -1,8 +1,4 @@
-# Ways To Form Max Heap
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/ways-to-form-max-heap/)
+# Problem Definition
 
 ## Description
 
@@ -52,19 +48,6 @@ As the final answer can be very large, output your answer modulo `1000000007`.
 Input Constraints : n <= 100
 
 NOTE: Note that even though constraints are mentioned for this problem, for most problems on InterviewBit, constraints are intentionally left out. In real interviews, the interviewer might not disclose constraints and ask you to do the best you can do.
-
-## Companies
-
-1. Directi
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Heaps and Maps
 
 ## Notes
 

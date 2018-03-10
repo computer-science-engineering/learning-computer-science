@@ -1,8 +1,4 @@
-# Add Binary Strings
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/add-binary-strings/)
+# Problem Definition
 
 ## Description
 
@@ -15,19 +11,6 @@ a = "100"
 b = "11"
 Return a + b = “111”.
 ```
-
-## Companies
-
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

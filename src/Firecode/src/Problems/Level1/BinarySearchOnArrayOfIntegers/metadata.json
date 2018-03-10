@@ -1,3 +1,20 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Binary Search On Array Of Integers",
+    "origin": {
+        "name": "Firecode",
+        "link": "https://www.firecode.io/"
+    },
+    "companies": [
+        "Oracle",
+        ""
+    ],
+    "categories": [
+        "Level1",
+        ""
+    ],
+    "tags": [
+        "Strings",
+        "Arrays"
+    ]
 }

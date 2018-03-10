@@ -1,8 +1,4 @@
-# Set Matrix Zeros
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/set-matrix-zeros/)
+# Problem Definition
 
 ## Description
 
@@ -25,19 +21,5 @@ On returning, the array A should be :
 1 0 1
 
 Note that this will be evaluated on the extra memory used. Try to minimize the space and time complexity.
-
-## Companies
-
-1. Oracle
-2. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Arrays
 
 ## Notes

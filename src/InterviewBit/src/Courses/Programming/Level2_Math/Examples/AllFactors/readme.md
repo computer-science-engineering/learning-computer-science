@@ -1,8 +1,4 @@
-# All Factors
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/all-factors/)
+# Problem Definition
 
 ## Description
 
@@ -13,16 +9,5 @@ N = 6
 factors = {1, 2, 3, 6}
 
 Make sure the returned array is sorted.
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes

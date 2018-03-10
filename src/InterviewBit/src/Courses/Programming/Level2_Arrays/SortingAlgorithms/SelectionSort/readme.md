@@ -1,20 +1,5 @@
-# Selection Sort
-
-## Origin
-
-[Link](https://www.interviewbit.com/courses/programming/topics/arrays/)
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Arrays
 
 ## Notes

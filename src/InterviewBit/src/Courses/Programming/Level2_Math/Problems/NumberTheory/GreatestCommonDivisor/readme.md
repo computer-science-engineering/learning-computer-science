@@ -1,8 +1,4 @@
-# Greatest Common Divisor
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/greatest-common-divisor/)
+# Problem Definition
 
 ## Description
 
@@ -21,20 +17,6 @@ GCD(m, n) : 3
 ```
 
 NOTE: DO NOT USE LIBRARY FUNCTIONS
-
-## Companies
-
-1. Google
-1. NetApp
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

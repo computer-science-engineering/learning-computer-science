@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Window String",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/window-string/"
+    },
+    "companies": [
+        "Google",
+        "Directi"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Hashing"
+    ],
+    "buckets": [
+        "Hashing Two Pointer"
+    ]
 }

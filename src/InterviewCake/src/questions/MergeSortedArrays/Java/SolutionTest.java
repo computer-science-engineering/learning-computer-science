@@ -1,4 +1,4 @@
-package InterviewCake.src.questions.MergeSortedArrays.Java;
+package InterviewCake.src.Questions.MergeSortedArrays.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 

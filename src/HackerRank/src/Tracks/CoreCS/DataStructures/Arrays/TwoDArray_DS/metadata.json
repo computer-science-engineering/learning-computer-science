@@ -1,3 +1,20 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "2DArray_DS",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/2d-array"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tracks",
+        "CoreCS",
+        "Data Structures"
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

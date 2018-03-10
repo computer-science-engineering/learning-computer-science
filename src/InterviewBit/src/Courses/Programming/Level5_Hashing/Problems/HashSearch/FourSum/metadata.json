@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Four Sum",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/4-sum/"
+    },
+    "companies": [
+        "Amazon",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Hashing"
+    ],
+    "buckets": [
+        "Hash Search"
+    ]
 }

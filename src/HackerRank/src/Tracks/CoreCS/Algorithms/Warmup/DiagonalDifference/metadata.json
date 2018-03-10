@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Diagonal Difference",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/diagonal-difference"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        "Tracks",
+        "CoreCS",
+        "Algorithms",
+        "Warmup"
+    ],
+    "tags": [
+        ""
+    ]
 }

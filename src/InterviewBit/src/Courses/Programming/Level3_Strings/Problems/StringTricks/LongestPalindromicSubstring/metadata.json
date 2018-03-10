@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Longest Palindromic Substring",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/longest-palindromic-substring/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft",
+        "Groupon"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Strings"
+    ],
+    "buckets": [
+        "String Tricks"
+    ]
 }

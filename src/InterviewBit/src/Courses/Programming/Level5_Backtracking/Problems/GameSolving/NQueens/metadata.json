@@ -1,3 +1,24 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "NQueens",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/nqueens/"
+    },
+    "companies": [
+        "Qualcomm",
+        "Google",
+        "Amazon",
+        "Splunk"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Backtracking"
+    ],
+    "buckets": [
+        "Game Solving"
+    ]
 }

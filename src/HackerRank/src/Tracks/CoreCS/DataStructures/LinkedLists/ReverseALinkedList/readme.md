@@ -1,22 +1,6 @@
-# Reverse A Linked List
-
-## Origin
-
-[Link](https://www.hackerrank.com/challenges/reverse-a-linked-list)
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Tracks
-1. CoreCS
-1. Data Structures
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

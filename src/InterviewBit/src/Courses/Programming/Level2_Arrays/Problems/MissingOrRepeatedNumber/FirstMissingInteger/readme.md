@@ -1,8 +1,4 @@
-# First Missing Integer
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/first-missing-integer/)
+# Problem Definition
 
 ## Description
 
@@ -16,19 +12,5 @@ Given
 [-8, -7, -6] returns 1
 
 Your algorithm should run in O(n) time and use constant space.
-
-## Companies
-
-1. Model N
-1. InMobi
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Arrays
 
 ## Notes

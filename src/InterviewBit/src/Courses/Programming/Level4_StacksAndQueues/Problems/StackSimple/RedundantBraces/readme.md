@@ -1,8 +1,4 @@
-# Redundant Braces
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/redundant-braces/)
+# Problem Definition
 
 ## Description
 
@@ -24,19 +20,5 @@ Example:
 ((a + b)) has redundant braces so answer will be 1
 (a + (a + b)) doesn't have have any redundant braces so answer will be 0
 ```
-
-## Companies
-
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Stacks
-1. Queues
 
 ## Notes

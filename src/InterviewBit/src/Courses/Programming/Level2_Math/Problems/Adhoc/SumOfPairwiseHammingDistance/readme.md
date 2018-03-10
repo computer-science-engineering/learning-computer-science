@@ -1,8 +1,4 @@
-# Sum Of Pairwise Hamming Distance
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/)
+# Problem Definition
 
 ## Description
 
@@ -32,19 +28,6 @@ f(6, 2) + f(6, 4) + f(6, 6) =
 2 + 0 + 1
 1 + 1 + 0 = 8
 ```
-
-## Companies
-
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

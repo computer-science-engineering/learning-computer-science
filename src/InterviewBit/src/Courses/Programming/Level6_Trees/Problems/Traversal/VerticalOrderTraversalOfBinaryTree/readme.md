@@ -1,8 +1,4 @@
-# Vertical Order Traversal Of Binary Tree
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/)
+# Problem Definition
 
 ## Description
 
@@ -36,19 +32,6 @@ returns
 ![alt text](img1.png "example")
 
 **Note:** If 2 Tree Nodes shares the same vertical level then the one with lesser depth will come first.
-
-## Companies
-
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Trees
 
 ## Notes
 

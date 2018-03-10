@@ -1,8 +1,4 @@
-# Container With Most Water
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/container-with-most-water/)
+# Problem Definition
 
 ## Description
 
@@ -25,20 +21,6 @@ Output : 6
 Explanation : 5 and 3 are distance 2 apart. So size of the base = 2. Height of container = min(5, 3) = 3.
 So total area = 3 * 2 = 6
 ```
-
-## Companies
-
-1. Facebook
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Two Pointers
 
 ## Notes
 

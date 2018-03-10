@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Spiral Order Matrix 1",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/spiral-order-matrix-i"
+    },
+    "companies": [
+        "Microsoft",
+        "JP Morgan",
+        "Amazon",
+        "Flipkart"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ]
 }

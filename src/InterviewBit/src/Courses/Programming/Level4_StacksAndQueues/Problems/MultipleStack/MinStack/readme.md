@@ -1,8 +1,4 @@
-# Min Stack
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/min-stack/)
+# Problem Definition
 
 ## Description
 
@@ -30,21 +26,5 @@ A: In this case, return -1
 ```
 
 **NOTE:** If you are using your own declared global variables, make sure to clear
-
-## Companies
-
-1. Yahoo
-1. Amazon
-1. Adobe
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Stacks
-1. Queues
 
 ## Notes

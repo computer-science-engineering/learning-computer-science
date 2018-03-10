@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Reverse A String",
+    "origin": {
+        "name": "Firecode",
+        "link": "https://www.firecode.io/"
+    },
+    "companies": [
+        "Microsoft",
+        ""
+    ],
+    "categories": [
+        "Level1",
+        ""
+    ],
+    "tags": [
+        "Strings"
+    ]
 }

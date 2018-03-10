@@ -1,8 +1,4 @@
-# Add Two Numbers As Lists
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/add-two-numbers-as-lists/)
+# Problem Definition
 
 ## Description
 
@@ -16,22 +12,6 @@ Output: 7 -> 0 -> 8
 
 Make sure there are no trailing zeros in the output list
 So, 7 -> 0 -> 8 -> 0 is not a valid response even though the value is still 807.
-
-## Companies
-
-1. Amazon
-1. Qualcomm
-1. Microsoft
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

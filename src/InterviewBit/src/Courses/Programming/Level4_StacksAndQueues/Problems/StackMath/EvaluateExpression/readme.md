@@ -1,8 +1,4 @@
-# Evaluate Expression
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/evaluate-expression/)
+# Problem Definition
 
 ## Description
 
@@ -16,22 +12,6 @@ Valid operators are +, -, *, /. Each operand may be an integer or another expres
 ["2", "1", "+", "3", "*"] -> ((2 + 1) * 3) -> 9
 ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
 ```
-
-## Companies
-
-1. Yahoo
-1. Google
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Stacks
-1. Queues
 
 ## Notes
 

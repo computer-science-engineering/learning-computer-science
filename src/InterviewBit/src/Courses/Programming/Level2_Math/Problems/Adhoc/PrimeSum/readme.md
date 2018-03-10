@@ -1,8 +1,4 @@
-# Prime Sum
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/prime-sum/)
+# Problem Definition
 
 ## Description
 
@@ -25,18 +21,5 @@ and [c, d] is another solution with c <= d, then
 
 If a < c OR a==c AND b < d.
 ```
-
-## Companies
-
-1. Epic Systems
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes

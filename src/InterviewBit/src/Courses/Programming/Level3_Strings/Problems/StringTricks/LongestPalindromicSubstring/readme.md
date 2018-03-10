@@ -1,8 +1,4 @@
-# Longest Palindromic Substring
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/longest-palindromic-substring/)
+# Problem Definition
 
 ## Description
 
@@ -22,21 +18,6 @@ Example :
 
 Input : "aaaabaaa"
 Output : "aaabaaa"
-
-## Companies
-
-1. Amazon
-1. Microsoft
-1. Groupon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

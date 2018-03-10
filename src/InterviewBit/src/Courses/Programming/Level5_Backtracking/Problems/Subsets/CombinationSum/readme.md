@@ -1,8 +1,4 @@
-# Combination Sum
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/combination-sum/)
+# Problem Definition
 
 ## Description
 
@@ -35,21 +31,6 @@ Warning : DO NOT USE LIBRARY FUNCTION FOR GENERATING COMBINATIONS.
 Example : itertools.combinations in python.
 
 If you do, we will disqualify your submission retroactively and give you penalty points
-
-## Companies
-
-1. Facebook
-1. Amazon
-1. Adobe
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Backtracking
 
 ## Notes
 

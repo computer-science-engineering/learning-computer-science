@@ -1,13 +1,5 @@
-# Trie
-
-## Origin
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-## Tags
 
 ## Notes

@@ -1,4 +1,21 @@
-
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Substring Concatenation",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/substring-concatenation/"
+    },
+    "companies": [
+        "Facebook"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Hashing"
+    ],
+    "buckets": [
+        "Incremental Hash"
+    ]
 }

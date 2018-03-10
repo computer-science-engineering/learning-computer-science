@@ -1,8 +1,4 @@
-# Multiply Strings
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/multiply-strings/)
+# Problem Definition
 
 ## Description
 
@@ -16,20 +12,6 @@ For example, given strings "12", "10", your answer should be “120”.
 
 NOTE : DO NOT USE BIG INTEGER LIBRARIES ( WHICH ARE AVAILABLE IN JAVA / PYTHON ).
 We will retroactively disqualify such submissions and the submissions will incur penalties.
-
-## Companies
-
-1. Microsoft
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

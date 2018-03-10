@@ -1,8 +1,4 @@
-# Equal
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/equal/)
+# Problem Definition
 
 ## Description
 
@@ -37,19 +33,6 @@ Output: [0, 2, 3, 5] (O index)
 ```
 
 If no solution is possible, return an empty list.
-
-## Companies
-
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Hashing
 
 ## Notes
 

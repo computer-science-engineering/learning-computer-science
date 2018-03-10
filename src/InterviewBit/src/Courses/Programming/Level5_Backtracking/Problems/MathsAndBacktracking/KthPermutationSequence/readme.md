@@ -1,8 +1,4 @@
-# Kth Permutation Sequence
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/kth-permutation-sequence/)
+# Problem Definition
 
 ## Description
 
@@ -28,19 +24,6 @@ Good questions to ask the interviewer:
 
 * What if n is greater than 10. How should multiple digit numbers be represented in string? --> In this case, just concatenate the number to the answer. So if n = 11, k = 1, ans = "1234567891011"
 * Whats the maximum value of n and k? --> In this case, k will be a positive integer thats less than INT_MAX. n is reasonable enough to make sure the answer does not bloat up a lot.
-
-## Companies
-
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Backtracking
 
 ## Notes
 

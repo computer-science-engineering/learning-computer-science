@@ -1,21 +1,5 @@
-# Arrays_DS
-
-## Origin
-
-[Link](https://www.hackerrank.com/challenges/arrays-ds)
+# Problem Definition
 
 ## Description
-
-## Companies
-
-## Categories
-
-1. Tracks
-1. CoreCS
-1. Data Structures
-
-## Tags
-
-1. Arrays
 
 ## Notes

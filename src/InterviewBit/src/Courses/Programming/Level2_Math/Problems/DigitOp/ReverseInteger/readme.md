@@ -1,8 +1,4 @@
-# Reverse Integer
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/reverse-integer/)
+# Problem Definition
 
 ## Description
 
@@ -21,20 +17,6 @@ x = -123,
 return -321
 
 Return 0 if the result overflows and does not fit in a 32 bit signed integer
-
-## Companies
-
-1. HCL
-1. Bloomberg
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

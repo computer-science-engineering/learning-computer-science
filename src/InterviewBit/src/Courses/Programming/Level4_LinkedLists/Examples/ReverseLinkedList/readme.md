@@ -1,8 +1,4 @@
-# Reverse Linked List
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/reverse-linked-list/)
+# Problem Definition
 
 ## Description
 
@@ -13,17 +9,6 @@ For example:
 Given 1->2->3->4->5->NULL,
 
 return 5->4->3->2->1->NULL.
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

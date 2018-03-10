@@ -1,8 +1,4 @@
-# Four Sum
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/4-sum/)
+# Problem Definition
 
 ## Description
 
@@ -29,20 +25,6 @@ A solution set is:
 Also make sure that the solution set is lexicographically sorted.
 
 Solution[i] < Solution[j] iff Solution[i][0] < Solution[j][0] OR (Solution[i][0] == Solution[j][0] AND ... Solution[i][k] < Solution[j][k])
-
-## Companies
-
-1. Amazon
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Hashing
 
 ## Notes
 

@@ -1,3 +1,21 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Merge Sort",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/courses/programming/topics/arrays/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Arrays"
+    ],
+    "buckets": [
+        ""
+    ]
 }

@@ -1,3 +1,19 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Number Of Strings From Encoded Alphabet",
+    "origin": {
+        "name": "Glassdoor",
+        "link": "https://www.glassdoor.com/Interview/Given-the-alphabet-encoded-as-numbers-e-g-a-1-b-2-z-26-and-a-sequence-of-numbers-e-g-23413259802-how-man-QTN_1992899.htm"
+    },
+    "companies": [
+        "Facebook",
+        ""
+    ],
+    "categories": [
+        "",
+        ""
+    ],
+    "tags": [
+        "Strings"
+    ]
 }

@@ -1,8 +1,4 @@
-# Spiral Order Matrix 2
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/spiral-order-matrix-ii/)
+# Problem Definition
 
 ## Description
 
@@ -21,20 +17,5 @@ You should return the following matrix:
   [ 7, 6, 5 ]
 ]
 ```
-
-## Companies
-
-1. Microsoft
-2. JP Morgan
-3. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Arrays
 
 ## Notes

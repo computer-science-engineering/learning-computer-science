@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Two Sum",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/2-sum/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon",
+        "Google"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Hashing"
+    ],
+    "buckets": [
+        "Hash Search"
+    ]
 }

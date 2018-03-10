@@ -1,8 +1,4 @@
-# Intersection Of Sorted Arrays
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/intersection-of-sorted-arrays/)
+# Problem Definition
 
 ## Description
 
@@ -27,20 +23,6 @@ Output : [3 5]
 ```
 
 NOTE : For the purpose of this problem ( as also conveyed by the sample case ), assume that elements that appear more than once in both arrays should be included multiple times in the final output.
-
-## Companies
-
-1. Facebook
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Two Pointers
 
 ## Notes
 

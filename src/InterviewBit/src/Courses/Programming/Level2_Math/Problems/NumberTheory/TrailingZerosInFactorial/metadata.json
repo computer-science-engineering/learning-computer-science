@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Trailing Zeros In Factorial",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/trailing-zeros-in-factorial/"
+    },
+    "companies": [
+        "Microsoft",
+        "Jabong",
+        "Zillow"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        "Number Theory"
+    ]
 }

@@ -1,8 +1,4 @@
-# Justified Text
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/justified-text/)
+# Problem Definition
 
 ## Description
 
@@ -34,20 +30,6 @@ Return the formatted lines as:
 ```
 
  Note: Each word is guaranteed not to exceed L in length.
-
-## Companies
-
-1. LinkedIn
-1. Google
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

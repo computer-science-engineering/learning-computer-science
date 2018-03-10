@@ -1,8 +1,4 @@
-# Count And Say
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/count-and-say/)
+# Problem Definition
 
 ## Description
 
@@ -22,19 +18,6 @@ Example:
 
 if n = 2,
 the sequence is 11.
-
-## Companies
-
-1. Facebook
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Strings
 
 ## Notes
 

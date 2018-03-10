@@ -1,18 +1,8 @@
-# Level Order Traversal Of Binary Tree in Single Line
-
-## Origin
+# Problem Definition
 
 ## Description
 
 ![alt text](https://4.bp.blogspot.com/-9ZfyN1HIsU4/U8pBOBFEVBI/AAAAAAAADQQ/7Kx1AEi_8j4/s640/LevelOrderTraversal.jpg "")
-
-## Companies
-
-## Categories
-
-## Tags
-
-1. Binary Tree
 
 ## Notes
 

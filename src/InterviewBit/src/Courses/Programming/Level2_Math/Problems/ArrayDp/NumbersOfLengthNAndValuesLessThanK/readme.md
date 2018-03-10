@@ -1,8 +1,4 @@
-# Numbers Of Length N And Values Less Than K
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/numbers-of-length-n-and-value-less-than-k/)
+# Problem Definition
 
 ## Description
 
@@ -33,17 +29,6 @@ Constraints:
 ```text
     1 <= B <= 9, 0 <= C <= 1e9 & 0 <= A[i] <= 9
 ```
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
 

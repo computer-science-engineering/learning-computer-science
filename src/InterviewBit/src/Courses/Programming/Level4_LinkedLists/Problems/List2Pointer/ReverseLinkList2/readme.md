@@ -1,8 +1,4 @@
-# Reverse Link List 2
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/reverse-link-list-ii/)
+# Problem Definition
 
 ## Description
 
@@ -21,21 +17,6 @@ Given m, n satisfy the following condition: 1 ≤ m ≤ n ≤ length of list.
 **Note 2:**
 
 Usually the version often seen in the interviews is reversing the whole linked list which is obviously an easier version of this question.
-
-## Companies
-
-1. Facebook
-1. Microsoft
-1. Amazon
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Linked Lists
 
 ## Notes
 

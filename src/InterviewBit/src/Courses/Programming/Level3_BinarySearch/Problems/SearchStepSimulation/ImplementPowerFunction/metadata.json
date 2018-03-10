@@ -1,3 +1,22 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Implement Power Function",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/implement-power-function/"
+    },
+    "companies": [
+        "Google",
+        "LinkedIn"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Binary Search"
+    ],
+    "buckets": [
+        "Search Step Simulation"
+    ]
 }

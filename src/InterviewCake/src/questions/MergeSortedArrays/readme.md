@@ -1,8 +1,4 @@
-# 43 Merge Sorted Arrays
-
-## Origin
-
-[Link](https://www.interviewcake.com/question/java/merge-sorted-arrays)
+# Problem Definition
 
 ## Description
 
@@ -53,16 +49,6 @@ in general we could say something like:
 1. As we put items in our final mergedArray, we'll keep track of the fact that they're "already merged."
 1. At each step, each array has a first "not-yet-merged" item.
 1. At each step, the next item to put in the mergedArray is the smaller of those two "not-yet-merged" items!
-
-## Companies
-
-## Categories
-
-1. Questions
-
-## Tags
-
-1. Arrays
 
 ## Notes
 

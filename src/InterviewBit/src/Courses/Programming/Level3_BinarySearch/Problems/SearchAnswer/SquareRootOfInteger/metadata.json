@@ -1,3 +1,23 @@
 {
-    "type": "problem"
+    "type": "Coding",
+    "name": "Square Root Of Integer",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/square-root-of-integer/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon",
+        "Microsoft"
+    ],
+    "categories": [
+        "Courses",
+        "Programming"
+    ],
+    "tags": [
+        "Binary Search"
+    ],
+    "buckets": [
+        "Search Answer"
+    ]
 }

@@ -1,8 +1,4 @@
-# Math Bug01
-
-## Origin
-
-[Link](https://www.interviewbit.com/problems/mathbug01/)
+# Problem Definition
 
 ## Description
 
@@ -21,16 +17,5 @@ public class Solution {
     }
 }
 ```
-
-## Companies
-
-## Categories
-
-1. Courses
-1. Programming
-
-## Tags
-
-1. Math
 
 ## Notes
