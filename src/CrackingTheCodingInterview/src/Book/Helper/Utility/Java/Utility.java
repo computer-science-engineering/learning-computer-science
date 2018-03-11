@@ -76,11 +76,11 @@ public class Utility {
         return root;
     }
 
-    public static LinkedListNode createLinkedListFromArray(int[] vals) {
-        LinkedListNode head = new LinkedListNode(vals[0], null, null);
+    public static LinkedListNode createLinkedListFromArray(int[] values) {
+        LinkedListNode head = new LinkedListNode(values[0], null, null);
         LinkedListNode current = head;
-        for (int i = 1; i < vals.length; i++) {
-            current = new LinkedListNode(vals[i], null, current);
+        for (int i = 1; i < values.length; i++) {
+            current = new LinkedListNode(values[i], null, current);
         }
         return head;
     }
@@ -121,8 +121,8 @@ public class Utility {
 
         String s = "";
         while (true) {
-            int lastdigit = a % base;
-            s = lastdigit + s;
+            int lastDigit = a % base;
+            s = lastDigit + s;
             a = a / base;
             if (a == 0)
                 break;
