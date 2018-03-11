@@ -1,0 +1,22 @@
+{
+    "type": "Coding",
+    "name": "Q3 URLify",
+    "origin": {
+        "name": "Cracking the Coding Interview",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Book",
+            "children": []
+        }
+    ],
+    "tags": [
+        "Arrays",
+        "Strings"
+    ]
+}

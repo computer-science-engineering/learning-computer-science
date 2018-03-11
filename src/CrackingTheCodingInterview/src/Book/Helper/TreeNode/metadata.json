@@ -1,0 +1,22 @@
+{
+    "type": "Coding",
+    "name": "Tree Node",
+    "origin": {
+        "name": "Cracking the Coding Interview",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Book",
+            "children": []
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ]
+}
