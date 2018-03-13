@@ -24,8 +24,6 @@ install:
   - sh: sudo apt-get update -y
   - sh: sudo apt-get install python3.6 -y
   - sh: python3.6 --version
-  - sh: pyenv versions
-  - sh: pyenv global 3.6
   - sh: pip install -r requirements.txt
 
 build_script:
