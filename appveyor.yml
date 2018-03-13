@@ -24,8 +24,7 @@ install:
   - sh: sudo apt-get update -y
   - sh: sudo apt-get install python3.6 -y
   - sh: whereis python3.6
-  - sh: export PYTHONHOME=/usr/bin/python3.6
-  - sh: export PYTHONPATH=/usr/bin/python3.6
+  - sh: export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.6
   - sh: python3.6 --version
   - sh: python3.6 -m pip install -r requirements.txt
 
