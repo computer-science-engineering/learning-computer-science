@@ -24,8 +24,7 @@ install:
   - sh: sudo apt-get update -y
   - sh: sudo apt-get install python3.6 -y
   - sh: whereis python3.6
-  #- sh: export PYTHONHOME=/usr/bin/python3.6
-  #- sh: export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.6
+  #https://stackoverflow.com/questions/38132755/importerror-no-module-named-encodings/39097003#39097003
   - sh: rm -rf /home/appveyor/venv3.6.4
   - sh: virtualenv -p /usr/bin/python3.6 /home/appveyor/venv/
   - sh: . /home/appveyor/venv/bin/activate
@@ -34,6 +33,7 @@ install:
 
 build_script:
   - cmd: .\gradlew.bat build
+  - sh: bash ./gradlew.bat build
 
 test_script:
   - cmd: .\gradlew.bat test jacocoJupTestReport
