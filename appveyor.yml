@@ -6,7 +6,11 @@ branches:
 
 skip_tags: true
 
-image: Visual Studio 2017
+image:
+- Visual Studio 2017
+- Ubuntu
+
+stack: node 9, jdk 9, python 3
 
 install:
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
@@ -16,6 +20,13 @@ install:
   - cmd: java -version
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
+  - sh: sudo add-apt-repository ppa:deadsnakes/ppa -y
+  - sh: sudo apt-get update -y
+  - sh: sudo apt-get install python3.6 -y
+  - sh: python3.6 --version
+  - sh: pyenv versions
+  - sh: pyenv global 3.6
+  - sh: pip install -r requirements.txt
 
 build_script:
   - cmd: .\gradlew.bat build
@@ -23,6 +34,9 @@ build_script:
 test_script:
   - cmd: .\gradlew.bat test jacocoJupTestReport
   - cmd: coverage-3.6 run scripts\\run_unit_tests.py
+  - sh: bash ./gradlew test jacocoJupTestReport
+  - sh: coverage-3.6 run scripts/run_unit_tests.py
 
 after_test:
   - cmd: python scripts\\create_problems_list.py
+  - sh: python3.6 scripts/create_problems_list.py
