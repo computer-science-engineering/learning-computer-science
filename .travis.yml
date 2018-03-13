@@ -26,10 +26,7 @@ script:
   - python3.6 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
-# https://github.com/travis-ci/travis-ci/issues/9312
 deploy:
-  edge:
-    branch: v1.8.47
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
