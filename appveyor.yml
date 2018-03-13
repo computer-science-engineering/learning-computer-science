@@ -19,15 +19,15 @@ install:
   - cmd: "SET PATH=%PYTHON3%;%PYTHON3%\\Scripts;%path%"
   - cmd: java -version
   - cmd: python --version"
-  - cmd: python -m pip install -r requirements.txt
-  - sh: sudo add-apt-repository ppa:deadsnakes/ppa -y
-  - sh: sudo apt-get update -y
-  - sh: sudo apt-get install python3.6 -y
+  #- cmd: python -m pip install -r requirements.txt
+  #- sh: sudo add-apt-repository ppa:deadsnakes/ppa -y
+  #- sh: sudo apt-get update -y
+  #- sh: sudo apt-get install python3.6 -y
   - sh: whereis python3.6
   - sh: python3.6 --version
-  - sh: python3 -m venv venv
+  - sh: python3.6 -m venv venv
   - sh: . venv/bin/activate
-  - sh: python3 -m pip install -r requirements.txt
+  - sh: python3.6 -m pip install -r requirements.txt
 
 build_script:
   - cmd: .\gradlew.bat build
