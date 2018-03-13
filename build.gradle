@@ -3,8 +3,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 buildscript {
     repositories {
-        //mavenCentral()
-        maven { url "http://jcenter.bintray.com/" }
+        mavenCentral()
     }
     dependencies {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
@@ -16,11 +15,11 @@ plugins {
 }
 
 repositories { 
-    //jcenter()
     // https://stackoverflow.com/questions/36029754/force-gradle-to-use-http-instead-of-https
-    maven { url "http://jcenter.bintray.com/" }
-    //mavenLocal()
-    //mavenCentral()
+    // https://discuss.gradle.org/t/how-to-change-gradle-plugin-portal-from-https-to-http/10847/12
+    jcenter()
+    mavenLocal()
+    mavenCentral()
 }
 
 ext.junit4Version        = '4.12'
@@ -33,7 +32,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'com.github.kt3k.coveralls'
 
-//https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
+// https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
 jacocoTestCoverageVerification {
     violationRules {
@@ -112,7 +111,7 @@ sourceSets {
    }
 }
 
-//https://github.com/junit-team/junit5/issues/1024#issuecomment-354384992
+// https://github.com/junit-team/junit5/issues/1024#issuecomment-354384992
 afterEvaluate {
     def junitPlatformTestTask = project.tasks.getByName('test')
 
@@ -134,7 +133,7 @@ afterEvaluate {
     check.dependsOn jacocoJupTestReport
 }
 
-//https://github.com/codeclimate/test-reporter/issues/243
+// https://github.com/codeclimate/test-reporter/issues/243
 // task jacocoFixForCodeClimate(type: Copy) {
 //     from 'build/reports/jacoco/report.xml'
 //     into '../'
@@ -144,14 +143,12 @@ afterEvaluate {
 //     filter { line -> line.replaceAll("com/", "webapp/src/main/java/com/") }
 // }
 
-//https://github.com/ben-manes/caffeine/blob/master/build.gradle
+// https://github.com/ben-manes/caffeine/blob/master/build.gradle
 coveralls {
   jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
 }
 
-/*
-https://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
-*/
+// https://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
 tasks.withType(Test) {
     testLogging {        
         // set options for log level LIFECYCLE
