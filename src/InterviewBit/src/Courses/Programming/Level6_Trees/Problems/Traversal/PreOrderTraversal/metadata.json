@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "PreOrder Traversal",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/preorder-traversal/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "Traversal"
+    ]
+}
