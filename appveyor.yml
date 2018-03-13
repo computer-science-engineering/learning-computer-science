@@ -10,7 +10,8 @@ image:
 - Visual Studio 2017
 - Ubuntu
 
-stack: node 9, jdk 9, python 3.6
+# todo: https://github.com/appveyor/ci/issues/2160
+stack: node 9, jdk 8, python 3.6
 
 install:
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
@@ -20,17 +21,18 @@ install:
   - cmd: java -version
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
-  - sh: sudo add-apt-repository ppa:deadsnakes/ppa -y
-  - sh: sudo apt-get update -y
-  - sh: sudo apt-get install python3.6 -y
+  # todo: https://github.com/appveyor/ci/issues/2153
+  # - sh: sudo add-apt-repository ppa:deadsnakes/ppa -y
+  # - sh: sudo apt-get update -y
+  # - sh: sudo apt-get install python3.6 -y
   - sh: whereis python3.6
   #https://stackoverflow.com/questions/38132755/importerror-no-module-named-encodings/39097003#39097003
-  - sh: rm -rf /home/appveyor/venv3.6.4
-  - sh: virtualenv -p /usr/bin/python3.6 /home/appveyor/venv/
-  - sh: . /home/appveyor/venv/bin/activate
+  # - sh: rm -rf /home/appveyor/venv3.6.4
+  # - sh: virtualenv -p /usr/bin/python3.6 /home/appveyor/venv/
+  # - sh: . /home/appveyor/venv/bin/activate
+  - sh: . /home/appveyor/venv3.6.4/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
-  - sh: chmod +x gradlew
 
 build_script:
   - cmd: .\gradlew.bat build
