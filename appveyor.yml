@@ -26,10 +26,9 @@ install:
   - sh: whereis python3.6
   - sh: export PYTHONHOME=/usr/bin/python3.6
   - sh: export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.6
-  - sh: |
-    rm -rf /home/appveyor/venv3.6.4
-    virtualenv -p /usr/bin/python3.6 venv/
-    source env/bin/activate
+  - sh: rm -rf /home/appveyor/venv3.6.4
+  - sh: virtualenv -p /usr/bin/python3.6 venv/
+  - sh: source env/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
 
