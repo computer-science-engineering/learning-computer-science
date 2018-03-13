@@ -3,7 +3,8 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 buildscript {
     repositories {
-        mavenCentral()
+        //mavenCentral()
+        maven { url "http://jcenter.bintray.com/" }
     }
     dependencies {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
