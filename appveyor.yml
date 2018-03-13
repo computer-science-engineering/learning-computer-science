@@ -23,6 +23,7 @@ install:
   - sh: sudo add-apt-repository ppa:deadsnakes/ppa -y
   - sh: sudo apt-get update -y
   - sh: sudo apt-get install python3.6 -y
+  - sh: whereis python3.6
   - sh: python3.6 --version
   - sh: python3.6 pip install -r requirements.txt
 
