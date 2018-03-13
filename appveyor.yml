@@ -30,6 +30,7 @@ install:
   - sh: . /home/appveyor/venv/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
+  - sh: chmod +x gradlew
 
 build_script:
   - cmd: .\gradlew.bat build
