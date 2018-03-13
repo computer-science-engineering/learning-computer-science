@@ -15,7 +15,9 @@ plugins {
 }
 
 repositories { 
-    jcenter()
+    //jcenter()
+    // https://stackoverflow.com/questions/36029754/force-gradle-to-use-http-instead-of-https
+    jcenter { url "http://jcenter.bintray.com/"}
     mavenLocal()
     mavenCentral()
 }
