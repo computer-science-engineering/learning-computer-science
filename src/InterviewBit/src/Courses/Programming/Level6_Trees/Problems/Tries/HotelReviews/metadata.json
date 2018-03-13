@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "Hotel Reviews",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/hotel-reviews/"
+    },
+    "companies": [
+        "Booking.com"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "Tries"
+    ]
+}

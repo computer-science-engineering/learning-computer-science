@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.Traversal.PreOrderTraversal.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.Tries.HotelReviews.Java.Solution",
             "args": "",
         },
         {
