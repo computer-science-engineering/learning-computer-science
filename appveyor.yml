@@ -24,7 +24,7 @@ install:
   - sh: sudo apt-get update -y
   - sh: sudo apt-get install python3.6 -y
   - sh: python3.6 --version
-  - sh: pip install -r requirements.txt
+  - sh: python3.6 pip install -r requirements.txt
 
 build_script:
   - cmd: .\gradlew.bat build
