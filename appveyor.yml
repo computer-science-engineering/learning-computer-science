@@ -25,8 +25,9 @@ install:
   #- sh: sudo apt-get install python3.6 -y
   - sh: whereis python3.6
   - sh: python3.6 --version
-  - sh: python3.6 -m venv venv
-  - sh: . venv/bin/activate
+  #- sh: python3.6 -m venv venv
+  #- sh: . venv/bin/activate
+  - sh: . /home/appveyor/venv3.6.4/bin/activate
   - sh: python3.6 -m pip install -r requirements.txt
 
 build_script:
