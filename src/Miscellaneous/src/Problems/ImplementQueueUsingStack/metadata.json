@@ -1,0 +1,21 @@
+{
+    "type": "Coding",
+    "name": "Implement Queue using Stack",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "Aruba Networks"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": []
+        }
+    ],
+    "tags": [
+        "Stacks",
+        "Queues"
+    ]
+}
