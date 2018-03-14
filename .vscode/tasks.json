@@ -12,60 +12,49 @@
         {
             "label": "gradlew-build",
             "type": "shell",
-            "command": "./gradlew", // -p build 
-            "args": ["build"],
+            "command": "./gradlew build", // -p build 
             "windows": {
-                "command": ".\\gradlew.bat",
-                "args": ["build"],
+                "command": ".\\gradlew.bat build"
             }
         },
         {
             "label": "gradlew-test",
             "type": "shell",
-            "command": "./gradlew",
-            "args": ["test"],
+            "command": "./gradlew test",
             "windows": {
-                "command": ".\\gradlew.bat",
-                "args": ["test"],
+                "command": ".\\gradlew.bat test"
             }
         },
         {
             "label": "gradlew-clean",
             "type": "shell",
-            "command": "./gradlew",
-            "args": ["clean"],
+            "command": "./gradlew clean",
             "windows": {
-                "command": ".\\gradlew.bat",
-                "args": ["clean"],
+                "command": ".\\gradlew.bat clean"
             }
         },
         {
             "label": "gradlew-test-jacoco",
             "type": "shell",
-            "command": "./gradlew",
-            "args": ["test", "jacocoJupTestReport"],
+            "command": "./gradlew test jacocoJupTestReport",
             "windows": {
-                "command": ".\\gradlew.bat",
-                "args": ["test", "jacocoJupTestReport"],
+                "command": ".\\gradlew.bat test jacocoJupTestReport"
             }
         },
         {
             "label": "create-problems-list",
             "type": "shell",
-            "command": "python",
-            "args": ["${workspaceFolder}/scripts/create_problems_list.py"],
+            "command": "python ${workspaceFolder}/scripts/create_problems_list.py"
         },  
         {
             "label": "run-python-unit-tests",
             "type": "shell",
-            "command": "python",
-            "args": ["${workspaceFolder}/scripts/run_unit_tests.py"],
+            "command": "python ${workspaceFolder}/scripts/run_unit_tests.py"
         },  
         {
             "label": "run-python-unit-tests-coverage",
             "type": "shell",
-            "command": "coverage3 run ${workspaceFolder}/scripts/run_unit_tests.py",
-            "args": ["run", "${workspaceFolder}/scripts/run_unit_tests.py"],
+            "command": "coverage3 run ${workspaceFolder}/scripts/run_unit_tests.py"
         }
     ]
 }
