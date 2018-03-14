@@ -1,0 +1,26 @@
+{
+    "type": "Coding",
+    "name": "29. Bracket Validator",
+    "origin": {
+        "name": "InterviewCake",
+        "link": "https://www.interviewcake.com/question/java/bracket-validator"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Questions",
+            "children": []
+        }
+    ],
+    "tags": [
+        "Stacks",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
