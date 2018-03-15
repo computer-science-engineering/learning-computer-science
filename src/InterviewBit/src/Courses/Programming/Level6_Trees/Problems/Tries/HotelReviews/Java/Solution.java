@@ -9,7 +9,8 @@ public class Solution {
         String A = "cool_ice_wifi";
         ArrayList<String> B = new ArrayList<String>(Arrays.asList(
             "water_is_cool", "cold_ice_drink", "cool_wifi_speed"));
-            ArrayList<Integer> result = solve(A, B);
+            Solution solution = new Solution();
+            ArrayList<Integer> result = solution.solve_editorial(A, B);
             for (Integer item : result) {
                 System.out.print(item + " ");
             }
@@ -135,6 +136,7 @@ public class Solution {
       
         return (pCrawl != null && pCrawl.isEndOfWord);
     }
+    
     public ArrayList<Integer> solve_editorial(String A, ArrayList<String> B) {
         root =  new TrieNode_Editorial();
         TreeMap<Integer,ArrayList<Integer>> tm = new TreeMap<Integer,ArrayList<Integer>>();
