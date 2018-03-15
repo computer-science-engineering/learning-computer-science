@@ -84,15 +84,14 @@ public class Solution {
     static final int ALPHABET_SIZE = 26;
      
     // trie node
-    static class TrieNode_Editorial
-    {
+    static class TrieNode_Editorial {
         TrieNode_Editorial[] children = new TrieNode_Editorial[ALPHABET_SIZE];
       
         // isEndOfWord is true if the node represents
         // end of a word
         boolean isEndOfWord;
          
-        TrieNode_Editorial(){
+        TrieNode_Editorial() {
             isEndOfWord = false;
             for (int i = 0; i < ALPHABET_SIZE; i++)
                 children[i] = null;
@@ -100,16 +99,14 @@ public class Solution {
     };
       
     static TrieNode_Editorial root; 
-    static void insert(String key)
-    {
+    static void insert(String key) {
         int level;
         int length = key.length();
         int index;
       
         TrieNode_Editorial pCrawl = root;
       
-        for (level = 0; level < length; level++)
-        {
+        for (level = 0; level < length; level++) {
             index = key.charAt(level) - 'a';
             if (pCrawl.children[index] == null)
                 pCrawl.children[index] = new TrieNode_Editorial();
@@ -120,19 +117,18 @@ public class Solution {
         // mark last node as leaf
         pCrawl.isEndOfWord = true;
     }
-    static boolean search(String key)
-    {
+    static boolean search(String key) {
         int level;
         int length = key.length();
         int index;
         TrieNode_Editorial pCrawl = root;
       
-        for (level = 0; level < length; level++)
-        {
+        for (level = 0; level < length; level++) {
             index = key.charAt(level) - 'a';
       
-            if (pCrawl.children[index] == null)
+            if (pCrawl.children[index] == null) {
                 return false;
+            }
       
             pCrawl = pCrawl.children[index];
         }
@@ -143,9 +139,9 @@ public class Solution {
         root =  new TrieNode_Editorial();
         TreeMap<Integer,ArrayList<Integer>> tm = new TreeMap<Integer,ArrayList<Integer>>();
         int i= 0,n=A.length();
-        while(i<n){
+        while(i<n) {
             StringBuilder temp = new StringBuilder();
-            while(i<n&&A.charAt(i)!='_'){
+            while(i<n&&A.charAt(i)!='_') {
                 temp.append(A.charAt(i));
                 i++;
             }
@@ -154,21 +150,21 @@ public class Solution {
         }
         i=0;n=B.size();
         ArrayList<Integer> useMe = new ArrayList<Integer>();
-        while(i<n){
+        while(i<n) {
             String b = B.get(i);
             int count = 0;
             int j = 0,k=0,m=b.length();
-            while(k<m){
+            while(k<m) {
                 j=k;
-                while(k<m&&b.charAt(k)!='_'){
+                while(k<m&&b.charAt(k)!='_') {
                     k++;
                 }
-                if(search(b.substring(j,k))){
+                if(search(b.substring(j,k))) {
                     count++;
                 }
                 k++;
             }
-            if(tm.containsKey(count)){
+            if(tm.containsKey(count)) {
                 useMe = tm.get(count);
                 useMe.add(i);
                 tm.put(count,useMe);
@@ -181,7 +177,7 @@ public class Solution {
             i++;
         }
         ArrayList<Integer> fresult = new ArrayList<Integer>();
-        while(!tm.isEmpty()){
+        while(!tm.isEmpty()) {
             int high = tm.lastKey();
             ArrayList<Integer> pointer = tm.get(high);
             for(int ad : pointer){
