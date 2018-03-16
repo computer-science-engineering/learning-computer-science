@@ -1,4 +1,4 @@
-package BillRyan.AlgorithmExercise.src.Part1_Basics.BasicDataStructure.LinkedList.Java;
+package BillRyan.src.AlgorithmExercise.Part1_Basics.BasicDataStructure.LinkedList.Java;
 
 public class Reverse {
 
