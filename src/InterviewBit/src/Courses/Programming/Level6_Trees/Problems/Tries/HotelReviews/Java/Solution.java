@@ -94,12 +94,14 @@ public class Solution {
          
         TrieNode_Editorial() {
             isEndOfWord = false;
-            for (int i = 0; i < ALPHABET_SIZE; i++)
+            for (int i = 0; i < ALPHABET_SIZE; i++) {
                 children[i] = null;
+            }
         }
     };
       
-    static TrieNode_Editorial root; 
+    static TrieNode_Editorial root;
+
     static void insert(String key) {
         int level;
         int length = key.length();
@@ -107,10 +109,11 @@ public class Solution {
       
         TrieNode_Editorial pCrawl = root;
       
-        for (level = 0; level < length; level++) {
+        for (level=0; level<length; level++) {
             index = key.charAt(level) - 'a';
-            if (pCrawl.children[index] == null)
+            if (pCrawl.children[index] == null) {
                 pCrawl.children[index] = new TrieNode_Editorial();
+            }
       
             pCrawl = pCrawl.children[index];
         }
@@ -118,6 +121,7 @@ public class Solution {
         // mark last node as leaf
         pCrawl.isEndOfWord = true;
     }
+
     static boolean search(String key) {
         int level;
         int length = key.length();
