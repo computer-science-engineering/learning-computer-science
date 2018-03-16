@@ -1,0 +1,45 @@
+{
+    "type": "Coding",
+    "name": "Divisible Sum Pairs",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/divisible-sum-pairs/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "CoreCS",
+                    "children": [
+                        {
+                            "name": "Algorithms",
+                            "children": [
+                                {
+                                    "name": "Implementation",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Easy",
+            "children": []
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
