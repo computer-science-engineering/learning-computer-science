@@ -10,8 +10,10 @@
         ""
     ],
     "categories": [
-        "Algorithm Exercise",
-        ""
+        {
+            "name": "Algorithm Exercise",
+            "children": []
+        }
     ],
     "tags": [
         "Linked List"
