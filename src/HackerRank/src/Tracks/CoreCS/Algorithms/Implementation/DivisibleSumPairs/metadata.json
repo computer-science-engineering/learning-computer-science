@@ -30,8 +30,13 @@
             ]
         },
         {
-            "name": "Easy",
-            "children": []
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
         }
     ],
     "tags": [
