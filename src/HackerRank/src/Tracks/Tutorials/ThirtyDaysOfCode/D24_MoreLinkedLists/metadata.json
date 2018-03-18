@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "D24 More Linked Lists",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-linked-list-deletion"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "Tutorials",
+                    "children": [
+                        {
+                            "name": "Thirty Days of Code",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "tags": [
+        ""
+    ]
+}

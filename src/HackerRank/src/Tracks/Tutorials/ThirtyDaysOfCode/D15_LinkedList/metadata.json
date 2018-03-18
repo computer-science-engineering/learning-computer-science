@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "D15 Linked List",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-linked-list"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "Tutorials",
+                    "children": [
+                        {
+                            "name": "Thirty Days of Code",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "tags": [
+        ""
+    ]
+}

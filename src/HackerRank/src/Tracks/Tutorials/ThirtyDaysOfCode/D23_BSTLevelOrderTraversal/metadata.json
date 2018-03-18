@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "D23 BST Level Order Traversal",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-binary-trees"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "Tutorials",
+                    "children": [
+                        {
+                            "name": "Thirty Days of Code",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "tags": [
+        ""
+    ]
+}
