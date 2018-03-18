@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "D14 Scope",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-scope"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "Tutorials",
+                    "children": [
+                        {
+                            "name": "Thirty Days of Code",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "tags": [
+        ""
+    ]
+}

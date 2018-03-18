@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "D16 Exceptions String To Integer",
+    "origin": {
+        "name": "HackerRank",
+        "link": "https://www.hackerrank.com/challenges/30-exceptions-string-to-integer"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Tracks",
+            "children": [
+                {
+                    "name": "Tutorials",
+                    "children": [
+                        {
+                            "name": "Thirty Days of Code",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "tags": [
+        ""
+    ]
+}
