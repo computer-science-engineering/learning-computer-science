@@ -12,14 +12,14 @@ public class Solution {
     }
     
     public static TreeNode sortedArrayToBST(final List<Integer> a) {
-        if (a == null || a.size() ==0){
+        if (a == null || a.size() ==0) {
             return null;
         }
         return getTreeNode(a, 0, a.size()-1);
     }
     
-    private static TreeNode getTreeNode(List<Integer> nums, int start, int end){
-        if (start > end){
+    private static TreeNode getTreeNode(List<Integer> nums, int start, int end) {
+        if (start > end) {
             return null;
         }
         int middle = start + (end-start)/2;
