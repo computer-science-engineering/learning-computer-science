@@ -22,3 +22,4 @@ Return:
 ## Notes
 
 1. [LeetCode discussion](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/discuss/34782/My-recursive-Java-code-with-O(n)-time-and-O(n)-space)
+1. [YT - Easy Engineering Classes - Construction of Binary Tree from PostOrder and InOrder Traversal](https://www.youtube.com/watch?v=IVlCn-DNO5k)
