@@ -19,7 +19,7 @@ public class Solution {
         for (int i=0; i<A.length; ++i) {
             hm.put(A[i], i);
         }
-        return buildTreePostIn(A, 0, A.length-1, B, 0, B.length-1,hm);
+        return buildTreePostIn(A, 0, A.length-1, B, 0, B.length-1, hm);
     }
 
     private static TreeNode buildTreePostIn(int[] inorder, int is, int ie, int[] postorder, int ps, int pe, HashMap<Integer,Integer> hm) {
