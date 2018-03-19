@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Binary Tree From InOrder And PostOrder",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/binary-tree-from-inorder-and-postorder/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees",
+        ""
+    ],
+    "buckets": [
+        "Tree Construction"
+    ]
+}
