@@ -33,7 +33,7 @@ public class Solution {
         return 0;
     }
     
-    private static String cleanseString(String input){
+    private static String cleanseString(String input) {
         return input.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
     }
 }
