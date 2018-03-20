@@ -33,7 +33,7 @@ var global_filters_applied = false;
 
 var getJson = new Promise(function (resolve, reject) {
     "use strict";
-    //fetch('https://raw.githubusercontent.com/manastalukdar/learning_computer-science/gh-pages/problems_list.json', {mode: 'cors'})// uncomment for debugging
+    //fetch('https://raw.githubusercontent.com/manastalukdar/learning-computer-science/gh-pages/problems_list.json', {mode: 'cors'})// uncomment for debugging
     fetch('problems_list.json', {mode: 'no-cors'})
         .then((res) => res.json())
         .then((json_data) => resolve(json_data));
@@ -131,7 +131,7 @@ function adaptJsonData(json_data) {
         json_data.forEach(function (element) {
             if (element.hasOwnProperty(global_problem_name_string) && element.hasOwnProperty(global_problem_link_string)) {
                 var problem_name = element.Name;
-                var link = "https://github.com/manastalukdar/learning_computer-science/tree/master/" + element.Link;
+                var link = "https://github.com/manastalukdar/learning-computer-science/tree/master/" + element.Link;
                 element.Name = "<a href=\"" + link + "\" target=\"_blank\">" + problem_name + "</a>";
                 delete element.Link;
             }
