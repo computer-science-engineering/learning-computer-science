@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Kth Smallest Element In Tree",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/kth-smallest-element-in-tree/"
+    },
+    "companies": [
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees",
+        ""
+    ],
+    "buckets": [
+        "BST Traversal"
+    ]
+}
