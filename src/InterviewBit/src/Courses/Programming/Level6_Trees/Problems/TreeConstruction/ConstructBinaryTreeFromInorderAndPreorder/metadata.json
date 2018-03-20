@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Construct Binary Tree From InOrder And PreOrder",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/construct-binary-tree-from-inorder-and-preorder/"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees",
+        ""
+    ],
+    "buckets": [
+        "Tree Construction"
+    ]
+}
