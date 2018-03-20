@@ -14,6 +14,9 @@
 | N/A | Codecov | Code coverage using Circle CI | [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science) |
 | N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning-computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/35)|
 
+<!-- waffle
+ZenHub -->
+
 ## Project Management
 
 [GitHub Projects](https://github.com/manastalukdar/learning-computer-science/projects)
