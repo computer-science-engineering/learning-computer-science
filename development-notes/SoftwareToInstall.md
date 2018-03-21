@@ -343,7 +343,7 @@
 ### 2.3 Linux only
 
 - 7zip
-- [Stacer]https://github.com/oguzhaninan/Stacer
+- [Stacer](https://github.com/oguzhaninan/Stacer)
 - [Sublime Text](http://www.omgubuntu.co.uk/2017/05/how-to-install-sublime-text-ubuntu-linux)
 
 ## Linux related
