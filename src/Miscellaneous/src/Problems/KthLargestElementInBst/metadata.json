@@ -6,8 +6,7 @@
         "link": ""
     },
     "companies": [
-        "Aruba Networks",
-        ""
+        "Aruba Networks"
     ],
     "categories": [
         {
@@ -16,6 +15,6 @@
         }
     ],
     "tags": [
-        "Binary Tree"
+        "Binary Search Tree"
     ]
 }
