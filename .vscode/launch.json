@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.BstTraversal.TwoSumBinaryTree.Java.Solution",
+            "mainClass": "InterviewCake.src.Questions.SecondLargestItemInBst.Java.Solution",
             "args": "",
         },
         {
