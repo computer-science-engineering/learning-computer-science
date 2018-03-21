@@ -1,5 +1,3 @@
-/*https://leetcode.com/problems/two-sum*/
-
 package LeetCode.src.Problems.Algorithms.TwoSum.Java;
 
 import java.util.HashMap;

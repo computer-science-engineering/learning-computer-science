@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewCake.src.Questions.SecondLargestItemInBst.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.Algorithms.TwoSum.Java.Solution",
             "args": "",
         },
         {
