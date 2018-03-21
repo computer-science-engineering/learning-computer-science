@@ -5,10 +5,7 @@
         "name": "InterviewCake",
         "link": "www.interviewcake.com/question/java/second-largest-item-in-bst"
     },
-    "companies": [
-        "",
-        ""
-    ],
+    "companies": [],
     "categories": [
         {
             "name": "Questions",
@@ -16,11 +13,7 @@
         }
     ],
     "tags": [
-        "",
-        ""
+        "Binary Search Tree"
     ],
-    "buckets": [
-        "",
-        ""
-    ]
+    "buckets": []
 }
