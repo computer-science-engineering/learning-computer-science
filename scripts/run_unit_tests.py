@@ -2,6 +2,7 @@ import os
 import unittest
 import traceback
 import sys
+import re
 
 def runTests():
     lsPaths = []
@@ -18,16 +19,25 @@ def runTests():
 
     #loop through subdirectories and run individually
     for path in lsPaths:
-      sys.path.append(path)
-      loader = unittest.TestLoader()
-      suite = unittest.TestSuite()
-      suite = loader.discover(path)
-      testresult = unittest.TextTestRunner().run(suite)
-      sys.path.remove(path)
-      sys.modules.pop("test_solution")
-      sys.modules.pop("solution")
-      if len(testresult.failures) > 0 or len(testresult.errors) > 0:
-          raise Exception()
+        sys.path.append(path)
+        loader = unittest.TestLoader()
+        suite = unittest.TestSuite()
+        suite = loader.discover(path)
+        testresult = unittest.TextTestRunner().run(suite)
+        sys.path.remove(path)
+        solution_test_keys = []
+        solution_keys = []
+        for key in sys.modules:
+            if re.match(r'(test_solution)', key):
+                solution_test_keys.append(key)
+            if re.match(r'(solution)', key):
+                solution_keys.append(key)
+        for solution_test_key in solution_test_keys:
+            sys.modules.pop(solution_test_key)
+        for solution_key in solution_keys:
+            sys.modules.pop(solution_key)
+        if len(testresult.failures) > 0 or len(testresult.errors) > 0:
+            raise Exception()
 
 def main():
     """main method."""
