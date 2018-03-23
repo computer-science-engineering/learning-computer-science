@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "BST Iterator",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/bst-iterator/"
+    },
+    "companies": [
+        "Apple",
+        "Amazon",
+        "Facebook"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "BST Traversal"
+    ]
+}

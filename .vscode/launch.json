@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "CrackingTheCodingInterview.src.Book.IX_InterviewQuestions.DataStructures.Ch01_ArraysAndStrings.Q4_PalindromePermutation.Java.Solution3",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.BstTraversal.BstIterator.Java.Solution",
             "args": "",
         },
         {

@@ -92,7 +92,6 @@ Our first thought might be, "it's simply the parent of the largest element!" Tha
 But what if the largest element itself has a left subtree?
 
 ```text
-
 .        ( 5 )
         /     \
       (3)     (8)
