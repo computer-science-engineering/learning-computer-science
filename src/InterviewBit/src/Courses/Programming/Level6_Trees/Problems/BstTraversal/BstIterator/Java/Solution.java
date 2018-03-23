@@ -68,7 +68,7 @@ public class Solution {
     }
 
     private void fillStack(TreeNode root) {
-        while(root != null){
+        while(root != null) {
             stack.push(root);
             root = root.left;
         }
