@@ -336,6 +336,8 @@
 - ImageGlass
 - Adobe Photoshop
 - Nodepad3
+- Hyper.is
+- cmder
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
