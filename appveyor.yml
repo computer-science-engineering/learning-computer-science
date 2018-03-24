@@ -11,7 +11,7 @@ image:
 - Ubuntu
 
 # todo: https://github.com/appveyor/ci/issues/2160
-stack: node 9, jdk 9, python 3.6
+stack: node 9, jdk 8, python 3.6
 
 install:
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
