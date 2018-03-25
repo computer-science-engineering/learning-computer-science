@@ -1,4 +1,4 @@
-## Issue #
+## Issue
 
 ## List of proposed changes/fixes
 

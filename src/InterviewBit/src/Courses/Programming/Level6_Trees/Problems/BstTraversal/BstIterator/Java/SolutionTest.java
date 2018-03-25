@@ -15,7 +15,7 @@ public class SolutionTest {
     public void setUp() throws Exception {
         TreeNode a = new TreeNode(5);
         TreeNode b1 = new TreeNode(3);
-        TreeNode b2 = new TreeNode(10);
+        TreeNode b2 = new TreeNode(8);
         
         TreeNode c1 = new TreeNode(1);
         TreeNode c2 = new TreeNode(4);
@@ -58,7 +58,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         assertTimeout(Duration.ofMillis(500), () -> {
-            int[] expected = { 1, 3, 4, 5, 7, 10, 9, 10, 11, 12 };
+            int[] expected = { 1, 3, 4, 5, 7, 8, 9, 10, 11, 12 };
             int[] actual = new int[10];
             int i = 0;
             while (solution.hasNext()) {
