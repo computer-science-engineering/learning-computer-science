@@ -18,7 +18,7 @@ public class Solution {
     public static void main(String[] args) {
         TreeNode a = new TreeNode(5);
         TreeNode b1 = new TreeNode(3);
-        TreeNode b2 = new TreeNode(10);
+        TreeNode b2 = new TreeNode(8);
         
         TreeNode c1 = new TreeNode(1);
         TreeNode c2 = new TreeNode(4);
