@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "Recover Binary Search Tree",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/recover-binary-search-tree/"
+    },
+    "companies": [
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "BST Traversal"
+    ]
+}
