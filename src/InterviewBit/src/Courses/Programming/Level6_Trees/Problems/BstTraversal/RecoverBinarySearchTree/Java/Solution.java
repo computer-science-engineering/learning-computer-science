@@ -22,7 +22,7 @@ public class Solution {
     private TreeNode second; 
     private TreeNode pre; 
  
-    private void inorder(TreeNode root){
+    private void inorder(TreeNode root) {
         if(root == null) {
             return;
         }
