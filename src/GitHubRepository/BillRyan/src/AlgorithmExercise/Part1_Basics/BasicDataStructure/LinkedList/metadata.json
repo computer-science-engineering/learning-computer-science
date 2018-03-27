@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "Linked List",
+    "origin": {
+        "name": "GitHub Repository",
+        "link": "https://github.com/billryan/algorithm-exercise"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "GitHub repo",
+            "children": [  
+                {              
+                    "name": "billryan - yuanbin",
+                    "children": [  
+                        {              
+                            "name": "Algorithm Exercise",
+                            "children": []
+                        }
+                    ] 
+                }
+            ] 
+        }
+    ],
+    "tags": [
+        "Linked List"
+    ]
+}
