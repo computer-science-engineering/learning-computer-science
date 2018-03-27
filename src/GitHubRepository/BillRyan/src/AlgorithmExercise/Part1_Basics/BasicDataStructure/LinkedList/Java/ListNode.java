@@ -1,4 +1,4 @@
-package BillRyan.src.AlgorithmExercise.Part1_Basics.BasicDataStructure.LinkedList.Java;
+package GitHubRepository.BillRyan.src.AlgorithmExercise.Part1_Basics.BasicDataStructure.LinkedList.Java;
 
 class ListNode {
     public int val;

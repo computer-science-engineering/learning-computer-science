@@ -1,4 +1,4 @@
-package BillRyan.src.AlgorithmExercise.Part1_Basics.BasicDataStructure.BinaryTree.Java;
+package GitHubRepository.BillRyan.src.AlgorithmExercise.Part1_Basics.BasicDataStructure.BinaryTree.Java;
 
 class TreeNode {
     public int val;
