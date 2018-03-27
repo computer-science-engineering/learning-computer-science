@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.InPlaceChange.InvertTheBinaryTree.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.LevelOrder.ZigZagLevelOrderTraversalBt.Java.Solution",
             "args": "",
         },
         {
