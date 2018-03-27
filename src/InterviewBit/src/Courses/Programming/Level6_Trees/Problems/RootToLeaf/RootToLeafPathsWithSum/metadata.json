@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Root to Leaf Paths With Sum",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/root-to-leaf-paths-with-sum/"
+    },
+    "companies": [
+        "Microsoft",
+        "Yahoo",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "Root to Leaf"
+    ]
+}
