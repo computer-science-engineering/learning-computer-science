@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.TreeSearch.LeastCommonAncestor.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.LinkedListTree.FlattenBinaryTreeToLinkedList.Java.Solution",
             "args": "",
         },
         {
