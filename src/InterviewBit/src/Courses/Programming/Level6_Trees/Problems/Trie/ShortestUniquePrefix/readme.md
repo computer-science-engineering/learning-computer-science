@@ -55,3 +55,5 @@ dove = dov
                                                     Leaf
                                                     (zebra)
     ```
+
+1. [Trie - TopCoder](https://www.topcoder.com/community/data-science/data-science-tutorials/using-tries/)
