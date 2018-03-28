@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.LinkedListTree.FlattenBinaryTreeToLinkedList.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level6_Trees.Problems.IntervalTree.OrderOfPeopleHeights.Java.Solution",
             "args": "",
         },
         {

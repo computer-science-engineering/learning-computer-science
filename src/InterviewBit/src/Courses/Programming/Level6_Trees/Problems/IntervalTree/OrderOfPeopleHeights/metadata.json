@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "Order of People Heights",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/order-of-people-heights/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Trees"
+    ],
+    "buckets": [
+        "Interval Tree"
+    ]
+}
