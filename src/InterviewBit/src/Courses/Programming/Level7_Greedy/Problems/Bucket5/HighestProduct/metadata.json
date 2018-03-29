@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Highest Product",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/highest-product/"
+    },
+    "companies": [
+        "Coursera",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Greedy"
+    ],
+    "buckets": [
+        "Bucket 5"
+    ]
+}
