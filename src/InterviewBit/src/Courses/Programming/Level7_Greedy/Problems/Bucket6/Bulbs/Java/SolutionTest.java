@@ -41,4 +41,14 @@ public class SolutionTest {
             assertEquals(expected, actual);
         });
     }
+
+    @Test
+    public void TrivialCase2() {
+        ArrayList<Integer> A = new ArrayList<Integer>(Arrays.asList(1, 0, 1, 0));
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 3;
+            int actual = Solution.bulbs(A);
+            assertEquals(expected, actual);
+        });
+    }
 }
