@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] A = {5, 3, 2, 6, 1, 4};
-        int[] B = {0, 1, 2, 0, 3, 2};
+        int[] A = {7, 4, 7, 5, 6, 5}; //{5, 3, 2, 6, 1, 4};
+        int[] B = {0, 4, 1, 0, 1, 2}; //{0, 1, 2, 0, 3, 2};
         int[] result = order(A, B);
         for (int item : result) {
             System.out.print(item + " ");
@@ -25,6 +25,7 @@ public class Solution {
         //pick up the tallest guy first
         //when insert the next tall guy, just need to insert him into kth position
         //repeat until all people are inserted into list
+        // Note: this sorts by decreasing order
         Arrays.sort(people, new Comparator<int[]>() {
            @Override
            public int compare(int[] o1, int[] o2) {

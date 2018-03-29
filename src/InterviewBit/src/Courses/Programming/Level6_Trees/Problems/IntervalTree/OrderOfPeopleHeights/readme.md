@@ -38,3 +38,11 @@ You can do similar inference for other people in the list.
 1. [Amortized Minds](https://amortizedminds.wordpress.com/2016/08/25/order-of-people-height-interviewbit/)
 1. [LeetCode discussion - Line reconstruction by height](https://discuss.leetcode.com/topic/24320/line-reconstruction-by-height/2)
 1. [LeetCode discussion - Queue Reconstruction by Height - Easy concept with Python/C++/Java Solution](https://leetcode.com/problems/queue-reconstruction-by-height/discuss/89345/Easy-concept-with-PythonC++Java-Solution)
+    * Pick out tallest group of people and sort them in a subarray (S). Since there’s no other groups of people taller than them, therefore each guy’s index will be just as same as his k value.
+    * For 2nd tallest group (and the rest), insert each one of them into (S) by k value. So on and so forth.
+
+    E.g.
+    input: [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
+    subarray after step 1: [[7,0], [7,1]]
+    subarray after step 2: [[7,0], [6,1], [7,1]]
+    …
