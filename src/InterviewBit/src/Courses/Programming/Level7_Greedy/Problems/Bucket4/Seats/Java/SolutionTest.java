@@ -31,14 +31,14 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        String A = ". . . . x . . x x . . . x . .";
+        String A = "....x..xx...x..";
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 5;
             int actual_BruteForce = Solution.seats_BruteForce(A);
             assertEquals(expected, actual_BruteForce);
-            int actual1 = Solution.seats(A);
+            int actual1 = Solution.seats1(A);
             assertEquals(expected, actual1);
-            int actual2 = Solution.seats(A);
+            int actual2 = Solution.seats2(A);
             assertEquals(expected, actual2);
             int actual_Editorial = Solution.seats_Editorial(A);
             assertEquals(expected, actual_Editorial);

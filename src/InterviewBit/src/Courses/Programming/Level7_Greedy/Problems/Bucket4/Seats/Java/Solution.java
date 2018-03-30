@@ -7,12 +7,12 @@ public class Solution {
     public static void main(String[] args) {
         String A = "....x..xx...x..";
         System.out.println(seats_BruteForce(A));
-        System.out.println(seats(A));
+        System.out.println(seats1(A));
         System.out.println(seats2(A));
         System.out.println(seats_Editorial(A));
     }
 
-    public static int seats(String A) {
+    public static int seats1(String A) {
         int MOD = 10000003;
         char[] seats = A.toCharArray();
 
