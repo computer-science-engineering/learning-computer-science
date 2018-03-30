@@ -13,6 +13,8 @@
 | N/A | CodeBeat | Static code analysis | [![codebeat badge](https://codebeat.co/badges/882b6622-7bc2-4923-97b2-a053057d3a45)](https://codebeat.co/projects/github-com-manastalukdar-learning-computer-science-master) |
 | N/A | Codecov | Code coverage using Circle CI | [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science) |
 | N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning-computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/35)|
+| N/A | CII Best Practices | Open source software best practices check | [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1761/badge)](https://bestpractices.coreinfrastructure.org/projects/1761) |
+
 
 <!-- waffle
 ZenHub -->
