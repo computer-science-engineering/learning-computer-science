@@ -59,7 +59,7 @@ public class Solution {
     
     public static int seats2(String A) {
         int MOD = 10000003;
-        int ans = 0;
+        long ans = 0;
         int count = 0;
         int space = 0;
         int n = 0;
@@ -81,7 +81,7 @@ public class Solution {
                 space++;
             }
         }
-        return ans % MOD;
+        return (int) ans % MOD;
     }
 
     public static int seats_BruteForce(String A) {
@@ -123,14 +123,14 @@ public class Solution {
 	public static int seats_Editorial(String a) {
 	    int numLeft = 0;
 	    int numRight = 0;
-	    for (int i = 0; i < a.length(); ++i) {
+	    for (int i=0; i<a.length(); ++i) {
 	        if (a.charAt(i) == OCCUPIED) {
-	            ++numRight;
+	            ++numRight; // total number of "x"
 	        }
 	    }
 	    
 	    long moves = 0;
-	    for (int i = 0; i < a.length(); ++i) {
+	    for (int i=0; i<a.length(); ++i) {
 	        if (numRight == 0) {
 	            break;
 	        } else if (a.charAt(i) == OCCUPIED) {
