@@ -103,9 +103,9 @@ public class Solution {
             int hops=0, p = j;
 
             for (int i=0; i<n; i++) {
-            if (seats[i] == 'x') {
-                hops += Math.abs(i - p++);
-            }
+                if (seats[i] == 'x') {
+                    hops += Math.abs(i - p++);
+                }
             }
 
             min = Math.min(min, hops);
