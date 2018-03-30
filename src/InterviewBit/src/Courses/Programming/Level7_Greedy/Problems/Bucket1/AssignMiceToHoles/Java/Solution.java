@@ -13,8 +13,9 @@ public class Solution {
     
     // A - mice; B - holes
     public static int mice(ArrayList<Integer> A, ArrayList<Integer> B) {
-        if (A.size() != B.size())
+        if (A.size() != B.size()) {
            return -1;
+        }
  
         /* Sort the lists */
         Collections.sort(A);
