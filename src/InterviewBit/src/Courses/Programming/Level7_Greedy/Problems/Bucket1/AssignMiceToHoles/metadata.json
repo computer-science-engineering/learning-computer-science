@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "Assign Mice To Holes",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/assign-mice-to-holes/"
+    },
+    "companies": [
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Greedy"
+    ],
+    "buckets": [
+        "Bucket 1"
+    ]
+}
