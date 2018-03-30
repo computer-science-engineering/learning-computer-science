@@ -34,10 +34,14 @@ public class SolutionTest {
         String A = ". . . . x . . x x . . . x . .";
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 5;
+            int actual_BruteForce = Solution.seats_BruteForce(A);
+            assertEquals(expected, actual_BruteForce);
             int actual1 = Solution.seats(A);
             assertEquals(expected, actual1);
-            int actual2 = Solution.seats_BruteForce(A);
+            int actual2 = Solution.seats(A);
             assertEquals(expected, actual2);
+            int actual_Editorial = Solution.seats_Editorial(A);
+            assertEquals(expected, actual_Editorial);
         });
     }
 }
