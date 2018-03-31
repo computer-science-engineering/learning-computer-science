@@ -6,7 +6,7 @@ public class Solution {
     }
     
     public static int majorityElement(final int[] A) {
-        int count=0, ret = 0;
+        int count=0, ret=0;
         for (int num: A) {
             if (count==0) {
                 ret = num;
