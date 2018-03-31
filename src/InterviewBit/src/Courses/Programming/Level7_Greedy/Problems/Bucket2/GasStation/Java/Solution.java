@@ -58,11 +58,11 @@ public class Solution {
 	    int remaining = 0;
 	    int total = 0;
 	    int start = 0;
-	    for(int i = 0; i < A.length; i++){
+	    for(int i = 0; i < A.length; i++) {
 	        remaining = A[i] - B[i];
 	        if(currentFuel >= 0)
 	            currentFuel += remaining;
-	        else{
+	        else {
 	            currentFuel = remaining;
 	            start = i;
 	        }
