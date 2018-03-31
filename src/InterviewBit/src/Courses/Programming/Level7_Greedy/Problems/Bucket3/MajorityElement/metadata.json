@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Majority Element",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/majority-element/"
+    },
+    "companies": [
+        "Microsoft",
+        "Yahoo",
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Greedy"
+    ],
+    "buckets": [
+        "Bucket 3"
+    ]
+}
