@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level7_Greedy.Problems.Bucket3.MajorityElement.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level7_Greedy.Problems.Bucket2.GasStation.Java.Solution",
             "args": "",
         },
         {
