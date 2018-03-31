@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "Gas Station",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/gas-station/"
+    },
+    "companies": [
+        "Bloomberg",
+        "Google",
+        "DE Shaw",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Greedy"
+    ],
+    "buckets": [
+        "Bucket 2"
+    ]
+}
