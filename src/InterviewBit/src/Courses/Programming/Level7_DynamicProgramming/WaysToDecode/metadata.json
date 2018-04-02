@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Ways to Decode",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/ways-to-decode/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "Simple Array Dp"
+    ]
+}
