@@ -1,0 +1,31 @@
+{
+    "type": "Coding",
+    "name": "Min Jumps Array",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/min-jumps-array/"
+    },
+    "companies": [
+        "Amazon",
+        "ebay",
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "Greedy or Dp"
+    ]
+}
