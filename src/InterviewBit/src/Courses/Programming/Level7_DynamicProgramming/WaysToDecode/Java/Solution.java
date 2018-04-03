@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(numDecodings("12"));
+        System.out.println(numDecodings("123"));
     }
 
     public static int numDecodings(String A) {
-        if(A == null || A.length() == 0) {
+        if(A == null) {
             return 0;
         }
         int n = A.length();
