@@ -34,13 +34,12 @@ public class Solution {
     private int N;
     private String A;
     
-	public int numDecodings_Editorial(String A) {
-	    
-	    N = A.length();
-	    
+	public int numDecodings_Editorial(String A) {	    
 	    if (A == null) {
             return 0;
         }
+	    
+	    N = A.length();
 	        
 	    dp = new int[N];
 	    Arrays.fill(dp, -1);
