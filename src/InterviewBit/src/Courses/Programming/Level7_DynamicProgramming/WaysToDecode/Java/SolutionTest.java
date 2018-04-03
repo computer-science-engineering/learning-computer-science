@@ -40,4 +40,28 @@ public class SolutionTest {
             assertEquals(expected, actual_Editorial);
         });
     }
+
+    @Test
+    public void TrivialCase2() {
+        String input = "123";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 3;
+            int actual = Solution.numDecodings(input);
+            assertEquals(expected, actual);
+            int actual_Editorial = solution.numDecodings_Editorial(input);
+            assertEquals(expected, actual_Editorial);
+        });
+    }
+
+    @Test
+    public void SpecialCase1() {
+        String input = null;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 0;
+            int actual = Solution.numDecodings(input);
+            assertEquals(expected, actual);
+            int actual_Editorial = solution.numDecodings_Editorial(input);
+            assertEquals(expected, actual_Editorial);
+        });
+    }
 }
