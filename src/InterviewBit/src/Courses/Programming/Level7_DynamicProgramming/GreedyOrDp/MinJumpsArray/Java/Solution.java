@@ -2,7 +2,7 @@ package InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.GreedyOrD
 
 public class Solution {
     public static void main(String[] args) {
-        int[] A = {0};
+        int[] A = {2,3,1,1,4};
         System.out.println(jump(A));  
         System.out.println(jump_Editorial(A));        
     }

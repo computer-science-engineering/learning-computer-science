@@ -18,3 +18,4 @@ If it is not possible to reach the end index, return `-1`.
 ## Notes
 
 1. [Geeks for Geeks - Minimum number of jumps to reach end](https://www.geeksforgeeks.org/minimum-number-of-jumps-to-reach-end-of-a-given-array/)
+1. [Geeks for Geeks - Minimum number of jumps to reach end | Set 2 (O(n) solution)](https://www.geeksforgeeks.org/minimum-number-jumps-reach-endset-2on-solution/)
