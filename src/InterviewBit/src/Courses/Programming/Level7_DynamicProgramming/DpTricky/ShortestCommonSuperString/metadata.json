@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "Shortest Common SuperString",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/shortest-common-superstring/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "Dp Tricky"
+    ]
+}

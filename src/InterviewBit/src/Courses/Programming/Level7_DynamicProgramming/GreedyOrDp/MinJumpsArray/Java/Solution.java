@@ -4,6 +4,7 @@ public class Solution {
     public static void main(String[] args) {
         int[] A = {2,3,1,1,4};
         System.out.println(jump(A));  
+        System.out.println(jump_optimized(A));    
         System.out.println(jump_Editorial(A));        
     }
     
@@ -39,6 +40,55 @@ public class Solution {
             }
         }
         return jumps[n-1];
+    }
+
+    static int jump_optimized(int[] A) {
+        if (A.length <= 1) {
+            return 0;
+        }
+ 
+        // Return -1 if not possible to jump
+        if (A[0] == 0) {
+            return -1;
+        }
+ 
+        // initialization
+        int maxReach = A[0];
+        int step = A[0];
+        int jump = 1;
+ 
+ 
+        // Start traversing array
+        for (int i = 1; i < A.length; i++) {
+            // Check if we have reached the end of the array
+            if (i == A.length - 1) {
+                return jump;
+            }
+ 
+            // updating maxReach
+            maxReach = Math.max(maxReach, i+A[i]);
+ 
+            // we use a step to get to the current index
+            step--;
+ 
+            // If no further steps left
+            if (step == 0) {
+                //  we must have used a jump
+                jump++;
+                  
+                // Check if the current index/position  or lesser index
+                // is the maximum reach point from the previous indexes
+                if(i>=maxReach) {
+                   return -1;
+                }
+ 
+                // re-initialize the steps to the amount
+                // of steps to reach maxReach from position i.
+                step = maxReach - i;
+            }
+        }
+ 
+        return -1;
     }
 
     public static int jump_Editorial(int[] A) {	    

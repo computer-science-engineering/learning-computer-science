@@ -36,6 +36,8 @@ public class SolutionTest {
             int expected = 2;
             int actual = Solution.jump(A);
             assertEquals(expected, actual);
+            int actual_optimized = Solution.jump_optimized(A);
+            assertEquals(expected, actual_optimized);
             int actual_Editorial = Solution.jump(A);
             assertEquals(expected, actual_Editorial);
         });
@@ -48,6 +50,8 @@ public class SolutionTest {
             int expected = 0;
             int actual = Solution.jump(A);
             assertEquals(expected, actual);
+            int actual_optimized = Solution.jump_optimized(A);
+            assertEquals(expected, actual_optimized);
             int actual_Editorial = Solution.jump(A);
             assertEquals(expected, actual_Editorial);
         });
@@ -60,6 +64,8 @@ public class SolutionTest {
             int expected = -1;
             int actual = Solution.jump(A);
             assertEquals(expected, actual);
+            int actual_optimized = Solution.jump_optimized(A);
+            assertEquals(expected, actual_optimized);
             int actual_Editorial = Solution.jump(A);
             assertEquals(expected, actual_Editorial);
         });
