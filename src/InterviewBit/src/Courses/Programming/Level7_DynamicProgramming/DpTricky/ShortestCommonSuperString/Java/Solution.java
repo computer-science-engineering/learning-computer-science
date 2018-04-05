@@ -30,7 +30,7 @@ public class Solution {
                 for (int j = i + 1; j < len; j++) {
                     String curStr = findOverlap(arrStr[i], arrStr[j]);
                     int overlapCur = - curStr.length() + arrStr[i].length() + arrStr[j].length();
-                    //System.out.println(i + " " + j + " " + curStr);
+                    System.out.println(i + "->" + arrStr[i] + " " + j + "->" + arrStr[j] + " =>" + curStr);
                     if (overlapMax < overlapCur) {
                         overlapMax = overlapCur;
                         resStr = curStr;
