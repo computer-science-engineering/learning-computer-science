@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.GreedyOrDp.MinJumpsArray.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.DpTricky.ShortestCommonSuperString.Java.Solution",
             "args": "",
         },
         {
