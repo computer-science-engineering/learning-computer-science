@@ -3,6 +3,9 @@ package InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.DpTricky.
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,11 +34,11 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        ArrayList<String> A = new ArrayList<String>(Arrays.asList("abcd", "cdef", "fgh", "de"));
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 10;
+            int actual = Solution.solve(A);
+            assertEquals(expected, actual);
         });
     }
 }
