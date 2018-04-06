@@ -16,7 +16,7 @@ public class Solution {
         for (int i = 0; i < A.length; ++i) {
             if (A[i] > soFarMin) {
                 max = Math.max(max, A[i] - soFarMin);
-            } else{
+            } else {
                soFarMin = A[i];  
             }
         }	     
