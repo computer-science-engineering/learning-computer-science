@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Best Time to Buy and Sell Stock 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-ii/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "Ad Hoc"
+    ]
+}
