@@ -46,10 +46,11 @@ average of second part elements is (1 + 7 + 11 + 29) / 4 = 12
 
 Lets try to simplify the problem.
 
-Lets assume the two sets are set1 and set2.
+Lets assume the two sets are `set1` and `set2`.
 
-Assume sum of set1 = Sum_of_Set1, with size = size_of_set1.
-Assume sum of set2 = Sum_of_Set2, with size = size_of_set2
+Assume `sum of set1 = Sum_of_Set1`, with `size = size_of_set1`.
+
+Assume `sum of set2 = Sum_of_Set2`, with `size = size_of_set2`
 
 ```text
  SUM_of_Set1 / size_of_set1 = SUM_of_Set2 / size_of_set2
@@ -66,13 +67,10 @@ Assume sum of set2 = Sum_of_Set2, with size = size_of_set2
   Sum_of_Set1 / size_of_set1 = total_sum / total_size
 ```
 
-Note that you need the solution with minimum size_of_set1 if multiple solutions exist. 
-So, just iterate on size_of_set1. 
-Based on size_of_set1, you can determine the value of Sum_of_Set1. 
-Now, the problem reduces to
+Note that you need the solution with minimum `size_of_set1` if multiple solutions exist. So, just iterate on `size_of_set1`. Based on `size_of_set1`, you can determine the value of `Sum_of_Set1`. Now, the problem reduces to
 
 ```text
-Can I select size_of_set1 values from the array whose sum is Sum_of_Set1/current_sum?
+Can I select size_of_set1 values from the array whose sum is Sum_of_Set1 (i.e., current_sum)?
 ```
 
 Lets define our function as `isPossible(ind, current_sum, current_size)` which returns true if it is possible to use elements with `index >= ind` to construct a set of size `current_size` whose sum is `current_sum`.
