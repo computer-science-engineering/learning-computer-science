@@ -9,15 +9,15 @@ public class Solution {
     
     public static int maxProfit(final int[] A) {
         if (A.length == 0) {
-            return 0 ;
+            return 0;
         }		
         int max = 0 ;
-        int sofarMin = A[0] ;
-        for (int i = 0 ; i < A.length ; ++i) {
-            if (A[i] > sofarMin) {
-                max = Math.max(max, A[i] - sofarMin) ;
+        int soFarMin = A[0] ;
+        for (int i = 0; i < A.length; ++i) {
+            if (A[i] > soFarMin) {
+                max = Math.max(max, A[i] - soFarMin);
             } else{
-               sofarMin = A[i];  
+               soFarMin = A[i];  
             }
         }	     
        return  max;
