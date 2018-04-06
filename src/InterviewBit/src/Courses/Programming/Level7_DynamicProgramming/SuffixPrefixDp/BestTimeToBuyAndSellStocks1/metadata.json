@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Best Time to Buy and Sell Stocks 1",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-i/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "Suffix Prefix Dp"
+    ]
+}
