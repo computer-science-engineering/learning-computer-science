@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.DpTricky.ShortestCommonSuperString.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.DpTricky.BestTimeToBuyAndSellStocks3.Java.Solution",
             "args": "",
         },
         {

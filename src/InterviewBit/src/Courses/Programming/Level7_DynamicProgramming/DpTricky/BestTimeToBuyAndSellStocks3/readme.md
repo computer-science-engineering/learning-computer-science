@@ -8,7 +8,7 @@ Design an algorithm to find the maximum profit. You may complete at most two tra
 
 Note: You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
 
-**Example :**
+**Example:**
 
 ```text
 Input : [1 2 1 2]
@@ -28,7 +28,8 @@ Explanation :
     Formula is
         maxDiff = max(maxDiff, T[i-1][j-1] - prices[j-1])
         T[i][j] = max(T[i][j-1], prices[j] + maxDiff)
-    or
+    or   // used for next turn
         T[i][j] = max(T[i][j-1], prices[j] + maxDiff)
-        maxDiff = max(maxDiff, T[i-1][j] - prices[j])  // used for next turn
+        maxDiff = max(maxDiff, T[i-1][j] - prices[j])
+1. [GitHub - Tushar Roy](https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/StockBuySellKTransactions.java)
 1. [YT Video - Geeks for Geeks - Stock Buy Sell to Maximize Profit](https://www.youtube.com/watch?v=JaosdXkUWTs)
