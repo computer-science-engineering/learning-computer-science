@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Palindrome Partitioning 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/palindrome-partitioning-ii/"
+    },
+    "companies": [
+        "Amazon",
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "Breaking Words"
+    ]
+}
