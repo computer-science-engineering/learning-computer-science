@@ -36,6 +36,20 @@ public class SolutionTest {
             int expected = 1;
             int actual = Solution.minCut(input);
             assertEquals(expected, actual);
+            int actual2 = Solution.minCut2(input);
+            assertEquals(expected, actual2);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        String input = "abcbm";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 2;
+            int actual = Solution.minCut(input);
+            assertEquals(expected, actual);
+            int actual2 = Solution.minCut2(input);
+            assertEquals(expected, actual2);
         });
     }
 }
