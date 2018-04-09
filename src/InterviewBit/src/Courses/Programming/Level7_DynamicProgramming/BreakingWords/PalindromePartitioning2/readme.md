@@ -45,3 +45,6 @@ Return `1` since the palindrome partitioning `["aa","b"]` could be produced usin
     This palindrome can then be represented as s[i-j, i+j]. If this string is indeed a palindrome, then one possible value of cut[i+j] is cut[i-j] + 1, where cut[i-j] corresponds to s[0, i-j-1] and 1 correspond to the palindrome s[i-j, i+j];
 
     When the loops finish, you’ll get the answer at cut[s.length]
+
+1. [YT Video - Tushar Roy - Palindrome Partition Dynamic Programming](https://www.youtube.com/watch?v=lDYIvtBVmgo)
+1. [GitHub - Tushar Roy](https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/PalindromePartition.java)
