@@ -38,7 +38,7 @@ public class Solution {
             }
             String newWord = s.substring(start, i + 1);
             List<List<String>> result = partitionUtil(s, dp, i + 1);
-            for (List l : result) {
+            for (List<String> l : result) {
                 List<String> l1 = new ArrayList<>();
                 l1.add(newWord);
                 l1.addAll(l);
