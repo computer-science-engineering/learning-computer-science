@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "1. Two Sum",
+    "name": "131. Palindrome Partitioning",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/problems/two-sum"
+        "link": "https://leetcode.com/problems/palindrome-partitioning/description/"
     },
     "companies": [
         ""
@@ -22,14 +22,16 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Easy",
+                    "name": "Medium",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Array",
-        "Hash Table"
+        "Backtracking"
+    ],
+    "buckets": [
+        ""
     ]
 }
