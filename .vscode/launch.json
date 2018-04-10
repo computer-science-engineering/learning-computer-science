@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.Algorithms.PalindromePartitioning.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.TreeDp.MaxSumPathInBinaryTree.Java.Solution",
             "args": "",
         },
         {
