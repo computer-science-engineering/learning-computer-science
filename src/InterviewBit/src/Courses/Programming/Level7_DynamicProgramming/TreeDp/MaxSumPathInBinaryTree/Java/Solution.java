@@ -19,8 +19,7 @@ public class Solution {
 
     // This function returns overall maximum path sum in 'res'
     // And returns max path sum going through root.
-    private static int findMaxUtil(TreeNode node) {
- 
+    private static int findMaxUtil(TreeNode node) { 
         // Base Case
         if (node == null) {
             return 0;
