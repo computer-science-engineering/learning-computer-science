@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Max Sum Path In Binary Tree",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/"
+    },
+    "companies": [
+        "Directi",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "Tree Dp"
+    ]
+}
