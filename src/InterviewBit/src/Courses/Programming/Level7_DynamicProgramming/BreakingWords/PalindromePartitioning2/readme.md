@@ -47,4 +47,12 @@ Return `1` since the palindrome partitioning `["aa","b"]` could be produced usin
     When the loops finish, you’ll get the answer at cut[s.length]
 
 1. [YT Video - Tushar Roy - Palindrome Partition Dynamic Programming](https://www.youtube.com/watch?v=lDYIvtBVmgo)
+
+    ```text
+    if isPalindrome(i, j)
+      T[i][j] = 0;
+    else
+      T[i][j] = 1 + min(T[i][k] + T[k+1][j]) ; where k = i,..,j-1.
+    ```
+
 1. [GitHub - Tushar Roy](https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/PalindromePartition.java)
