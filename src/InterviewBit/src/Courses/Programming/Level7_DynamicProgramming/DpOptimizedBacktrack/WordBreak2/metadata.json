@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Word Break 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/word-break-ii/"
+    },
+    "companies": [
+        "IBM",
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "Dp Optimized Backtrack"
+    ]
+}
