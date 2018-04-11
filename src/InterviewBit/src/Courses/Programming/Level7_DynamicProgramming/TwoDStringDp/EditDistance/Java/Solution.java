@@ -25,11 +25,6 @@ public class Solution {
                     cost[i + 1][j + 1] = cost[i][j];
                 }
                 else {
-                    // int a = cost[i][j];
-                    // int b = cost[i][j + 1];
-                    // int c = cost[i + 1][j];
-                    // cost[i + 1][j + 1] = a < b ? (a < c ? a : c) : (b < c ? b : c);
-                    // cost[i + 1][j + 1]++;
                     int replace = cost[i][j];
                     int delete = cost[i][j + 1];
                     int insert = cost[i + 1][j];
