@@ -36,6 +36,10 @@ public class SolutionTest {
             int expected = 5;
             int actual_recursive = Solution.numTrees_recursive(input);
             assertEquals(expected, actual_recursive);
+            int actual = Solution.numTrees(input);
+            assertEquals(expected, actual);
+            int actual_Editorial = Solution.numTrees_Editorial(input);
+            assertEquals(expected, actual_Editorial);
         });
     }
 }
