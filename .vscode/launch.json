@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level8_Graphs.Problems.Bfs.LevelOrder.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level8_Graphs.Problems.GraphConnectivity.CaptureRegionsOnBoard.Java.Solution",
             "args": "",
         },
         {
