@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Unique Binary Search Trees 2",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/unique-binary-search-trees-ii/"
+    },
+    "companies": [
+        "Amazon",
+        "Twitter",
+        "Samsung"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "Multiple Dp"
+    ]
+}
