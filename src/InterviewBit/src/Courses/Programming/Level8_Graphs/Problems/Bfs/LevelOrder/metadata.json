@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Level   Order",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/level-order/"
+    },
+    "companies": [
+        "Facebook",
+        "Groupon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Graphs"
+    ],
+    "buckets": [
+        "Bfs",
+        "Graph Traversal"
+    ]
+}
