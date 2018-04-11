@@ -37,7 +37,7 @@ public class SolutionTest {
         String A = "catsanddog";
         ArrayList<String> B = new ArrayList<String>(Arrays.asList("cat", "cats", "and", "sand", "dog"));
         assertTimeout(Duration.ofMillis(500), () -> {
-            ArrayList<String> expected = new ArrayList<String>(Arrays.asList("cats and dog", "cat sand dog"));
+            ArrayList<String> expected = new ArrayList<String>(Arrays.asList("cat sand dog", "cats and dog"));
             ArrayList<String> actual = Solution.wordBreak(A, B);
             assertEquals(expected, actual);
         });
