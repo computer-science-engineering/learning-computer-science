@@ -1,13 +1,12 @@
 {
     "type": "Coding",
-    "name": "Max Rectangle In Binary Matrix",
+    "name": "Unique Paths in a Grid",
     "origin": {
         "name": "InterviewBit",
-        "link": "https://www.interviewbit.com/problems/max-rectangle-in-binary-matrix/"
+        "link": "https://www.interviewbit.com/problems/unique-paths-in-a-grid/"
     },
     "companies": [
-        "Google",
-        "Microsoft"
+        "Facebook"
     ],
     "categories": [
         {
@@ -24,7 +23,6 @@
         "Dynamic Programming"
     ],
     "buckets": [
-        "PreProcess Dp",
         "Matrix Dp"
     ]
 }
