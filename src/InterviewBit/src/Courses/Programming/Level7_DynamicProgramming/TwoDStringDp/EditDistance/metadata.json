@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Edit Distance",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/edit-distance/"
+    },
+    "companies": [
+        "Google",
+        "LinkedIn",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        "2d String Dp"
+    ]
+}
