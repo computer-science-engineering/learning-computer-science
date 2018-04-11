@@ -28,6 +28,7 @@ If given P is `[-1, 0, 0, 0, 3]`, then node `0` is the root and the whole tree l
 1. [GitHub - lazyverve](https://github.com/lazyverve/CodingPratice/blob/9929fa42392d1904755b52a938d83ee57c0030fb/src/main/java/com/interviewbit/graphs/LargestDistanceBetweenNodesofATree.java)
 1. [GitHub - esarella](https://github.com/esarella/Graphs/blob/d5014e492d102de23763ff8a50b1c5cdf707aa61/src/Graphs/LargestDistanceBetweenNodesOfATree.java)
 1. [GitHub - fakemonk1](https://github.com/fakemonk1/DataStructures-And-Algorithms-IB/blob/27dc5443c14e212d2101f9c83797a214aafe2b0c/src/graphs/LargestDistanceBetweenNodesOfATree.java)
+1. [LeetCode discussion - Diameter of Binary Tree - Java Solution, MaxDepth](https://leetcode.com/problems/diameter-of-binary-tree/discuss/101132/Java-Solution-MaxDepth)
 
 ### Solution Approach
 
