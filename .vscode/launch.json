@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.PreProcessDp.MaxRectangleInBinaryMatrix.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.MultiplyDp.UniqueBinarySearchTrees2.Java.Solution",
             "args": "",
         },
         {
