@@ -23,3 +23,4 @@ Given `A = 3`, there are a total of 5 unique BST's.
     This problem can be solved by recursively forming left and right sub-trees. The different combinations of left and right sub-trees form the set of all unique binary search trees.
 
 1. [LeetCode discussion - Java Solution with DP](https://leetcode.com/problems/unique-binary-search-trees-ii/discuss/31493/Java-Solution-with-DP)
+1. [YT Video - IDeserve - Total number of unique binary search trees with values 1 to n](https://www.youtube.com/watch?v=JrTKVvYhT_k)
