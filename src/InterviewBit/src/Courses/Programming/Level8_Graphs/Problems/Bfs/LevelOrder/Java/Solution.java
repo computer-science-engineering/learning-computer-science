@@ -53,7 +53,9 @@ public class Solution {
 
     public static ArrayList<ArrayList<Integer>> levelOrder_Editorial(TreeNode a) {
 	    ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-	    if (a == null)  return res;
+	    if (a == null)  {
+            return res;
+        }
 	    
 	    Deque<TreeNode> queue = new ArrayDeque<TreeNode>();
 	    queue.offer(a);
