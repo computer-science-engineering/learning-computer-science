@@ -31,17 +31,17 @@ public class Solution {
             return true;
         }
 
-        if(row<0 || col<0||row>=board.length || col>=board[0].length) {
+        if(row<0 || col<0 || row>=board.length || col>=board[0].length) {
             return false;
         }
         char ch = word.charAt(index);
         if(ch == board[row][col]) { // "!visited[row][col] &&"
             //visited[row][col] = true;
 
-            boolean res = dfs(board,visited,row-1,col,index+1,word)
-            || dfs(board,visited,row+1,col,index+1,word)
-            || dfs(board,visited,row,col-1,index+1,word)
-            || dfs(board,visited,row,col+1,index+1,word);
+            boolean res = dfs(board, visited, row-1, col, index+1, word)
+                        || dfs(board, visited, row+1, col, index+1, word)
+                        || dfs(board, visited, row, col-1, index+1, word)
+                        || dfs(board, visited, row, col+1, index+1, word);
             
             //visited[row][col] = false;
             return res;
