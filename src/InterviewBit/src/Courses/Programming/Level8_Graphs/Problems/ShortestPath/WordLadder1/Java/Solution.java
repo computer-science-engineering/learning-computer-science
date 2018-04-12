@@ -25,8 +25,9 @@ public class Solution {
             String word = top.word;
             
             //if reached end word return number of steps till then
-            if(word.equals(end))
+            if(word.equals(end)) {
                 return top.numSteps;
+            }
             
             char[] arr = word.toCharArray();
             for(int i =0; i < arr.length; i++){
