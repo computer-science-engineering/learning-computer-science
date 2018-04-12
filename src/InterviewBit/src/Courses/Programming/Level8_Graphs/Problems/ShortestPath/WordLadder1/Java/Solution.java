@@ -20,7 +20,7 @@ public class Solution {
         queue.offer(new WordNode(start, 1));
         dictV.add(end);
         Set<String> set = new HashSet<String>(dictV);
-        while(!queue.isEmpty()){
+        while(!queue.isEmpty()) {
             WordNode top = queue.poll();
             String word = top.word;
             
@@ -38,7 +38,7 @@ public class Solution {
                     }
                     //For each character change compare the new word in dictionary
                     String newWord = new String(arr);
-                    if(set.contains(newWord)){
+                    if(set.contains(newWord)) {
                         queue.offer(new WordNode(newWord, top.numSteps + 1));
                         set.remove(newWord);
                     }
