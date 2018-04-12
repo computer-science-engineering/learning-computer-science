@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "Convert Sorted List to Binary Search Tree",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/convert-sorted-list-to-binary-search-tree/"
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Graphs"
+    ],
+    "buckets": [
+        "Graph AdHoc"
+    ]
+}
