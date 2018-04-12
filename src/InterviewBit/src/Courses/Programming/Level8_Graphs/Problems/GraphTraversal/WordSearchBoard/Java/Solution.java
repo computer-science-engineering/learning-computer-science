@@ -26,7 +26,7 @@ public class Solution {
         return 0;
     }
 
-    public static boolean dfs(char[][] board,boolean[][] visited,int row,int col,int index,String word){
+    public static boolean dfs(char[][] board, boolean[][] visited, int row, int col, int index, String word){
         if(word.length() == index){
             return true;
         }
