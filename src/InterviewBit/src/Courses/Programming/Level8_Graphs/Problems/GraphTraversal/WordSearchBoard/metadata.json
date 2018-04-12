@@ -1,0 +1,29 @@
+{
+    "type": "Coding",
+    "name": "Word Search Board",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/word-search-board/"
+    },
+    "companies": [
+        "Epic Systems",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Graphs"
+    ],
+    "buckets": [
+        "Graph Traversal"
+    ]
+}

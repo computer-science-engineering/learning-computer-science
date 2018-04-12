@@ -92,4 +92,3 @@ Let’s prove it by contradiction: assume there is a strictly longer path betwee
     This means that max(d(v, s), d(v, t)) >= d(s, t), which also contradicts assumption.
 
 Thus, we proved that farthest node of a node will be one of the endpoints of the longest path.
-
