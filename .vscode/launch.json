@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level8_Graphs.Problems.ShortestPath.WordLadder1.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level8_Graphs.Problems.ShortestPath.WordLadder2.Java.Solution",
             "args": "",
         },
         {

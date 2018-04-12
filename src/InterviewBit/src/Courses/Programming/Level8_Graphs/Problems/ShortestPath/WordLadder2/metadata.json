@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/word-ladder-ii/"
+    },
+    "companies": [
+        "Google",
+        "Microsoft",
+        "eBay"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Graphs"   
+    ],
+    "buckets": [
+        "Shortest Path"
+    ]
+}
