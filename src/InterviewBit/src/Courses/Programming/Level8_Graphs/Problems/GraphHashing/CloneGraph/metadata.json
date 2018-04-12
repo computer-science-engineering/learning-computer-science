@@ -1,0 +1,30 @@
+{
+    "type": "Coding",
+    "name": "Clone Graph",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/clone-graph/"
+    },
+    "companies": [
+        "Google",
+        "Facebook",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Graphs"
+    ],
+    "buckets": [
+        "Graph Hashing"
+    ]
+}
