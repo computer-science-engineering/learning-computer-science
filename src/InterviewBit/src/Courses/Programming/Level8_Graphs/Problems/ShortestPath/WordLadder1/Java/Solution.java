@@ -30,7 +30,7 @@ public class Solution {
             }
             
             char[] arr = word.toCharArray();
-            for(int i =0; i < arr.length; i++){
+            for(int i=0; i < arr.length; i++){
                 for(char c = 'a'; c <= 'z'; c++){
                     char temp = arr[i];
                     if(arr[i] != c) {
@@ -42,11 +42,9 @@ public class Solution {
                         queue.offer(new WordNode(newWord, top.numSteps + 1));
                         set.remove(newWord);
                     }
-                    arr[i] = temp;
-                    
+                    arr[i] = temp;                    
                 }
-            }
-            
+            }            
         }
                   
         return 0;
