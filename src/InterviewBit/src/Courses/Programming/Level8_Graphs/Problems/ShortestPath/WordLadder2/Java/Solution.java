@@ -41,7 +41,7 @@ public class Solution {
                 if(minStep == 0) {
                     minStep = top.numSteps;
                 }
-                if(top.numSteps == minStep && minStep != 0) {
+                if(top.numSteps == minStep && minStep != 0) { // Why do we even need this line? Should be an else.
                     ArrayList<String> t = new ArrayList<String>();
                     t.add(top.word);
                     while(top.pre != null) {
