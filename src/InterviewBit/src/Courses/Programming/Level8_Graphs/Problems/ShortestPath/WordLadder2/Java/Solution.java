@@ -30,7 +30,7 @@ public class Solution {
         
         int preNumSteps = 0;
         
-        while(!queue.isEmpty()){   
+        while(!queue.isEmpty()) {   
             //System.out.println("Queue : " + queue);
             WordNode top = queue.poll();
             //System.out.println("For Word : " + top.word);
