@@ -1,11 +1,11 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Examples.SpiralOrderMatrix1.Java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         List<ArrayList<Integer>> input = new ArrayList<ArrayList<Integer>>();
         input.add(new ArrayList<Integer>() { 
             private static final long serialVersionUID = 1L;
@@ -26,7 +26,6 @@ public class Solution {
                 add(6);
             }});
         ArrayList<Integer> result = spiralOrder(input);
-        scan.close();
         System.out.println(result);
     }
 
