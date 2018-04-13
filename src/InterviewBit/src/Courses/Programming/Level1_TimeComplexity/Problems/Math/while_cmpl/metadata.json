@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "while_cmpl",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/whilecmpl/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Time Complexity"
+    ],
+    "buckets": [
+        "Math"
+    ]
+}
