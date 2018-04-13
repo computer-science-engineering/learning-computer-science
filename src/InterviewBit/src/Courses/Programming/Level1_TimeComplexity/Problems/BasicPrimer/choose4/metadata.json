@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "choose4",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/choose4/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Time Complexity"
+    ],
+    "buckets": [
+        "Basic Primer"
+    ]
+}
