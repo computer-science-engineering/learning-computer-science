@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "choose3",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/choose3/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Time Complexity"
+    ],
+    "buckets": [
+        "Compare Functions"
+    ]
+}

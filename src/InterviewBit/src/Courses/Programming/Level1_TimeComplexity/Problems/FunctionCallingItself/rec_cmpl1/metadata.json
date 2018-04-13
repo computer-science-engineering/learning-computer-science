@@ -1,0 +1,28 @@
+{
+    "type": "Coding",
+    "name": "rec_cmpl1",
+    "origin": {
+        "name": "InterviewBit",
+        "link": "https://www.interviewbit.com/problems/reccmpl1/"
+    },
+    "companies": [
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Programming",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Time Complexity"
+    ],
+    "buckets": [
+        "Function Calling Itself"
+    ]
+}
