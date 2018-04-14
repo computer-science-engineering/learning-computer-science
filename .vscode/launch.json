@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Arrays.Primers.Array_impl1.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Arrays.Primers.ArrayBug.Java.Solution",
             "args": "",
         },
         {

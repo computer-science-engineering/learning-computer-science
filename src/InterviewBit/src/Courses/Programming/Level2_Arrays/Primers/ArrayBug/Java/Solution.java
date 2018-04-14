@@ -1,18 +1,9 @@
-/**
- * https://www.interviewbit.com/problems/arraybug/
- * rotate the array A by B positions.
- * So, for example,
- * A : [1 2 3 4 5 6]
- * B : 1
- * The output : [2 3 4 5 6 1]
-*/
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Primers.ArrayBug.Java;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Solution {
 	public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         ArrayList<Integer> input = new ArrayList<Integer>();
         input.add(7);
         input.add(2);
@@ -22,7 +13,6 @@ public class Solution {
         input.add(3);
         input.add(8);
         ArrayList<Integer> result = rotateArray(input, 10);
-        scan.close();
         System.out.println(result);
 	}	
 	
