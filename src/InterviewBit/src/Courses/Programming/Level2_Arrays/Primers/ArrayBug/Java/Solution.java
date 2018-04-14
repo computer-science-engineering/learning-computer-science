@@ -12,7 +12,7 @@ public class Solution {
         input.add(5);
         input.add(3);
         input.add(8);
-        ArrayList<Integer> result = rotateArray(input, 10);
+        ArrayList<Integer> result = rotateArray(input, 1);
         System.out.println(result);
 	}	
 	

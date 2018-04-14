@@ -155,13 +155,13 @@ tasks.withType(Test) {
         events TestLogEvent.FAILED,
                //TestLogEvent.PASSED,
                TestLogEvent.SKIPPED,
-               TestLogEvent.STANDARD_ERROR,
-               TestLogEvent.STANDARD_OUT
+               TestLogEvent.STANDARD_ERROR
+               //TestLogEvent.STANDARD_OUT
         exceptionFormat TestExceptionFormat.FULL
         showCauses true
         showExceptions true
         showStackTraces true
-        showStandardStreams true
+        //showStandardStreams true
 
         // set options for log level DEBUG and INFO
         debug {
