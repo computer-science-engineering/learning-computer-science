@@ -18,3 +18,5 @@ The output
 ```
 
 ## Notes
+
+1. [YT Video - Vivekanand Khyade - ROTATION of an array (REVERSAL Algorithm)](https://www.youtube.com/watch?v=EpP6YuqzHe8)
