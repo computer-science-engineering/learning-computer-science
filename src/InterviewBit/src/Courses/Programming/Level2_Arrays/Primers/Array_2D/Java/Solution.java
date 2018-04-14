@@ -1,10 +1,9 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Primers.Array_2D.Java;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         ArrayList<ArrayList<Integer>> input = new ArrayList<ArrayList<Integer>>();
         input.add(new ArrayList<Integer>() {
             private static final long serialVersionUID = 1L;
@@ -36,23 +35,22 @@ public class Solution {
                     System.out.print(B.get(i).get(j) + " ");
             }
         }
-        scan.close();
-        //System.out.println(result);
+        System.out.println(B);
     }
 
     public static ArrayList<ArrayList<Integer>> performOps(ArrayList<ArrayList<Integer>> A) {
-            ArrayList<ArrayList<Integer>> B = new ArrayList<ArrayList<Integer>>();
-            for (int i = 0; i < A.size(); i++) {
-                B.add(new ArrayList<Integer>());
-            
-                for (int j = 0; j < A.get(i).size(); j++) {
-                    B.get(i).add(0);
-                }
-
-                for (int j = 0; j < A.get(i).size(); j++) {
-                    B.get(i).set(A.get(i).size() - 1 - j, A.get(i).get(j));
-                }
+        ArrayList<ArrayList<Integer>> B = new ArrayList<ArrayList<Integer>>();
+        for (int i = 0; i < A.size(); i++) {
+            B.add(new ArrayList<Integer>());
+        
+            for (int j = 0; j < A.get(i).size(); j++) {
+                B.get(i).add(0);
             }
-            return B;
+
+            for (int j = 0; j < A.get(i).size(); j++) {
+                B.get(i).set(A.get(i).size() - 1 - j, A.get(i).get(j));
+            }
+        }
+        return B;
     }
 }
