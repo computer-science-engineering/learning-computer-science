@@ -12,14 +12,14 @@ public class Solution{
 
     public static ArrayList<Integer> plusOne(ArrayList<Integer> a) {
         if (a.size() > 1) {
-            while(a.get(0) == 0){
+            while(a.get(0) == 0) {
                 if(a.get(0) > 0 || a.size() == 1) {
                     break;
                 }
                 a.remove(0);
             }
         }
-        for (int i = a.size()- 1; i >= 0; --i) {
+        for (int i = a.size() - 1; i >= 0; --i) {
             int temp = a.get(i);
             a.set(i, temp+1);
             if (a.get(i) < 10) {
