@@ -63,4 +63,14 @@ public class SolutionTest {
             assertEquals(expected, actual);
         });
     }
+
+    @Test
+    public void SpecialCase2() {
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(9, 9, 9, 9));
+        assertTimeout(Duration.ofMillis(500), () -> {
+            ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 0, 0, 0, 0));
+            ArrayList<Integer> actual = Solution.plusOne(a);
+            assertEquals(expected, actual);
+        });
+    }
 }

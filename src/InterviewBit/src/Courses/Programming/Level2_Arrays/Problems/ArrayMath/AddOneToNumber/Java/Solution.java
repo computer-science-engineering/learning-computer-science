@@ -1,12 +1,11 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.ArrayMath.AddOneToNumber.Java;
 
-import java.util.ArrayList;;
+import java.util.ArrayList;
+import java.util.Arrays;;
 
 public class Solution{
     public static void main(String[] args) {
-        ArrayList<Integer> a = new ArrayList<Integer>();
-        a.add(0);
-        a.add(0);
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(9, 9, 9, 9));
         System.out.println(plusOne(a));
     }    
 
