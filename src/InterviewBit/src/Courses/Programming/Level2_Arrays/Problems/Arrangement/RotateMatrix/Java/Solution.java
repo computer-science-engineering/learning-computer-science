@@ -1,6 +1,7 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.Arrangement.RotateMatrix.Java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) { 
@@ -13,23 +14,26 @@ public class Solution {
             System.out.println();
         }
         System.out.println();
-        ArrayList<ArrayList<Integer>> input2 = new ArrayList<ArrayList<Integer>>();
-        input2.add(new ArrayList<Integer>() {
-            private static final long serialVersionUID = 1L;
-            {
-                add(1);
-                add(2);
-            }});
-        input2.add(new ArrayList<Integer>() {
-            private static final long serialVersionUID = 1L;
-            {
-                add(3);
-                add(4);
-            }});
-        ArrayList<ArrayList<Integer>> result2 = rotate3(input2);
+        
+        ArrayList<ArrayList<Integer>> input2 = new ArrayList<ArrayList<Integer>>();        
+        input2.add(new ArrayList<Integer>(Arrays.asList(1, 2)));
+        input2.add(new ArrayList<Integer>(Arrays.asList(3, 4)));
+        ArrayList<ArrayList<Integer>> result2 = rotate2(input2);
         for(int i=0; i<result2.size(); i++) {
             for (int j=0; j<result2.get(0).size(); j++) {
                 System.out.print(result2.get(i).get(j) + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        ArrayList<ArrayList<Integer>> input3 = new ArrayList<ArrayList<Integer>>();
+        input3.add(new ArrayList<Integer>(Arrays.asList(1, 2)));
+        input3.add(new ArrayList<Integer>(Arrays.asList(3, 4)));
+        ArrayList<ArrayList<Integer>> result3 = rotate3(input3);
+        for(int i=0; i<result3.size(); i++) {
+            for (int j=0; j<result3.get(0).size(); j++) {
+                System.out.print(result3.get(i).get(j) + " ");
             }
             System.out.println();
         }
