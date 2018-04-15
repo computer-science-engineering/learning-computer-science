@@ -43,6 +43,16 @@ public class SolutionTest {
     }
 
     @Test
+    public void TrivialCase2() {
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(1, 2, 9));
+        assertTimeout(Duration.ofMillis(500), () -> {
+            ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 3, 0));
+            ArrayList<Integer> actual = Solution.plusOne(a);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
     public void SpecialCase1() {
         ArrayList<Integer> a = new ArrayList<Integer>();
         a.add(0);
