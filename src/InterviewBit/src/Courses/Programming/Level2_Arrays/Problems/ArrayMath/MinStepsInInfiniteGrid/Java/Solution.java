@@ -1,6 +1,6 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.ArrayMath.MinStepsInInfiniteGrid.Java;
 
-import java.util.*;
+import java.util.ArrayList;;
 
 public class Solution{
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class Solution{
         Y.add(5);
         Y.add(3);
         Y.add(8);
-
         System.out.println(coverPoints(X, Y));
     }    
 
