@@ -23,6 +23,8 @@
         "Arrays"
     ],
     "buckets": [
-        "Arrangement"
+        "Arrangement",
+        "Bucketing",
+        "Bucketing or Sorting"
     ]
 }
