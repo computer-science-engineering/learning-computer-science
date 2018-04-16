@@ -1,7 +1,5 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.SpaceRecycle.SetMatrixZeros.Java;
 
-import java.util.ArrayList;
-
 public class Solution {
     public static void main(String[] args) {
         int[][] input = {{0, 0}, {1, 0}};
@@ -12,17 +10,6 @@ public class Solution {
             }
             System.out.println();
         }
-    }
-
-    public static void setZeroesDumb(ArrayList<ArrayList<Integer>> a) {
-        int[][] input = new int[a.size()][a.size()];
-        for(int i=0; i<a.size(); i++) {
-            for (int j=0; j<a.size(); j++) {
-                input[i][j] = a.get(i).get(j);
-            }
-        }
-
-        setZeroes(input);
     }
 
     public static int[][] setZeroes(int[][] a) {
@@ -79,6 +66,7 @@ public class Solution {
         return a;
     }
 
+    /*
     public void setZeroes(ArrayList<ArrayList<Integer>> a) {
 	    boolean firstRowZero = false;
         boolean firstColumnZero = false;
@@ -129,6 +117,6 @@ public class Solution {
                 a.get(0).set(i, 0);
             }
         }
-
-	}
+    }
+    */
 }
