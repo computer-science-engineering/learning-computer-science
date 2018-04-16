@@ -1,6 +1,6 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.Bucketing.NobleInteger.Java;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) { 
@@ -15,16 +15,16 @@ public class Solution {
         // Return a Noble element if present
         // before last.
         int n = A.length;
-        for (int i=0; i<n-1; i++)
-        {
+        for (int i=0; i<n-1; i++) {
             if (A[i] == A[i+1]) {
                 continue;
             }
  
             // In case of duplicates, we
             // reach last occurrence here.
-            if (A[i] == n-i-1)
+            if (A[i] == n-i-1) {
                 return 1;
+            }
         }
  
         if (A[n-1] == 0) {
