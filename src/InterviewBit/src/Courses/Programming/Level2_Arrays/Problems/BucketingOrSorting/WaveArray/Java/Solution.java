@@ -11,14 +11,6 @@ public class Solution {
         });
     }
 
-    public static int[] waveSimple(int[] A) {
-        Arrays.sort(A);
-        for (int i=0; i<A.length-1; i++) {
-            swap(A, i,i+1);
-        }
-        return A;
-    }
-
     public static int[] wave(int[] A) {
         Arrays.sort(A);
         for (int i=0; i<A.length; i+=2) {

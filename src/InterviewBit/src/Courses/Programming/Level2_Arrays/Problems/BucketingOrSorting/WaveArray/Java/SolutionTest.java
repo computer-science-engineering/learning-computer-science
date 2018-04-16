@@ -33,8 +33,8 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] input = {1, 2, 3, 4};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int[] actual = Solution.wave(input);
             int[] expected = {2, 1, 4, 3};
+            int[] actual = Solution.wave(input);
             assertArrayEquals(expected, actual);
         });
     }
