@@ -15,14 +15,13 @@ public class Solution {
 
         // First separate positive and 
         // negative numbers
-        int shift = segregate (A, size);
+        int shift = segregate(A, size);
         int arr[] = new int[size-shift];
         int j=0;
-        for(int i=shift;i<size;i++)
-            {
-                arr[j] = A[i];
-                j++;
-            }    
+        for(int i=shift;i<size;i++) {
+            arr[j] = A[i];
+            j++;
+        }    
         // Shift the array and call 
         // findMissingPositive for
         // positive part
@@ -45,20 +44,17 @@ public class Solution {
         // is positive
         for(i = 0; i < size; i++) {
             if (A[i] > 0) {
-                return i+1;  // 1 is added becuase indexes start from 0
+                return i+1;  // 1 is added because indexes start from 0
             }
         }
 
         return size+1;
     }
 
-    private static int segregate (int arr[], int size)
-    {
+    private static int segregate (int arr[], int size) {
         int j = 0, i;
-        for(i = 0; i < size; i++)
-        {
-           if (arr[i] <= 0)  
-           {
+        for(i = 0; i < size; i++) {
+           if (arr[i] <= 0)  {
                int temp;
                temp = arr[i];
                arr[i] = arr[j];
