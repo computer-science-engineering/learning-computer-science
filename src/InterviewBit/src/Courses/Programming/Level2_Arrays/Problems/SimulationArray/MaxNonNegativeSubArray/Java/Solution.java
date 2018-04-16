@@ -1,6 +1,6 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.SimulationArray.MaxNonNegativeSubArray.Java;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) {    
@@ -9,10 +9,10 @@ public class Solution {
         for (int var : input) {
             a.add(var);
         }
-        System.out.println(maxset(a));
+        System.out.println(maxSet(a));
     }    
 
-    public static ArrayList<Integer> maxset(ArrayList<Integer> a) {
+    public static ArrayList<Integer> maxSet(ArrayList<Integer> a) {
         long maxSum = 0;
         long newSum = 0;
         ArrayList<Integer> maxArray = new ArrayList<Integer>();

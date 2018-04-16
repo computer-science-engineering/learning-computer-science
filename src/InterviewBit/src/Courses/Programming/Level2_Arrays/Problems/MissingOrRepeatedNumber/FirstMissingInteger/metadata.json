@@ -24,6 +24,7 @@
         "Arrays"
     ],
     "buckets": [
-        "Missing or Repeated Number"
+        "Missing or Repeated Number",
+        "Space Recycle"
     ]
 }

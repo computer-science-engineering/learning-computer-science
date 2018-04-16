@@ -14,3 +14,5 @@ NOTE : If there are multiple answers possible, return the one thats lexicographi
 So, in example case, you will return [2, 1, 4, 3]
 
 ## Notes
+
+1. [Geeks for Geeks - Sort an array in wave form](https://www.geeksforgeeks.org/sort-array-wave-form-2/)
