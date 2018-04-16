@@ -1,6 +1,10 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.SimulationArray.SpiralOrderMatrix2.Java;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
+
+import java.time.Duration;
 
 import org.junit.After;
 import org.junit.Before;
@@ -24,6 +28,14 @@ public class SolutionTest {
     @After
     public void tearDown() throws Exception {
         solution = null;
+    }
+
+    @Test
+    public void MainFunction() {
+        assertTimeout(Duration.ofMillis(500), () -> {
+            String[] args = new String[0];
+            assertAll(() -> Solution.main(args));
+        });
     }
 
     @Test
