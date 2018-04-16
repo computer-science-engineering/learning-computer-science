@@ -23,3 +23,5 @@ On returning, the array A should be :
 Note that this will be evaluated on the extra memory used. Try to minimize the space and time complexity.
 
 ## Notes
+
+1. [ProgramCreek - LeetCode – Set Matrix Zeroes (Java)](https://www.programcreek.com/2012/12/leetcode-set-matrix-zeroes-java/)
