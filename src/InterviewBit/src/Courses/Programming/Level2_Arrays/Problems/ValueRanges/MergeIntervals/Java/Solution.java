@@ -1,6 +1,9 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.ValueRanges.MergeIntervals.Java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) { 
@@ -49,7 +52,7 @@ public class Solution {
     }
 
     // This approach uses stack
-    public ArrayList<Interval> insert2(ArrayList<Interval> intervals, Interval newInterval) {
+    public static ArrayList<Interval> insert2(ArrayList<Interval> intervals, Interval newInterval) {
         int size = intervals.size();
         if(size == 0) {
             intervals.add(newInterval);
@@ -70,7 +73,8 @@ public class Solution {
         //merge and return
         return merge(intervals);
     }
-    public ArrayList<Interval> merge(ArrayList<Interval> a) {
+
+    private static ArrayList<Interval> merge(ArrayList<Interval> a) {
         Stack<Interval> st = new Stack<Interval>();
         st.push(a.get(0));
         for(int i=1;i<a.size();i++) {
@@ -92,7 +96,8 @@ public class Solution {
         Collections.reverse(answer);
         return answer;
     }
-    public Interval mergeIntervals(Interval a ,Interval b) {
+
+    private static Interval mergeIntervals(Interval a ,Interval b) {
         int min = Math.min(a.start, b.start);
         int max = Math.max(a.end, b.end);
         return (new Interval(min, max));
