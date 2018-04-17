@@ -1,10 +1,9 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.SortingAlgorithms.MergeSort.Java;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         ArrayList<Integer> input = new ArrayList<Integer>();
         input.add(7);
         input.add(2);
@@ -14,7 +13,6 @@ public class Solution {
         input.add(3);
         input.add(8);
         ArrayList<Integer> result = mergeSort(input);
-        scan.close();
         System.out.println(result);
     }    
 
@@ -41,7 +39,7 @@ public class Solution {
         return result;
     }
 
-    public static ArrayList<Integer> merge(ArrayList<Integer> left, ArrayList<Integer> right, ArrayList<Integer> parent) {        
+    private static ArrayList<Integer> merge(ArrayList<Integer> left, ArrayList<Integer> right, ArrayList<Integer> parent) {        
         int lengthOfLeft = left.size();
         int lengthOfRight = right.size();
         int i = 0, j = 0, k = 0;

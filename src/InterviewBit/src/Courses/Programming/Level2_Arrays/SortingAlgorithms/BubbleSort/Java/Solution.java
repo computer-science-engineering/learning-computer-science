@@ -1,10 +1,10 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.SortingAlgorithms.BubbleSort.Java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         ArrayList<Integer> input = new ArrayList<Integer>();
         input.add(7);
         input.add(2);
@@ -14,7 +14,6 @@ public class Solution {
         input.add(3);
         input.add(8);
         ArrayList<Integer> result = bubbleSort(input);
-        scan.close();
         System.out.println(result);
     }
 
