@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.MissingOrRepeatedNumber.FirstMissingInteger.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Arrays.SortingAlgorithms.MergeSort.Java.Solution",
             "args": "",
         },
         {

@@ -1,10 +1,9 @@
 package InterviewBit.src.Courses.Programming.Level2_Arrays.SortingAlgorithms.InsertionSort.Java;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         ArrayList<Integer> input = new ArrayList<Integer>();
         input.add(7);
         input.add(2);
@@ -13,7 +12,6 @@ public class Solution {
         input.add(5);
         input.add(3);
         ArrayList<Integer> result = insertionSort(input);
-        scan.close();
         System.out.println(result);
     }
 
