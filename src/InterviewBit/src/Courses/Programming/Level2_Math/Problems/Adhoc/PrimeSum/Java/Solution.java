@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level2_Math.Problems.Adhoc.PrimeSum.Java;
+package InterviewBit.src.Courses.Programming.Level2_Math.Problems.AdHoc.PrimeSum.Java;
 
 import java.util.*;
 
