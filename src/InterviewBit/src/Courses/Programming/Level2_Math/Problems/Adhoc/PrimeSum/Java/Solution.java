@@ -1,6 +1,6 @@
 package InterviewBit.src.Courses.Programming.Level2_Math.Problems.AdHoc.PrimeSum.Java;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Solution {
         return result;
     }
 
-    public static boolean isPrime(int n){        
+    private static boolean isPrime(int n){        
         if(n == 2) {
             return true;
         }
