@@ -2,14 +2,16 @@
 
 ## Description
 
-Given an even number ( greater than 2 ), return two prime numbers whose sum will be equal to given number.
+Given an even number (greater than 2), return two prime numbers whose sum will be equal to given number.
 
-NOTE A solution will always exist. read [Goldbach’s conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture)
+NOTE: A solution will always exist. read [Goldbach’s conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture)
 
 Example:
 
+```text
 Input : 4
 Output: 2 + 2 = 4
+```
 
 If there are more than one solutions possible, return the lexicographically smaller solution.
 

@@ -3,7 +3,8 @@ package InterviewBit.src.Courses.Programming.Level2_Math.Problems.AdHoc.PrimeSum
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
