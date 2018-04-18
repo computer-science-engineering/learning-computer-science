@@ -1,6 +1,7 @@
 package InterviewBit.src.Courses.Programming.Level2_Math.Examples.PrimeNumbers.Java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {

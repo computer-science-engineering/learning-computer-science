@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Math.Examples.BinaryRepresentation.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Math.Examples.PrimeNumbers.Java.Solution",
             "args": "",
         },
         {
