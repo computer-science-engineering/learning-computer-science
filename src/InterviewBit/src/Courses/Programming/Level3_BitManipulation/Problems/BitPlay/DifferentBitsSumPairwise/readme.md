@@ -24,4 +24,4 @@ f(5, 1) + f(5, 3) + f(5, 5) =
 
 ## Notes
 
-This is similar to InterviewBit.src.Courses.Programming.Level2_Math.Problems.Adhoc.SumOfPairwiseHammingDistance.
+This is similar to InterviewBit.src.Courses.Programming.Level2_Math.Problems.AdHoc.SumOfPairwiseHammingDistance.

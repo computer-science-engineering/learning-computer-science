@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level2_Math.Problems.Adhoc.SumOfPairwiseHammingDistance.Java;
+package InterviewBit.src.Courses.Programming.Level2_Math.Problems.AdHoc.SumOfPairwiseHammingDistance.Java;
 
 public class Solution {
     public static void main(String[] args) {
