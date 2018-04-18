@@ -2,9 +2,7 @@
 
 ## Description
 
-Following code tries to figure out if a number is prime [Wiki](https://www.wikiwand.com/en/Prime_number)
-However, it has a bug in it.
-Please correct the bug and then submit the code.
+Following code tries to figure out if a number is prime [Wiki](https://www.wikiwand.com/en/Prime_number). However, it has a bug in it. Please correct the bug and then submit the code.
 
 ```Java
 public class Solution {
