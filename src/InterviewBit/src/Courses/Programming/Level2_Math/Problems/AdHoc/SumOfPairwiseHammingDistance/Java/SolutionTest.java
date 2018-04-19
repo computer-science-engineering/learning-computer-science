@@ -33,9 +33,11 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] input = {2, 4, 6};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int actual = Solution.hammingDistance(input);
+            int actual1 = Solution.hammingDistance(input);
+            int actual2 = Solution.sumOfBitDiffAmongAllPairs(input);
             int expected = 8;
-            assertEquals(expected, actual);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -43,9 +45,11 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] input = {1, 3, 5};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int actual = Solution.hammingDistance(input);
+            int actual1 = Solution.hammingDistance(input);
+            int actual2 = Solution.sumOfBitDiffAmongAllPairs(input);
             int expected = 8;
-            assertEquals(expected, actual);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 }
