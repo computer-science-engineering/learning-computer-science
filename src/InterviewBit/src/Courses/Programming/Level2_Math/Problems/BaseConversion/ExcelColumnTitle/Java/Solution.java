@@ -12,7 +12,7 @@ public class Solution {
         StringBuilder sb = new StringBuilder();        
         while(A > 0) {
             A--;
-            int remainder  = A % 26;
+            int remainder = A % 26;
             char ch = (char) (remainder + 'A');
             A /= 26;
             sb.append(ch);

@@ -35,6 +35,9 @@ f(6, 2) + f(6, 4) + f(6, 6) =
 1. [SO post](https://stackoverflow.com/questions/28095890/sum-of-hamming-distances)
 1. [SO post on bit manipulation](https://stackoverflow.com/questions/141525/what-are-bitwise-shift-bit-shift-operators-and-how-do-they-work)
 1. [GfG problem](http://www.geeksforgeeks.org/sum-of-bit-differences-among-all-pairs/)
+
+    count * (n - count) gives the permutation of all numbers from two sets. This product will be multiplied by 2 because you have to take the product from both the sides. In the example, for bit position 0, {1} will be in one set and {2} will be other set. Product here is {1, 2} and {2, 1} since you need to take from both the sides or else it will be just {1, 2}
+
 1. [GfG article on bit manipulation](http://notes4geeks.com/main/bit/bit_manipulation.html)
 1. [GfG Video](https://www.youtube.com/watch?v=cfizo_K7e0o)
 1. [Bitwise alternative to arithmetic operations](http://jacksondunstan.com/articles/1946)
