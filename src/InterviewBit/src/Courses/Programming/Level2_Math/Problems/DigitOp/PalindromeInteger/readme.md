@@ -4,10 +4,9 @@
 
 Determine whether an integer is a palindrome. Do this without extra space.
 
-A palindrome integer is an integer x for which reverse(x) = x where reverse(x) is x with its digit reversed.
-Negative numbers are not palindromic.
+A palindrome integer is an integer x for which reverse(x) = x where reverse(x) is x with its digit reversed. Negative numbers are not palindromic.
 
-Example :
+Example:
 
 ```test
 Input : 12121
