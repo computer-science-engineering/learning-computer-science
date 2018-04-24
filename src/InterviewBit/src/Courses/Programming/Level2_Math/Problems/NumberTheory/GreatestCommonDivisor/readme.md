@@ -45,7 +45,7 @@ gcd (m, n) = gcd(m-n, n)
              .
            = gcd(m - k*n, n) if m >= k*n
 
-In other words, we keep subtracting n till the result is greater than 0. 
+In other words, we keep subtracting n till the result is greater than 0.
 Ultimately we will end up with m % n.
 So gcd(m, n)  = gcd(m % n, n)
 ```
