@@ -1,13 +1,12 @@
 package InterviewBit.src.Courses.Programming.Level2_Math.Problems.DigitOp.PalindromeInteger.Java;
 
-
 public class Solution {
     public static void main(String[] args) {
         System.out.println(isPalindrome(12345));
     }
 
     public static int isPalindrome(int A) {
-        if (A < 0){
+        if (A < 0) {
             return 0;
         }
         if (A == reverse(A)) {

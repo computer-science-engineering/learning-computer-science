@@ -1,6 +1,7 @@
 package InterviewBit.src.Courses.Programming.Level2_Math.Problems.NumberEncoding.RearrangeArray.Java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
