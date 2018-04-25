@@ -12,16 +12,16 @@ public class Solution {
             return 0;
         }
         int count = 1;
-        for (int i=firstIndex-1; i>=0; i--){
-            if (A[i] == B){
+        for (int i=firstIndex-1; i>=0; i--) {
+            if (A[i] == B) {
                 count++;
             }
             else {
                 break;
             }
         }
-        for (int i=firstIndex+1; i<=A.length-1; i++){
-            if (A[i] == B){
+        for (int i=firstIndex+1; i<=A.length-1; i++) {
+            if (A[i] == B) {
                 count++;
             }
             else {
