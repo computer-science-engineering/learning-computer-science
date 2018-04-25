@@ -14,8 +14,7 @@ NOTE 1: Also think about the case when there are duplicates. Does your current s
 
 PROBLEM APPROACH:
 
-Note: If you know the number of times the array is rotated, then this problem becomes trivial. If the number of rotation is x, then minimum element is A[x].
-Lets look at how we can calculate the number of times the array is rotated.
+Note: If you know the number of times the array is rotated, then this problem becomes trivial. If the number of rotation is x, then minimum element is A[x]. Lets look at how we can calculate the number of times the array is rotated.
 
 ## Notes
 
