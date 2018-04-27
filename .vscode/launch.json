@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level3_BinarySearch.Examples.FindElementOccurrence.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level3_BinarySearch.Problems.SearchStepSimulation.ImplementPowerFunction.Java.Solution",
             "args": "",
         },
         {
