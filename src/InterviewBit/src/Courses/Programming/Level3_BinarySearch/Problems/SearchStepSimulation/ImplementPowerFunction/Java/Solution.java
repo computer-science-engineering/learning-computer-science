@@ -26,6 +26,7 @@ public class Solution {
         }
     }
     
+    /*
     public static double pow2(double x, int n) {
         if (n == 0)  {
             return 1;
@@ -43,4 +44,5 @@ public class Solution {
             return 1 / x * pow2(pow2(x, n / 2), 2);
         }
     }
+    */
 }
