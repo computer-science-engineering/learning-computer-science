@@ -1,7 +1,6 @@
 /* http://www.processinginfinity.com/weblog/2016/08/18/MessageBus-Pattern-in-Angular2-TypeScript */
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable ,  Subject } from 'rxjs';
 
 interface IMessage {
     channel: string;
@@ -21,8 +20,8 @@ export class MessageBusService {
         this.message$.next({ channel: channel, data: message });
     }
 
-    of<T>(messageType: { new (...args: any[]): T }): Observable<T> {
-        const channel = (messageType as any).name;
-        return this.message$.filter(m => m.channel === channel).map(m => m.data);
-    }
+    // of<T>(messageType: { new (...args: any[]): T }): Observable<T> {
+    //     const channel = (messageType as any).name;
+    //     return this.message$.filter(m => m.channel === channel).map(m => m.data);
+    // }
 }
