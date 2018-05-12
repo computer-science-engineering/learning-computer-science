@@ -14,6 +14,7 @@
 | N/A | Codecov | Code coverage using Circle CI | [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science) |
 | N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning-computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/35)|
 | N/A | CII Best Practices | Open source software best practices check | [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1761/badge)](https://bestpractices.coreinfrastructure.org/projects/1761) |
+| N/A | david-dm | Check node.js dependency status | [![Dependency Status](https://david-dm.org/manastalukdar/learning-computer-science.svg)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-ng) |
 
 
 <!-- waffle
