@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "learning-computer-science",
+                "projectName": "learning-computer-science",
+                "workingDirectory": "d:\\devgithub\\learning-computer-science",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "learning-computer-science",
+                "projectName": "learning-computer-science",
+                "workingDirectory": "d:\\devgithub\\learning-computer-science",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
