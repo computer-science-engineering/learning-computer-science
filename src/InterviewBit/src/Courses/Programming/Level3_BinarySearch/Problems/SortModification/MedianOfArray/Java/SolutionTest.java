@@ -3,7 +3,8 @@ package InterviewBit.src.Courses.Programming.Level3_BinarySearch.Problems.SortMo
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,8 +37,10 @@ public class SolutionTest {
         List<Integer> b = Arrays.asList(2, 3);
         assertTimeout(Duration.ofMillis(500), () -> {
             double expected = 3.0;
-            double actual = Solution.findMedianSortedArrays(a, b);
-            assertEquals(expected, actual);
+            double actual1 = Solution.findMedianSortedArrays(a, b);
+            double actual2 = Solution.findMedianSortedArrays2(a, b);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 }

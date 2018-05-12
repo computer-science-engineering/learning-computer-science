@@ -1,12 +1,14 @@
 package InterviewBit.src.Courses.Programming.Level3_BinarySearch.Problems.SortModification.MedianOfArray.Java;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
         List<Integer> a = Arrays.asList(1, 4, 5);
         List<Integer> b = Arrays.asList(2, 3);
         System.out.println(findMedianSortedArrays(a, b));
+        System.out.println(findMedianSortedArrays2(a, b));
     }
     
     public static double findMedianSortedArrays(final List<Integer> a, final List<Integer> b) {        
