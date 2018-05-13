@@ -26,3 +26,5 @@ For example, if the array is [1 2 3 4], the median is (2 + 3) / 2.0 = 2.5
 1. [blog - yu coding](https://yucoding.blogspot.com/2013/01/leetcode-question-50-median-of-two.html)
 1. [blog - life in code](http://www.lifeincode.net/programming/leetcode-median-of-two-sorted-arrays-more-elegant-solution/)
 1. [LeetCode article](http://articles.leetcode.com/median-of-two-sorted-arrays)
+1. [ProgramCreek - Median of Two Sorted Arrays (Java)](https://www.programcreek.com/2012/12/leetcode-median-of-two-sorted-arrays-java/)
+1. [YT Video - Tushar Roy - Binary Search : Median of two sorted arrays of different sizes](https://www.youtube.com/watch?v=LPFhl65R7ww)
