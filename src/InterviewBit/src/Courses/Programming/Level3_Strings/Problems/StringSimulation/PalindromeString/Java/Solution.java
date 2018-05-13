@@ -5,6 +5,9 @@ public class Solution {
         //System.out.println(isPalindrome("A man, a plan, a canal: Panama"));        
         //System.out.println(isPalindrome("race a car"));
         System.out.println(isPalindrome("1a2"));
+        System.out.println(isPalindrome2("1a2"));
+        System.out.println(isPalindrome("1a1"));
+        System.out.println(isPalindrome2("1a1"));
     }
 
     public static int isPalindrome(String a) {
