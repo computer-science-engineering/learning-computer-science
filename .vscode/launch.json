@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "InterviewBit.src.Courses.Programming.Level3_Strings.Problems.StringSimulation.LongestCommonPrefix.Java.Solution",
+            "mainClass": "InterviewBit.src.Courses.Programming.Level3_Strings.Problems.StringSimulation.CountAndSay.Java.Solution",
             "args": "",
         },
         {
