@@ -2,7 +2,7 @@ package InterviewBit.src.Courses.Programming.Level3_Strings.Problems.StringSimul
 
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(countAndSay(4));
+        System.out.println(countAndSay(60));
     }
     
     public static String countAndSay(int A) {
@@ -21,7 +21,7 @@ public class Solution {
                 else {
                     sb.append(count);
                     sb.append(result.charAt(j-1));
-                    count  = 1;
+                    count = 1;
                 }                    
             }
             sb.append(count);
