@@ -2,8 +2,8 @@ package InterviewBit.src.Courses.Programming.Level3_Strings.Problems.StringSimul
 
 public class Solution {
     public static void main(String[] args) {
-        //String[] input = new String[] {"abcdefgh", "aefghijk", "abcefgh"};       
-        String[] input = new String[] {"ABCD"};
+        String[] input = new String[] {"abcdefgh", "aefghijk", "abcefgh"};       
+        //String[] input = new String[] {"ABCD"};
         System.out.println(longestCommonPrefix(input));
     }
 
