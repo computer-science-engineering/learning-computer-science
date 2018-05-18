@@ -21,10 +21,10 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
     
         // calculate each digit
-        for(int i=0; i<d.length; i++){
+        for(int i=0; i<d.length; i++) {
             int mod = d[i]%10;
             int carry = d[i]/10;
-            if(i+1<d.length){
+            if(i+1<d.length) {
                 d[i+1] += carry;
             }
             sb.insert(0, mod);
