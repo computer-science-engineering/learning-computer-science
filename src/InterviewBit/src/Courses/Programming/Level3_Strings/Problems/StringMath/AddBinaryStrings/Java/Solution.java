@@ -12,8 +12,7 @@ public class Solution {
         // Traverse both strings starting from last
         // characters
         int i = A.length() - 1, j = B.length() - 1;
-        while (i >= 0 || j >= 0 || s == 1)
-        {
+        while (i >= 0 || j >= 0 || s == 1) {
             // Compute sum of last digits and carry
             s += ((i >= 0)? A.charAt(i) - '0': 0);
             s += ((j >= 0)? B.charAt(j) - '0': 0);

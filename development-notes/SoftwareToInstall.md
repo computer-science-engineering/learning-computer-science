@@ -1,6 +1,6 @@
 # A list of software to install
 
-## 1. Must
+## 1. Compulsory
 
 ### 1.1 Any OS
 
@@ -318,6 +318,10 @@
   Plugins: CheckStyle, Findbugs
 - Jetbrains PyCharm IDE Community Edition
 - [Vectr](https://vectr.com)
+- Lua
+  - Windows
+
+    [Installing Lua on a Windows system](http://www.thijsschreijer.nl/blog/?p=863)
 
 ### 2.2 Windows only
 
