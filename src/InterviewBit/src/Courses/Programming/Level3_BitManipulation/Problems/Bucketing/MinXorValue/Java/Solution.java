@@ -6,6 +6,7 @@ public class Solution {
     public static void main(String[] args) {
         int[] input = {15, 5, 1, 10, 2};
         System.out.println(findMinXor(input));
+        System.out.println(findMinXor_dumb(input));
     }
 
     public static int findMinXor(int[] A) {
