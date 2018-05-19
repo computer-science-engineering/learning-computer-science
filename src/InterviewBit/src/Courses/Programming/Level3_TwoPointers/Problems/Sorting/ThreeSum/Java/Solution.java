@@ -1,6 +1,6 @@
 package InterviewBit.src.Courses.Programming.Level3_TwoPointers.Problems.Sorting.ThreeSum.Java;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
@@ -22,7 +22,9 @@ public class Solution {
                 int sum = A[i] + A[j] + A[k];
                 int diff = Math.abs(sum - B);
     
-                if(diff == 0) return sum;
+                if(diff == 0) {
+                    return sum;
+                }
     
                 if (diff < min) {
                     min = diff;
