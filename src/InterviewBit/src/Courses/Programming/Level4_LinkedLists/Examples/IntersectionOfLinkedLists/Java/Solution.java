@@ -40,7 +40,7 @@ public class Solution {
             A = A == null? b : A.next;
             B = B == null? a : B.next;    
 
-            if (A == a && B == b){
+            if (A == a && B == b) {
                 return null;
             }
         }
@@ -48,6 +48,7 @@ public class Solution {
         return A;
     }
     
+    /*
     public static ListNode getIntersectionNode_attempt1(ListNode a, ListNode b) {
         if(a == null || b == null) {
             return null;
@@ -86,5 +87,5 @@ public class Solution {
             length++;
         }
         return length;
-    }
+    }*/
 }
