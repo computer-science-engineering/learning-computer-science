@@ -35,7 +35,7 @@ public class Solution {
         ListNode B = b;
         
         //if a & b have different len, then we will stop the loop after second iteration
-        while( A != B) {
+        while(A != B) {
             //for the end of first iteration, we just reset the pointer to the head of another linkedlist
             A = A == null? b : A.next;
             B = B == null? a : B.next;    

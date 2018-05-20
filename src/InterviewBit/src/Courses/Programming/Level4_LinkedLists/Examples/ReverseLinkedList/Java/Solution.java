@@ -15,6 +15,20 @@ public class Solution {
             result = result.next;
         }
         System.out.print(result.val);
+        System.out.println();
+        ListNode b1 = new ListNode(1);
+        ListNode b2 = new ListNode(8);
+        ListNode b3 = new ListNode(5);
+        ListNode b4 = new ListNode(3);
+        b1.next = b2;
+        b2.next = b3;
+        b3.next = b4;
+        ListNode result_recursive = reverseList_recursive(b1);
+        while(result_recursive.next != null) {
+            System.out.print(result_recursive.val + "->");
+            result_recursive = result_recursive.next;
+        }
+        System.out.print(result_recursive.val);
     }
     
     public static ListNode reverseList(ListNode A) {
@@ -29,12 +43,12 @@ public class Solution {
         return newHead;
     }
 
-    public ListNode reverseList_recursive(ListNode head) {
+    public static ListNode reverseList_recursive(ListNode head) {
         /* recursive solution */
         return reverseListInt(head, null);
     }
     
-    private ListNode reverseListInt(ListNode head, ListNode newHead) {
+    private static ListNode reverseListInt(ListNode head, ListNode newHead) {
         if (head == null) {
             return newHead;
         }
