@@ -12,7 +12,7 @@ return 1->4->3->2->5->NULL.
 
 **Note:**
 
-Given m, n satisfy the following condition: 1 ≤ m ≤ n ≤ length of list. 
+Given m, n satisfy the following condition: 1 ≤ m ≤ n ≤ length of list.
 
 **Note 2:**
 
