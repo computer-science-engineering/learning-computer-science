@@ -15,3 +15,5 @@ You must do this in-place without altering the nodes’ values.
 For example, Given {1,2,3,4}, reorder it to {1,4,2,3}.
 
 ## Notes
+
+1. [YT Video - Jieun Chon - Reorder List | Interview Practice | Linked List](https://www.youtube.com/watch?v=feRbQevuKZs)
