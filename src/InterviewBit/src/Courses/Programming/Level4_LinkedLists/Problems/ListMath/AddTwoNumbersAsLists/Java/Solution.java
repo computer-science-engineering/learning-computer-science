@@ -49,6 +49,7 @@ public class Solution {
         return newHead.next;
      }
 
+    /*
     public static ListNode addTwoNumbers_unoptimized(ListNode A, ListNode B) {
         long a = getNumber(reverseList(A));
         long b = getNumber(reverseList(B));
@@ -56,18 +57,7 @@ public class Solution {
         ListNode node = getListNode(sum);
         ListNode result = reverseList(node);
         return result;
-    }
-
-    public static ListNode reverseList(ListNode A) {
-        ListNode newHead = null;
-        while (A != null) {
-            ListNode next = A.next;
-            A.next = newHead;
-            newHead = A;
-            A = next;
-        }
-        return newHead;
-    }
+    }*/
 
     public static long getNumber(ListNode A) {
         StringBuilder sb = new StringBuilder();
@@ -78,8 +68,20 @@ public class Solution {
         sb.append(A.val);
         return Long.valueOf(sb.toString());
     }
+
+    /*
+    private static ListNode reverseList(ListNode A) {
+        ListNode newHead = null;
+        while (A != null) {
+            ListNode next = A.next;
+            A.next = newHead;
+            newHead = A;
+            A = next;
+        }
+        return newHead;
+    }
     
-    public static ListNode getListNode(long A) {
+    private static ListNode getListNode(long A) {
         ListNode result = null;
         ListNode ret = null;
         String s = String.valueOf(A);
@@ -97,5 +99,5 @@ public class Solution {
             }            
         }
         return ret;
-    }
+    }*/
 }
