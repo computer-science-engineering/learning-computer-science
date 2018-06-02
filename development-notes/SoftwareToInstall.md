@@ -322,6 +322,7 @@
   - Windows
 
     [Installing Lua on a Windows system](http://www.thijsschreijer.nl/blog/?p=863)
+- ZeroBrane Studio Lua IDE
 
 ### 2.2 Windows only
 
@@ -342,6 +343,7 @@
 - Nodepad3
 - Hyper.is
 - cmder
+- Twitch
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
