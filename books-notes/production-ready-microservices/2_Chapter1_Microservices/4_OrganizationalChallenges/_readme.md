@@ -14,3 +14,10 @@ The fourth is the competition for engineering and infrastructure resources.
 
 ## The Inverse Conway’s Law
 
+the organizational structure of a company is determined by the architecture of its product.
+
+Microservice architecture is comprised of a large number of small, isolated, independent microservices. The Inverse Conway’s Law demands that the organizational structure of any company using microservice architecture will be made up of a large number of very small, isolated, and independent teams.
+
+There is also a large communication gap between microservice teams and infrastructure teams that needs to be closed.
+
+...difficulty of running an operations organization.
