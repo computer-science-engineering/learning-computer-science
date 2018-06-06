@@ -24,8 +24,7 @@ Messaging - things to look out for - scalability challenges, points of failure f
 
 ...three technologies be implemented in the communication layer: service discovery, service registry, and load balancing.
 
-service discovery (such as etcd, Consul, Hyperbahn, or ZooKeeper), which ensures that requests are routed to exactly where they are supposed to be sent and that (very importantly) they are only
-routed to healthy instances.
+service discovery (such as etcd, Consul, Hyperbahn, or ZooKeeper), which ensures that requests are routed to exactly where they are supposed to be sent and that (very importantly) they are only routed to healthy instances.
 
 service registry, which is a database that tracks all ports and IPs of all microservices across the ecosystem.
 

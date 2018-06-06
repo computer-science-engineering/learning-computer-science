@@ -21,3 +21,5 @@ Microservice architecture is comprised of a large number of small, isolated, ind
 There is also a large communication gap between microservice teams and infrastructure teams that needs to be closed.
 
 ...difficulty of running an operations organization.
+
+## Technical Sprawl
