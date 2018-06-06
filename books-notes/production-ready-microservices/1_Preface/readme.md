@@ -1,4 +1,34 @@
-# How This Book Is Structured
+# Preface
+
+stable, reliable, scalable, fault tolerant, performant, monitored, documented, and prepared for any catastrophe.
+
+## Who This Book Is Written For
+
+Software engineers and site reliability engineers who have
+either split a monolith and are wondering “what’s next?”, or who are building microservices from the ground up and want to design stable, reliable, scalable, fault-tolerant, performant
+microservices from the get-go.
+
+## What This Book Is Not
+
+This book is not a step-by-step how-to guide. It is a highly abstract book.
+
+...introduce concepts, explain their importance to building production-ready microservices, offer examples of each concept, and share strategies for their implementation.
+
+...not a description of the Uber engineering organization.
+
+...not a descriptive or historical account,
+but a prescriptive guide to building production-ready microservices.
+
+## How To Use This Book
+
+...read only the chapters you are interested in.
+
+... skim through the book, reading carefully the sections that are relevant to your needs, and then apply some of the principles and standards to your microservice(s).
+
+...each chapter should be read carefully, each standard understood, and each requirement adjusted and applied to fit the needs of your
+microservice(s).
+
+## How This Book Is Structured
 
 Chapter 1, Microservices, is an introduction to microservices.
 
