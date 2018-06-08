@@ -1,0 +1,21 @@
+{
+    "type": "Coding",
+    "name": "Reverse a String",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "G H S"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": []
+        }
+    ],
+    "tags": [
+        "Strings",
+        "Backtracking"
+    ]
+}
