@@ -23,3 +23,19 @@ There is also a large communication gap between microservice teams and infrastru
 ...difficulty of running an operations organization.
 
 ## Technical Sprawl
+
+Suppose each of the many microservices is staffed by a development team of six developers, and each developer uses their own set of favorite tools, favorite libraries, and works in their own favorite languages. Each of these development teams has their own way of deploying, their own specified metrics to monitor and alert on, their own external libraries and internal dependencies they use,
+custom scripts to run on production machines, and so on.
+
+...thousand ways to deploy, a thousand libraries to maintain, a thousand different ways of alerting and monitoring and testing and handling outages. The only way to cut down on technical sprawl is through standardization at every level of the microservice ecosystem.
+
+There’s another kind of technical sprawl associated with language choice. It’s more realistic to choose a small number of supported languages and ensure that all libraries and tools are compatible with and exist for these languages than to attempt to support a large number of languages.
+
+The last type of technical sprawl we will cover here is technical debt, which usually refers to
+work that needs to be done because something was implemented in a way that got the job done
+quickly, but not in the best or most optimal way.
+
+When outages happen, when things break, any work that comes out of an incident
+review will only rarely be the best overall solution: as far as microservice development teams
+are concerned, whatever fixes (or fixed) the problem quickly and in the moment was good
+enough, and any better solutions are pawned off to the future.
