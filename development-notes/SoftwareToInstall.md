@@ -100,17 +100,6 @@
     sudo dpkg -i texstudio_*_amd64.deb
     sudo apt --fix-broken install
     ```
-- Android SDK
-- Android Studio
-  - Ubuntu
-    ```text
-    sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-    sudo apt-get install unzip
-    sudo unzip <filename.zip> -d /opt/
-    ```
-    *Navigate to the android-studio/bin/ directory, and execute studio.sh.
-    To make Android Studio available in your list of applications, select Tools > Create Desktop Entry from the Android Studio menu bar.*
-
 - Docker
   - Ubuntu
 
@@ -148,7 +137,6 @@
     ```text
     gradle.org/install/
     ```
-- MySQL Workbench
 - FileZilla
 - Vivaldi Browser
 - Pandoc
@@ -158,7 +146,6 @@
 - GIMP
 - Inkscape
 - VLC Media player
-- Evolus Pencil
 - Opera Browser (for free VPN)
 - KeePass Password Safe
   - Ubuntu
@@ -186,6 +173,8 @@
 - 7zip
 - Microsoft OneDrive
 - Visual Studio Community Edition
+- Android SDK
+- Android Studio
 - WinPython (includes Spyder)
 - ILSpy
 - SysinternalsSuite
@@ -281,6 +270,8 @@
 - Ruby
 - Bitnami Wordpress stack installer
 - Aptana plugin for Eclipse Java IDE
+- MySQL Workbench
+- Evolus Pencil
 - Go lang
 - Dart lang
 - Scilab 
@@ -353,6 +344,15 @@
 - 7zip
 - [Stacer](https://github.com/oguzhaninan/Stacer)
 - [Sublime Text](http://www.omgubuntu.co.uk/2017/05/how-to-install-sublime-text-ubuntu-linux)
+- Android Studio
+  - Ubuntu
+    ```text
+    sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+    sudo apt-get install unzip
+    sudo unzip <filename.zip> -d /opt/
+    ```
+    *Navigate to the android-studio/bin/ directory, and execute studio.sh.
+    To make Android Studio available in your list of applications, select Tools > Create Desktop Entry from the Android Studio menu bar.*
 
 ## Linux related
 
