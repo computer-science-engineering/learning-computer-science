@@ -31,11 +31,16 @@ custom scripts to run on production machines, and so on.
 
 There’s another kind of technical sprawl associated with language choice. It’s more realistic to choose a small number of supported languages and ensure that all libraries and tools are compatible with and exist for these languages than to attempt to support a large number of languages.
 
-The last type of technical sprawl we will cover here is technical debt, which usually refers to
-work that needs to be done because something was implemented in a way that got the job done
-quickly, but not in the best or most optimal way.
+The last type of technical sprawl we will cover here is technical debt, which usually refers to work that needs to be done because something was implemented in a way that got the job done quickly, but not in the best or most optimal way.
 
-When outages happen, when things break, any work that comes out of an incident
-review will only rarely be the best overall solution: as far as microservice development teams
-are concerned, whatever fixes (or fixed) the problem quickly and in the moment was good
-enough, and any better solutions are pawned off to the future.
+When outages happen, when things break, any work that comes out of an incident review will only rarely be the best overall solution: as far as microservice development teams are concerned, whatever fixes (or fixed) the problem quickly and in the moment was good enough, and any better solutions are pawned off to the future.
+
+## More ways to fail
+
+The reality of working with complex systems of this sort is that individual components will fail, they will fail often, and they will fail in ways that nobody could have predicted.
+
+You can only do your best to prepare for when failure happens.
+
+## Competition for Resources
+
+There is no way to avoid competition for resources, though there are ways to mitigate competition somewhat. The most effective seems to be organizing or categorizing teams in terms of their importance and criticality to the overall business, and then giving teams access to resources based on their priority or importance. There are downsides to this, because it tends to result in poorly staffed development tools teams, and in projects whose importance lies in shaping the future (such as adopting new infrastructure technologies) being abandoned.
