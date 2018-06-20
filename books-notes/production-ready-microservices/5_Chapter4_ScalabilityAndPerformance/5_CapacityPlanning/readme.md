@@ -12,3 +12,7 @@ To determine the hardware needs of each service, we can use
 * key business metrics and traffic predictions,
 * the known resource bottlenecks and requirements, and
 * historical data about the microservice’s traffic.
+
+Once the hardware resources have been secured and dedicated to each microservice, capacity planning is complete.
+
+Automating the majority of the capacity planning process away from development and operations teams cuts down on potential errors and failures, and a great way to accomplish this is to build and run a capacity planning self-service tool within the application platform layer of the microservice ecosystem.
