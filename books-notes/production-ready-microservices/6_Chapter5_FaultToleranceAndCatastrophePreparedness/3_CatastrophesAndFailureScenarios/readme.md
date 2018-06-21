@@ -157,3 +157,29 @@ Some of the most common dependency failure scenarios are:
 * Timeouts to an external dependency
 
 ## Internal (Microservice) Failures
+
+At the very top of the microservice ecosystem stack lie the individual microservices.
+
+The majority of incidents and outages experienced by a microservice will be almost solely self-inflicted.
+
+Incomplete code reviews, lack of proper test coverage, and poor development processes in general (specifically, the lack of a standardized development cycle) lead to buggy code being deployed to production. Without a stable and
+reliable deployment pipeline containing staging, canary, and production phases in place to catch any errors before they are fully rolled out to production servers, any problems not caught by testing in the development phases can cause serious incidents and outages for the microservice itself, its dependencies, and any other parts of the microservice ecosystem that
+depend on it.
+
+Anything specific to the microservice’s architecture can also fail here, including any databases, message brokers, task-processing systems, and the like.
+
+This is also where general and specific code bugs within the microservice will cause failures, as well as improper error and exception handling: unhandled exceptions and the practice of catching exceptions are an
+often-overlooked culprit when microservices fail. Finally, increases in traffic can cause a service to fail if the service isn't prepared for unexpected growth.
+
+## SUMMARY: COMMON MICROSERVICE FAILURE SCENARIOS
+
+Some of the most common microservice failures are:
+
+* Incomplete code reviews
+* Poor architecture and design
+* Lack of proper unit and integration tests
+* Bad deployments
+* Lack of proper monitoring
+* Improper error and exception handling
+* Database failure
+* Scalability limitations
