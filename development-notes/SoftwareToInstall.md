@@ -278,6 +278,7 @@
 - [GNU Octave](https://www.gnu.org/software/octave/)
 - [SageMath](http://www.sagemath.org)
 - [Junolab for Julia](http://junolab.org)
+- GNU Plot
 - Blender
 - Pencil animation
 - Synfig Studio
