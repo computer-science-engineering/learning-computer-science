@@ -6,10 +6,10 @@ public class Solution {
     public static void main(String[] args) {
         int[] numbers = {10, 15, 3, 7};
         int target = 17;
-        System.out.println(TwoSum(numbers, target));
+        System.out.println(twoSum(numbers, target));
     }
 
-    public static boolean TwoSum(int[] numbers, int target) {
+    public static boolean twoSum(int[] numbers, int target) {
         if (numbers == null || numbers.length < 2) {
             return false;
         }
