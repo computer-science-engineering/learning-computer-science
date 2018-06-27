@@ -35,7 +35,7 @@ public class SolutionTest {
         int target = 17;
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
-            boolean actual = Solution.TwoSum(numbers, target);
+            boolean actual = Solution.twoSum(numbers, target);
             assertEquals(expected, actual);
         });
     }
@@ -46,7 +46,7 @@ public class SolutionTest {
         int target = 27;
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = false;
-            boolean actual = Solution.TwoSum(numbers, target);
+            boolean actual = Solution.twoSum(numbers, target);
             assertEquals(expected, actual);
         });
     }
