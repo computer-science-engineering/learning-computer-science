@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "Two Sum",
+    "origin": {
+        "name": "Daily Coding Problem",
+        "link": ""
+    },
+    "companies": [
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
