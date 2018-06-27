@@ -17,7 +17,7 @@ public class Solution {
         for (int i=1; i<=(int)Math.sqrt(a); i++) {
             if (a%i == 0) {
                 result.add(i);
-                if (i != Math.sqrt(a)) {
+                if (i != Math.sqrt(a)) { // if(i != a/i)
                     result.add(a/i);
                 }
             }
