@@ -1,12 +1,12 @@
 {
     "type": "Coding",
-    "name": "Two Sum",
+    "name": "Product of Array Except Self",
     "origin": {
-        "name": "Daily Coding Problem",
+        "name": "Daily Coding problem",
         "link": "https://www.dailycodingproblem.com/"
     },
     "companies": [
-        "Google"
+        "Uber"
     ],
     "categories": [
         {
@@ -22,15 +22,14 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Easy",
+                    "name": "Medium",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Array",
-        "Hash Table"
+        "Array"
     ],
     "buckets": [
         "",
