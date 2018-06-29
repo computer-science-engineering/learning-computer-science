@@ -92,6 +92,8 @@
         "datasets",
         "denormalize",
         "deployable",
+        "deserialize",
+        "deserializes",
         "deterministically",
         "eval",
         "footable",
