@@ -1,12 +1,13 @@
 {
     "type": "Coding",
-    "name": "Product of Array Except Self",
+    "name": "Serialize and Deserialize Binary Tree",
     "origin": {
         "name": "Daily Coding Problem",
         "link": "https://www.dailycodingproblem.com/"
     },
     "companies": [
-        "Uber"
+        "Google",
+        ""
     ],
     "categories": [
         {
@@ -22,14 +23,15 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Medium",
+                    "name": "Hard",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Array"
+        "Tree",
+        "Design"
     ],
     "buckets": [
         "",

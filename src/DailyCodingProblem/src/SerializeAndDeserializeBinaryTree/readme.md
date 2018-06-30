@@ -23,4 +23,6 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 
 ## Notes
 
-1. [Geeks for Geeks - Serialize and Deserialize a Binary Tree] (https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/)
+1. [Geeks for Geeks - Serialize and Deserialize a Binary Tree](https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/)
+1. [LeetCode discussion - Easy to understand Java Solution](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/discuss/74253/Easy-to-understand-Java-Solution)
+1. [ProgramCreek - Serialize and Deserialize a Binary Tree](https://www.programcreek.com/2014/05/leetcode-serialize-and-deserialize-binary-tree-java/)
