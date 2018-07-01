@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "DailyCodingProblem.src.SerializeAndDeserializeBinaryTree.Java.Solution",
+            "mainClass": "DailyCodingProblem.src.FirstMissingPositive.Java.Solution",
             "args": "",
         },
         {
