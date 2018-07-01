@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "3. Serialize and Deserialize Binary Tree",
+    "origin": {
+        "name": "Daily Coding Problem",
+        "link": "https://www.dailycodingproblem.com/"
+    },
+    "companies": [
+        "Google",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Tree",
+        "Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

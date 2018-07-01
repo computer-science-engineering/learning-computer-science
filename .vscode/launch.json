@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "DailyCodingProblem.src.FirstMissingPositive.Java.Solution",
+            "mainClass": "DailyCodingProblem.src.P5_FirstAndLastElementOfPair.Java.Solution",
             "args": "",
         },
         {
