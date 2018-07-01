@@ -1,0 +1,38 @@
+{
+    "type": "Coding",
+    "name": "4. First Missing Positive",
+    "origin": {
+        "name": "Daily Coding Problem",
+        "link": "https://www.dailycodingproblem.com/"
+    },
+    "companies": [
+        "Stripe"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

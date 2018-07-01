@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "5. First and Last Element of Pair",
+    "origin": {
+        "name": "Daily Coding Problem",
+        "link": "https://www.dailycodingproblem.com/"
+    },
+    "companies": [
+        "Jane Street"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
