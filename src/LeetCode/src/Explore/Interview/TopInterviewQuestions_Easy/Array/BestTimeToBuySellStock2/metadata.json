@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Remove Duplicates from Sorted Array",
+    "name": "Best Time to Buy and Sell Stock II",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/"
+        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/"
     },
     "companies": [
         "",
@@ -36,7 +36,7 @@
     ],
     "tags": [
         "Array",
-        "Two Pointers"
+        "Greedy"
     ],
     "buckets": [
         "",
