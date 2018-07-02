@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "DailyCodingProblem.src.P5_FirstAndLastElementOfPair.Java.Solution",
+            "mainClass": "LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.RemoveDuplicatesFromSortedArray.Java.Solution",
             "args": "",
         },
         {
