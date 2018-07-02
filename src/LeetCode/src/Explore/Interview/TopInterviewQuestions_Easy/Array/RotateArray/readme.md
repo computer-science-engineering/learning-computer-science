@@ -33,3 +33,5 @@ rotate 2 steps to the right: [3,99,-1,-100]
 * Could you do it in-place with O(1) extra space?
 
 ## Notes
+
+1. [LeetCode discussion - Easy to read Java solution](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/discuss/54250/Easy-to-read-Java-solution)

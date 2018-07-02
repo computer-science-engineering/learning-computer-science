@@ -36,3 +36,5 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 
 ## Notes
+
+1. [LeetCode discussion - Is this question a joke?](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/discuss/39402/Is-this-question-a-joke)
