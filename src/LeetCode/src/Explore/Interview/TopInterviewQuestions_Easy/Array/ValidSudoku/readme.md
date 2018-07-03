@@ -119,3 +119,5 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
         }
     }
     ```
+
+1. [YT Video - AceTheCodingInterview - Mock Coding Interview Question: Valid Sudoku [LeetCode]](https://www.youtube.com/watch?v=i2YKwM9oCcY)

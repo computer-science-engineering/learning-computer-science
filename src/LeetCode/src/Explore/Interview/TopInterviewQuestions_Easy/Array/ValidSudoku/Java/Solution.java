@@ -18,7 +18,7 @@ public class Solution {
             {'.','.','.','.','8','.','.','7','9'}
         };
 
-        System.out.println(isValidSudoku(board));
+        System.out.println(isValidSudoku_threeHashSets(board));
     }
 
     public static boolean isValidSudoku(char[][] board) {
@@ -59,6 +59,7 @@ public class Solution {
                 }
                 int RowIndex = 3*(i/3);
                 int ColIndex = 3*(i%3);
+                System.out.println(RowIndex + " " + ColIndex + " || " + (int)(RowIndex + j/3) + " " + (int)(ColIndex + j%3));
                 if(board[RowIndex + j/3][ColIndex + j%3]!='.' && !cube.add(board[RowIndex + j/3][ColIndex + j%3])) {
                     return false;
                 }
