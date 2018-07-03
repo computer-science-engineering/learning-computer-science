@@ -17,3 +17,5 @@ Output: [1,3,12,0,0]
 2. Minimize the total number of operations.
 
 ## Notes
+
+1. [LeetCode discussion - Java Solution O(N) no swap and exactly one pass iteration](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/discuss/143642/Java-Solution-O(N)-no-swap-and-exactly-one-pass-iteration)
