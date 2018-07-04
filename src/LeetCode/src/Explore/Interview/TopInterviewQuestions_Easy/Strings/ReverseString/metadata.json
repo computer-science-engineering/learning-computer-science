@@ -1,0 +1,45 @@
+{
+    "type": "Coding",
+    "name": "Reverse String",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Top Interview Questions - Easy",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Two Pointers"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
