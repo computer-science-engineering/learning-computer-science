@@ -1,0 +1,46 @@
+{
+    "type": "Coding",
+    "name": "Valid Anagram",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/882/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Top Interview Questions - Easy",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Hash Table",
+        "Sort"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
