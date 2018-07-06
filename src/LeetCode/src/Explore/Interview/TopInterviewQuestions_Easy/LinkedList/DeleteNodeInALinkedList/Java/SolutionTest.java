@@ -31,11 +31,24 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            ListNode a1 = new ListNode(4);
+            ListNode a2 = new ListNode(5);
+            ListNode a3 = new ListNode(1);
+            ListNode a4 = new ListNode(9);
+            a1.next = a2;
+            a2.next = a3;
+            a3.next = a4;
+            int[] expected = {4, 5, 9};
+            Solution.deleteNode(a3);
+            int[] actual = new int[3];
+            int i=0;
+            while(a1.next != null) {
+                actual[i++] = a1.val;
+                a1 = a1.next;
+            }
+            actual[i] = a1.val;
+            assertArrayEquals(expected, actual);
         });
     }
 }
