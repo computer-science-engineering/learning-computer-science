@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Strings.LongestCommonPrefix.Java.Solution",
+            "mainClass": "LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.LinkedList.DeleteNodeInALinkedList.Java.Solution",
             "args": "",
         },
         {
