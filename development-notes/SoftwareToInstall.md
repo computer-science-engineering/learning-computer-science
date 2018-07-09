@@ -209,6 +209,8 @@
 - Winscp
 - CDisplayEx
 - f.lux
+- Discord
+- Twitch
 
 ### 1.3 Linux only
 
