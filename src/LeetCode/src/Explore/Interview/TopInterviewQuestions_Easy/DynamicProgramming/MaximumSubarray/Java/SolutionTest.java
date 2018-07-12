@@ -31,11 +31,11 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 6;
+            int actual = Solution.maxSubArray(nums);
+            assertEquals(expected, actual);
         });
     }
 }
