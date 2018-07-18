@@ -28,13 +28,13 @@ public class Solution {
     }
 
     public static ListNode mergeKLists(ListNode[] lists) {
-        if (lists==null || lists.length==0) {
+        if (lists == null || lists.length == 0) {
             return null;
         }
         
-        PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.length,new Comparator<ListNode>() {
+        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(lists.length, new Comparator<ListNode>() {
             @Override
-            public int compare(ListNode o1,ListNode o2) {
+            public int compare(ListNode o1, ListNode o2) {
                 if (o1.val < o2.val) {
                     return -1;
                 }
