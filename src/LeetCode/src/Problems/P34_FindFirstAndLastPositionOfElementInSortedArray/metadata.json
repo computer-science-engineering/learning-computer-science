@@ -1,0 +1,38 @@
+{
+    "type": "Coding",
+    "name": "34. Find First and Last Position of Element in Sorted Array",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/"
+    },
+    "companies": [
+        "LinkedIn"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Binary Search"
+    ],
+    "buckets": [
+        ""
+    ]
+}
