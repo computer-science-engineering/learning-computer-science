@@ -25,3 +25,4 @@ Output: [-1,-1]
 ## Notes
 
 1. [LeetCode discussion - A very simple Java solution, with only one binary search algorithm](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14701/A-very-simple-Java-solution-with-only-one-binary-search-algorithm)
+1. [LeetCode article](https://leetcode.com/articles/find-first-and-last-position-element-sorted-array/)
