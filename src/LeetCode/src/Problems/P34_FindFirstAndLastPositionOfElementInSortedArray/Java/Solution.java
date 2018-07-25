@@ -24,7 +24,7 @@ public class Solution {
 	private static int firstGreaterEqual(int[] A, int target) {
 		int low = 0, high = A.length;
 		while (low < high) {
-			int mid = low + ((high - low) >> 1);
+			int mid = low + ((high - low) / 2); //>> 1
 			//low <= mid < high
 			if (A[mid] < target) {
 				low = mid + 1;
