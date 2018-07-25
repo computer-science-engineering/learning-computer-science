@@ -1,0 +1,43 @@
+{
+    "type": "Coding",
+    "name": "46. Permutations",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/permutations/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Google",
+        "Amazon",
+        "Microsoft",
+        "Bloomberg",
+        "Yahoo"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Backtracking"
+    ],
+    "buckets": [
+        ""
+    ]
+}
