@@ -1,0 +1,41 @@
+{
+    "type": "Coding",
+    "name": "65. Valid Number",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/valid-number/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Adobe",
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Math",
+        "String"
+    ],
+    "buckets": [
+        ""
+    ]
+}
