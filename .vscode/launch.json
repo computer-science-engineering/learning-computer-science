@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P46_Permutations.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P187_RepeatedDnaSequences.Java.Solution",
             "args": "",
         },
         {

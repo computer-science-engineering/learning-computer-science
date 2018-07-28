@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "187. Repeated DNA Sequences",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/repeated-dna-sequences/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Amazon"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Hash Table",
+        "Bit Manipulation"
+    ],
+    "buckets": [
+        ""
+    ]
+}
