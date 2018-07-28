@@ -1,0 +1,41 @@
+{
+    "type": "Coding",
+    "name": "205. Isomorphic Strings",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/isomorphic-strings/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Google",
+        "Bloomberg",
+        "Yahoo",
+        "eBay"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Hash Table"
+    ],
+    "buckets": [
+        ""
+    ]
+}
