@@ -1,0 +1,37 @@
+{
+    "type": "Coding",
+    "name": "256. Paint House",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/paint-house/description/"
+    },
+    "companies": [
+        "LinkedIn"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        ""
+    ]
+}
