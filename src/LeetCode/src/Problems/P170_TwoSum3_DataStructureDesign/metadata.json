@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "170. Two Sum III - Data structure design",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/two-sum-iii-data-structure-design/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Uber"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Hash Table",
+        "Design"
+    ],
+    "buckets": [
+        ""
+    ]
+}
