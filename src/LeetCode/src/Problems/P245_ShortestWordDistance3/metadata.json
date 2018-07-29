@@ -1,0 +1,37 @@
+{
+    "type": "Coding",
+    "name": "245. Shortest Word Distance 3",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/shortest-word-distance-iii/description/"
+    },
+    "companies": [
+        "LinkedIn"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array"
+    ],
+    "buckets": [
+        ""
+    ]
+}
