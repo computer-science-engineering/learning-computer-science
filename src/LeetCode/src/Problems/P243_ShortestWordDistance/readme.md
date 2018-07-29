@@ -10,6 +10,9 @@ Assume that words = `["practice", "makes", "perfect", "coding", "makes"]`.
 ```text
 Input: word1 = “coding”, word2 = “practice”
 Output: 3
+```
+
+```text
 Input: word1 = "makes", word2 = "coding"
 Output: 1
 ```
