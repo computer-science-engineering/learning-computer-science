@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "243. Shortest Word Distance",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/shortest-word-distance/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Microsoft",
+        "Indeed"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array"
+    ],
+    "buckets": [
+        ""
+    ]
+}
