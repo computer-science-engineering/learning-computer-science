@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P3_SerializeAndDeserializeBinaryTree.Java;
+package DailyCodingProblem.src.P1_P100.P3_SerializeAndDeserializeBinaryTree.Java;
 
 import java.util.ArrayList;
 import java.util.Arrays;

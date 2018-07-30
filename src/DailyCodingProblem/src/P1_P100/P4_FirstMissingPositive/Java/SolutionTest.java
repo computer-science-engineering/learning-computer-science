@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P5_FirstAndLastElementOfPair.Java;
+package DailyCodingProblem.src.P1_P100.P4_FirstMissingPositive.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,14 +31,11 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        cons pair = new cons(3, 4);
+        int[] input = {1, 2, 0};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int expectedFirstElement = 3;
-            int expectedSecondElement = 4;
-            int actualFirstElement = Solution.car(pair);
-            int actualSecondElement = Solution.cdr(pair);
-            assertEquals(expectedFirstElement, actualFirstElement);
-            assertEquals(expectedSecondElement, actualSecondElement);
+            int actual = Solution.findMissingPositive(input);
+            int expected = 3;
+            assertEquals(expected, actual);
         });
     }
 }

@@ -1,0 +1,47 @@
+{
+    "type": "Coding",
+    "name": "297. Serialize and Deserialize Binary Tree",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Intuit",
+        "Uber",
+        "Bloomberg",
+        "Apple",
+        "Yahoo"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Tree",
+        "Design"
+    ],
+    "buckets": [
+        ""
+    ]
+}

@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P1_TwoSum.Java;
+package DailyCodingProblem.src.P1_P100.P1_TwoSum.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
