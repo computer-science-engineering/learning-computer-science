@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P256_PaintHouse.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P198_HouseRobber.Java.Solution",
             "args": "",
         },
         {

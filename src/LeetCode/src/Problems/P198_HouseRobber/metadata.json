@@ -1,0 +1,45 @@
+{
+    "type": "Coding",
+    "name": "198. House Robber",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/house-robber/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Airbnb",
+        "Tencent",
+        "Alibaba",
+        "Samsung",
+        "Baidu",
+        "Pocket Gems",
+        "Amazon",
+        "Google"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        ""
+    ]
+}
