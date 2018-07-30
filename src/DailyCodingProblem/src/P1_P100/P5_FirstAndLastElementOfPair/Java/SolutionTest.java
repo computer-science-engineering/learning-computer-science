@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P3_SerializeAndDeserializeBinaryTree.Java;
+package DailyCodingProblem.src.P1_P100.P5_FirstAndLastElementOfPair.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,18 +31,14 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        int[] values = {
-            5,
-            4, 8,
-            11, -1, 13, 4,
-            7, 2, -1, -1, -1, -1, 5, 1};
+        cons pair = new cons(3, 4);
         assertTimeout(Duration.ofMillis(500), () -> {
-            String expectedString = "5,4,11,7,X,X,2,X,X,X,8,13,X,X,4,5,X,X,1,X,X,";            
-            String actual = Solution.serialize(TreeNode.fromArray(values));
-            TreeNode deserializedNode = Solution.deserialize(actual);
-            String actualAgain = Solution.serialize(deserializedNode);
-            assertEquals(expectedString, actual);
-            assertEquals(expectedString, actualAgain);
+            int expectedFirstElement = 3;
+            int expectedSecondElement = 4;
+            int actualFirstElement = Solution.car(pair);
+            int actualSecondElement = Solution.cdr(pair);
+            assertEquals(expectedFirstElement, actualFirstElement);
+            assertEquals(expectedSecondElement, actualSecondElement);
         });
     }
 }

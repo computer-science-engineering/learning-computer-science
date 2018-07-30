@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P4_FirstMissingPositive.Java;
+package DailyCodingProblem.src.P1_P100.P3_SerializeAndDeserializeBinaryTree.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,11 +31,18 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        int[] input = {1, 2, 0};
+        int[] values = {
+            5,
+            4, 8,
+            11, -1, 13, 4,
+            7, 2, -1, -1, -1, -1, 5, 1};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int actual = Solution.findMissingPositive(input);
-            int expected = 3;
-            assertEquals(expected, actual);
+            String expectedString = "5,4,11,7,X,X,2,X,X,X,8,13,X,X,4,5,X,X,1,X,X,";            
+            String actual = Solution.serialize(TreeNode.fromArray(values));
+            TreeNode deserializedNode = Solution.deserialize(actual);
+            String actualAgain = Solution.serialize(deserializedNode);
+            assertEquals(expectedString, actual);
+            assertEquals(expectedString, actualAgain);
         });
     }
 }

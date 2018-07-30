@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P2_ProductOfArrayExceptSelf.Java;
+package DailyCodingProblem.src.P1_P100.P2_ProductOfArrayExceptSelf.Java;
 
 public class Solution {
     public static void main(String[] args) {

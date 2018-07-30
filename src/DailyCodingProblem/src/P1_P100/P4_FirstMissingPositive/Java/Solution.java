@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P4_FirstMissingPositive.Java;
+package DailyCodingProblem.src.P1_P100.P4_FirstMissingPositive.Java;
 
 public class Solution {
     public static void main(String[] args) {

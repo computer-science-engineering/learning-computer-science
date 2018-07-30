@@ -94,6 +94,7 @@
         "datasets",
         "denormalize",
         "deployable",
+        "deserialization",
         "deserialize",
         "deserialized",
         "deserializes",

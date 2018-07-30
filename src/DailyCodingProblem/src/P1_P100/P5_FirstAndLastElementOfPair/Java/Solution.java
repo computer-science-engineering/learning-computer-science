@@ -1,4 +1,4 @@
-package DailyCodingProblem.src.P5_FirstAndLastElementOfPair.Java;
+package DailyCodingProblem.src.P1_P100.P5_FirstAndLastElementOfPair.Java;
 
 public class Solution {
     public static void main(String[] args) {
