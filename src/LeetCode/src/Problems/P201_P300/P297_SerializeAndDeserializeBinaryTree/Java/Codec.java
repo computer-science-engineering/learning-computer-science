@@ -25,6 +25,7 @@ public class Codec {
             buildString(node.right,sb);
         }
     }
+
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         Deque<String> nodes = new LinkedList<>();
@@ -34,7 +35,9 @@ public class Codec {
     
     private TreeNode buildTree(Deque<String> nodes) {
         String val = nodes.remove();
-        if (val.equals(NN)) return null;
+        if (val.equals(NN)) {
+            return null;
+        }
         else {
             TreeNode node = new TreeNode(Integer.valueOf(val));
             node.left = buildTree(nodes);
