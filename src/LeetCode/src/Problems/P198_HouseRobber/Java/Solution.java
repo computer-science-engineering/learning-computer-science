@@ -3,7 +3,7 @@ package LeetCode.src.Problems.P198_HouseRobber.Java;
 public class Solution {
     public static void main(String[] args) {
         int[] nums = {2,7,9,3,1};
-        System.out.println(rob(nums));
+        System.out.println(rob_opt(nums));
     }
 
     public static int rob(int[] nums) {
