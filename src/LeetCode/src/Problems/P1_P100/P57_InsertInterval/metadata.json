@@ -1,0 +1,44 @@
+{
+    "type": "Coding",
+    "name": "57. Insert Interval",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/insert-interval/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Uber",
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Twitter"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Sort"
+    ],
+    "buckets": [
+        ""
+    ]
+}

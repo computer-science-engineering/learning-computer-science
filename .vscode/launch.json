@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P301_P400.P311_SparseMatrixMultiplication.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P1_P100.P57_InsertInterval.Java.Solution",
             "args": "",
         },
         {
