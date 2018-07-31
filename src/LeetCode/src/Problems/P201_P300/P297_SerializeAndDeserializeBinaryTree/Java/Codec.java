@@ -22,7 +22,7 @@ public class Codec {
         } else {
             sb.append(node.val).append(spliter);
             buildString(node.left, sb);
-            buildString(node.right,sb);
+            buildString(node.right, sb);
         }
     }
 

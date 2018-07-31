@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P201_P300.P297_SerializeAndDeserializeBinaryTree.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P101_P200.P173_BinarySearchTreeIterator.Java.Solution",
             "args": "",
         },
         {
