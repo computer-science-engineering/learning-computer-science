@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P101_P200.P103_BinaryTreeZigzagLevelOrderTraversal.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P301_P400.P339_NestedListWeightSum.Java.Solution",
             "args": "",
         },
         {
