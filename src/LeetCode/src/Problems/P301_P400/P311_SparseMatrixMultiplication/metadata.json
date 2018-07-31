@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "311. Sparse Matrix Multiplication",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/sparse-matrix-multiplication/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Google",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Hash Table"
+    ],
+    "buckets": [
+        ""
+    ]
+}
