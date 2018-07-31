@@ -1,23 +1,14 @@
 {
     "type": "Coding",
-    "name": "103. Binary Tree Zigzag Level Order Traversal",
+    "name": "339. Nested List Weight Sum",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal"
+        "link": "https://leetcode.com/problems/nested-list-weight-sum/description/"
     },
     "companies": [
         "LinkedIn",
         "Facebook",
-        "Amazon",
-        "Google",
-        "Microsoft",
-        "Apple",
-        "Uber",
-        "Bloomberg",
-        "Apple",
-        "Tencent",
-        "eBay",
-        "Alibaba"
+        "Snapchat"
     ],
     "categories": [
         {
@@ -33,16 +24,14 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Medium",
+                    "name": "Easy",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Stack",
-        "Tree",
-        "Breadth-first Search"
+        "Depth-first Search"
     ],
     "buckets": [
         ""
