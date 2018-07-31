@@ -1,0 +1,44 @@
+{
+    "type": "Coding",
+    "name": "50. Pow(x, n)",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/powx-n/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Bloomberg",
+        "Alibaba"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Math",
+        "Binary Search"
+    ],
+    "buckets": [
+        ""
+    ]
+}
