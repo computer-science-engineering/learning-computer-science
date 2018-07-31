@@ -1,0 +1,42 @@
+{
+    "type": "Coding",
+    "name": "277. Find the Celebrity",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/find-the-celebrity/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Microsoft",
+        "Pinterest",
+        "Apple",
+        "Yahoo"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array"
+    ],
+    "buckets": [
+        ""
+    ]
+}
