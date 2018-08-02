@@ -17,51 +17,42 @@ public class Solution {
     }
 
     public static int maxPoints(Point[] points) {
-        if (points == null) {
+        if (points == null || points.length == 0) {
             return 0;
         }
-
-        if (points.length <= 2) {
-            return points.length;
-        }
-        
-        Map<Integer,Map<Integer,Integer>> map = new HashMap<Integer,Map<Integer,Integer>>();
-        int result=0;
-        for (int i=0; i<points.length; i++) { 
+        int result = 0;
+        Map<String, Integer> map = new HashMap<>();
+        // double for loop to try all points. O(n^2)
+        for (int i = 0; i < points.length; i++) {
+            int max = 0, overlap = 0;
             map.clear();
-            int overlap=0,max=0;
-            for (int j=i+1; j<points.length; j++) {
-                int x=points[j].x-points[i].x;
-                int y=points[j].y-points[i].y;
-                if (x==0 && y==0) {
+            for (int j = i + 1; j < points.length; j++) {
+                int x = points[j].x - points[i].x;
+                int y = points[j].y - points[i].y;
+                if (x == 0 && y == 0) {
                     overlap++;
                     continue;
                 }
-                int gcd=generateGCD(x,y);
-                if (gcd!=0) {
-                    x/=gcd;
-                    y/=gcd;
+                int gcd = generateGCD(x, y);
+                if (gcd != 0) {
+                    x /= gcd;
+                    y /= gcd;
                 }
-                
-                if (map.containsKey(x)) {
-                    if (map.get(x).containsKey(y)) {
-                        map.get(x).put(y, map.get(x).get(y)+1);
-                    } else {
-                        map.get(x).put(y, 1);
-                    }   					
+                String key = x + ":" + y;
+                if (map.containsKey(key)) {
+                    map.put(key, map.get(key) + 1);
                 } else {
-                    Map<Integer,Integer> m = new HashMap<Integer,Integer>();
-                    m.put(y, 1);
-                    map.put(x, m);
+                    map.put(key, 1);
                 }
-                max=Math.max(max, map.get(x).get(y));
+                max = Math.max(max, map.get(key));
             }
-            result=Math.max(result, max+overlap+1);
+            result = Math.max(result, max + overlap + 1);
         }
         return result;
+
     }
 
-    private static int generateGCD(int a,int b) {    
+    private static int generateGCD(int a, int b) {    
         if (b==0) {
             return a;
         }
