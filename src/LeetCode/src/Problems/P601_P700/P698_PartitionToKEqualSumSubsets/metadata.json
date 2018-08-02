@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "698. Partition to K Equal Sum Subsets",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Bloomberg"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        "Recursion"
+    ],
+    "buckets": [
+        ""
+    ]
+}

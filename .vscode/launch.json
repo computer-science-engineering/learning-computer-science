@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P201_P300.P254_FactorCombinations.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P601_P700.P698_PartitionToKEqualSumSubsets.Java.Solution",
             "args": "",
         },
         {
