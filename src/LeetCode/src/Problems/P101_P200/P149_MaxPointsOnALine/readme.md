@@ -54,3 +54,5 @@ Explanation:
     Since a is a rational, there exists y0 and x0, y0/x0=(y3-y1)/(x3-x1)=(y2-y1)/(x2-x1)=a
 
     So we can use y0&x0 to track a line;
+
+1. [YT Video - Grewal Academy - Java - Write a program to find maximum number of points lie on the straight line](https://www.youtube.com/watch?v=lm31nrrnarQ)
