@@ -1,4 +1,4 @@
-package LeetCode.src.Problems.P301_P400.P366_FindLeavesOfBinaryTree.Java;
+package LeetCode.src.Problems.P201_P300.P254_FactorCombinations.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,18 +34,14 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        int[] values = {
-            1,
-            2, 3,
-            4, 5, -1, -1};
-        TreeNode root = TreeNode.fromArray(values);
+        int n = 12;
         assertTimeout(Duration.ofMillis(500), () -> {
             List<List<Integer>> expected = Arrays.asList(
-                Arrays.asList(4, 5, 3),
-                Arrays.asList(2),
-                Arrays.asList(1)
+                Arrays.asList(2, 2, 3),
+                Arrays.asList(2, 6),
+                Arrays.asList(3, 4)
             );
-            List<List<Integer>> actual = Solution.findLeaves(root);
+            List<List<Integer>> actual = Solution.getFactors(n);
             assertEquals(expected, actual);
         });
     }
