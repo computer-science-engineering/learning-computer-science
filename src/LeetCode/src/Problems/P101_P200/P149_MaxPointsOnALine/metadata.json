@@ -1,0 +1,45 @@
+{
+    "type": "Coding",
+    "name": "149. Max Points on a Line",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/max-points-on-a-line/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Adobe",
+        "Alibaba",
+        "Twitter",
+        "Apple"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Hash Table",
+        "Math"
+    ],
+    "buckets": [
+        ""
+    ]
+}

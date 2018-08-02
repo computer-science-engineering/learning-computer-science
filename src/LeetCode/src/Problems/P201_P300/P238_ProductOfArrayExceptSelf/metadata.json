@@ -1,0 +1,47 @@
+{
+    "type": "Coding",
+    "name": "238. Product of Array Except Self",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/product-of-array-except-self/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Microsoft",
+        "Yelp",
+        "Expedia",
+        "Zenefits",
+        "Google",
+        "Hulu",
+        "Apple",
+        "Amazon",
+        "Facebook",
+        "Lyft"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array"
+    ],
+    "buckets": [
+        ""
+    ]
+}
