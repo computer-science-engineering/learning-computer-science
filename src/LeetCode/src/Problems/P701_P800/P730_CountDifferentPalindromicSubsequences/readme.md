@@ -39,3 +39,7 @@ There are 3104860382 different non-empty palindromic subsequences, which is 1048
 ## Notes
 
 1. [LeetCode discussion - Accepted Java Solution using memoization](https://leetcode.com/problems/count-different-palindromic-subsequences/discuss/109509/Accepted-Java-Solution-using-memoization)
+1. [LeetCode article](https://leetcode.com/articles/count-different-palindromic-subsequences/)
+1. [YT Video - Vivekanand Khyade - Longest Palindromic Subsequence and it's Length (ALGORITHM -DYNAMIC PROGRAMMING)](https://www.youtube.com/watch?v=yZWmS6CXbQc)
+1. [YT Video - Tushar Roy - Longest Palindromic Substring Manacher's Algorithm](https://www.youtube.com/watch?v=V-sEwsca1ak)
+1. [YT Video - Tushar Roy - Longest Palindromic Subsequence](https://www.youtube.com/watch?v=_nCsPn7_OgI)
