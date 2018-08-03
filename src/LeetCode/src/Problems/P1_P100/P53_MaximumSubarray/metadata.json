@@ -1,0 +1,49 @@
+{
+    "type": "Coding",
+    "name": "53. Maximum Subarray",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/maximum-subarray/description/"
+    },
+    "companies": [
+        "Facebook",
+        "Microsoft",
+        "Amazon",
+        "eBay",
+        "Uber",
+        "LinkedIn",
+        "Apple",
+        "NetEase",
+        "Tencent",
+        "Adobe",
+        "Google",
+        "Alibaba",
+        "Hulu",
+        "Bloomberg"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Dynamic Programming"
+    ]
+}

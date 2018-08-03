@@ -37,4 +37,5 @@ Return :  1
     *`maxCur = current maximum value`
 
     *`maxSoFar = maximum value found so far`
+
 1. [LeetCode discussion - solution with O(N) time and O(1) space](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39062/My-jave-accepted-solution-with-O(N)-time-and-O(1)-space)
