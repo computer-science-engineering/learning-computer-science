@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P1_P100.P53_MaximumSubarray.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P701_P800.P730_CountDifferentPalindromicSubsequences.Java.Solution",
             "args": "",
         },
         {

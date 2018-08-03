@@ -1,0 +1,38 @@
+{
+    "type": "Coding",
+    "name": "730. Count Different Palindromic Subsequences",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/count-different-palindromic-subsequences/description/"
+    },
+    "companies": [
+        "LinkedIn"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        ""
+    ]
+}
