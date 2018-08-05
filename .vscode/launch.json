@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P1_P100.P68_TextJustification.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P1_P100.P76_MinimumWindowSubstring.Java.Solution",
             "args": "",
         },
         {
