@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P501_P600.P515_FindLargestValueInEachTreeRow.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P601_P700.P605_CanPlaceFlowers.Java.Solution",
             "args": "",
         },
         {
