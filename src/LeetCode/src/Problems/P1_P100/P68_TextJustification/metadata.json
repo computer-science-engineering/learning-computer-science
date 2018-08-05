@@ -1,0 +1,45 @@
+{
+    "type": "Coding",
+    "name": "68. Text Justification",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/text-justification/description/"
+    },
+    "companies": [
+        "Apple",
+        "Microsoft",
+        "Uber",
+        "Google",
+        "Facebook",
+        "Snapchat",
+        "Amazon",
+        "LinkedIn",
+        "Airbnb"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String"
+    ],
+    "buckets": [
+        ""
+    ]
+}
