@@ -14,7 +14,7 @@ public class Solution {
             new Interval(8,10),
             new Interval(15,18)
         );
-        List<Interval> result = merge(intervals);
+        List<Interval> result = merge_opt(intervals);
         for (Interval interval : result) {
             System.out.println(interval.start + " " + interval.end);
         }
@@ -53,8 +53,9 @@ public class Solution {
     }
 
     public static List<Interval> merge_opt(List<Interval> intervals) {
-        if (intervals == null || intervals.size() == 0)
+        if (intervals == null || intervals.size() == 0) {
             return new ArrayList<Interval>();
+        }
         int n = intervals.size();
         int[] start = new int[n], end = new int[n];
         
