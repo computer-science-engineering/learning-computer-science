@@ -1,0 +1,38 @@
+{
+    "type": "Coding",
+    "name": "633. Sum of Square Numbers",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/sum-of-square-numbers/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Math"
+    ],
+    "buckets": [
+        ""
+    ]
+}
