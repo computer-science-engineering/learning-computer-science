@@ -1,0 +1,47 @@
+{
+    "type": "Coding",
+    "name": "647. Palindromic Substrings",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/palindromic-substrings/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Twitter",
+        "Pure Storage",
+        "Facebook",
+        "Amazon",
+        "Expedia",
+        "Google",
+        "Microsoft",
+        "Apple",
+        "Uber"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        ""
+    ]
+}
