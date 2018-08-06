@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "671. Second Minimum Node In a Binary Tree",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Microsoft",
+        "Apple"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Tree"
+    ],
+    "buckets": [
+        ""
+    ]
+}
