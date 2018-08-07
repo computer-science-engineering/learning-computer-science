@@ -73,3 +73,4 @@ Output:
 1. [Program Creek](https://www.programcreek.com/2014/05/leetcode-text-justification-java/)
 1. [SO post](https://stackoverflow.com/questions/8524979/justify-text-in-java)
 1. [LeetCode discussion - Simple Java Solution](https://leetcode.com/problems/text-justification/discuss/24876/Simple-Java-Solution)
+1. [YT Video - Tushar Roy - Text Justification Dynamic Programming](https://www.youtube.com/watch?v=RORuwHiblPc)
