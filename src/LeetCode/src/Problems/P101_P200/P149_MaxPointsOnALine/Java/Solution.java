@@ -33,7 +33,7 @@ public class Solution {
                     overlap++;
                     continue;
                 }
-                int gcd = generateGCD(x, y);
+                int gcd = generateGCD(x, y); // Instead of GCD we can use slope ((double)y / (double)x) as map's key directly.
                 if (gcd != 0) {
                     x /= gcd;
                     y /= gcd;
