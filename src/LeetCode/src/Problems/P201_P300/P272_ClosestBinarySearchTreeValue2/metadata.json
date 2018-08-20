@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "272. Closest Binary Search Tree Value II",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/closest-binary-search-tree-value-ii/description/"
+    },
+    "companies": [
+        "LinkedIn",
+        "ForUsAll"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Stack",
+        "Tree"
+    ],
+    "buckets": [
+        ""
+    ]
+}
