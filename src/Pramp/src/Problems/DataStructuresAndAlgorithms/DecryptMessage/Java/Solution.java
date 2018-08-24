@@ -1,4 +1,4 @@
-package Pramp.src.Problems.DecryptMessage.Java;
+package Pramp.src.Problems.DataStructuresAndAlgorithms.DecryptMessage.Java;
 
 public class Solution {
     public static void main(String[] args) {

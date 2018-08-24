@@ -1,4 +1,4 @@
-package Pramp.src.Problems.DecryptMessage.Java;
+package Pramp.src.Problems.DataStructuresAndAlgorithms.DecryptMessage.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
