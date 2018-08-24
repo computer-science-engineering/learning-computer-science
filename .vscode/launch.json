@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P101_P200.P156_BinaryTreeUpsideDown.Java.Solution",
+            "mainClass": "Pramp.src.Problems.DecryptMessage.Java.Solution",
             "args": "",
         },
         {
