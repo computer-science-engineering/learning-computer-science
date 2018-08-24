@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Sales Rank",
+    "origin": {
+        "name": "Pramp",
+        "link": "https://www.pramp.com/challenge/9PNnW3nbyZHlovqAvx3l"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
