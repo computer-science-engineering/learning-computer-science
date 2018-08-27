@@ -3,7 +3,7 @@ package LeetCode.src.Problems.P101_P200.P10_RegularExpressionMatching.Java;
 class Solution {     
     
     public static void main(String[] args) {
-        String text =    "";
+        String text = "";
         String pattern = "a*";
         System.out.println(isMatch(text, pattern));
     }
@@ -39,7 +39,7 @@ class Solution {
         return dp[s.length()][p.length()];
     }
   
-    public static boolean isMatch_gfg(String text, String pattern) {
+    /*public static boolean isMatch_gfg(String text, String pattern) {
         int x = text.length();
         int y = pattern.length();
         
@@ -74,5 +74,5 @@ class Solution {
         }
         
         return track[x][y];    
-    }  
+    }*/
 }

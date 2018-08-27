@@ -31,11 +31,67 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        String s = "";
+        String p = "a*";
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            boolean expected = true;
+            boolean actual = Solution.isMatch(s, p);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        String s = "aa";
+        String p = "a";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = false;
+            boolean actual = Solution.isMatch(s, p);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase3() {
+        String s = "aa";
+        String p = "a*";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = true;
+            boolean actual = Solution.isMatch(s, p);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase4() {
+        String s = "ab";
+        String p = ".*";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = true;
+            boolean actual = Solution.isMatch(s, p);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase5() {
+        String s = "aab";
+        String p = "c*a*b";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = true;
+            boolean actual = Solution.isMatch(s, p);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase6() {
+        String s = "mississippi";
+        String p = "mis*is*p*.";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = false;
+            boolean actual = Solution.isMatch(s, p);
+            assertEquals(expected, actual);
         });
     }
 }
