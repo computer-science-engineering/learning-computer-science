@@ -1,4 +1,4 @@
-package LeetCode.src.Problems.P101_P200.P10_RegularExpressionMatching.Java;
+package LeetCode.src.Problems.P1_P100.P10_RegularExpressionMatching.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
