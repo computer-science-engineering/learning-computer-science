@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Basic Regex Parser",
+    "origin": {
+        "name": "Pramp",
+        "link": "https://www.pramp.com/challenge/KvZ3aL35Ezc5K9Eq9Llp"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
