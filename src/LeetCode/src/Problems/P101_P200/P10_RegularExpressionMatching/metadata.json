@@ -1,0 +1,45 @@
+{
+    "type": "Coding",
+    "name": "10. Regular Expression Matching",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/regular-expression-matching/description/"
+    },
+    "companies": [
+        "Facebook",
+        "Microsoft",
+        "Google",
+        "Coursera",
+        "Bloomberg",
+        "Apple"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Dynamic Programming",
+        "Backtracking"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
