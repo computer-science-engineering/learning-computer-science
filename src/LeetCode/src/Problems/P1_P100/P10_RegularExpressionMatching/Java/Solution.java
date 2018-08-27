@@ -1,4 +1,4 @@
-package LeetCode.src.Problems.P101_P200.P10_RegularExpressionMatching.Java;
+package LeetCode.src.Problems.P1_P100.P10_RegularExpressionMatching.Java;
 
 class Solution {     
     
@@ -13,12 +13,17 @@ class Solution {
             return false;
         }
         boolean[][] dp = new boolean[s.length()+1][p.length()+1];
+
+        // empty pattern can match with empty string
         dp[0][0] = true;
+        
+        // Only '*' can match with empty string
         for (int i = 0; i < p.length(); i++) {
             if (p.charAt(i) == '*' && dp[0][i-1]) {
                 dp[0][i+1] = true;
             }
         }
+        
         for (int i = 0 ; i < s.length(); i++) {
             for (int j = 0; j < p.length(); j++) {
                 if (p.charAt(j) == '.') {
@@ -54,9 +59,9 @@ class Solution {
         
         // handle "*" during initialization
         for(int j=1; j<=y; j++) {
-        if (pattern.charAt(j) == '*' && track[0][j-1]) {
-            track[0][j+1] = true;
-        }
+            if (pattern.charAt(j-1) == '*') {
+                track[0][j] = track[0][j-1];
+            }
         }    
 
         // populate matrix
