@@ -16,4 +16,5 @@ Design a feature like Amazon’s Sales Rank by Category.
 
 ## Notes
 
+1. [Pramp - The Complete System Design Interviewer Guide](https://medium.com/@pramp/the-complete-system-design-interviewer-guide-e5d273724db8)
 1. [GitHub - Donne Martin system-design-primer](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/sales_rank)

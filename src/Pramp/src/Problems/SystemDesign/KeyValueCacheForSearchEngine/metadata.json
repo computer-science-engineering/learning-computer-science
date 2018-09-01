@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Key-Value Cache for Search Engine",
+    "origin": {
+        "name": "Pramp",
+        "link": "https://www.pramp.com/challenge/L3wQBnQYAEh5K97W9OVK"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

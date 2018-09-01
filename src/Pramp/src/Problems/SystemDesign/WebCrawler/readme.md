@@ -70,3 +70,6 @@ Good luck!
         - Send data model to BE SQL d/b.
 
 ## Notes
+
+1. [Pramp - The Complete System Design Interviewer Guide](https://medium.com/@pramp/the-complete-system-design-interviewer-guide-e5d273724db8)
+1. [GitHub - Donne Martin system-design-prime](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/web_crawler#design-a-web-crawler)
