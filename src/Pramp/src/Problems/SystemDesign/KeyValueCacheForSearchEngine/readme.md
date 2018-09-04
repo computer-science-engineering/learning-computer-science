@@ -22,64 +22,66 @@ Use it to share thoughts and resources, such as:
 
 Good luck!
 
-*******************
+#####################
 
-https://sketchboard.me/dBcAEeDpWGgU#/
+[sketch-board](https://sketchboard.me/dBcAEeDpWGgU#/)
 
 1. Scope
 
-- Search for SE like google - 1000 queries/s
-- TTL/Eviction strategy? - [If item unused for x amount of time, release] - Only keep for last x queries.
-- Data consistency? Interaction with BE persisted store? Yes.
-- Text query - hyperlinks and snippet (snapshot). No additional media.
+    - Search for SE like google - 1000 queries/s
+    - TTL/Eviction strategy? - [If item unused for x amount of time, release] - Only keep for last x queries.
+    - Data consistency? Interaction with BE persisted store? Yes.
+    - Text query - hyperlinks and snippet (snapshot). No additional media.
 
-1. Some number crunching
+2. Some number crunching
 
-- QPS - 1k
-- What do we need to store
-  - query string (10 KB)
-  - hyperlinks of results (8 KB per result) (say 10 per query)
-  - snapshot for each result (500 KB per result)
-- 1 day ->
-  - 10 * 1000 * 24 * 60 * 60 = KB (queries)
-  - 80 * 1000 * 24 * 60 * 60 = KB (hyperlinks of results)
-  - 500 * 1000 * 24 * 60 * 60 = KM (snapshots for results)
-    10 TB;
+    - QPS - 1k
+    - What do we need to store
+      - query string (10 KB)
+      - hyperlinks of results (8 KB per result) (say 10 per query)
+      - snapshot for each result (500 KB per result)
+    - 1 day ->
+      - 10 * 1000 * 24 * 60 * 60 = KB (queries)
+      - 80 * 1000 * 24 * 60 * 60 = KB (hyperlinks of results)
+      - 500 * 1000 * 24 * 60 * 60 = KM (snapshots for results)
+        10 TB;
 
-1. Data Model
+3. Data Model
 
-- Map DS for QS and Results. [LRU implementation here]
-- Blob data - snapshot maps to a result/hyperlink. [LRU implementation here]
+    - Map DS for QS and Results. [LRU implementation here]
+    - Blob data - snapshot maps to a result/hyperlink. [LRU implementation here]
 
-1. System design
+4. System design
 
-1. Gateway
-- API
-- Hashing algo
+    1. Gateway
 
-1. Data partitioning
-- Use a hashing algorithm (range partitioning for uniformity)
-- partition by QS - HA - RP by Int64
-  
-- Caching service - deployed across multiple machines.
-  deployed to 10 machines.
-  
-1. Availability
+        - API
+        - Hashing algo
 
-- Implement Paxos/Raft (*)
-  - Use some OS solution
-  - Apache Z
-  - Microsoft SF
-- Implement data replication
+    1. Data partitioning
 
-1. Caching service
-- `Map<QS, List<hyperlink>>`
-- Snapshot blob - `Map<hyperlink, byte[]>`
-  
-- Persists to disk and hold on to memory
-- Disk persisted data eventually flushes to out-of-proc storage
+        - Use a hashing algorithm (range partitioning for uniformity)
+        - partition by QS - HA - RP by Int64
 
-- Redis and Memcache
+        - Caching service - deployed across multiple machines. Deployed to 10 machines.
+
+    1. Availability
+
+        - Implement Paxos/Raft (*)
+          - Use some OS solution
+          - Apache Z
+          - Microsoft SF
+        - Implement data replication
+
+    1. Caching service
+
+        - `Map<QS, List<hyperlink>>`
+        - Snapshot blob - `Map<hyperlink, byte[]>`
+
+        - Persists to disk and hold on to memory
+        - Disk persisted data eventually flushes to out-of-proc storage
+
+        - Redis and Memcache
 
 ## Notes
 
