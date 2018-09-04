@@ -15,7 +15,7 @@ public class Solution {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i + 2 < nums.length; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) {              // skip same result
+            if (i > 0 && nums[i] == nums[i - 1]) { // skip same result
                 continue;
             }
             int j = i + 1, k = nums.length - 1;  
