@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Scale on the Cloud",
+    "origin": {
+        "name": "Pramp",
+        "link": "https://www.pramp.com/challenge/Q5G1jZ1OWdtZ3GbAGpal"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

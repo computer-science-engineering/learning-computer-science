@@ -70,3 +70,5 @@ You may assume that all words are consist of lowercase letters `a-z`.
     ```
 
 1. [LeetCode discussion - My simple and clean Java code](https://leetcode.com/problems/add-and-search-word-data-structure-design/discuss/59554/My-simple-and-clean-Java-code)
+1. [Geeks for Geeks - Trie | (Insert and Search)](https://www.geeksforgeeks.org/trie-insert-and-search/)
+1. [Medium - Trying to Understand Tries](https://medium.com/basecs/trying-to-understand-tries-3ec6bede0014)
