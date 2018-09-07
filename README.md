@@ -1,4 +1,4 @@
-# Learning Computer Science
+<img src="https://github.com/Pelikens/learning-computer-science/blob/master/New_Logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true"/> 
 
 ## Continuous Integration
 
