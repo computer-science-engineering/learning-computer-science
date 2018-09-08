@@ -2,6 +2,12 @@
 
 ## Description
 
+Popular social networks contain millions and even billions of connections between individuals.
+
+Design a system that allows a user to search for another person, and see the shortest path between them.
+
+#####################
+
 This editor is synced in real time with your peer.
 
 Use it to share thoughts and resources, such as:
