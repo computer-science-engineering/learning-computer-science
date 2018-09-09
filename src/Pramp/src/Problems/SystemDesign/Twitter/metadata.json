@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Twitter",
+    "origin": {
+        "name": "Pramp",
+        "link": "https://www.pramp.com/challenge/2WBx3Axln1t7JQ2jQqA6"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
