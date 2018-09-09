@@ -42,9 +42,9 @@ Good luck!
     1. Person - id, last_name, first_name, List<id> friends
 
 1. API
-  https://socialgraph.com/api/shortestpath/?person_start={start}&person_end={end}
+    https://socialgraph.com/api/shortestpath/?person_start={start}&person_end={end}
   
-  return json of a list of persons starting with start and ending withe end.
+    return json of a list of persons starting with start and ending withe end.
 
 1. Diving in
     1. User/client hits web server.
