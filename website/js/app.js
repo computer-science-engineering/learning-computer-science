@@ -128,7 +128,7 @@ function createTable(json_data) {
 function adaptJsonData(json_data) {
     "use strict";
     return new Promise(function (resolve, reject) {
-        json_data.forEach(function (element) {
+        Array.prototype.forEach.call(json_data, element => {
             if (element.hasOwnProperty(global_problem_name_string) && element.hasOwnProperty(global_problem_link_string)) {
                 var problem_name = element.Name;
                 var link = "https://github.com/manastalukdar/learning-computer-science/tree/master/" + element.Link;
@@ -173,7 +173,7 @@ function adaptJsonData(json_data) {
 
             if (element.hasOwnProperty(global_problem_languages_string)) {
                 values = element.Languages;
-                values.forEach(function (item) {
+                Array.prototype.forEach.call(values, item => {
                     if (global_languages.indexOf(item) === -1) {
                         global_languages.push(item);
                     }
