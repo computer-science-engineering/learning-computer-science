@@ -1,0 +1,75 @@
+{
+    "type": "Coding",
+    "name": "122. Best Time to Buy and Sell Stock II",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook",
+        "Alibaba",
+        "Goldman Sachs",
+        "Adobe",
+        "Bloomberg",
+        "Microsoft",
+        "Intuit",
+        "Zappos",
+        "Google",
+        "Zenefits",
+        "Citadel",
+        "VMware",
+        "Baidu",
+        "Airbnb",
+        "Tencent",
+        "JPMorgan",
+        "Morgan Stanley"
+    ],
+    "categories": [        
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Top Interview Questions - Easy",
+                            "children": [
+                                {
+                                    "name": "Array",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Greedy"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
