@@ -10,6 +10,7 @@
             "request": "launch",
             "mainClass": "LeetCode.src.Problems.P201_P300.P283_MoveZeroes.Java.Solution",
             "args": "",
+            "stopOnEntry":false
         },
         {
             "type": "java",
