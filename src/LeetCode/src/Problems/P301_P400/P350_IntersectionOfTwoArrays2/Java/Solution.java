@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.IntersectionOfTwoArrays2.Java;
+package LeetCode.src.Problems.P301_P400.P350_IntersectionOfTwoArrays2.Java;
 
 import java.util.Arrays;
 import java.util.HashMap;

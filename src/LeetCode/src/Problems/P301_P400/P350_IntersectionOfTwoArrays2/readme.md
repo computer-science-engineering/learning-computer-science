@@ -20,4 +20,5 @@ Each element in the result should appear as many times as it shows in both array
 
 ## Notes
 
-1. [LeetCode discussion - Java Solution Using a HashMap](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/674/discuss/143105/Java-Solution-Using-a-HashMap)
+1. [LeetCode Explore - Interview - Top Interview Questions - Easy](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/674/)
+1. [LeetCode discussion - Java Solution Using a HashMap](https://leetcode.com/problems/intersection-of-two-arrays-ii/discuss/143105/Java-Solution-Using-a-HashMap)

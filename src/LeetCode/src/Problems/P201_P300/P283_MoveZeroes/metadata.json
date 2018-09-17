@@ -1,15 +1,34 @@
 {
     "type": "Coding",
-    "name": "Move Zeroes",
+    "name": "283. Move Zeroes",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/"
+        "link": "https://leetcode.com/problems/move-zeroes/description/"
     },
     "companies": [
-        "",
-        ""
+        "Facebook",
+        "Google",
+        "SAP",
+        "Walmart Labs",
+        "Bloomberg",
+        "Microsoft",
+        "Apple",
+        "Uber",
+        "Paypal",
+        "Lyft",
+        "Yahoo",
+        "Oracle"
     ],
     "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
         {
             "name": "Explore",
             "children": [
@@ -18,7 +37,12 @@
                     "children": [
                         {
                             "name": "Top Interview Questions - Easy",
-                            "children": []
+                            "children": [
+                                {
+                                    "name": "Array",
+                                    "children": []
+                                }
+                            ]
                         }
                     ]
                 }
