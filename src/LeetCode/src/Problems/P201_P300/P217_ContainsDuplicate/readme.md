@@ -28,3 +28,5 @@ Output: true
 ```
 
 ## Notes
+
+1. [LeetCode Explore - Interview - Top Interview Questions - Easy](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/)

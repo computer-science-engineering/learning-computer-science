@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.IntersectionOfTwoArrays2.Java;
+package LeetCode.src.Problems.P201_P300.P217_ContainsDuplicate.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,23 +31,21 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        int[] nums1 = {1, 2, 2, 1};
-        int[] nums2 = {2, 2};
+        int[] nums = {1,2,3,1};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int[] expected = {2, 2};
-            int[] actual = Solution.intersect(nums1, nums2);
-            assertArrayEquals(expected, actual);
+            boolean expected = true;
+            boolean actual = Solution.containsDuplicate(nums);
+            assertEquals(expected, actual);
         });
     }
 
     @Test
     public void TrivialCase2() {
-        int[] nums1 = {1, 2};
-        int[] nums2 = {1, 1};
+        int[] nums = {1,2,3,4};
         assertTimeout(Duration.ofMillis(500), () -> {
-            int[] expected = {1};
-            int[] actual = Solution.intersect(nums1, nums2);
-            assertArrayEquals(expected, actual);
+            boolean expected = false;
+            boolean actual = Solution.containsDuplicate(nums);
+            assertEquals(expected, actual);
         });
     }
 }

@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.ContainsDuplicate.Java;
+package LeetCode.src.Problems.P201_P300.P217_ContainsDuplicate.Java;
 
 import java.util.HashMap;
 
