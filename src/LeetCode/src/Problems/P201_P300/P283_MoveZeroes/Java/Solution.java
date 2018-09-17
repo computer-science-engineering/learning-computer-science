@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.MoveZeroes.Java;
+package LeetCode.src.Problems.P201_P300.P283_MoveZeroes.Java;
 
 public class Solution {
     public static void main(String[] args) {
@@ -18,8 +18,8 @@ public class Solution {
         int j = start;
         start--;
         
-        for(;j<len;j++){
-            if(nums[j]!=0){
+        for(;j<len;j++) {
+            if(nums[j]!=0) {
                 nums[start++] = nums[j];
                 nums[j] = 0;
             }

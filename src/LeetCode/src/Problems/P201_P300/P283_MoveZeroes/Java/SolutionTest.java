@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.MoveZeroes.Java;
+package LeetCode.src.Problems.P201_P300.P283_MoveZeroes.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 

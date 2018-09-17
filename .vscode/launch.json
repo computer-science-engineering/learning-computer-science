@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
-            "mainClass": "LeetCode.src.Problems.P1_P100.P15_ThreeSum.Java.Solution",
+            "mainClass": "LeetCode.src.Problems.P201_P300.P283_MoveZeroes.Java.Solution",
             "args": "",
         },
         {
