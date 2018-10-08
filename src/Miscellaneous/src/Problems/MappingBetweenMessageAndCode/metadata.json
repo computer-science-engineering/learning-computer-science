@@ -2,7 +2,7 @@
     "type": "Coding",
     "name": "Mapping between Message and Code",
     "origin": {
-        "name": "",
+        "name": "Miscellaneous",
         "link": ""
     },
     "companies": [
@@ -22,7 +22,7 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "d",
+                    "name": "",
                     "children": []
                 }
             ]
