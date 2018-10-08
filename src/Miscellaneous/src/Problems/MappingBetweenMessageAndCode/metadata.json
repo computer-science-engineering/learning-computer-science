@@ -1,0 +1,39 @@
+{
+    "type": "Coding",
+    "name": "Mapping between Message and Code",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "GoDaddy"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "d",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "HashMap",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
