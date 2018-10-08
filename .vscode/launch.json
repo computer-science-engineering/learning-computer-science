@@ -6,11 +6,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "Miscellaneous.src.Problems.MappingBetweenMessageAndCode.Java.Solution",
+            "args": "",
+            "projectName": "learning-computer-science"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) Java",
             "request": "launch",
             "mainClass": "LeetCode.src.Problems.P201_P300.P283_MoveZeroes.Java.Solution",
             "args": "",
-            "stopOnEntry":false
+            "stopOnEntry": false
         },
         {
             "type": "java",
