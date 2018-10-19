@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.LevelOrderTraversalBinaryTreeLevelByLevel.Java;
+package Miscellaneous.src.Problems.Programming.LevelOrderTraversalBinaryTreeSingleLine.Java;
 
 class TreeNode {
     int val;

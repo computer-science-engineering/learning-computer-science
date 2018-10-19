@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.LevelOrderTraversalBinaryTreeLevelByLevel.Java;
+package Miscellaneous.src.Problems.Programming.LevelOrderTraversalBinaryTreeLevelByLevel.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
