@@ -11,10 +11,28 @@
     "categories": [
         {
             "name": "",
-            "children": []
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
         }
     ],
     "tags": [
         "Pointers"
+    ],
+    "buckets": [
+        "",
+        ""
     ]
 }

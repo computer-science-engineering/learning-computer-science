@@ -1,12 +1,12 @@
 {
     "type": "Coding",
-    "name": "Implement Queue using Stack",
+    "name": "Seed Records Per Bin",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
     },
     "companies": [
-        "Aruba Networks"
+        "The Climate Corporation"
     ],
     "categories": [
         {
@@ -22,14 +22,14 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "",
+                    "name": "Easy",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "HashMap",
+        "",
         ""
     ],
     "buckets": [

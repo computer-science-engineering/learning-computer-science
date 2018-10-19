@@ -1,12 +1,12 @@
 {
     "type": "Coding",
-    "name": "Implement Queue using Stack",
+    "name": "Top Three Sequence Visited",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
     },
     "companies": [
-        "Aruba Networks"
+        "Amazon"
     ],
     "categories": [
         {
@@ -29,7 +29,7 @@
         }
     ],
     "tags": [
-        "HashMap",
+        "",
         ""
     ],
     "buckets": [
