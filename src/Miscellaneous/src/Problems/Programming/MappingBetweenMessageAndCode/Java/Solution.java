@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.MappingBetweenMessageAndCode.Java;
+package Miscellaneous.src.Problems.Programming.MappingBetweenMessageAndCode.Java;
 
 import java.util.HashMap;
 

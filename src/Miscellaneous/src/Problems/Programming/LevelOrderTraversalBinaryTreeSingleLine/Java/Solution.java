@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.LevelOrderTraversalBinaryTreeSingleLine.Java;
+package Miscellaneous.src.Problems.Programming.LevelOrderTraversalBinaryTreeSingleLine.Java;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

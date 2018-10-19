@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.MapWordsListToGrid.Java;
+package Miscellaneous.src.Problems.Programming.MapWordsListToGrid.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
