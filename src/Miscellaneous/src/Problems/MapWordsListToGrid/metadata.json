@@ -1,21 +1,39 @@
 {
     "type": "Coding",
-    "name": "Reverse a String",
+    "name": "Map Words List to Grid",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
     },
     "companies": [
-        "G H S"
+        ""
     ],
     "categories": [
         {
             "name": "",
-            "children": []
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
         }
     ],
     "tags": [
-        "Strings",
-        "Backtracking"
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
     ]
 }

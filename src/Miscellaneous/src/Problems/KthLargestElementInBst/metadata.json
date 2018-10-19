@@ -11,10 +11,29 @@
     "categories": [
         {
             "name": "",
-            "children": []
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
         }
     ],
     "tags": [
-        "Binary Search Tree"
+        "HashMap",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
     ]
 }
