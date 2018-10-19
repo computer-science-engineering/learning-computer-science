@@ -1,6 +1,6 @@
 {
     "type": "Coding",
-    "name": "BinaryTreeToDoublyLinkedList",
+    "name": "Binary Tree to Doubly Linked List",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
@@ -30,7 +30,7 @@
         }
     ],
     "tags": [
-        "HashMap",
+        "Binary Tree",
         ""
     ],
     "buckets": [
