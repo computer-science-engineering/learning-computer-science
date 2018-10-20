@@ -40,7 +40,11 @@
             "windows": {
                 "command": ".\\gradlew.bat test jacocoJupTestReport"
             }
-        },
+        },        {
+            "label": "run-xunit-tests",
+            "type": "shell",
+            "command": "python ${workspaceFolder}/scripts/run_xunit_tests.py"
+        }, 
         {
             "label": "create-problems-list",
             "type": "shell",
