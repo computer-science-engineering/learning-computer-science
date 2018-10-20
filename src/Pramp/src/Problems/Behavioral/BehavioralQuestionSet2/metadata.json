@@ -1,0 +1,40 @@
+{
+    "type": "Behavioral",
+    "name": "Behavioral Question Set 2",
+    "origin": {
+        "name": "Pramp",
+        "link": "https://www.pramp.com/question/yZm60L6d5juM7K38KYPg"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
