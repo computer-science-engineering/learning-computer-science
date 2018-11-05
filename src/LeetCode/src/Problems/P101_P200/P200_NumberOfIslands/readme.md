@@ -41,3 +41,4 @@ Output: 3
 1. [LeetCode discussion - 1D Union Find Java solution, easily generalized to other problems](https://leetcode.com/problems/number-of-islands/discuss/56354/1D-Union-Find-Java-solution-easily-generalized-to-other-problems)
 1. [LeetCode discussion - Java Union Find Solution](https://leetcode.com/problems/number-of-islands/discuss/56364/Java-Union-Find-Solution)
 1. [LeetCode discussion - Java DFS and BFS solution](https://leetcode.com/problems/number-of-islands/discuss/56338/Java-DFS-and-BFS-solution)
+1. [LeetCode article](https://leetcode.com/articles/number-of-islands/)

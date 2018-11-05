@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Find the number of distinct islands",
+    "origin": {
+        "name": "Geeks for Geeks",
+        "link": "https://www.geeksforgeeks.org/find-number-of-islands/"
+    },
+    "companies": [
+        "Qualtrics"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Depth-first Search",
+        "Breadth-first Search",
+        "Union Find"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
