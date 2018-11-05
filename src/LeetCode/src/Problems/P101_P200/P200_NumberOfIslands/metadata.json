@@ -1,19 +1,31 @@
 {
     "type": "Coding",
-    "name": "173. Binary Search Tree Iterator",
+    "name": "200. Number of Islands",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/problems/binary-search-tree-iterator/description/"
+        "link": "https://leetcode.com/problems/number-of-islands/description/"
     },
     "companies": [
-        "LinkedIn",
         "Amazon",
-        "Uber",
-        "Bloomberg",
-        "Cloudera",
-        "Microsoft",
+        "Lyft",
+        "Google",
         "Facebook",
-        "Qualtrics"
+        "Bloomberg",
+        "Uber",
+        "LinkedIn",
+        "Microsoft",
+        "Apple",
+        "Qualtrics",
+        "Yahoo",
+        "Twitter",
+        "Alibaba",
+        "AppDynamics",
+        "Yelp",
+        "Oracle",
+        "eBay",
+        "Expedia",
+        "Goldman Sachs",
+        "Affirm"
     ],
     "categories": [
         {
@@ -36,9 +48,9 @@
         }
     ],
     "tags": [
-        "Stack",
-        "Tree",
-        "Design"
+        "Depth-first Search",
+        "Breadth-first Search",
+        "Union Find"
     ],
     "buckets": [
         ""
