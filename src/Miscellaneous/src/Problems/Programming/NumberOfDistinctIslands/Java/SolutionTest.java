@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.Programming.ReverseString.Java;
+package Miscellaneous.src.Problems.Programming.NumberOfDistinctIslands.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 

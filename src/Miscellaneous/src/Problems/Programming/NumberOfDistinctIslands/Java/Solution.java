@@ -1,4 +1,4 @@
-package Miscellaneous.src.Problems.Programming.ReverseString.Java;
+package Miscellaneous.src.Problems.Programming.NumberOfDistinctIslands.Java;
 
 public class Solution {
     public static void main(String[] args) {
