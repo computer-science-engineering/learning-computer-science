@@ -11,6 +11,17 @@
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
+            "mainClass": "LeetCode.src.Problems.P101_P200.P200_NumberOfIslands.Java.Solution",
+            "args": "",
+            "projectName": "learning-computer-science"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
             "mainClass": "Miscellaneous.src.Problems.MappingBetweenMessageAndCode.Java.Solution",
             "args": "",
             "projectName": "learning-computer-science"
