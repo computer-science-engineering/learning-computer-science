@@ -25,14 +25,16 @@ public class Solution {
         // Initialize count as 0 and traverse through the all cells 
         // of given matrix 
         int count = 0; 
-        for (int i = 0; i < rows; ++i) 
-            for (int j = 0; j < cols; ++j) 
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
                 if (grid[i][j]==1 && !visited[i][j]) { // If a cell with value 1 is not
                     // visited yet, then new island found, Visit all 
                     // cells in this island and increment island count 
                     DFS(grid, i, j, visited); 
                     ++count; 
-                }  
+                }
+            } 
+        }
         return count; 
     } 
 
@@ -50,7 +52,7 @@ public class Solution {
   
     // A utility function to do DFS for a 2D boolean matrix. 
     // It only considers the 8 neighbors as adjacent vertices 
-    private static void DFS(int M[][], int row, int col, boolean visited[][]) { 
+    private static void DFS(int grid[][], int row, int col, boolean visited[][]) { 
         // These arrays are used to get row and column numbers 
         // of 8 neighbors of a given cell 
         int rowNbr[] = new int[] {-1, -1, -1,  0, 0,  1, 1, 1}; 
@@ -61,8 +63,8 @@ public class Solution {
   
         // Recur for all connected neighbors 
         for (int k = 0; k < 8; ++k) {
-            if (isSafe(M, row + rowNbr[k], col + colNbr[k], visited) ) {
-                DFS(M, row + rowNbr[k], col + colNbr[k], visited); 
+            if (isSafe(grid, row + rowNbr[k], col + colNbr[k], visited) ) {
+                DFS(grid, row + rowNbr[k], col + colNbr[k], visited); 
             }
         }
     } 
