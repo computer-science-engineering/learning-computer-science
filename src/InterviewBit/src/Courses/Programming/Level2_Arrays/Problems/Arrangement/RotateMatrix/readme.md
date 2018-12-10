@@ -33,3 +33,4 @@ Then the rotated array becomes:
 ## Notes
 
 1. [Geeks for Geeks - Inplace rotate square matrix by 90 degrees | Set 1](https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/)
+1. [YT Video - Rotate an n x n matrix - My Programming Sandbox](https://www.youtube.com/watch?v=Jtu6dJ0Cb94)
