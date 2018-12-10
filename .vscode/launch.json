@@ -11,6 +11,28 @@
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
+            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.Arrangement.RotateMatrix.Java.Solution",
+            "args": "",
+            "projectName": "learning-computer-science"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "InterviewBit.src.Courses.Programming.Level2_Arrays.Problems.Arrangement.LargestNumber.Java.Solution",
+            "args": "",
+            "projectName": "learning-computer-science"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
             "mainClass": "Miscellaneous.src.Problems.Programming.NumberOfDistinctIslands.Java.Solution",
             "args": "",
             "projectName": "learning-computer-science"

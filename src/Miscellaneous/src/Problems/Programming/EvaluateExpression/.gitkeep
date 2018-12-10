@@ -1,0 +1,106 @@
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ 
+ You are building an educational website and want to create a simple calculator for students to use. The calculator will only allow addition and subtraction of positive integers.
+
+Given an expression string using the "+" and "-" operators like "5+16-2", write a function to find the total.
+
+
+Sample input/output:
+evaluate("6+9-12")  => 3
+evaluate("1+2-3+4-5+6-7") => -2
+
+You are building an educational website and want to create a simple calculator for students to use. The calculator will only allow addition and subtraction of positive integers.
+
+We also want to allow parentheses in our input. Given an expression string using the "+", "-", "(", and ")" operators like "5+(16-2)", write a function to parse the string and evaluate the result.
+
+Sample input:
+    expression2_1 = "5+16-((9-6)-(4-2))"
+    expression2_2 = "22+(2-4)"
+ 
+Sample output:
+    evaluate(expression2_1) => 20
+    evaluate(expression2_2) => 20
+
+
+ */
+
+class Solution {
+  public static void main(String[] args) {
+    
+    String expression1 = "6+9-12"; // = 3
+    String expression2 = "1+2-3+4-5+6-7"; // = -2
+    
+    String expression3 = "1+2+3+4-5-6-7";  // -8
+    String expression4 = "255"; // 255
+    String expression5 = "600+9-12"; // 597
+    String expression6 = "1-2-3-4"; // -8
+
+
+    int result =  evaluate(expression6);
+    System.out.println(result);
+    
+  }
+  
+  public static int evaluate(String expression) {
+    char[] items = expression.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    int prev = 0;
+    boolean add = true;
+    for(int i=0; i<items.length; i++) {
+      if(items[i] != '+' && items[i] != '-') {
+        sb.append(items[i]);
+      }
+      
+     // fix - duplication in code below
+      if(items[i] == '+') {
+        if (add) {
+          prev += Integer.parseInt(sb.toString());
+          //System.out.println(prev);
+        }
+        else {
+          prev -= Integer.parseInt(sb.toString());
+          //System.out.println(prev);
+        }
+        add = true;
+        sb = new StringBuilder();
+      }
+      else if (items[i] == '-') {
+        if (add) {
+          prev += Integer.parseInt(sb.toString());
+          //System.out.println(prev);
+        }
+        else {
+          prev -= Integer.parseInt(sb.toString());
+          //System.out.println(prev);
+        }
+        add = false;
+        sb = new StringBuilder();
+      }
+    }
+    
+    if (add) {
+      prev += Integer.parseInt(sb.toString());
+    }
+    else {
+      prev -= Integer.parseInt(sb.toString());
+    }
+    return prev;
+  }
+}
+
+
+/* 
+Your previous Plain Text content is preserved below:
+
+
+
+
+
+ */

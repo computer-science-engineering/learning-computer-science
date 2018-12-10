@@ -31,3 +31,5 @@ Then the rotated array becomes:
 ```
 
 ## Notes
+
+1. [Geeks for Geeks - Inplace rotate square matrix by 90 degrees | Set 1](https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/)
