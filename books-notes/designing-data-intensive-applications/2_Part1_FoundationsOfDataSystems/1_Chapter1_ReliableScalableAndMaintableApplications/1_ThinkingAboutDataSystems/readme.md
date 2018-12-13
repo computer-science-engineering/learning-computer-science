@@ -9,8 +9,7 @@ parts of your system are degraded? How do you scale to handle an increase in loa
 
 In this book, we focus on three concerns that are important in most software systems:
 
-**Reliability**: The system should continue to work correctly (performing the correct function at the desired level of performance) even in the face of adversity (hardware or soft‐
-ware faults, and even human error).
+**Reliability**: The system should continue to work correctly (performing the correct function at the desired level of performance) even in the face of adversity (hardware or software faults, and even human error).
 
 **Scalability**: As the system grows (in data volume, traffic volume, or complexity), there should be reasonable ways of dealing with that growth.
 
