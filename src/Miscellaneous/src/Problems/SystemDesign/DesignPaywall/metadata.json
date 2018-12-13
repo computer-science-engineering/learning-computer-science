@@ -1,0 +1,39 @@
+{
+    "type": "System Design",
+    "name": "Design a Paywall for a News Portal",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "Qualtrics"
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
