@@ -1,6 +1,6 @@
 {
     "type": "Coding",
-    "name": "Remove Duplicates and Return List",
+    "name": "Remove Duplicates and Return Weighted List",
     "origin": {
         "name": "",
         "link": ""
@@ -23,7 +23,7 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Easy",
+                    "name": "Medium",
                     "children": []
                 }
             ]
