@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Clone a Linked List with Next and Random Pointers",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "Amazon",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Linked List",
+        "HashMap"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
