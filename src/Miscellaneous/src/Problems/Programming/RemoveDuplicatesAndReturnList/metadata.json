@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Remove Duplicates and Return List",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "Google",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
