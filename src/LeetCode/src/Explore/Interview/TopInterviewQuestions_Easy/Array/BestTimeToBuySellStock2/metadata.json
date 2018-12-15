@@ -25,16 +25,7 @@
         "JPMorgan",
         "Morgan Stanley"
     ],
-    "categories": [        
-        {
-            "name": "Problems",
-            "children": [
-                {
-                    "name": "Algorithms",
-                    "children": []
-                }
-            ]
-        },
+    "categories": [  
         {
             "name": "Explore",
             "children": [

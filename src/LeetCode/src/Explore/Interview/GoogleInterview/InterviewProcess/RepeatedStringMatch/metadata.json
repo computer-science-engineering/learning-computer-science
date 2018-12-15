@@ -1,23 +1,13 @@
 {
     "type": "Coding",
-    "name": "Move Zeroes",
+    "name": "Repeated String Match",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/"
+        "link": "https://leetcode.com/explore/interview/card/google/67/sql-2/469/"
     },
     "companies": [
-        "Facebook",
         "Google",
-        "SAP",
-        "Walmart Labs",
-        "Bloomberg",
-        "Microsoft",
-        "Apple",
-        "Uber",
-        "Paypal",
-        "Lyft",
-        "Yahoo",
-        "Oracle"
+        ""
     ],
     "categories": [
         {
@@ -27,7 +17,7 @@
                     "name": "Interview",
                     "children": [
                         {
-                            "name": "Top Interview Questions - Easy",
+                            "name": "Google Interview",
                             "children": []
                         }
                     ]
@@ -45,8 +35,8 @@
         }
     ],
     "tags": [
-        "Array",
-        "Two Pointers"
+        "String",
+        ""
     ],
     "buckets": [
         "",
