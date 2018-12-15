@@ -20,15 +20,6 @@
     ],
     "categories": [
         {
-            "name": "Problems",
-            "children": [
-                {
-                    "name": "Algorithms",
-                    "children": []
-                }
-            ]
-        },        
-        {
             "name": "Explore",
             "children": [
                 {
