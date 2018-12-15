@@ -37,5 +37,4 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ## Notes
 
-1. [LeetCode Explore - Interview - Top Interview Questions - Easy](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/)
-1. [LeetCode discussion - Is this question a joke?](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/39402/Is-this-question-a-joke)
+1. [LeetCode discussion - Is this question a joke?](https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/564/discuss/39402/Is-this-question-a-joke)

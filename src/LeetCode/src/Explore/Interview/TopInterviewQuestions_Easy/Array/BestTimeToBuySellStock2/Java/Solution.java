@@ -1,4 +1,4 @@
-package LeetCode.src.Problems.P101_P200.P122_BestTimeToBuySellStock2.Java;
+package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.BestTimeToBuySellStock2.Java;
 
 public class Solution {
     public static void main(String[] args) {
