@@ -18,12 +18,7 @@
                     "children": [
                         {
                             "name": "Google Interview",
-                            "children": [
-                                {
-                                    "name": "Online Assessment Question",
-                                    "children": []
-                                }
-                            ]
+                            "children": []
                         }
                     ]
                 }
@@ -40,11 +35,10 @@
         }
     ],
     "tags": [
-        "String",
-        ""
+        "String"
     ],
     "buckets": [
-        "",
+        "Online Assessment Question",
         ""
     ]
 }
