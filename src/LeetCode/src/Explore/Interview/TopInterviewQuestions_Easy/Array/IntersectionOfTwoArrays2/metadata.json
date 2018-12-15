@@ -1,0 +1,61 @@
+{
+    "type": "Coding",
+    "name": "Intersection of Two Arrays II",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/674/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Bloomberg",
+        "Amazon",
+        "Alibaba",
+        "VMware"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },        
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Top Interview Questions - Easy",
+                            "children": []                            
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Hash Table",
+        "Two Pointers",
+        "Binary Search",
+        "Sort"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
