@@ -1,13 +1,13 @@
 {
     "type": "Coding",
-    "name": "K Empty Slots",
+    "name": "Next Closest Time",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/google/67/sql-2/470/"
+        "link": "https://leetcode.com/explore/interview/card/google/67/sql-2/471/"
     },
     "companies": [
         "Google",
-        "Microsoft"
+        "Facebook"
     ],
     "categories": [
         {
@@ -28,15 +28,15 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Hard",
+                    "name": "Medium",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Array",
-        "Binary Search Tree"
+        "String",
+        ""
     ],
     "buckets": [
         "Online Assessment Question",
