@@ -1,13 +1,13 @@
 {
     "type": "Coding",
-    "name": "Repeated String Match",
+    "name": "K Empty Slots",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/google/67/sql-2/469/"
+        "link": "https://leetcode.com/explore/interview/card/google/67/sql-2/470/"
     },
     "companies": [
         "Google",
-        ""
+        "Microsoft"
     ],
     "categories": [
         {
@@ -33,15 +33,15 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Easy",
+                    "name": "Hard",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "String",
-        ""
+        "Array",
+        "Binary Search Tree"
     ],
     "buckets": [
         "",
