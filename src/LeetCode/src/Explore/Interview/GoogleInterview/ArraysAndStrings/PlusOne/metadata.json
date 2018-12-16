@@ -1,34 +1,20 @@
 {
     "type": "Coding",
-    "name": "Spiral Matrix",
+    "name": "Plus One",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/338/"
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/339/"
     },
     "companies": [
-        "Microsoft",
         "Google",
-        "Bloomberg",
-        "Apple",
-        "Zillow",
-        "Amazon",
-        "Uber",
-        "Hulu",
-        "Paypal",
-        "Epic Systems",
-        "Yelp",
-        "eBay",
-        "Baidu",
-        "Adobe",
-        "Dataminr",
-        "JPMorgan",
         "Facebook",
-        "Tencent",
-        "Walmart Labs",
-        "Yahoo",
-        "Redfin",
-        "ServiceNow",
-        "Oracle"
+        "Uber",
+        "Microsoft",
+        "Bloomberg",
+        "eBay",
+        "Adobe",
+        "Amazon",
+        "Airbnb"
     ],
     "categories": [
         {
@@ -49,7 +35,7 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Medium",
+                    "name": "Easy",
                     "children": []
                 }
             ]
@@ -57,7 +43,7 @@
     ],
     "tags": [
         "Array",
-        ""
+        "Math"
     ],
     "buckets": [
         "Editor's choice: Frequently asked in Google onsite interview",
