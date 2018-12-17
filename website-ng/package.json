@@ -1,6 +1,6 @@
 {
-  "name": "website-ng",
-  "version": "0.0.0",
+  "name": "learning-computer-science",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
