@@ -24,4 +24,4 @@ So total area = 3 * 2 = 6
 
 ## Notes
 
-1. [LeetCode article](https://leetcode.com/articles/container-most-water/)
+1. [LeetCode article](https://leetcode.com/problems/container-with-most-water/solution/)
