@@ -1,0 +1,70 @@
+{
+    "type": "Coding",
+    "name": "Trapping Rain Water",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/341/"
+    },
+    "companies": [
+        "Goldman Sachs",
+        "Facebook",
+        "Lyft",
+        "Amazon",
+        "Bloomberg",
+        "Google",
+        "Microsoft",
+        "Airbnb",
+        "Uber",
+        "Apple",
+        "Adobe",
+        "Dataminr",
+        "Grab",
+        "Qualtrics",
+        "Intuit",
+        "Snapchat",
+        "Wish",
+        "Alibaba",
+        "Twitter",
+        "eBay",
+        "Baidu",
+        "Zenefits",
+        "Intel",
+        "Palantir Technologies",
+        "TripAdvisor",
+        "Huawei"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Two Pointers",
+        "Stack"
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
