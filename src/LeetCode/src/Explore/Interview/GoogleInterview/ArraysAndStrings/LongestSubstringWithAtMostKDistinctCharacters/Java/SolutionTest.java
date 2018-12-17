@@ -68,7 +68,29 @@ public class SolutionTest {
         int k = 1;
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 1;
-            int actual = Solution.lengthOfLongestSubstringKDistinct2(s, k);
+            int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void SpecialCase3() {
+        String s = "aac";
+        int k = 1;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 2;
+            int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void SpecialCase4() {
+        String s = "ababcbcbaaabbdef";
+        int k = 2;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 6;
+            int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);
         });
     }

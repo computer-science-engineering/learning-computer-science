@@ -1,15 +1,13 @@
 package LeetCode.src.Explore.Interview.GoogleInterview.ArraysAndStrings.LongestSubstringWithAtMostKDistinctCharacters.Java;
 
-import java.util.HashMap;
-
 public class Solution {
     public static void main(String[] args) {
-        String s = "aba";
-        int k = 1;
+        String s = "ababcbcbaaabbdef";
+        int k = 2;
         System.out.println(lengthOfLongestSubstringKDistinct(s, k));
     }
 
-    public static int lengthOfLongestSubstringKDistinct2(String s, int k) {
+    public static int lengthOfLongestSubstringKDistinct(String s, int k) {
         int[] count = new int[256];
         int num = 0, i = 0, res = 0;
         for (int j = 0; j < s.length(); j++) {
@@ -23,7 +21,7 @@ public class Solution {
         return res;
     }
 
-    public static int lengthOfLongestSubstringKDistinct(String s, int k) {
+    /*public static int lengthOfLongestSubstringKDistinct(String s, int k) {
         if (k==0) {
             return 0;
         }
@@ -43,22 +41,30 @@ public class Solution {
             // Sliding window
             // If there are more distinct char
             // Start removing from left until distinct Chars == k
-            while(distinct > k) {
-                int temp = tracking.get(s.charAt(l));
-                tracking.put(s.charAt(l++), temp--);
-                /*int temp = Integer.MAX_VALUE;
-                while(temp > 0) {
-                    temp = tracking.get(s.charAt(l));
-                    tracking.put(s.charAt(l++), temp--);
-                }*/
+            
+            //while(distinct > k) {
+            //    int temp = tracking.get(s.charAt(l));
+            //    tracking.put(s.charAt(l++), temp--);
 
-                if (temp == 0) {
-                    distinct--; // At this point temp  will be 0
+            //    if (temp == 0) {
+            //        distinct--;
+            //   }
+            //}
+
+            if(distinct > k) {
+                int occurrences = Integer.MAX_VALUE;
+                while(occurrences > 0) {
+                    occurrences = tracking.get(s.charAt(l));
+                    tracking.put(s.charAt(l++), occurrences--);
                 }
+
+                l++;
+
+                distinct--; // At this point temp  will be 0
             }
 
             res = Math.max(res, r-l+1);
         }
         return res;
-    }
+    }*/
 }
