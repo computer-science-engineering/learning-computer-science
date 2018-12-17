@@ -1,0 +1,49 @@
+{
+    "type": "Coding",
+    "name": "Longest Substring with At Most K Distinct Characters",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/332/"
+    },
+    "companies": [
+        "Google",
+        "Facebook",
+        "Amazon",
+        "Quora",
+        "AppDynamics",
+        "Coupang"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Hash Table",
+        "String"
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
