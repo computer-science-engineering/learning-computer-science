@@ -1,0 +1,55 @@
+{
+    "type": "Coding",
+    "name": "Game of Life",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/346/"
+    },
+    "companies": [
+        "Dropbox",
+        "Uber",
+        "Amazon",
+        "Google",
+        "Square",
+        "Microsoft",
+        "Bloomberg",
+        "Booking.com",
+        "Baidu",
+        "Apple",
+        "Snapchat",
+        "Two Sigma"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        ""
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
