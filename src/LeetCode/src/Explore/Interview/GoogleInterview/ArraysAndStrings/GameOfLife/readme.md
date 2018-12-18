@@ -38,3 +38,43 @@ Output:
 2. In this question, we represent the board using a 2D array. In principle, the board is infinite, which would cause problems when the active area encroaches the border of the array. How would you address these problems?
 
 ## Notes
+
+1. [LeetCode discussion - Java Solution using 2 bits: beats 99.75%](https://leetcode.com/explore/interview/card/google/59/array-and-strings/346/discuss/73216/Java-Solution-using-2-bits:-beats-99.75)
+1. [LeetCode discussion - Easiest JAVA solution with explanation](https://leetcode.com/explore/interview/card/google/59/array-and-strings/346/discuss/73223/Easiest-JAVA-solution-with-explanation)
+
+    To solve it in place, we use 2 bits to store 2 states:
+
+    ```text
+    [2nd bit, 1st bit] = [next state, current state]
+
+    - 00  dead (next) <- dead (current)
+    - 01  dead (next) <- live (current)  
+    - 10  live (next) <- dead (current)  
+    - 11  live (next) <- live (current)
+    ```
+
+      * In the beginning, every cell is either `00` or `01`.
+      * Notice that `1st` state is independent of `2nd` state.
+      * Imagine all cells are instantly changing from the `1st` to the `2nd` state, at the same time.
+      * Let's count # of neighbors from `1st` state and set `2nd` state bit.
+      * Since every `2nd` state is by default dead, no need to consider transition `01 -> 00`.
+      * In the end, delete every cell's `1st` state by doing `>> 1`.
+
+    For each cell's `1st` bit, check the 8 pixels around itself, and set the cell's `2nd` bit.
+
+      * Transition `01 -> 11`: when `board == 1` and `lives >= 2 && lives <= 3`.
+      * Transition `00 -> 10`: when `board == 0` and `lives == 3`.
+
+    To get the current state, simply do
+
+    ```text
+    board[i][j] & 1
+    ```
+
+    To get the next state, simply do
+
+    ```text
+    board[i][j] >> 1
+    ```
+
+1. [GitHub - Image](https://raw.githubusercontent.com/hot13399/leetcode-graphic-answer/master/289.%20Game%20of%20Life.jpg)

@@ -31,11 +31,21 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int[][] board = {
+            {0,1,0},
+            {0,0,1},
+            {1,1,1},
+            {0,0,0}
+        };
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int[][] expected = {
+                {0, 0, 0}, 
+                {1, 0, 1}, 
+                {0, 1, 1}, 
+                {0, 1, 0}
+            };
+            Solution.gameOfLife(board);
+            assertArrayEquals(expected, board);
         });
     }
 }
