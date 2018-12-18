@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Elevator with Scheduling Algorithm",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "Xob",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
