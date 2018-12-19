@@ -5,7 +5,11 @@ package LeetCode.src.Explore.Interview.GoogleInterview.ArraysAndStrings.ReadNCha
 
 public class Solution extends Reader4 {
     public static void main(String[] args) {
-        
+        char[] buf = new char[10];
+        int n = 8;
+
+        Solution solution = new Solution();
+        System.out.println(solution.read(buf, n));
     }    
 
     /**
@@ -16,11 +20,11 @@ public class Solution extends Reader4 {
     public int read(char[] buf, int n) {
         char[] buffer = new char[4];
         boolean endOfFile = false;
-        int readBytes = 0;
+        int readBytes = 0; // bytes read so far
         
         while (readBytes < n && !endOfFile) {
             int currentReadBytes = read4(buffer);
-            if (currentReadBytes !=4) {
+            if (currentReadBytes != 4) {
                 endOfFile = true;
             }
             int length = Math.min(n - readBytes, currentReadBytes);
