@@ -1,0 +1,51 @@
+{
+    "type": "Coding",
+    "name": "Read N Characters Given Read4 II - Call multiple times",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/436/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Lyft",
+        "Rubric",
+        "Uber",
+        "Pinterest",
+        "Microsoft",
+        "Bloomberg"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
