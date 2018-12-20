@@ -1,0 +1,50 @@
+{
+    "type": "Coding",
+    "name": "One Edit Distance",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/398/"
+    },
+    "companies": [
+        "Facebook",
+        "Uber",
+        "Microsoft",
+        "Yelp",
+        "Google",
+        "Twitter",
+        "Snapchat"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
