@@ -1,0 +1,91 @@
+{
+    "type": "Coding",
+    "name": "Valid Parentheses",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/467/"
+    },
+    "companies": [
+        "Facebook",
+        "LinkedIn",
+        "Amazon",
+        "Bloomberg",
+        "Google",
+        "Microsoft",
+        "Twitter",
+        "Expedia",
+        "Uber",
+        "Akuna Capital",
+        "Apple",
+        "VMware",
+        "Paypal",
+        "Twilio",
+        "Mathworks",
+        "Samsung",
+        "Riot Games",
+        "Yandex",
+        "Lyft",
+        "Zillow",
+        "Alibaba",
+        "Cloudera",
+        "Adobe",
+        "Tencent",
+        "Blizzard",
+        "eBay",
+        "Baidu",
+        "Visa",
+        "Pure Storage",
+        "Indeed",
+        "TripleByte",
+        "ServiceNow",
+        "Yahoo",
+        "Capital One",
+        "Oracle",
+        "Huawei",
+        "Yelp",
+        "Zappos",
+        "Qualcomm",
+        "Gilt Groupe",
+        "Aetion",
+        "Yatra",
+        "Rubrik",
+        "Zynga",
+        "TripAdvisor",
+        "Booking.com",
+        "Lending Club",
+        "Zenefits"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Stack"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
