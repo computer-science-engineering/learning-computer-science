@@ -201,6 +201,8 @@
         "twelvehourtime",
         "uncomment",
         "unoptimized",
+        "xlen",
+        "ylen",
         "zrzahid"
     ],
     "python.unitTest.unittestEnabled": false,
