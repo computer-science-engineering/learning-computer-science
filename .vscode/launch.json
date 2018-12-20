@@ -8,6 +8,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - Solution",
             "request": "launch",
+            "mainClass": "LeetCode.src.Explore.Interview.GoogleInterview.ArraysAndStrings.IntersectionOfTwoArrays.Java.Solution",
+            "projectName": "learning-computer-science"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
             "mainClass": "LeetCode.src.Explore.Interview.GoogleInterview.ArraysAndStrings.ImageSmoother.Java.Solution",
             "projectName": "learning-computer-science"
         },
