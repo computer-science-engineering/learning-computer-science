@@ -1,0 +1,55 @@
+{
+    "type": "Coding",
+    "name": "Valid Palindrome",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/435/"
+    },
+    "companies": [
+        "Facebook",
+        "Apple",
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Adobe",
+        "Yandex",
+        "TripAdvisor",
+        "Airbnb",
+        "Snapchat",
+        "Uber",
+        "Zenefits"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Two Pointers",
+        "String"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
