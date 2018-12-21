@@ -22,6 +22,7 @@
     "@angular/platform-browser": "^7.1.2",
     "@angular/platform-browser-dynamic": "^7.1.2",
     "@angular/router": "^7.1.2",
+    "@ng-select/ng-select": "^2.13.3",
     "core-js": "^2.5.4",
     "david": "^11.0.0",
     "rxjs": "^6.0.0",
