@@ -12,4 +12,4 @@ You can modify the input array in-place.
 
 1. [Geeks for Geeks - Find the smallest positive number missing from an unsorted array | Set 1](https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/)
 1. [ProgramCreek - First Missing Positive](https://www.programcreek.com/2014/05/leetcode-first-missing-positive-java/)
-1. [LeetCode discussion - Very Easy Java Solution in O(n) time and constant space](https://leetcode.com/problems/first-missing-positive/discuss/130739/Very-Easy-Java-Solution-in-O(n)-time-and-constant-space)
+1. [LeetCode discussion - Very Easy Java Solution in O(n) time and constant space](https://leetcode.com/problems/first-missing-positive/discuss/130739/Very-Easy-Java-Solution-in-O\(n\)-time-and-constant-space)
