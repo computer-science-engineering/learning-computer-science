@@ -1,0 +1,56 @@
+{
+    "type": "Coding",
+    "name": "First Unique Character in a String",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/59/array-and-strings/459/"
+    },
+    "companies": [
+        "Amazon",
+        "Bloomberg",
+        "Facebook",
+        "Apple",
+        "Zillow",
+        "Goldman Sachs",
+        "Microsoft",
+        "Google",
+        "Yahoo",
+        "Airbnb",
+        "SAP",
+        "Alibaba",
+        "Oracle"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Hash Table"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
