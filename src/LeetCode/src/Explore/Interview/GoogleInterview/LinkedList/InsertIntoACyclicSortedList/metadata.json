@@ -1,0 +1,46 @@
+{
+    "type": "Coding",
+    "name": "Insert into a Cyclic Sorted List",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/60/linked-list-5/1342/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Linked List",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
