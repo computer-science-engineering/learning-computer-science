@@ -1,0 +1,52 @@
+{
+    "type": "Coding",
+    "name": "Merge k Sorted Lists",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/60/linked-list-5/342/"
+    },
+    "companies": [
+        "Microsoft",
+        "Amazon",
+        "LinkedIn",
+        "Google",
+        "Facebook",
+        "Uber",
+        "Twitter",
+        "Airbnb",
+        "IXL"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Linked List",
+        "Divide and Conquer",
+        "Heap"
+    ],
+    "buckets": [
+        ""
+    ]
+}
