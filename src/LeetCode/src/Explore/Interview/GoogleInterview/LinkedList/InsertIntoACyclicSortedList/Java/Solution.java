@@ -54,13 +54,13 @@ public class Solution {
     }
 
     private static void printList(Node head) {
-    Node temp = head; 
-    if (head != null) { 
-        do { 
-            System.out.print(temp.val + " "); 
-            temp = temp.next; 
+        Node temp = head; 
+        if (head != null) { 
+            do { 
+                System.out.print(temp.val + " "); 
+                temp = temp.next; 
+            } 
+            while (temp != head); 
         } 
-        while (temp != head); 
-    } 
-} 
+    }    
 }
