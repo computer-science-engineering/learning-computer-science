@@ -1,4 +1,3 @@
-
 # Arrays and Strings
 
 String manipulation problems are in the same category as array, because string is represented as an array of characters internally. Array problems usually does not require knowledge of advanced data structures, so just basic data structures such as Hash Table and basic techniques like [Two Pointers](https://leetcode.com/articles/two-pointer-technique/) should suffice.
