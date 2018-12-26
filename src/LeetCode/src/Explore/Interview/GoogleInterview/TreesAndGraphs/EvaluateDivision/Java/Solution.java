@@ -16,17 +16,17 @@ public class Solution {
         }
     }
 
-    public static double[] calcEquation(String[][] eq, double[] values, String[][] q) {
+    public static double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
         Map<String, Map<String, Double>> m = new HashMap<>();
         for (int i = 0; i < values.length; i++) {
-            m.putIfAbsent(eq[i][0], new HashMap<>());
-            m.putIfAbsent(eq[i][1], new HashMap<>());
-            m.get(eq[i][0]).put(eq[i][1], values[i]);
-            m.get(eq[i][1]).put(eq[i][0], 1 / values[i]);
+            m.putIfAbsent(equations[i][0], new HashMap<>());
+            m.putIfAbsent(equations[i][1], new HashMap<>());
+            m.get(equations[i][0]).put(equations[i][1], values[i]);
+            m.get(equations[i][1]).put(equations[i][0], 1 / values[i]);
         }
-        double[] r = new double[q.length];
-        for (int i = 0; i < q.length; i++) {
-            r[i] = dfs(q[i][0], q[i][1], 1, m, new HashSet<>());
+        double[] r = new double[queries.length];
+        for (int i = 0; i < queries.length; i++) {
+            r[i] = dfs(queries[i][0], queries[i][1], 1, m, new HashSet<>());
         }
         return r;
     }

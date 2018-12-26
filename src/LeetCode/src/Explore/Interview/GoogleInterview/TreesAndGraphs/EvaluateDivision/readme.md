@@ -102,3 +102,63 @@ The input is always valid. You may assume that evaluating the queries will resul
 
 1. [LeetCode discussion - 9 lines "Floyd–Warshall" in Python](https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/331/discuss/88175/9-lines-"FloydWarshall"-in-Python)
 1. [LeetCode discussion - Graph walking in python - detailed explanation with video](https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/331/discuss/88262/graph-walking-in-python-detailed-explanation-with-video)
+1. LeetCode Top submission -  1ms submission
+
+    ```java
+    public double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
+        if (equations == null || equations.length == 0 || queries == null || queries.length == 0) {
+            return new double[0];
+        }
+
+        Map<String, List<String>> graph = new HashMap<>();
+        Map<String, List<Double>> weight = new HashMap<>();
+        buildGraph(equations, values, graph, weight);
+
+        double[] res = new double[queries.length];
+        for (int i = 0; i < queries.length; i++) {
+            Set<String> visited = new HashSet<>();
+            res[i] = dfs(graph, weight, queries[i][0], queries[i][1], visited);
+        }
+        return res;
+    }
+
+    private void buildGraph(String[][] equations, double[] values, Map<String, List<String>> graph, Map<String, List<Double>> weight) {
+        for (int i = 0; i < equations.length; i++) {
+            addEdge(graph, weight, equations[i][0], equations[i][1], values[i]);
+            addEdge(graph, weight, equations[i][1], equations[i][0], 1 / values[i]);
+        }
+    }
+
+    private void addEdge(Map<String, List<String>> graph, Map<String, List<Double>> weight, String node1, String node2, double val) {
+        List<String> list = graph.getOrDefault(node1, new ArrayList<String>());
+        list.add(node2);
+        graph.put(node1, list);
+        List<Double> valList = weight.getOrDefault(node1, new ArrayList<Double>());
+        valList.add(val);
+        weight.put(node1, valList);
+    }
+
+    private double dfs(Map<String, List<String>> graph, Map<String, List<Double>> weight, String node1, String node2, Set<String> visited) {
+        if (!graph.containsKey(node1) || !graph.containsKey(node2)) {
+            return -1.0;
+        }
+
+        if (node1.equals(node2)) {
+            return 1.0;
+        }
+
+        visited.add(node1);
+        for (int i = 0; i < graph.get(node1).size(); i++) {
+            String nei = graph.get(node1).get(i);
+            if (!visited.contains(nei)) {
+                double retVal = dfs(graph, weight, nei, node2, visited);
+                if (retVal > 0) {
+                    return weight.get(node1).get(i) * retVal;
+                }
+            }
+        }
+        return -1.0;
+    }
+    ```
+
+1. [YT Video - Scott - Evaluate Division](https://www.youtube.com/watch?v=pfQoqxP-6DE)
