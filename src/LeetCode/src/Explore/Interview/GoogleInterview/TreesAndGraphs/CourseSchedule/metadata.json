@@ -1,0 +1,58 @@
+{
+    "type": "Coding",
+    "name": "Course Schedule",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/369/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook",
+        "Google",
+        "Goldman Sachs",
+        "Yelp",
+        "Intuit",
+        "Paypal",
+        "Microsoft",
+        "Uber",
+        "Oracle",
+        "LinkedIn",
+        "Apple",
+        "Zenefits"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Depth-first Search",
+        "Breadth-first Search",
+        "Graph",
+        "Topological Sort"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
