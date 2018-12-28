@@ -37,6 +37,41 @@ Explanation: The input is: [5,1,4,null,null,3,6]. The root node's value
 
 1. [LeetCode solution](https://leetcode.com/problems/validate-binary-search-tree/solution/)
 1. [LeetCode discussion - My simple Java solution in 3 lines](https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/437/discuss/32109/My-simple-Java-solution-in-3-lines)
+1. LeetCode top submission - 0 ms
+
+    ```java
+    public boolean Helper(TreeNode t, int a, int b, boolean isLeftBig, boolean isRightBig){
+            if(t == null)
+                return true;
+            if(isLeftBig && isRightBig)
+                return Helper(t.left, a, t.val, true, false) && Helper(t.right, t.val, b,false,true);
+            else{
+                if(!isLeftBig && !isRightBig){
+                    if(t.val > a && t.val < b)
+                        return Helper(t.left, a, t.val,false,false) && Helper(t.right, t.val, b,false,false);
+                    return false;
+                }
+                else if(!isLeftBig){
+                    if(t.val > a)
+                        return Helper(t.left, a, t.val, false, false) && Helper(t.right, t.val, b,false,true);
+                    return false;
+                }
+                else{
+                    if(t.val < b)
+                        return Helper(t.left, a, t.val, true, false) && Helper(t.right, t.val, b,false,false);
+                    return false;
+                }
+            }
+        }
+        public boolean isValidBST(TreeNode root) {
+            if(root == null)
+                return true;
+            if(root.left == null && root.right == null)
+                return true;
+            return Helper(root, 0, 0, true, true);
+        }
+    ```
+
 1. [LeetCode discussion - Learn one iterative inorder traversal, apply it to multiple tree questions (Java Solution)](https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/437/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution))
 
     I will show you all how to tackle various tree questions using iterative inorder traversal. First one is the standard iterative inorder traversal using stack. Hope everyone agrees with this solution.
