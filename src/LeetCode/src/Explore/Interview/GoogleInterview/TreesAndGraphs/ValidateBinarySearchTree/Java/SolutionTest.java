@@ -1,11 +1,8 @@
-package LeetCode.src.Problems.P1_P100.P127_WordLadder.Java;
+package LeetCode.src.Explore.Interview.GoogleInterview.TreesAndGraphs.ValidateBinarySearchTree.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,24 +31,27 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        String beginWord = "hit";
-        String endWord = "cog";
-        List<String> wordList = Arrays.asList("hot","dot","dog","lot","log", "cog");
+        int[] values = {
+            2,
+            1, 3};
+        TreeNode root = TreeNode.fromArray(values);
         assertTimeout(Duration.ofMillis(500), () -> {
-            int expected = 5;
-            int actual = Solution.ladderLength(beginWord, endWord, wordList);
+            boolean expected = true;
+            boolean actual = Solution.isValidBST(root);
             assertEquals(expected, actual);
         });
     }
 
     @Test
     public void TrivialCase2() {
-        String beginWord = "hit";
-        String endWord = "cog";
-        List<String> wordList = Arrays.asList("hot","dot","dog","lot","log");
+        int[] values = {
+            5,
+            1, 4,
+            -1, -1, 3, 6};
+        TreeNode root = TreeNode.fromArray(values);
         assertTimeout(Duration.ofMillis(500), () -> {
-            int expected = 0;
-            int actual = Solution.ladderLength(beginWord, endWord, wordList);
+            boolean expected = false;
+            boolean actual = Solution.isValidBST(root);
             assertEquals(expected, actual);
         });
     }

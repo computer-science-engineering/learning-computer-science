@@ -1,0 +1,61 @@
+{
+    "type": "Coding",
+    "name": "Validate Binary Search Tree",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/437/"
+    },
+    "companies": [
+        "Facebook",
+        "Bloomberg",
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Uber",
+        "Capital One",
+        "TripAdvisor",
+        "LinkedIn",
+        "Apple",
+        "Walmart Labs",
+        "Nvidia",
+        "Nutanix",
+        "Qualtrics",
+        "VMware",
+        "Square",
+        "Snapchat",
+        "Baidu"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Tree",
+        "Depth-first Search"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
