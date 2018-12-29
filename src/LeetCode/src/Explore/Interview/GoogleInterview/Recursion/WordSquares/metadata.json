@@ -1,14 +1,13 @@
 {
     "type": "Coding",
-    "name": "Evaluate Division",
+    "name": "Word Squares",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/331/"
+        "link": "https://leetcode.com/explore/interview/card/google/62/recursion-4/370/"
     },
     "companies": [
-        "Google",
-        "Facebook",
-        "Uber"
+        "Oracle",
+        "Google"
     ],
     "categories": [
         {
@@ -29,15 +28,15 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Medium",
+                    "name": "Hard",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Union Find",
-        "Graph"
+        "Backtracking",
+        "Trie"
     ],
     "buckets": [
         "Editor's choice: Frequently asked in Google onsite interview",
