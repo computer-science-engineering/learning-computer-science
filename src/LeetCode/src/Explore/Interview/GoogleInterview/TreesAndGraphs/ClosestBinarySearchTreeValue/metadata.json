@@ -1,0 +1,50 @@
+{
+    "type": "Coding",
+    "name": "Closest Binary Search Tree Value",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/463/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "LinkedIn",
+        "eBay",
+        "Snapchat"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Binary Search",
+        "Tree"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
