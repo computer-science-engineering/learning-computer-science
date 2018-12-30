@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
-        int n = 2;
+        int n = 4;
         System.out.println(findStrobogrammatic(n));
     }
 
@@ -25,7 +25,7 @@ public class Solution {
         for (int i = 0; i < list.size(); i++) {
             String s = list.get(i);
             
-            if (n != m) {
+            if (n != m) { // To disallow zeros as first and last digit. We want numbers of length 'n'.
                 res.add("0" + s + "0");
             }
             
