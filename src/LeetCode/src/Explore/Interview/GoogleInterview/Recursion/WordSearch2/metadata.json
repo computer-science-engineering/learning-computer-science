@@ -1,0 +1,56 @@
+{
+    "type": "Coding",
+    "name": "Word Search II",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/62/recursion-4/462/"
+    },
+    "companies": [
+        "Amazon",
+        "Facebook",
+        "Google",
+        "Microsoft",
+        "Airbnb",
+        "Uber",
+        "Houzz",
+        "Snapchat",
+        "Yelp",
+        "Apple",
+        "Pocket Gems",
+        "Yahoo",
+        "Lyft"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Backtracking",
+        "Trie"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
