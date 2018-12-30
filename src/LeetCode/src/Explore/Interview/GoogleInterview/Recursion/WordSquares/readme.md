@@ -73,3 +73,4 @@ The output consists of two word squares. The order of output does not matter (ju
 ## Notes
 
 1. [LeetCode discussion - Explained. My Java solution using Trie [126ms 16/16]](https://leetcode.com/explore/interview/card/google/62/recursion-4/370/discuss/91333/Explained.-My-Java-solution-using-Trie-126ms-1616)
+1. [LeetCode discussion - Java DFS+Trie 54 ms, 98% so far](https://leetcode.com/explore/interview/card/google/62/recursion-4/370/discuss/91354/Java-DFS+Trie-54-ms-98-so-far)

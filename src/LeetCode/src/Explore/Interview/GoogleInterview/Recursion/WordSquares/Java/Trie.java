@@ -26,9 +26,9 @@ public class Trie {
         TrieNode cur = root;
         for (char ch : prefix.toCharArray()) {
             int idx = ch - 'a';
-            if (cur.children[idx] == null)
+            if (cur.children[idx] == null) {
                 return ans;
-
+            }
             cur = cur.children[idx];
         }
         ans.addAll(cur.startWith);
