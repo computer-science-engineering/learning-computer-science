@@ -39,7 +39,7 @@ Output: ["11","69","88","96"]
     }
     ```
 
-1. LeetCode top submission - 1 ms
+1. LeetCode submission - 1 ms
 
     ```java
     private List<String> res = new ArrayList<>();
