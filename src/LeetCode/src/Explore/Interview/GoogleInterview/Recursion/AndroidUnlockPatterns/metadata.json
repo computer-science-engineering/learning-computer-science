@@ -1,0 +1,47 @@
+{
+    "type": "Coding",
+    "name": "Android Unlock Patterns",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/62/recursion-4/484/"
+    },
+    "companies": [
+        "Google",
+        "Snapchat",
+        "Microsoft",
+        "Apple"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        "Backtracking"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
