@@ -1,4 +1,12 @@
-<img src="https://github.com/manastalukdar/learning-computer-science/blob/master/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true"/> 
+# Learning Computer Science
+
+![logo](https://github.com/manastalukdar/learning-computer-science/blob/master/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true)
+
+Learning data structures, algorithms, machine learning and various computer science constructs by programming practice from resources around the web.
+
+## Usage
+
+Highly recommended to open/use this repository using VS Code.
 
 ## Continuous Integration
 
