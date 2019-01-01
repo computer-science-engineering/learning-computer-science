@@ -17,10 +17,20 @@
                     "children": []
                 }
             ]
+        },
+        {
+            "name": "Known Algorithm",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
         }
     ],
     "tags": [
-        "Arrays"
+        "Arrays",
+        "Sorting"
     ],
     "buckets": [
         ""
