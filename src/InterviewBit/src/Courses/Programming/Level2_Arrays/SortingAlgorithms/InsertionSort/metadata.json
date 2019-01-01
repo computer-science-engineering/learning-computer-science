@@ -20,12 +20,7 @@
         },
         {
             "name": "Known Algorithm",
-            "children": [
-                {
-                    "name": "",
-                    "children": []
-                }
-            ]
+            "children": []
         }
     ],
     "tags": [
