@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "76. Minimum Window Substring",
+    "name": "Minimum Window Substring",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/problems/minimum-window-substring/description/"
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/345/"
     },
     "companies": [
         "Facebook",
@@ -26,11 +26,16 @@
     ],
     "categories": [
         {
-            "name": "Problems",
+            "name": "Explore",
             "children": [
                 {
-                    "name": "Algorithms",
-                    "children": []
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
                 }
             ]
         },
@@ -50,6 +55,7 @@
         "String"
     ],
     "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
         ""
     ]
 }
