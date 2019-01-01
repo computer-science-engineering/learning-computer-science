@@ -11,10 +11,10 @@
     ],
     "categories": [
         {
-            "name": "",
+            "name": "Known Algorithm",
             "children": [
                 {
-                    "name": "",
+                    "name": "Named Algorithm",
                     "children": []
                 }
             ]

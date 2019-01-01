@@ -1,38 +1,40 @@
 {
     "type": "Coding",
-    "name": "Bubble Sort",
+    "name": "Blum-Floyd-Pratt-Rivest-Tarjan Algorithm",
     "origin": {
-        "name": "InterviewBit",
-        "link": "https://www.interviewbit.com/courses/programming/topics/arrays/"
+        "name": "Miscellaneous",
+        "link": ""
     },
     "companies": [
+        "",
         ""
     ],
     "categories": [
         {
-            "name": "Courses",
+            "name": "Known Algorithm",
             "children": [
                 {
-                    "name": "Programming",
+                    "name": "Named Algorithm",
                     "children": []
                 }
             ]
         },
         {
-            "name": "Known Algorithm",
+            "name": "Difficulty",
             "children": [
                 {
-                    "name": "",
+                    "name": "Medium",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Arrays",
-        "Sorting"
+        "Array",
+        ""
     ],
     "buckets": [
+        "",
         ""
     ]
 }
