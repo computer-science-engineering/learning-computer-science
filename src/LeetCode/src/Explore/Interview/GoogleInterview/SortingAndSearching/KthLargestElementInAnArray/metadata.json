@@ -1,0 +1,63 @@
+{
+    "type": "Coding",
+    "name": "Kth Largest Element in an Array",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/361/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Goldman Sachs",
+        "Apple",
+        "Baidu",
+        "Tencent",
+        "Nvidia",
+        "LinkedIn",
+        "Alibaba",
+        "Bloomberg",
+        "Airbnb",
+        "eBay",
+        "Twitter",
+        "IXL",
+        "Snapchat",
+        "Yelp",
+        "Yahoo",
+        "Pocket Gems"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Divide and Conquer",
+        "Heap"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
