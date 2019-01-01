@@ -149,6 +149,7 @@
         "deserializes",
         "deterministically",
         "eval",
+        "exch",
         "extremums",
         "footable",
         "getcwd",
