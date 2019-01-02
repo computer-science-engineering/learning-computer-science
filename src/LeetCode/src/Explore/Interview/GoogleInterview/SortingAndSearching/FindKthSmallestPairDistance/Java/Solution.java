@@ -11,23 +11,23 @@ public class Solution {
 
     public static int smallestDistancePair(int[] nums, int k) {
         Arrays.sort(nums);
-        int n = nums.length, low = 0, hi = nums[n-1] - nums[0];
-        while (low < hi) {
-            int cnt = 0, j = 0, mid = (low + hi)/2;
-            for (int i = 0; i < n; ++i) {
-                while (j < n && nums[j] - nums[i] <= mid) {
-                    ++j;
-                }
-                cnt += j - i-1;
+        int n = nums.length;
+        int lo = 0;
+        int hi = nums[n - 1] - nums[0];
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            int left = 0;
+            int count = 0;
+            for (int right = 0; right < n; right++) {
+                while (nums[right] - nums[left] > mid) left++;
+                count += (right - left);
             }
-            if (cnt >= k) {
+            if (count >= k) {
                 hi = mid;
-            }            
-            else {
-                low = mid + 1;
+            } else {
+                lo = mid + 1;
             }
         }
-        
-        return low;
+        return lo;
     }
 }
