@@ -215,3 +215,5 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
         nums[j]=temp;
     }
     ```
+
+1. [YT Video - Jitendra Sangar - Kth smallest element](https://www.youtube.com/watch?v=o1vuCrt7uYc)
