@@ -1,0 +1,46 @@
+{
+    "type": "Coding",
+    "name": "Find K-th Smallest Pair Distance",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/439/"
+    },
+    "companies": [
+        "Google",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Binary Search",
+        "Heap"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
