@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Lee Algorithm",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Known Algorithm",
+            "children": [
+                {
+                    "name": "Named Algorithm",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Breadth-first Search",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
