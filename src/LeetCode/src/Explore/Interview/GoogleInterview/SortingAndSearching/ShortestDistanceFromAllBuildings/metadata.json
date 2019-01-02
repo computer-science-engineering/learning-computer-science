@@ -1,0 +1,47 @@
+{
+    "type": "Coding",
+    "name": "Shortest Distance from All Buildings",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/364/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Amazon",
+        "Zenefits"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Breadth-first search",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
