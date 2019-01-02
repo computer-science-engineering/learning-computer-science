@@ -78,3 +78,29 @@ Then the 1st smallest distance pair is (1,1), and its distance is 0.
 1. [LeetCode solution](https://leetcode.com/problems/find-k-th-smallest-pair-distance/solution/)
 1. [Geeks for Geeks - k-th smallest absolute difference of two elements in an array](https://www.geeksforgeeks.org/k-th-smallest-absolute-difference-two-elements-array/)
 1. [YT Video - GeeksForGeeks - k-th smallest absolute difference of two elements in an array | GeeksForGeeks](https://www.youtube.com/watch?v=ZXpYPeRE66E)
+1. LeetCode sample submission - 5 ms
+
+    ```java
+    public int smallestDistancePair(int[] nums, int k) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        int res = 0;
+        int lo = 0;
+        int hi = nums[n - 1] - nums[0];
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            int left = 0;
+            int count = 0;
+            for (int right = 0; right < n; right++) {
+                while (nums[right] - nums[left] > mid) left++;
+                count += (right - left);
+            }
+            if (count >= k) {
+                hi = mid;
+            } else {
+                lo = mid + 1;
+            }
+        }
+        return lo;
+    }
+    ```
