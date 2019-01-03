@@ -77,6 +77,34 @@ Then the 1st smallest distance pair is (1,1), and its distance is 0.
 
 1. [LeetCode solution](https://leetcode.com/problems/find-k-th-smallest-pair-distance/solution/)
 1. [Geeks for Geeks - k-th smallest absolute difference of two elements in an array](https://www.geeksforgeeks.org/k-th-smallest-absolute-difference-two-elements-array/)
+
+    Sort the given array `a[]`.
+
+    We can easily find the least possible absolute difference in O(n) after sorting. The largest possible difference will be `a[n-1] - a[0]` after sorting the array.
+
+    ```text
+    Let low = minimum_difference and high = maximum_difference.
+    while low < high:
+        mid = (low + high)/2
+        if ((number of pairs with absolute difference
+                                    <= mid) < k):
+           low = mid + 1
+        else:
+           high = mid
+    return low
+    ```
+
+    We need a function that will tell us number of pairs with difference <= mid efficiently. Since our array is sorted, this part can be done like this:
+
+    ```text
+    result = 0
+    for i = 0 to n-1:
+        result = result + (upper_bound(a+i, a+n, a[i] + mid) - (a+i+1))
+    return result
+    ```
+
+    Here upper_bound is a variant of binary search which returns a pointer to the first element from `a[i] to a[n-1]` which is greater than `a[i] + mid`. Let the pointer returned be `j`. Then `a[i] + mid < a[j]`. Thus, subtracting `(a+i+1)` from this will give us the number of values whose difference with `a[i]` is `<= mid`. We sum this up for all indices from `0` to `n-1` and get the answer for current mid.
+
 1. [YT Video - GeeksForGeeks - k-th smallest absolute difference of two elements in an array | GeeksForGeeks](https://www.youtube.com/watch?v=ZXpYPeRE66E)
 1. LeetCode sample submission - 5 ms
 
