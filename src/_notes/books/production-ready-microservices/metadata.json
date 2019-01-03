@@ -2,7 +2,7 @@
     "type": "Reading",
     "name": "Production-Ready Microservices",
     "origin": {
-        "name": "",
+        "name": "Notes",
         "link": ""
     },
     "companies": [
@@ -11,13 +11,8 @@
     ],
     "categories": [
         {
-            "name": "Notes",
-            "children": [
-                {
-                    "name": "Books",
-                    "children": []
-                }
-            ]
+            "name": "Books",
+            "children": []
         },
         {
             "name": "Authors",
