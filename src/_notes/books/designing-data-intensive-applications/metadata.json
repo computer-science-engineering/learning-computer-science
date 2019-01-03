@@ -1,0 +1,41 @@
+{
+    "type": "Reading",
+    "name": "Designing Data Intensive Applications",
+    "origin": {
+        "name": "",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Notes",
+            "children": [
+                {
+                    "name": "Books",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Authors",
+            "children": [
+                {
+                    "name": "Martin Kleppmann",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems",
+        "Cloud Computing",
+        "Databases"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
