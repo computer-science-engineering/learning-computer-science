@@ -3,6 +3,10 @@ package LeetCode.src.Explore.Interview.GoogleInterview.SortingAndSearching.FindK
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,11 +35,37 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int[] nums1 = {1,7,11};
+        int[] nums2 = {2,4,6};
+        int k = 3;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            List<List<Integer>> expected = Arrays.asList(
+                Arrays.asList(1,2), 
+                Arrays.asList(1,4), 
+                Arrays.asList(1,6));
+            List<int[]> result_1 = Solution.kSmallestPairs_1(nums1, nums2, k);
+            List<int[]> result = Solution.kSmallestPairs(nums1, nums2, k);  
+
+            List<List<Integer>> actual_1 = new ArrayList<>();
+            for (int[] intArray : result_1) {
+                List<Integer> innerListActual = new ArrayList<>();
+                for (int item : intArray) {                    
+                    innerListActual.add(item);
+                }
+                actual_1.add(innerListActual);
+            }
+
+            List<List<Integer>> actual = new ArrayList<>();
+            for (int[] intArray : result) {
+                List<Integer> innerListActual = new ArrayList<>();
+                for (int item : intArray) {                    
+                    innerListActual.add(item);
+                }
+                actual.add(innerListActual);
+            }
+            
+            assertEquals(expected, actual_1);
+            assertEquals(expected, actual);
         });
     }
 }
