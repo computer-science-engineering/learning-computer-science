@@ -30,3 +30,74 @@ queryRange(16, 17): true (The number 16 in [16, 17) is still being tracked, desp
 
 1. [LeetCode discussion - Java TreeMap](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/440/discuss/108910/Java-TreeMap/156612)
 1. [LeetCode discussion - Java Segment Tree](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/440/discuss/108925/Java-Segment-Tree)
+1. LeetCode sample submission - 92 ms
+
+    ```java
+    class RangeModule {
+        List<int[]> ranges = new ArrayList<int[]>();
+        public RangeModule() {
+            ranges.add(new int[] {-2, -1});
+        }
+
+        public void addRange(int left, int right) {
+            int l = searchFloor(left);
+            int r = searchFloor(right);
+            int[] vl = ranges.get(l);
+            int[] vr = ranges.get(r);
+            if (vr[1] < left) {
+                ranges.add(r+1, new int[] {left, right});
+            } else {
+                for (int k = 0; k < r-l; k++) ranges.remove(l+1);
+                if (vl[1] < left) {
+                    ranges.add(l+1, new int[] {left, Math.max(right, vr[1])});
+                } else {
+                    ranges.remove(l);
+                    ranges.add(l, new int[] {vl[0], Math.max(right, vr[1])});
+                }
+            }
+        }
+
+        public boolean queryRange(int left, int right) {
+            int l = searchFloor(left);
+            int[] r = ranges.get(l);
+            return (r[1] >= right);
+        }
+
+        public void removeRange(int left, int right) {
+            int l = searchFloor(left);
+            int r = searchFloor(right);
+            int[] vl = ranges.get(l);
+            int[] vr = ranges.get(r);
+            if (vr[1] <= left) return;
+            for (int k = 0; k < r-l; k++) ranges.remove(l+1);
+            if (vr[1] > right) {
+                ranges.add(l+1, new int[] {right, vr[1]});
+            }
+            if (vl[1] > left) {
+                ranges.remove(l);
+                if (vl[0] < left) {
+                    ranges.add(l, new int[] {vl[0], left});
+                }
+            }
+        }
+
+        // search nearest internal starts at or before key and return the index
+        int searchFloor(int key) {
+            int l = 0;
+            int h = ranges.size();
+            while (l + 1 < h) {
+                int m = (l + h)/2;
+                int v = ranges.get(m)[0];
+                if (v < key) {
+                    l = m;
+                } else if (v == key) {
+                    l = m;
+                    break;
+                } else {
+                    h = m;
+                }
+            }
+            return l;
+        }
+    }
+    ```
