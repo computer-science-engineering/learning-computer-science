@@ -7,22 +7,23 @@ public class Solution {
     }
 
     public static int mySqrt(int x) {
-        if (x==1) {
-            return 1;
-        }
-        double low = 0;
-        double high = x;
-        double mid = low + ((high - low) / 2);
-    
-        while (Math.abs((mid * mid) - x) >= 1) {
-            if ((mid * mid) > x) {    
-                high = mid;
-                mid = (high - low) / 2;    
-            } else {    
-                low = mid;
-                mid = mid + ((high - low) / 2);    
+        long start = 0;
+        long end = x;
+        
+        while (start + 1 < end) {
+            long mid = start + (end - start) / 2;
+            if (mid * mid == x) {
+                return (int)mid;
+            } else if (mid * mid < x) {
+                start = mid;
+            } else {
+                end = mid;
             }
         }
-        return (int)Math.floor(mid);
+        
+        if (end * end == x) {
+            return (int)end;
+        }
+        return (int)start;
     }
 }
