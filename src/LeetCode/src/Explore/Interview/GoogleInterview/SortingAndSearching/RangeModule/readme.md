@@ -30,6 +30,7 @@ queryRange(16, 17): true (The number 16 in [16, 17) is still being tracked, desp
 
 1. [LeetCode discussion - Java TreeMap](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/440/discuss/108910/Java-TreeMap/156612)
 1. [LeetCode discussion - Java Segment Tree](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/440/discuss/108925/Java-Segment-Tree)
+1. [LeetCode solution](https://leetcode.com/problems/range-module/solution/)
 1. LeetCode sample submission - 92 ms
 
     ```java
