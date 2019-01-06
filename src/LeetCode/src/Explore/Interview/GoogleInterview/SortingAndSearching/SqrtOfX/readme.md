@@ -81,3 +81,5 @@ Explanation: The square root of 8 is 2.82842..., and since
         }
     }
     ```
+
+1. [YT Video - GoodTecher - LeetCode Tutorial 69. Sqrt(x)](https://www.youtube.com/watch?v=3MyA0dj-_2c)
