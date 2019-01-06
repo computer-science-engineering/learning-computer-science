@@ -24,9 +24,13 @@ public class Solution {
         PriorityQueue<int[]> q = new PriorityQueue<>((a, b) -> (a[0] + a[1]) - (b[0] + b[1]));
         List<int[]> res = new ArrayList<>();
         int N1 = nums1.length, N2 = nums2.length;
-        if (N1 == 0 || N2 == 0) return res; // no pairs to form, just return an empty res list
+        if (N1 == 0 || N2 == 0) {
+            return res; // no pairs to form, just return an empty res list
+        }
         // offer initial pairs {num1, num2, index_of_num2}
-        for (int i = 0; i < Math.min(N1, k); i++) q.offer(new int[]{nums1[i], nums2[0], 0});
+        for (int i = 0; i < Math.min(N1, k); i++) {
+            q.offer(new int[]{nums1[i], nums2[0], 0});
+        }
         // get 1st k elem into result, each time, offer potential better pairs into queue
         // if there r not enough pair, just return all pairs
         for (int i = 0; i < Math.min(N1 * N2, k); i++) {
