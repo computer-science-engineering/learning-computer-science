@@ -1,0 +1,81 @@
+{
+    "type": "Coding",
+    "name": "Longest Palindromic Substring",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/451"
+    },
+    "companies": [
+        "Amazon",
+        "Microsoft",
+        "Facebook",
+        "Google",
+        "Adobe",
+        "Apple",
+        "Yahoo",
+        "Alibaba",
+        "Airbnb",
+        "GoDaddy",
+        "Roblox",
+        "Baidu",
+        "Cisco",
+        "NetEase",
+        "IBM",
+        "JPMorgan",
+        "Yelp",
+        "eBay",
+        "Tencent",
+        "Uber",
+        "Bloomberg",
+        "Huawei",
+        "Twitter",
+        "Works Applications",
+        "Expedia",
+        "Lyft",
+        "Pure Storage",
+        "Sumologic",
+        "Zenefits",
+        "VMWare",
+        "VMWare",
+        "Goo",
+        "Qualtrics",
+        "Dropbox",
+        "Walmart Labs",
+        "Yandex",
+        "Paypal",
+        "Oracle",
+        "Salesforce"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Dynamic Programming"
+    ],
+    "buckets": [
+        ""
+    ]
+}
