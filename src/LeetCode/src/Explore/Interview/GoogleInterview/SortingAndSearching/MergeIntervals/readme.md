@@ -123,3 +123,40 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
         return merged;
     }
     ```
+
+1. LeetCode sample submission - 7 ms
+
+    ```java
+    public List<Interval> merge(List<Interval> intervals) {
+        if (intervals.size() == 0 || intervals.size() == 1) {
+            return intervals;
+        }
+        List<Interval> result = new ArrayList<>();
+        int[] start = new int[intervals.size()];
+        int[] end = new int[intervals.size()];
+        for (int i = 0; i < intervals.size(); i++) {
+            Interval temp = intervals.get(i);
+            start[i] = temp.start;
+            end[i] = temp.end;
+        }
+        Arrays.sort(start);
+        Arrays.sort(end);
+        int s = start[0];
+        int e = end[0];
+        int i = 1;
+        int j = 0;
+        while(i < intervals.size()) {
+            if(start[i] > end[j]) {
+                Interval temp = new Interval(s, e);
+                result.add(temp);
+                s = start[i];
+            }
+            i++;
+            j++;
+            e = end[j];
+        }
+        Interval temp = new Interval(s, e);
+        result.add(temp);
+        return result;
+    }
+    ```
