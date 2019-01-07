@@ -1,0 +1,69 @@
+{
+    "type": "Coding",
+    "name": "Merge Intervals",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/450/"
+    },
+    "companies": [
+        "Palantir Technologies",
+        "Facebook",
+        "Google",
+        "Bloomberg",
+        "Uber",
+        "Microsoft",
+        "LinkedIn",
+        "Amazon",
+        "Apple",
+        "Oracle",
+        "Cisco",
+        "Yelp",
+        "Goldman Sachs",
+        "Twitter",
+        "Salesforce",
+        "Yahoo",
+        "Nvidia",
+        "Dataminr",
+        "Paypal",
+        "Intuit",
+        "Zenefits",
+        "Snapchat",
+        "GoDaddy",
+        "Dropbox",
+        "Pinterest",
+        "Walmart Labs",
+        "SAP"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Sort"
+    ],
+    "buckets": [
+        ""
+    ]
+}
