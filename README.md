@@ -6,7 +6,7 @@ Learning data structures, algorithms, machine learning and various computer scie
 
 ## Usage
 
-Highly recommended to open/use this repository using VS Code.
+Highly recommended to open/use this repository using [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Continuous Integration
 
