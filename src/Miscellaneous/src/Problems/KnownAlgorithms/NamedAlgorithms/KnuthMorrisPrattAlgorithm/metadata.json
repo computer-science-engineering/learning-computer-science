@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Knuth–Morris–Pratt Algorithm",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Known Algorithms",
+            "children": [
+                {
+                    "name": "Named Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String",
+        "Array"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

@@ -1,6 +1,6 @@
 {
     "type": "Coding",
-    "name": "Knuth–Morris–Pratt Algorithm",
+    "name": "Blum-Floyd-Pratt-Rivest-Tarjan Algorithm",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
@@ -11,10 +11,10 @@
     ],
     "categories": [
         {
-            "name": "Known Algorithm",
+            "name": "Known Algorithms",
             "children": [
                 {
-                    "name": "Named Algorithm",
+                    "name": "Named Algorithms",
                     "children": []
                 }
             ]
@@ -23,15 +23,15 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Hard",
+                    "name": "Medium",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "String",
-        "Array"
+        "Array",
+        ""
     ],
     "buckets": [
         "",

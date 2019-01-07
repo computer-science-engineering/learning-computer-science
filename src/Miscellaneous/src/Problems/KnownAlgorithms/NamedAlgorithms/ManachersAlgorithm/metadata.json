@@ -1,6 +1,6 @@
 {
     "type": "Coding",
-    "name": "Lee Algorithm",
+    "name": "Manacher's Algorithm",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
@@ -11,10 +11,10 @@
     ],
     "categories": [
         {
-            "name": "Known Algorithm",
+            "name": "Known Algorithms",
             "children": [
                 {
-                    "name": "Named Algorithm",
+                    "name": "Named Algorithms",
                     "children": []
                 }
             ]
@@ -23,14 +23,14 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Medium",
+                    "name": "Hard",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Breadth-first Search",
+        "String",
         ""
     ],
     "buckets": [
