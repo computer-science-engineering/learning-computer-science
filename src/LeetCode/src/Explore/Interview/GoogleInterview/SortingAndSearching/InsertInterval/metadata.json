@@ -1,0 +1,53 @@
+{
+    "type": "Coding",
+    "name": "Insert Interval",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/445/"
+    },
+    "companies": [
+        "LinkedIn",
+        "Facebook",
+        "Uber",
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Twitter",
+        "Tableau",
+        "Square",
+        "Lyft",
+        "Dropbox"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Sort"
+    ],
+    "buckets": [
+        ""
+    ]
+}
