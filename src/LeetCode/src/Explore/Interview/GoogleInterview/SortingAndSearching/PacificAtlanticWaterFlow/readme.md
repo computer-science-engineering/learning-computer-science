@@ -88,7 +88,7 @@ Return:
                     }
                     visited[x][y] = true;
                     queue.offer(new int[]{x, y});
-                } 
+                }
             }
         }
     }
@@ -137,3 +137,18 @@ Return:
 
 1. [LeetCode discussion - Simple commented java solution with thinking progress O(n)](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/456/discuss/90812/Simple-commented-java-solution-with-thinking-progress-O(n))
 1. [LeetCode discussion - JAVA 17ms Solution, Simple and Clear, similar to Number of Islands](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/456/discuss/90749/JAVA-17ms-Solution-Simple-and-Clear-similar-to-Number-of-Islands's-idea)
+
+    First, we can separate Pacific and Atlantic ocean into two, they share the same idea. The only difference is the starting position.
+
+    Second, we think this problem in the opposite way: all the valid positions must have at least one path to connect to the ocean, so we start from the ocean to find out all the paths.
+
+    ```text
+    1, 1, 1, 1
+    1, 0, 0, 0
+    1, 0, 0, 0
+    1, 0, 0, 0
+    ```
+
+    Then we create a new boolean[][] matrix like above, all the beaches is marked as True (1) in the beginning, which means they can connect to the ocean, then we explore from the beach to find out all the paths. The idea is the same for Pacific and Atlantic.
+
+    The last step is to use && to find positions satisfy both Pacific and Atlantic.
