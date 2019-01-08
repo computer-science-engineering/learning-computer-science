@@ -1,0 +1,69 @@
+{
+    "type": "Coding",
+    "name": "Word Break",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/348/"
+    },
+    "companies": [
+        "Facebook",
+        "Amazon",
+        "Google",
+        "Uber",
+        "Bloomberg",
+        "Yelp",
+        "Apple",
+        "Snapchat",
+        "Microsoft",
+        "Qualtrics",
+        "VMWare",
+        "Zillow",
+        "Oracle",
+        "Alibaba",
+        "Paypal",
+        "Yahoo",
+        "Twitter",
+        "Lyft",
+        "Adobe",
+        "Zenefits",
+        "Pinterest",
+        "eBay",
+        "Indeed",
+        "Pocket Gems",
+        "Square",
+        "Coupang"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
