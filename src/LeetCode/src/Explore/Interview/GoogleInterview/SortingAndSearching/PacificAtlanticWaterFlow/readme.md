@@ -33,6 +33,7 @@ Return:
 
 ## Notes
 
+1. This is similar to Number of Distinct Islands problem.
 1. [LeetCode discussion - Java BFS & DFS from Ocean](https://leetcode.com/explore/interview/card/google/63/sorting-and-searching-4/456/discuss/90733/Java-BFS-and-DFS-from-Ocean)
 
     1. Two Queue and add all the Pacific border to one queue; Atlantic border to another queue.
