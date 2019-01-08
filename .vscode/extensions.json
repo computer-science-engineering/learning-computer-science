@@ -1,4 +1,4 @@
-// Step1: code-insider --list-extensions
+// Step1: Get extensions json data from sync gist.
 // Step2: https://jsonformatter.org/json-parser to get metadata.publisherId
 
 {
