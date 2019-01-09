@@ -21,7 +21,9 @@ public class Solution {
         for (int i = 1; i <= s.length(); i++) {
             for (int j = i - 1; j >= 0; j--) {
                 dp[i] = dp[j] && set.contains(s.substring(j, i));
-                if(dp[i]) break;
+                if(dp[i]) {
+                    break; // breaks inner loop
+                }
             }
         }
         return dp[s.length()];
