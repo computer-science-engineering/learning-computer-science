@@ -2,7 +2,7 @@
 
 ## Description
 
-Given a **non-empty** string s and a dictionary _wordDict_ containing a list of **non-empty** words, determine if _s_ can be segmented into a space-separated sequence of one or more dictionary words.
+Given a **non-empty** string _s_ and a dictionary _wordDict_ containing a list of **non-empty** words, determine if _s_ can be segmented into a space-separated sequence of one or more dictionary words.
 
 **Note:**
 
@@ -35,6 +35,7 @@ Output: false
 
 ## Notes
 
+1. [LeetCode solution](https://leetcode.com/problems/word-break/solution/)
 1. [LeetCode discussion - Java implementation using DP in two ways](leetcode.com/explore/interview/card/google/64/dynamic-programming-4/348/discuss/43790/Java-implementation-using-DP-in-two-ways/42970)
 1. [LeetCode discussion - Java Impl - Trie with Memo - beats 40ish%](https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/348/discuss/211670/Java-Impl-Trie-with-Memo-beats-40ish)
 1. [LeetCode discussion - Simple Java backtracking solution with memo, beats 98%](https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/348/discuss/213361/Simple-Java-backtracking-solution-with-memo-beats-98)
