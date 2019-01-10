@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.GoogleInterview.SortingAndSearching.P150_EvaluateReversePolishNotation.Java;
+package LeetCode.src.Explore.Interview.GoogleInterview.SortingAndSearching.EvaluateReversePolishNotation.Java;
 
 import java.util.Stack;
 
