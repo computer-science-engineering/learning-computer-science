@@ -30,12 +30,15 @@ public class SolutionTest {
     }
     
     @Test
-    public void TrivialCase1() {
-        // input = ;
+    public void TrivialCase1() {        
+        String[] sentence = {"a", "bcd", "e"};
+        int rows = 3, cols = 6;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 2;
+            int actual = Solution.wordsTyping(sentence, rows, cols);
+            int actual_opt = Solution.wordsTyping_opt(sentence, rows, cols);
+            assertEquals(expected, actual);
+            assertEquals(expected, actual_opt);
         });
     }
 }
