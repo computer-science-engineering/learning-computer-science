@@ -1,4 +1,4 @@
-package InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.WaysToDecode.Java;
+package InterviewBit.src.Courses.Programming.Level7_DynamicProgramming.SimpleArrayDp.WaysToDecode.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
