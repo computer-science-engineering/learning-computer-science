@@ -1,0 +1,46 @@
+{
+    "type": "Coding",
+    "name": "LeetCode",
+    "origin": {
+        "name": "Maximum Vacation Days",
+        "link": "https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/367/"
+    },
+    "companies": [
+        "Google",
+        "Facebook",
+        "Uber"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
