@@ -51,6 +51,16 @@
     sudo apt-get install sublime-text
     ```
 
+- Sublime Merge
+  - Ubuntu [ref](https://www.sublimemerge.com/docs/linux_repositories)
+    ```text
+    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+    sudo apt-get install apt-transport-https
+    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+    sudo apt-get update
+    sudo apt-get install sublime-merge
+    ```
+
 - R
   - Ubuntu
     ```text
@@ -179,7 +189,6 @@
 - ILSpy
 - SysinternalsSuite
 - GitExtensions
-- Atlassian SourceTree
 - Windows Media Player classic
 - Adobe Lightroom
 - Putty
@@ -214,7 +223,6 @@
 
 ### 1.3 Linux only
 
-- GitKraken
 - conky
 - redshift
     ```text
@@ -321,6 +329,7 @@
 ### 2.2 Windows only
 
 - Microsoft Threat Modeling Tool
+- Atlassian SourceTree
 - Autodesk Pixlr
 - FotoSketcher
 - Itranslator 2003 Beta
@@ -346,7 +355,7 @@
 
 - 7zip
 - [Stacer](https://github.com/oguzhaninan/Stacer)
-- [Sublime Text](http://www.omgubuntu.co.uk/2017/05/how-to-install-sublime-text-ubuntu-linux)
+- GitKraken
 - Android Studio
   - Ubuntu
     ```text
