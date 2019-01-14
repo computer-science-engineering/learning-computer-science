@@ -26,5 +26,5 @@ Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 
 ## Notes
 
-1. [YT Video - Making Algorithms Simpler - House Robber II | Dynamic Programming | Leetcode | Python](https://www.youtube.com/watch?v=ZQzF60ohOos)
+1. [YT Video - Making Algorithms Simpler - House Robber II | Dynamic Programming | LeetCode | Python](https://www.youtube.com/watch?v=ZQzF60ohOos)
 1. [LeetCode discussion - Simple AC solution in Java in O(n) with explanation](https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/466/discuss/59934/Simple-AC-solution-in-Java-in-O(n)-with-explanation)
