@@ -1,8 +1,8 @@
 {
     "type": "Coding",
-    "name": "LeetCode",
+    "name": "Maximum Vacation Days",
     "origin": {
-        "name": "Maximum Vacation Days",
+        "name": "LeetCode",
         "link": "https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/367/"
     },
     "companies": [
