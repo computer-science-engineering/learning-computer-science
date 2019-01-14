@@ -1,14 +1,29 @@
 {
     "type": "Coding",
-    "name": "LeetCode",
+    "name": "Edit Distance",
     "origin": {
-        "name": "Maximum Vacation Days",
-        "link": "https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/367/"
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/438/"
     },
     "companies": [
         "Google",
+        "LinkedIn",
+        "Microsoft",
+        "Amazon",
+        "Bloomberg",
+        "Baidu",
+        "Yahoo",
+        "Apple",
+        "Alibaba",
+        "NetEase",
+        "Square",
+        "TripleByte",
+        "Cisco",
         "Facebook",
-        "Uber"
+        "Snapchat",
+        "Adobe",
+        "Huawei",
+        "VMware"
     ],
     "categories": [
         {
@@ -36,11 +51,10 @@
         }
     ],
     "tags": [
-        "Dynamic Programming",
-        ""
+        "String",
+        "Dynamic Programming"
     ],
     "buckets": [
-        "Editor's choice: Frequently asked in Google onsite interview",
         ""
     ]
 }
