@@ -1,0 +1,48 @@
+{
+    "type": "Coding",
+    "name": "House Robber II",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/64/dynamic-programming-4/466/"
+    },
+    "companies": [
+        "Google",
+        "Salesforce",
+        "Baidu",
+        "Adobe",
+        "Microsoft"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
