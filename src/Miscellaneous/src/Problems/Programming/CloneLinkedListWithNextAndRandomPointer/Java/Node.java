@@ -1,6 +1,6 @@
 package Miscellaneous.src.Problems.Programming.CloneLinkedListWithNextAndRandomPointer.Java;
 
-public class Node { 
+class Node { 
     int data;//Node data 
     Node next, random;//Next and random reference 
   

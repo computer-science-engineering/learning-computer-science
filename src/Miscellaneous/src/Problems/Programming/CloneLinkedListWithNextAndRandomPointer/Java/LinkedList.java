@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LinkedList {
+class LinkedList {
     Node head;//Linked list head reference 
   
     // Linked list constructor 
