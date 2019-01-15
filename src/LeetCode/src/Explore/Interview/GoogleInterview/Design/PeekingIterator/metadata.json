@@ -1,0 +1,51 @@
+{
+    "type": "Coding",
+    "name": "Peeking Iterator",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/65/design-4/343/"
+    },
+    "companies": [
+        "Apple",
+        "Amazon",
+        "Paypal",
+        "Google",
+        "Square",
+        "Microsoft",
+        "Morgan Stanley",
+        "Yahoo"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Design",
+        ""
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
