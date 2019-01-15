@@ -1,1 +1,1 @@
-Not accepting contributions until project reaches a baseline, i.e., number of problems >= ~400.
+Currently not accepting any contributions. Feel free to open an issue and make comments.
