@@ -1,0 +1,51 @@
+{
+    "type": "Coding",
+    "name": "Moving Average from Data Stream",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/65/design-4/336/"
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Bloomberg",
+        "Uber",
+        "Twitter",
+        "Amazon",
+        "Microsoft",
+        "Indeed"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Design",
+        "Queue"
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
