@@ -15,14 +15,19 @@ public class Solution {
         return Math.max(dp[nums.length][0], dp[nums.length][1]);
     }
 
+    /*
+    f(k) = Largest amount that you can rob from the first k houses.
+    Ai = Amount of money at the ith house.
+    f(k) = max(f(k – 2) + Ak, f(k – 1))
+    */
     public static int rob_opt(int[] nums) {
-        int currentNo = 0;
-        int currentYes = 0;
-        for (int n : nums) {
-            int temp = currentNo;
-            currentNo = Math.max(currentNo, currentYes);
-            currentYes = n + temp;
+        int prevMax = 0; // k-2
+        int currMax = 0; // k-1
+        for (int x : nums) {
+            int temp = currMax;
+            currMax = Math.max(prevMax + x, currMax); // newCurrMax = max( f(k-2)+Ak, f(k-1))
+            prevMax = temp;
         }
-        return Math.max(currentNo, currentYes);
+        return currMax;
     }
 }

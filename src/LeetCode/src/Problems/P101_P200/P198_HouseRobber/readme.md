@@ -71,6 +71,18 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
         }
         return Math.max(prevNo, prevYes);
     }
+
+    // better variable names
+    public static int rob(int[] nums) {
+        int currentNo = 0;
+        int currentYes = 0;
+        for (int n : nums) {
+            int temp = currentNo;
+            currentNo = Math.max(currentNo, currentYes);
+            currentYes = n + temp;
+        }
+        return Math.max(currentNo, currentYes);
+    }
     ```
 
 1. [LeetCode solution](https://leetcode.com/problems/house-robber/solution/)
