@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "173. Binary Search Tree Iterator",
+    "name": "Binary Search Tree Iterator",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/problems/binary-search-tree-iterator/description/"
+        "link": "https://leetcode.com/explore/interview/card/google/65/design-4/475/"
     },
     "companies": [
         "Facebook",
@@ -22,11 +22,16 @@
     ],
     "categories": [
         {
-            "name": "Problems",
+            "name": "Explore",
             "children": [
                 {
-                    "name": "Algorithms",
-                    "children": []
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
                 }
             ]
         },
