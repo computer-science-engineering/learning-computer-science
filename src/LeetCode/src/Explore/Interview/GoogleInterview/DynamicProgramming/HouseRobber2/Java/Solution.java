@@ -11,13 +11,19 @@ public class Solution {
         return Math.max(rob(nums, 0, nums.length - 2), rob(nums, 1, nums.length - 1));
     }
 
-    private static int rob(int[] num, int lo, int hi) {
-        int include = 0, exclude = 0;
+     /*
+    f(k) = Largest amount that you can rob from the first k houses.
+    Ai = Amount of money at the ith house.
+    f(k) = max(f(k – 2) + Ak, f(k – 1))
+    */
+    private static int rob(int[] nums, int lo, int hi) {
+        int prevMax = 0; // k-2
+        int currMax = 0; // k-1
         for (int j = lo; j <= hi; j++) {
-            int i = include, e = exclude;
-            include = e + num[j];
-            exclude = Math.max(e, i);
+            int temp = currMax;
+            currMax = Math.max(prevMax + nums[j], currMax); // newCurrMax = max( f(k-2)+Ak, f(k-1))
+            prevMax = temp;
         }
-        return Math.max(include, exclude);
+        return currMax;
     }
 }
