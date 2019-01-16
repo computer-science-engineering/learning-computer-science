@@ -1,0 +1,50 @@
+{
+    "type": "Coding",
+    "name": "Design Tic-Tac-Toe",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/65/design-4/446/"
+    },
+    "companies": [
+        "Microsoft",
+        "Amazon",
+        "Google",
+        "Facebook",
+        "Apple",
+        "TripleByte",
+        "Twitter"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
