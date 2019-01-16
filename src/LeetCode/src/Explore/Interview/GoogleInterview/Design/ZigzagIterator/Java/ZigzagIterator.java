@@ -16,7 +16,9 @@ public class ZigzagIterator {
     public ZigzagIterator(List<List<Integer>> listOfLists) {
         list = new LinkedList<Iterator<Integer>>();
         for (List<Integer> listOfInt : listOfLists) {
-            list.add(listOfInt.iterator());
+            if (!listOfInt.isEmpty()) {
+                list.add(listOfInt.iterator());
+            }
         }
     }
 
