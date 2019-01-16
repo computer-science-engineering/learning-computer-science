@@ -28,14 +28,4 @@ public class SolutionTest {
              assertAll(() -> Solution.main(args));
         });
     }
-    
-    @Test
-    public void TrivialCase1() {
-        // input = ;
-        assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
-        });
-    }
 }
