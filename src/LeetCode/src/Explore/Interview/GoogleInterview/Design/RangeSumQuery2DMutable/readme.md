@@ -110,7 +110,7 @@ sumRegion(2, 1, 4, 3) -> 10
 
     [Explanation of Binary Indexed Tree at TopCoder](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/)
 
-    More [here](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75870/Java-2D-Binary-Indexed-Tree-Solution-clean-and-short-17ms/79038), [here](https://www.youtube.com/watch?v=CWDQJGaN1gY) and [here](https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/).
+    More [here](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75870/Java-2D-Binary-Indexed-Tree-Solution-clean-and-short-17ms/79038), [here](https://www.youtube.com/watch?v=CWDQJGaN1gY), [here](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/FenwickTree.java) and [here](https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/).
 
 1. [LeetCode discussion - Segment Tree Solution in Java](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75863/Segment-Tree-Solution-in-Java)
 1. [LeetCode discussion - 15ms easy to understand java solution](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75852/15ms-easy-to-understand-java-solution)
