@@ -1,0 +1,49 @@
+{
+    "type": "Coding",
+    "name": "UTF-8 Validation",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/explore/interview/card/google/66/others-4/458/"
+    },
+    "companies": [
+        "Palantir Technologies",
+        "Google",
+        "Facebook",
+        "Apple",
+        "Uber",
+        "Nvidia"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Bit Manipulation",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
