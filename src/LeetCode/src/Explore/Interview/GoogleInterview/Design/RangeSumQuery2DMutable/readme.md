@@ -63,18 +63,18 @@ sumRegion(2, 1, 4, 3) -> 10
         }
 
         // Function similar to Map.put(Key, Val), key is (row, col), new value is (val)
-        public void update(int row, int col, int val) { 
+        public void update(int row, int col, int val) {
             // input validation: empty matrix || row col not in range
-            if (m == 0 || n == 0 || row < 0 || row > m || col < 0 || col > n) { 
-                return; 
+            if (m == 0 || n == 0 || row < 0 || row > m || col < 0 || col > n) {
+                return;
             }
             // update cloned matrix: nums
             int oldVal = nums[row][col];
             nums[row][col] = val;
             // update bit tree with delta
             int delta = val - oldVal;
-            for (int i = row + 1; i <= m; i += i & (-i)) {  // remember tree is indexed by rLen & cLen, off-by-one index
-                for (int j = col + 1; j <= n; j += j & (-j)) { 
+            for (int i = row + 1; i <= m; i += i & (-i)) {  // remember tree is indexed by rLen & cLen, off-by-one index; getNext
+                for (int j = col + 1; j <= n; j += j & (-j)) {
                     tree[i][j] += delta;
                 }
             }
@@ -83,11 +83,12 @@ sumRegion(2, 1, 4, 3) -> 10
         // Assume row1 <= row2 and col1 <= col2. both 0-base index and all input within range
         public int sumRegion(int row1, int col1, int row2, int col2) {
             // input validation: empty matrix || row col not in range
-            if (m == 0 || n == 0 || row1 < 0 || row1 > m || col1 < 0 || col1 > n || row2 < 0 || row2 > m || col2 < 0 || col2 > n) { 
-                return 0; 
+            if (m == 0 || n == 0 || row1 < 0 || row1 > m || col1 < 0 || col1 > n || row2 < 0 || row2 > m || col2 < 0 || col2 > n) {
+                return 0;
             }
             // used 4 rectangle areas [(0, 0), (x, y)] to compute wanted area
             // think about cases where row1 || col1 might be 0
+            // Sum(r,c) means "the sum of all elements in the first r rows and c cols."
             return sum(row2, col2) + sum(row1 - 1, col1 - 1) - sum(row1 - 1, col2) - sum(row2, col1 - 1);
         }
 
@@ -96,7 +97,7 @@ sumRegion(2, 1, 4, 3) -> 10
             int rLen = row + 1;
             int cLen = col + 1;
             int sum = 0;
-            for (int i = rLen; i > 0; i -= i & (-i)) {
+            for (int i = rLen; i > 0; i -= i & (-i)) { // getParent
                 for (int j = cLen; j > 0; j -= j & (-j)) {
                     sum += tree[i][j];
                 }
@@ -109,7 +110,7 @@ sumRegion(2, 1, 4, 3) -> 10
 
     [Explanation of Binary Indexed Tree at TopCoder](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/)
 
-    More [here](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75870/Java-2D-Binary-Indexed-Tree-Solution-clean-and-short-17ms/79038) and [here](https://www.youtube.com/watch?v=CWDQJGaN1gY).
+    More [here](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75870/Java-2D-Binary-Indexed-Tree-Solution-clean-and-short-17ms/79038), [here](https://www.youtube.com/watch?v=CWDQJGaN1gY) and [here](https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/).
 
 1. [LeetCode discussion - Segment Tree Solution in Java](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75863/Segment-Tree-Solution-in-Java)
 1. [LeetCode discussion - 15ms easy to understand java solution](https://leetcode.com/explore/interview/card/google/65/design-4/477/discuss/75852/15ms-easy-to-understand-java-solution)
@@ -192,6 +193,46 @@ sumRegion(2, 1, 4, 3) -> 10
                 for (int j = col + 1; j > 0; j -= j & -j)
                     tot += bit[i][j];
             return tot;
+        }
+    }
+    ```
+
+1. LeetCode sample submission - 109 ms
+
+    ```java
+    class NumMatrix {
+        int[][] colSum;
+        int[][] matrix;
+
+        public NumMatrix(int[][] matrix) {
+            if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return;
+
+            this.matrix = matrix;
+            int m = matrix.length;
+            int n = matrix[0].length;
+            colSum = new int[m + 1][n];
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    colSum[i + 1][j] = colSum[i][j] + matrix[i][j];
+                }
+            }
+        }
+
+        public void update(int row, int col, int val) {
+            for (int i = row; i < matrix.length; i++) {
+                colSum[i + 1][col] = colSum[i + 1][col] - matrix[row][col] + val;
+            }
+
+            this.matrix[row][col] = val;
+        }
+
+        public int sumRegion(int row1, int col1, int row2, int col2) {
+            int sum = 0;
+            for (int i = col1; i <= col2; i++) {
+                sum += (colSum[row2 + 1][i] - colSum[row1][i]);
+            }
+
+            return sum;
         }
     }
     ```
