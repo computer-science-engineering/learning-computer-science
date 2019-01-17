@@ -1,0 +1,48 @@
+{
+    "type": "Coding",
+    "name": "Range Sum Query 2D - Mutable",
+    "origin": {
+        "name": "LeetCode",
+        "link": ""
+    },
+    "companies": [
+        "Facebook",
+        "Google",
+        "Microsoft",
+        "Houzz",
+        "Baidu"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Google Interview",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Dynamic Programming",
+        ""
+    ],
+    "buckets": [
+        "Editor's choice: Frequently asked in Google onsite interview",
+        ""
+    ]
+}
