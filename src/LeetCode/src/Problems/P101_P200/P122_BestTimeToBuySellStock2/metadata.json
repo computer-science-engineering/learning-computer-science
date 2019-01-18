@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Best Time to Buy and Sell Stock II",
+    "name": "122. Best Time to Buy and Sell Stock II",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/564/"
+        "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
     },
     "companies": [
         "Amazon",
