@@ -48,7 +48,7 @@ But the second continuation byte does not start with 10, so it is invalid.
 1. [LeetCode solution](https://leetcode.com/problems/utf-8-validation/solution/)
 1. [Geeks for Geeks - Understanding Character Encoding](https://www.geeksforgeeks.org/understanding-character-encoding/)
 1. [The Fake Geek's blog - UTF-8 Validation](http://shirleyisnotageek.blogspot.com/2016/10/utf-8-validation.html)
-1. [LeetCode discussion - Bit Manipulation, Java, 6ms](https://leetcode.com/problems/utf-8-validation/discuss/87464/Bit-Manipulation-Java-6ms/92375)
+1. [LeetCode discussion - Bit Manipulation, Java, 6ms](https://leetcode.com/explore/interview/card/google/66/others-4/458/87464/Bit-Manipulation-Java-6ms/92375)
 
    ```text
    Rule 2:
@@ -60,4 +60,85 @@ But the second continuation byte does not start with 10, so it is invalid.
 
    Rule 1:
    If it is not started with "10", return false;
+   ```
+
+1. [LeetCode discussion - Simple one pass concise Java solution beating 99%](https://leetcode.com/explore/interview/card/google/66/others-4/458/discuss/87496/Simple-one-pass-concise-Java-solution-beating-99)
+
+   ```java
+   public boolean validUtf8(int[] data) {
+      int varCharLeft = 0;
+      for (int b: data) {
+         if (varCharLeft == 0) {
+            if ((b & 0b010000000) == 0)  varCharLeft = 0;
+            else if ((b & 0b011100000) == 0b11000000)  varCharLeft = 1;
+            else if ((b & 0b011110000) == 0b11100000)  varCharLeft = 2;
+            else if ((b & 0b011111000) == 0b11110000)  varCharLeft = 3;
+            else return false;
+         } else {
+            if ((b & 0b011000000) != 0b10000000)  return false;
+            varCharLeft--;
+         }
+      }
+      return varCharLeft==0;
+   }
+   ```
+
+1. [LeetCode discussion - O(n) JAVA solution, with detailed explaination](https://leetcode.com/explore/interview/card/google/66/others-4/458/discuss/87485/O(n)-JAVA-solution-with-detailed-explaination)
+
+   ```java
+   public class Solution {
+      /*
+      * Thought-way: 
+      * As long as every byte in the array is of right type, it is a valid UTF-8 encoding.
+      * 
+      * Method: 
+      * Start from index 0, determine each byte's type and check its validity.
+      *
+      * There are five kinds of valid byte type: 0**, 10**, 110**,1110** and 11110**
+      * Give them type numbers, 0, 1, 2, 3, 4 which are the index of the first 0 from left. 
+      * So, the index of the first 0 determines the byte type.
+      *
+      * if a byte belongs to one of them:
+         1 : if it is type 0, continue
+         2 : if it is type 2 or 3 or 4, check whether the following 1, 2, and 3 byte(s) are of type 1 or not
+                  if not, return false;
+      * else if a byte is type 1 or not of valid type, return false
+      *
+      * Analysis :
+      * The faster you can determine the type, the quicker you can get. 
+      * Time O(n), space O(1)
+      * real performance: 7ms
+      */
+
+      // Hard code "masks" array to find the index of the first appearance of 0 in the lower 8 bits of each integer.
+      private int[] masks = {128, 64, 32, 16, 8};
+      public boolean validUtf8(int[] data) {
+         int len = data.length;
+         for (int i = 0; i < len; i ++) {
+               int curr = data[i];
+               int type = getType(curr);
+               if (type == 0) {
+                  continue;
+               } else if (type > 1 && i + type <= len) {
+                  while (type-- > 1) {
+                     if (getType(data[++i]) != 1) {
+                           return false;
+                     }
+                  }
+               } else {
+                  return false;
+               }
+         }
+         return true;
+      }
+
+      public int getType(int num) {
+         for (int i = 0; i < 5; i ++) {
+               if ((masks[i] & num) == 0) {
+                  return i;
+               }
+         }
+         return -1;
+      }
+   }
    ```
