@@ -48,7 +48,7 @@ But the second continuation byte does not start with 10, so it is invalid.
 1. [LeetCode solution](https://leetcode.com/problems/utf-8-validation/solution/)
 1. [Geeks for Geeks - Understanding Character Encoding](https://www.geeksforgeeks.org/understanding-character-encoding/)
 1. [The Fake Geek's blog - UTF-8 Validation](http://shirleyisnotageek.blogspot.com/2016/10/utf-8-validation.html)
-1. [LeetCode discussion - Bit Manipulation, Java, 6ms](https://leetcode.com/explore/interview/card/google/66/others-4/458/87464/Bit-Manipulation-Java-6ms/92375)
+1. [LeetCode discussion - Bit Manipulation, Java, 6ms](https://leetcode.com/explore/interview/card/google/66/others-4/458/discuss/87464/Bit-Manipulation-Java-6ms/92375)
 
    ```text
    Rule 2:
@@ -60,6 +60,25 @@ But the second continuation byte does not start with 10, so it is invalid.
 
    Rule 1:
    If it is not started with "10", return false;
+   ```
+
+   ```java
+   public static boolean validUtf8(int[] data) {
+        int count = 0;
+        for(int d:data) {
+            System.out.println(Integer.toBinaryString(d));
+            if(count == 0) {
+                if((d >> 5) == 0b110) count = 1; // 6
+                else if((d >> 4) == 0b1110) count = 2; // 14
+                else if((d >> 3) == 0b11110) count = 3; // 30
+                else if((d >> 7) ==  1) return false;
+            } else {
+                if((d >> 6) != 0b10) return false; // 2
+                else count--;
+            }
+        }
+        return count == 0;
+    }
    ```
 
 1. [LeetCode discussion - Simple one pass concise Java solution beating 99%](https://leetcode.com/explore/interview/card/google/66/others-4/458/discuss/87496/Simple-one-pass-concise-Java-solution-beating-99)

@@ -6,30 +6,29 @@ public class Solution {
         System.out.println(validUtf8(data));
     }
 
-    /*
-    Rule 2:
-    Record the count of consecutive of 1.
-    Move the number 5 bit right, if it equals "110" means there is one '1'.
-    Move the number 4 bit right, if it equals "1110" means there are two '1'.
-    ...
-    Move the number 7 bit right, if it equals "1" means it is "10000000" which has no meaning, return false.
-
-    Rule 1:
-    If it is not started with "10", return false;
-    */
     public static boolean validUtf8(int[] data) {
-        int count = 0;
-        for(int d:data) {
-            if(count == 0) {
-                if((d >> 5) == 0b110) count = 1;
-                else if((d >> 4) == 0b1110) count = 2;
-                else if((d >> 3) == 0b11110) count = 3;
-                else if((d >> 7) ==  1) return false;
+        if(data==null || data.length==0) return false;
+        boolean isValid = true;
+        for(int i=0;i<data.length;i++) {
+            if(data[i]>255) return false; // 1 after 8th digit, 100000000
+            int numberOfBytes = 0;
+            if((data[i] & 128) == 0) { // 0xxxxxxx, 1 byte, 128(10000000)
+                numberOfBytes = 1;
+            } else if((data[i] & 224) == 192) { // 110xxxxx, 2 bytes, 224(11100000), 192(11000000)
+                numberOfBytes = 2;
+            } else if((data[i] & 240) == 224) { // 1110xxxx, 3 bytes, 240(11110000), 224(11100000)
+                numberOfBytes = 3;
+            } else if((data[i] & 248) == 240) { // 11110xxx, 4 bytes, 248(11111000), 240(11110000)
+                numberOfBytes = 4;
             } else {
-                if((d >> 6) != 0b10) return false;
-                else count--;
+                return false;
             }
+            for(int j=1; j<numberOfBytes; j++) { // check that the next n bytes start with 10xxxxxx
+                if(i+j >= data.length) return false;
+                if((data[i+j] & 192) != 128) return false; // 192(11000000), 128(10000000)
+            }
+            i=i+numberOfBytes-1;
         }
-        return count == 0;
+        return isValid;
     }
 }
