@@ -65,4 +65,4 @@ for (int i = 0; i < len; i++) {
     }
     ```
 
-1. [LeetCode discussion - Easy to understand Java solution, 13ms](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/discuss/143792/Easy-to-understand-Java-solution-13ms)
+1. [LeetCode discussion - Easy to understand Java solution, 13ms](https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/143792/Easy-to-understand-Java-solution-13ms)

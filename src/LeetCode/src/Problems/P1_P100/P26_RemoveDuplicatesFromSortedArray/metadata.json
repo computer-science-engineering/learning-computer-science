@@ -3,7 +3,7 @@
     "name": "Remove Duplicates from Sorted Array",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/"
+        "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
     },
     "companies": [
         "Facebook",
