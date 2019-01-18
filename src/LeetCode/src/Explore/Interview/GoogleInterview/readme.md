@@ -1,4 +1,6 @@
-# Introduction
+# Overview
+
+## Introduction
 
 Google tech interviews are notoriously difficult and quite challenging. To get a phone screen, you will submit your resume to their online application system or via an internal referral from a Googler.
 
