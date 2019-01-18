@@ -88,14 +88,14 @@ But the second continuation byte does not start with 10, so it is invalid.
    ```java
    public class Solution {
       /*
-      * Thought-way: 
+      * Thought-way:
       * As long as every byte in the array is of right type, it is a valid UTF-8 encoding.
       * 
-      * Method: 
+      * Method:
       * Start from index 0, determine each byte's type and check its validity.
       *
       * There are five kinds of valid byte type: 0**, 10**, 110**,1110** and 11110**
-      * Give them type numbers, 0, 1, 2, 3, 4 which are the index of the first 0 from left. 
+      * Give them type numbers, 0, 1, 2, 3, 4 which are the index of the first 0 from left.
       * So, the index of the first 0 determines the byte type.
       *
       * if a byte belongs to one of them:
@@ -105,7 +105,7 @@ But the second continuation byte does not start with 10, so it is invalid.
       * else if a byte is type 1 or not of valid type, return false
       *
       * Analysis :
-      * The faster you can determine the type, the quicker you can get. 
+      * The faster you can determine the type, the quicker you can get.
       * Time O(n), space O(1)
       * real performance: 7ms
       */
