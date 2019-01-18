@@ -1,6 +1,6 @@
 {
     "type": "Coding",
-    "name": "Remove Duplicates from Sorted Array",
+    "name": "26. Remove Duplicates from Sorted Array",
     "origin": {
         "name": "LeetCode",
         "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
