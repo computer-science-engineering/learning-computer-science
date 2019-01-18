@@ -48,3 +48,16 @@ But the second continuation byte does not start with 10, so it is invalid.
 1. [LeetCode solution](https://leetcode.com/problems/utf-8-validation/solution/)
 1. [Geeks for Geeks - Understanding Character Encoding](https://www.geeksforgeeks.org/understanding-character-encoding/)
 1. [The Fake Geek's blog - UTF-8 Validation](http://shirleyisnotageek.blogspot.com/2016/10/utf-8-validation.html)
+1. [LeetCode discussion - Bit Manipulation, Java, 6ms](https://leetcode.com/problems/utf-8-validation/discuss/87464/Bit-Manipulation-Java-6ms/92375)
+
+   ```text
+   Rule 2:
+   Record the count of consecutive of 1.
+   Move the number 5 bit right, if it equals "110" means there is one '1'.
+   Move the number 4 bit right, if it equals "1110" means there are two '1'.
+   ...
+   Move the number 7 bit right, if it equals "1" means it is "10000000" which has no meaning, return false.
+
+   Rule 1:
+   If it is not started with "10", return false;
+   ```
