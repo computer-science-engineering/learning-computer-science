@@ -142,3 +142,39 @@ But the second continuation byte does not start with 10, so it is invalid.
       }
    }
    ```
+
+1. LeetCode sample submission - 3 ms
+
+   ```java
+   public boolean validUtf8(int[] data) {
+        if(data == null || data.length < 1) return false;
+        int[] arr = new int[]{1, 2, 4, 8, 16, 32, 64, 128};
+        int start = 0;
+        while(start < data.length) {
+            if(data[start] < 128) {
+                start++;
+                continue;
+            }
+            if(data[start] >= 248) return false;
+            int len = 0;
+            int sum = 0;
+            while(true) {
+                sum += arr[7 - len];
+
+                if(data[start] >= sum) {
+                    len++;
+                } else {
+                    break;
+                }
+                if(start + len > data.length) return false;
+            }
+            if(len < 2 || len > 4) return false;
+            if(start + len > data.length) return false;
+            for(int i = start + 1; i < start + len; i++) {
+                if(data[i] >= 192|| data[i] < 128) return false;
+            }
+            start += len;
+        }
+        return true;
+    }
+   ```
