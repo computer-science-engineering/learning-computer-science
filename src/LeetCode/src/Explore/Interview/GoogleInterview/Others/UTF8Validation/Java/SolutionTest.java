@@ -31,11 +31,21 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int[] data = {197, 130, 1};
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            boolean expected = true;
+            boolean actual = Solution.validUtf8(data);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        int[] data = {235, 140, 4};
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = false;
+            boolean actual = Solution.validUtf8(data);
+            assertEquals(expected, actual);
         });
     }
 }
