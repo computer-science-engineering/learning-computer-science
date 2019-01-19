@@ -17,7 +17,7 @@ public class Solution {
 		// Print a string literal saying "Hello, World." to stdout.
 		System.out.println("Hello, World.");
       
-	    // TODO: Write a line of code here that prints the contents of inputString to stdout.
+	    // Print the contents of inputString to stdout.
         System.out.println(inputString);
 	}
 }

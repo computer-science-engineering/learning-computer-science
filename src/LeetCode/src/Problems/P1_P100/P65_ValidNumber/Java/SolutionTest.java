@@ -34,8 +34,10 @@ public class SolutionTest {
         String s = "0";
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
-            boolean actual = Solution.isNumber(s);
-            assertEquals(expected, actual);
+            boolean actual1 = Solution.isNumber1(s);
+            boolean actual2 = Solution.isNumber2(s);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -44,8 +46,10 @@ public class SolutionTest {
         String s = " 0.1 ";
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
-            boolean actual = Solution.isNumber(s);
-            assertEquals(expected, actual);
+            boolean actual1 = Solution.isNumber1(s);
+            boolean actual2 = Solution.isNumber2(s);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -54,8 +58,10 @@ public class SolutionTest {
         String s = "abc";
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = false;
-            boolean actual = Solution.isNumber(s);
-            assertEquals(expected, actual);
+            boolean actual1 = Solution.isNumber1(s);
+            boolean actual2 = Solution.isNumber2(s);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -64,8 +70,10 @@ public class SolutionTest {
         String s = "1 a";
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = false;
-            boolean actual = Solution.isNumber(s);
-            assertEquals(expected, actual);
+            boolean actual1 = Solution.isNumber1(s);
+            boolean actual2 = Solution.isNumber2(s);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -74,8 +82,10 @@ public class SolutionTest {
         String s = "2e10";
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
-            boolean actual = Solution.isNumber(s);
-            assertEquals(expected, actual);
+            boolean actual1 = Solution.isNumber1(s);
+            boolean actual2 = Solution.isNumber2(s);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 }
