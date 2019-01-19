@@ -1,10 +1,11 @@
 package LeetCode.src.Explore.Interview.GoogleInterview.TreesAndGraphs.RedundantConnection2.Java;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Graph {
     int n;
-    LinkedList<Integer> adj[];
+    ArrayList<LinkedList<Integer>> adj;
     int nodeHasTwoParents = -1;
     int[] pair = {-1, -1}; //the pair in the loop whose node has two parents
     int index = 0; 
@@ -13,15 +14,15 @@ public class Graph {
     
     Graph(int n){
         this.n = n;
-        adj = new LinkedList[n+1];
-        for(int i = 0; i <= n; i++){
-            adj[i] = new LinkedList();
+        adj = new ArrayList<LinkedList<Integer>>(); // size: n+1
+        for(int i = 0; i <= n; i++) {
+            adj.add(i, new LinkedList<Integer>());
         }
         map = new int[n+1][n+1];
     }
     
     void addEdge(int v, int w){
-        adj[v].add(w);
+        adj.get(v).add(w);
         map[v][w] = index++;
     }
     
@@ -58,7 +59,7 @@ public class Graph {
         visited[i] = true;
         revisited[i] = true;
         
-        LinkedList<Integer> children = adj[i];
+        LinkedList<Integer> children = adj.get(i);
         for(Integer child: children){
             if(isCycleUntil(child, visited, revisited)){
                 if(nodeHasTwoParents != -1 ){//case 2

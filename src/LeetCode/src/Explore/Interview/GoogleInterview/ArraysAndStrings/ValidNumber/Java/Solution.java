@@ -14,6 +14,7 @@ public class Solution {
                 return false;
             }
             double i = Double.parseDouble(s);
+            System.out.println(i);
             return true;
         }
         catch (NumberFormatException e) {

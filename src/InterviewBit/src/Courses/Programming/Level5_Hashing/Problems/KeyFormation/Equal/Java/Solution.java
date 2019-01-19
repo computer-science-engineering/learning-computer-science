@@ -48,10 +48,10 @@ public class Solution {
                 }
             }
         }
-        Set set = map.entrySet();
-        Iterator iterator = set.iterator();
+        Set<Map.Entry<Integer, ArrayList<Pair>>> set = map.entrySet();
+        Iterator<Map.Entry<Integer, ArrayList<Pair>>> iterator = set.iterator();
         while(iterator.hasNext()) {
-            Map.Entry entry = (Map.Entry)iterator.next();
+            Map.Entry<Integer, ArrayList<Pair>> entry = (Map.Entry<Integer, ArrayList<Pair>>)iterator.next();
             //System.out.println("Key is: "+entry.getKey() + " & Value is: ");
             //System.out.println("\t" +  entry.getValue());
             ArrayList<Pair> items = (ArrayList<Pair>) entry.getValue();

@@ -50,7 +50,7 @@ public class Solution {
     }
 
     public static String minWindow2(String A, String B) {
-        HashMap<Character, Integer> map = new HashMap();
+        HashMap<Character, Integer> map = new HashMap<>();
         for(char c : B.toCharArray()){
             if(map.containsKey(c)){
                 map.put(c, map.get(c)+1);

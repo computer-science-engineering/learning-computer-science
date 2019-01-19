@@ -13,17 +13,17 @@ public class Solution {
     }
 
     public static boolean canFinish_bfs(int numCourses, int[][] prerequisites) {
-        ArrayList[] graph = new ArrayList[numCourses];
+        ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>(); // size: numCourses
         int[] degree = new int[numCourses];
-        Queue queue = new LinkedList();
+        Queue<Integer> queue = new LinkedList<>();
         int count=0;
         
         for(int i=0;i<numCourses;i++)
-            graph[i] = new ArrayList();
+            graph.add(i, new ArrayList<Integer>());
             
         for(int i=0; i<prerequisites.length;i++){
             degree[prerequisites[i][1]]++;
-            graph[prerequisites[i][0]].add(prerequisites[i][1]);
+            graph.get(prerequisites[i][0]).add(prerequisites[i][1]);
         }
         for(int i=0; i<degree.length;i++){
             if(degree[i] == 0){
@@ -34,8 +34,8 @@ public class Solution {
         
         while(queue.size() != 0){
             int course = (int)queue.poll();
-            for(int i=0; i<graph[course].size();i++){
-                int pointer = (int)graph[course].get(i);
+            for(int i=0; i<graph.get(course).size();i++){
+                int pointer = (int)graph.get(course).get(i);
                 degree[pointer]--;
                 if(degree[pointer] == 0){
                     queue.add(pointer);
@@ -50,14 +50,14 @@ public class Solution {
     }
 
     public static boolean canFinish_dfs(int numCourses, int[][] prerequisites) {
-        ArrayList[] graph = new ArrayList[numCourses];
+        ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>(); // size: numCourses
         for(int i=0;i<numCourses;i++) {
-            graph[i] = new ArrayList();
+            graph.add(i, new ArrayList<Integer>());
         }
             
         boolean[] visited = new boolean[numCourses];
         for(int i=0; i<prerequisites.length;i++) {
-            graph[prerequisites[i][1]].add(prerequisites[i][0]);
+            graph.get(prerequisites[i][1]).add(prerequisites[i][0]);
         }
 
         for(int i=0; i<numCourses; i++) {
@@ -68,7 +68,7 @@ public class Solution {
         return true;
     }
 
-    private static boolean dfs(ArrayList[] graph, boolean[] visited, int course){
+    private static boolean dfs(ArrayList<ArrayList<Integer>> graph, boolean[] visited, int course){
         if(visited[course]) {
             return false;
         }
@@ -76,8 +76,8 @@ public class Solution {
             visited[course] = true;
         }
 
-        for(int i=0; i<graph[course].size();i++) {
-            if(!dfs(graph,visited,(int)graph[course].get(i))) {
+        for(int i=0; i<graph.get(course).size();i++) {
+            if(!dfs(graph,visited,(int)graph.get(course).get(i))) {
                 return false;
             }
         }
