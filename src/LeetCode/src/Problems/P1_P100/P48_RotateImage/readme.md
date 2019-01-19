@@ -51,7 +51,7 @@ rotate the input matrix in-place such that it becomes:
 ## Notes
 
 1. [LeetCode solution](https://leetcode.com/problems/rotate-image/solution/)
-1. [LeetCode discussion - A common method to rotate the image](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/discuss/18872/A-common-method-to-rotate-the-image)
+1. [LeetCode discussion - A common method to rotate the image](https://leetcode.com/problems/rotate-image/discuss/18872/A-common-method-to-rotate-the-image)
 
     ```text
     /*
@@ -85,7 +85,7 @@ rotate the input matrix in-place such that it becomes:
     }
     ```
 
-    [ref](leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/discuss/18872/A-common-method-to-rotate-the-image/139220):
+    [ref](https://leetcode.com/problems/rotate-image/discuss/18872/A-common-method-to-rotate-the-image/139220):
     ```java
     /* Counter-clockwise Rotate */
     public void antiRotate(int[][] matrix) {
