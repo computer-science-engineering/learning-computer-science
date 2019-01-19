@@ -25,7 +25,6 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 | N/A | david-dm | Check node.js dependency status | [![Dependency Status](https://david-dm.org/manastalukdar/learning-computer-science.svg)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-ng) |
 | N/A | david-dm | Check node.js dev dependency status | [![devDependencies Status](https://david-dm.org/manastalukdar/learning-computer-science/dev-status.svg?path=website-ng)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-ng&type=dev) |
 
-
 <!-- waffle
 ZenHub -->
 
