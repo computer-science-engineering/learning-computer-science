@@ -1,6 +1,6 @@
 {
     "type": "Coding",
-    "name": "Remove Duplicates and Return Weighted List",
+    "name": "Common Letters in Input Strings",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
@@ -23,15 +23,15 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Medium",
+                    "name": "Easy",
                     "children": []
                 }
             ]
         }
     ],
     "tags": [
-        "Array",
-        "HashMap"
+        "HashMap",
+        "Strings"
     ],
     "buckets": [
         "",
