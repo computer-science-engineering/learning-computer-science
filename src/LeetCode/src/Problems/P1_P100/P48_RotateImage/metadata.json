@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Rotate Image",
+    "name": "48. Rotate Image",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/"
+        "link": "https://leetcode.com/problems/rotate-image/"
     },
     "companies": [
         "Microsoft",
