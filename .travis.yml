@@ -13,15 +13,15 @@ branches:
 before_install:
   - sudo add-apt-repository ppa:deadsnakes/ppa -y
   - sudo apt-get update -y
-  - sudo apt-get install python3.7.2 -y
+  - sudo apt-get install python3.7 -y
   - chmod +x gradlew
 
 script:
   - bash ./gradlew test jacocoJupTestReport
-  - python3.7.2 --version
+  - python3.7 --version
   #- pyenv versions
   #- pyenv global 3.7
-  - python3.7.2 pip install -r requirements.txt
+  - python3.7 pip install -r requirements.txt
   - coverage-3.7 run scripts/run_unit_tests.py
   - python3.7 scripts/create_problems_list.py
 
