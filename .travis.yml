@@ -20,9 +20,9 @@ script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.7 --version
   - pyenv versions
-  - pyenv install 3.7
+  - pyenv install 3.7.0a1
   - pyenv versions
-  - pyenv global 3.7
+  - pyenv global 3.7.0a1
   - pip install -r requirements.txt
   - coverage-3 run scripts/run_unit_tests.py
   - python3.7 scripts/create_problems_list.py
