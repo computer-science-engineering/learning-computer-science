@@ -19,10 +19,12 @@ before_install:
 script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.7 --version
-  #- pyenv versions
-  #- pyenv global 3.7
-  - python3.7 pip install -r requirements.txt
-  - coverage-3.7 run scripts/run_unit_tests.py
+  - pyenv versions
+  - pyenv install 3.7
+  - pyenv versions
+  - pyenv global 3.7
+  - pip install -r requirements.txt
+  - coverage-3 run scripts/run_unit_tests.py
   - python3.7 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
