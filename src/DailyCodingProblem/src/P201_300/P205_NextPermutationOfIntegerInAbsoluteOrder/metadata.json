@@ -23,7 +23,7 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Easy\Medium\Hard",
+                    "name": "Medium",
                     "children": []
                 }
             ]
