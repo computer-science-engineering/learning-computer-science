@@ -1,8 +1,8 @@
 language: java
 
 jdk:
-  - oraclejdk8
-  #- openjdk9
+  - oraclejdk11
+  # - openjdk11
   # https://github.com/travis-ci/travis-ci/issues/8975
   #- oraclejdk9
 
@@ -13,17 +13,17 @@ branches:
 before_install:
   - sudo add-apt-repository ppa:deadsnakes/ppa -y
   - sudo apt-get update -y
-  - sudo apt-get install python3.6 -y
+  - sudo apt-get install python3.7 -y
   - chmod +x gradlew
 
 script:
   - bash ./gradlew test jacocoJupTestReport
-  - python3.6 --version
+  - python3.7 --version
   - pyenv versions
-  - pyenv global 3.6
+  - pyenv global 3.7
   - pip install -r requirements.txt
-  - coverage-3.6 run scripts/run_unit_tests.py
-  - python3.6 scripts/create_problems_list.py
+  - coverage-3.7 run scripts/run_unit_tests.py
+  - python3.7 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
 deploy:
