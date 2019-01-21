@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "205. Next Permutation Of Integer In Absolute Order",
+    "origin": {
+        "name": "Daily Coding Problem",
+        "link": "https://www.dailycodingproblem.com/"
+    },
+    "companies": [
+        "IBM",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy\Medium\Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
