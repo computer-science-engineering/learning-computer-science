@@ -173,6 +173,7 @@
         "gitlens",
         "gmail",
         "gradletasknamecache",
+        "gradlew",
         "hackerrank",
         "hotfix",
         "htmlcov",
@@ -251,6 +252,6 @@
     "python.unitTest.promptToConfigure": false,
     "python.unitTest.pyTestEnabled": false,
     "python.unitTest.nosetestsEnabled": false,
-    "python.pythonPath": "H:\\Programs\\Python36_64\\python.exe",
+    "python.pythonPath": "C:\\Programs\\Python\\Python37-64\\python.exe",
     "python.linting.pylintEnabled": true
 }

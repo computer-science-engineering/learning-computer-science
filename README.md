@@ -8,6 +8,27 @@ Learning data structures, algorithms, machine learning and various computer scie
 
 Highly recommended to open/use this repository using [Visual Studio Code](https://code.visualstudio.com/).
 
+### Upgrading to newer versions of development environments
+
+#### Java
+
+1. Install latest version of Java: Oracle JDK and Red Hat Open JDK (on Windows)
+1. On Windows, update the Path environment variable to point to new Java install location.
+1. Update build.gradle script (sourceCompatibility and targetCompatibility).
+1. Download and update the (latest) version of gradle compatible with the new version of Java.
+1. Update the Path environment variable to point to new gradle install location.
+1. In the repository root, from admin command prompt, run `gradle wrapper --gradle-version <new gradle version>`.
+1. Make sure `distributionUrl` in `gradle/wrapper/gradle-wrapper.properties` points to new gradle version.
+1. Run gradlew test and code coverage tasks.
+1. Update CI scripts (appveyor, circle-ci, travis) to point to new Java version.
+
+#### Python
+
+1. Install latest version of Python.
+1. Run tasks to run python tests, create coverage reports and create problems list.
+1. Update CI scripts (appveyor, circle-ci, travis) to point to new Python version.
+
+
 ## Continuous Integration
 
 | Platform | Provider | Operations | Status |

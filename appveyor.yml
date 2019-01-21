@@ -11,18 +11,18 @@ image:
 - Ubuntu
 
 # todo: https://github.com/appveyor/ci/issues/2160
-stack: node 9, jdk 8, python 3.6
+stack: node 9, jdk 11, python 3.7.1 x64
 
 install:
-  - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk9"
+  - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk11"
   - cmd: "SET PATH=%JAVA_HOME%\\bin;%path%"
-  - cmd: "SET PYTHON3=C:\\Python36-x64"
+  - cmd: "SET PYTHON3=C:\\Python37-x64"
   - cmd: "SET PATH=%PYTHON3%;%PYTHON3%\\Scripts;%path%"
   - cmd: java -version
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
-  - sh: whereis python3.6
-  - sh: . /home/appveyor/venv3.6.4/bin/activate
+  - sh: whereis python3.7
+  - sh: . /home/appveyor/venv3.7.1/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
 
@@ -32,10 +32,10 @@ build_script:
 
 test_script:
   - cmd: .\gradlew.bat test jacocoJupTestReport
-  - cmd: coverage-3.6 run scripts\\run_unit_tests.py
+  - cmd: coverage-3.7 run scripts\\run_unit_tests.py
   - sh: bash ./gradlew test jacocoJupTestReport
-  - sh: coverage-3.6 run scripts/run_unit_tests.py
+  - sh: coverage-3.7 run scripts/run_unit_tests.py
 
 after_test:
   - cmd: python scripts\\create_problems_list.py
-  - sh: python3.6 scripts/create_problems_list.py
+  - sh: python3.7 scripts/create_problems_list.py
