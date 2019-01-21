@@ -33,7 +33,7 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 
 | Platform | Provider | Operations | Status |
 |----------|----------|------------|--------|
-| Windows, Linux | AppVeyor | Build, Test | [![Build status](https://ci.appveyor.com/api/projects/status/y9qup8owf4e53m8h?svg=true)](https://ci.appveyor.com/project/manastalukdar/learning-computer-science) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/45)|
+| Windows, Linux | AppVeyor | Build, Test | [![Build status](https://ci.appveyor.com/api/projects/status/y9qup8owf4e53m8h?svg=true)](https://ci.appveyor.com/project/manastalukdar/learning-computer-science) |
 | Linux | Travis CI | Build, Test, Deploy to gh-pages | [![Build Status](https://travis-ci.org/manastalukdar/learning-computer-science.svg?branch=master)](https://travis-ci.org/manastalukdar/learning-computer-science) |
 | Linux | Circle CI | Build, Test | [![CircleCI](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master) |
 | N/A | CodeClimate | Check for code maintainability | [![Maintainability](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/maintainability)](https://codeclimate.com/github/manastalukdar/learning-computer-science/maintainability) |
