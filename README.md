@@ -19,6 +19,9 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 1. Update the Path environment variable to point to new gradle install location.
 1. In the repository root, from admin command prompt, run `gradle wrapper --gradle-version <new gradle version>`.
 1. Make sure `distributionUrl` in `gradle/wrapper/gradle-wrapper.properties` points to new gradle version.
+1. Delete .project and .classpath files.
+1. Clear [workspace cache](https://github.com/Microsoft/vscode-java-debug/blob/master/Troubleshooting.md#try).
+1. Restart VSCode.
 1. Run gradlew test and code coverage tasks.
 1. Update CI scripts (appveyor, circle-ci, travis) to point to new Java version.
 
