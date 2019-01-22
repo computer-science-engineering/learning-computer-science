@@ -4,15 +4,24 @@
 
 Learning data structures, algorithms, machine learning and various computer science constructs by programming practice from resources around the web.
 
-## Usage
+## Requirements
+
+### Development Environment
 
 Highly recommended to open/use this repository using [Visual Studio Code](https://code.visualstudio.com/).
+
+| Language |  Version | Package
+| ---------|----------|---------
+| Java | 11.0.1 | OpenJDK (Red Hat for Windows)
+| Python | 3.7.2 | N/A
+
+## Usage
 
 ### Upgrading to newer versions of development environments
 
 #### Java
 
-1. Install latest version of Java: Oracle JDK and Red Hat Open JDK (on Windows)
+1. Install latest version of Java: OpenJDK (Red Hat for Windows)
 1. On Windows, update the Path environment variable to point to new Java install location.
 1. Update build.gradle script (sourceCompatibility and targetCompatibility).
 1. Download and update the (latest) version of gradle compatible with the new version of Java.
@@ -20,8 +29,10 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 1. In the repository root, from admin command prompt, run `gradle wrapper --gradle-version <new gradle version>`.
 1. Make sure `distributionUrl` in `gradle/wrapper/gradle-wrapper.properties` points to new gradle version.
 1. Delete .project and .classpath files.
+1. Close VSCode.
 1. Clear [workspace cache](https://github.com/Microsoft/vscode-java-debug/blob/master/Troubleshooting.md#try).
 1. Restart VSCode.
+1. Make sure new .project and .classpath files have been generated. Verify that .classpath now points to the new version of java. This may take a good few minutes.
 1. Run gradlew test and code coverage tasks.
 1. Update CI scripts (appveyor, circle-ci, travis) to point to new Java version.
 
@@ -30,7 +41,6 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 1. Install latest version of Python.
 1. Run tasks to run python tests, create coverage reports and create problems list.
 1. Update CI scripts (appveyor, circle-ci, travis) to point to new Python version.
-
 
 ## Continuous Integration
 
