@@ -29,10 +29,11 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 1. In the repository root, from admin command prompt, run `gradle wrapper --gradle-version <new gradle version>`.
 1. Make sure `distributionUrl` in `gradle/wrapper/gradle-wrapper.properties` points to new gradle version.
 1. Delete .project and .classpath files.
+1. Delete all contents of bin directory.
 1. Close VSCode.
 1. Clear [workspace cache](https://github.com/Microsoft/vscode-java-debug/blob/master/Troubleshooting.md#try).
 1. Restart VSCode.
-1. Make sure new .project and .classpath files have been generated. Verify that .classpath now points to the new version of java. This may take a good few minutes.
+1. Make sure new .project and .classpath files have been generated. Verify that .classpath now points to the new version of Java. This may take a good few minutes.
 1. Run gradlew test and code coverage tasks.
 1. Update CI scripts (appveyor, circle-ci, travis) to point to new Java version.
 
