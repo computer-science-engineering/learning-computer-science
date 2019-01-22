@@ -31,11 +31,11 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int num = 48975;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 49578;
+            int actual = Solution.nextPermutation(num);
+            assertEquals(expected, actual);
         });
     }
 }
