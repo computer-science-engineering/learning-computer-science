@@ -21,11 +21,11 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 
 #### Java
 
-1. Install latest version of Java: OpenJDK (Red Hat for Windows)
-1. On Windows, update the Path environment variable to point to new Java install location.
-1. Update build.gradle script (sourceCompatibility and targetCompatibility).
+1. Install latest version of Java: OpenJDK (Red Hat for Windows).
+1. On Windows, update the Path environment variable to point to new Java install location. Look out for JAVA_HOME env var, and javapath in the Path env var.
+1. Update build.gradle script (`sourceCompatibility` and `targetCompatibility`).
 1. Download and update the (latest) version of gradle compatible with the new version of Java.
-1. Update the Path environment variable to point to new gradle install location.
+1. In Windows, update the Path environment variable to point to new gradle install location.
 1. In the repository root, from admin command prompt, run `gradle wrapper --gradle-version <new gradle version>`.
 1. Make sure `distributionUrl` in `gradle/wrapper/gradle-wrapper.properties` points to new gradle version.
 1. Delete .project and .classpath files.
@@ -40,7 +40,7 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 #### Python
 
 1. Install latest version of Python.
-1. Run tasks to run python tests, create coverage reports and create problems list.
+1. Run tasks for python tests, coverage reports and problems list.
 1. Update CI scripts (appveyor, circle-ci, travis) to point to new Python version.
 
 ## Continuous Integration
