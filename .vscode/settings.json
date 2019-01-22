@@ -254,5 +254,12 @@
     "python.unitTest.pyTestEnabled": false,
     "python.unitTest.nosetestsEnabled": false,
     "python.pythonPath": "H:\\Programs\\Python37_64\\python.exe",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "java.test.config": [
+        {
+            "name": "myConfig",
+            "workingDirectory": "${workspaceFolder}"
+        }
+    ],
+    "java.test.defaultConfig": "myConfig"
 }

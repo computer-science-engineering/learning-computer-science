@@ -118,8 +118,8 @@ afterEvaluate {
     project.task(type: JacocoReport, "jacocoJupTestReport") {
         executionData(junitPlatformTestTask)
         sourceSets(sourceSets.main)
-        sourceDirectories = files(sourceSets.main.allSource.srcDirs)
-        classDirectories = files("${buildDir}/classes/java/test")
+        sourceDirectories.from = files(sourceSets.main.allSource.srcDirs)
+        classDirectories.from = files("${buildDir}/classes/java/test")
         //files(sourceSets.main.output)
 
         reports {
