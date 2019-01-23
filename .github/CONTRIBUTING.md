@@ -1,1 +1,3 @@
-Currently not accepting any contributions. Feel free to open an issue and make comments.
+# Contributing
+
+Please check the **Contributing** section in the readme file.
