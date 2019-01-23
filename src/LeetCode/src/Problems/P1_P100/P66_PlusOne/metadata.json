@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Plus One",
+    "name": "66. Plus One",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/"
+        "link": "https://leetcode.com/problems/plus-one/"
     },
     "companies": [
         "Google",
@@ -21,13 +21,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },

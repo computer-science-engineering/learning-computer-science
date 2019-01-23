@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.PlusOne.Java;
+package LeetCode.src.Problems.P1_P100.P66_PlusOne.Java;
 
 public class Solution {
     public static void main(String[] args) {
