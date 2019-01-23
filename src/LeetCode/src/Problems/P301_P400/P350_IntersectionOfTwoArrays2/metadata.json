@@ -3,15 +3,16 @@
     "name": "350. Intersection of Two Arrays II",
     "origin": {
         "name": "LeetCode",
-        "link": ""
+        "link": "https://leetcode.com/problems/intersection-of-two-arrays-ii/"
     },
     "companies": [
         "Facebook",
         "Google",
+        "Oracle",
+        "Yelp",
         "Bloomberg",
         "Amazon",
-        "Alibaba",
-        "VMware"
+        "Alibaba"
     ],
     "categories": [
         {
@@ -34,7 +35,6 @@
         }
     ],
     "tags": [
-        "Array",
         "Hash Table",
         "Two Pointers",
         "Binary Search",
