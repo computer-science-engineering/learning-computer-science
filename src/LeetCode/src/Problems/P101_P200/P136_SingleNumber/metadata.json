@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Single Number",
+    "name": "136. Single Number",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/"
+        "link": "https://leetcode.com/problems/single-number/"
     },
     "companies": [
         "Facebook",
@@ -29,13 +29,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
