@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Rotate Array",
+    "name": "189. Rotate Array",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/"
+        "link": "https://leetcode.com/problems/rotate-array/"
     },
     "companies": [
         "Uber",
@@ -17,16 +17,11 @@
     ],
     "categories": [
         {
-            "name": "Explore",
+            "name": "Problems",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
