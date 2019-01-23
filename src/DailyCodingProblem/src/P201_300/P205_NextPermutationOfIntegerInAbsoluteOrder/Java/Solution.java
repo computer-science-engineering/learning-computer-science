@@ -2,7 +2,7 @@ package DailyCodingProblem.src.P201_300.P205_NextPermutationOfIntegerInAbsoluteO
 
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(nextPermutation(48975));
+        System.out.println(nextPermutation(321));
     }
 
     public static int nextPermutation(int num) {
