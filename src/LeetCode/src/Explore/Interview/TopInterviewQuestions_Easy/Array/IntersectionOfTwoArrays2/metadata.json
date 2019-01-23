@@ -8,10 +8,11 @@
     "companies": [
         "Facebook",
         "Google",
+        "Oracle",
+        "Yelp",
         "Bloomberg",
         "Amazon",
-        "Alibaba",
-        "VMware"
+        "Alibaba"
     ],
     "categories": [
         {
