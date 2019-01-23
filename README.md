@@ -23,7 +23,7 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 
 1. Open repository using [Visual Studio Code](https://code.visualstudio.com/). Recommended extensions have been provided by the repository (.vscode folder).
 1. Use [Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/learning-computer-science/).
-1. A website for filtering and queuing is [work-in-progress](https://github.com/manastalukdar/learning-computer-science/projects/1).
+1. A website for filtering and querying is [work-in-progress](https://github.com/manastalukdar/learning-computer-science/projects/1).
 
 ### Contributing
 
@@ -88,4 +88,4 @@ ZenHub -->
 ## Note
 
 1. Problems in the repository are not necessarily solved by me. The goal is to learn. Sometimes in the interest of time, that involves understanding an existing solution rather than spending an inordinate amount of time trying to solve it by myself. Where applicable I have provided references to the original solution.
-1. Problems in this repository are not unique. Given that the same (or similar) problem may exist in multiple origins, more than a few problems are repeated. It is my goal to provide some sort of querying mechanism via a website for users to view only a unique instance of a problem, either from a "first or default" origin or a specified origin.
+1. Problems in this repository are not unique. Given that the same (or similar) problem may exist in multiple origins, more than a few problems are repeated. It is my goal to provide some sort of querying mechanism via a [website](https://github.com/manastalukdar/learning-computer-science/projects/1) for users to view only a unique instance of a problem, either from a "first or default" origin or a specified origin.
