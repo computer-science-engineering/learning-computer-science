@@ -58,6 +58,7 @@
         "fernandoescolar.vscode-solution-explorer",
         "redhat.vscode-yaml",
         "VisualStudioExptTeam.vscodeintellicode",
-        "DotJoshJohnson.xml"
+        "DotJoshJohnson.xml",
+        "auchenberg.vscode-browser-preview"
     ]
 }
