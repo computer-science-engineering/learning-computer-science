@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Valid Sudoku",
+    "name": "36. Valid Sudoku",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/769/"
+        "link": "https://leetcode.com/problems/valid-sudoku/"
     },
     "companies": [
         "Uber",
@@ -21,13 +21,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
@@ -42,7 +37,6 @@
         }
     ],
     "tags": [
-        "Array",
         "Hash Table"
     ],
     "buckets": [
