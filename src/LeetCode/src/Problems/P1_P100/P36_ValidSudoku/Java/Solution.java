@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.ValidSudoku.Java;
+package LeetCode.src.Problems.P1_P100.P36_ValidSudoku.Java;
 
 import java.util.HashSet;
 import java.util.Set;

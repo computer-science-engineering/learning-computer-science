@@ -62,9 +62,9 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
 ## Notes
 
 1. [LeetCode solution](https://leetcode.com/problems/valid-sudoku/solution/)
-1. [LeetCode discussion - Shared my concise Java code](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/769/discuss/15450/Shared-my-concise-Java-code/146624)
+1. [LeetCode discussion - Shared my concise Java code](https://leetcode.com/problems/valid-sudoku/discuss/15450/Shared-my-concise-Java-code/146624)
 
-    [ref](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/769/discuss/15450/Shared-my-concise-Java-code/115466):
+    [ref](https://leetcode.com/problems/valid-sudoku/discuss/15450/Shared-my-concise-Java-code/115466):
 
     This solution calculate the traversal of cubes in a not so intuitive way, and that's why it's a little hard to understand at first. For the `rows` and `columns` checking, `(i, j)` stands for the normal coordinate of `board` itself. But for `cube` checking, `i` and `j` actually stands for two different things: `i` is the index of the cube, and `j` is the index of the entry within cube `i`.
 
