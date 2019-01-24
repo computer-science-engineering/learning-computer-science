@@ -31,12 +31,16 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        int[] nums = {0,1,0,3,12};
+        int[] nums = {0,1,0,3,12};          
+        int[] nums2 = {0,1,0,3,12};
         assertTimeout(Duration.ofMillis(500), () -> {
             int[] expected = {1, 3, 12, 0, 0};
             Solution.moveZeroes(nums);
             int[] actual = nums;
-            assertArrayEquals(expected, actual);
+            assertArrayEquals(expected, actual);  
+            Solution.moveZeroes2(nums2);
+            int[] actual2 = nums2;
+            assertArrayEquals(expected, actual2);  
         });
     }
 }

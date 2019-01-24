@@ -18,7 +18,7 @@ Output: [1,3,12,0,0]
 
 ## Notes
 
-1. [LeetCode Explore - Interview - Top Interview Questions - Easy](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/)
+1. [LeetCode solution](https://leetcode.com/problems/move-zeroes/solution/)
 1. [LeetCode discussion - Java Solution O(N) no swap and exactly one pass iteration](https://leetcode.com/problems/move-zeroes/discuss/143642/Java-Solution-O(N)-no-swap-and-exactly-one-pass-iteration)
 1. [LeetCode discussion - Simple O(N) Java Solution Using Insert Index](https://leetcode.com/problems/move-zeroes/discuss/72011/Simple-O(N)-Java-Solution-Using-Insert-Index)
 
