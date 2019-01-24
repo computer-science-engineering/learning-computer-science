@@ -16,3 +16,5 @@ return [0, 1].
 ```
 
 ## Notes
+
+1. [LeetCode solution](https://leetcode.com/problems/two-sum/solution/)
