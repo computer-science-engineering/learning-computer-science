@@ -10,7 +10,7 @@ Given s = "hello", return "olleh".
 
 ## Notes
 
-1. [LeetCode discussion - [JAVA] Simple and Clean with Explanations [6 Solutions]](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/discuss/80937/JAVA-Simple-and-Clean-with-Explanations-6-Solutions)
+1. [LeetCode discussion - [JAVA] Simple and Clean with Explanations [6 Solutions]](https://leetcode.com/problems/reverse-string/discuss/80937/JAVA-Simple-and-Clean-with-Explanations-6-Solutions)
 1. LeetCode sample submission - 1 ms
 
     ```java
