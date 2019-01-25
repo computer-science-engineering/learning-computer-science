@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "First Unique Character in a String",
+    "name": "387. First Unique Character in a String",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/"
+        "link": "https://leetcode.com/problems/first-unique-character-in-a-string/"
     },
     "companies": [
         "Bloomberg",
@@ -25,13 +25,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },

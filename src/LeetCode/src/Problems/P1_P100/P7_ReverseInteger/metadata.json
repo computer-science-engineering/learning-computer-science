@@ -42,13 +42,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
