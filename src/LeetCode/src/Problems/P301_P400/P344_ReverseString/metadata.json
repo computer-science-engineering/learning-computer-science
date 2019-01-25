@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Reverse String",
+    "name": "344. Reverse String",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/"
+        "link": "https://leetcode.com/problems/reverse-string/"
     },
     "companies": [
         "Microsoft",
@@ -31,13 +31,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
