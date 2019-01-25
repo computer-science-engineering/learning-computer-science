@@ -19,7 +19,7 @@ return 2.
 ## Notes
 
 1. [LeetCode solution](https://leetcode.com/problems/first-unique-character-in-a-string/solution/)
-1. [LeetCode discussion - Java 7 lines solution 29ms](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/discuss/86348/Java-7-lines-solution-29ms)
+1. [LeetCode discussion - Java 7 lines solution 29ms](https://leetcode.com/problems/first-unique-character-in-a-string/discuss/86348/Java-7-lines-solution-29ms)
 
     Hey guys. My solution is pretty straightforward. It takes O(n) and goes through the string twice:
 
