@@ -26,8 +26,8 @@ Assume we are dealing with an environment which could only store integers within
 ## Notes
 
 1. [Geeks for Geeks - Horner’s Method for Polynomial Evaluation](https://www.geeksforgeeks.org/horners-method-polynomial-evaluation/)
-1. [LeetCode discussion - My accepted 15 lines of code for Java](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/880/discuss/4060/My-accepted-15-lines-of-code-for-Java)
-1. [LeetCode discussion - Very Short (7 lines) and Elegant Solution](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/880/discuss/4056/Very-Short-(7-lines)-and-Elegant-Solution)
+1. [LeetCode discussion - My accepted 15 lines of code for Java](https://leetcode.com/problems/reverse-integer/discuss/4060/My-accepted-15-lines-of-code-for-Java)
+1. [LeetCode discussion - Very Short (7 lines) and Elegant Solution](https://leetcode.com/problems/reverse-integer/discuss/4056/Very-Short-(7-lines)-and-Elegant-Solution)
 1. [LeetCode solution](https://leetcode.com/problems/reverse-integer/solution/)
 1. LeetCode sample submission - 13 ms
 

@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Reverse Integer",
+    "name": "7. Reverse Integer",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/880/"
+        "link": "https://leetcode.com/problems/reverse-integer/"
     },
     "companies": [
         "Adobe",
@@ -63,7 +63,6 @@
         }
     ],
     "tags": [
-        "String",
         "Math"
     ],
     "buckets": [
