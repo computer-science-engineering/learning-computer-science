@@ -25,11 +25,22 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 1. Use [Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/learning-computer-science/).
 1. A website for filtering and querying is [work-in-progress](https://github.com/manastalukdar/learning-computer-science/projects/1).
 
+### Running Tests
+
+1. VSCode tasks are available via the repository (.vscode folder) for running all language specific tests. Please familiarize yourself with using tasks in VSCode.
+
 ### Contributing
 
 1. Please follow the template for adding problems. This is inherently tied into the mechanism for searching through problems using the [planned website](https://github.com/manastalukdar/learning-computer-science/projects/1).
 1. Templates for metadata.json (problem metadata), readme.md (problem definition) and language specific solution and solution test files are available via VSCode snippets. They are all committed and available via the repository (.vscode folder). Please familiarize yourself with using snippets in VSCode.
 1. You are encouraged to fork this repository and submit pull requests.
+
+### Other
+
+1. For those who may not wish to use VSCode and instead prefer a simple text editor
+    1. I plan to create a [makefile](https://github.com/manastalukdar/learning-computer-science/issues/50).
+    1. Instructions will be provided at a later time for command line usage to add new problems, run tests, etc. [Ref](https://github.com/manastalukdar/learning-computer-science/issues/51)
+1. I do not recommend using any sort of bloated IDE. They tend to add a lot of files simply for their specific plumbing.
 
 ### Upgrading to newer versions of development environments
 
