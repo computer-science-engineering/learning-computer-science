@@ -29,4 +29,4 @@ For the purpose of this problem, we will return 0 when `needle` is an empty stri
 ## Notes
 
 1. [LeetCode discussion - Elegant Java solution](https://leetcode.com/problems/implement-strstr/discuss/12807/Elegant-Java-solution)
-1. [LeetCode discussion - Accepted KMP solution in java for reference](https://leetcode.com/explore/featured/card/top-interview-questions-easy/127/strings/885/discuss/12886/Accepted-KMP-solution-in-java-for-reference)
+1. [LeetCode discussion - Accepted KMP solution in java for reference](https://leetcode.com/problems/implement-strstr/discuss/12886/Accepted-KMP-solution-in-java-for-reference)

@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Strings.ImplementStrStr.Java;
+package LeetCode.src.Problems.P1_P100.P28_ImplementStrStr.Java;
 
 public class Solution {
     public static void main(String[] args) {
