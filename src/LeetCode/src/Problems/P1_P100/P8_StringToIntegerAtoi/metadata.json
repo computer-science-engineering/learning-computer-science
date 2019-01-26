@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "String to Integer (atoi)",
+    "name": "8. String to Integer (atoi)",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/884/"
+        "link": "https://leetcode.com/problems/string-to-integer-atoi/"
     },
     "companies": [
         "Microsoft",
@@ -34,13 +34,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
