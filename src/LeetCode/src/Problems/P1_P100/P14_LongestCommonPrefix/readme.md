@@ -28,4 +28,4 @@ All given inputs are in lowercase letters `a-z`.
 ## Notes
 
 1. [LeetCode solution](https://leetcode.com/problems/longest-common-prefix/solution/)
-1. [LeetCode discussion - Java code with 13 lines](https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/887/discuss/6910/Java-code-with-13-lines)
+1. [LeetCode discussion - Java code with 13 lines](https://leetcode.com/problems/longest-common-prefix/discuss/6910/Java-code-with-13-lines)
