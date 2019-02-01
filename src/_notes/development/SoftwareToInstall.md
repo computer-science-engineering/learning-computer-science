@@ -344,6 +344,7 @@
 - ImageGlass
 - Adobe Photoshop
 - Nodepad3
+- ffmpeg
 - Hyper.is
 - cmder
 - Twitch
