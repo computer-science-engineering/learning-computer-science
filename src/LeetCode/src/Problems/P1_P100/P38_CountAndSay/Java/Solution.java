@@ -1,4 +1,4 @@
-package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Strings.CountAndSay.Java;
+package LeetCode.src.Problems.P1_P100.P38_CountAndSay.Java;
 
 public class Solution {
     public static void main(String[] args) {
