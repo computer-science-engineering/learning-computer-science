@@ -1,0 +1,50 @@
+{
+    "type": "Coding",
+    "name": "38. Count and Say",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/count-and-say/"
+    },
+    "companies": [
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Adobe",
+        "Bloomberg",
+        "Facebook",
+        "Apple",
+        "Intuit",
+        "eBay",
+        "Epic Systems",
+        "Airbnb",
+        "VMware",
+        "Salesforce"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "String"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
