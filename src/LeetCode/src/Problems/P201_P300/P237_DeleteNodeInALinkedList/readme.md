@@ -38,4 +38,4 @@ Explanation: You are given the third node with value 1, the linked list
 ## Notes
 
 1. [LeetCode solution](https://leetcode.com/problems/delete-node-in-a-linked-list/solution/)
-1. [LeetCode discussion - 1-3 lines, C++/Java/Python/C/C#/JavaScript/Ruby](https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/553/discuss/65455/1-3-lines-C++JavaPythonCCJavaScriptRuby)
+1. [LeetCode discussion - 1-3 lines, C++/Java/Python/C/C#/JavaScript/Ruby](https://leetcode.com/problems/delete-node-in-a-linked-list/discuss/65455/1-3-lines-C++JavaPythonCCJavaScriptRuby)

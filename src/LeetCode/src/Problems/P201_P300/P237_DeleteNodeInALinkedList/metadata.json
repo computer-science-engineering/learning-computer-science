@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Delete Node in a Linked List",
+    "name": "237. Delete Node in a Linked List",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/553/"
+        "link": "https://leetcode.com/problems/delete-node-in-a-linked-list/"
     },
     "companies": [
         "Microsoft",
@@ -24,13 +24,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },
