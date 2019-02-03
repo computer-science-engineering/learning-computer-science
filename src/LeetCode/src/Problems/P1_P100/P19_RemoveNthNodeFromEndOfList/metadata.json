@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Remove Nth Node From End of List",
+    "name": "19. Remove Nth Node From End of List",
     "origin": {
         "name": "LeetCode",
-        "link": "https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/"
+        "link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
     },
     "companies": [
         "Microsoft",
@@ -28,13 +28,8 @@
             "name": "Explore",
             "children": [
                 {
-                    "name": "Interview",
-                    "children": [
-                        {
-                            "name": "Top Interview Questions - Easy",
-                            "children": []
-                        }
-                    ]
+                    "name": "Algorithms",
+                    "children": []
                 }
             ]
         },

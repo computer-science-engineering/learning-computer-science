@@ -23,4 +23,4 @@ Could you do this in one pass?
 ## Notes
 
 1. [LeetCode solution](https://leetcode.com/problems/remove-nth-node-from-end-of-list/solution/)
-1. [LeetCode discussion - Simple Java solution in one pass](https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/discuss/8804/Simple-Java-solution-in-one-pass)
+1. [LeetCode discussion - Simple Java solution in one pass](https://leetcode.com/problems/remove-nth-node-from-end-of-list/discuss/8804/Simple-Java-solution-in-one-pass)
