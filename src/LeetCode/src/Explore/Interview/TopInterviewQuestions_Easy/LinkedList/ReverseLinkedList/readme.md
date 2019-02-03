@@ -16,3 +16,5 @@ Output: 5->4->3->2->1->NULL
 A linked list can be reversed either iteratively or recursively. Could you implement both?
 
 ## Notes
+
+1. [LeetCode solution](https://leetcode.com/problems/reverse-linked-list/solution/)
