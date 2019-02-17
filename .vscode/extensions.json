@@ -59,6 +59,7 @@
         "redhat.vscode-yaml",
         "VisualStudioExptTeam.vscodeintellicode",
         "DotJoshJohnson.xml",
-        "auchenberg.vscode-browser-preview"
+        "auchenberg.vscode-browser-preview",
+        "yzhang.markdown-all-in-one"
     ]
 }

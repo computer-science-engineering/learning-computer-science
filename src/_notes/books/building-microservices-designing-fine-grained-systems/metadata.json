@@ -1,6 +1,6 @@
 {
     "type": "Reading",
-    "name": "Production-Ready Microservices",
+    "name": "Building Microservices -  Designing Fine-Grained Systems",
     "origin": {
         "name": "Notes",
         "link": ""
@@ -18,7 +18,7 @@
             "name": "Authors",
             "children": [
                 {
-                    "name": "Susan Fowler",
+                    "name": "Sam Neuman",
                     "children": []
                 }
             ]
@@ -27,9 +27,8 @@
     "tags": [
         "Distributed Systems",
         "Cloud Computing",
-        "Microservices",
         "DevOps",
-        "Site Reliability Engineering"
+        "Microservices"
     ],
     "buckets": [
         "",
