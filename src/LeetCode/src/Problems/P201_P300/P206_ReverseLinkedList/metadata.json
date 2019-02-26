@@ -1,0 +1,80 @@
+{
+    "type": "Coding",
+    "name": "206. Reverse Linked List",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/reverse-linked-list/"
+    },
+    "companies": [
+        "Microsoft",
+        "Apple",
+        "Amazon",
+        "Facebook",
+        "Bloomberg",
+        "Yandex",
+        "Adobe",
+        "Mathworks",
+        "Google",
+        "Goldman Sachs",
+        "Cisco",
+        "Nvidia",
+        "VMware",
+        "Alibaba",
+        "Oracle",
+        "Baidu",
+        "Intuit",
+        "Intel",
+        "Paypal",
+        "Two Sigma",
+        "Tencent",
+        "Expedia",
+        "Yahoo",
+        "Walmart Labs",
+        "TripAdvisor",
+        "Qualcomm",
+        "Zynga",
+        "Zappos",
+        "Citrix",
+        "SAP",
+        "Nutanix",
+        "eBay",
+        "EMC",
+        "Snapchat",
+        "Zenefits",
+        "Yelp",
+        "Uber",
+        "Twitter"
+    ],
+    "categories": [
+        {
+            "name": "Explore",
+            "children": [
+                {
+                    "name": "Interview",
+                    "children": [
+                        {
+                            "name": "Top Interview Questions - Easy",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Easy",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Linked List"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
