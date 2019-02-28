@@ -40,10 +40,12 @@ When embracing on-demand provisioning systems like those provided by Amazon Web 
 
 ## Ease of Deployment
 
-With microservices, we can make a change to a single service and deploy it independently of the rest of the system. This allows us to get our code deployed faster. If a problem does occur, it can be isolated quickly to an individual service, making fast rollback easy to achieve. It also means we can get our new functionality out to customers faster. 
+With microservices, we can make a change to a single service and deploy it independently of the rest of the system. This allows us to get our code deployed faster. If a problem does occur it can be isolated quickly to an individual service, making fast rollback easy to achieve. It also means we can get our new functionality out to customers faster.
 
 ## Organizational Alignment
 
 Microservices allow us to better align our architecture to our organization, helping us minimize the number of people working on any one codebase to hit the sweet spot of team size and productivity. We can also shift ownership of services between teams to try to keep people working on one service colocated. (Also look up Conway's law)
 
 ## Composability
+
+Open up opportunities for reuse of functionality.
