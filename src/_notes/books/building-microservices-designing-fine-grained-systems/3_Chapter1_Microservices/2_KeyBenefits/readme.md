@@ -7,6 +7,7 @@
   - [Ease of Deployment](#ease-of-deployment)
   - [Organizational Alignment](#organizational-alignment)
   - [Composability](#composability)
+  - [Optimizing for Replaceability](#optimizing-for-replaceability)
 
 Many of these benefits of microservices can be laid at the door of any distributed system. Microservices, however, tend to achieve these benefits to a greater degree primarily due to how far they take the concepts behind distributed systems and service-oriented architecture.
 
@@ -48,4 +49,9 @@ Microservices allow us to better align our architecture to our organization, hel
 
 ## Composability
 
-Open up opportunities for reuse of functionality.
+Open up opportunities for reuse of functionality. We need to think of the myriad ways that we might want to weave together capabilities for the Web, native application, mobile web,
+tablet app, or wearable device. We need architectures that can keep up.
+
+## Optimizing for Replaceability
+
+Individual services being small in size, the cost to replace them with a better implementation, or even delete them altogether, is much easier to manage.
