@@ -317,6 +317,7 @@
 - Qt SDK
 - Scala
 - Ruby
+- Typora
 - Bitnami Wordpress stack installer
 - Aptana plugin for Eclipse Java IDE
 - MySQL Workbench
