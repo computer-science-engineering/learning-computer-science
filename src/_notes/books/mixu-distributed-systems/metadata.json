@@ -1,0 +1,35 @@
+{
+    "type": "Reading",
+    "name": "Distributed systems",
+    "origin": {
+        "name": "Notes",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Books",
+            "children": []
+        },
+        {
+            "name": "Authors",
+            "children": [
+                {
+                    "name": "mixu",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems",
+        "Cloud Computing"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

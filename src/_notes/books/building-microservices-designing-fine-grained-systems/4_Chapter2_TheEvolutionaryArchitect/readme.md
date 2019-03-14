@@ -5,6 +5,8 @@
   - [An Evolutionary Vision for the Architect](#an-evolutionary-vision-for-the-architect)
   - [Zoning](#zoning)
   - [A Principled Approach](#a-principled-approach)
+    - [Strategic Goals](#strategic-goals)
+    - [Principles](#principles)
 
 Microservices give us a lot of choice, and accordingly a lot of decisions to make.
 
@@ -39,3 +41,13 @@ Between services is where things can get messy, however. If one service decides 
 **The Coding Architect**: Important it is for the architect to actually sit with the team, perhaps even work with them sometime, including coding with them if need be.
 
 ## A Principled Approach
+
+Making decisions in system design is all about trade-offs, and microservice architectures give us lots of trade-offs to make!
+
+Framing here can help, and a great way to help frame our decision making is to define a set of principles and practices that guide it, based on goals that we are trying to achieve. Let’s look at each in turn.
+
+### Strategic Goals
+
+What is the driving vision for the business? And how does it change?
+
+### Principles
