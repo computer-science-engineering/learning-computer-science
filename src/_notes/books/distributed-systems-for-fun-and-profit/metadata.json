@@ -1,6 +1,6 @@
 {
     "type": "Reading",
-    "name": "Distributed systems",
+    "name": "Distributed systems for fun and profit",
     "origin": {
         "name": "Notes",
         "link": ""
@@ -18,8 +18,18 @@
             "name": "Authors",
             "children": [
                 {
-                    "name": "mixu",
-                    "children": []
+                    "name": "Mikito Takada",
+                    "children": [
+                        {
+                            "name": "alias",
+                            "children":[
+                                {
+                                    "name": "mixu",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
