@@ -339,6 +339,7 @@
 - Ren'Py
 - Freemind
 - VirtualBox
+- [Google Play Music Desktop Player](https://www.googleplaymusicdesktopplayer.com/)
 - Atom code editor
 - Brackets code editor
 - Haroopad
