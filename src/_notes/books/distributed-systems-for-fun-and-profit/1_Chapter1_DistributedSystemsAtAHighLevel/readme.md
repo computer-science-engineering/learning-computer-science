@@ -3,6 +3,9 @@
 - [1. Distributed systems at a high level](#1-distributed-systems-at-a-high-level)
   - [What we want to achieve: Scalability and other good things](#what-we-want-to-achieve-scalability-and-other-good-things)
     - [Performance (and latency)](#performance-and-latency)
+    - [Availability (and fault tolerance)](#availability-and-fault-tolerance)
+  - [What prevents us from achieving good things](#what-prevents-us-from-achieving-good-things)
+  - [Abstractions and models](#abstractions-and-models)
 
 _Distributed programming is the art of solving the same problem that you can solve on a single computer using multiple computers._ (usually because the problem no longer fits on a single computer)
 
@@ -62,3 +65,63 @@ The other key point based on this definition is that if nothing happens, there i
 In a distributed system, there is a minimum latency that cannot be overcome: the speed of light limits how fast information can travel, and hardware components have a minimum latency cost incurred per operation (think RAM and hard drives but also CPUs).
 
 How much that minimum latency impacts your queries depends on the nature of those queries and the physical distance the information needs to travel.
+
+### Availability (and fault tolerance)
+
+The second aspect of a scalable system is availability.
+
+As per Wikipedia, [availability](http://en.wikipedia.org/wiki/High_availability) is the proportion of time a system is in a functioning condition. If a user cannot access the system, it is said to be unavailable.
+
+Distributed systems allow us to achieve desirable characteristics that would be hard to accomplish on a single system. Distributed systems can take a bunch of unreliable components, and build a reliable system on top of them.
+
+Systems that have no redundancy can only be as available as their underlying components. Systems built with redundancy can be tolerant of partial failures and thus be more available.
+
+Formulaically, availability is: `Availability = uptime / (uptime + downtime)`.
+
+Availability from a technical perspective is mostly about being fault tolerant. Because the probability of a failure occurring increases with the number of components, the system should be able to compensate so as to not become less reliable as the number of components increases.
+
+| Availability %         | How much downtime is allowed per year? |
+| ---------------------- | -------------------------------------- |
+| 90% ("one nine")       | More than a month                      |
+| 99% ("two nines")      | Less than 4 days                       |
+| 99.9% ("three nines")  | Less than 9 hours                      |
+| 99.99% ("four nines")  | Less than an hour                      |
+| 99.999% ("five nines") | ~ 5 minutes                            |
+| 99.9999% ("six nines") | ~ 31 seconds                           |
+
+Fault tolerance is the ability of a system to behave in a well-defined manner once faults occur.
+
+Fault tolerance boils down to this: define what faults you expect and then design a system or an algorithm that is tolerant of them. You can't tolerate faults you haven't considered.
+
+## What prevents us from achieving good things
+
+Distributed systems are constrained by two physical factors:
+
+- the number of nodes (which increases with the required storage and computation capacity)
+- the distance between nodes (information travels, at best, at the speed of light)
+
+Working within those constraints:
+
+- An increase in the number of independent nodes increases the probability of failure in a system (reducing availability and increasing administrative costs).
+- An increase in the number of independent nodes may increase the need for communication between nodes (reducing performance as scale increases).
+- An increase in geographic distance increases the minimum latency for communication between distant nodes (reducing performance for certain operations).
+
+Beyond these tendencies - which are a result of the physical constraints - is the world of system design options.
+
+Both performance and availability are defined by the external guarantees the system makes. On a high level, you can think of the guarantees as the SLA (service level agreement) for the system.
+
+There is another criterion, which is not explicitly mentioned but implied: intelligibility. How understandable are the guarantees that are made? Of course, there are no simple metrics for what is intelligible.
+
+I was kind of tempted to put "intelligibility" under physical limitations. After all, it is a hardware limitation in people that we have a hard time understanding anything that involves [more moving things than we have fingers](http://en.wikipedia.org/wiki/Working_memory#Capacity). That's the difference between an error and an anomaly - an error is incorrect behavior, while an anomaly is unexpected behavior. If you were smarter, you'd expect the anomalies to occur.
+
+## Abstractions and models
+
+Abstractions make things more manageable by removing real-world aspects that are not relevant to solving a problem. Models describe the key properties of a distributed system in a precise manner.
+
+Some kinds of models that are discussed in next chapter are:
+
+- System model (asynchronous / synchronous)
+- Failure model (crash-fail, partitions, Byzantine)
+- Consistency model (strong, eventual)
+
+A good abstraction makes working with a system easier to understand, while capturing the factors that are relevant for a particular purpose.
