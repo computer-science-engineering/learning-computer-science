@@ -6,6 +6,10 @@
     - [Availability (and fault tolerance)](#availability-and-fault-tolerance)
   - [What prevents us from achieving good things](#what-prevents-us-from-achieving-good-things)
   - [Abstractions and models](#abstractions-and-models)
+  - [Design techniques: partition and replicate](#design-techniques-partition-and-replicate)
+    - [Partitioning](#partitioning)
+    - [Replication](#replication)
+  - [Further Reading](#further-reading)
 
 _Distributed programming is the art of solving the same problem that you can solve on a single computer using multiple computers._ (usually because the problem no longer fits on a single computer)
 
@@ -125,3 +129,61 @@ Some kinds of models that are discussed in next chapter are:
 - Consistency model (strong, eventual)
 
 A good abstraction makes working with a system easier to understand, while capturing the factors that are relevant for a particular purpose.
+
+There is a tension between the reality that there are many nodes and with our desire for systems that "work like a single system". Often, the most familiar model (for example, implementing a shared memory abstraction on a distributed system) is too expensive.
+
+A system that makes weaker guarantees has more freedom of action, and hence potentially greater performance - but it is also potentially hard to reason about. People are better at reasoning about systems that work like a single system, rather than a collection of nodes.
+
+One can often gain performance by exposing more details about the internals of the system.
+
+Several types of failures make writing distributed systems that act like a single system difficult. Network latency and network partitions (e.g. total network failure between some nodes) mean that a system needs to sometimes make hard choices about whether it is better to stay available but lose some crucial guarantees that cannot be enforced, or to play it safe and refuse clients when these types of failures occur.
+
+The CAP theorem - which I will discussed in the next chapter - captures some of these tensions. In the end, the ideal system meets both programmer needs (clean semantics) and business needs (availability/consistency/latency).
+
+## Design techniques: partition and replicate
+
+The manner in which a data set is distributed between multiple nodes is very important.
+
+There are two basic techniques that can be applied to a data set. It can be split over multiple nodes (partitioning) to allow for more parallel processing. It can also be copied or cached on different nodes to reduce the distance between the client and the server and for greater fault tolerance (replication).
+
+_Divide and conquer - I mean, partition and replicate._
+
+![Partitioned vs. replicated data](http://book.mixu.net/distsys/images/part-repl.png)
+
+There are many algorithms that implement replication and partitioning, each with different limitations and advantages which need to be assessed against your design objectives.
+
+### Partitioning
+
+Partitioning is dividing the dataset into smaller distinct independent sets; this is used to reduce the impact of dataset growth since each partition is a subset of the data.
+
+- Partitioning improves performance by limiting the amount of data to be examined and by locating related data in the same partition.
+- Partitioning improves availability by allowing partitions to fail independently, increasing the number of nodes that need to fail before availability is sacrificed.
+
+Partitioning is also very much application-specific.
+
+Partitioning is mostly about defining your partitions based on what you think the primary access pattern will be, and dealing with the limitations that come from having independent partitions (e.g. inefficient access across partitions, different rate of growth etc.).
+
+### Replication
+
+Replication is making copies of the same data on multiple machines; this allows more servers to take part in the computation.
+
+Replication - copying or reproducing something - is the primary way in which we can fight latency.
+
+- Replication improves performance by making additional computing power and bandwidth applicable to a new copy of the data.
+- Replication improves availability by creating additional copies of the data, increasing the number of nodes that need to fail before availability is sacrificed.
+
+Replication is about providing extra bandwidth, and caching where it counts. It is also about maintaining consistency in some way according to some consistency model.
+
+Replication allows us to achieve scalability, performance and fault tolerance.
+
+Replication is also the source of many of the problems, since there are now independent copies of the data that has to be kept in sync on multiple machines - this means ensuring that the replication follows a consistency model.
+
+The choice of a consistency model is crucial: a good consistency model provides clean semantics for programmers (in other words, the properties it guarantees are easy to reason about) and meets business/design goals such as high availability or strong consistency.
+
+Only one consistency model for replication - strong consistency - allows you to program as-if the underlying data was not replicated. Other consistency models expose some internals of the replication to the programmer. However, weaker consistency models can provide lower latency and higher availability - and are not necessarily harder to understand, just different.
+
+## Further Reading
+
+- [The Datacenter as a Computer - An Introduction to the Design of Warehouse-Scale Machines](http://www.morganclaypool.com/doi/pdf/10.2200/s00193ed1v01y200905cac006) - Barroso & Hölzle, 2008
+- [Fallacies of Distributed Computing](http://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing)
+- [Notes on Distributed Systems for Young Bloods](http://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/) - Hodges, 2013
