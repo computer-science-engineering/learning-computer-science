@@ -14,6 +14,18 @@
   - [Leader changes via duels](#leader-changes-via-duels)
     - [Numbered proposals within an epoch](#numbered-proposals-within-an-epoch)
     - [Normal operation](#normal-operation)
+  - [Partition-tolerant consensus algorithms: Paxos, Raft, ZAB](#partition-tolerant-consensus-algorithms-paxos-raft-zab)
+    - [Paxos](#paxos)
+    - [ZAB](#zab)
+    - [Raft](#raft)
+  - [Replication methods with strong consistency](#replication-methods-with-strong-consistency)
+    - [Primary/Backup](#primarybackup)
+    - [2PC](#2pc)
+    - [Paxos Algorithm](#paxos-algorithm)
+  - [Further reading](#further-reading)
+    - [Primary-backup and 2PC](#primary-backup-and-2pc)
+    - [Paxos - further reading](#paxos---further-reading)
+    - [Raft and ZAB](#raft-and-zab)
 
 The replication problem is one of many problems in distributed systems. I've chosen to focus on it over other problems such as leader election, failure detection, mutual exclusion, consensus and global snapshots because it is often the part that people are most interested in. One way in which parallel databases are differentiated is in terms of their replication features, for example. Furthermore, replication provides a context for many sub-problems, such as leader election, failure detection, consensus and atomic broadcast.
 
@@ -258,3 +270,118 @@ Since it is possible that another node is also attempting to act as a leader, we
 _P2: If a proposal with value v is chosen, then every higher-numbered proposal that is chosen has value v_.
 
 Ensuring that this property holds requires that both followers and proposers are constrained by the algorithm from ever changing a value that has been accepted by a majority. Note that "the value can never change" refers to the value of a single execution (or run / instance / decision) of the protocol. A typical replication algorithm will run multiple executions of the algorithm, but most discussions of the algorithm focus on a single run to keep things simple. We want to prevent the decision history from being altered or overwritten.
+
+In order to enforce this property, the proposers must first ask the followers for their (highest numbered) accepted proposal and value. If the proposer finds out that a proposal already exists, then it must simply complete this execution of the protocol, rather than making its own proposal. Lamport states this as:
+
+_P2b. If a proposal with value v is chosen, then every higher-numbered proposal issued by any proposer has value v_.
+
+More specifically:
+
+_P2c. For any v and n, if a proposal with value v and number n is issued [by a leader], then there is a set S consisting of a majority of acceptors \[followers\] such that either (a) no acceptor in S has accepted any proposal numbered less than n, or (b) v is the value of the highest-numbered proposal among all proposals numbered less than n accepted by the followers in S_.
+
+This is the core of the Paxos algorithm, as well as algorithms derived from it. The value to be proposed is not chosen until the second phase of the protocol. Proposers must sometimes simply retransmit a previously made decision to ensure safety (e.g. clause b in P2c) until they reach a point where they know that they are free to impose their own proposal value (e.g. clause a).
+
+If multiple previous proposals exist, then the highest-numbered proposal value is proposed. Proposers may only attempt to impose their own value if there are no competing proposals at all.
+
+To ensure that no competing proposals emerge between the time the proposer asks each acceptor about its most recent value, the proposer asks the followers not to accept proposals with lower proposal numbers than the current one.
+
+Putting the pieces together, reaching a decision using Paxos requires two rounds of communication:
+
+```text
+[ Proposer ] -> Prepare(n)                                [ Followers ]
+             <- Promise(n; previous proposal number
+                and previous value if accepted a
+                proposal in the past)
+
+[ Proposer ] -> AcceptRequest(n, own value or the value   [ Followers ]
+                associated with the highest proposal number
+                reported by the followers)
+                <- Accepted(n, value)
+```
+
+The prepare stage allows the proposer to learn of any competing or previous proposals. The second phase is where either a new value or a previously accepted value is proposed. In some cases - such as if two proposers are active at the same time (dueling); if messages are lost; or if a majority of the nodes have failed - then no proposal is accepted by a majority. But this is acceptable, since the decision rule for what value to propose converges towards a single value (the one with the highest proposal number in the previous attempt).
+
+Indeed, according to the FLP impossibility result, this is the best we can do: algorithms that solve the consensus problem must either give up safety or liveness when the guarantees regarding bounds on message delivery do not hold. Paxos gives up liveness: it may have to delay decisions indefinitely until a point in time where there are no competing leaders, and a majority of nodes accept a proposal. This is preferable to violating the safety guarantees.
+
+Of course, implementing this algorithm is much harder than it sounds. There are many small concerns which add up to a fairly significant amount of code even in the hands of experts. These are issues such as:
+
+- practical optimizations:
+  - avoiding repeated leader election via leadership leases (rather than heartbeats)
+  - avoiding repeated propose messages when in a stable state where the leader identity does not change
+- ensuring that followers and proposers do not lose items in stable storage and that results stored in stable storage are not subtly corrupted (e.g. disk corruption)
+- enabling cluster membership to change in a safe manner (e.g. base Paxos depends on the fact that majorities always intersect in one node, which does not hold if the membership can change arbitrarily)
+- procedures for bringing a new replica up to date in a safe and efficient manner after a crash, disk loss or when a new node is provisioned
+- procedures for snapshotting and garbage collecting the data required to guarantee safety after some reasonable period (e.g. balancing storage requirements and fault tolerance requirements)
+
+Google's [Paxos Made Live](https://www.cs.utexas.edu/users/lorenzo/corsi/cs380d/papers/paper2-1.pdf) paper details some of these challenges.
+
+## Partition-tolerant consensus algorithms: Paxos, Raft, ZAB
+
+Hopefully, this has given you a sense of how a partition-tolerant consensus algorithm works. I encourage you to read one of the papers in the further reading section to get a grasp of the specifics of the different algorithms.
+
+### Paxos
+
+Paxos is one of the most important algorithms when writing strongly consistent partition tolerant replicated systems. It is used in many of Google's systems, including the [Chubby lock manager](http://research.google.com/archive/chubby.html) used by [BigTable](http://research.google.com/archive/bigtable.html)/[Megastore](http://research.google.com/pubs/pub36971.html), the Google File System as well as [Spanner](http://research.google.com/archive/spanner.html).
+
+Paxos is named after the Greek island of Paxos, and was originally presented by Leslie Lamport in a paper called "The Part-Time Parliament" in 1998. It is often considered to be difficult to implement, and there have been a series of papers from companies with considerable distributed systems expertise explaining further practical details (see the further reading). You might want to read Lamport's commentary on this issue [here](http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html#lamport-paxos) and [here](http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html#paxos-simple).
+
+The issues mostly relate to the fact that Paxos is described in terms of a single round of consensus decision making, but an actual working implementation usually wants to run multiple rounds of consensus efficiently. This has led to the development of many [extensions on the core protocol](http://en.wikipedia.org/wiki/Paxos_algorithm) that anyone interested in building a Paxos-based system still needs to digest. Furthermore, there are additional practical challenges such as how to facilitate cluster membership change.
+
+### ZAB
+
+ZAB - the Zookeeper Atomic Broadcast protocol is used in Apache Zookeeper. Zookeeper is a system which provides coordination primitives for distributed systems, and is used by many Hadoop-centric distributed systems for coordination (e.g. HBase, Storm, Kafka). Zookeeper is basically the open source community's version of Chubby. Technically speaking atomic broadcast is a problem different from pure consensus, but it still falls under the category of partition tolerant algorithms that ensure strong consistency.
+
+### Raft
+
+Raft is a recent (2013) addition to this family of algorithms. It is designed to be easier to teach than Paxos, while providing the same guarantees. In particular, the different parts of the algorithm are more clearly separated and the paper also describes a mechanism for cluster membership change. It has recently seen adoption in [etcd](https://github.com/coreos/etcd) inspired by ZooKeeper.
+
+## Replication methods with strong consistency
+
+In this chapter, we took a look at replication methods that enforce strong consistency. Starting with a contrast between synchronous work and asynchronous work, we worked our way up to algorithms that are tolerant of increasingly complex failures. Here are some of the key characteristics of each of the algorithms:
+
+### Primary/Backup
+
+- Single, static master
+- Replicated log, slaves are not involved in executing operations
+- No bounds on replication delay
+- Not partition tolerant
+- Manual/ad-hoc failover, not fault tolerant, "hot backup"
+
+### 2PC
+
+- Unanimous vote: commit or abort
+- Static master
+- 2PC cannot survive simultaneous failure of the coordinator and a node during a commit
+- Not partition tolerant, tail latency sensitive
+
+### Paxos Algorithm
+
+- Majority vote
+- Dynamic master
+- Robust to n/2-1 simultaneous failures as part of protocol
+- Less sensitive to tail latency
+
+## Further reading
+
+### Primary-backup and 2PC
+
+- [Replication techniques for availability](http://scholar.google.com/scholar?q=Replication+techniques+for+availability) - Robbert van Renesse & Rachid Guerraoui, 2010
+- [Concurrency Control and Recovery in Database Systems](http://research.microsoft.com/en-us/people/philbe/ccontrol.aspx)
+
+### Paxos - further reading
+
+- [The Part-Time Parliament](http://research.microsoft.com/users/lamport/pubs/lamport-paxos.pdf) - Leslie Lamport
+- [Paxos Made Simple](http://research.microsoft.com/users/lamport/pubs/paxos-simple.pdf) - Leslie Lamport, 2001
+- [Paxos Made Live](http://research.google.com/archive/paxos_made_live.html) - An Engineering Perspective - Chandra et al
+- [Paxos Made Practical](http://scholar.google.com/scholar?q=Paxos+Made+Practical) - Mazieres, 2007
+- [Revisiting the Paxos Algorithm](http://groups.csail.mit.edu/tds/paxos.html) - Lynch et al
+- [How to build a highly available system with consensus](http://research.microsoft.com/lampson/58-Consensus/Acrobat.pdf) - Butler Lampson
+- [Reconfiguring a State Machine](http://research.microsoft.com/en-us/um/people/lamport/pubs/reconfiguration-tutorial.pdf) - Lamport et al - changing cluster membership
+- [Implementing Fault-Tolerant Services Using the State Machine Approach: a Tutorial](http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.4762) - Fred Schneider
+
+### Raft and ZAB
+
+- [In Search of an Understandable Consensus Algorithm](https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf), Diego Ongaro, John Ousterhout, 2013
+- [Raft Lecture - User Study](http://www.youtube.com/watch?v=YbZ3zDzDnrw)
+- [A simple totally ordered broadcast protocol](http://labs.yahoo.com/publication/a-simple-totally-ordered-broadcast-protocol/) - Junqueira, Reed, 2008
+- [ZooKeeper Atomic Broadcast](http://labs.yahoo.com/publication/zab-high-performance-broadcast-for-primary-backup-systems/) - Reed, 2011
