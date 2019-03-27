@@ -10,6 +10,8 @@
     - [Replica synchronization: gossip and Merkle trees](#replica-synchronization-gossip-and-merkle-trees)
     - [Dynamo in practice: probabilistically bounded staleness (PBS)](#dynamo-in-practice-probabilistically-bounded-staleness-pbs)
   - [Disorderly programming](#disorderly-programming)
+  - [CRDTs: Convergent replicated data types](#crdts-convergent-replicated-data-types)
+  - [The CALM theorem](#the-calm-theorem)
 
 Now that we've taken a look at protocols that can enforce single-copy consistency under an increasingly realistic set of supported failure cases, let's turn our attention at the world of options that opens up once we let go of the requirement of single-copy consistency.
 
@@ -260,3 +262,113 @@ For example, going from `R=1, W=1` to `R=2, W=1` in the Yammer case reduces the 
 For more details, have a look at the [PBS website](http://pbs.cs.berkeley.edu/) and the associated paper.
 
 ## Disorderly programming
+
+Let's look back at the examples of the kinds of situations that we'd like to resolve. The first scenario consisted of three different servers behind partitions; after the partitions healed, we wanted the servers to converge to the same value. Amazon's Dynamo made this possible by reading from R out of N nodes and then performing read reconciliation.
+
+In the second example, we considered a more specific operation: string concatenation. It turns out that there is no known technique for making string concatenation resolve to the same value without imposing an order on the operations (e.g. without expensive coordination). However, there are operations which can be applied safely in any order, where a simple register would not be able to do so. As Pat Helland wrote:
+
+_... operation-centric work can be made commutative (with the right operations and the right semantics) where a simple READ/WRITE semantic does not lend itself to commutativity._
+
+For example, consider a system that implements a simple accounting system with the debit and credit operations in two different ways:
+
+- using a register with read and write operations, and
+- using a integer data type with native `debit` and `credit` operations
+
+The latter implementation knows more about the internals of the data type, and so it can preserve the intent of the operations in spite of the operations being reordered. Debiting or crediting can be applied in any order, and the end result is the same:
+
+```text
+100 + credit(10) + credit(20) = 130 and
+100 + credit(20) + credit(10) = 130
+```
+
+However, writing a fixed value cannot be done in any order: if writes are reordered, the one of the writes will overwrite the other:
+
+```text
+100 + write(110) + write(130) = 130 but
+100 + write(130) + write(110) = 110
+```
+
+Let's take the example from the beginning of this chapter, but use a different operation. In this scenario, clients are sending messages to two nodes, which see the operations in different orders:
+
+```text
+[Clients]  --> [A]  1, 2, 3
+[Clients]  --> [B]  2, 3, 1
+```
+
+Instead of string concatenation, assume that we are looking to find the largest value (e.g. MAX()) for a set of integers. The messages 1, 2 and 3 are:
+
+```text
+1: { operation: max(previous, 3) }
+2: { operation: max(previous, 5) }
+3: { operation: max(previous, 7) }
+```
+
+Then, without coordination, both A and B will converge to 7, e.g.:
+
+```text
+A: max(max(max(0, 3), 5), 7) = 7
+B: max(max(max(0, 5), 7), 3) = 7
+```
+
+In both cases, two replicas see updates in different order, but we are able to merge the results in a way that has the same result in spite of what the order is. The result converges to the same answer in both cases because of the merge procedure (max) we used.
+
+It is likely not possible to write a merge procedure that works for all data types. In Dynamo, a value is a binary blob, so the best that can be done is to expose it and ask the application to handle each conflict.
+
+However, if we know that the data is of a more specific type, handling these kinds of conflicts becomes possible. CRDT's are data structures designed to provide data types that will always converge, as long as they see the same set of operations (in any order).
+
+## CRDTs: Convergent replicated data types
+
+CRDTs (convergent replicated datatypes) exploit knowledge regarding the commutativity and associativity of specific operations on specific datatypes.
+
+In order for a set of operations to converge on the same value in an environment where replicas only communicate occasionally, the operations need to be order-independent and insensitive to (message) duplication/redelivery. Thus, their operations need to be:
+
+- Associative `(a+(b+c)=(a+b)+c)`, so that grouping doesn't matter
+- Commutative `(a+b=b+a)`, so that order of application doesn't matter
+- Idempotent `(a+a=a)`, so that duplication does not matter
+
+It turns out that these structures are already known in mathematics; they are known as join or meet [semilattices](http://en.wikipedia.org/wiki/Semilattice).
+
+A [lattice](http://en.wikipedia.org/wiki/Lattice_%28order%29) is a partially ordered set with a distinct top (least upper bound) and a distinct bottom (greatest lower bound). A semilattice is like a lattice, but one that only has a distinct top or bottom. A join semilattice is one with a distinct top (least upper bound) and a meet semilattice is one with a distinct bottom (greatest lower bound).
+
+Any data type that be expressed as a semilattice can be implemented as a data structure which guarantees convergence. For example, calculating the max() of a set of values will always return the same result regardless of the order in which the values were received, as long as all values are eventually received, because the max() operation is associative, commutative and idempotent.
+
+For example, here are two lattices: one drawn for a set, where the merge operator is `union(items)` and one drawn for a strictly increasing integer counter, where the merge operator is `max(values)`:
+
+```text
+   { a, b, c }              7
+  /      |    \            /  \
+{a, b} {b,c} {a,c}        5    7
+  |  \  /  | /           /   |  \
+  {a} {b} {c}            3   5   7
+```
+
+With data types that can be expressed as semilattices, you can have replicas communicate in any pattern and receive the updates in any order, and they will eventually agree on the end result as long as they all see the same information. That is a powerful property that can be guaranteed as long as the prerequisites hold.
+
+However, expressing a data type as a semilattice often requires some level of interpretation. Many data types have operations which are not in fact order-independent. For example, adding items to a set is associative, commutative and idempotent. However, if we also allow items to be removed from a set, then we need some way to resolve conflicting operations, such as `add(A)` and `remove(A)`. What does it mean to remove an element if the local replica never added it? This resolution has to be specified in a manner that is order-independent, and there are several different choices with different tradeoffs.
+
+This means that several familiar data types have more specialized implementations as CRDT's which make a different tradeoff in order to resolve conflicts in an order-independent manner. Unlike a key-value store which simply deals with registers (e.g. values that are opaque blobs from the perspective of the system), someone using CRDTs must use the right data type to avoid anomalies.
+
+Some examples of the different data types specified as CRDT's include:
+
+- Counters
+  - Grow-only counter (merge = max(values); payload = single integer)
+  - Positive-negative counter (consists of two grow counters, one for increments and another for decrements)
+- Registers
+  - Last Write Wins -register (timestamps or version numbers; merge = max(ts); payload = blob)
+  - Multi-valued -register (vector clocks; merge = take both)
+- Sets
+  - Grow-only set (merge = union(items); payload = set; no removal)
+  - Two-phase set (consists of two sets, one for adding, and another for removing; elements can be added once and removed once)
+  - Unique set (an optimized version of the two-phase set)
+  - Last write wins set (merge = max(ts); payload = set)
+  - Positive-negative set (consists of one PN-counter per set item)
+  - Observed-remove set
+- Graphs and text sequences (see the paper)
+
+To ensure anomaly-free operation, you need to find the right data type for your specific application - for example, if you know that you will only remove an item once, then a two-phase set works; if you will only ever add items to a set and never remove them, then a grow-only set works.
+
+Not all data structures have known implementations as CRDTs, but there are CRDT implementations for booleans, counters, sets, registers and graphs in the recent (2011) [survey paper from Shapiro et al.](http://hal.inria.fr/docs/00/55/55/88/PDF/techreport.pdf)
+
+Interestingly, the register implementations correspond directly with the implementations that key value stores use: a last-write-wins register uses timestamps or some equivalent and simply converges to the largest timestamp value; a multi-valued register corresponds to the Dynamo strategy of retaining, exposing and reconciling concurrent changes. For the details, I recommend that you take a look at the papers in the further reading section of this chapter.
+
+## The CALM theorem
