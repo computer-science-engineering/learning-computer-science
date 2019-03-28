@@ -1,7 +1,6 @@
 """
 Script to get list of all problems by parsing readme.md from all subdirectories under ..\\src\\
-pip install markdown
-pip install BeautifulSoup4
+pip install -r python-requirements.txt
 """
 
 import os
