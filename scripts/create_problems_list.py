@@ -42,7 +42,7 @@ def find_files():
     return result
 
 def create_problems_list(files):
-    """Creates the list of problems in markdown file."""
+    """Creates the list of problems in markdown and json files."""
     file_to_update_md = open(PROBLEMS_LIST_FILE_MD, "w+")
     file_to_update_md.write("# List of problems\n")
     file_to_update_md.close()
