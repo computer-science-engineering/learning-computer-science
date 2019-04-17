@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Solution
+namespace SeedRecordsPerBin.Solution
 {
     class Program
     {

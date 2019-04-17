@@ -1,9 +1,9 @@
 using System;
-using Solution;
+using SeedRecordsPerBin.Solution;
 using Xunit;
 using System.Collections.Generic;
 
-namespace SolutionTest
+namespace SeedRecordsPerBin.SolutionTest
 {
     public class EngineTests
     {
