@@ -1,0 +1,40 @@
+{
+    "type": "Coding",
+    "name": "Median of Array",
+    "origin": {
+        "name": "Byte by Byte",
+        "link": "https://www.byte-by-byte.com/median/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Searching"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
