@@ -31,77 +31,77 @@
 		"scope": "markdown",
 		"prefix": "YouTube Video",
 		"body": [
-			"1. [YT Video -  - ]()"
+			"[YT Video -  - ]()"
 		]
 	},
 	"YouTube Video - Tushar Roy" : {
 		"scope": "markdown",
 		"prefix": "YouTube Video - Tushar Roy",
 		"body": [
-			"1. [YT Video - Tushar Roy - ]()"
+			"[YT Video - Tushar Roy - ]()"
 		]
 	},
 	"YouTube Video - Vivekanand Khyade" : {
 		"scope": "markdown",
 		"prefix": "YouTube Video - Vivekanand Khyade",
 		"body": [
-			"1. [YT Video - Vivekanand Khyade - ]()"
+			"[YT Video - Vivekanand Khyade - ]()"
 		]
 	},
 	"Geeks for Geeks post" : {
 		"scope": "markdown",
 		"prefix": "Geeks for Geeks post",
 		"body": [
-			"1. [Geeks for Geeks - ]()"
+			"[Geeks for Geeks - ]()"
 		]
 	},
 	"ProgramCreek post" : {
 		"scope": "markdown",
 		"prefix": "ProgramCreek post",
 		"body": [
-			"1. [ProgramCreek - ]()"
+			"[ProgramCreek - ]()"
 		]
 	},
 	"LeetCode discussion" : {
 		"scope": "markdown",
 		"prefix": "LeetCode discussion",
 		"body": [
-			"1. [LeetCode discussion - ]()"
+			"[LeetCode discussion - ]()"
 		]
 	},
 	"LeetCode article" : {
 		"scope": "markdown",
 		"prefix": "LeetCode article",
 		"body": [
-			"1. [LeetCode article]()"
+			"[LeetCode article]()"
 		]
 	},
 	"LeetCode solution" : {
 		"scope": "markdown",
 		"prefix": "LeetCode solution",
 		"body": [
-			"1. [LeetCode solution]()"
+			"[LeetCode solution]()"
 		]
 	},
 	"LeetCode top submission" : {
 		"scope": "markdown",
 		"prefix": "LeetCode sample submission",
 		"body": [
-			"1. LeetCode sample submission - X ms"
+			"LeetCode sample submission - X ms"
 		]
 	},
 	"GitHub" : {
 		"scope": "markdown",
 		"prefix": "GitHub",
 		"body": [
-			"1. [GitHub - ]()"
+			"[GitHub - ]()"
 		]
 	},
 	"StackOverflow" : {
 		"scope": "markdown",
 		"prefix": "StackOverflow",
 		"body": [
-			"1. [StackOverflow - ]()"
+			"[StackOverflow - ]()"
 		]
 	}
 }
