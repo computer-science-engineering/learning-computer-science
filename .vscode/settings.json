@@ -326,5 +326,6 @@
             "workingDirectory": "${workspaceFolder}"
         }
     ],
-    "java.test.defaultConfig": "myConfig"
+    "java.test.defaultConfig": "myConfig",
+    "markdown.extension.print.onFileSave": false
 }

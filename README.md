@@ -64,7 +64,7 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 
 #### Gradle
 
-From the project root, run `.\gradlew.bat wrapper --gradle-version 5.4.1`. For Linux, run gradlew from the root, instead of the .bat file. Use the desired version. in the command. Verify that the `distributionUrl` field in the file `gradle-wrapper.properties` has been updated to reflect the correct version. [Reference](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
+From the project root, run `.\gradlew.bat wrapper --gradle-version 5.4.1`. For Linux, run gradlew from the root, instead of the .bat file. Use the desired version in the command. Verify that the `distributionUrl` field in the file `gradle-wrapper.properties` has been updated to reflect the correct version. \[[Reference](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)\]
 
 #### Python
 
