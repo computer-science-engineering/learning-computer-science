@@ -2,15 +2,28 @@
 
 ## Description
 
-Find the median of two sorted arrays.
+There are two sorted arrays **nums1** and **nums2** of size m and n respectively.
 
-eg.
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+You may assume **nums1** and **nums2** cannot be both empty.
+
+Example 1:
 
 ```text
-arr1 = [1, 3, 5]
-arr2 = [2, 4, 6]
+nums1 = [1, 3]
+nums2 = [2]
 
-median(arr1, arr2) = 3.5
+The median is 2.0
+```
+
+Example 2:
+
+```text
+nums1 = [1, 2]
+nums2 = [3, 4]
+
+The median is (2 + 3)/2 = 2.5
 ```
 
 ## Notes
