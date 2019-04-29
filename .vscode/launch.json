@@ -8,6 +8,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - Solution",
             "request": "launch",
+            "mainClass": "LeetCode.src.Problems.P1_P100.P4_MedianOfTwoSortedArrays.Java.Solution",
+            "projectName": "learning-computer-science"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
             "mainClass": "ByteByByte.src.CodingInterviewQuestions.Array.P1_MedianOfArrays.Java.Solution",
             "projectName": "learning-computer-science"
         },

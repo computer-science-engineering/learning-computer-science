@@ -1,0 +1,73 @@
+{
+    "type": "Coding",
+    "name": "4. Median of Two Sorted Arrays",
+    "origin": {
+        "name": "LeetCode",
+        "link": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
+    },
+    "companies": [
+        "Google",
+        "Amazon",
+        "Adobe",
+        "Microsoft",
+        "Apple",
+        "Goldman Sachs",
+        "Uber",
+        "Bloomberg",
+        "Walmart Labs",
+        "Facebook",
+        "Rubrik",
+        "Tencent",
+        "Alibaba",
+        "VMWare",
+        "Airbnb",
+        "Two Sigma",
+        "Baidu",
+        "NetEase",
+        "Twitter",
+        "Snapchat",
+        "Zillow",
+        "Pocket Gems",
+        "Aetion",
+        "Yahoo",
+        "Hulu",
+        "eBay",
+        "Lyft",
+        "Cloudera",
+        "Zappos",
+        "LinkedIn",
+        "Pinterest",
+        "Nutanix",
+        "Zenefits",
+        "Dropbox"
+    ],
+    "categories": [
+        {
+            "name": "Problems",
+            "children": [
+                {
+                    "name": "Algorithms",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Array",
+        "Binary Search",
+        "Divide and Conquer"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
