@@ -18,7 +18,7 @@ public class Solution {
         while(l < r){
             int m1 = l + (r - l) / 2;
             int m2 = k - m1;
-            if (nums1[m1] < nums2[m2 - 1]){
+            if (nums1[m1] < nums2[m2 - 1]) {
                 l = m1 + 1;
             } else {
                 r = m1;
