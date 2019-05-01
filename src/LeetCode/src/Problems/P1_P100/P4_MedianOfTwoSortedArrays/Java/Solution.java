@@ -14,7 +14,7 @@ public class Solution {
         int k = (len1 + len2 + 1) / 2;
         int l = 0;
         int r = len1;
-        //find the m1 so that nums1[m1] >= nums2[m2 - 1]
+        // find the m1 so that nums1[m1] >= nums2[m2 - 1]
         while(l < r) {
             int m1 = l + (r - l) / 2;
             int m2 = k - m1;
