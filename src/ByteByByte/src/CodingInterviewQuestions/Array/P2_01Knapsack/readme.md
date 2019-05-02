@@ -20,3 +20,5 @@ knapsack(items, maxWeight) = 22
 2. [Byte by Byte - 0-1 Knapsack](https://www.byte-by-byte.com/01knapsack/)
 3. [Geeks for Geeks - 0-1 Knapsack Problem | DP-10](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
 4. [LeetCode discussion - similar problem - 416. Partition Equal Subset Sum - 0/1 knapsack detailed explanation](https://leetcode.com/problems/partition-equal-subset-sum/discuss/90592/01-knapsack-detailed-explanation)
+5. [YT Video - GeeksforGeeks - 0 1 Knapsack Problem - Approach to write the code (Dynamic Programming)](https://www.youtube.com/watch?v=ywiH-zRH1mA)
+6. [YT Video - Tushar Roy - 0/1 Knapsack Problem Dynamic Programming](https://www.youtube.com/watch?v=8LusJS5-AGo)
