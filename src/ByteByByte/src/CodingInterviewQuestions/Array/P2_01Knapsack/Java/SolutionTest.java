@@ -31,11 +31,13 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int val[] = {60, 100, 120}; 
+        int wt[] = {10, 20, 30}; 
+        int  W = 50; 
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 220;
+            int actual = Solution.knapsack01(val, wt, W);
+            assertEquals(expected, actual);
         });
     }
 }
