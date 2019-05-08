@@ -86,8 +86,8 @@ From the project root, run `.\gradlew.bat wrapper --gradle-version 5.4.1`. For L
 | N/A | Codecov | Code coverage using Circle CI | [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science) |
 | N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning-computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/35)|
 | N/A | CII Best Practices | Open source software best practices check | [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1761/badge)](https://bestpractices.coreinfrastructure.org/projects/1761) |
-| N/A | david-dm | Check node.js dependency status | [![Dependency Status](https://david-dm.org/manastalukdar/learning-computer-science.svg)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-ng) |
-| N/A | david-dm | Check node.js dev dependency status | [![devDependencies Status](https://david-dm.org/manastalukdar/learning-computer-science/dev-status.svg?path=website-ng)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-ng&type=dev) |
+| N/A | david-dm | Check node.js dependency status | [![Dependency Status](https://david-dm.org/manastalukdar/learning-computer-science.svg)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-react-next) |
+| N/A | david-dm | Check node.js dev dependency status | [![devDependencies Status](https://david-dm.org/manastalukdar/learning-computer-science/dev-status.svg?path=website-react-next)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-react-next&type=dev) |
 
 <!-- waffle
 ZenHub -->
