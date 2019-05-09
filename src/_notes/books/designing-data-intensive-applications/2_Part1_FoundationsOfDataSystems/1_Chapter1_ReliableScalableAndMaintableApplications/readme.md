@@ -3,6 +3,8 @@
 - [Reliable, Scalable, and Maintainable Applications](#reliable-scalable-and-maintainable-applications)
   - [Thinking About Data Systems](#thinking-about-data-systems)
   - [Reliability](#reliability)
+    - [Hardware Faults](#hardware-faults)
+    - [Software Errors](#software-errors)
 
 Many applications today are *data-intensive*, as opposed to *compute-intensive*. Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is
 changing.
@@ -45,3 +47,26 @@ For software, typical expectations include:
 - It can tolerate the user making mistakes or using the software in unexpected ways.
 - Its performance is good enough for the required use case, under the expected load and data volume.
 - The system prevents any unauthorized access and abuse.
+
+- Reliability - continuing to work correctly, even when things go wrong.
+- faults - things that can go wrong.
+- fault-tolerant or resilient - systems that can anticipate faults and can cope with them.
+- failure - when the system as a whole stops providing the required service to the user
+
+Best to design fault-tolerance mechanisms that prevent faults from causing failures.
+
+SSometimes is is needed to intentionally induce faults to test and fix systems for resiliency - chaos testing. Eg.: Netflix chaos monkey.
+
+### Hardware Faults
+
+Hard disks are reported as having a mean time to failure (MTTF) of about 10 to 50 years [5, 6]. Thus, on a storage cluster with 10,000 disks, we should expect on  one disk to die per day.
+
+Our first response is usually to add redundancy to the individual hardware components in order to reduce the failure rate of the system. Restoration of backup is a step in this process. Multi-machine redundancy was only required by a small number of applications for which high availability was absolutely essential.
+
+There is a move toward systems that can tolerate the loss of entire machines, by using software fault-tolerance techniques in preference or in addition to hardware redundancy. Such systems also have operational advantages - rolling upgrades, no system downtime.
+
+### Software Errors
+
+The bugs that cause software faults often lie dormant for a long time until they are triggered by an unusual set of circumstances.
+
+There is no quick solution to the problem of systematic faults in software. Lots of small things can help: carefully thinking about assumptions and interactions in the system; thorough testing; process isolation; allowing processes to crash and restart; measuring, monitoring, and analyzing system behavior in production.
