@@ -6,6 +6,10 @@
     - [Hardware Faults](#hardware-faults)
     - [Software Errors](#software-errors)
     - [Human Errors](#human-errors)
+    - [How Important Is Reliability](#how-important-is-reliability)
+  - [Scalability](#scalability)
+    - [Describing Load](#describing-load)
+    - [Describing Performance](#describing-performance)
 
 Many applications today are *data-intensive*, as opposed to *compute-intensive*. Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
 
@@ -81,3 +85,25 @@ How do we make our systems reliable, in spite of unreliable humans? The best sys
 - Decouple the places where people make the most mistakes from the places where they can cause failures. For eg.: provide fully featured non-production sandbox environments.
 - Test thoroughly at all levels, from unit tests to whole-system integration tests and manual tests. Corner case testing is important, as is automation.
 - Allow quick and easy recovery from human errors, to minimize the impact in the case of a failure.
+- Set up detailed and clear monitoring, such as performance metrics and error rates.
+- Implement good management practices and training.
+
+### How Important Is Reliability
+
+- Very important.
+- May be situations when to reduce development costs, reliability may be sacrificed, but need to be very conscious when cutting corners.
+
+## Scalability
+
+Even if a system is working reliably today, that doesn’t mean it will necessarily work reliably in the future.
+
+Scalability is the term we use to describe a system’s ability to cope with increased load. Discussing scalability means considering questions like:
+
+- If the system grows in a particular way, what are our options for coping with the growth?
+- How can we add computing resources to handle the additional load?
+
+### Describing Load
+
+Load can be described with a few numbers which we call _load parameters_.
+
+### Describing Performance
