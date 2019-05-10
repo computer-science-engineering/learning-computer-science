@@ -5,9 +5,9 @@
   - [Reliability](#reliability)
     - [Hardware Faults](#hardware-faults)
     - [Software Errors](#software-errors)
+    - [Human Errors](#human-errors)
 
-Many applications today are *data-intensive*, as opposed to *compute-intensive*. Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is
-changing.
+Many applications today are *data-intensive*, as opposed to *compute-intensive*. Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.
 
 A data-intensive application is typically built from standard building blocks that provide commonly needed functionality. For example, many applications need to:
 
@@ -70,3 +70,14 @@ There is a move toward systems that can tolerate the loss of entire machines, by
 The bugs that cause software faults often lie dormant for a long time until they are triggered by an unusual set of circumstances.
 
 There is no quick solution to the problem of systematic faults in software. Lots of small things can help: carefully thinking about assumptions and interactions in the system; thorough testing; process isolation; allowing processes to crash and restart; measuring, monitoring, and analyzing system behavior in production.
+
+### Human Errors
+
+Humans are known to be unreliable.
+
+How do we make our systems reliable, in spite of unreliable humans? The best systems combine several approaches:
+
+- Design systems in a way that minimizes opportunities for error.
+- Decouple the places where people make the most mistakes from the places where they can cause failures. For eg.: provide fully featured non-production sandbox environments.
+- Test thoroughly at all levels, from unit tests to whole-system integration tests and manual tests. Corner case testing is important, as is automation.
+- Allow quick and easy recovery from human errors, to minimize the impact in the case of a failure.
