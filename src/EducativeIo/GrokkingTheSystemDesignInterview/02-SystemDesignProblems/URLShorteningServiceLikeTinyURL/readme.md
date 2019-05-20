@@ -33,6 +33,7 @@
   - [References](#references)
 
 Similar services: bit.ly, goo.gl, qlink.me, etc.
+
 Difficulty Level: Easy
 
 ## Why do we need URL shortening
@@ -230,7 +231,7 @@ The main functionality desired is the generation of a short and unique string fo
 3. Between Application Servers and Cache servers
 
 - Simple round robin to start with.
-  - Round robin can lead to hotspots.
+  - Round robin can lead to hot-spots.
 - More intelligent LB solution can be placed that periodically queries the backend server about its load and adjusts traffic based on that.
 
 ## Purging or DB cleanup
