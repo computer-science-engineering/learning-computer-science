@@ -33,10 +33,9 @@
 
 Difficulty Level: Easy
 
-[High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-overview.png)
+![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-overview.png)
 
-
-[Detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-detail.png)
+![Detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-detail.png)
 
 ## Why do we need URL shortening
 
