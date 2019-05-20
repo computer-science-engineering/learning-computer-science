@@ -1,23 +1,64 @@
 # Designing Pastebin
 
-Similar Services: pasted.co, hastebin.com, chopapp.com
+- [Designing Pastebin](#designing-pastebin)
+  - [What is Pastebin](#what-is-pastebin)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+    - [Functional Requirements](#functional-requirements)
+    - [Non-Functional Requirements](#non-functional-requirements)
+    - [Extended Requirements](#extended-requirements)
+  - [Some Design Considerations](#some-design-considerations)
+  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+    - [Traffic estimates](#traffic-estimates)
+    - [Storage estimates](#storage-estimates)
+    - [Bandwidth estimates](#bandwidth-estimates)
+    - [Memory estimates](#memory-estimates)
+  - [System APIs](#system-apis)
+  - [Database Design](#database-design)
+  - [High Level Design](#high-level-design)
+  - [Component Design](#component-design)
+    - [Application layer](#application-layer)
+    - [Datastore layer](#datastore-layer)
+    - [Purging or DB Cleanup](#purging-or-db-cleanup)
+    - [Data Partitioning and Replication](#data-partitioning-and-replication)
+    - [Cache and Load Balancer](#cache-and-load-balancer)
+    - [Security and Permissions](#security-and-permissions)
+
+Similar Services: pastebin.com, pasted.co, chopapp.com
 Difficulty Level: Easy
 
-## 1. What is Pastebin
+## What is Pastebin
 
-## 2. Requirements and Goals of the System
+## Requirements and Goals of the System
 
 ### Functional Requirements
+
+1. Users should be able to upload or paste their data and get a unique URL to access it.
+2. Users will only be able to upload text.
+3. Data and links will expire after a specific timespan automatically; users should also be able to specify expiration time.
+4. Users should optionally be able to pick a custom alias for their paste.
 
 ### Non-Functional Requirements
 
 ### Extended Requirements
 
-## 3. Some Design Considerations
+## Some Design Considerations
 
-## 4. Capacity Estimation and Constraints
+- Limit on the amount of text user can paste at a time: No more than 10 MB.
+- Size limits on custom URLs: Reasonable.
+
+## Capacity Estimation and Constraints
+
+Read-heavy service. We can assume a 5:1 ratio between read and write.
 
 ### Traffic estimates
+
+```text
+1 M new pastes per day.
+5 M reads per day.
+
+New pastes per second = 1 M / (24 hours * 3600 seconds) ~= 12 pastes/sec
+Paste reads per second = 5 M / (24 hours * 3600 seconds) ~= 58 reads/sec
+```
 
 ### Storage estimates
 
@@ -25,22 +66,22 @@ Difficulty Level: Easy
 
 ### Memory estimates
 
-## 5. System APIs
+## System APIs
 
-## 6. Database Design
+## Database Design
 
-## 7. High Level Design
+## High Level Design
 
-## 8. Component Design
+## Component Design
 
 ### Application layer
 
 ### Datastore layer
 
-### 9. Purging or DB Cleanup
+### Purging or DB Cleanup
 
-### 10. Data Partitioning and Replication
+### Data Partitioning and Replication
 
-### 11. Cache and Load Balancer
+### Cache and Load Balancer
 
-### 12. Security and Permissions
+### Security and Permissions

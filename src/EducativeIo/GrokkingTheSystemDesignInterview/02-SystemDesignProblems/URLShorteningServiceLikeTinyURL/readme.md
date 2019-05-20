@@ -27,15 +27,13 @@
   - [Cache](#cache)
   - [Load Balancer (LB)](#load-balancer-lb)
   - [Purging or DB cleanup](#purging-or-db-cleanup)
+  - [Detailed Component Design Diagram](#detailed-component-design-diagram)
   - [Telemetry](#telemetry)
   - [Security and Permissions](#security-and-permissions)
   - [References](#references)
 
+Similar services: bit.ly, goo.gl, qlink.me, etc.
 Difficulty Level: Easy
-
-![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-overview.png)
-
-![Detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-detail.png)
 
 ## Why do we need URL shortening
 
@@ -104,7 +102,6 @@ Memory needed to cache 20% = 0.2 * 1.7 B * 500 bytes = 1.7 000 000 000  00 bytes
 | Outgoing data       | 500 bytes/URL * 19K URL/s                               | 10 MB/s   |
 | Storage for 5 years | 500 bytes/URL * 500 million * 60 months                 | 15 TB    |
 | Memory for cache    | 19K URL * 3600 seconds * 24 hours * 500 bytes * 20%     | 170 GB   |
-
 
 ## System APIs
 
@@ -199,6 +196,8 @@ The main functionality desired is the generation of a short and unique string fo
 - Key lookup: Look up key in database to get original full URL. If present we return a 302 redirect, passing original URL in _Location_ field of response. If not present, we return a 404 Not Found.
 - Size limit on custom short link: Yes. Say, 16 characters per custom short link.
 
+![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-overview.png)
+
 ## Data Partitioning and Replication
 
 ### Range Based Partitioning
@@ -237,6 +236,10 @@ The main functionality desired is the generation of a short and unique string fo
 ## Purging or DB cleanup
 
 A separate Cleanup service can run periodically to remove expired links from our storage and cache.
+
+## Detailed Component Design Diagram
+
+![Detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-detail.png)
 
 ## Telemetry
 
