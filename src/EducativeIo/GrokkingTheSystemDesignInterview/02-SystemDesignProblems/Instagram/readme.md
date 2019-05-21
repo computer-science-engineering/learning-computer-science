@@ -20,9 +20,12 @@
   - [Data Size Estimation](#data-size-estimation)
     - [User Table](#user-table)
     - [Photo Table](#photo-table)
+    - [UserFollow Table](#userfollow-table)
+    - [Total space needed](#total-space-needed)
   - [Component Design](#component-design)
   - [Reliability and Redundancy](#reliability-and-redundancy)
   - [Data Sharding](#data-sharding)
+    - [Partitioning based on UserID](#partitioning-based-on-userid)
   - [Ranking and Timeline Generation](#ranking-and-timeline-generation)
   - [Timeline Creation with Sharded Data](#timeline-creation-with-sharded-data)
   - [Cache and Load balancing](#cache-and-load-balancing)
@@ -156,13 +159,57 @@ Storage for 500 M users: 500 M * 68 bytes = 34 GB
 
 ```text
 PhotoID (4 bytes) + UserID (4 bytes) + PhotoPath (256 bytes) + PhotoLatitude (4 bytes) + PhotoLongitude(4 bytes) + UserLatitude (4 bytes) + UserLongitude (4 bytes) + CreationDate (4 bytes) = 284 bytes
+
+Photos uploaded per day = 2 M
+Storage needed for a day = 2M * 284 bytes ~= 0.5 GB per day
+Storage needed for 10 years = 0.5 GB * 10 years * 365 days ~= 1.8 TB
 ```
+
+### UserFollow Table
+
+```text
+Each row in the UserFollow table will consist of 8 bytes.
+If we have 500 million users and on average each user follows 500 users, total storage needed
+  = 500 M users * 500 followers * 8 bytes ~= 1.82TB
+```
+
+### Total space needed
+
+For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
 
 ## Component Design
 
+- Writes can be slow as they have to go to the disk.
+- Reads are faster as they are served from cache.
+- Dedicated servers for reads and different servers for writes to ensure that uploads don’t hog the system.
+- Separating photos’ read and write requests will also allow us to scale and optimize each of these operations independently.
+
+User ----Upload Image-----> [Upload Image Request] ------> Image Storage
+                                         \                  /\
+                                            \             /
+                                                \       /
+                                                   \  /
+                                                    /   \
+                                                  /         \
+                                                /               \
+                                              /                     \
+                                            |/                         \/
+User <----View/Search Image-----> [Download Image Request] <------> Image Metadata
+
 ## Reliability and Redundancy
 
+- Multiple replicas are needed.
+
+![Detailed component diagram](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/instagram-detail.png)
+
 ## Data Sharding
+
+### Partitioning based on UserID
+
+- We can shard based on UserID, so all photos of a user are on the same shard.
+- If we have 10 shards, we can find shard number by `UserID % 10`.
+- To uniquely identify any photo, we can append shard number with each PhotoID.
+- How can we generate PhotoIDs: 
 
 ## Ranking and Timeline Generation
 
