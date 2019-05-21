@@ -26,6 +26,8 @@
   - [Reliability and Redundancy](#reliability-and-redundancy)
   - [Data Sharding](#data-sharding)
     - [Partitioning based on UserID](#partitioning-based-on-userid)
+    - [Partitioning based on PhotoID](#partitioning-based-on-photoid)
+    - [Planning for Future Growth](#planning-for-future-growth)
   - [Ranking and Timeline Generation](#ranking-and-timeline-generation)
   - [Timeline Creation with Sharded Data](#timeline-creation-with-sharded-data)
   - [Cache and Load balancing](#cache-and-load-balancing)
@@ -184,17 +186,15 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
 - Dedicated servers for reads and different servers for writes to ensure that uploads don’t hog the system.
 - Separating photos’ read and write requests will also allow us to scale and optimize each of these operations independently.
 
+```text
 User ----Upload Image-----> [Upload Image Request] ------> Image Storage
-                                         \                  /\
-                                            \             /
-                                                \       /
-                                                   \  /
-                                                    /   \
-                                                  /         \
-                                                /               \
-                                              /                     \
-                                            |/                         \/
+                                        |                     /|\
+                                        |          ____________|  
+                                        |_________|_______________________
+                                                  |                       |
+                                                  |                      \|/
 User <----View/Search Image-----> [Download Image Request] <------> Image Metadata
+```
 
 ## Reliability and Redundancy
 
@@ -209,9 +209,42 @@ User <----View/Search Image-----> [Download Image Request] <------> Image Metada
 - We can shard based on UserID, so all photos of a user are on the same shard.
 - If we have 10 shards, we can find shard number by `UserID % 10`.
 - To uniquely identify any photo, we can append shard number with each PhotoID.
-- How can we generate PhotoIDs: 
+- How can we generate PhotoIDs:
+  - Each db-shard can have its own auto-increment sequence for PhotoIDs.
+  - Since we will append ShardID with each PhotoID, it will be unique throughout the system.
+- Issues with this partitioning scheme
+  - Would result in hot-spots.
+    - What of users with many millions of followers.
+    - When some users have lots of photos compared to others, storage distribution would be non-uniform.
+      - Even if we distribute photos for a user into multiple shards, it may cause higher latencies.
+    - Storing all photos for a user in one shard can cause issues
+      - Unavailability of user data is shard is down.
+      - Higher latency if it is serving high load.
+
+### Partitioning based on PhotoID
+
+- Generate unique PhotoIDs first and the find a shard number using `PhotoID % 10`.
+- Using this mechanism we would not have to append ShardID with PhotoID, as PhotoID itself will be unique.
+- Generating PhotoIDs
+  - Dedicate a separate database instance to generate auto-incrementing IDs.
+    - If our PhotoID can fit into 64 bits, we can define a table containing only a 64 bit ID field. So whenever we would like to add a photo in our system, we can insert a new row in this table and take that ID to be our PhotoID of the new photo.
+    - Key generating d/b as a single point of failure
+      - Yes
+      - Workaround1: Two databases.
+        - One generating even numbered IDs and other odd numbered.
+        - Load balancer in front to round robin between them.
+      - Workaround2: Key generation service (KGS).
+
+### Planning for Future Growth
+
+- Large number of logical partitions, such that in the beginning, multiple logical partitions reside on a single physical d/b server.
+- Since each database server can have multiple database instances on it, we can have separate databases for each logical partition on any server.
+- So when a particular database server has lot of data, we can migrate some logical partitions from it to another server.
+- We can maintain a config file (or a separate database) that can map our logical partitions to database servers; this will enable us to move partitions around easily. Whenever we want to move a partition, we only have to update the config file to announce the change.
 
 ## Ranking and Timeline Generation
+
+- Need to fetch latest, most popular and relevant photos of the people the user follows.
 
 ## Timeline Creation with Sharded Data
 
