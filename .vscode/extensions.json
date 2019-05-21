@@ -28,8 +28,10 @@
         "dbaeumer.jshint",
         "ajhyndman.jslint",
         "eriklynd.json-tools",
+        "sysoev.language-stylus",
         "James-Yu.latex-workshop",
         "ymotongpoo.licenser",
+        "yzhang.markdown-all-in-one",
         "mdickin.markdown-shortcuts",
         "goessner.mdmath",
         "Angular.ng-template",
@@ -46,6 +48,7 @@
         "eg2.tslint",
         "octref.vetur",
         "Equinusocio.vsc-material-theme",
+        "auchenberg.vscode-browser-preview",
         "dbaeumer.vscode-eslint",
         "vscjava.vscode-java-debug",
         "vscjava.vscode-java-dependency",
@@ -58,8 +61,6 @@
         "fernandoescolar.vscode-solution-explorer",
         "redhat.vscode-yaml",
         "VisualStudioExptTeam.vscodeintellicode",
-        "DotJoshJohnson.xml",
-        "auchenberg.vscode-browser-preview",
-        "yzhang.markdown-all-in-one"
-    ]
+        "DotJoshJohnson.xml"
+      ]
 }
