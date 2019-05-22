@@ -246,6 +246,13 @@ User <----View/Search Image-----> [Download Image Request] <------> Image Metada
 
 - Need to fetch latest, most popular and relevant photos of the people the user follows.
 
+- Assumption: Fetch top 100 photos for a user's news feed.
+- Workflow
+  - Get list of people user follows.
+  - Fetch metadata info of latest 100 photos from each user.
+  - Submit these photos to some ML/AI algorithm to determine top 100 photos (based on likes, recency, etc.)
+  - Return these 100 photos to user.
+
 ## Timeline Creation with Sharded Data
 
 ## Cache and Load balancing
