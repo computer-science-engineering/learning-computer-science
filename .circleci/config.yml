@@ -94,7 +94,7 @@ jobs:
       - run:
           name: Run fossa
           command: |
-            curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+            curl -H 'Cache-Control:no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
             fossa init FOSSA_API_KEY=$FOSSA_API_KEY fossa analyze
       
       # upload test coverage to codacy
