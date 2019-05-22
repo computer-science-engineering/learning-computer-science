@@ -46,3 +46,6 @@ gradle-app.setting
 
 # .NET build
 obj
+
+# fossa file
+.fossa.yml
