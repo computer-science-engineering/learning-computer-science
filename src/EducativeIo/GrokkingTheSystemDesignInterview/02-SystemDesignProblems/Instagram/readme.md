@@ -252,6 +252,8 @@ User <----View/Search Image-----> [Download Image Request] <------> Image Metada
   - Fetch metadata info of latest 100 photos from each user.
   - Submit these photos to some ML/AI algorithm to determine top 100 photos (based on likes, recency, etc.)
   - Return these 100 photos to user.
+- Issues
+  - High latency.
 
 ## Timeline Creation with Sharded Data
 
