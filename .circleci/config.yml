@@ -89,6 +89,15 @@ jobs:
           name: Upload to coveralls
           command: |
             bash ./gradlew test jacocoJupTestReport coveralls
+
+      # Run fossa
+      - run:
+          name: Run fossa
+          command: |
+            curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+            cd ./src/
+            fossa init FOSSA_API_KEY=f8791fc42420fabfc79e98543301b483 fossa analyze
+            cd ..
       
       # upload test coverage to codacy
       # - run: 
