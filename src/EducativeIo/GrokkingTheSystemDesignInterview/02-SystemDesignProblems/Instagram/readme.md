@@ -278,6 +278,8 @@ User <----View/Search Image-----> [Download Image Request] <------> Image Metada
       - Server pushes updates to all users at certain max frequency.
       - Users wil lot of follows/updates pull data.
 
+Also check Facebook Newsfeed problem.
+
 ## News Feed Creation with Sharded Data
 
 - Fetching of latest photos from all people user follows.
