@@ -177,6 +177,8 @@ The main functionality desired is the generation of a short and unique string fo
         - If user not signed in, have to ask user to choose unique key.
           - Even then if key is not unique, have to keep generating till we gte a unique one.
 
+[request-flow-for-accessing-shortened-url](./images/request-flow-for-accessing-shortened-url_base64)
+
 ### Generating keys offline
 
 - Standalone Key Generation Service.
