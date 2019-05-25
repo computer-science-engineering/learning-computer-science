@@ -146,7 +146,7 @@ How will clients handling slow servers: Clients exponentially back-off if the se
 
 Should mobile clients sync remote changes immediately: Mobile clients usually sync on demand to save user bandwidth and space.
 
-[client](./images/client.base64.md)
+[client](./images/client_base64.md)
 
 ### Metadata Database
 
@@ -196,7 +196,7 @@ Should mobile clients sync remote changes immediately: Mobile clients usually sy
 - Messaging middleware that handles requests.
 - Scalable message queuing service that supports message-based communication between client and the synchronization service.
 
-[message queuing](./images/message-queuing.base64.md)
+[message queuing](./images/message-queuing_base64.md)
 
 ### Cloud/Block Storage
 
