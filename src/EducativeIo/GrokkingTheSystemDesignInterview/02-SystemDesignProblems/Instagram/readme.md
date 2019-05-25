@@ -186,15 +186,7 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
 - Dedicated servers for reads and different servers for writes to ensure that uploads don’t hog the system.
 - Separating photos’ read and write requests will also allow us to scale and optimize each of these operations independently.
 
-```text
-User ----Upload Image-----> [Upload Image Request] ------> Image Storage
-                                        |                     /|\
-                                        |          ____________|  
-                                        |_________|_______________________
-                                                  |                       |
-                                                  |                      \|/
-User <----View/Search Image-----> [Download Image Request] <------> Image Metadata
-```
+[component design](./images/component-design_base64.md)
 
 ## Reliability and Redundancy
 

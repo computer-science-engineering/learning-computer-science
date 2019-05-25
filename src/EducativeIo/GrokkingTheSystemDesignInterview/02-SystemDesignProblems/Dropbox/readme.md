@@ -13,6 +13,7 @@
     - [Synchronization Service](#synchronization-service)
     - [Message Queuing Service](#message-queuing-service)
     - [Cloud/Block Storage](#cloudblock-storage)
+    - [Detailed Component Diagram](#detailed-component-diagram)
   - [File Processing Workflow](#file-processing-workflow)
   - [Data Deduplication](#data-deduplication)
   - [Metadata Partitioning](#metadata-partitioning)
@@ -194,26 +195,97 @@ Should mobile clients sync remote changes immediately: Mobile clients usually sy
 ### Message Queuing Service
 
 - Messaging middleware that handles requests.
-- Scalable message queuing service that supports message-based communication between client and the synchronization service.
+- Scalable message queuing service that supports message-based communication between clients and the synchronization service.
+
+- Two queues.
+  - Request queue is a global queue shared by all clients.
+    - Client requests are sent to the Request queue and synchronization service reads it from there and then sends it to update metadata.
+  - Response queues correspond to individual subscribed clients.
+    - Deliver update messages to each client.
+    - Since a message will be deleted from the queue once received by a client, separate Response Queues for each subscribed client are needed to share update messages.
 
 [message queuing](./images/message-queuing_base64.md)
 
 ### Cloud/Block Storage
 
+- Stores uploaded chunks of files.
+
+### Detailed Component Diagram
+
+![detailed component diagram](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/dropbox-detail.png)
+
 ## File Processing Workflow
 
+If the other clients are not online at the time of the update, the Message Queuing Service keeps the update notifications in separate response queues for them until they come online later
+
+1. Client A uploads chunks to cloud storage.
+2. Client A updates metadata and commits changes.
+3. Client A gets confirmation and notifications are sent to Clients B and C about the changes.
+4. Client B and C receive metadata changes and download updated chunks.
+
 ## Data Deduplication
+
+- Technique to eliminate duplicate copies of data to improve storage utilization.
+- Can also be applied to network data transfers to reduce the number of bytes that must be sent.
+- For each new incoming chunk, we can calculate its hash and compare that hash with all the hashes of the existing chunks to see if we already have the same chunk present in storage.
+
+- Implementation
+  - Post-process deduplication
+    - New chunks are first stored on storage device.
+    - Later some process analyzer the data checking for duplication.
+    - Issues:
+      - Storage of duplicate data, even if for a short time.
+      - Transfer of duplicate data consuming bandwidth.
+  - In-line deduplication
+    - Deduplication hash calculations done in real-time as clients are entering data om their device.
+    - If system identifies a chunk that is already stored, only a reference to existing chunk will be addded in the metadata, rather than a full copy of the chunk.
+    - This approach provides optimal network and storage usage.
 
 ## Metadata Partitioning
 
 ### Vertical Partitioning
 
+- Store tables related to one particular feature on one server.
+- Eg: All user related tables in one d/b and all files/chunks related tables in another d/b.
+- Issues:
+  - Scale issues.
+  - Joins can cause performance and consistency issues.
+
 ### Range Based Partitioning
+
+- Store files/chunks in separate partitions based on the first letter of the File Path.
+- Possible to combine certain less frequently occurring letters into one d/b partition.
+- Issues:
+  - Can lead to unbalanced servers.
 
 ### Hash-Based Partitioning
 
+- Take hash of object being stored and based on this hash, we figure out the d/b partition this object should go to.
+- We can take hash of the FileID of the file object.
+- Hashing function will have to randomly distribute objects into different partitions, e.g., our hashing function can always map any ID to a number between [1…256], and this number would be the partition we will store our object.
+- This approach can still lead to overloaded partitions, which can be solved by using Consistent Hashing.
+
 ## Caching
+
+- Cache for Clock storage (files/chunks).
+  - Memcached
+  - Store whole chunks with respective IDs/Hashes.
+  - Block servers before hitting Block storage can check if cache has the desired chunk.
+  - A high-end commercial server can have 144GB of memory; one such server can cache 36K chunks.
+  - Cache replacement policy: LRU
+- Cache for metadata d/b can also be used.
 
 ## Load Balancer (LB)
 
+- Between Clients and BLock servers.
+- Between Clients and Metadata servers.
+- Initially, a simple Round Robin approach can be adopted.
+  - If a server is dead, LB will take it out of the rotation and will stop sending any traffic to it.
+  - Issues:
+    - Won’t take server load into consideration.
+  - Solution:
+    - A more intelligent LB solution can be placed that periodically queries backend server about their load and adjusts traffic based on that
+
 ## Security, Permissions and File Sharing
+
+- Store permissions of each file in metadata d/b to reflect what files are visible or modifiable by any user.
