@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Designing Facebook Messenger - Educative",
+    "origin": {
+        "name": "Grokking the System Design Interview",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5649050225344512/5724160613416960"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
