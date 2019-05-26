@@ -6,7 +6,7 @@
         "link": ""
     },
     "companies": [
-        "Xob",
+        "Box",
         ""
     ],
     "categories": [
@@ -30,8 +30,8 @@
         }
     ],
     "tags": [
-        "",
-        ""
+        "Distributed Systems Design",
+        "Object Oriented Design"
     ],
     "buckets": [
         "",
