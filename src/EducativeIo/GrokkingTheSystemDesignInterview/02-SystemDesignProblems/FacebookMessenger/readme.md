@@ -214,7 +214,7 @@ Summary
 
 - When chat server fails
   - Need mechanism to transfer those connections to some other server.
-  - Given that failover of TCO connections is non-trivial, easier approach may be to have clients automatically reconnet if the connection is lost.
+  - Given that failover of TCO connections is non-trivial, easier approach may be to have clients automatically reconnect if the connection is lost.
 - Should we store multiple copies of user messages
   - Yes.
   - Store multiple copies of data on different servers, or.
