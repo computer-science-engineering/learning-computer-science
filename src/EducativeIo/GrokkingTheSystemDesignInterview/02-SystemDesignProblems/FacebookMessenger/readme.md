@@ -11,7 +11,8 @@
   - [Detailed Component Design](#detailed-component-design)
     - [Messages Handling](#messages-handling)
     - [Storing and retrieving the messages from the database](#storing-and-retrieving-the-messages-from-the-database)
-    - [Managing user’s status](#managing-users-status)
+    - [Managing user's status](#managing-users-status)
+    - [Detailed component design diagram](#detailed-component-design-diagram)
   - [Data partitioning](#data-partitioning)
   - [Cache](#cache)
   - [Load balancing](#load-balancing)
@@ -140,18 +141,95 @@ We have to keep certain things in mind while designing our database:
 3. Where to log those requests that failed even after some retries.
 4. How to retry these logged requests (that failed after the retry) when all the issues have resolved.
 
-### Managing user’s status
+- Storage system to use
+  - Need d/b that supports
+    - High rate of small updates.
+    - Quick fetching of range of records.
+  - When querying user is most interested in sequentially accessing the messages.
+  - RDBMS  and NoSQL databases cannot be used since writing/reading a row for every message is expensive.
+    - Will result in high latency.
+    - Will cause huge load on d/b.
+  - Requirements can be met with a wide-column d/b like HBase.
+    - HBase is a column-oriented k-v NoSQL d/b that can store multiple values against one key into multiple columns.
+    - HBase is modeled after Google's BigTable and runs on HDFS.
+    - HBase groups data together to store new data in a memory buffer and once buffer is full, flushes data to disk.
+    - HBase also works well for storing variably sized data.
+  - How should clients efficiently fetch data
+    - Clients should paginate when fetching data from server.
+    - Page size can be different for different clients, e.g., cell phones, vs. desktop.
+
+### Managing user's status
+
+- Need to track user's online/offline status and notify all relevant users when a status change happens.
+- This can be easily done since we maintain connection object on server for all active users.
+- However with 500 M active users, broadcasting each status change to all relevant users can be very expensive.
+- Following optimization can be done.
+  1. Whenever a client starts the app, it can pull the current status of all users in their friends' list.
+  2. Whenever a user sends a message to another user that has gone offline, we can send a failure to the sender and update the status on the client.
+  3. Whenever a user comes online, the server can always broadcast that status with a delay of a few seconds to see if the user does not go offline immediately.
+  4. Client's can pull the status from the server about those users that are being shown on the user's viewport. This should not be a frequent operation, as the server is broadcasting the online status of users and we can live with the stale offline status of users for a while.
+  5. Whenever the client starts a new chat with another user, we can pull the status at that time.
+
+### Detailed component design diagram
+
+![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/facebook-messenger-detail.png)
+
+Summary
+
+- Clients open connection to chat server to send a message.
+- Server then passes message to requested user.
+- All active users keep open connection with server to receive messages.
+- When a new message arrives, chat server will push it to the receiving user  on the long poll request.
+- Messages can be stored in HBase, which supports quick small updates and range based queries.
+- Servers can broadcast online status of a user to other relevant users.
+- Clients can pull status updates for users who are visible in client's viewport on a less frequent basis.
 
 ## Data partitioning
 
+- Storing around 3.6 PB for 5 years.
+- Need to distribute data to multiple d/b servers.
+- Partitioning based on UserID
+  - All messages for a user on same d/b.
+  - If 1 shard = 4 TB, number of shards for 5 years = 3.6 PB / 4 TB ~= 900 shards. Lets say we need 1000 shards.
+  - Shard number can be found by `hash(UserID) % 1000`.
+  - This scheme will be fast for retrieving chat history for any user.
+  - We can start with fewer d/b servers with multiple shards residing on one physical server.
+  - Since we can have multiple database instances on a server, we can easily store multiple partitions on a single server.
+  - The hash function needs to understand this logical partitioning scheme so that it can map multiple logical partitions on one physical server.
+  - Start with big number of logical partitions mapped to fewer physical servers, and as storage demand increases, we can add more physical servers to distribute logical partitions.
+- Partitioning based on MessageID
+  - Unacceptable, since fetching range of messages will be very slow if we store different messages for a user on separate d/b shards.
+
 ## Cache
+
+- Cache few recent messages (say last 10, 15) for few recent conversations that are visible in user's viewport (say last 5).
+- Since partitioning by UserID, all user messages will be on a single shard, so cache for a user should reside entirely on one machine as well.
 
 ## Load balancing
 
+- LB in front of chat servers, that maps each UserID to a server that holds the connection for the user and then direct the request to that server.
+- LB for cache servers.
+
 ## Fault tolerance and Replication
+
+- When chat server fails
+  - Need mechanism to transfer those connections to some other server.
+  - Given that failover of TCO connections is non-trivial, easier approach may be to have clients automatically reconnet if the connection is lost.
+- Should we store multiple copies of user messages
+  - Yes.
+  - Store multiple copies of data on different servers, or.
+  - User techniques like Reed-Solomon encoding to distribute and replicate it.
 
 ## Extended Requirements
 
 ### Group chat
 
+- Separate group-chat objects.
+- Identified by GroupCharID and will contain a list of people who are part of that char in the object model.
+- LB can direct each group chat message based on the GroupCharID and the server handling that group can iterate through all the users of the chat to find the server handling the connection of each user to deliver the message.
+- In databases, we can store all the group chats in a separate table based on GroupChatID.
+
 ### Push notifications
+
+- Each user can opt-in from their device or browser to get notifications when there is a new event.
+- Need to set up dedicated notification servers.
