@@ -1,33 +1,67 @@
 # Designing Twitter
 
-## 1. What is Twitter
+- [Designing Twitter](#designing-twitter)
+  - [What is Twitter](#what-is-twitter)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+    - [Functional Requirements](#functional-requirements)
+    - [Non-Functional Requirements](#non-functional-requirements)
+    - [Extended Requirements](#extended-requirements)
+  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+  - [System APIs](#system-apis)
+  - [High Level System Design](#high-level-system-design)
+  - [Database Schema](#database-schema)
+  - [Data Sharding](#data-sharding)
+  - [Cache](#cache)
+  - [Timeline Generation](#timeline-generation)
+  - [Replication and Fault Tolerance](#replication-and-fault-tolerance)
+  - [Load Balancing](#load-balancing)
+  - [Monitoring](#monitoring)
+  - [Extended Requirements](#extended-requirements-1)
 
-## 2. Requirements and Goals of the System
+Difficulty Level: Medium
+
+## What is Twitter
+
+## Requirements and Goals of the System
 
 ### Functional Requirements
 
+1. Users should be able to post new tweets.
+2. A user should be able to follow other users.
+3. Users should be able to mark tweets as favorites.
+4. The service should be able to create and display a user’s timeline consisting of top tweets from all the people the user follows.
+5. Tweets can contain photos and videos.
+
 ### Non-Functional Requirements
+
+1. Our service needs to be highly available.
+2. Acceptable latency of the system is 200ms for timeline generation.
+3. Consistency can take a hit (in the interest of availability); if a user doesn't see a tweet for a while, it should be fine.
 
 ### Extended Requirements
 
-## 3. Capacity Estimation and Constraints
+## Capacity Estimation and Constraints
 
-## 4. System APIs
+- 1 B total users with 200 M DAU.
+- 100 M new tweets every day.
+- On average each user follows 200 people.
 
-## 5. High Level System Design
+## System APIs
 
-## 6. Database Schema
+## High Level System Design
 
-## 7. Data Sharding
+## Database Schema
 
-## 8. Cache
+## Data Sharding
 
-## 9. Timeline Generation
+## Cache
 
-## 10. Replication and Fault Tolerance
+## Timeline Generation
 
-## 11. Load Balancing
+## Replication and Fault Tolerance
 
-## 12. Monitoring
+## Load Balancing
 
-## 13. Extended Requirements
+## Monitoring
+
+## Extended Requirements
