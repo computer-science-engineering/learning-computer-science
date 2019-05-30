@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Designing Youtube or Netflix",
+    "origin": {
+        "name": "Grokking the System Design Interview - Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5649050225344512/5649050225344512"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

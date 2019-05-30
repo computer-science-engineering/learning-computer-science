@@ -5,7 +5,7 @@
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
     - [Functional Requirements](#functional-requirements)
     - [Non-Functional Requirements](#non-functional-requirements)
-    - [Extended Requirements](#extended-requirements)
+    - [Extended Requirements and Goals](#extended-requirements-and-goals)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
     - [Storage Estimates](#storage-estimates)
     - [Bandwidth Estimates](#bandwidth-estimates)
@@ -24,11 +24,18 @@
     - [Sharding based on Tweet creation time](#sharding-based-on-tweet-creation-time)
     - [Sharding based on TweetID and Tweet creation time](#sharding-based-on-tweetid-and-tweet-creation-time)
   - [Cache](#cache)
+    - [Detailed components design diagram](#detailed-components-design-diagram)
   - [Timeline Generation](#timeline-generation)
   - [Replication and Fault Tolerance](#replication-and-fault-tolerance)
   - [Load Balancing](#load-balancing)
   - [Monitoring](#monitoring)
-  - [Extended Requirements](#extended-requirements-1)
+  - [Extended Requirements](#extended-requirements)
+    - [Serving feeds](#serving-feeds)
+    - [Retweet](#retweet)
+    - [Trending Topics](#trending-topics)
+    - [Who to follow? How to give suggestions](#who-to-follow-how-to-give-suggestions)
+    - [Moments](#moments)
+    - [Search](#search)
 
 Difficulty Level: Medium
 
@@ -50,7 +57,7 @@ Difficulty Level: Medium
 2. Acceptable latency of the system is 200ms for timeline generation.
 3. Consistency can take a hit (in the interest of availability); if a user doesn't see a tweet for a while, it should be fine.
 
-### Extended Requirements
+### Extended Requirements and Goals
 
 ## Capacity Estimation and Constraints
 
@@ -125,7 +132,6 @@ returns URL to access the tweet.
 | UserLongitude  | int          |
 | CreationDate   | datetime     |
 | NumFavorites   | int          |
-
 
 #### User
 
@@ -211,15 +217,144 @@ returns URL to access the tweet.
   - Second part will be an auto-incrementing sequence.
 - We can take the current epoch time and append an auto-incrementing number to it.
 - We can figure out the shard number from this TweetID and store it there.
+- Size of TweetID
+  - How many bits to store number of seconds for next 50 years
+    - `86400 sec/day * 365 days * 50 years = 1.6 B`
+    - Need 31 bits to store this number. (2^31 ~= 2 B)
+  - 1150 tweets/sec, so we can allocate 17 bits to store auto incremented sequence.
+  - So every second we can store 2^17 = 130K new tweets.
+  - 31 bits for epoch seconds; 17 bits for auto incrementing sequence.
+- We can reset auto incrementing sequence every second.
+- For resilience and performance we can have two database servers generating auto-incrementing keys, one generating even numbered and other odd numbered keys.
+- If current epoch seconds is "1483228800", TweetID will look like this:
+
+  ```text
+  1483228800 000001
+  1483228800 000002
+  1483228800 000003
+  1483228800 000004
+  …
+  ```
+
+- If we make our TweetID 64bits (8 bytes) long, we can easily store tweets for the next 100 years and also store them for milliseconds granularity.
+- While we will still have to query multiple servers for timeline generation, reads and writes will be lot quicker
+  - Since there is no secondary index (on creation time) this will reduce write latency.
+  - While reading, we do not need to filter on creation-time as the primary key would have epoch time included in it.
 
 ## Cache
 
+- Cache for database servers to cache hot tweets and users.
+- Memcache for storing whole tweet objects.
+- Based on client usage patterns we can determine how many cache servers we need.
+- Cache replacement policy: LRU
+- More intelligent cache
+  - 80-20 rule
+    - 20% of tweets generating 80% of read traffic.
+    - Cache 20% of daily read volume from each shard.
+- Caching latest data?
+  - Dedicated cache server for caching tweets for past 3 days.
+  - 100 M new tweets or 30 GB of data each day (not including media).
+  - This would need 100 Gb of memory.
+  - Single server with replication to multiple servers for read distribution.
+  - Same design can be used for photos and videos for last 3 days.
+  - Cache would be a hash table, key would be OwnerID and value would be a doubly linked list containing all tweets from that user in last 3 days.
+  - New tweets will be inserter at the head of the linked list and older tweets will be near the tail. Tweets can be removed from the tail to make space for newer tweets.
+
+### Detailed components design diagram
+
+![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-detail.png)
+
 ## Timeline Generation
+
+Check Designing Facebook's Newsfeed.
 
 ## Replication and Fault Tolerance
 
+- Since system is read-heavy, need multiple secondary servers for each d/b partition.
+- Secondary servers for read traffic only.
+- All writes will go to primary server and then get replicates to secondaries.
+- This mechanism will also provide fault tolerance since when the primary servers goes down, failover to a secondary can happen.
+
 ## Load Balancing
+
+1. Between Clients and Application servers.
+2. Between Application servers and database replication servers.
+3. Between Aggregation servers and Cache server.
+
+- Simple round robin approach to begin with.
+  - Advantage
+    - Easy to implement.
+    - If a server is dead, LB will take it out of the rotation and stop send it traffic.
+  - Issues
+    - Does not take server load in account.
+- To handle issue, more intelligent LB solution can be used that periodically queries backend server about load and accordingly adjusts traffic.
 
 ## Monitoring
 
+Performance metrics/counters that can be collected:
+
+1. New tweets per day/second, what is the daily peak?
+2. Timeline delivery stats, how many tweets per day/second our service is delivering.
+3. Average latency that is seen by the user to refresh timeline.
+
+This data will help determine variables for replication, load balancing, caching, etc.
+
 ## Extended Requirements
+
+### Serving feeds
+
+- Approach 1
+  - Get latest N tweets from people someone follows and merge/sort by time.
+  - N depends on client's viewport.
+  - Next top tweets can be cached to speed things up.
+  - Pagination to display tweets.
+- Approach 2 (same as Ranking and timeline generation under "Designing Instagram")
+  - Pre-generating the News Feed
+    - Servers that generate users' News Feeds and store them in a 'UserNewsFeed' table.
+    - Servers will check last time News Feed was generated by looking at 'UserNewsFeed' table. New News feed will be generated from that time onwards.
+  - Approaches for sending NewsFeed contents to users
+    - Pull
+      - Clients pull news feed data periodically or on-demand.
+      - Issues
+        - New data may not be shown until a new client side request comes in.
+        - New pull requests may often result in empty response if there is no data.
+    - Push
+      - Servers push new data to users when it is available.
+      - Users maintain Long Poll request to server.
+      - Issues
+        - User who follows lot of people, or for user who has millions of followers, server has to push frequent updates.
+    - Hybrid
+      - Approach 1
+        - Pull model for users with high follows.
+        - Push model for users with few(er) follows.
+      - Approach 2
+        - Server pushes updates to all users at certain max frequency.
+        - Users wil lot of follows/updates pull data.
+
+### Retweet
+
+For every retweet, with each Tweet object in the d/b we can store the ID of the original Tweet.
+
+### Trending Topics
+
+- Cache most frequently occurring hashtags or search queries in last N seconds and keep updating them every M seconds.
+- Rank trending topics based on frequency of tweets, search queries, retweets or likes.
+- Can give more weight to topics which are shown to more people.
+
+### Who to follow? How to give suggestions
+
+- This feature will improve user engagement.
+- We can suggestion friends of people someone follows.
+- We can go two or three levels down to find famous people for the suggestions.
+- We can give preference to people with more followers.
+- ML algorithms can be used based on various weights.
+
+### Moments
+
+- Top news for different websites for past 1, 2 hours, figure out tweets, prioritize them, categorize them using ML algorithms - supervised learning or clustering.
+- These articles can then be shown as trending topics in Moments.
+
+### Search
+
+- Involves indexing, ranking, retrieval of tweets.
+- Discussed in detail in Designing Twitter Search.
