@@ -208,8 +208,43 @@ For the end user, these inefficiencies will be realized in the form of duplicate
 
 ## Load Balancing
 
+- Consistent hashing among cache servers which will help in balancing load between cache servers.
+- Issue
+  - Due to static hash function mapping videos to host-names, it can cause hot-spots on logical replicas due to non-uniform popularity of videos.
+  - Uneven load on logical replicas will lead to uneven load distribution on physical servers.
+- Solution
+  - Any busy server in one location to redirect a client to a less busy server in the same cache location.
+  - Dynamic HTTP redirections can be used.
+- Issue with Solution
+  - Since service tries to load balance locally, can lead to multiple (cascading) redirections oif the host that receives the redirection cannot serve the video.
+  - Since each redirection requires a client to make an additional HTTP request, it leads to higher delays before the video starts playing.
+  - Inter-tier , or, cross data-center redirections can lead a client to a distant cache location because higher tier caches are only present at a small number of locations.
+
 ## Cache
+
+- Videos
+  - To serve globally distributed users, our service needs a massive-scale video delivery system.
+  - The service should push its content closer to the user using a large number of geographically distributed video cache servers.
+  - Load on cache servers should be evenly distributed.
+- Metadata
+  - Cache for metadata servers can also be used to cache hot d/b rows.
+  - Memcache can be used to cache data.
+  - Application servers will hit cache first.
+  - Cache eviction policy: LRU.
+- More intelligent cache
+  - 80-20 rule: 20% of daily read volume for videos is generating 80% of traffic.
+  - We try caching 20% of daily read volume of videos and metadata.
 
 ## Content Delivery Network (CDN)
 
+- CDN is a system of distributed servers that deliver web content to a user based in the geographic locations of the user, the origin of the web page and a content delivery server.
+- Popular videos can be moved to CDN
+  - CDNs replicate content in multiple places. Videos will be cloer to user and with fewer hops, videos will stream from a closer, faster network.
+  - CDN machines make heavy use of caching and can mostly serve videos out of memory.
+
+Less popular videos (1-20 views per day) that are not cached by CDNs can be served by other servers in various data centers.
+
 ## Fault Tolerance
+
+- Consistent Hashing can be used for distribution among database servers.
+- Consistent hashing will help in replacing a dead server and also in distributing load among servers.
