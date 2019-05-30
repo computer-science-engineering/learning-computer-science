@@ -1,27 +1,65 @@
 # Designing YouTube or Netflix
 
-## 1. Why Youtube
+- [Designing YouTube or Netflix](#designing-youtube-or-netflix)
+  - [Why Youtube](#why-youtube)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+    - [Functional Requirements](#functional-requirements)
+    - [Non-Functional Requirements](#non-functional-requirements)
+    - [Not in scope](#not-in-scope)
+  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+  - [System APIs](#system-apis)
+  - [High Level Design](#high-level-design)
+  - [Database Schema](#database-schema)
+  - [Detailed Component Design](#detailed-component-design)
+  - [Metadata Sharding](#metadata-sharding)
+  - [Video Deduplication](#video-deduplication)
+  - [Load Balancing](#load-balancing)
+  - [Cache](#cache)
+  - [Content Delivery Network (CDN)](#content-delivery-network-cdn)
+  - [Fault Tolerance](#fault-tolerance)
 
-## 2. Requirements and Goals of the System
+Similar Services: netflix.com, vimeo.com, dailymotion.com, veoh.com
 
-## 3. Capacity Estimation and Constraints
+## Why Youtube
 
-## 4. System APIs
+## Requirements and Goals of the System
 
-## 5. High Level Design
+### Functional Requirements
 
-## 6. Database Schema
+1. Users should be able to upload videos.
+2. Users should be able to share and view videos.
+3. Users should be able to perform searches based on video titles.
+4. Our services should be able to record stats of videos, e.g., likes/dislikes, total number of views, etc.
+5. Users should be able to add and view comments on videos.
 
-## 7. Detailed Component Design
+### Non-Functional Requirements
 
-## 8. Metadata Sharding
+1. The system should be highly reliable, any video uploaded should not be lost.
+2. The system should be highly available. Consistency can take a hit (in the interest of availability); if a user doesn’t see a video for a while, it should be fine.
+3. Users should have a real time experience while watching videos and should not feel any lag.
 
-## 9. Video Deduplication
+### Not in scope
 
-## 10. Load Balancing
+Video recommendations, most popular videos, channels, subscriptions, watch later, favorites, etc.
 
-## 11. Cache
+## Capacity Estimation and Constraints
 
-## 12. Content Delivery Network (CDN)
+## System APIs
 
-## 13. Fault Tolerance
+## High Level Design
+
+## Database Schema
+
+## Detailed Component Design
+
+## Metadata Sharding
+
+## Video Deduplication
+
+## Load Balancing
+
+## Cache
+
+## Content Delivery Network (CDN)
+
+## Fault Tolerance
