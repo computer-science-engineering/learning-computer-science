@@ -1,23 +1,57 @@
 # Designing Typeahead Suggestion
 
-## 1. What is Typeahead Suggestion
+- [Designing Typeahead Suggestion](#designing-typeahead-suggestion)
+  - [What is Typeahead Suggestion](#what-is-typeahead-suggestion)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
+  - [Permanent Storage of the Trie](#permanent-storage-of-the-trie)
+  - [Scale Estimation](#scale-estimation)
+  - [Data Partition](#data-partition)
+  - [Cache](#cache)
+  - [Replication and Load Balancer](#replication-and-load-balancer)
+  - [Fault Tolerance](#fault-tolerance)
+  - [Typeahead Client](#typeahead-client)
+  - [Personalization](#personalization)
 
-## 2. Requirements and Goals of the System
+Similar Services: Auto-suggestions, Typeahead search
 
-## 3. Basic System Design and Algorithm
+## What is Typeahead Suggestion
 
-## 4. Permanent Storage of the Trie
+## Requirements and Goals of the System
 
-## 5. Scale Estimation
+**Functional Requirements:** As the user types in their query, our service should suggest top 10 terms starting with whatever the user has typed.
 
-## 6. Data Partition
+**Non-function Requirements:** The suggestions should appear in real-time. The user should be able to see the suggestions within 200ms.
 
-## 7. Cache
+## Basic System Design and Algorithm
 
-## 8. Replication and Load Balancer
+- If the d/b contains the following terms: cap, cat, captain, or capital and the user has typed in ‘cap’, our system should suggest ‘cap’, ‘captain’ and ‘capital’.
+- Need to serve lot of queries with minimum latency.
+- Need to store index in memory in a highly efficient data structure.
+- Will use th trie data structure.
 
-## 9. Fault Tolerance
+[Trie data structure](./images/trie-data-structure_base64.md)
 
-## 10. Typeahead Client
+We can merge nodes that have only one branch to save storage space.
 
-## 11. Personalization
+[Trie merged nodes](./images/trie-merged-nodes_base64.md)
+
+**Case sensitivity in trie:** We assume data is case-insensitive.
+
+**Finding top suggestion:**
+
+## Permanent Storage of the Trie
+
+## Scale Estimation
+
+## Data Partition
+
+## Cache
+
+## Replication and Load Balancer
+
+## Fault Tolerance
+
+## Typeahead Client
+
+## Personalization
