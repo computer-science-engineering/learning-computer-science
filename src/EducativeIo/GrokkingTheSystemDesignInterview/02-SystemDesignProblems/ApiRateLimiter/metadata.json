@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Designing an API Rate Limiter",
+    "origin": {
+        "name": "Grokking the System Design Interview - Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5649050225344512/5707274949492736"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Medium",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
