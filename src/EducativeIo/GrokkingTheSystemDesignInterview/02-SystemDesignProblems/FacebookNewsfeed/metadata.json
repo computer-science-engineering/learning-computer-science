@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Designing Facebook's Newsfeed",
+    "origin": {
+        "name": "Grokking the System Design Interview - Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5649050225344512/5641332169113600"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
