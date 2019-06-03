@@ -1,0 +1,40 @@
+{
+    "type": "System Design",
+    "name": "Designing a Web Crawler",
+    "origin": {
+        "name": "Grokking the System Design Interview - Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5649050225344512/5718998062727168"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "",
+            "children": [
+                {
+                    "name": "",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Difficulty",
+            "children": [
+                {
+                    "name": "Hard",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
