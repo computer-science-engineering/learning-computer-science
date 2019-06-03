@@ -10,7 +10,10 @@
   - [High level design for Rate Limiter](#high-level-design-for-rate-limiter)
   - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
   - [Sliding Window algorithm](#sliding-window-algorithm)
+  - [Sliding Window with Counters](#sliding-window-with-counters)
   - [Data Sharding and Caching](#data-sharding-and-caching)
+    - [Sharding](#sharding)
+    - [Caching](#caching)
   - [Should we rate limit by IP or by user](#should-we-rate-limit-by-ip-or-by-user)
 
 Difficulty Level: Medium
@@ -103,9 +106,65 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
   - total: (16 bytes + 20 bytes) * 1M users = 36 MB
   - Can fit into one server, but should be distributed for performance reason
   - 3M QPS if the rate limit is 3 requests per user per second
+- Implementation
+  - Redis
+  - Memcached
 
 ## Sliding Window algorithm
 
+- Hashtable
+  - Key: userId
+  - Value: sorted set of timestamps
+- Procedure for each request
+  - Remove all timestamps from the sorted set that are older than currentTime - 1 min
+  - Reject the request if the total count is greater than throttling limit
+  - Otherwise allow the request, and add the current time into the sorted set
+- Memory usage
+  - userId: 8 bytes
+  - each epoch time = 4 bytes
+  - Say, we need a rate limiting of 500 requests per hour.
+  - hash-table overhead: 20 bytes
+  - sorted set overhead: 20 bytes
+  - For one user's data, we need: 8 + (4 + 20 (sorted set overhead)) * 500 + 20 (hash-table overhead) = 12KB
+  - In a sorted set, we can assume that we need at least two pointers to maintain order among elements — one pointer to the previous element and one to the next element.
+  - sorted set: 4 bytes (other overhead) + 8 bytes (prev pointer) + 8 bytes (next pointer) = 20 bytes
+  - If we need to track one million users at any time, total memory we would need would be: 12 KB * 1 M ~= 12 GB
+  - Sliding Window Algorithm takes a lot of memory compared to the Fixed Window; this would be a scalability issue.
+
+## Sliding Window with Counters
+
+- Keep track of request counts for each user using multiple fixed time windows.
+- For example, for an hourly rate limit, we can keep a count for each minute and - calculate the sum of all counters in the past hour.
+- This will reduce memory footprint for large limits.
+- For a rate limit of 500 requests per hour
+  - With counters: 8 bytes user id + (4 bytes timestamp + 2 bytes count + 20 bytes hash overhead) * 60 entries + 20 bytes hashtable overhead = 1.6 KB
+  - If we need to track one million users at any time, 1.6KB * 1 million ~= 1.6 GB
+  - 86% less memory
+
 ## Data Sharding and Caching
 
+### Sharding
+
+- Shard rate limiting data by userId.
+- Use consistent hashing.
+- If different APIs have different limit, we can shard per user per API.
+
+### Caching
+
+- Application servers can quickly check if the cache has the desired record before hitting backend servers.
+- Use write-back cache. The cache is persisted to persistence at fixed intervals.
+- This is useful once the user has hit their max limit, and the rate limiter will only be reading data without any updates.
+- Cache eviction - LRU
+
 ## Should we rate limit by IP or by user
+
+- By IP
+  - Better than no rate limit at all.
+  - When multiple users share a single public IP, one bad user can cause throttling to others.
+  - There are a huge number of IPv6 addresses available from even one computer.
+- By User
+  - Performed after user authentication.
+  - What about rate limit on the login API?
+- Hybrid
+  - Combine per-IP and per-user rate limiting.
+  - Require more memory and storage.
