@@ -19,8 +19,11 @@
     - [Feed publishing](#feed-publishing)
   - [Detailed Component Design](#detailed-component-design)
     - [Feed generation design](#feed-generation-design)
+    - [Feed publishing design](#feed-publishing-design)
   - [Feed Ranking](#feed-ranking)
   - [Data Partitioning](#data-partitioning)
+    - [Sharding posts and metadata](#sharding-posts-and-metadata)
+    - [Sharding feed data](#sharding-feed-data)
 
 Similar Services: Twitter Newsfeed, Instagram Newsfeed, Quora Newsfeed
 
@@ -208,7 +211,55 @@ High-level architecture diagram of system. User B and C are following User A.
   - Based on usage pattern, can be adjusted.
   - For example, if we assume that one page of a user’s feed has 20 posts and most of the users never browse more than ten pages of their feed, we can decide to store only 200 posts per user.
   - For any user who wants to see more posts (more than what is stored in memory), we can always query backend servers.
+- **Should we generate and keep in emory newsfeeds for all users:**
+  - Approach 1: LRU based cache that can remove users from memory who have not accessed their newsfeed for a long time.
+  - Approach 2: Determine login pattern of users to pre-generate their newsfeed.
+
+### Feed publishing design
+
+- Approaches:
+  1. Pull model or Fan-out-on-load:
+     - Keep all recent feed data in memory so that users can pull from server on-demand.
+     - Clients can pull data periodically or on-demand.
+     - Issues;
+       - New data may not be shown until users issue a pull request.
+       - Hard to find the right pull cadence.
+       - Most of the time pull requests will result in empty response resulting in wastage of resources.
+  2. Push model or Fan-out-on-write:
+     - Once a user has published a post, we immediately push this post to all followers.
+     - Advantage: When fetching feed, no need to go through friend's list and get feeds for each of them. Significantly reduces read operations.
+     - Users have to main a Long Poll request to server for receiving updates.
+     - Issue:
+       - When a user has millions of followers, server has to push updates to lot of people. This is resource intensive.
+  3. Hybrid:
+     - Combination of push and pull.
+     - Stop pushing posts from (celebrity) users from a high number of followers.
+     - Push data only for those users who have relatively few(er) followers.
+     - Users who follow celebrities can pull updates.
+     - Another approach could be that once a user publishes a post, we can limit the fanout to only his/her online friends.
+- How many feed items should be returned to the client per request:
+  - There should be a maximum limit (say 20).
+  - Client should specify - will be different depending on client devices, i.e., desktop, or mobile.
+- Notifying users if there are new posts available for their newsfeed:
+  - Yes.
+  - On mobile devices we should let users pull or refresh to get data, instead of pushing data, to save bandwidth.
 
 ## Feed Ranking
 
+- Easiest to do so by creation time of posts.
+- Important first select key signals that make a post important and then find out how to combine them to calculate a final ranking score.
+- Signals could be things like number of likes, comments, shares, etc.
+- More sophistical ranking system can constantly improve itself by evaluating if we are making progress in user stickiness, retention, ads revenue, etc.
+
 ## Data Partitioning
+
+### Sharding posts and metadata
+
+For sharding our databases that are storing posts and their metadata, we can have a similar design as discussed under Designing Twitter.
+
+### Sharding feed data
+
+- For feed data, which is being stored in memory, we can partition it based on UserID.
+- When storing, we can pass the UserID to our hash function that will map the user to a cache server where we will store the user’s feed objects.
+- Since we don't expect to store more than 500 FeedItemIDs for a user, we will not run into a scenario where feed data for a user doesn’t fit on a single server. To get the feed of a user, we would always have to query only one server.
+- For future growth and replication, we can use Consistent Hashing.
