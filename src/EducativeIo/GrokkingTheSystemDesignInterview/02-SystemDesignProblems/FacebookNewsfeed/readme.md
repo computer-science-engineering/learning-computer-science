@@ -8,8 +8,17 @@
     - [Storage estimates](#storage-estimates)
   - [System APIs](#system-apis)
   - [Database Design](#database-design)
+    - [User](#user)
+    - [Entity](#entity)
+    - [UserFollow](#userfollow)
+    - [FeedItem](#feeditem)
+    - [FeedMedia](#feedmedia)
+    - [Media](#media)
   - [High Level System Design](#high-level-system-design)
+    - [Feed generation](#feed-generation)
+    - [Feed publishing](#feed-publishing)
   - [Detailed Component Design](#detailed-component-design)
+    - [Feed generation design](#feed-generation-design)
   - [Feed Ranking](#feed-ranking)
   - [Data Partitioning](#data-partitioning)
 
@@ -71,10 +80,134 @@ getUserFeed(api_dev_key, user_id, since_id, count, max_id, exclude_replies)
   - Both users and entities can post FeedItems which can contain text, images, or videos.
   - Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook Pages can post feed item too.
   - Each FeedItem can optionally have an EntityID pointing to the page or the group where that post was created.
+- If using a relation d/b, 2 relations need to be modeled:
+  - User-Entity
+  - FeedItem-Media
+
+### User
+
+| Column       | Type        |
+| ------------ | ----------- |
+| UserID (PK)  | int         |
+| Name         | varchar(20) |
+| Email        | varchar(32) |
+| DateOfBirth  | datetime    |
+| CreationDate | datetime    |
+| LastLogin    | datetime    |
+
+### Entity
+
+| Column        | Type         |
+| ------------- | ------------ |
+| EntityID (PK) | int          |
+| Name          | varchar(20)  |
+| Type          | tinyint      |
+| Description   | varchar(512) |
+| CreationDate  | datetime     |
+| Category      | smallint     |
+| Phone         | varchar(12)  |
+| Email         | varchar(20)  |
+
+### UserFollow
+
+| Column                 | Type    |
+| ---------------------- | ------- |
+| UserID (PK)            | int     |
+| EntityOrFriendID  (PK) | int     |
+| Type                   | tinyint |
+
+Type identifies if the entity being followed is a User ot Entity.
+
+### FeedItem
+
+| Column            | Type         |
+| ----------------- | ------------ |
+| FeedItemID (PK)   | int          |
+| UserID            | int          |
+| Contents          | varchar(256) |
+| EntityID          | int          |
+| LocationLatitude  | int          |
+| LocationLongitude | int          |
+| CreationDate      | datetime     |
+| NumLikes          | int          |
+
+### FeedMedia
+
+| Column          | Type |
+| --------------- | ---- |
+| FeedItemID (PK) | int  |
+| MediaID  (PK)   | int  |
+
+### Media
+
+| Column            | Type         |
+| ----------------- | ------------ |
+| MediaID (PK)      | int          |
+| Type              | smallint     |
+| Description       | varchar(256) |
+| Path              | varchar(256) |
+| LocationLatitude  | int          |
+| LocationLongitude | int          |
+| CreationDate      | datetime     |
 
 ## High Level System Design
 
+### Feed generation
+
+1. Retrieve IDs of all users and entities that a user (say Jane) follows.
+2. Retrieve latest, most popular and relevant posts for those IDs. These are the potential posts that we can show in Jane’s newsfeed.
+3. Rank these posts based on the relevance to Jane. This represents Jane’s current feed.
+4. Store this feed in the cache and return top posts (say 20) to be rendered on Jane’s feed.
+5. On the front-end, when Jane reaches the end of her current feed, she can fetch the next 20 posts from the server and so on.
+
+We can periodically (say every five minutes) perform the above steps to rank and add newer posts to her feed. Jane can then be notified that there are newer items in her feed that she can fetch.
+
+### Feed publishing
+
+When she reaches the end of her current feed, she can pull more data from the server. For newer items either the server can notify Jane and then she can pull, or the server can push, these new posts.
+
+At a high level, we will need following components in our Newsfeed service:
+
+1. **Web servers:** To maintain a connection with the user. This connection will be used to transfer data between the user and the server.
+2. **Application server:** To execute the workflows of storing new posts in the database servers. We will also need some application servers to retrieve and to push the newsfeed to the end user.
+3. **Metadata database and cache:** To store the metadata about Users, Pages, and Groups.
+4. **Posts database and cache:** To store metadata about posts and their contents.
+5. **Video and photo storage, and cache:** Blob storage, to store all the media included in the posts.
+6. **Newsfeed generation service:** To gather and rank all the relevant posts for a user to generate newsfeed and store in the cache. This service will also receive live updates and will add these newer feed items to any user’s timeline.
+7. **Feed notification service:** To notify the user that there are newer items available for their newsfeed.
+
+High-level architecture diagram of system. User B and C are following User A.
+
+![high level diagram](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/facebook-newsfeed-overview.png)
+
 ## Detailed Component Design
+
+### Feed generation design
+
+- SQL like querying will not be efficient at all.
+  - Very slow with performance issues arising from sorting, merging, ranking, etc. of large number of posts for users with lots of friends and/or follows.
+  - Timeline generation at user page load time would result in high latency and response times.
+  - For live updates, each status update will result in feed updates for all followers. This could result in high backlogs in our Newsfeed Generation Service.
+  - For live updates, the server pushing (or notifying about) newer posts to users could lead to very heavy loads, especially for people or pages that have a lot of followers. To improve the efficiency, we can pre-generate the timeline and store it in a memory.
+- **Offline generation for newsfeed:**
+  - Dedicated servers that continuously generate users' newsfeed and store them in memory.
+  - Whenever these servers need to generate the feed for a user, they will first query to see what was the last time the feed was generated for that user. Then, new feed data would be generated from that time onwards.
+  - Data can be stored in hash table.
+    - Key: UserID
+    - Value:
+
+        ```text
+        Struct {
+            LinkedHashMap<FeedItemID, FeedItem> feedItems;
+            DateTime lastGenerated;
+        }
+        ```
+
+- **How many feed items in memory for user's feed:**
+  - Initially 500 feed items per user.
+  - Based on usage pattern, can be adjusted.
+  - For example, if we assume that one page of a user’s feed has 20 posts and most of the users never browse more than ten pages of their feed, we can decide to store only 200 posts per user.
+  - For any user who wants to see more posts (more than what is stored in memory), we can always query backend servers.
 
 ## Feed Ranking
 
