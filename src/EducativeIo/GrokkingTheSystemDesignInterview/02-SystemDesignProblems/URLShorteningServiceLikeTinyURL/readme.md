@@ -3,9 +3,6 @@
 - [Designing a URL Shortening service like TinyURL](#designing-a-url-shortening-service-like-tinyurl)
   - [Why do we need URL shortening](#why-do-we-need-url-shortening)
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-    - [Functional Requirements](#functional-requirements)
-    - [Non-Functional Requirements](#non-functional-requirements)
-    - [Extended Requirements](#extended-requirements)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
     - [Traffic estimates](#traffic-estimates)
     - [Storage Estimates](#storage-estimates)
@@ -32,24 +29,26 @@
   - [Security and Permissions](#security-and-permissions)
   - [References](#references)
 
-Similar services: bit.ly, goo.gl, qlink.me, etc.
+Design a URL shortening service like TinyURL. This service will provide short aliases redirecting to long URLs.
 
-Difficulty Level: Easy
+Similar services: bit.ly, goo.gl, qlink.me, etc.
 
 ## Why do we need URL shortening
 
 ## Requirements and Goals of the System
 
-### Functional Requirements
-
-1. Given a URL, generate a shorted an unique alias.
-2. When users access short link, service should redirect user to original longer link.
-3. Users should optionally be able to provide a custom short link.
-4. Links will expire after a default time range. Users should be able to specify expiration time.
-
-### Non-Functional Requirements
-
-### Extended Requirements
+- Functional Requirements
+  1. Given a URL, generate a shorted an unique alias.
+  2. When users access short link, service should redirect user to original longer link.
+  3. Users should optionally be able to provide a custom short link.
+  4. Links will expire after a default time range. Users should be able to specify expiration time.
+- Non-Functional Requirements
+  1. The system should be highly available. This is required because, if our service is down, all the URL redirections will start failing.
+  2. URL redirection should happen in real-time with minimal latency.
+  3. Shortened links should not be guessable (not predictable).
+- Extended Requirements
+  1. Analytics; e.g., how many times a redirection happened?
+  2. Our service should also be accessible through REST APIs by other services.
 
 ## Capacity Estimation and Constraints
 
@@ -61,25 +60,30 @@ System will be ready heavy. Say, read:write = 100:1.
 New shortenings per month = 500 M
 Number of redirections = 100 * 500 M = 50 B
 QPS = 500 M / (30 days * 24 hours * 3600 seconds) = ~ 200 URLs/s
-with 100:1 read:write ratio, URL redirects per second = 100 * 200 URL/s = 20000 /s = 20 K URLs/s
+With 100:1 read:write ratio, URL redirects per second
+  = 100 * 200 URL/s = 20000 /s = 20 K URLs/s
 ```
 
 ### Storage Estimates
 
 ```text
 All short links are stored for: 5 years
-Given 500 M new URLs per month, total number of objects = 500 M * 5 years * 12 months = 30 B
+Given 500 M new URLs per month, total number of objects
+  = 500 M * 5 years * 12 months = 30 B
 Say, each object = 500 bytes
-Total storage needed = 30 B * 500 bytes = 15 000 000 000 000 = 15 TeraBytes
+Total storage needed = 30 B * 500 bytes
+  = 15 000 000 000 000 = 15 TeraBytes
 ```
 
 ### Bandwidth Estimates
 
 ```text
 Number of new URL writes = 200 /s
-Total ingress data = 200 * 500 bytes = 100000 bytes/s = 100 KB/s
+Total ingress data = 200 * 500 bytes
+  = 100000 bytes/s = 100 KB/s
 Number of reads per second = 20 K
-Total egress data = 20000 * 500 bytes = 10 000 000 = 10 MB/s
+Total egress data = 20000 * 500 bytes
+  = 10 000 000 = 10 MB/s
 ```
 
 ### Memory Estimates
