@@ -347,5 +347,6 @@
         }
     ],
     "java.test.defaultConfig": "myConfig",
-    "markdown.extension.print.onFileSave": false
+    "markdown.extension.print.onFileSave": false,
+    "markdownShortcuts.bullets.marker": "-"
 }
