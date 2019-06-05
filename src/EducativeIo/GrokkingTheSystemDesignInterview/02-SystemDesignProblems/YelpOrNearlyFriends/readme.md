@@ -192,10 +192,57 @@ A JSON containing information about a list of businesses matching the search que
 - To distribute read traffic, we can have replicas of each QuadTree server.
 - Master-slave configuration where
   - slaves will serve read traffic.
-  - All writes first go to the master and then gets replicated to slaves. This will be eventual consistency, but is acceptable.
+  - All writes first go to the master and then gets replicated to slaves. This will be eventual consistency, but it is acceptable.
+- If QuadTree server dies:
+  - If primary dies, secondary can take over after failover.
+  - Both primary and secondary servers will have same QuadTree structure.
+- **If both primary and secondary servers die at the same time**
+  - We have to allocate a new server and rebuild the same QuadTree on it.
+  - Approach 1: Brute-force solution
+    - Iterate through the whole database and filter LocationIDs using our hash function to figure out all the required places that will be stored on this server.
+    - Issues
+      - Inefficient and slow.
+      - During the time when the server is being rebuilt, we will not be able to serve any query from it, thus missing some places that should have been seen by users.
+  - Approach 2: Efficiently retrieve a mapping between Places and QuadTree server
+    - Build a reverse index that will map all the Places to their QuadTree server.
+    - A separate QuadTree Index server that will hold this information.
+    - Build a HashMap
+      - key: QuadTree server number
+      - value: HashSet containing all the Places being kept on that QuadTree server
+    - Need to store LocationID and Lat/Long with each place because information servers can build their QuadTrees through this.
+    - This approach will be quite fast.
+    - We should also have a replica of the QuadTree Index server for fault tolerance.
+    - If a QuadTree Index server dies, it can always rebuild its index from iterating through the database.
 
 ## Cache
 
+- Cache in front of d/b.
+- Memcache.
+- Cache eviction policy: LRU.
+
 ## Load Balancing (LB)
 
+1. Between Clients and Application servers
+2. Between Application servers and Backend server.
+
+- Initially simple round robin.
+  - will distribute all incoming requests equally among backend servers.
+  - easy to implement.
+  - no overhead.
+  - if a server is dead the load balancer will take it out of the rotation and will stop sending any traffic to it.
+  - Issues:
+    - does not take server load into consideration.
+  - Solution:
+    - more intelligent LB solution would be needed that periodically queries backend server about their load and adjusts traffic based on that.
+
 ## Ranking
+
+- Ranking the search results not just by proximity but also by popularity or relevance.
+- **Returning most popular places within a given radius**
+  - Have to keep track of the overall popularity of each place.
+  - We will store this number in the database as well as in the QuadTree.
+  - While searching for the top 100 places within a given radius, we can ask each partition of the QuadTree to return the top 100 places with maximum popularity.
+  - Then the aggregator server can determine the top 100 places among all the places returned by different partitions.
+  - Modifying the popularity of a place in the QuadTree
+    - Assuming the popularity of a place is not expected to reflect in the system within a few hours, we can decide to update it once or twice a day, especially when the load on the system is minimum.
+    - More details on dynamic updates of QuadTree in the Designing Uber backend problem.
