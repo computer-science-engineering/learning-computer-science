@@ -3,9 +3,6 @@
 - [Designing Pastebin](#designing-pastebin)
   - [What is Pastebin](#what-is-pastebin)
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-    - [Functional Requirements](#functional-requirements)
-    - [Non-Functional Requirements](#non-functional-requirements)
-    - [Extended Requirements](#extended-requirements)
   - [Some Design Considerations](#some-design-considerations)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
     - [Traffic estimates](#traffic-estimates)
@@ -32,27 +29,31 @@
     - [Load Balancers](#load-balancers)
   - [Security and Permissions](#security-and-permissions)
 
-Similar Services: pastebin.com, pasted.co, chopapp.com
+Design a Pastebin like web service, where users can store plain text. Users of the service will enter a piece of text and get a randomly generated URL to access it.
 
-Difficulty Level: Easy
+Similar Services: pastebin.com, pasted.co, chopapp.com
 
 ## What is Pastebin
 
 ## Requirements and Goals of the System
 
-### Functional Requirements
-
-1. Users should be able to upload or paste their data and get a unique URL to access it.
-2. Users will only be able to upload text.
-3. Data and links will expire after a specific timespan automatically; users should also be able to specify expiration time.
-4. Users should optionally be able to pick a custom alias for their paste.
-
-### Non-Functional Requirements
-
-### Extended Requirements
+- Functional Requirements
+  1. Users should be able to upload or paste their data and get a unique URL to access it.
+  2. Users will only be able to upload text.
+  3. Data and links will expire after a specific timespan automatically; users should also be able to specify expiration time.
+  4. Users should optionally be able to pick a custom alias for their paste.
+- Non-Functional Requirements
+  1. The system should be highly reliable, any data uploaded should not be lost.
+  2. The system should be highly available. This is required because if our service is down, users will not be able to access their Pastes.
+  3. Users should be able to access their Pastes in real-time with minimum latency.
+  4. Paste links should not be guessable (not predictable).
+- Extended Requirements
+  1. Analytics, e.g., how many times a paste was accessed?
+  2. Our service should also be accessible through REST APIs by other services.
 
 ## Some Design Considerations
 
+- Shares some requirements with URL Shortening service.
 - Limit on the amount of text user can paste at a time: No more than 10 MB.
 - Size limits on custom URLs: Reasonable.
 
@@ -66,8 +67,10 @@ Read-heavy service. We can assume a 5:1 ratio between read and write.
 1 M new pastes per day.
 5 M reads per day.
 
-New pastes per second = 1 M / (24 hours * 3600 seconds) ~= 12 pastes/sec
-Paste reads per second = 5 M / (24 hours * 3600 seconds) ~= 58 reads/sec
+New pastes per second = 1 M / (24 hours * 3600 seconds)
+  ~= 12 pastes/sec
+Paste reads per second = 5 M / (24 hours * 3600 seconds)
+  ~= 58 reads/sec
 ```
 
 ### Storage estimates
@@ -76,14 +79,17 @@ Paste reads per second = 5 M / (24 hours * 3600 seconds) ~= 58 reads/sec
 Each upload can be max of 10 MB.
 Each paste on average contains, say, 10 KB.
 Data stored per day = 1 M * 10 KB = 10 GB/day
-String this data for 10 years, total capacity needed = 10 GB * 10 years * 365 days  = 36 TB.
+To store this data for 10 years, total capacity needed
+  = 10 GB * 10 years * 365 days  = 36 TB.
 
 Pastes per day = 1 M
 Pastes in 10 years = 1 M * 10 years * 365 days = 3.6 B
 
-Using base64 encoding, and 6 letter strings, 64^6 ~= 68.7 B unique strings.
-If 1 character takes 1 byte, total size for 3.6 B keys = 3.6 B * 6 = 22 GB
-To account for margin, i.e., we do not want to use more than 70% os total storage capacity, we raise storage needs to 51.4 TB
+Using base64 encoding, and 6 letter strings, 64^6
+  ~= 68.7 B unique strings.
+If 1 character takes 1 byte, total size for 3.6 B keys
+  = 3.6 B * 6 = 22 GB
+To account for margin, i.e., we do not want to use more than 70% of total storage capacity, we raise storage needs to 51.4 TB
 ```
 
 ### Bandwidth estimates
@@ -99,19 +105,25 @@ egress = 58 * 10 KB ~= 600 KB/sec = 0.6 MB/sec
 ### Memory estimates
 
 ```text
-80-20 rule for caching - meaning 20% hot pastes generated 80% traffic.
+80-20 rule for caching: meaning 20% hot pastes generate 80% traffic.
 Number of read requests = 5 M
-Space needed for caching 20% of 5 M = 0.2 * 5 M * 10 KB ~= 10 GB
+Space needed for caching 20% of 5 M
+  = 0.2 * 5 M * 10 KB ~= 10 GB
 ```
 
 ## System APIs
 
 ```text
 addPaste(api_dev_key, paste_data, custom_url=Null user_name=Null, paste_name=Null, expire_date=Null)
+
 Returns: a string which represents a URL through with the paste can be accessed.
+```
 
+```text
 getPaste(api_dev_key, api_paste_key)
+```
 
+```text
 deletePaste(api_dev_key, api_paste_key)
 ```
 
