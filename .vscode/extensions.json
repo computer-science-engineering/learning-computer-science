@@ -47,7 +47,6 @@
       "humao.rest-client",
       "remcoros.startanyshell",
       "Gruntfuggly.todo-tree",
-      "eg2.tslint",
       "octref.vetur",
       "Equinusocio.vsc-material-theme",
       "auchenberg.vscode-browser-preview",
@@ -61,6 +60,7 @@
       "eg2.vscode-npm-script",
       "jmrog.vscode-nuget-package-manager",
       "fernandoescolar.vscode-solution-explorer",
+      "ms-vscode.vscode-typescript-tslint-plugin",
       "redhat.vscode-yaml",
       "VisualStudioExptTeam.vscodeintellicode",
       "DotJoshJohnson.xml"

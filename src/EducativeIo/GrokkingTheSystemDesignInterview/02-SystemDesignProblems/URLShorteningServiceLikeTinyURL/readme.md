@@ -4,7 +4,7 @@
   - [Why do we need URL shortening](#why-do-we-need-url-shortening)
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
-    - [Traffic estimates](#traffic-estimates)
+    - [Traffic Estimates](#traffic-estimates)
     - [Storage Estimates](#storage-estimates)
     - [Bandwidth Estimates](#bandwidth-estimates)
     - [Memory Estimates](#memory-estimates)
@@ -54,7 +54,7 @@ Similar services: bit.ly, goo.gl, qlink.me, etc.
 
 System will be ready heavy. Say, read:write = 100:1.
 
-### Traffic estimates
+### Traffic Estimates
 
 ```text
 New shortenings per month = 500 M
@@ -91,55 +91,70 @@ Total egress data = 20000 * 500 bytes
 ```text
 80-20 rule
 RPS = 20K
-Requests per day = 20000 * 24 hours * 3600 seconds = 1.7 B
-Memory needed to cache 20% = 0.2 * 1.7 B * 500 bytes = 1.7 000 000 000  00 bytes = 170 GB
+Requests per day
+  = 20000 * 24 hours * 3600 seconds = 1.7 B
+Memory needed to cache 20%
+  = 0.2 * 1.7 B * 500 bytes
+  = 1.7 000 000 000 00 bytes = 170 GB
 ```
 
 ### High level estimates
 
 - Assuming 500 million new URLs per month and 100:1 read:write ratio
 
-| Category            | Calculation                                             | Estimate |
-| ------------------- | ------------------------------------------------------- | -------- |
-| New URLs            | 500 million / (30 days * 24 hours * 3600 seconds)       | 200 /s   |
-| URL redirections    | 500 million * 100 / (30 days * 24 hours * 3600 seconds) | 20 K/s   |
-| Incoming data       | 500 bytes/URL * 200 URL/s                               | 100 KB/s |
-| Outgoing data       | 500 bytes/URL * 19K URL/s                               | 10 MB/s   |
-| Storage for 5 years | 500 bytes/URL * 500 million * 60 months                 | 15 TB    |
-| Memory for cache    | 19K URL * 3600 seconds * 24 hours * 500 bytes * 20%     | 170 GB   |
+| Category            | Calculation                                               | Estimate |
+| ------------------- | --------------------------------------------------------- | -------- |
+| New URLs            | `500 million / (30 days * 24 hours * 3600 seconds)`       | 200 /s   |
+| URL redirections    | `500 million * 100 / (30 days * 24 hours * 3600 seconds)` | 20 K/s   |
+| Incoming data       | `500 bytes/URL * 200 URL/s`                               | 100 KB/s |
+| Outgoing data       | `500 bytes/URL * 19K URL/s`                               | 10 MB/s  |
+| Storage for 5 years | `500 bytes/URL * 500 million * 60 months`                 | 15 TB    |
+| Memory for cache    | `19K URL * 3600 seconds * 24 hours * 500 bytes * 20%`     | 170 GB   |
 
 ## System APIs
 
 ```text
 createURL(api_dev_key, original_url, custom_short_link=null, expire_date=null)
-return: short link
 
+Returns: short link
+```
+
+```text
 deleteURL(api_dev_key, short_link)
 ```
 
+- **How do we detect and prevent abuse?**
+  - Limit users via their api_dev_key
+
 ## Database Design
+
+- Some observations about the nature of the data we will store:
+  1. We need to store billions of records.
+  2. Each object we store is small (less than 1K).
+  3. There are no relationships between records—other than storing which user created a URL.
+  4. Our service is read-heavy.
 
 ### Tables
 
 #### URL
 
-| Column         | Type     |
-| -------------- | -------- |
-| ShortLink (PK) |
-| OriginalURL    |
-| CreationDate   | datetime |
-| ExpirationDate | datetime |
-| UserId         | int      |
+| Column         | Type         |
+| -------------- | ------------ |
+| ShortLink (PK) | varchar(16)  |
+| OriginalURL    | varchar(512) |
+| CreationDate   | datetime     |
+| ExpirationDate | datetime     |
+| UserId         | int          |
 
 #### User
 
-| Column       | Type     |
-| ------------ | -------- |
-| User (PK)    |
-| Name         |
-| Email        |
-| CreationDate | datetime |
-| LastLogin    | datetime |
+| Column       | Type        |
+| ------------ | ----------- |
+| UserID (PK)  | int         |
+| Name         | varchar(20) |
+| Email        | varchar(32) |
+| CreationDate | datetime    |
+| LastLogin    | datetime    |
 
 ### Type of Database
 
@@ -179,9 +194,9 @@ The main functionality desired is the generation of a short and unique string fo
         - Performance issues with doing this at real time.
       - Append unique user id to original URL.
         - If user not signed in, have to ask user to choose unique key.
-          - Even then if key is not unique, have to keep generating till we gte a unique one.
+          - Even then if key is not unique, have to keep generating till we get a unique one.
 
-[request-flow-for-accessing-shortened-url](./images/request-flow-for-accessing-shortened-url_base64)
+[Request flow for accessing shortened url](./images/request-flow-for-accessing-shortened-url_base64)
 
 ### Generating keys offline
 
