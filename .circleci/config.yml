@@ -39,7 +39,7 @@ jobs:
       # specify the version you desire here
       # https://circleci.com/docs/2.0/docker-image-tags.json
       # circleci/openjdk:11-jdk-node-browsers
-      - image: dperezcabrera/openjdk12-alpine
+      - image: adoptopenjdk/openjdk12
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
