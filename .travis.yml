@@ -3,8 +3,7 @@ dist: xenial
 language: java
 
 jdk:
-  - oraclejdk12
-  # - openjdk12
+  - openjdk12
 
 branches:
   only:
