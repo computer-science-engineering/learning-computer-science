@@ -6,7 +6,16 @@
 defaults: &defaults
   working_directory: /tmp
 
-version: 2
+version: 2.1
+
+# https://circleci.com/orbs/registry/?filterBy=all
+orbs:
+  browser-tools: circleci/browser-tools@0.1.0
+  build-tools: circleci/build-tools@2.3.1
+  docker: circleci/docker@0.5.0
+  jq: circleci/jq@1.8.0
+  node: circleci/node@1.0.1
+
 jobs:
   download_from_code_climate:
     <<: *defaults
@@ -29,7 +38,7 @@ jobs:
     <<: *defaults
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:11-jdk-node-browsers
+      - image: openjdk:12
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -40,7 +49,7 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
-    
+
     working_directory: ~/repo
 
     environment:
@@ -50,6 +59,11 @@ jobs:
     
     steps:
       - checkout
+      - build-tools/install-ci-tools
+      - jq/install
+      - docker/install-docker-tools
+      - browser-tools/install-browser-tools
+      - node/install
 
       - attach_workspace:
           at: ~/repo/tmp
