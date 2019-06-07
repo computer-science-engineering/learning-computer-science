@@ -114,7 +114,7 @@ Space needed for caching 20% of 5 M
 ## System APIs
 
 ```text
-addPaste(api_dev_key, paste_data, custom_url=Null user_name=Null, paste_name=Null, expire_date=Null)
+addPaste(api_dev_key, paste_data, custom_url=Null, user_name=Null, paste_name=Null, expire_date=Null)
 
 Returns: a string which represents a URL through with the paste can be accessed.
 ```
@@ -134,7 +134,7 @@ deletePaste(api_dev_key, api_paste_key)
 1. Need to store billions of records.
 2. Each metadata object being stored would be small (< 100 bytes).
 3. Each paste object can be of medium size (few MB).
-4. No relationship between records, expect if we need to store which user created what Paste.
+4. No relationship between records, expected if we need to store which user created what Paste.
 5. Service is read-heavy.
 
 ### Schema
