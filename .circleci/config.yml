@@ -11,7 +11,7 @@ version: 2.1
 # https://discuss.circleci.com/t/convenience-images-update-add-our-convenience-image-tooling-to-your-own-docker-images-with-orbs/30604
 # https://circleci.com/orbs/registry/?filterBy=all
 orbs:
-  # browser-tools: circleci/browser-tools@0.1.0
+  browser-tools: circleci/browser-tools@0.1.0
   build-tools: circleci/build-tools@2.3.1
   docker: circleci/docker@0.5.0
   jq: circleci/jq@1.8.0
@@ -58,7 +58,7 @@ jobs:
       - build-tools/install-ci-tools
       - jq/install
       - docker/install-docker-tools
-      # - browser-tools/install-browser-tools
+      - browser-tools/install-browser-tools
       - node/install
 
       - attach_workspace:
