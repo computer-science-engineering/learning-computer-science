@@ -39,7 +39,7 @@ jobs:
     <<: *defaults
     docker:
       # specify the version you desire here
-      - image: openjdk:12
+      - image: openjdk:12.0.1-jdk
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -188,7 +188,6 @@ jobs:
             ./tmp/cc-test-reporter upload-coverage -i ./tmp/codeclimate.total.json
 
 workflows:
-  version: 2
   build-test:
     jobs:
       - download_from_code_climate:
