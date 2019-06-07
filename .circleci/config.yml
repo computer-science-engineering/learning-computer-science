@@ -12,7 +12,8 @@ version: 2.1
 # https://circleci.com/orbs/registry/?filterBy=all
 orbs:
   build-tools: circleci/build-tools@2.3.1
-  docker: circleci/docker@0.5.0
+  jq: circleci/jq@1.8.0
+  docker: circleci/docker@0.5.0 # needs jq above
   node: circleci/node@1.0.1
 
 jobs:
@@ -39,7 +40,7 @@ jobs:
       # specify the version you desire here
       # https://circleci.com/docs/2.0/docker-image-tags.json
       # circleci/openjdk:11-jdk-node-browsers
-      - image: adoptopenjdk/openjdk12
+      - image: adoptopenjdk/openjdk12:x86_64-ubuntu-jdk-12.0.1_12
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -56,6 +57,7 @@ jobs:
     steps:
       - checkout
       - build-tools/install-ci-tools
+      - jq/install
       - docker/install-docker-tools
       - node/install
 
