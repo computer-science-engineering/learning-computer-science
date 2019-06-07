@@ -11,7 +11,7 @@ image:
 - Ubuntu
 
 # todo: https://github.com/appveyor/ci/issues/2160
-stack: node 9, jdk 11, python 3.7.1 x64
+stack: node 9, jdk 12, python 3.7.1 x64
 
 install:
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk11"

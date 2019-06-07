@@ -29,7 +29,7 @@ jobs:
     <<: *defaults
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:11-jdk-node-browsers
+      - image: circleci/openjdk:12-jdk-node-browsers
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
