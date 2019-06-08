@@ -3,9 +3,6 @@
 - [Designing Instagram](#designing-instagram)
   - [Why Instagram](#why-instagram)
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-    - [Functional Requirements](#functional-requirements)
-    - [Non-Functional Requirements](#non-functional-requirements)
-    - [Not in scope](#not-in-scope)
   - [Some Design Considerations](#some-design-considerations)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
   - [High Level System Design](#high-level-system-design)
@@ -32,9 +29,9 @@
   - [News Feed Creation with Sharded Data](#news-feed-creation-with-sharded-data)
   - [Cache and Load balancing](#cache-and-load-balancing)
 
-Similar Services: Flickr, Picasa
+Design a photo-sharing service like Instagram, where users can upload photos to share them with other users.
 
-Difficulty Level: Medium
+Similar Services: Flickr, Picasa
 
 ## Why Instagram
 
@@ -42,23 +39,18 @@ Design a simpler version of Instagram, where a user can share photos and can als
 
 ## Requirements and Goals of the System
 
-### Functional Requirements
-
-1. Users should be able to upload/download/view photos.
-2. Users can perform searches based on photo/video titles.
-3. Users can follow other users.
-4. The system should be able to generate and display a user’s News Feed consisting of top photos from all the people the user follows.
-
-### Non-Functional Requirements
-
-1. Our service needs to be highly available.
-2. The acceptable latency of the system is 200ms for News Feed generation.
-3. Consistency can take a hit (in the interest of availability), if a user doesn’t see a photo for a while; it should be fine.
-4. The system should be highly reliable; any uploaded photo or video should never be lost.
-
-### Not in scope
-
-Adding tags to photos, searching photos on tags, commenting on photos, tagging users to photos, who to follow, etc.
+- Functional Requirements
+  1. Users should be able to upload/download/view photos.
+  2. Users can perform searches based on photo/video titles.
+  3. Users can follow other users.
+  4. The system should be able to generate and display a user's News Feed consisting of top photos from all the people the user follows.
+- Non-Functional Requirements
+  1. Our service needs to be highly available.
+  2. The acceptable latency of the system is 200ms for News Feed generation.
+  3. Consistency can take a hit (in the interest of availability), if a user doesn’t see a photo for a while; it should be fine.
+  4. The system should be highly reliable; any uploaded photo or video should never be lost.
+- Not in scope
+  - Adding tags to photos, searching photos on tags, commenting on photos, tagging users to photos, who to follow, etc.
 
 ## Some Design Considerations
 
@@ -73,10 +65,13 @@ Adding tags to photos, searching photos on tags, commenting on photos, tagging u
 Total users = 500 M
 DAU = 1 M
 New photos every day = 2 M =>
-    New photos every second = 2 M / (24 hours * 3600 seconds) = 23.
+    New photos every second 
+      = 2 M / (24 hours * 3600 seconds) = 23.
 Average photo file size = 200 KB
-Space required for 1 day of photos = 2 M * 200 KB = 400 GB
-Space required for 10 years of photos = 400 GB * 10 years * 365 days ~= 1425 TB
+Space required for 1 day of photos
+  = 2 M * 200 KB = 400 GB
+Space required for 10 years of photos
+  = 400 GB * 10 years * 365 days ~= 1425 TB
 ```
 
 ## High Level System Design
@@ -152,7 +147,9 @@ Storage estimation for 10 years.
 ```text
 Assumption: int and datetime is 4 bytes, each row in User's table:
 
-UserID (4 bytes) + Name (20 bytes) + Email (32 bytes) + DateOfBirth (4 bytes) + CreationDate (4 bytes) + LastLogin (4 bytes) = 68 bytes.
+UserID (4 bytes) + Name (20 bytes) + Email (32 bytes)
+  + DateOfBirth (4 bytes) + CreationDate (4 bytes)
+  + LastLogin (4 bytes) = 68 bytes.
 
 Storage for 500 M users: 500 M * 68 bytes = 34 GB
 ```
@@ -160,19 +157,25 @@ Storage for 500 M users: 500 M * 68 bytes = 34 GB
 ### Photo Table
 
 ```text
-PhotoID (4 bytes) + UserID (4 bytes) + PhotoPath (256 bytes) + PhotoLatitude (4 bytes) + PhotoLongitude(4 bytes) + UserLatitude (4 bytes) + UserLongitude (4 bytes) + CreationDate (4 bytes) = 284 bytes
+PhotoID (4 bytes) + UserID (4 bytes) + PhotoPath (256 bytes)
+  + PhotoLatitude (4 bytes) + PhotoLongitude(4 bytes)
+  + UserLatitude (4 bytes) + UserLongitude (4 bytes)
+  + CreationDate (4 bytes) = 284 bytes
 
 Photos uploaded per day = 2 M
-Storage needed for a day = 2M * 284 bytes ~= 0.5 GB per day
-Storage needed for 10 years = 0.5 GB * 10 years * 365 days ~= 1.8 TB
+Storage needed for a day = 2M * 284 bytes
+  ~= 0.5 GB per day
+Storage needed for 10 years
+  = 0.5 GB * 10 years * 365 days ~= 1.8 TB
 ```
 
 ### UserFollow Table
 
 ```text
 Each row in the UserFollow table will consist of 8 bytes.
-If we have 500 million users and on average each user follows 500 users, total storage needed
-  = 500 M users * 500 followers * 8 bytes ~= 1.82TB
+If we have 500 million users and on average each user follows 500 users,
+  total storage needed
+    = 500 M users * 500 followers * 8 bytes ~= 1.82 TB
 ```
 
 ### Total space needed
@@ -222,10 +225,10 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
     - If our PhotoID can fit into 64 bits, we can define a table containing only a 64 bit ID field. So whenever we would like to add a photo in our system, we can insert a new row in this table and take that ID to be our PhotoID of the new photo.
     - Key generating d/b as a single point of failure
       - Yes
-      - Workaround1: Two databases.
+      - Workaround 1: Two databases.
         - One generating even numbered IDs and other odd numbered.
         - Load balancer in front to round robin between them.
-      - Workaround2: Key generation service (KGS).
+      - Workaround 2: Key generation service (KGS) like in the Designing a URL Shortening service like TinyURL problem.
 
 ### Planning for Future Growth
 
@@ -237,7 +240,6 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
 ## Ranking and Timeline Generation
 
 - Need to fetch latest, most popular and relevant photos of the people the user follows.
-
 - Assumption: Fetch top 100 photos for a user's news feed.
 - Workflow
   - Get list of people user follows.
@@ -250,7 +252,7 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
     - Performing sorting/merging/ranking on results.
 - Pre-generating the News Feed
   - Servers that generate users' News Feeds and store them in a 'UserNewsFeed' table.
-  - Servers will check last time News Feed was generated by looking at 'userNewsFeed' table. New News feed will be generated from that time onwards.
+  - Servers will check last time News Feed was generated by looking at 'UserNewsFeed' table. New News feed will be generated from that time onwards.
 - Approaches for sending NewsFeed contents to users
   - Pull
     - Clients pull news feed data periodically or on-demand.
@@ -268,7 +270,7 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
       - Push model for users with few(er) follows.
     - Approach 2
       - Server pushes updates to all users at certain max frequency.
-      - Users wil lot of follows/updates pull data.
+      - Users with lot of follows/updates pull data.
 
 Also check Facebook Newsfeed problem.
 
@@ -288,15 +290,12 @@ Also check Facebook Newsfeed problem.
     - Append auto-incrementing ID from a key-generating d/b.
   - Shard number for a photo can be obtained using `PhotoID % 10`.
 - Size of PhotoID
+  - If epoch time starts today, required number of bits to store number of seconds for next 50 years =  `86400 sec/day * 365 days/year * 50 years = 1.6 B seconds`
+  - Number of bits needed to store 1.6 B seconds = 31.
+  - Given expected photos/sec = 23, number of bits needed for storing auto-incremented sequence = 9.
+  - So, every second, we can store 2^9 = 512 new photos.
+  - Auto-incrementing sequence can be reset every second.
 
-    ```text
-    If epoch time starts today, required number of bits to store number of seconds for next 50 years:
-    86400 sec/day * 365 days/year * 50 years = 1.6 B seconds
-    Number of bits needed to store 1.6 B seconds = 31.
-    Given expected photos/sec = 23, number of bits needed for storing auto-incremented sequence = 9.
-    So, every second, we can store 2^9 = 512 new photos.
-    Auto-incrementing sequence can be reset every second.
-    ```
 
 ## Cache and Load balancing
 

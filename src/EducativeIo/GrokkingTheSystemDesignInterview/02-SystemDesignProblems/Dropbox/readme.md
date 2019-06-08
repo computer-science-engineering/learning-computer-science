@@ -24,8 +24,9 @@
   - [Load Balancer (LB)](#load-balancer-lb)
   - [Security, Permissions and File Sharing](#security-permissions-and-file-sharing)
 
+Design a file hosting service like Dropbox or Google Drive. Cloud file storage enables users to store their data on remote servers. Usually, these servers are maintained by cloud storage providers and made available to users over a network (typically through the Internet). Users pay for their cloud data storage on a monthly basis.
+
 Similar Services: OneDrive, Google Drive
-Difficulty Level: Medium
 
 ## Why Cloud Storage
 
