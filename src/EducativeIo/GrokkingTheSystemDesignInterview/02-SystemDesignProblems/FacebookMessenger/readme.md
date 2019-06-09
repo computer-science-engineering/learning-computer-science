@@ -21,6 +21,8 @@
     - [Group chat](#group-chat)
     - [Push notifications](#push-notifications)
 
+Design an instant messaging service like Facebook Messenger where users can send text messages to each other through web and mobile interfaces.
+
 ## What is Facebook Messenger
 
 ## Requirements and Goals of the System
@@ -33,6 +35,9 @@
   1. Users should have real-time chat experience with minimum latency.
   2. Our system should be highly consistent; users should be able to see the same chat history on all their devices.
   3. Messenger's high availability is desirable; we can tolerate lower availability in the interest of consistency.
+- Extended Requirements
+  1. Group Chats: Messenger should support multiple people talking to each other in a group.
+  2. Push notifications: Messenger should be able to notify users of new messages when they are offline.
 
 ## Capacity Estimation and Constraints
 
@@ -46,8 +51,10 @@ Total messages per day = 500 M * 40 = 20 B
 
 ```text
 Average size of message = 100 bytes
-Storage needed for all messages in 1 day = 20 B messages * 100 bytes = 2 TB
-Storage needed for 5 years of chat history = 2 TB * 365 days * 5 years = 3.6 PB
+Storage needed for all messages in 1 day
+ = 20 B messages * 100 bytes = 2 TB
+Storage needed for 5 years of chat history
+ = 2 TB * 365 days * 5 years = 3.6 PB
 ```
 
 - Along with chat messages, users' information, messages' metadata (ID, timestamp, etc.) will also have to be stored.
@@ -57,7 +64,8 @@ Storage needed for 5 years of chat history = 2 TB * 365 days * 5 years = 3.6 PB
 
 ```text
 Data ingress per day = 2 TB
-Data ingress per second = 2 TB / 86400 seconds ~= 25 MB/sec
+Data ingress per second
+  = 2 TB / 86400 seconds ~= 25 MB/sec
 ```
 
 Since each incoming message needs to go out to another user, we will need the same amount of bandwidth 25MB/s for both upload and download.
@@ -124,7 +132,7 @@ Use cases:
     - Store message in the d/b.
     - Send message to the receiver.
     - Send an acknowledgement to the sender.
-- How does the messenger maintain the sequencing og the messages
+- How does the messenger maintain the sequencing of the messages
   - We need to keep a sequence number with every message for each client. This sequence number will determine the exact ordering of messages for EACH user. With this solution both clients will see a different view of the message sequence, but this view will be consistent for them on all devices.
 
 ### Storing and retrieving the messages from the database
@@ -145,7 +153,7 @@ We have to keep certain things in mind while designing our database:
   - Need d/b that supports
     - High rate of small updates.
     - Quick fetching of range of records.
-  - When querying user is most interested in sequentially accessing the messages.
+  - When querying, user is most interested in sequentially accessing the messages.
   - RDBMS  and NoSQL databases cannot be used since writing/reading a row for every message is expensive.
     - Will result in high latency.
     - Will cause huge load on d/b.
@@ -214,7 +222,7 @@ Summary
 
 - When chat server fails
   - Need mechanism to transfer those connections to some other server.
-  - Given that failover of TCO connections is non-trivial, easier approach may be to have clients automatically reconnect if the connection is lost.
+  - Given that failover of TCP connections is non-trivial, easier approach may be to have clients automatically reconnect if the connection is lost.
 - Should we store multiple copies of user messages
   - Yes.
   - Store multiple copies of data on different servers, or.
@@ -225,8 +233,8 @@ Summary
 ### Group chat
 
 - Separate group-chat objects.
-- Identified by GroupCharID and will contain a list of people who are part of that char in the object model.
-- LB can direct each group chat message based on the GroupCharID and the server handling that group can iterate through all the users of the chat to find the server handling the connection of each user to deliver the message.
+- Identified by GroupChatID and will contain a list of people who are part of that chat in the object model.
+- LB can direct each group chat message based on the GroupChatID and the server handling that group can iterate through all the users of the chat to find the server handling the connection of each user to deliver the message.
 - In databases, we can store all the group chats in a separate table based on GroupChatID.
 
 ### Push notifications

@@ -173,7 +173,7 @@ Should mobile clients sync remote changes immediately: Mobile clients usually sy
   - or, send files and updates to cloud storage and possibly other users.
 - If a client was offline, it polls the systems for new updates as soon as it comes back online.
 - When the Synchronization service receives an update request,
-  - It checks with the metadata d/b for consistency, the,
+  - It checks with the metadata d/b for consistency, then,
   - proceeds with the update.
   - Subsequently, a notification is sent to all subscribed users or devices to report the file update.
 - Synchronization service should transmit less data between clients and cloud storage, for faster response times.
@@ -197,7 +197,6 @@ Should mobile clients sync remote changes immediately: Mobile clients usually sy
 
 - Messaging middleware that handles requests.
 - Scalable message queuing service that supports message-based communication between clients and the synchronization service.
-
 - Two queues.
   - Request queue is a global queue shared by all clients.
     - Client requests are sent to the Request queue and synchronization service reads it from there and then sends it to update metadata.
@@ -229,7 +228,6 @@ If the other clients are not online at the time of the update, the Message Queui
 - Technique to eliminate duplicate copies of data to improve storage utilization.
 - Can also be applied to network data transfers to reduce the number of bytes that must be sent.
 - For each new incoming chunk, we can calculate its hash and compare that hash with all the hashes of the existing chunks to see if we already have the same chunk present in storage.
-
 - Implementation
   - Post-process deduplication
     - New chunks are first stored on storage device.
@@ -278,14 +276,14 @@ If the other clients are not online at the time of the update, the Message Queui
 
 ## Load Balancer (LB)
 
-- Between Clients and BLock servers.
+- Between Clients and Block servers.
 - Between Clients and Metadata servers.
 - Initially, a simple Round Robin approach can be adopted.
   - If a server is dead, LB will take it out of the rotation and will stop sending any traffic to it.
   - Issues:
     - Won’t take server load into consideration.
   - Solution:
-    - A more intelligent LB solution can be placed that periodically queries backend server about their load and adjusts traffic based on that
+    - A more intelligent LB solution can be placed that periodically queries backend server about their load and accordingly adjusts traffic.
 
 ## Security, Permissions and File Sharing
 

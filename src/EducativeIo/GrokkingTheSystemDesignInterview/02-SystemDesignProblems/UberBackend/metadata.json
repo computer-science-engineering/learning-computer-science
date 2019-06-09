@@ -2,7 +2,7 @@
     "type": "System Design",
     "name": "Designing Uber backend",
     "origin": {
-        "name": "Educative - Grokking the System Design Interview",
+        "name": "Educative",
         "link": "https://www.educative.io/collection/page/5668639101419520/5649050225344512/5717271485874176"
     },
     "companies": [
@@ -11,10 +11,10 @@
     ],
     "categories": [
         {
-            "name": "",
+            "name": "Courses",
             "children": [
                 {
-                    "name": "",
+                    "name": "Grokking the System Design Interview",
                     "children": []
                 }
             ]
