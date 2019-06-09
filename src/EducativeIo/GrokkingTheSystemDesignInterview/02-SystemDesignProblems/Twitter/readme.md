@@ -3,9 +3,6 @@
 - [Designing Twitter](#designing-twitter)
   - [What is Twitter](#what-is-twitter)
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-    - [Functional Requirements](#functional-requirements)
-    - [Non-Functional Requirements](#non-functional-requirements)
-    - [Extended Requirements and Goals](#extended-requirements-and-goals)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
     - [Storage Estimates](#storage-estimates)
     - [Bandwidth Estimates](#bandwidth-estimates)
@@ -24,7 +21,7 @@
     - [Sharding based on Tweet creation time](#sharding-based-on-tweet-creation-time)
     - [Sharding based on TweetID and Tweet creation time](#sharding-based-on-tweetid-and-tweet-creation-time)
   - [Cache](#cache)
-    - [Detailed components design diagram](#detailed-components-design-diagram)
+  - [Detailed component design diagram](#detailed-component-design-diagram)
   - [Timeline Generation](#timeline-generation)
   - [Replication and Fault Tolerance](#replication-and-fault-tolerance)
   - [Load Balancing](#load-balancing)
@@ -37,27 +34,30 @@
     - [Moments](#moments)
     - [Search](#search)
 
-Difficulty Level: Medium
+Design a Twitter-like social networking service. Users of the service will be able to post tweets, follow other people, and favorite tweets.
 
 ## What is Twitter
 
 ## Requirements and Goals of the System
 
-### Functional Requirements
-
-1. Users should be able to post new tweets.
-2. A user should be able to follow other users.
-3. Users should be able to mark tweets as favorites.
-4. The service should be able to create and display a user’s timeline consisting of top tweets from all the people the user follows.
-5. Tweets can contain photos and videos.
-
-### Non-Functional Requirements
-
-1. Our service needs to be highly available.
-2. Acceptable latency of the system is 200ms for timeline generation.
-3. Consistency can take a hit (in the interest of availability); if a user doesn't see a tweet for a while, it should be fine.
-
-### Extended Requirements and Goals
+- Functional Requirements
+  1. Users should be able to post new tweets.
+  2. A user should be able to follow other users.
+  3. Users should be able to mark tweets as favorites.
+  4. The service should be able to create and display a user’s timeline consisting of top tweets from all the people the user follows.
+  5. Tweets can contain photos and videos.
+- Non-Functional Requirements
+  1. Our service needs to be highly available.
+  2. Acceptable latency of the system is 200ms for timeline generation.
+  3. Consistency can take a hit (in the interest of availability); if a user doesn't see a tweet for a while, it should be fine.
+- Extended Requirements and Goals
+  1. Searching for tweets.
+  2. Replying to a tweet.
+  3. Trending topics – current hot topics/searches.
+  4. Tagging other users.
+  5. Tweet Notification.
+  6. Who to follow? Suggestions?
+  7. Moments.
 
 ## Capacity Estimation and Constraints
 
@@ -102,9 +102,10 @@ Total egress
 ## System APIs
 
 ```text
-tweet(api_dev_key, tweet_data, tweet_location, user_location, media_ids, maximum_results_to_return)
+tweet(api_dev_key, tweet_data, tweet_location, user_location,
+  media_ids, maximum_results_to_return)
 
-returns URL to access the tweet.
+Returns URL to access the tweet.
 ```
 
 ## High Level System Design
@@ -227,15 +228,11 @@ returns URL to access the tweet.
 - We can reset auto incrementing sequence every second.
 - For resilience and performance we can have two database servers generating auto-incrementing keys, one generating even numbered and other odd numbered keys.
 - If current epoch seconds is "1483228800", TweetID will look like this:
-
-  ```text
-  1483228800 000001
-  1483228800 000002
-  1483228800 000003
-  1483228800 000004
-  …
-  ```
-
+  - 1483228800 000001
+  - 1483228800 000002
+  - 1483228800 000003
+  - 1483228800 000004
+  - …
 - If we make our TweetID 64bits (8 bytes) long, we can easily store tweets for the next 100 years and also store them for milliseconds granularity.
 - While we will still have to query multiple servers for timeline generation, reads and writes will be lot quicker
   - Since there is no secondary index (on creation time) this will reduce write latency.
@@ -260,20 +257,20 @@ returns URL to access the tweet.
   - Cache would be a hash table, key would be OwnerID and value would be a doubly linked list containing all tweets from that user in last 3 days.
   - New tweets will be inserter at the head of the linked list and older tweets will be near the tail. Tweets can be removed from the tail to make space for newer tweets.
 
-### Detailed components design diagram
+## Detailed component design diagram
 
 ![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-detail.png)
 
 ## Timeline Generation
 
-Check Designing Facebook's Newsfeed.
+Check Designing Facebook's Newsfeed problem.
 
 ## Replication and Fault Tolerance
 
 - Since system is read-heavy, need multiple secondary servers for each d/b partition.
 - Secondary servers for read traffic only.
-- All writes will go to primary server and then get replicates to secondaries.
-- This mechanism will also provide fault tolerance since when the primary servers goes down, failover to a secondary can happen.
+- All writes will go to primary server and then get replicated to secondaries.
+- This mechanism will also provide fault tolerance since when the primary server goes down, failover to a secondary can happen.
 
 ## Load Balancing
 
@@ -297,7 +294,7 @@ Performance metrics/counters that can be collected:
 2. Timeline delivery stats, how many tweets per day/second our service is delivering.
 3. Average latency that is seen by the user to refresh timeline.
 
-This data will help determine variables for replication, load balancing, caching, etc.
+This data will help determine configuration variables for replication, load balancing, caching, etc.
 
 ## Extended Requirements
 
@@ -308,7 +305,7 @@ This data will help determine variables for replication, load balancing, caching
   - N depends on client's viewport.
   - Next top tweets can be cached to speed things up.
   - Pagination to display tweets.
-- Approach 2 (same as Ranking and timeline generation under "Designing Instagram")
+- Approach 2 (same as Ranking and timeline generation under "Designing Instagram" problem)
   - Pre-generating the News Feed
     - Servers that generate users' News Feeds and store them in a 'UserNewsFeed' table.
     - Servers will check last time News Feed was generated by looking at 'UserNewsFeed' table. New News feed will be generated from that time onwards.
@@ -357,4 +354,4 @@ For every retweet, with each Tweet object in the d/b we can store the ID of the 
 ### Search
 
 - Involves indexing, ranking, retrieval of tweets.
-- Discussed in detail in Designing Twitter Search.
+- Discussed in detail in Designing Twitter Search problem.
