@@ -3,17 +3,14 @@
 - [Designing YouTube or Netflix](#designing-youtube-or-netflix)
   - [Why Youtube](#why-youtube)
   - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-    - [Functional Requirements](#functional-requirements)
-    - [Non-Functional Requirements](#non-functional-requirements)
-    - [Not in scope](#not-in-scope)
   - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
     - [Storage Estimates](#storage-estimates)
     - [Bandwidth Estimates](#bandwidth-estimates)
   - [System APIs](#system-apis)
   - [High Level Design](#high-level-design)
   - [Database Schema](#database-schema)
-    - [Video metadata storage - MySql](#video-metadata-storage---mysql)
-    - [User data storage - MySql](#user-data-storage---mysql)
+    - [Video metadata storage - MySQL](#video-metadata-storage---mysql)
+    - [User data storage - MySQL](#user-data-storage---mysql)
   - [Detailed Component Design](#detailed-component-design)
   - [Metadata Sharding](#metadata-sharding)
     - [Sharding based on UserID](#sharding-based-on-userid)
@@ -24,29 +21,26 @@
   - [Content Delivery Network (CDN)](#content-delivery-network-cdn)
   - [Fault Tolerance](#fault-tolerance)
 
+Design a video sharing service like Youtube, where users will be able to upload/view/search videos.
+
 Similar Services: netflix.com, vimeo.com, dailymotion.com, veoh.com
 
 ## Why Youtube
 
 ## Requirements and Goals of the System
 
-### Functional Requirements
-
-1. Users should be able to upload videos.
-2. Users should be able to share and view videos.
-3. Users should be able to perform searches based on video titles.
-4. Our services should be able to record stats of videos, e.g., likes/dislikes, total number of views, etc.
-5. Users should be able to add and view comments on videos.
-
-### Non-Functional Requirements
-
-1. The system should be highly reliable, any video uploaded should not be lost.
-2. The system should be highly available. Consistency can take a hit (in the interest of availability); if a user doesn’t see a video for a while, it should be fine.
-3. Users should have a real time experience while watching videos and should not feel any lag.
-
-### Not in scope
-
-Video recommendations, most popular videos, channels, subscriptions, watch later, favorites, etc.
+- Functional Requirements
+  1. Users should be able to upload videos.
+  2. Users should be able to share and view videos.
+  3. Users should be able to perform searches based on video titles.
+  4. Our services should be able to record stats of videos, e.g., likes/dislikes, total number of views, etc.
+  5. Users should be able to add and view comments on videos.
+- Non-Functional Requirements
+  1. The system should be highly reliable, any video uploaded should not be lost.
+  2. The system should be highly available. Consistency can take a hit (in the interest of availability); if a user doesn’t see a video for a while, it should be fine.
+  3. Users should have a real time experience while watching videos and should not feel any lag.
+- Not in scope
+  1. Video recommendations, most popular videos, channels, subscriptions, watch later, favorites, etc.
 
 ## Capacity Estimation and Constraints
 
@@ -62,7 +56,7 @@ If upload:views = 1:200, videos uploaded per second
 ### Storage Estimates
 
 ```text
-Say, in 1 minute 500 hours worth of videos are uploaded
+Say, in 1 minute 500 hours worth of videos are uploaded.
 If on average 1 minute of video needs 50 MB of storage,
   total storage needed for videos updated in 1 minute
     = 500 hrs * 60 mins * 50 MB = 1500 GB/min = 25 GB/sec
@@ -83,27 +77,30 @@ If upload:view = 1:200, egress bandwidth needed
 ## System APIs
 
 ```text
-uploadVideo(api_dev_key, video_title, vide_description, tags[], category_id, default_language, recording_details, video_contents)
+uploadVideo(api_dev_key, video_title, vide_description,
+  tags[], category_id, default_language,
+  recording_details, video_contents)
 
-searchVideo(api_dev_key, search_query, user_location, maximum_videos_to_return, page_token)
+searchVideo(api_dev_key, search_query, user_location,
+  maximum_videos_to_return, page_token)
 
 streamVideo(api_dev_key, video_id, offset, codec, resolution)
 ```
 
 ## High Level Design
 
-1. Processing Queue: Each uploaded video will be pushed to a processing queue to be de-queued later for encoding, thumbnail generation, and storage.
-2. Encoder: To encode each uploaded video into multiple formats.
-3. Thumbnails generator: To generate a few thumbnails for each video.
-4. Video and Thumbnail storage: To store video and thumbnail files in some distributed file storage.
-5. User Database: To store user’s information, e.g., name, email, address, etc.
-6. Video metadata storage: A metadata database to store all the information about videos like title, file path in the system, uploading user, total views, likes, dislikes, etc. It will also be used to store all the video comments.
+1. **Processing Queue:** Each uploaded video will be pushed to a processing queue to be de-queued later for encoding, thumbnail generation, and storage.
+2. **Encoder:** To encode each uploaded video into multiple formats.
+3. **Thumbnails generator:** To generate a few thumbnails for each video.
+4. **Video and Thumbnail storage:** To store video and thumbnail files in some distributed file storage.
+5. **User Database:** To store user’s information, e.g., name, email, address, etc.
+6. **Video metadata storage:** A metadata database to store all the information about videos like title, file path in the system, uploading user, total views, likes, dislikes, etc. It will also be used to store all the video comments.
 
 ![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/youtube-overview.png)
 
 ## Database Schema
 
-### Video metadata storage - MySql
+### Video metadata storage - MySQL
 
 Videos metadata can be stored in a SQL database. The following information should be stored with each video:
 
@@ -125,7 +122,7 @@ For each video comment, we need to store following information:
 - Comment
 - TimeOfCreation
 
-### User data storage - MySql
+### User data storage - MySQL
 
 - UserID, Name, email, address, age, registration details etc.
 
@@ -133,7 +130,6 @@ For each video comment, we need to store following information:
 
 - Read-heavy service.
 - Read:write = 200:1
-
 - Video storage
   - Distributed file storage system like HDFS or GlusterFS
 - Efficiently managing read traffic
@@ -142,7 +138,7 @@ For each video comment, we need to store following information:
   - For metadata
     - We can have master-slave configuration where writes first go to the master and then gets replicates to the slaves.
     - This will lead to staleness of data, in other words, weak data consistency.
-    - However, given that that we may be looking at milliseconds for data replicatoon to complete for writes to reflect in reads, it would be acceptable.
+    - However, given that that we may be looking at milliseconds for data replication to complete for writes to reflect in reads, it would be acceptable.
 - Thumbnail storage
   - Lot more thumbnails than videos.
   - Say each video has 5 thumbnails.
@@ -151,8 +147,8 @@ For each video comment, we need to store following information:
     - Read traffic for thumbnails will be very large compared to videos. Users will be watching one video at a time, but may be looking at a page with around 20 thumbnails of other videos.
   - Disk based storage would not be acceptable due to requiring large number of seeks on different disk locations, given large numbers of files, which is slow and will result in large latencies.
   - Bigtable is a reasonable choice as
-    - it combines multiple files into one block to store on disk
-    - is efficient in reading small amount of data.
+    - It combines multiple files into one block to store on disk.
+    - It is efficient in reading small amount of data.
   - Hot thumbnails can be kept in cache for improving latencies.
 - Video uploads
   - Given that videos can be quite big, if while uploading connection is lost, resuming from the same point should be supported.

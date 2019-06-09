@@ -296,7 +296,6 @@ Also check Facebook Newsfeed problem.
   - So, every second, we can store 2^9 = 512 new photos.
   - Auto-incrementing sequence can be reset every second.
 
-
 ## Cache and Load balancing
 
 - Globally distributed cache servers.
