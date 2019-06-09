@@ -16,7 +16,9 @@
     - [Caching](#caching)
   - [Should we rate limit by IP or by user](#should-we-rate-limit-by-ip-or-by-user)
 
-Difficulty Level: Medium
+Design a real-time suggestion service, which will recommend terms to users as they enter text for searching.
+
+Similar Services: Auto-suggestions, Typeahead search
 
 ## What is a Rate Limiter
 
@@ -55,7 +57,7 @@ Following is a list of scenarios that can benefit from Rate limiting by making a
 - Throttling
   - Process of controlling the usage of the APIs by customers during a given period.
   - Can be defined at the application level and/or API level.
-  - When a throttle limit is crossed, the server returns HTTP status “429 - Too many requests".
+  - When a throttle limit is crossed, the server returns HTTP status "429 - Too many requests".
 
 ## What are different types of throttling
 
@@ -67,7 +69,7 @@ Following is a list of scenarios that can benefit from Rate limiting by making a
 
 - Fixed Window Algorithm: The time window is considered from the start of the time-unit to the end of the time-unit.
 
-[fixed window](./images/api-rate-limiter-window_base64.md)
+[fixed and rolling window](./images/api-rate-limiter-window_base64.md)
 
 - Rolling Window Algorithm:
   - The time window is considered from the fraction of the time at which the request is made plus the time window length.
@@ -77,7 +79,7 @@ Following is a list of scenarios that can benefit from Rate limiting by making a
 
 Once a new request arrives, the Web Server first asks the Rate Limiter to decide if it will be served or throttled. If the request is not throttled, then it’ll be passed to the API servers.
 
-[high level design](.images/high-level-design_base64.md)
+[high level design](./images/high-level-design_base64.md)
 
 ## Basic System Design and Algorithm
 
@@ -85,6 +87,10 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
 - Hashtable
   - Key: userId
   - Value: count and startTime
+    | key     | value              |
+    | ------- | ------------------ |
+    | UserID  | {Count, StartTime} |
+    | Kristie | {3, 1499818564}    |
 - Procedure for each request
   - For new user
     - Create a new entry
@@ -94,9 +100,13 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
   - For existing user
     - If currentTime - startTime >= 1 min, reset count and startTime.
     - Otherwise, reject the request if count >= 3, or allow the request if count < 3 and increment count.
-- Atomicity
-  - In a distributed environment, the "read-and-then-write" behavior can create a race condition.
-  - We can use lock, but it will slow concurrent requests from the same user, and introduce extra complexity.
+- [fixed window example](./images/fixed-window-algorithm_base64.md)
+- Problems with this algorithm
+  - This is a **Fixed Window** algorithm since we’re resetting the ‘StartTime’ at the end of every minute, which means it can potentially allow twice the number of requests per minute. [fixed window problem](./images/fixed-window-problem_base64.md)
+  - Atomicity
+    - In a distributed environment, the "read-and-then-write" behavior can create a race condition.
+    - We can use lock, but it will slow concurrent requests from the same user, and introduce extra complexity.
+    - [example](./images/fixed-window-atomicity_base64.md)
 - Memory usage
   - userId: 8 bytes
   - count: 2 bytes, count up to 65K
@@ -115,10 +125,15 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
 - Hashtable
   - Key: userId
   - Value: sorted set of timestamps
+    | key     | value                                  |
+    | ------- | -------------------------------------- |
+    | UserID  | { `SortedSet<UnixTime>` }              |
+    | Kristie | { 1499818000, 1499818500, 1499818860 } |
 - Procedure for each request
-  - Remove all timestamps from the sorted set that are older than currentTime - 1 min
+  - Remove all timestamps from the sorted set that are older than `currentTime - 1 min`
   - Reject the request if the total count is greater than throttling limit
   - Otherwise allow the request, and add the current time into the sorted set
+- [example](./images/sliding-window-example_base64.md)
 - Memory usage
   - userId: 8 bytes
   - each epoch time = 4 bytes
@@ -136,6 +151,7 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
 - Keep track of request counts for each user using multiple fixed time windows.
 - For example, for an hourly rate limit, we can keep a count for each minute and - calculate the sum of all counters in the past hour.
 - This will reduce memory footprint for large limits.
+- [example](./images/sliding-window-counters-example_base64.md)
 - For a rate limit of 500 requests per hour
   - With counters: 8 bytes user id + (4 bytes timestamp + 2 bytes count + 20 bytes hash overhead) * 60 entries + 20 bytes hashtable overhead = 1.6 KB
   - If we need to track one million users at any time, 1.6KB * 1 million ~= 1.6 GB
