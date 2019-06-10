@@ -130,9 +130,9 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
     | UserID  | { `SortedSet<UnixTime>` }              |
     | Kristie | { 1499818000, 1499818500, 1499818860 } |
 - Procedure for each request
-  - Remove all timestamps from the sorted set that are older than `currentTime - 1 min`
-  - Reject the request if the total count is greater than throttling limit
-  - Otherwise allow the request, and add the current time into the sorted set
+  - Remove all timestamps from the sorted set that are older than `currentTime - 1 min`.
+  - Reject the request if the total count is greater than throttling limit.
+  - Otherwise allow the request, and add the current time into the sorted set.
 - [example](./images/sliding-window-example_base64.md)
 - Memory usage
   - userId: 8 bytes
@@ -183,4 +183,4 @@ Once a new request arrives, the Web Server first asks the Rate Limiter to decide
   - What about rate limit on the login API?
 - Hybrid
   - Combine per-IP and per-user rate limiting.
-  - Require more memory and storage.
+  - Requires more memory and storage.
