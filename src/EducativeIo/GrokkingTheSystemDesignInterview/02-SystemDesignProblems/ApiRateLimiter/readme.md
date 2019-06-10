@@ -16,9 +16,7 @@
     - [Caching](#caching)
   - [Should we rate limit by IP or by user](#should-we-rate-limit-by-ip-or-by-user)
 
-Design a real-time suggestion service, which will recommend terms to users as they enter text for searching.
-
-Similar Services: Auto-suggestions, Typeahead search
+Design an API Rate Limiter which will throttle users based upon the number of the requests they are sending.
 
 ## What is a Rate Limiter
 

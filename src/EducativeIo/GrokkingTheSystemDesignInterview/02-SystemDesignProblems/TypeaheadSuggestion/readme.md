@@ -14,6 +14,8 @@
   - [Typeahead Client](#typeahead-client)
   - [Personalization](#personalization)
 
+Design a real-time suggestion service, which will recommend terms to users as they enter text for searching.
+
 Similar Services: Auto-suggestions, Typeahead search
 
 ## What is Typeahead Suggestion
@@ -29,7 +31,7 @@ Similar Services: Auto-suggestions, Typeahead search
 - If the d/b contains the following terms: cap, cat, captain, or capital and the user has typed in ‘cap’, our system should suggest ‘cap’, ‘captain’ and ‘capital’.
 - Need to serve lot of queries with minimum latency.
 - Need to store index in memory in a highly efficient data structure.
-- Will use th trie data structure.
+- Will use the trie data structure.
 
 [Trie data structure](./images/trie-data-structure_base64.md)
 
