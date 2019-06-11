@@ -23,6 +23,8 @@
   - [Data Partitioning](#data-partitioning)
   - [Crawler Traps](#crawler-traps)
 
+Design a Web Crawler that will systematically browse and download the World Wide Web. Web crawlers are also known as web spiders, robots, worms, walkers, and bots.
+
 ## What is a Web Crawler
 
 ## Requirements and Goals of the System
@@ -42,22 +44,17 @@
   - We assume we need to crawl 1 B websites.
   - Since a website can contain any number of URLs, we assume an upper bound of 15 B web pages.
 - RobotsExclusion
-  - We will honor an exclusions as defined in robot.txt.
+  - We will honor all exclusions as defined in robot.txt.
 
 ## Capacity Estimation and Constraints
 
-- Say, we need to crawl 15 B pages in 4 weeks
-- Pages needed to fetch per second: `15 B / (4 weeks * 7 days * 86400 sec) ~= 6200 pages/sec`
+- Say, we need to crawl 15 B pages in 4 weeks.
+- Pages needed to fetch per second: `15 B / (4 weeks * 7 days * 86400 sec) ~= 6200 pages/sec`.
 - Storage
-  
-    ```text
-    Say, average page size = 100 KB.
-    Say, each page will include 500 bytes of metadata 
-    Total storage needed
-        = 15 B * (100 KB + 500) ~= 1.5 PB
-    Assuming 70% capacity model, total storage needed
-        = 1.5 PB / 0.7 ~= 2.14 PB
-    ```
+  - Say, average page size = 100 KB.
+  - Say, each page will include 500 bytes of metadata.
+  - Total storage needed: `15 B * (100 KB + 500) ~= 1.5 PB`.
+  - Assuming 70% capacity model, total storage needed: `1.5 PB / 0.7 ~= 2.14 PB`.
 
 ## High Level design
 
@@ -71,7 +68,7 @@ Take a list of seed URLs as input and repeatedly execute following steps:
 4. Parse the document contents to look for new URLs.
 5. Add the new URLs to the list of unvisited URLs.
 6. Process the downloaded document, e.g., store it or index its contents, etc.
-7. Go back to step 1
+7. Go back to step 1.
 
 ### How to crawl
 
@@ -81,20 +78,20 @@ Take a list of seed URLs as input and repeatedly execute following steps:
 - Path-ascending crawling
   - Path-ascending crawling can help discover a lot of isolated resources or resources for which no inbound link would have been found in regular crawling of a particular Web site.
   - In this scheme, a crawler would ascend to every path in each URL that it intends to crawl.
-  - For example, when given a seed URL of http://foo.com/a/b/page.html, it will attempt to crawl /a/b/, /a/, and /.
+  - For example, when given a seed URL of `http://foo.com/a/b/page.html`, it will attempt to crawl /a/b/, /a/, and /.
 
 ### Difficulties in implementing efficient web crawler
 
-- Large volume of Web pages
-- Rate of change on web pages
+- Large volume of Web pages.
+- Rate of change on web pages.
 
 ### Components
 
-1. URL frontier: To store the list of URLs to download and also prioritize which URLs should be crawled first.
-2. HTML Fetcher: To retrieve a web page from the server.
-3. Extractor: To extract links from HTML documents.
-4. Duplicate Eliminator: To make sure the same content is not extracted twice unintentionally.
-5. Datastore: To store retrieved pages, URLs, and other metadata.
+1. **URL frontier:** To store the list of URLs to download and also prioritize which URLs should be crawled first.
+2. **HTML Fetcher:** To retrieve a web page from the server.
+3. **Extractor:** To extract links from HTML documents.
+4. **Duplicate Eliminator:** To make sure the same content is not extracted twice unintentionally.
+5. **Datastore:** To store retrieved pages, URLs, and other metadata.
 
 ![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/web-crawler-overview.png)
 
@@ -105,7 +102,7 @@ Take a list of seed URLs as input and repeatedly execute following steps:
 - Workflow
   - Remove an absolute URL from the shared URL frontier for downloading.
   - Based on the URL's scheme, the worker calls the appropriate protocol module to download the document.
-  - After downloading, the document is placed into a Document Input Stream (DIS_.
+  - After downloading, the document is placed into a Document Input Stream (DIS).
   - Putting documents into DIS will enable other modules to re-read the document.
   - Then the worker thread invokes the dedupe test to determine of the document (perhaps associated with a different URL) has been seen before.
     - If so, the document is not processed any further and the worker thread removes the next URL from the frontier.
@@ -132,7 +129,7 @@ Take a list of seed URLs as input and repeatedly execute following steps:
 - Politeness requirements implementation:
   - Collection of distinct FIFO sub-queues on each server.
   - Dedicated sub-queue for each worker thread, from where it removes URLs for crawling.
-  - When a new URL needs to be added, the FIFO sub-queue where it is places will be determined by the URL's canonical hostname.
+  - When a new URL needs to be added, the FIFO sub-queue where it is placed will be determined by the URL's canonical hostname.
   - Hash function can map each hostname to a worker thread number.
   - Together above two points will ensure that at most one worker thread will download documents from a web server, and also by using FIFO queue, it will not overload a web server.
 - **Size of URL frontier**
@@ -167,14 +164,14 @@ Take a list of seed URLs as input and repeatedly execute following steps:
 - 64-bit checksum (MD5 or SHA) is calculated of every processed document and then stored in a d/b.
 - For every new document, we compare its checksum to all previously calculated checksums.
 - **Size of checksum store**
-  - unique set containing checksums of all previously processed documents.
-  - 15 B documents * 8 bytes (size of single checksum) = 120 GB
+  - Unique set containing checksums of all previously processed documents.
+  - `15 B documents * 8 bytes (size of single checksum) = 120 GB`
   - Single server, or LRU cache with backing persisted storage.
 
 ### URL filters
 
 - Way to control the set of URLs downloaded.
-- Can be sued to blacklist websites so crawler can ignore them.
+- Can be used to blacklist websites so crawler can ignore them.
 - Before adding each URL to the frontier, the worker thread consults the user-supplied URL filter.
 - Filters can be defined to restrict URLs by domain, prefix, or protocol type.
 
@@ -192,8 +189,8 @@ Take a list of seed URLs as input and repeatedly execute following steps:
   - We store only the fixed-size checksum and not the actual textual URL, to save space.
   - We can keep an in-memory cache of popular URLs on each host, shared by all worker threads.
 - **Storage needed:**
-  - Unique set containing checksums of all previously seen URLs
-  - 15 B documents * 4 bytes (size of single checksum) = 60 GB
+  - Unique set containing checksums of all previously seen URLs.
+  - `15 B documents * 4 bytes (size of single checksum) = 60 GB`
 - **Bloom filters for deduping?**
   - Bloom filters are a probabilistic data structure for set membership testing that may yield false positives.
 

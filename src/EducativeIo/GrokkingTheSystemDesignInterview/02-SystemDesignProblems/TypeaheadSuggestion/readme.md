@@ -108,7 +108,7 @@ We can merge nodes that have only one branch to save storage space.
   - start with root node and save trie level-by-level.
   - With each node, we can store what character it contains and how many children it has.
   - Right after each node, we should out all of its children.
-  - "C2,A2,R1,T,P,O1,D" is an example for [this trie](./images/trie-storage-example_base64.md)
+  - "C2,A2,R1,T,P,O1,D" is an example for [this trie](./images/trie-storage-example_base64.md).
   - In this example, we are not storing top suggestions and their counts with each node.
     - It is hard to store this information; as our trie is being stored top down, we don’t have child nodes created before the parent, so there is no easy way to store their references.
     - For this, we have to recalculate all the top terms with counts.
@@ -127,7 +127,7 @@ We can merge nodes that have only one branch to save storage space.
 ### Storage Estimation
 
 ```text
-Say, each query has 3 words and each work has 5 characters,
+Say, each query has 3 words and each word has 5 characters,
   then each query has on average 15 characters.
 Say, each character needs 2 bytes, so each query needs 30 bytes.
 Total storage needed = 100 M * 30 bytes = 3 GB
@@ -141,19 +141,15 @@ Then, total storage needed  = 3 GB + (0.02 * 3 GB * 365 days) = 25 GB
 - **Range based partitioning**
   - Store phrases in separate partitions based on first letter.
   - Issues
-    - Can lead to unbalanced servers
+    - Can lead to unbalanced servers.
 - **Partitioning based on the maximum capacity of the server**
   - We partition our trie based on the maximum memory capacity of the servers.
   - We can keep storing data on a server as long as it has memory available.
   - When a sub-tree cannot fit into a server, we break our partition there to assign that range to this server and move on the next server to repeat this process.
   - We can keep a hash table to quickly access this partitioning scheme:
-
-      ```text
-      Server 1, A-AABC
-      Server 2, AABD-BXA
-      Server 3, BXB-CDA
-      ```
-
+    - Server 1, A-AABC
+    - Server 2, AABD-BXA
+    - Server 3, BXB-CDA
   - When the user has typed ‘AA’, we still have to query server 1 and 2, but when the user has typed ‘AAA’ we only need to query server 1.
   - We can have a load balancer in front of our trie servers which can store this mapping and redirect traffic.
   - If we are querying from multiple servers, either we need to merge the results at the server side to calculate overall top results or make our clients do that.
