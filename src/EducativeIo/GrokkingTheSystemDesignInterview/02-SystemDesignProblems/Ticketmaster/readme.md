@@ -180,10 +180,10 @@ Some observations:
   - When a booking is complete, or reservation expires
     - WaitingUsersService will get notified so that any waiting customer can be served.
 
-    | key    | value                                               |
-    | ------ | --------------------------------------------------- |
-    | ShowID | LinkedHashMap<BookingID, Timestamp>                 |
-    | 123    | {(1, 1499818500), (2, 1499818700), (3, 1499818800)} |
+      | key    | value                                                 |
+      | ------ | ----------------------------------------------------- |
+      | ShowID | LinkedHashMap<BookingID, Timestamp>                   |
+      | 123    | { (1, 1499818500), (2, 1499818700), (3, 1499818800) } |
 
 - **WaitingUsersService**
   - Keep all waiting users of a show in memory in a Linked HashMap or a TreeMap.
@@ -211,7 +211,7 @@ Some observations:
 
 - **Handling crashes in ActiveReservationsService or WaitingUsersService services**
   - Approach 1:
-    - When ActiveReservationsService crashes, we can read all active reservations from Booking table. We know which reeservations are active using the status column (Reserved (1)).
+    - When ActiveReservationsService crashes, we can read all active reservations from Booking table. We know which reservations are active using the status column (Reserved (1)).
   - Approach 2:
     - Have a master-slave configuration.
   - Since we do not store waiting users in d/b, only means of ensuring fault-tolerance for WaitingUsersService in case of crashes is to use master-slave setup.

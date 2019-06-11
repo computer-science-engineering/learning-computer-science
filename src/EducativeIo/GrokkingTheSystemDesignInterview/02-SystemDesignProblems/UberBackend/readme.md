@@ -78,7 +78,7 @@ There are two kinds of users in our system:
 - **Memory needed to store all the subscriptions**
   - 1 M DAU and 500 K daily active drivers.
   - Say, 5 customers subscribe to 1 driver.
-  - Store information in a aHash Table.Need to store driver and customer IDs.
+  - Store information in a Hash Table. Need to store driver and customer IDs.
   - 3 bytes for DriverID and 8 bytes for CustomerID.
   - Total memory needed = `(500 K * 3) + (500 K * 5 * 8) ~= 21 MB`
 - **Bandwidth needed to broadcast the driver’s location to customers**

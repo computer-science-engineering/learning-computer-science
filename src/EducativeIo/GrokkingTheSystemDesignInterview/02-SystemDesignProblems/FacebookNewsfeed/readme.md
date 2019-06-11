@@ -87,7 +87,7 @@ getUserFeed(api_dev_key, user_id, since_id, count,
 - Some points
   - A User can follow other entities and can become friends with other users.
   - Both users and entities can post FeedItems which can contain text, images, or videos.
-  - Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook, Pages can post feed item too.
+  - Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook, Pages can post feed items too.
   - Each FeedItem can optionally have an EntityID pointing to the page or the group where that post was created.
 - If using a relation d/b, two relations need to be modeled:
   - User-Entity
@@ -125,7 +125,7 @@ getUserFeed(api_dev_key, user_id, since_id, count,
 | EntityOrFriendID  (PK) | int     |
 | Type                   | tinyint |
 
-Type identifies if the entity being followed is a User ot Entity.
+Type identifies if the entity being followed is a User or Entity.
 
 ### FeedItem
 
@@ -173,7 +173,7 @@ We can periodically (say every five minutes) perform the above steps to rank and
 
 ### Feed publishing
 
-When she reaches the end of her current feed, she can pull more data from the server. For newer items either the server can notify Jane and then she can pull, or the server can push, these new posts.
+When Jane reaches the end of her current feed, she can pull more data from the server. For newer items either the server can notify Jane and then she can pull, or the server can push, these new posts.
 
 At a high level, we will need following components in our Newsfeed service:
 
@@ -217,7 +217,7 @@ High-level architecture diagram of system. User B and C are following User A.
   - Based on usage pattern, can be adjusted.
   - For example, if we assume that one page of a user’s feed has 20 posts and most of the users never browse more than ten pages of their feed, we can decide to store only 200 posts per user.
   - For any user who wants to see more posts (more than what is stored in memory), we can always query backend servers.
-- **Should we generate and keep in emory newsfeeds for all users:**
+- **Should we generate and keep in memory newsfeeds for all users:**
   - Approach 1: LRU based cache that can remove users from memory who have not accessed their newsfeed for a long time.
   - Approach 2: Determine login pattern of users to pre-generate their newsfeed.
 
@@ -239,7 +239,7 @@ High-level architecture diagram of system. User B and C are following User A.
        - When a user has millions of followers, server has to push updates to lot of people. This is resource intensive.
   3. Hybrid:
      - Combination of push and pull.
-     - Stop pushing posts from (celebrity) users from a high number of followers.
+     - Stop pushing posts from (celebrity) users with a high number of followers.
      - Push data only for those users who have relatively few(er) followers.
      - Users who follow celebrities can pull updates.
      - Another approach could be that once a user publishes a post, we can limit the fanout to only his/her online friends.
@@ -255,13 +255,13 @@ High-level architecture diagram of system. User B and C are following User A.
 - Easiest to do so by creation time of posts.
 - Important first select key signals that make a post important and then find out how to combine them to calculate a final ranking score.
 - Signals could be things like number of likes, comments, shares, etc.
-- More sophistical ranking system can constantly improve itself by evaluating if we are making progress in user stickiness, retention, ads revenue, etc.
+- More sophisticated ranking system can constantly improve itself by evaluating if we are making progress in user stickiness, retention, ads revenue, etc.
 
 ## Data Partitioning
 
 ### Sharding posts and metadata
 
-For sharding our databases that are storing posts and their metadata, we can have a similar design as discussed under Designing Twitter.
+For sharding our databases that are storing posts and their metadata, we can have a similar design as discussed under the Designing Twitter problem.
 
 ### Sharding feed data
 
