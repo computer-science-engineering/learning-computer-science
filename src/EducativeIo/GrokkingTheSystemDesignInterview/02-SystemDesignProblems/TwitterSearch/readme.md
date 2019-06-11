@@ -16,7 +16,9 @@
   - [Load Balancing](#load-balancing)
   - [Ranking](#ranking)
 
-Difficulty Level: Medium
+Twitter is one of the largest social networking service where users can share photos, news, and text-based messages. Design a service that can store and search user tweets.
+
+Similar Problems: Tweet search.
 
 ## What is Twitter Search
 
@@ -36,15 +38,18 @@ Difficulty Level: Medium
 ```text
 New tweets every day = 400 M
 Each tweet is of size = 300 bytes
-Total storage needed = 400 M * 300 => 120 GB/day
+Total storage needed = 400 M * 300
+  => 120 GB/day
 Total storage needed per second
-    = 120 GB / (24 hours * 60 mins * 60 secs) ~= 1.38 MB/sec
+    = 120 GB / (24 hours * 60 mins * 60 secs)
+    ~= 1.38 MB/sec
 ```
 
 ## System APIs
 
 ```text
-search(api_dev_key, search_terms, maximum_results_to_return, sort, page_token)
+search(api_dev_key, search_terms, maximum_results_to_return,
+  sort, page_token)
 
 Returns: (JSON)
 A JSON containing information about a list of tweets matching the search query. Each result entry can have the user ID & name, tweet text, tweet ID, creation time, number of likes, etc.
@@ -52,7 +57,7 @@ A JSON containing information about a list of tweets matching the search query. 
 
 ## High Level Design
 
-- Need to store all the statues in a database.
+- Need to store all the statuses in a database.
 - Need to build an index that can keep track of which word appears in which tweet.
 
 ![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-search-overview.png)
@@ -62,7 +67,7 @@ A JSON containing information about a list of tweets matching the search query. 
 ### Storage
 
 - Need to store 120 GB of new data every day.
-- Storage needed for 5 years: `120 GB * 365 days * 5 years ~= 200TB`
+- Storage needed for 5 years: `120 GB * 365 days * 5 years ~= 200 TB`.
 - Assuming full capacity at 80%, storage needed = 250 TB.
 - If we want to keep extra copy of each tweet, storage needed = 500 TB.
 - Given one server can store approx 4 TB, total servers needed = 125.
@@ -71,12 +76,12 @@ A JSON containing information about a list of tweets matching the search query. 
     - TweetID
     - TweetText
 - Data can be partitioned based on TweetID.
-- Using unique TweetID, hash function can be used to map TweetsID to storage server.
+- Using unique TweetID, hash function can be used to map TweetID to storage server.
 - **Creating system-wide unique TweetIDs**
   - Tweets per day = 400 M
-  - Tweets in 5 years = `400 M * 365 days * 5 years = 730 B`
+  - Tweets in 5 years = `400 M * 365 days * 5 years = 730 B`.
   - This needs 30 bits or, 5 bytes numbers to uniquely identify TweetIDs.
-  - For more details, refer to "Designing Twitter" for TweetId generation.
+  - For more details on TweetID generation, refer to "Designing Twitter" problem.
 
 ### Index
 
@@ -90,7 +95,7 @@ A JSON containing information about a list of tweets matching the search query. 
   - key would be the word
   - value will be a list of TweetIDs of all tweets that contain that word.
 - Say each tweets has 40 words, and ignoring prepositions, around 15 words that need to be indexed.
-- This implies, each TweetsID will be stored 15 times in the index.
+- This implies, each TweetID will be stored 15 times in the index.
 - Memory needed = (1460 * 15) + 2.5 MB ~= 21 TB.
 - Given a high end server has around 144 GB memory, number of servers needed = 152.
 - **Sharding**
@@ -108,7 +113,7 @@ A JSON containing information about a list of tweets matching the search query. 
       - find server and
       - index all the words of the tweet on that server.
     - While querying for a specific word,
-      - we will have to query all te servers and each server will return a set of TweetIDs.
+      - we will have to query all the servers and each server will return a set of TweetIDs.
       - A centralized server will aggregate these results to return them to the user.
 
 ### Detailed component design diagram
@@ -130,17 +135,17 @@ A JSON containing information about a list of tweets matching the search query. 
         - Build a reverse index that will map all the TweetID to their index server.
         - Index-Builder server can hold this information.
         - Need to build a Hashtable where
-          - key will be the index server number
+          - key will be the index server number.
           - value will be a HashSet containing all the TweetIDs being kept at that index server.
           - Because TweetIDs are in a HashSet; this will enable us to add/remove tweets from our index quickly.
           - We should also have a replica of the Index-Builder server for fault tolerance.
 
 ## Cache
 
-- cache in front of our database
-- can use Memcached
+- Cache in front of our database.
+- Can use Memcached.
 - Based on clients’ usage patterns, we can adjust how many cache servers we need.
-- cache eviction policy: LRU
+- Cache eviction policy: LRU
 
 ## Load Balancing
 
@@ -150,14 +155,14 @@ A JSON containing information about a list of tweets matching the search query. 
   - Approach 1
     - Initially, a simple Round Robin approach can be adopted.
     - Simple to implement and does not introduce any overhead.
-    - will take dead servers out of the rotation and will stop sending any traffic to it.
+    - Will take dead servers out of the rotation and will stop sending any traffic to it.
     - Issues:
-      - It won’t take server load into consideration. If a server is overloaded or slow, the LB will not stop sending new requests to that server.
+      - It won't take server load into consideration. If a server is overloaded or slow, the LB will not stop sending new requests to that server.
     - Solution
       - More intelligent LB solution can be placed that periodically queries the backend server about their load and accordingly adjusts traffic.
 
 ## Ranking
 
-- Ranking algorithm can calculate a ‘popularity number’ (based on the number of likes etc.) and store it with the index.
+- Ranking algorithm can calculate a 'popularity number' (based on the number of likes etc.) and store it with the index.
 - Each partition can sort the results based on this popularity number before returning results to the aggregator server.
 - The aggregator server combines all these results, sorts them based on the popularity number, and sends the top results to the user.

@@ -25,6 +25,8 @@
     - [Sharding posts and metadata](#sharding-posts-and-metadata)
     - [Sharding feed data](#sharding-feed-data)
 
+Design Facebook's Newsfeed, which would contain posts, photos, videos, and status updates from all the people and pages a user follows.
+
 Similar Services: Twitter Newsfeed, Instagram Newsfeed, Quora Newsfeed
 
 ## What is Facebook's newsfeed
@@ -59,17 +61,21 @@ Total newsfeed requests per second
 ### Storage estimates
 
 ```text
-Say, we need 500 posts in each user's feed that we want to keep in memory for a quick fetch.
+Say, we need 500 posts in each user's feed that
+  we want to keep in memory for a quick fetch.
 Say, each post is 1 KB in size.
 Total storage needed per user = 500 KB.
-Total storage needed for all DAU = 500 KB * 300 M = 150 TB.
-If one server holds 100 GB, number of machines needed = 1500
+Total storage needed for all DAU
+  = 500 KB * 300 M = 150 TB.
+If one server holds 100 GB,
+  number of machines needed = 1500
 ```
 
 ## System APIs
 
 ```text
-getUserFeed(api_dev_key, user_id, since_id, count, max_id, exclude_replies)
+getUserFeed(api_dev_key, user_id, since_id, count,
+  max_id, exclude_replies)
 ```
 
 ## Database Design
@@ -81,9 +87,9 @@ getUserFeed(api_dev_key, user_id, since_id, count, max_id, exclude_replies)
 - Some points
   - A User can follow other entities and can become friends with other users.
   - Both users and entities can post FeedItems which can contain text, images, or videos.
-  - Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook Pages can post feed item too.
+  - Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook, Pages can post feed item too.
   - Each FeedItem can optionally have an EntityID pointing to the page or the group where that post was created.
-- If using a relation d/b, 2 relations need to be modeled:
+- If using a relation d/b, two relations need to be modeled:
   - User-Entity
   - FeedItem-Media
 
