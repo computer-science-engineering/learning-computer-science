@@ -16,6 +16,8 @@
   - [Load Balancing (LB)](#load-balancing-lb)
   - [Ranking](#ranking)
 
+Design a Yelp like service, where users can search for nearby places like restaurants, theaters, or shopping malls, etc., and can also add/view reviews of places.
+
 Similar Services: Proximity server.
 
 ## Why Yelp or Proximity Server
@@ -34,7 +36,7 @@ Similar Services: Proximity server.
 
 ```text
 500 M places
-100K QPS
+100 K QPS
 20% growth in number of places and QPS each year
 ```
 
@@ -51,7 +53,7 @@ Each location can have the following fields:
 
 Although a four bytes number can uniquely identify 500 M locations, with future growth in mind, we will go with 8 bytes for LocationID.
 
-Total size: 8 + 256 + 8 + 8 + 512 + 1 => 793 bytes
+Total size: `8 + 256 + 8 + 8 + 512 + 1 => 793 bytes`
 
 Table to store reviews for Places:
 
@@ -65,8 +67,8 @@ Similarly, we can have a separate table to store photos for Places and Reviews.
 ## System APIs
 
 ```text
-search(api_dev_key, search_terms, user_location, radius_filter, maximum_results_to_return,
-    category_filter, sort, page_token)
+search(api_dev_key, search_terms, user_location, radius_filter,
+  maximum_results_to_return, category_filter, sort, page_token)
 
 Return: (JSON)
 A JSON containing information about a list of businesses matching the search query. Each result entry will have the business name, address, category, rating, and thumbnail.
@@ -99,12 +101,12 @@ A JSON containing information about a list of businesses matching the search que
 - **Grid size**
   - Grid size could be equal to the distance we would like to query since we also want to reduce the number of grids.
   - If the grid size is equal to the distance we want to query, then we only need to search within the grid which contains the given location and neighboring eight grids.
-  - In the database, we can store the GridID with each location and have an index on it, too, for faster searching. 
+  - In the database, we can store the GridID with each location and have an index on it, too, for faster searching.
   - Sample query
     - `Select * from Places where Latitude between X-D and X+D and Longitude between Y-D and Y+D and GridID in (GridID, GridID1, GridID2, ..., GridID8)`
 - **Index in-memory?**
   - Will improve performance.
-  - Using Hash Table;
+  - Using Hash Table:
     - Key: grid number
     - Value: list of places contained in that grid
 - **Memory needed to store the index**
@@ -226,14 +228,14 @@ A JSON containing information about a list of businesses matching the search que
 2. Between Application servers and Backend server.
 
 - Initially simple round robin.
-  - will distribute all incoming requests equally among backend servers.
-  - easy to implement.
-  - no overhead.
-  - if a server is dead the load balancer will take it out of the rotation and will stop sending any traffic to it.
+  - Will distribute all incoming requests equally among backend servers.
+  - Easy to implement.
+  - No overhead.
+  - If a server is dead the load balancer will take it out of the rotation and will stop sending any traffic to it.
   - Issues:
-    - does not take server load into consideration.
+    - Does not take server load into consideration.
   - Solution:
-    - more intelligent LB solution would be needed that periodically queries backend server about their load and adjusts traffic based on that.
+    - More intelligent LB solution would be needed that periodically queries backend server about their load and adjusts traffic based on that.
 
 ## Ranking
 
