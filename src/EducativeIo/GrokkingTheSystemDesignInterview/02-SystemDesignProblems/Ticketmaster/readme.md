@@ -100,6 +100,8 @@ Some observations:
 3. Each Movie will have many Shows and each Show will have multiple Bookings.
 4. A user can have multiple bookings.
 
+[data modeling](./images/data-modeling_base64.md)
+
 ### Movie
 
 ### Show
