@@ -131,7 +131,7 @@ deleteURL(api_dev_key, short_link)
 - Some observations about the nature of the data we will store:
   1. We need to store billions of records.
   2. Each object we store is small (less than 1K).
-  3. There are no relationships between records—other than storing which user created a URL.
+  3. There are no relationships between records — other than storing which user created a URL.
   4. Our service is read-heavy.
 
 ### Tables
