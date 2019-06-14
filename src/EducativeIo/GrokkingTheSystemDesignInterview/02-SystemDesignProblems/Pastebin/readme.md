@@ -172,7 +172,6 @@ deletePaste(api_dev_key, api_paste_key)
 
 - Incoming and outgoing requests will process via application layer.
 - App layer will talk to backend datastore.
-
 - Handling a write request
   - Random key generation at runtime
     - App server generates a 6 letter key on receiving a write request, which is the key for the paste (if user has not provided custom key).
