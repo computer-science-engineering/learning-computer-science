@@ -218,7 +218,7 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
 
 ### Partitioning based on PhotoID
 
-- Generate unique PhotoIDs first and the find a shard number using `PhotoID % 10`.
+- Generate unique PhotoIDs first and then find a shard number using `PhotoID % 10`.
 - Using this mechanism we would not have to append ShardID with PhotoID, as PhotoID itself will be unique.
 - Generating PhotoIDs
   - Dedicate a separate database instance to generate auto-incrementing IDs.
