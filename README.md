@@ -12,7 +12,7 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 
 | Language |  Version | Package
 | ---------|----------|---------
-| Java | 12.0.1 | OpenJDK (Red Hat for Windows)
+| Java | 12 | OpenJDK ([AdoptOpenJDK with HotSpot](https://adoptopenjdk.net/index.html))
 | Python | 3.7.2 | N/A
 
 ### Updating VSCode Extensions List
