@@ -105,7 +105,7 @@ We can merge nodes that have only one branch to save storage space.
 - We need mechanisms to store trie in a file so that it can be rebuilt. This is needed for when a machine might restart.
 - We can take a snapshot of the trie periodically and store it in a file.
 - To store,
-  - start with root node and save trie level-by-level.
+  - Start with root node and save trie level-by-level.
   - With each node, we can store what character it contains and how many children it has.
   - Right after each node, we should out all of its children.
   - "C2,A2,R1,T,P,O1,D" is an example for [this trie](./images/trie-storage-example_base64.md).

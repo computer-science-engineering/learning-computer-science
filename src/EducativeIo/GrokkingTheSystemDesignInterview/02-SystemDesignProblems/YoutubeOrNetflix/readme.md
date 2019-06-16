@@ -235,7 +235,7 @@ For the end user, these inefficiencies will be realized in the form of duplicate
 
 - CDN is a system of distributed servers that deliver web content to a user based in the geographic locations of the user, the origin of the web page and a content delivery server.
 - Popular videos can be moved to CDN
-  - CDNs replicate content in multiple places. Videos will be cloer to user and with fewer hops, videos will stream from a closer, faster network.
+  - CDNs replicate content in multiple places. Videos will be closer to user and with fewer hops, videos will stream from a closer, faster network.
   - CDN machines make heavy use of caching and can mostly serve videos out of memory.
 
 Less popular videos (1-20 views per day) that are not cached by CDNs can be served by other servers in various data centers.
