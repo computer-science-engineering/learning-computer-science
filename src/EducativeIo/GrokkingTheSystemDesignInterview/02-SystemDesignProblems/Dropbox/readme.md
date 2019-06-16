@@ -129,16 +129,16 @@ How can clients efficiently listen to changes happening with other clients:
 
 Division of client into four parts:
 
-1. Internal Metadata Database
+1. **Internal Metadata Database**
    - Will keep track of all files, chunks, their versions and location in the file system.
-2. Chunker
+2. **Chunker**
    - Will split files into smaller pieces.
    - Will reconstruct file from its chunks.
    - Chunking algorithm will detect parts of the file that has been modified by the user and only transfer those parts to cloud storage. This will save bandwidth and synchronization time.
-3. Watcher
+3. **Watcher**
    - Will monitor local workspace folders and notify the Indexer of any action performed by the users (create, delete, update files or folders).
    - Will listen for any changes happening on other clients that are broadcast by the Synchronization service.
-4. Indexer
+4. **Indexer**
    - Will process the events received from the Watcher and update the internal metadata d/b with information about the chunks of modified files.
    - Once chunks are uploaded/download to/from cloud storage, Indexer will communicate with the remote Synchronization service to:
      - broadcast changes to other clients, and,
@@ -154,7 +154,7 @@ Should mobile clients sync remote changes immediately: Mobile clients usually sy
 
 - Maintains versioning and metadata information about files/chunks, users and workspaces.
 - Can be SQL like MySQL, or NoSQL d/b service like DynamoDB.
-- Synchronization service should be able to provide a consistent view of files using a d/b., specifically under conditions of concurrency.
+- Synchronization service should be able to provide a consistent view of files using a d/b, specifically under conditions of concurrency.
 - Since NoSQL does not support ACID properties, instead favouring scalability and performance, ACID support has to be built into Synchronization service's logic, if we opt for a NoSQL d/b.
 - Using SQL will inherently allow support for ACID properties.
 - Metadata d/b should store information about following objects;
@@ -266,7 +266,7 @@ If the other clients are not online at the time of the update, the Message Queui
 
 ## Caching
 
-- Cache for Clock storage (files/chunks).
+- Cache for block storage (files/chunks).
   - Memcached
   - Store whole chunks with respective IDs/Hashes.
   - Block servers before hitting Block storage can check if cache has the desired chunk.
