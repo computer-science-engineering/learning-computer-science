@@ -75,9 +75,9 @@ Design a Twitter-like social networking service. Users of the service will be ab
 ### Storage Estimates
 
 ```text
-Each tweet has 140 characters
-To store each character without compression we need 2 bytes
-Metadata for each tweet (ID, timestamp,userID, etc.), say we need 30 bytes
+Each tweet has 140 characters.
+To store each character without compression we need 2 bytes.
+Metadata for each tweet (ID, timestamp,userID, etc.), say we need 30 bytes.
 Total storage needed = 100 M tweets/day * (280 + 30) bytes = 30 GB/day
 
 Say, on average every fifth tweet has a photo and every tenth tweet has a video.
