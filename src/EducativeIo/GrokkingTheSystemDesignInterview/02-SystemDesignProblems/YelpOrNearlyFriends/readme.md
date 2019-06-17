@@ -1,20 +1,20 @@
 # Designing Yelp or Nearby Friends
 
-- [Designing Yelp or Nearby Friends](#designing-yelp-or-nearby-friends)
-  - [Why Yelp or Proximity Server](#why-yelp-or-proximity-server)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Scale Estimation](#scale-estimation)
-  - [Database Schema](#database-schema)
-  - [System APIs](#system-apis)
-  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
-    - [SQL solution](#sql-solution)
-    - [Grids](#grids)
-    - [Dynamic size grids](#dynamic-size-grids)
-  - [Data Partitioning](#data-partitioning)
-  - [Replication and Fault Tolerance](#replication-and-fault-tolerance)
-  - [Cache](#cache)
-  - [Load Balancing (LB)](#load-balancing-lb)
-  - [Ranking](#ranking)
+- [Designing Yelp or Nearby Friends](#Designing-Yelp-or-Nearby-Friends)
+  - [Why Yelp or Proximity Server](#Why-Yelp-or-Proximity-Server)
+  - [Requirements and Goals of the System](#Requirements-and-Goals-of-the-System)
+  - [Scale Estimation](#Scale-Estimation)
+  - [Database Schema](#Database-Schema)
+  - [System APIs](#System-APIs)
+  - [Basic System Design and Algorithm](#Basic-System-Design-and-Algorithm)
+    - [SQL solution](#SQL-solution)
+    - [Grids](#Grids)
+    - [Dynamic size grids](#Dynamic-size-grids)
+  - [Data Partitioning](#Data-Partitioning)
+  - [Replication and Fault Tolerance](#Replication-and-Fault-Tolerance)
+  - [Cache](#Cache)
+  - [Load Balancing (LB)](#Load-Balancing-LB)
+  - [Ranking](#Ranking)
 
 Design a Yelp like service, where users can search for nearby places like restaurants, theaters, or shopping malls, etc., and can also add/view reviews of places.
 
@@ -160,7 +160,7 @@ A JSON containing information about a list of businesses matching the search que
   - For each place, if we cache only LocationID and Latitude/LOngitude, we need: 24 * 500 M = 12 GB.
   - Given each grid can have maximum of 500 places, and we have 500 M locations, total grids = 500 M / 500 = 1 M grids.
   - So, number of leaf nodes = 1 M and they will hold 12 GB of location data.
-  - A QuadTree with 1 M leaf nodes will have approximately (1/3)rd internal nodes and each internal ndoe will have 4 pointers, for its children.
+  - A QuadTree with 1 M leaf nodes will have approximately (1/3)rd internal nodes and each internal node will have 4 pointers, for its children.
   - If each pointer is 8 bytes, then memory need to store all internal nodes: `1 M * 1/3 * 4 * 8 = 10 MB`
   - Total memory needed to hold whole QuadTree = 12.01 GB
 - **Inserting a new Place into the system**
