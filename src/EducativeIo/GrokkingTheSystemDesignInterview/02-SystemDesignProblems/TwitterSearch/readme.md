@@ -1,20 +1,20 @@
 # Designing Twitter Search
 
-- [Designing Twitter Search](#designing-twitter-search)
-  - [What is Twitter Search](#what-is-twitter-search)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
-    - [Storage Capacity](#storage-capacity)
-  - [System APIs](#system-apis)
-  - [High Level Design](#high-level-design)
-  - [Detailed Component Design](#detailed-component-design)
-    - [Storage](#storage)
-    - [Index](#index)
-    - [Detailed component design diagram](#detailed-component-design-diagram)
-  - [Fault Tolerance](#fault-tolerance)
-  - [Cache](#cache)
-  - [Load Balancing](#load-balancing)
-  - [Ranking](#ranking)
+- [Designing Twitter Search](#Designing-Twitter-Search)
+  - [What is Twitter Search](#What-is-Twitter-Search)
+  - [Requirements and Goals of the System](#Requirements-and-Goals-of-the-System)
+  - [Capacity Estimation and Constraints](#Capacity-Estimation-and-Constraints)
+    - [Storage Capacity](#Storage-Capacity)
+  - [System APIs](#System-APIs)
+  - [High Level Design](#High-Level-Design)
+  - [Detailed Component Design](#Detailed-Component-Design)
+    - [Storage](#Storage)
+    - [Index](#Index)
+    - [Detailed component design diagram](#Detailed-component-design-diagram)
+  - [Fault Tolerance](#Fault-Tolerance)
+  - [Cache](#Cache)
+  - [Load Balancing](#Load-Balancing)
+  - [Ranking](#Ranking)
 
 Twitter is one of the largest social networking service where users can share photos, news, and text-based messages. Design a service that can store and search user tweets.
 
@@ -100,7 +100,7 @@ A JSON containing information about a list of tweets matching the search query. 
 - Given a high end server has around 144 GB memory, number of servers needed = 152.
 - **Sharding**
   - **Sharding based on words**
-    - Iterate through all words in a tweet and calculate hash to find which server it will be indexed.
+    - Iterate through all words in a tweet and calculate hash to find on which server it will be indexed.
     - To find all tweets containing a specific word we have to query only the server which contains this word.
     - Issues:
       - Can lead to hotspots, if a word becomes hot.
