@@ -7,4 +7,6 @@ cannot use additional data structures?
 
 ## Notes
 
+### Questions
+
 - Is the string ASCII or Unicode?
