@@ -12,13 +12,32 @@ Different from the previous question where weight is increasing from root to lea
 Given the list `[[1,1],2,[1,1]]`, return **8**. (four 1's at depth 1, one 2 at depth 2)
 
 **Example 2:**
-Given the list `[1,[4,[6]]]`, return **17**. (one 1 at depth 3, one 4 at depth 2, and one 6 at depth 1; 1*3 + 4*2 + 6*1 = 17)
+Given the list `[1,[4,[6]]]`, return **17**. (one 1 at depth 3, one 4 at depth 2, and one 6 at depth 1; `1*3 + 4*2 + 6*1 = 17`)
 
 ## Notes
 
 1. [LeetCode discussion - Share my 2ms intuitive-one pass-no multiplication solution](https://leetcode.com/problems/nested-list-weight-sum-ii/discuss/83649/Share-my-2ms-intuitive-one-pass-no-multiplication-solution)
 1. [LeetCode discussion - ACCEPTED Super Clean and short DFS and BFS solutions](https://leetcode.com/problems/nested-list-weight-sum-ii/discuss/83651/accepted-super-clean-and-short-dfs-and-bfs-solutions)
-1. [LeetCode discussion - No depth variable, no multiplication](https://leetcode.com/problems/nested-list-weight-sum-ii/discuss/83641/No-depth-variable-no-multiplication)
+1. [LeetCode discussion - No depth variable, no multiplication](https://leetcode.com/problems/nested-list-weight-sum-ii/discuss/83641/No-depth-variable-no-multiplication). Instead of multiplying by depth, add integers multiple times (by going level by level and adding the unweighted sum to the weighted sum after each level).
+
+    ```java
+    public int depthSumInverse(List<NestedInteger> nestedList) {
+        int unweighted = 0, weighted = 0;
+        while (!nestedList.isEmpty()) {
+            List<NestedInteger> nextLevel = new ArrayList<>();
+            for (NestedInteger ni : nestedList) {
+                if (ni.isInteger())
+                    unweighted += ni.getInteger();
+                else
+                    nextLevel.addAll(ni.getList());
+            }
+            weighted += unweighted;
+            nestedList = nextLevel;
+        }
+        return weighted;
+    }
+    ```
+
 1. [LeetCode discussion - Java Two Pass DFS solution](https://leetcode.com/problems/nested-list-weight-sum-ii/discuss/83642/Java-Two-Pass-DFS-solution)
 
     ```java
