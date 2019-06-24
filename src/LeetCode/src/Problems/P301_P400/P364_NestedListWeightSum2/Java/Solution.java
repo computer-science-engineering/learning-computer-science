@@ -1,4 +1,4 @@
-package LeetCode.src.Problems.P301_P400.P364_NestedListWeightSum3.Java;
+package LeetCode.src.Problems.P301_P400.P364_NestedListWeightSum2.Java;
 
 import java.util.ArrayList;
 import java.util.List;
