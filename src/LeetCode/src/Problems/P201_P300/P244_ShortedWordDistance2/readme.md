@@ -2,7 +2,7 @@
 
 ## Description
 
-Design a class which receives a list of words in the constructor, and implements a method that takes two words *word1* and ** and return the shortest distance between these two words in the list. Your method will be called repeatedly many times with different parameters.
+Design a class which receives a list of words in the constructor, and implements a method that takes two words *word1* and *word2* and return the shortest distance between these two words in the list. Your method will be called repeatedly many times with different parameters.
 
 **Example:**
 Assume that words = `["practice", "makes", "perfect", "coding", "makes"]`.
@@ -21,4 +21,5 @@ Output: 1
 
 ## Notes
 
+1. [LeetCode solution](https://leetcode.com/problems/shortest-word-distance-ii/solution/)
 1. [LeetCode discussion - Java Solution using HashMap](https://leetcode.com/problems/shortest-word-distance-ii/discuss/67028/Java-Solution-using-HashMap)
