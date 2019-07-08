@@ -11,10 +11,10 @@ version: 2.1
 # https://discuss.circleci.com/t/convenience-images-update-add-our-convenience-image-tooling-to-your-own-docker-images-with-orbs/30604
 # https://circleci.com/orbs/registry/?filterBy=all
 orbs:
-  build-tools: circleci/build-tools@2.5.0
+  build-tools: circleci/build-tools@2.6.3
   jq: circleci/jq@1.9.0
-  docker: circleci/docker@0.5.1 # needs jq above
-  node: circleci/node@1.0.1
+  docker: circleci/docker@0.5.2 # needs jq above
+  node: circleci/node@1.1.2
 
 jobs:
   download_from_code_climate:
