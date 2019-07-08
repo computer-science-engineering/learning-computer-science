@@ -40,6 +40,7 @@
 
 - nodejs
   - Ubuntu
+
     ```text
     curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
     sudo apt-get install -y nodejs
@@ -74,9 +75,9 @@
     ```text
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
     deb http://cran.r-project.org/bin/linux/ubuntu zesty/
-    sudo apt-get update 
-    sudo apt-get install r-base 
-    sudo apt-get install r-base-dev 
+    sudo apt-get update
+    sudo apt-get install r-base
+    sudo apt-get install r-base-dev
     ```
 
 - R Studio
