@@ -221,8 +221,8 @@
 - CDisplayEx
 - f.lux
 - Discord
-- Twitch
-- Open Live Writer
+- Powershell Core
+- Windows Terminal
 
 ### 1.3 Linux only
 
@@ -396,6 +396,7 @@
 - Hyper.is
 - cmder
 - Twitch
+- Open Live Writer
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
