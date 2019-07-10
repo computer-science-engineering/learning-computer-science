@@ -1,0 +1,31 @@
+{
+    "type": "Course",
+    "name": "Grokking the System Design Interview",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/collection/5668639101419520/5649050225344512"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "Grokking the System Design Interview",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
