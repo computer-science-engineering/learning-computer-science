@@ -21,7 +21,7 @@
 		"prefix": "problem-metadata",
 		"body": [
 			"{",
-			"\t\"type\": \"Coding\\System Design\\Puzzle\\Behavioral\\Reading\",",
+			"\t\"type\": \"Coding\\System Design\\Puzzle\\Behavioral\\Reading\\Course\",",
 			"\t\"name\": \"\",",
 			"\t\"origin\": {",
 				"\t\t\"name\": \"\",",
