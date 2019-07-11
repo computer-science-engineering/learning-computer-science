@@ -17,8 +17,9 @@ public class Solution {
       for (int i = 0; i <= arr.length - K; i++) {
         // find sum of next 'K' elements
         double sum = 0;
-        for (int j = i; j < i + K; j++)
+        for (int j = i; j < i + K; j++) {
           sum += arr[j];
+        }
         result[i] = sum / K; // calculate average
       }
   
