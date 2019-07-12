@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Smallest Subarray with a given sum",
+    "name": "Longest Substring with K Distinct Character",
     "origin": {
         "name": "Educative",
-        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/4578892830474240"
+        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/5698217712812032"
     },
     "companies": [
         "",
@@ -23,7 +23,7 @@
             "name": "Difficulty",
             "children": [
                 {
-                    "name": "Easy",
+                    "name": "Medium",
                     "children": []
                 }
             ]

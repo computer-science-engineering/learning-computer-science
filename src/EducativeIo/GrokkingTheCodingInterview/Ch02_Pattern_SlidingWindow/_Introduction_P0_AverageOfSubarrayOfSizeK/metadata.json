@@ -27,11 +27,19 @@
                     "children": []
                 }
             ]
+        },
+        {
+            "name": "Pattern",
+            "children": [
+                {
+                    "name": "Sliding Window",
+                    "children": []
+                }
+            ]
         }
     ],
     "tags": [
-        "Arrays",
-        "Sliding Window"
+        "Arrays"
     ],
     "buckets": [
         "",
