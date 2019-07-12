@@ -47,7 +47,7 @@ public class SolutionTest {
         int[] arr = new int[] { 2, 3, 4, 1, 5 };
         int k = 2;
         assertTimeout(Duration.ofMillis(500), () -> {
-            int expected = 9;
+            int expected = 7;
             int actual_naive = Solution.findMaxSumSubArray_naive(k, arr);
             int actual = Solution.findMaxSumSubArray(k, arr);
             assertEquals(expected, actual_naive);
