@@ -47,6 +47,19 @@
     sudo apt-get install -y build-essential
     ```
 
+  - npm global packages (`npm list -g --depth 0`)
+
+    ```text
+    +-- @angular/cli@7.3.9
+    +-- @vue/cli@3.9.2
+    +-- david@11.0.0
+    +-- eslint@6.0.1
+    +-- gh-pages@2.0.1
+    +-- http-server@0.11.1
+    +-- jshint@2.10.2
+    `-- jslint@0.12.1
+    ```
+
 - Sublime Text
   - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
