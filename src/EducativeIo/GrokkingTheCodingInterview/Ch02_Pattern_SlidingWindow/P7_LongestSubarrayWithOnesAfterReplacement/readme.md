@@ -21,3 +21,11 @@ Explanation: Replace the '0' at index 6, 9, and 10 to have the longest subarray 
 ```
 
 ## Notes
+
+### Time Complexity
+
+For the Sliding Window algorithm, the time complexity is O(N) where 'N' is the count of numbers in the input array.
+
+### Space Complexity
+
+For the Sliding Window algorithm, the algorithm runs in constant space O(1).
