@@ -1,0 +1,32 @@
+{
+    "type": "Course",
+    "name": "AWS Certified Solutions Architect - Associate",
+    "origin": {
+        "name": "Udemy",
+        "link": "https://www.udemy.com/aws-certified-solutions-architect-associate/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [
+        {
+            "name": "Courses",
+            "children": [
+                {
+                    "name": "AWS Certified Solutions Architect - Associate",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "tags": [
+        "Distributed Systems",
+        "Cloud Computing",
+        "Amazon Web Services"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
