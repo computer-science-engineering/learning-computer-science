@@ -238,6 +238,21 @@
 - DisplayFusion
 - Calibre
 - FreeCommander XE
+
+    ```text
+    Add new toolbar, then add following items
+    Hyper -> Define Favorite Toolbars
+        Name: Hyper
+        Program or folder: C:\Users\<username>\AppData\Local\hyper\Hyper.exe
+        Start folder: %ActivDir%
+        Parameter: %ActivDir%
+    Cmder -> Define Favorite Toolbars
+        Name: Cmder
+        Program or folder: C:\Programs\cmder_mini\Cmder.exe
+        Start folder: %ActivDir%
+        Parameter: /START %ActivDir% /TASK cmd::Cmder
+    ```
+
 - BurnAware Free
 - Gom Audio
 - Google\Nik Collection
