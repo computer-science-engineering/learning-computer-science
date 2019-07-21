@@ -73,6 +73,7 @@
     +-- webpack@4.35.3
     +-- webpack-cli@3.3.5
     +-- webpack-dev-server@3.7.2
+    +-- rimraf
     `-- windows-build-tools@1.4.3
     ```
 
