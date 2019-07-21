@@ -394,6 +394,7 @@
 - Haroopad
 - Bleachbit
 - RedNotebook
+- [Open Broadcaster Software](https://obsproject.com/)
 - Openshot video editor
   - Ubuntu
 
