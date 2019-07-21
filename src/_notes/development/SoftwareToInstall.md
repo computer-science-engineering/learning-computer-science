@@ -391,7 +391,6 @@
 - [Google Play Music Desktop Player](https://www.googleplaymusicdesktopplayer.com/)
 - Atom code editor
 - Brackets code editor
-- Haroopad
 - Bleachbit
 - RedNotebook
 - [Open Broadcaster Software](https://obsproject.com/)
