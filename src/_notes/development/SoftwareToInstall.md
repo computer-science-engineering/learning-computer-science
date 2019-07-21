@@ -268,10 +268,12 @@
 - Discord
 - Powershell Core
 - Windows Terminal
+- [Screen to Gif](https://www.screentogif.com/)
 
 ### 1.3 Linux only
 
 - conky
+- [Peek](https://github.com/phw/peek)
 - redshift
 
     ```text
