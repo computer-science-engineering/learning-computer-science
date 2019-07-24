@@ -1,7 +1,5 @@
-const Index = () => (
-    <div>
-      <p>Hello Next.js</p>
-    </div>
-  )
-  
-  export default Index
+function Home() {
+  return <div>Welcome to Next.js!</div>;
+}
+
+export default Home;
