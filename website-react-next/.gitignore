@@ -19,5 +19,8 @@ yarn-error.log*
 # next.js
 .next
 
+# static files
+out
+
 # jetbrains
 .idea/
