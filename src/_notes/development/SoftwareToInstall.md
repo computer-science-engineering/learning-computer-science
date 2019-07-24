@@ -50,32 +50,32 @@
   - npm global packages (`npm list -g --depth 0`)
 
     ```text
-    +-- @angular/cli@7.3.9
-    +-- @vue/cli@3.9.2
-    +-- david@11.0.0
-    +-- eslint@5.16.0
-    +-- gh-pages@2.0.1
-    +-- http-server@0.11.1
-    +-- jshint@2.10.2
-    `-- jslint@0.12.1
-    +-- @gridsome/cli@0.0.8
-    +-- compressjs@1.0.3
-    +-- create-react-app@1.5.2
-    +-- electron-packager@12.2.0
-    +-- markdown@0.5.0
-    +-- markpress@4.0.0
-    +-- md2gslides@0.3.0
-    +-- md2slides@1.1.3
-    +-- node-gyp@3.8.0
-    +-- npm@6.10.1
-    +-- reveal-md@0.2.0
-    +-- rxjs-tslint@0.1.7
-    +-- webpack@4.35.3
-    +-- webpack-cli@3.3.5
-    +-- webpack-dev-server@3.7.2
+    +-- @angular/cli
+    +-- @vue/cli
+    +-- david
+    +-- eslint
+    +-- gh-pages
+    +-- http-server
+    +-- jshint
+    `-- jslint
+    +-- @gridsome/cli
+    +-- compressjs
+    +-- create-react-app
+    +-- electron-packager
+    +-- markdown
+    +-- markpress
+    +-- md2gslides
+    +-- md2slides
+    +-- node-gyp
+    +-- npm
+    +-- reveal-md
+    +-- rxjs-tslint
+    +-- webpack
+    +-- webpack-cli
+    +-- webpack-dev-server
     +-- rimraf
     +-- serve
-    `-- windows-build-tools@1.4.3
+    `-- windows-build-tools
     ```
 
 - Sublime Text
