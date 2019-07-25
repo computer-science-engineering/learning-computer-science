@@ -31,11 +31,45 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        // input = ;
+        String str = "oidbcaf";
+        String pattern = "abc";
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            boolean expected = true;
+            boolean actual = Solution.findPermutation(str, pattern);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        String str = "odicf";
+        String pattern = "dc";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = false;
+            boolean actual = Solution.findPermutation(str, pattern);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase3() {
+        String str = "bcdxabcdy";
+        String pattern = "bcdyabcdx";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = true;
+            boolean actual = Solution.findPermutation(str, pattern);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase4() {
+        String str = "aaacb";
+        String pattern = "abc";
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = true;
+            boolean actual = Solution.findPermutation(str, pattern);
+            assertEquals(expected, actual);
         });
     }
 }
