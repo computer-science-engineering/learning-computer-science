@@ -34,6 +34,7 @@ public class Solution {
 
             if (windowEnd >= pattern.length() - 1) { // shrink the window by one character
                 char leftChar = str.charAt(windowStart++);
+                // if the character going out was part of the pattern, put it back in the frequency HashMap
                 if (charFrequencyMap.containsKey(leftChar)) {
                     if (charFrequencyMap.get(leftChar) == 0) {
                         matched--; // before putting the character back, decrement the matched count
