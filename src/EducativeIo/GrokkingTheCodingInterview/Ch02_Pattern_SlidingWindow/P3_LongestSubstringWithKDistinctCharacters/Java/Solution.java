@@ -18,8 +18,8 @@ public class Solution {
         int windowStart = 0;
         HashMap<Character, Integer> charFrequencyMap = new HashMap<>();
         for(int windowEnd = 0; windowEnd < str.length(); windowEnd++) {
-            char currentChar = str.charAt(windowEnd);
-            charFrequencyMap.put(currentChar, charFrequencyMap.getOrDefault(currentChar, 0) + 1);
+            char rightChar = str.charAt(windowEnd);
+            charFrequencyMap.put(rightChar, charFrequencyMap.getOrDefault(rightChar, 0) + 1);
             
             while (charFrequencyMap.size() > k) {
                 char leftChar = str.charAt(windowStart);
