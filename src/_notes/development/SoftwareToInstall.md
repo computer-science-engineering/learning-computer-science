@@ -421,6 +421,7 @@
 
     [Installing Lua on a Windows system](http://www.thijsschreijer.nl/blog/?p=863)
 - ZeroBrane Studio Lua IDE
+- Pomodoro based productivity app - [Pomotroid](https://github.com/Splode/pomotroid)
 
 ### 2.2 Windows only
 
