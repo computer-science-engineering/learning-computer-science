@@ -2,6 +2,8 @@ package EducativeIo.GrokkingTheCodingInterview.Ch02_Pattern_SlidingWindow.PC4_Wo
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,11 +32,23 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        String str = "catfoxcat";
+        String[] words = new String[] {"cat", "fox"};
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            List<Integer> expected = Arrays.asList(0, 3);
+            List<Integer> actual = Solution.findWordConcatenation(str, words);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        String str = "catcatfoxfox";
+        String[] words = new String[] {"cat", "fox"};
+        assertTimeout(Duration.ofMillis(500), () -> {
+            List<Integer> expected = Arrays.asList(3);
+            List<Integer> actual = Solution.findWordConcatenation(str, words);
+            assertEquals(expected, actual);
         });
     }
 }
