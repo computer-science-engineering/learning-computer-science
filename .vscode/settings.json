@@ -333,6 +333,7 @@
         "yusun",
         "zrzahid"
     ],
+    "editor.formatOnSave": true,
     "python.unitTest.unittestEnabled": false,
     "python.unitTest.unittestArgs": [
         "-v",
@@ -346,13 +347,14 @@
     "python.unitTest.nosetestsEnabled": false,
     "python.pythonPath": "C:\\Program Files\\Python37\\python.exe",
     "python.linting.pylintEnabled": true,
-    "java.test.config": [
-        {
-            "name": "myConfig",
-            "workingDirectory": "${workspaceFolder}"
-        }
-    ],
+    "java.test.config": [{
+        "name": "myConfig",
+        "workingDirectory": "${workspaceFolder}"
+    }],
     "java.test.defaultConfig": "myConfig",
     "markdown.extension.print.onFileSave": false,
-    "markdownShortcuts.bullets.marker": "-"
+    "markdownShortcuts.bullets.marker": "-",
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.checkstyle.configuration": "https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml"
 }
