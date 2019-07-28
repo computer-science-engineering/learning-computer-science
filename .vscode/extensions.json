@@ -63,6 +63,7 @@
       "ms-vscode.vscode-typescript-tslint-plugin",
       "redhat.vscode-yaml",
       "VisualStudioExptTeam.vscodeintellicode",
-      "DotJoshJohnson.xml"
+      "DotJoshJohnson.xml",
+      "shengchen.vscode-checkstyle"
     ]
 }
