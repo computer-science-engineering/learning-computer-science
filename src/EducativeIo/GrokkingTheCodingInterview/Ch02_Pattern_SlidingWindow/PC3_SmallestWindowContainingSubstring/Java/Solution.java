@@ -33,6 +33,7 @@ public class Solution {
                     }
 
                     char leftChar = str.charAt(windowStart++);
+                    // if the character going out was part of the pattern, put it back in the frequency HashMap
                     if (charFrequencyMap.containsKey(leftChar)) {
                         // note that we could have redundant matching characters, therefore we'll decrement the
                         // matched count only when the last occurrence of a matched character is going out of the window
