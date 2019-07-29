@@ -1,9 +1,9 @@
 {
     "type": "Coding",
-    "name": "Pair with Target Sum",
+    "name": "Remove Duplicates",
     "origin": {
         "name": "Educative",
-        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/6618310940557312"
+        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/5070198568648704"
     },
     "companies": [
         "",
@@ -33,7 +33,7 @@
     ],
     "tags": [
         "Arrays",
-        "Hash Table"
+        ""
     ],
     "buckets": [
         "",
