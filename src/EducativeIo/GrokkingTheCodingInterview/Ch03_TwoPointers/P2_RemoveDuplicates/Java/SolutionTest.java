@@ -34,7 +34,9 @@ public class SolutionTest {
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 4;
             int actual = Solution.remove(arr);
+            int actual2 = Solution.remove2(arr);
             assertEquals(expected, actual);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -44,7 +46,9 @@ public class SolutionTest {
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 2;
             int actual = Solution.remove(arr);
+            int actual2 = Solution.remove2(arr);
             assertEquals(expected, actual);
+            assertEquals(expected, actual2);
         });
     }
 }
