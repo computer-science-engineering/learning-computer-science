@@ -356,5 +356,5 @@
     "markdownShortcuts.bullets.marker": "-",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.format.settings.profile": "GoogleStyle",
-    "java.checkstyle.configuration": "https://raw.githubusercontent.com/checkstyle/checkstyle/checkstyle-8.18/src/main/resources/google_checks.xml"
+    "java.checkstyle.configuration": ""
 }
