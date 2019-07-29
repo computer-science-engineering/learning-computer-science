@@ -20,4 +20,16 @@ public class Solution {
 
         return nextNonDuplicate;
     }
+
+    public static int remove2(int[] arr) {
+        int j = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] != arr[i + 1]) {
+                arr[j] = arr[i];
+                j++;
+            }
+        }
+
+        return j - 1;
+    }
 }
