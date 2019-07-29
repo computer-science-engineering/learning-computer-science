@@ -1,16 +1,16 @@
 {
     "type": "Coding",
-    "name": "Words Concatenation",
+    "name": "Pair with Target Sum",
     "origin": {
         "name": "Educative",
-        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/4559641746866176"
+        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/6618310940557312"
     },
     "companies": [
         "",
         ""
     ],
     "categories": [{
-            "name": "Courses",
+            "name": "",
             "children": [{
                 "name": "Grokking the Coding Interview: Patterns for Coding Questions",
                 "children": []
@@ -19,20 +19,21 @@
         {
             "name": "Difficulty",
             "children": [{
-                "name": "Hard",
+                "name": "Easy",
                 "children": []
             }]
         },
         {
             "name": "Pattern",
             "children": [{
-                "name": "Sliding Window",
+                "name": "Two Pointers",
                 "children": []
             }]
         }
     ],
     "tags": [
-        "Arrays"
+        "Arrays",
+        ""
     ],
     "buckets": [
         "",
