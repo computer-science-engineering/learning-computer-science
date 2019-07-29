@@ -25,80 +25,82 @@
 			"## Description",
 			"",
 			"## Notes",
+			"",
+			"### References",
 			""
 		]
 	},
-	"YouTube Video - " : {
+	"YouTube Video - ": {
 		"scope": "markdown",
 		"prefix": "YouTube Video",
 		"body": [
 			"[YT Video -  - ]()"
 		]
 	},
-	"YouTube Video - Tushar Roy" : {
+	"YouTube Video - Tushar Roy": {
 		"scope": "markdown",
 		"prefix": "YouTube Video - Tushar Roy",
 		"body": [
 			"[YT Video - Tushar Roy - ]()"
 		]
 	},
-	"YouTube Video - Vivekanand Khyade" : {
+	"YouTube Video - Vivekanand Khyade": {
 		"scope": "markdown",
 		"prefix": "YouTube Video - Vivekanand Khyade",
 		"body": [
 			"[YT Video - Vivekanand Khyade - ]()"
 		]
 	},
-	"Geeks for Geeks post" : {
+	"Geeks for Geeks post": {
 		"scope": "markdown",
 		"prefix": "Geeks for Geeks post",
 		"body": [
 			"[Geeks for Geeks - ]()"
 		]
 	},
-	"ProgramCreek post" : {
+	"ProgramCreek post": {
 		"scope": "markdown",
 		"prefix": "ProgramCreek post",
 		"body": [
 			"[ProgramCreek - ]()"
 		]
 	},
-	"LeetCode discussion" : {
+	"LeetCode discussion": {
 		"scope": "markdown",
 		"prefix": "LeetCode discussion",
 		"body": [
 			"[LeetCode discussion - ]()"
 		]
 	},
-	"LeetCode article" : {
+	"LeetCode article": {
 		"scope": "markdown",
 		"prefix": "LeetCode article",
 		"body": [
 			"[LeetCode article]()"
 		]
 	},
-	"LeetCode solution" : {
+	"LeetCode solution": {
 		"scope": "markdown",
 		"prefix": "LeetCode solution",
 		"body": [
 			"[LeetCode solution]()"
 		]
 	},
-	"LeetCode top submission" : {
+	"LeetCode top submission": {
 		"scope": "markdown",
 		"prefix": "LeetCode sample submission",
 		"body": [
 			"LeetCode sample submission - X ms"
 		]
 	},
-	"GitHub" : {
+	"GitHub": {
 		"scope": "markdown",
 		"prefix": "GitHub",
 		"body": [
 			"[GitHub - ]()"
 		]
 	},
-	"StackOverflow" : {
+	"StackOverflow": {
 		"scope": "markdown",
 		"prefix": "StackOverflow",
 		"body": [
