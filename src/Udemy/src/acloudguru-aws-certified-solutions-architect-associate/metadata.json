@@ -9,15 +9,22 @@
         "",
         ""
     ],
-    "categories": [
-        {
+    "categories": [{
             "name": "Courses",
-            "children": [
-                {
-                    "name": "AWS Certified Solutions Architect - Associate",
-                    "children": []
-                }
-            ]
+            "children": [{
+                "name": "AWS Certified Solutions Architect - Associate",
+                "children": []
+            }]
+        },
+        {
+            "name": "Instructors",
+            "children": [{
+                "name": "Ryan Kroonenburg",
+                "children": []
+            }, {
+                "name": "Faye Ellis",
+                "children": []
+            }]
         }
     ],
     "tags": [

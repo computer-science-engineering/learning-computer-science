@@ -1,9 +1,9 @@
 {
     "type": "Course",
-    "name": "The Ultimate Hands-On Hadoop - Tame your Big Data!",
+    "name": "Ultimate AWS Certified Solutions Architect Associate",
     "origin": {
         "name": "Udemy",
-        "link": "https://www.udemy.com/the-ultimate-hands-on-hadoop-tame-your-big-data/"
+        "link": "https://www.udemy.com/aws-certified-solutions-architect-associate-saa-c01/"
     },
     "companies": [
         "",
@@ -12,21 +12,22 @@
     "categories": [{
             "name": "Courses",
             "children": [{
-                "name": "The Ultimate Hands-On Hadoop - Tame your Big Data!",
+                "name": "Ultimate AWS Certified Solutions Architect Associate",
                 "children": []
             }]
         },
         {
             "name": "Instructors",
             "children": [{
-                "name": "Frank Kane",
+                "name": "Stephane Maarek",
                 "children": []
             }]
         }
     ],
     "tags": [
         "Distributed Systems",
-        "Big Data"
+        "Cloud Computing",
+        "Amazon Web Services"
     ],
     "buckets": [
         "",
