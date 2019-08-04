@@ -37,4 +37,8 @@ The main `for-loop` managing the sliding window takes O(N) but creating subarray
 
 Ignoring the space required for the output list, the algorithm runs in constant space O(1).
 
+How much space will be required for the output list?
+
+At the most, we need a space of O(n^2) for all the output lists.
+
 ## References
