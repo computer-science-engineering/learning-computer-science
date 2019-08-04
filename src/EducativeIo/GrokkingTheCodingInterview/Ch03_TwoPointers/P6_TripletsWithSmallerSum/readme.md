@@ -34,3 +34,7 @@ Sorting the array will take O(N * logN). The `searchPair()` will take O(N). So, 
 ### Space complexity
 
 Ignoring the space required for the output array, the space complexity of the above algorithm will be O(N) which is required for sorting if we are not using an in-place sorting algorithm.
+
+### References
+
+1. [Geeks for Geeks - Count triplets with sum smaller than a given value](https://www.geeksforgeeks.org/count-triplets-with-sum-smaller-that-a-given-value/)
