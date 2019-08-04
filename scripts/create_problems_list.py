@@ -96,6 +96,8 @@ def create_problems_list(files):
         languages = item[1][1]
         if "Variants" in languages:
             languages.remove("Variants")
+        if "_Variants" in languages:
+            languages.remove("_Variants")
         languages_string = ", ".join(languages)
         data[PROBLEM_LANGUAGES_STRING] = languages
 
