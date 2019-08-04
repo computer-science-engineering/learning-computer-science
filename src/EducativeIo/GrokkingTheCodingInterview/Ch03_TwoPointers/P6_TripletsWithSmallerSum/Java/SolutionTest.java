@@ -30,11 +30,23 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int[] arr = new int[] {-1, 0, 2, 3};
+        int target = 3;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 2;
+            int actual = Solution.searchTriplets(arr, target);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        int[] arr = new int[] {-1, 4, 2, 1, 3};
+        int target = 5;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 4;
+            int actual = Solution.searchTriplets(arr, target);
+            assertEquals(expected, actual);
         });
     }
 }
