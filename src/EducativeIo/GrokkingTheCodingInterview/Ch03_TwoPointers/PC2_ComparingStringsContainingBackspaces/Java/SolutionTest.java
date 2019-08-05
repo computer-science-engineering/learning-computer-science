@@ -35,7 +35,9 @@ public class SolutionTest {
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
             boolean actual = Solution.compare(str1, str2);
+            boolean actual2 = Solution.compare2(str1, str2);
             assertEquals(expected, actual);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -46,7 +48,9 @@ public class SolutionTest {
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = false;
             boolean actual = Solution.compare(str1, str2);
+            boolean actual2 = Solution.compare2(str1, str2);
             assertEquals(expected, actual);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -57,7 +61,9 @@ public class SolutionTest {
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
             boolean actual = Solution.compare(str1, str2);
+            boolean actual2 = Solution.compare2(str1, str2);
             assertEquals(expected, actual);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -68,7 +74,9 @@ public class SolutionTest {
         assertTimeout(Duration.ofMillis(500), () -> {
             boolean expected = true;
             boolean actual = Solution.compare(str1, str2);
+            boolean actual2 = Solution.compare2(str1, str2);
             assertEquals(expected, actual);
+            assertEquals(expected, actual2);
         });
     }
 }
