@@ -38,14 +38,17 @@ public class Solution {
                 quadruplets.add(Arrays.asList(arr[first], arr[second], arr[left], arr[right]));
                 left++;
                 right--;
-                while (left < right && arr[left] == arr[left - 1])
+                while (left < right && arr[left] == arr[left - 1]) {
                     left++; // skip same element to avoid duplicate quadruplets
-                while (left < right && arr[right] == arr[right + 1])
+                }
+                while (left < right && arr[right] == arr[right + 1]) {
                     right--; // skip same element to avoid duplicate quadruplets
-            } else if (sum < targetSum)
+                }
+            } else if (sum < targetSum) {
                 left++; // we need a pair with a bigger sum
-            else
+            } else {
                 right--; // we need a pair with a smaller sum
+            }
         }
     }
 }
