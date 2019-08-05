@@ -50,3 +50,6 @@ The time complexity of the above algorithm will be O(M+N) where ‘M’ and ‘N
 The algorithm runs in constant space O(1).
 
 ## References
+
+1. [YT Video - Kevin Naughton Jr. - Google Coding Interview (2019) - Backspace String Compare (LeetCode)](https://www.youtube.com/watch?v=96-d8ZPjHeE)
+2. [YT Video - Nick White - LeetCode Backspace String Compare Solution Explained - Java](https://www.youtube.com/watch?v=vgog1EuEJYQ)
