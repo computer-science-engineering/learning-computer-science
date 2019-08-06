@@ -1,0 +1,42 @@
+{
+    "type": "Coding",
+    "name": "Maximum Trapping Water",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/5232329553346560"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Two Pointers",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Arrays",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
