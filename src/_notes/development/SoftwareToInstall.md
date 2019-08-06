@@ -75,6 +75,7 @@
     +-- webpack-dev-server
     +-- rimraf
     +-- serve
+    +-- @marp-team/marp-cli
     `-- windows-build-tools
     ```
 
