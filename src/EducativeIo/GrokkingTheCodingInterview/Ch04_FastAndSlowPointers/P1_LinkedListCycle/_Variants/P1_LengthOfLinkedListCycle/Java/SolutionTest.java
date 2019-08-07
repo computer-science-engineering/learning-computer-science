@@ -30,11 +30,34 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        head.next.next.next.next.next = new ListNode(6);
+        head.next.next.next.next.next.next = head.next.next;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 4;
+            int actual = Solution.findCycleLength(head);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        head.next.next.next.next.next = new ListNode(6);
+        head.next.next.next.next.next.next = head.next.next;
+        head.next.next.next.next.next.next = head.next.next.next;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 3;
+            int actual = Solution.findCycleLength(head);
+            assertEquals(expected, actual);
         });
     }
 }

@@ -16,6 +16,24 @@ public class Solution {
     }
 
     public static int findCycleLength(ListNode head) {
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return CalculateLength(slow);
+            }
+        }
         return 0;
+    }
+
+    private static int CalculateLength(ListNode start) {
+        int length = 0;
+        ListNode startPointer = start;
+        do {
+            start = start.next;
+            length++;
+        } while (start != startPointer);
+        return length;
     }
 }
