@@ -30,11 +30,21 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int num = 23;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            boolean expected = true;
+            boolean actual = Solution.find(num);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        int num = 12;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            boolean expected = false;
+            boolean actual = Solution.find(num);
+            assertEquals(expected, actual);
         });
     }
 }
