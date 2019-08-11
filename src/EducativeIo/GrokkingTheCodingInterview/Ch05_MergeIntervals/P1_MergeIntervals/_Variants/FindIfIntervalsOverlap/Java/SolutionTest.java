@@ -2,6 +2,8 @@ package EducativeIo.GrokkingTheCodingInterview.Ch05_MergeIntervals.P1_MergeInter
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,11 +32,14 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        List<Interval> intervals = new ArrayList<Interval>();
+        intervals.add(new Interval(1, 4));
+        intervals.add(new Interval(2, 5));
+        intervals.add(new Interval(7, 9));
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            boolean expected = true;
+            boolean actual = Solution.doesOverlap(intervals);
+            assertEquals(expected, actual);
         });
     }
 }
