@@ -43,7 +43,7 @@ Once we have found the correct place, we can follow an approach similar to **Mer
 1. 'a' and 'b' do not overlap, we simply insert 'a'.
 2. 'a' and 'b' overlap and 'b' ends after 'a', the new merged interval will be c(a.start, b.end).
 3. 'a' and 'b' overlap and 'a' completely overlaps 'b', the new merged interval will be c(a.start, a.end).
-4. 'a' and 'b' overlap and 'b' ends after 'b', the new merged interval will be c(b.start, a.end).
+4. 'a' and 'b' overlap and 'a' ends after 'b', the new merged interval will be c(b.start, a.end).
 5. 'a' and 'b' overlap and 'b' completely overlaps 'a', the new merged interval will be c(b.start, b.end).
 
 To handle all four merging scenarios, we need to do something like this:
