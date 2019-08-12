@@ -38,6 +38,6 @@ The time complexity of the above algorithm is O(N \* logN), where ‘N’ is the
 
 ### Space complexity
 
-The space complexity of the above algorithm will be O(N), which we need for sorting. For Java, Arrays.sort() uses [Timsort](https://en.wikipedia.org/wiki/Timsort), which needs O(N) space.
+The space complexity of the above algorithm will be O(N), which we need for sorting. For Java, `Arrays.sort()` uses [Timsort](https://en.wikipedia.org/wiki/Timsort), which needs O(N) space.
 
 ## References
