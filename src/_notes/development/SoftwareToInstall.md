@@ -446,6 +446,7 @@
 - Hyper.is
 - cmder
 - Twitch
+- [Terminus](https://github.com/Eugeny/terminus)
 - Open Live Writer
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
