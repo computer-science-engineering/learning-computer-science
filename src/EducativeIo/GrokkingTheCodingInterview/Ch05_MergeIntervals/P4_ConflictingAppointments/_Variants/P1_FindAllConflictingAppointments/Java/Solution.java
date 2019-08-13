@@ -16,7 +16,6 @@ public class Solution {
             }
             System.out.println();
         }
-
     }
 
     public static List<List<Interval>> conflictingAppointments(Interval[] intervals) {
