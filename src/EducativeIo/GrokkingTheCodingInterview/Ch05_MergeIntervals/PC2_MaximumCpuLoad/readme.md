@@ -33,4 +33,12 @@ Explanation: Maximum CPU load will be 8 as all jobs overlap during the time inte
 
 The problem follows the **Merge Intervals** pattern and can easily be converted to **Minimum Meeting Rooms**. Similar to ‘Minimum Meeting Rooms’ where we were trying to find the maximum number of meetings happening at any time, for ‘Maximum CPU Load’ we need to find the maximum number of jobs running at any time. We will need to keep a running count of the maximum CPU load at any time to find the overall maximum load.
 
+### Time complexity
+
+The time complexity of the above algorithm is O(N*logN), where ‘N’ is the total number of jobs. This is due to the sorting that we did in the beginning. Also, while iterating the jobs, we might need to poll/offer jobs to the priority queue. Each of these operations can take O(logN). Overall our algorithm will take O(N logN).
+
+### Space complexity
+
+The space complexity of the above algorithm will be O(N), which is required for sorting. Also, in the worst case, we have to insert all the jobs into the priority queue (when all jobs overlap) which will also take O(N) space. The overall space complexity of our algorithm is O(N).
+
 ## References
