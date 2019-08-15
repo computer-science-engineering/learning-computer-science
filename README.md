@@ -10,10 +10,10 @@ Learning data structures, algorithms, machine learning and various computer scie
 
 Highly recommended to open/use this repository using [Visual Studio Code](https://code.visualstudio.com/).
 
-| Language |  Version | Package
-| ---------|----------|---------
-| Java | 12 | OpenJDK ([AdoptOpenJDK with HotSpot](https://adoptopenjdk.net/index.html))
-| Python | 3.7.2 | N/A
+| Language | Version | Package                                                                    |
+| -------- | ------- | -------------------------------------------------------------------------- |
+| Java     | 12      | OpenJDK ([AdoptOpenJDK with HotSpot](https://adoptopenjdk.net/index.html)) |
+| Python   | 3.7.2   | N/A                                                                        |
 
 ### Updating VSCode Extensions List
 
@@ -81,21 +81,21 @@ From the project root, run `.\gradlew.bat wrapper --gradle-version x.x.x`. For L
 
 ## Continuous Integration
 
-| Platform | Provider | Operations | Status |
-|----------|----------|------------|--------|
-| Windows, Linux | AppVeyor | Build, Test | [![Build status](https://ci.appveyor.com/api/projects/status/y9qup8owf4e53m8h?svg=true)](https://ci.appveyor.com/project/manastalukdar/learning-computer-science) |
-| Linux | Travis CI | Build, Test, Deploy to gh-pages | [![Build Status](https://travis-ci.org/manastalukdar/learning-computer-science.svg?branch=master)](https://travis-ci.org/manastalukdar/learning-computer-science) |
-| Linux | Circle CI | Build, Test | [![CircleCI](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master) |
-| N/A | CodeClimate | Check for code maintainability | [![Maintainability](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/maintainability)](https://codeclimate.com/github/manastalukdar/learning-computer-science/maintainability) |
-| N/A | CodeClimate | Check for test coverage using Circle CI | [![Test Coverage](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/test_coverage)](https://codeclimate.com/github/manastalukdar/learning-computer-science/test_coverage) |
-| N/A | Codacy | Code analysis/quality check | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f9326796aa44a3a9eac1fe9c13cc24)](https://www.codacy.com/app/manastalukdar/learning-computer-science?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=manastalukdar/learning-computer-science&amp;utm_campaign=Badge_Grade) |
-| N/A | CodeBeat | Static code analysis | [![codebeat badge](https://codebeat.co/badges/882b6622-7bc2-4923-97b2-a053057d3a45)](https://codebeat.co/projects/github-com-manastalukdar-learning-computer-science-master) |
-| N/A | Codecov | Code coverage using Circle CI | [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science) |
-| N/A | Coveralls | Code coverage using Circle CI | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning-computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/35)|
-| N/A | FOSSA | Open Source Software Management | [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B10734%2Fgit%40github.com%3Amanastalukdar%2Flearning-computer-science.git.svg?type=shield)](https://app.fossa.com/projects/custom%2B10734%2Fgit%40github.com%3Amanastalukdar%2Flearning-computer-science.git?ref=badge_shield) [work-in-progress](https://github.com/manastalukdar/learning-computer-science/issues/53) |
-| N/A | CII Best Practices | Open source software best practices check | [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1761/badge)](https://bestpractices.coreinfrastructure.org/projects/1761) |
-| N/A | david-dm | Check node.js dependency status | [![Dependency Status](https://david-dm.org/manastalukdar/learning-computer-science.svg)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-react-next) |
-| N/A | david-dm | Check node.js dev dependency status | [![devDependencies Status](https://david-dm.org/manastalukdar/learning-computer-science/dev-status.svg?path=website-react-next)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-react-next&type=dev) |
+| Platform       | Provider           | Operations                                | Status                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------- | ------------------ | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Windows, Linux | AppVeyor           | Build, Test                               | [![Build status](https://ci.appveyor.com/api/projects/status/y9qup8owf4e53m8h?svg=true)](https://ci.appveyor.com/project/manastalukdar/learning-computer-science)                                                                                                                                                                                                                   |
+| Linux          | Travis CI          | Build, Test, Deploy to gh-pages           | [![Build Status](https://travis-ci.org/manastalukdar/learning-computer-science.svg?branch=master)](https://travis-ci.org/manastalukdar/learning-computer-science)                                                                                                                                                                                                                   |
+| Linux          | Circle CI          | Build, Test                               | [![CircleCI](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master)                                                                                                                                                                                               |
+| N/A            | CodeClimate        | Check for code maintainability            | [![Maintainability](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/maintainability)](https://codeclimate.com/github/manastalukdar/learning-computer-science/maintainability)                                                                                                                                                                                            |
+| N/A            | CodeClimate        | Check for test coverage using Circle CI   | [![Test Coverage](https://api.codeclimate.com/v1/badges/2ece575493d263e8b83c/test_coverage)](https://codeclimate.com/github/manastalukdar/learning-computer-science/test_coverage)                                                                                                                                                                                                  |
+| N/A            | Codacy             | Code analysis/quality check               | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f9326796aa44a3a9eac1fe9c13cc24)](https://www.codacy.com/app/manastalukdar/learning-computer-science?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=manastalukdar/learning-computer-science&amp;utm_campaign=Badge_Grade)                                                                               |
+| N/A            | CodeBeat           | Static code analysis                      | [![codebeat badge](https://codebeat.co/badges/882b6622-7bc2-4923-97b2-a053057d3a45)](https://codebeat.co/projects/github-com-manastalukdar-learning-computer-science-master)                                                                                                                                                                                                        |
+| N/A            | Codecov            | Code coverage using Circle CI             | [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science)                                                                                                                                                                                                            |
+| N/A            | Coveralls          | Code coverage using Circle CI             | [![Coverage Status](https://coveralls.io/repos/github/manastalukdar/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/manastalukdar/learning-computer-science?branch=master) [Known issue](https://github.com/manastalukdar/learning-computer-science/issues/35)                                                                                      |
+| N/A            | FOSSA              | Open Source Software Management           | [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B10734%2Fgit%40github.com%3Amanastalukdar%2Flearning-computer-science.git.svg?type=shield)](https://app.fossa.com/projects/custom%2B10734%2Fgit%40github.com%3Amanastalukdar%2Flearning-computer-science.git?ref=badge_shield) [work-in-progress](https://github.com/manastalukdar/learning-computer-science/issues/53) |
+| N/A            | CII Best Practices | Open source software best practices check | [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1761/badge)](https://bestpractices.coreinfrastructure.org/projects/1761)                                                                                                                                                                                                                               |
+| N/A            | david-dm           | Check node.js dependency status           | [![Dependency Status](https://david-dm.org/manastalukdar/learning-computer-science.svg)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-react-next)                                                                                                                                                                                                      |
+| N/A            | david-dm           | Check node.js dev dependency status       | [![devDependencies Status](https://david-dm.org/manastalukdar/learning-computer-science/dev-status.svg?path=website-react-next)](https://david-dm.org/manastalukdar/learning-computer-science?path=website-react-next&type=dev)                                                                                                                                                     |
 
 <!-- waffle
 ZenHub -->
@@ -106,7 +106,8 @@ ZenHub -->
 
 ## Links
 
-[Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/learning-computer-science/)
+- [Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/learning-computer-science/)
+- [Discord Server](https://discord.gg/TpYx53E)
 
 ## Note
 
