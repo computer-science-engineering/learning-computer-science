@@ -30,11 +30,12 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        Interval intervals[] = new Interval[] {new Interval(1, 4), new Interval(2, 5),
+                new Interval(9, 12), new Interval(5, 9), new Interval(5, 12)};
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 5;
+            int actual = Solution.findMaxOverlapPoint(intervals);
+            assertEquals(expected, actual);
         });
     }
 }

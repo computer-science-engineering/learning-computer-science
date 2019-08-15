@@ -7,7 +7,8 @@ public class Solution {
     public static void main(String[] args) {
         Interval intervals[] = new Interval[] {new Interval(1, 4), new Interval(2, 5),
                 new Interval(9, 12), new Interval(5, 9), new Interval(5, 12)};
-        System.out.println(findMaxOverlapPoint(intervals));
+        System.out.println(
+                "Point of maximum overlapping intervals: " + findMaxOverlapPoint(intervals));
     }
 
     public static int findMaxOverlapPoint(Interval intervals[]) {
@@ -18,7 +19,7 @@ public class Solution {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a.start, b.start));
 
         int maxIntervals = 0;
-        int result = 0;
+        int time = 0;
         PriorityQueue<Interval> queue =
                 new PriorityQueue<>(intervals.length, (a, b) -> Integer.compare(a.end, b.end));
 
@@ -31,12 +32,12 @@ public class Solution {
 
             int maxIntervalsTemp = Math.max(maxIntervals, queue.size());
             if (maxIntervalsTemp > maxIntervals) {
-                System.out.println(queue.peek().start + " " + queue.peek().end);
-                System.out.println(maxIntervalsTemp);
                 maxIntervals = maxIntervalsTemp;
+                time = interval.start;
             }
         }
 
-        return result;
+        System.out.println("Number of max overlapping intervals: " + maxIntervals);
+        return time;
     }
 }
