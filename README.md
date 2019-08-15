@@ -107,7 +107,7 @@ ZenHub -->
 ## Links
 
 - [Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/learning-computer-science/)
-- [Discord Server](https://discord.gg/TpYx53E)
+- [Discord Server](https://discord.gg/bv5FU8t)
 
 ## Note
 
