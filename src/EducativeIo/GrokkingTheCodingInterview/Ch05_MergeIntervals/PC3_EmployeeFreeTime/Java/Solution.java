@@ -43,8 +43,9 @@ public class Solution {
                 new PriorityQueue<>((a, b) -> Integer.compare(a.interval.start, b.interval.start));
 
         // insert the first interval of each employee to the queue
-        for (int i = 0; i < schedule.size(); i++)
+        for (int i = 0; i < schedule.size(); i++) {
             minHeap.offer(new EmployeeInterval(schedule.get(i).get(0), i, 0));
+        }
 
         Interval previousInterval = minHeap.peek().interval;
         while (!minHeap.isEmpty()) {
@@ -54,8 +55,9 @@ public class Solution {
                 result.add(new Interval(previousInterval.end, queueTop.interval.start));
                 previousInterval = queueTop.interval;
             } else { // overlapping intervals, update the previousInterval if needed
-                if (previousInterval.end < queueTop.interval.end)
+                if (previousInterval.end < queueTop.interval.end) {
                     previousInterval = queueTop.interval;
+                }
             }
 
             // if there are more intervals available for the same employee, add their next interval
