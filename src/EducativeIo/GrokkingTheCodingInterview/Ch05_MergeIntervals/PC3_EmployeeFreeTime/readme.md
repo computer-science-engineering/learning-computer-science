@@ -51,4 +51,12 @@ How about we take the first interval of each employee and insert it in a **Min H
 
 Whenever we take an interval out of the **Min Heap**, we can insert the next interval of the same employee. This also means that we need to know which interval belongs to which employee.
 
+### Time complexity
+
+The time complexity of the above algorithm is O(N*logK), where ‘N’ is the total number of intervals and ‘K’ is the total number of employees. This is due to the fact that we are iterating through the intervals only once (which will take O(N)), and every time we process an interval, we remove (and can insert) one interval in the Min Heap, (which will take O(logK)). At any time the heap will not have more than ‘K’ elements.
+
+### Space complexity
+
+The space complexity of the above algorithm will be O(K) as at any time the heap will not have more than ‘K’ elements.
+
 ## References
