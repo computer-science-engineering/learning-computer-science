@@ -1,0 +1,35 @@
+{
+    "type": "Systems Design",
+    "name": "Google Maps",
+    "origin": {
+        "name": "interviewing.io",
+        "link": "https://interviewing.io/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "",
+            "children": [{
+                "name": "",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
