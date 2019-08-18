@@ -31,6 +31,10 @@ However, there are two differences with **Cyclic Sort**:
 
 ### Time Complexity
 
+The time complexity of the above algorithm is O(n) as we are iterating the input array only once. Since we are not incrementing the index while swapping, this will result in more than ‘n’ iterations of the loop. In the worst case scenario, the `while` loop will only swap a total of ‘n’ numbers as once a number is at its correct index, we will move on to the next number. So overall, our algorithm will take O(n) + O(n) which is asymptotically equivalent to O(n).
+
 ### Space Complexity
+
+The algorithm runs in constant space O(1).
 
 ## References
