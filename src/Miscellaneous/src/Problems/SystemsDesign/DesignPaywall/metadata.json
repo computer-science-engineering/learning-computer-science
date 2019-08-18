@@ -1,12 +1,12 @@
 {
-    "type": "System Design",
-    "name": "Design an automated parking garage with object models and APIs",
+    "type": "Systems Design",
+    "name": "Design a Paywall for a News Portal",
     "origin": {
         "name": "Miscellaneous",
         "link": ""
     },
     "companies": [
-        "Wayfair"
+        "Qualtrics"
     ],
     "categories": [
         {
@@ -29,7 +29,7 @@
         }
     ],
     "tags": [
-        "Object Oriented Design",
+        "Distributed Systems Design",
         ""
     ],
     "buckets": [
