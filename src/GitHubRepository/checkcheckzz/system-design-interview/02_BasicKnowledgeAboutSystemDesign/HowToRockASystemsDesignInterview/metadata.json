@@ -1,0 +1,35 @@
+{
+    "type": "Reading",
+    "name": "How to Ace a Systems Design Interview",
+    "origin": {
+        "name": "Notes - Blog Post",
+        "link": "https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Blogs",
+            "children": [{
+                "name": "Palantir Blog",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [],
+    "buckets": [
+        "",
+        ""
+    ]
+}

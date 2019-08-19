@@ -2,26 +2,23 @@
     "type": "Reading",
     "name": "Designing Data Intensive Applications",
     "origin": {
-        "name": "Notes",
+        "name": "Notes - Book",
         "link": ""
     },
     "companies": [
         "",
         ""
     ],
-    "categories": [
-        {
+    "categories": [{
             "name": "Books",
             "children": []
         },
         {
             "name": "Authors",
-            "children": [
-                {
-                    "name": "Martin Kleppmann",
-                    "children": []
-                }
-            ]
+            "children": [{
+                "name": "Martin Kleppmann",
+                "children": []
+            }]
         }
     ],
     "tags": [
