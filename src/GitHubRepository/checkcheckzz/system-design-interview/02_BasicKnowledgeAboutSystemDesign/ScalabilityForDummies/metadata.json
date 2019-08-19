@@ -1,0 +1,44 @@
+{
+    "type": "Reading",
+    "name": "Scalability for Dummies",
+    "origin": {
+        "name": "Notes - Blog Post",
+        "link": "https://www.lecloud.net/tagged/scalability"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Blogs",
+            "children": [{
+                "name": "Le Cloud Blog",
+                "children": []
+            }]
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Sebastian Kreutzberger",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

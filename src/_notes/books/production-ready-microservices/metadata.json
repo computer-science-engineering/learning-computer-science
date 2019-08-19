@@ -2,26 +2,23 @@
     "type": "Reading",
     "name": "Production-Ready Microservices",
     "origin": {
-        "name": "Notes",
+        "name": "Notes - Book",
         "link": ""
     },
     "companies": [
         "",
         ""
     ],
-    "categories": [
-        {
+    "categories": [{
             "name": "Books",
             "children": []
         },
         {
             "name": "Authors",
-            "children": [
-                {
-                    "name": "Susan Fowler",
-                    "children": []
-                }
-            ]
+            "children": [{
+                "name": "Susan Fowler",
+                "children": []
+            }]
         }
     ],
     "tags": [

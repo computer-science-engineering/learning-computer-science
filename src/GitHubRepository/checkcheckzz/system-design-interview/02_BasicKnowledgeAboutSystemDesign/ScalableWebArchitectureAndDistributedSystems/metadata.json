@@ -1,0 +1,44 @@
+{
+    "type": "Reading",
+    "name": "Scalable Web Architecture and Distributed Systems",
+    "origin": {
+        "name": "Notes - Book Chapter",
+        "link": "http://www.aosabook.org/en/distsys.html"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Books",
+            "children": [{
+                "name": "The Architecture of Open Source Applications, Volume II",
+                "children": []
+            }]
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Kate Matsudaira",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

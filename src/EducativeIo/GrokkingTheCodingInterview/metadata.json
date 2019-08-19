@@ -9,17 +9,13 @@
         "",
         ""
     ],
-    "categories": [
-        {
-            "name": "Courses",
-            "children": [
-                {
-                    "name": "Grokking the Coding Interview: Patterns for Coding Questions",
-                    "children": []
-                }
-            ]
-        }
-    ],
+    "categories": [{
+        "name": "Courses",
+        "children": [{
+            "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+            "children": []
+        }]
+    }],
     "tags": [
         ""
     ],
