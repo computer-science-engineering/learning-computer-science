@@ -31,6 +31,10 @@ This problem follows the **Cyclic Sort** pattern and shares similarities with **
 
 ### Time Complexity
 
+The time complexity of the above algorithm is O(n) as we are iterating the input array only once.
+
 ### Space Complexity
+
+The algorithm runs in constant space O(1) but modifies the input array.
 
 ## References
