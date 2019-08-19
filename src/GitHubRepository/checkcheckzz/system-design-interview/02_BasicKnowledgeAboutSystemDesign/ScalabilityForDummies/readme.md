@@ -1,13 +1,13 @@
 # Scalability for Dummies
 
 - [Scalability for Dummies](#scalability-for-dummies)
-  - [Part 1 - Clones](#part-1---clones)
-  - [Part 2 - Database](#part-2---database)
-  - [Part 3: Cache](#part-3-cache)
+  - [Part 1: Clones](#part-1-clones)
+  - [Part 2: Database](#part-2-database)
+  - [Part 3 Cache](#part-3-cache)
   - [Part 4: Asynchronism](#part-4-asynchronism)
   - [References](#references)
 
-## Part 1 - Clones
+## Part 1: Clones
 
 - Public servers of a scalable web service are hidden behind a load balancer.
 - This load balancer evenly distributes load (requests from your users) onto your group/cluster of  application servers.
@@ -21,12 +21,12 @@
 - After “outsourcing” your sessions and serving the same codebase from all your servers, you can now create an image file from one of these servers (AWS calls this AMI - Amazon Machine Image.)
 - Use this AMI as a “super-clone” that all your new instances are based upon. Whenever you start a new instance/clone, just do an initial deployment of your latest code and you are ready!
 
-## Part 2 - Database
+## Part 2: Database
 
 - Path #1 is to stick with MySQL and keep the “beast” running. Hire a database administrator (DBA,) tell him to do master-slave replication (read from slaves, write to master) and upgrade your master server by adding RAM, RAM and more RAM. In some months, your DBA will come up with words like “sharding”, “denormalization” and “SQL tuning” and will look worried about the necessary overtime during the next weeks. At that point every new action to keep your database running will be more expensive and time consuming than the previous one. You might have been better off if you had chosen Path #2 while your dataset was still small and easy to migrate.
 - Path #2 means to denormalize right from the beginning and include no more Joins in any database query. You can stay with MySQL, and use it like a NoSQL database, or you can switch to a better and easier to scale NoSQL database like MongoDB or CouchDB. Joins will now need to be done in your application code. The sooner you do this step the less code you will have to change in the future. But even if you successfully switch to the latest and greatest NoSQL database and let your app do the dataset-joins, soon your database requests will again be slower and slower. You will need to introduce a cache.
 
-## Part 3: Cache
+## Part 3 Cache
 
 - Here by cache we mean in-memory caches like Memcached or Redis. Please never do file-based caching, it makes cloning and auto-scaling of your servers just a pain.
 - A cache is a simple key-value store and it should reside as a buffering layer between your application and your data storage. Whenever your application has to read data it should at first try to retrieve the data from your cache. Only if it’s not in the cache should it then try to get the data from the main data source.
