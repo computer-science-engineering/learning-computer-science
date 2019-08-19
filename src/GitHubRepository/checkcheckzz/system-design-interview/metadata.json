@@ -1,0 +1,30 @@
+{
+    "type": "Reading",
+    "name": "System Design Interview",
+    "origin": {
+        "name": "GitHub Repository",
+        "link": "https://github.com/checkcheckzz/system-design-interview"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+        "name": "GitHub",
+        "children": [{
+            "name": "checkcheckzz",
+            "children": [{
+                "name": "System Design Interview",
+                "children": []
+            }]
+        }]
+    }],
+    "tags": [
+        "Distributed Systems Design",
+        "Object Oriented Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
