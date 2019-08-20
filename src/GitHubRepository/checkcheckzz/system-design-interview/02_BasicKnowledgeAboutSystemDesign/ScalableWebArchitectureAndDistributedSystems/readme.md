@@ -254,6 +254,11 @@ There are many options that you can employ to make this easier; four of the more
 
 ### Distributed Cache
 
+- In a distributed cache, each of its nodes own part of the cached data.
+- Typically the cache is divided up using a consistent hashing function, such that if a request node is looking for a certain piece of data it can quickly know where to look within the distributed cache to determine if that data is available.
+- In this case, each node has a small piece of the cache, and will then send a request to another node for the data before going to the origin.
+- Therefore, one of the advantages of a distributed cache is the increased cache space that can be had just by adding nodes to the request pool.
+
 ## References
 
 1. [The Architecture of Open Source Applications (Volume 2): Scalable Web Architecture and Distributed Systems](http://www.aosabook.org/en/distsys.html)
