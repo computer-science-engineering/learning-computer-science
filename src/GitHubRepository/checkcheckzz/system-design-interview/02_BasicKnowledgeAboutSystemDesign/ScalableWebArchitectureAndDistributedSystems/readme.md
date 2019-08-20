@@ -4,10 +4,13 @@
   - [1.1. Principles of Web Distributed Systems Design](#11-principles-of-web-distributed-systems-design)
   - [1.2. The Basics](#12-the-basics)
     - [Example: Image Hosting Application](#example-image-hosting-application)
-      - [Services](#services)
-      - [Redundancy](#redundancy)
-      - [Partitions](#partitions)
+    - [Services](#services)
+    - [Redundancy](#redundancy)
+    - [Partitions](#partitions)
   - [1.3. The Building Blocks of Fast and Scalable Data Access](#13-the-building-blocks-of-fast-and-scalable-data-access)
+    - [Caches](#caches)
+    - [Global Cache](#global-cache)
+    - [Distributed Cache](#distributed-cache)
   - [References](#references)
 
 ## 1.1. Principles of Web Distributed Systems Design
@@ -102,7 +105,7 @@ Figure 1.1 is a simplified diagram of the functionality.
 
 This architecture would be a good baseline but would not work for a large-scale application like Flickr or Instagram.
 
-#### Services
+### Services
 
 - When considering scalable system design, it helps to decouple functionality and think about each part of the system as its own service with a clearly defined interface. This is known as Service-Oriented Architecture (SOA).
 - For these types of systems, each service has its own distinct functional context, and interaction with anything outside of that context takes place through an abstract interface, typically the public-facing API of another service.
@@ -134,7 +137,7 @@ This architecture would be a good baseline but would not work for a large-scale 
   - In the first example it is easier to perform operations across the whole dataset—for example, updating the write service to include new metadata or searching across all image metadata—whereas with the Flickr architecture each shard would need to be updated or searched (or a search service would need to be created to collate that metadata—which is in fact what they do).
 - When it comes to these systems there is no right answer, but it helps to go back to the principles at the start of this chapter, determine the system needs (heavy reads or writes or both, level of concurrency, queries across the data set, ranges, sorts, etc.), benchmark different alternatives, understand how the system will fail, and have a solid plan for when failure happens.
 
-#### Redundancy
+### Redundancy
 
 - Losing data is seldom a good thing, and a common way of handling it is to create multiple, or redundant, copies.
 - This same principle also applies to services. If there is a core piece of functionality for an application, ensuring that multiple copies or versions are running simultaneously can secure against the failure of a single node.
@@ -148,7 +151,7 @@ This architecture would be a good baseline but would not work for a large-scale 
 
 ![Figure 1.3: Image hosting application with redundancy](http://www.aosabook.org/images/distsys/imageHosting3.png)
 
-#### Partitions
+### Partitions
 
 - There may be very large data sets that are unable to fit on a single server.
 - It may also be the case that an operation requires too many computing resources, diminishing performance and making it necessary to add capacity. - In either case you have two choices: scale vertically or horizontally.
@@ -179,6 +182,77 @@ This architecture would be a good baseline but would not work for a large-scale 
 Most simple web applications, for example, LAMP stack applications look like:
 
 ![Figure 1.5: Simple web applications](http://www.aosabook.org/images/distsys/simpleWeb.png)
+
+As they grow, there are two main challenges:
+
+- scaling access to the app server
+- scaling access to the database.
+
+In a highly scalable application design, the app (or web) server is typically minimized and often embodies a shared-nothing architecture. This makes the app server layer of the system horizontally scalable. As a result of this design, the heavy lifting is pushed down the stack to the database server and supporting services; it's at this layer where the real scaling and performance challenges come into play. We will discuss some of the more common strategies and methods for making these types of services fast and scalable by providing fast access to data.
+
+![Figure 1.6: Oversimplified web application](http://www.aosabook.org/images/distsys/overSimpleWeb.png)
+
+Most systems can be oversimplified as above. If you have a lot of data, you want fast and easy access. Though overly simplified, we have to deal with two hard problems:
+
+- scalability of storage
+- fast access of data
+
+For the sake of this section, let's assume you have many terabytes (TB) of data and you want to allow users to access small portions of that data at random. This is similar to locating an image file somewhere on the file server in the image application example.
+
+![Figure 1.7: Accessing specific data](http://www.aosabook.org/images/distsys/accessingData.png)
+
+This is particularly challenging because it can be very costly to load TBs of data into memory; this directly translates to disk IO. Reading from disk is many times slower than from memory. This speed difference really adds up for large data sets; in real numbers memory access is as little as 6 times faster for sequential reads, or 100,000 times faster for random reads, than reading from disk (see "The Pathologies of Big Data", <http://queue.acm.org/detail.cfm?id=1563874>). Moreover, even with unique IDs, solving the problem of knowing where to find that little bit of data can be an arduous task.
+
+There are many options that you can employ to make this easier; four of the more important ones are:
+
+- caches
+- proxies
+- indexes
+- load balancers
+
+### Caches
+
+- Caches take advantage of the locality of reference principle: recently requested data is likely to be requested again.
+- They are used in almost every layer of computing: hardware, operating systems, web browsers, web applications and more.
+- A cache is like short-term memory: it has a limited amount of space, but is typically faster than the original data source and contains the most recently accessed items.
+- Caches can exist at all levels in architecture, but are often found at the level nearest to the front end, where they are implemented to return data quickly without taxing downstream levels.
+- In the API example, there are a couple of places you can insert a cache. One option is to insert a cache on your request layer node:
+
+![Figure 1.8: Inserting a cache on your request layer node](http://www.aosabook.org/images/distsys/cache.png)
+
+- Placing a cache directly on a request layer node enables the local storage of response data.
+- Each time a request is made to the service, the node will quickly return local, cached data if it exists.
+- If it is not in the cache, the request node will query the data from disk.
+- The cache on one request layer node could also be located both in memory (which is very fast) and on the node's local disk (faster than going to network storage).
+
+![Figure 1.9: Multiple caches](http://www.aosabook.org/images/distsys/multipleCaches.png)
+
+- If the request layer is expanded to multiple nodes, it's still quite possible to have each node host its own cache.
+- However, if your load balancer randomly distributes requests across the nodes, the same request will go to different nodes, thus increasing cache misses. Two choices for overcoming this hurdle are
+  - global caches
+  - distributed caches
+
+### Global Cache
+
+- All the nodes use the same single cache space.
+- This involves adding a server, or file store of some sort, faster than your original store and accessible by all the request layer nodes.
+- Each of the request nodes queries the cache in the same way it would a local one.
+- This kind of caching scheme can get a bit complicated because it is very easy to overwhelm a single cache as the number of clients and requests increase, but is very effective in some architectures (particularly ones with specialized hardware that make this global cache very fast, or that have a fixed dataset that needs to be cached).
+- There are two common forms of global caches depicted in the diagrams.
+- In Figure below, when a cached response is not found in the cache, the cache itself becomes responsible for retrieving the missing piece of data from the underlying store.
+
+![Figure 1.10: Global cache where cache is responsible for retrieval](http://www.aosabook.org/images/distsys/globalCache1.png)
+
+- In Figure below it is the responsibility of request nodes to retrieve any data that is not found in the cache.
+
+![Figure 1.11: Global cache where request nodes are responsible for retrieval](http://www.aosabook.org/images/distsys/globalCache2.png)
+
+- The majority of applications leveraging global caches tend to use the first type, where the cache itself manages eviction and fetching data to prevent a flood of requests for the same data from the clients.
+- However, there are some cases where the second implementation makes more sense.
+  - For example, if the cache is being used for very large files, a low cache hit percentage would cause the cache buffer to become overwhelmed with cache misses; in this situation it helps to have a large percentage of the total data set (or hot data set) in the cache.
+  - Another example is an architecture where the files stored in the cache are static and shouldn't be evicted. (This could be because of application requirements around that data latency — certain pieces of data might need to be very fast for large data sets—where the application logic understands the eviction strategy or hot spots better than the cache.)
+
+### Distributed Cache
 
 ## References
 
