@@ -6,6 +6,8 @@
     - [Example: Image Hosting Application](#example-image-hosting-application)
       - [Services](#services)
       - [Redundancy](#redundancy)
+      - [Partitions](#partitions)
+  - [1.3. The Building Blocks of Fast and Scalable Data Access](#13-the-building-blocks-of-fast-and-scalable-data-access)
   - [References](#references)
 
 ## 1.1. Principles of Web Distributed Systems Design
@@ -142,6 +144,41 @@ This architecture would be a good baseline but would not work for a large-scale 
   - Advantages:
     - Helps a lot with scalability since new nodes can be added without special conditions or knowledge.
     - There is no single point of failure in these systems, so they are much more resilient to failure.
+- For example, in our image server application, all images would have redundant copies on another piece of hardware somewhere (ideally in a different geographic location in the event of a catastrophe like an earthquake or fire in the data center), and the services to access the images would be redundant, all potentially servicing requests.
+
+![Figure 1.3: Image hosting application with redundancy](http://www.aosabook.org/images/distsys/imageHosting3.png)
+
+#### Partitions
+
+- There may be very large data sets that are unable to fit on a single server.
+- It may also be the case that an operation requires too many computing resources, diminishing performance and making it necessary to add capacity. - In either case you have two choices: scale vertically or horizontally.
+- Vertical scaling is accomplished by making the individual resource capable of handling more on its own.
+- To scale horizontally, on the other hand, is to add more nodes. In the case of the large data set, this might be a second server to store parts of the data set, and for the computing resource it would mean splitting the operation or load across some additional nodes.
+- To take full advantage of horizontal scaling, it should be included as an intrinsic design principle of the system architecture, otherwise it can be quite cumbersome to modify and separate out the context to make this possible.
+- When it comes to horizontal scaling, one of the more common techniques is to break up your services into partitions, or shards.
+- The partitions can be distributed such that each logical set of functionality is separate; this could be done by geographic boundaries, or by another criteria like non-paying versus paying users.
+- The advantage of these schemes is that they provide a service or data store with added capacity.
+- In our image server example, it is possible that the single file server used to store images could be replaced by multiple file servers, each containing its own unique set of images.
+- Such an architecture would allow the system to fill each file server with images, adding additional servers as the disks become full.
+- The design would require a naming scheme that tied an image's filename to the server containing it.
+  - An image's name could be formed from a consistent hashing scheme mapped across the servers.
+  - Or alternatively, each image could be assigned an incremental ID, so that when a client makes a request for an image, the image retrieval service only needs to maintain the range of IDs that are mapped to each of the servers (like an index).
+- There are challenges distributing data or functionality across multiple servers.
+  - One of the key issues is _data locality_.
+    - In distributed systems the closer the data to the operation or point of computation, the better the performance of the system.
+    - Therefore it is potentially problematic to have data spread across multiple servers, as any time it is needed it may not be local, forcing the servers to perform a costly fetch of the required information across the network.
+  - Another potential issue comes in the form of _inconsistency_.
+    - When there are different services reading and writing from a shared resource, potentially another service or data store, there is the chance for race conditions—where some data is supposed to be updated, but the read happens prior to the update—and in those cases the data is inconsistent.
+- There are certainly some obstacles associated with partitioning data, but partitioning allows each problem to be split—by data, load, usage patterns, etc.—into manageable chunks.
+- This can help with scalability and manageability, but is not without risk. There are lots of ways to mitigate risk and handle failures. Some details on risk mitigation discussed in this [blog post](http://katemats.com/distributed-systems-basics-handling-failure-fault-tolerance-and-monitoring/) on fault tolerance and monitoring.
+
+![Figure 1.4: Image hosting application with redundancy and partitioning](http://www.aosabook.org/images/distsys/imageHosting4.png)
+
+## 1.3. The Building Blocks of Fast and Scalable Data Access
+
+Most simple web applications, for example, LAMP stack applications look like:
+
+![Figure 1.5: Simple web applications](http://www.aosabook.org/images/distsys/simpleWeb.png)
 
 ## References
 
