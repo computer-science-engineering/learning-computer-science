@@ -258,6 +258,17 @@ There are many options that you can employ to make this easier; four of the more
 - Typically the cache is divided up using a consistent hashing function, such that if a request node is looking for a certain piece of data it can quickly know where to look within the distributed cache to determine if that data is available.
 - In this case, each node has a small piece of the cache, and will then send a request to another node for the data before going to the origin.
 - Therefore, one of the advantages of a distributed cache is the increased cache space that can be had just by adding nodes to the request pool.
+- A disadvantage of distributed caching is remedying a missing node. Some distributed caches get around this by storing multiple copies of the data on different nodes; however, you can imagine how this logic can get complicated quickly, especially when you add or remove nodes from the request layer. Although even if a node disappears and part of the cache is lost, the requests will just pull from the origin.
+
+![Figure 1.12: Distributed cache](http://www.aosabook.org/images/distsys/distributedCaching.png)
+
+- The great thing about caches is that they usually make things much faster. The methodology you choose just allows you to make it faster for even more requests.
+- However, all this caching comes at the cost of having to maintain additional storage space, typically in the form of expensive memory.
+- Caches are wonderful for making things generally faster, and moreover provide system functionality under high load conditions when otherwise there would be complete service degradation.
+- One example of a popular open source cache is [Memcached](http://memcached.org/) (which can work both as a local cache and distributed cache); however, there are many other options (including many language or framework specific options).
+- Memcached is used in many large web sites, and even though it can be very powerful, it is simply an in-memory key value store, optimized for arbitrary data storage and fast lookups (O(1)).
+- Facebook's implementation
+  - Facebook uses several different types of caching to obtain their site performance (see "[Facebook caching and performance](https://www.scribd.com/doc/4069180/Caching-Performance-Lessons-from-Facebook)"). They use $GLOBALS and APC caching at the language level (provided in PHP at the cost of a function call) which helps make intermediate function calls and results much faster. (Most languages have these types of libraries to improve web page performance and they should almost always be used.) Facebook then use a global cache that is distributed across many servers (see "[Scaling memcached at Facebook](http://www.facebook.com/note.php?note_id=39391378919)"), such that one function call accessing the cache could make many requests in parallel for data stored on different Memcached servers. This allows them to get much higher performance and throughput for their user profile data, and have one central place to update data (which is important, since cache invalidation and maintaining consistency can be challenging when you are running thousands of servers).
 
 ## References
 
