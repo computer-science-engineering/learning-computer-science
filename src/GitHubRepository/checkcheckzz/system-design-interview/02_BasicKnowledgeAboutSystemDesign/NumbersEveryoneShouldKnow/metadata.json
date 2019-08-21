@@ -1,0 +1,45 @@
+{
+    "type": "Reading",
+    "name": "Numbers Everyone Should Know",
+    "origin": {
+        "name": "Notes - Blog Post",
+        "link": "https://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Blogs",
+            "children": [{
+                "name": "Everything is Data",
+                "children": []
+            }]
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Neil Conway",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
