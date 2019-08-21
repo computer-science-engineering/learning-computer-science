@@ -11,6 +11,11 @@
     - [Caches](#caches)
     - [Global Cache](#global-cache)
     - [Distributed Cache](#distributed-cache)
+    - [Proxies](#proxies)
+    - [Indexes](#indexes)
+    - [Load Balancers](#load-balancers)
+    - [Queues](#queues)
+  - [1.4. Conclusion](#14-conclusion)
   - [References](#references)
 
 ## 1.1. Principles of Web Distributed Systems Design
@@ -268,7 +273,121 @@ There are many options that you can employ to make this easier; four of the more
 - One example of a popular open source cache is [Memcached](http://memcached.org/) (which can work both as a local cache and distributed cache); however, there are many other options (including many language or framework specific options).
 - Memcached is used in many large web sites, and even though it can be very powerful, it is simply an in-memory key value store, optimized for arbitrary data storage and fast lookups (O(1)).
 - Facebook's implementation
-  - Facebook uses several different types of caching to obtain their site performance (see "[Facebook caching and performance](https://www.scribd.com/doc/4069180/Caching-Performance-Lessons-from-Facebook)"). They use $GLOBALS and APC caching at the language level (provided in PHP at the cost of a function call) which helps make intermediate function calls and results much faster. (Most languages have these types of libraries to improve web page performance and they should almost always be used.) Facebook then use a global cache that is distributed across many servers (see "[Scaling memcached at Facebook](http://www.facebook.com/note.php?note_id=39391378919)"), such that one function call accessing the cache could make many requests in parallel for data stored on different Memcached servers. This allows them to get much higher performance and throughput for their user profile data, and have one central place to update data (which is important, since cache invalidation and maintaining consistency can be challenging when you are running thousands of servers).
+  - Facebook uses several different types of caching to obtain their site performance (see "[Facebook caching and performance](https://www.scribd.com/doc/4069180/Caching-Performance-Lessons-from-Facebook)"). They use `$GLOBALS` and APC caching at the language level (provided in PHP at the cost of a function call) which helps make intermediate function calls and results much faster. (Most languages have these types of libraries to improve web page performance and they should almost always be used.)
+  - Facebook then use a global cache that is distributed across many servers (see "[Scaling memcached at Facebook](http://www.facebook.com/note.php?note_id=39391378919)"), such that one function call accessing the cache could make many requests in parallel for data stored on different Memcached servers. This allows them to get much higher performance and throughput for their user profile data, and have one central place to update data (which is important, since cache invalidation and maintaining consistency can be challenging when you are running thousands of servers).
+
+### Proxies
+
+- At a basic level, a proxy server is an intermediate piece of hardware/software that receives requests from clients and relays them to the backend origin servers.
+- Typically, proxies are used
+  - to filter
+    - requests
+    - log requests
+  - or sometimes transform requests by
+    - adding/removing headers
+    - encrypting/decrypting
+    - or compression
+
+![Figure 1.13: Proxy server](http://www.aosabook.org/images/distsys/proxies.png)
+
+- Proxies are also immensely helpful
+  - when coordinating requests from multiple servers
+  - providing opportunities to optimize request traffic from a system-wide perspective
+- One way to use a proxy to speed up data access is to collapse the same (or similar) requests together into one request, and then return the single result to the requesting clients. This is known as collapsed forwarding.
+- Imagine there is a request for the same data (let's call it littleB) across several nodes, and that piece of data is not in the cache. If that request is routed thought the proxy, then all of those requests can be collapsed into one, which means we only have to read littleB off disk once.
+  - Costs:
+    - Each request can have slightly higher latency
+    - some requests may be slightly delayed to be grouped with similar ones
+  - Advantages:
+    - It will improve performance in high load situations, particularly when that same data is requested over and over.
+      - This is similar to a cache, but instead of storing the data/document like a cache, it is optimizing the requests or calls for those documents and acting as a proxy for those clients.
+      - In a LAN proxy, for example, the clients do not need their own IPs to connect to the Internet, and the LAN will collapse calls from the clients for the same content. It is easy to get confused here though, since many proxies are also caches (as it is a very logical place to put a cache), but not all caches act as proxies.
+
+[Figure 1.14: Using a proxy server to collapse requests](http://www.aosabook.org/images/distsys/collapseRequests.png)
+
+- Another great way to use the proxy is to not just collapse requests for the same data, but also to collapse requests for data that is spatially close together in the origin store (consecutively on disk). Employing such a strategy maximizes data locality for the requests, which can result in decreased request latency.
+- For example, let's say a bunch of nodes request parts of B: partB1, partB2, etc. We can set up our proxy to recognize the spatial locality of the individual requests, collapsing them into a single request and returning only bigB, greatly minimizing the reads from the data origin.
+- This can make a really big difference in request time when you are randomly accessing across TBs of data! Proxies are especially helpful under high load situations, or when you have limited caching, since they can essentially batch several requests into one.
+
+[Figure 1.15: Using a proxy to collapse requests for data that is spatially close together](http://www.aosabook.org/images/distsys/collapseRequestsSpatial.png)
+
+- It is worth noting that you can use proxies and caches together, but generally it is best to put the cache in front of the proxy, for the same reason that it is best to let the faster runners start first in a crowded marathon race.
+- This is because the cache is serving data from memory, it is very fast, and it doesn't mind multiple requests for the same result.
+- But if the cache was located on the other side of the proxy server, then there would be additional latency with every request before the cache, and this could hinder performance.
+- If you are looking at adding a proxy to your systems, there are many options to consider; [Squid](http://www.squid-cache.org/) and [Varnish](https://www.varnish-cache.org/) have both been road tested and are widely used in many production web sites. These proxy solutions offer many optimizations to make the most of client-server communication. Installing one of these as a reverse proxy (explained in the load balancer section below) at the web server layer can improve web server performance considerably, reducing the amount of work required to handle incoming client requests.
+
+### Indexes
+
+- Using an index to access your data quickly is a well-known strategy for optimizing data access performance; probably the most well known when it comes to databases.
+- An index makes the trade-offs of increased storage overhead and slower writes (since you must both write the data and update the index) for the benefit of faster reads.
+- Just as to a traditional relational data store, you can also apply this concept to larger data sets. The trick with indexes is you must carefully consider how users will access your data.
+- In the case of data sets that are many TBs in size, but with very small payloads (e.g., 1 KB), indexes are a necessity for optimizing data access.
+- Finding a small payload in such a large data set can be a real challenge since you can't possibly iterate over that much data in any reasonable time.
+- Furthermore, it is very likely that such a large data set is spread over several (or many!) physical devices—this means you need some way to find the correct physical location of the desired data. Indexes are the best way to do this.
+
+![Figure 1.16: Indexes](http://www.aosabook.org/images/distsys/indexes.jpg)
+
+- An index can be used like a table of contents that directs you to the location where your data lives. For example, let's say you are looking for a piece of data, part 2 of B—how will you know where to find it? If you have an index that is sorted by data type — say data A, B, C — it would tell you the location of data B at the origin. Then you just have to seek to that location and read the part of B you want. (See Figure 1.16.)
+- These indexes are often stored in memory, or somewhere very local to the incoming client request. Berkeley DBs (BDBs) and tree-like data structures are commonly used to store data in ordered lists, ideal for access with an index.
+- Often there are many layers of indexes that serve as a map, moving you from one location to the next, and so forth, until you get the specific piece of data you want.
+
+![Figure 1.17: Many layers of indexes](http://www.aosabook.org/images/distsys/multipleIndexes.jpg)
+
+- Indexes can also be used to create several different views of the same data. For large data sets, this is a great way to define different filters and sorts without resorting to creating many additional copies of the data.
+- For example, imagine that the image hosting system from earlier is actually hosting images of book pages, and the service allows client queries across the text in those images, searching all the book content about a topic, in the same way search engines allow you to search HTML content. In this case, all those book images take many, many servers to store the files, and finding one page to render to the user can be a bit involved. First, inverse indexes to query for arbitrary words and word tuples need to be easily accessible; then there is the challenge of navigating to the exact page and location within that book, and retrieving the right image for the results. So in this case the inverted index would map to a location (such as book B), and then B may contain an index with all the words, locations and number of occurrences in each part.
+- An inverted index, which could represent Index1 in the diagram above, might look something like the following—each word or tuple of words provide an index of what books contain them.
+
+| Word(s)       | Book(s)                |
+| ------------- | ---------------------- |
+| being awesome | Book B, Book C, Book D |
+| always        | Book C, Book F         |
+| believe       | Book B                 |
+
+- The intermediate index would look similar but would contain just the words, location, and information for book B. This nested index architecture allows each of these indexes to take up less space than if all of that info had to be stored into one big inverted index.
+- And this is key in large-scale systems because even compressed, these indexes can get quite big and expensive to store. In this system if we assume we have a lot of the books in the world — 100,000,000 (see [Inside Google Books](http://booksearch.blogspot.com/2010/08/books-of-world-stand-up-and-be-counted.html) blog post) — and that each book is only 10 pages long (to make the math easier), with 250 words per page, that means there are 250 billion words. If we assume an average of 5 characters per word, and each character takes 8 bits (or 1 byte, even though some characters are 2 bytes), so 5 bytes per word, then an index containing only each word once is over a terabyte of storage. So you can see creating indexes that have a lot of other information like tuples of words, locations for the data, and counts of occurrences, can add up very quickly.
+- Creating these intermediate indexes and representing the data in smaller sections makes big data problems tractable. Data can be spread across many servers and still accessed quickly. Indexes are a cornerstone of information retrieval, and the basis for today's modern search engines. Of course, this section only scratched the surface, and there is a lot of research being done on how to make indexes smaller, faster, contain more information (like relevancy), and update seamlessly. (There are some manageability challenges with race conditions, and with the sheer number of updates required to add new data or change existing data, particularly in the event where relevancy or scoring is involved).
+- Being able to find your data quickly and easily is important; indexes are an effective and simple tool to achieve this.
+
+### Load Balancers
+
+- Finally, another critical piece of any distributed system is a load balancer. Load balancers are a principal part of any architecture, as their role is to distribute load across a set of nodes responsible for servicing requests. This allows multiple nodes to transparently service the same function in a system. Their main purpose is to handle a lot of simultaneous connections and route those connections to one of the request nodes, allowing the system to scale to service more requests by just adding nodes.
+
+![Figure 1.18: Load balancer](http://www.aosabook.org/images/distsys/loadBalancer.png)
+
+- There are many different algorithms that can be used to service requests, including
+  - picking a random node
+  - round robin
+  - or even selecting the node based on certain criteria, such as memory or CPU utilization.
+- Load balancers can be implemented as software or hardware appliances. One open source software load balancer that has received wide adoption is [HAProxy](http://www.haproxy.org/)).
+- In a distributed system, load balancers are often found at the very front of the system, such that all incoming requests are routed accordingly. In a complex distributed system, it is not uncommon for a request to be routed to multiple load balancers.
+
+![Figure 1.19: Multiple load balancers](http://www.aosabook.org/images/distsys/multipleLoadBalancers.png)
+
+- Like proxies, some load balancers can also route a request differently depending on the type of request it is. (Technically these are also known as reverse proxies.)
+- One of the challenges with load balancers is managing user-session-specific data. In an e-commerce site, when you only have one client it is very easy to allow users to put things in their shopping cart and persist those contents between visits (which is important, because it is much more likely you will sell the product if it is still in the user's cart when they return). However, if a user is routed to one node for a session, and then a different node on their next visit, there can be inconsistencies since the new node may be missing that user's cart contents. One way around this can be to make sessions sticky so that the user is always routed to the same node, but then it is very hard to take advantage of some reliability features like automatic failover. In this case, the user's shopping cart would always have the contents, but if their sticky node became unavailable there would need to be a special case and the assumption of the contents being there would no longer be valid (although hopefully this assumption wouldn't be built into the application). Of course, this problem can be solved using other strategies and tools in this chapter, like services, and many not covered (like browser caches, cookies, and URL rewriting).
+- If a system only has a couple of a nodes, systems like round robin DNS may make more sense since load balancers can be expensive and add an unneeded layer of complexity. Of course in larger systems there are all sorts of different scheduling and load-balancing algorithms, including simple ones like random choice or round robin, and more sophisticated mechanisms that take things like utilization and capacity into consideration. All of these algorithms allow traffic and requests to be distributed, and can provide helpful reliability tools like automatic failover, or automatic removal of a bad node (such as when it becomes unresponsive). However, these advanced features can make problem diagnosis cumbersome. For example, when it comes to high load situations, load balancers will remove nodes that may be slow or timing out (because of too many requests), but that only exacerbates the situation for the other nodes. In these cases extensive monitoring is important, because overall system traffic and throughput may look like it is decreasing (since the nodes are serving less requests) but the individual nodes are becoming maxed out.
+- Load balancers are an easy way to allow you to expand system capacity, and like the other techniques in this article, play an essential role in distributed system architecture. Load balancers also provide the critical function of being able to test the health of a node, such that if a node is unresponsive or over-loaded, it can be removed from the pool handling requests, taking advantage of the redundancy of different nodes in your system.
+
+### Queues
+
+- So far we have covered a lot of ways to read data quickly, but another important part of scaling the data layer is effective management of writes. When systems are simple, with minimal processing loads and small databases, writes can be predictably fast; however, in more complex systems writes can take an almost non-deterministically long time. For example, data may have to be written several places on different servers or indexes, or the system could just be under high load. In the cases where writes, or any task for that matter, may take a long time, achieving performance and availability requires building asynchrony into the system; a common way to do that is with queues.
+
+![Figure 1.20: Synchronous request](http://www.aosabook.org/images/distsys/synchronousRequest.png)
+
+- Imagine a system where each client is requesting a task to be remotely serviced. Each of these clients sends their request to the server, where the server completes the tasks as quickly as possible and returns the results to their respective clients. In small systems where one server (or logical service) can service incoming clients just as fast as they come, this sort of situation should work just fine. However, when the server receives more requests than it can handle, then each client is forced to wait for the other clients' requests to complete before a response can be generated. This is an example of a synchronous request, depicted in Figure 1.20.
+
+- This kind of synchronous behavior can severely degrade client performance; the client is forced to wait, effectively performing zero work, until its request can be answered. Adding additional servers to address system load does not solve the problem either; even with effective load balancing in place it is extremely difficult to ensure the even and fair distribution of work required to maximize client performance. Further, if the server handling requests is unavailable, or fails, then the clients upstream will also fail. Solving this problem effectively requires abstraction between the client's request and the actual work performed to service it.
+
+![Figure 1.21: Using queues to manage requests](http://www.aosabook.org/images/distsys/queues.png)
+
+- Enter queues. A queue is as simple as it sounds: a task comes in, is added to the queue and then workers pick up the next task as they have the capacity to process it. (See Figure 1.21.) These tasks could represent simple writes to a database, or something as complex as generating a thumbnail preview image for a document. When a client submits task requests to a queue they are no longer forced to wait for the results; instead they need only acknowledgement that the request was properly received. This acknowledgement can later serve as a reference for the results of the work when the client requires it.
+- Queues enable clients to work in an asynchronous manner, providing a strategic abstraction of a client's request and its response. On the other hand, in a synchronous system, there is no differentiation between request and reply, and they therefore cannot be managed separately. In an asynchronous system the client requests a task, the service responds with a message acknowledging the task was received, and then the client can periodically check the status of the task, only requesting the result once it has completed. While the client is waiting for an asynchronous request to be completed it is free to perform other work, even making asynchronous requests of other services. The latter is an example of how queues and messages are leveraged in distributed systems.
+- Queues also provide some protection from service outages and failures. For instance, it is quite easy to create a highly robust queue that can retry service requests that have failed due to transient server failures. It is more preferable to use a queue to enforce quality-of-service guarantees than to expose clients directly to intermittent service outages, requiring complicated and often-inconsistent client-side error handling.
+- Queues are fundamental in managing distributed communication between different parts of any large-scale distributed system, and there are lots of ways to implement them. There are quite a few open source queues like [RabbitMQ](http://www.rabbitmq.com/), [ActiveMQ](http://activemq.apache.org/), [BeanstalkD](http://kr.github.com/beanstalkd/), but some also use services like [Zookeeper](http://zookeeper.apache.org/), or even data stores like [Redis](http://redis.io/).
+
+## 1.4. Conclusion
+
+Designing efficient systems with fast access to lots of data is exciting, and there are lots of great tools that enable all kinds of new applications.
 
 ## References
 
