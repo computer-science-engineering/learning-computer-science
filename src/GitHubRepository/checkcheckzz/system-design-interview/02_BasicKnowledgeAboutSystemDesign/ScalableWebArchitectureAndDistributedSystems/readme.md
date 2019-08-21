@@ -17,6 +17,7 @@
     - [Queues](#queues)
   - [1.4. Conclusion](#14-conclusion)
   - [References](#references)
+  - [Licensing](#licensing)
 
 ## 1.1. Principles of Web Distributed Systems Design
 
@@ -392,3 +393,7 @@ Designing efficient systems with fast access to lots of data is exciting, and th
 ## References
 
 1. [The Architecture of Open Source Applications (Volume 2): Scalable Web Architecture and Distributed Systems](http://www.aosabook.org/en/distsys.html)
+
+## Licensing
+
+The above notes are captured, with some edits and changes, from the original book chapter as linked under the References section above and as per its licensing terms, here is a link to the original license: [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/legalcode).
