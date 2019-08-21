@@ -1,0 +1,42 @@
+{
+    "type": "Reading",
+    "name": "Fallacies of Distributed Systems",
+    "origin": {
+        "name": "Notes - Article",
+        "link": "https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Article",
+            "children": []
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Arnon Rotem-Gal-Oz",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
