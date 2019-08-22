@@ -33,8 +33,10 @@ public class SolutionTest {
         int[] nums = new int[] {1, 4, 4, 3, 2};
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 4;
-            int actual = Solution.findNumber(nums);
-            assertEquals(expected, actual);
+            int actual1 = Solution.findNumber(nums);
+            int actual2 = Solution.findDuplicate(nums);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -43,8 +45,10 @@ public class SolutionTest {
         int[] nums = new int[] {2, 1, 3, 3, 5, 4};
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 3;
-            int actual = Solution.findNumber(nums);
-            assertEquals(expected, actual);
+            int actual1 = Solution.findNumber(nums);
+            int actual2 = Solution.findDuplicate(nums);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 
@@ -53,8 +57,10 @@ public class SolutionTest {
         int[] nums = new int[] {2, 4, 1, 4, 4};
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 4;
-            int actual = Solution.findNumber(nums);
-            assertEquals(expected, actual);
+            int actual1 = Solution.findNumber(nums);
+            int actual2 = Solution.findDuplicate(nums);
+            assertEquals(expected, actual1);
+            assertEquals(expected, actual2);
         });
     }
 }

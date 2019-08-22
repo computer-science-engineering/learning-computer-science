@@ -5,6 +5,10 @@ public class Solution {
         System.out.println(findNumber(new int[] {1, 4, 4, 3, 2}));
         System.out.println(findNumber(new int[] {2, 1, 3, 3, 5, 4}));
         System.out.println(findNumber(new int[] {2, 4, 1, 4, 4}));
+        System.out.println();
+        System.out.println(findDuplicate(new int[] {1, 4, 4, 3, 2}));
+        System.out.println(findDuplicate(new int[] {2, 1, 3, 3, 5, 4}));
+        System.out.println(findDuplicate(new int[] {2, 4, 1, 4, 4}));
     }
 
     public static int findNumber(int[] nums) {
