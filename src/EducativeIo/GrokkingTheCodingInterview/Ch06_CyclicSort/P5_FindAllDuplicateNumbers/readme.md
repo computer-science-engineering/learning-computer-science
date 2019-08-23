@@ -24,6 +24,10 @@ This problem follows the **Cyclic Sort** pattern and shares similarities with **
 
 ### Time Complexity
 
+The time complexity of the above algorithm is O(n) as we are iterating the input array only two times.
+
 ### Space Complexity
+
+Ignoring the space required for storing the duplicates, the algorithm runs in constant space O(1).
 
 ## References
