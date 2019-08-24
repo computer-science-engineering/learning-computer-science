@@ -1,0 +1,42 @@
+{
+    "type": "Coding",
+    "name": "Find the Smallest Missing Positive Number",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/3jEXWgB5ZmM"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Cyclic Sort",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Arrays",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
