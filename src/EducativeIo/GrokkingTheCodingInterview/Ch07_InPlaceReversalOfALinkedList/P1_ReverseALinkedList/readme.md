@@ -16,6 +16,6 @@ The time complexity of our algorithm will be O(N) where ‘N’ is the total num
 
 ### Space Complexity
 
-We only used constant space, therefore, the space complexity of our algorithm is O(1)O(1).
+We only used constant space, therefore, the space complexity of our algorithm is O(1).
 
 ## References

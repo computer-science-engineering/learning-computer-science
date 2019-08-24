@@ -185,6 +185,7 @@
 - Inkscape
 - VLC Media player
 - Opera Browser (for free VPN)
+- [Graphviz](https://graphviz.gitlab.io)
 - KeePass Password Safe
   - Ubuntu
 

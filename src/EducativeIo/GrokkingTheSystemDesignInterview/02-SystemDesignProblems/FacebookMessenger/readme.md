@@ -81,7 +81,7 @@ Since each incoming message needs to go out to another user, we will need the sa
 
 ## High Level Design
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/facebook-messenger-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 Workflow:
 
