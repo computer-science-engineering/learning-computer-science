@@ -96,7 +96,7 @@ streamVideo(api_dev_key, video_id, offset, codec, resolution)
 5. **User Database:** To store user’s information, e.g., name, email, address, etc.
 6. **Video metadata storage:** A metadata database to store all the information about videos like title, file path in the system, uploading user, total views, likes, dislikes, etc. It will also be used to store all the video comments.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/youtube-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 ## Database Schema
 
@@ -157,7 +157,7 @@ For each video comment, we need to store following information:
   - New task will be added to proceeding queue to encode video into multiple formats.
   - Once encoding is done, uploaded will be notified and video will be made available for viewing/sharing.
 
-![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/youtube-detail.png)
+[detailed component design](./images/detailed-component-design_base64.md)
 
 ## Metadata Sharding
 

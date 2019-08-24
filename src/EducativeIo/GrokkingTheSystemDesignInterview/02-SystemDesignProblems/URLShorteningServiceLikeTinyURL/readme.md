@@ -196,7 +196,7 @@ The main functionality desired is the generation of a short and unique string fo
         - If user not signed in, have to ask user to choose unique key.
           - Even then if key is not unique, have to keep generating till we get a unique one.
 
-[Request flow for accessing shortened url](./images/request-flow-for-accessing-shortened-url_base64)
+[Request flow for accessing shortened url](./images/request-flow-for-accessing-shortened-url_base64.md)
 
 ### Generating keys offline
 
@@ -218,7 +218,7 @@ The main functionality desired is the generation of a short and unique string fo
 - Key lookup: Look up key in database to get original full URL. If present we return a 302 redirect, passing original URL in _Location_ field of response. If not present, we return a 404 Not Found.
 - Size limit on custom short link: Yes. Say, 16 characters per custom short link.
 
-![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-overview.png)
+[High level design](./images/high-level-system-design_base64.md)
 
 ## Data Partitioning and Replication
 
@@ -261,7 +261,7 @@ A separate Cleanup service can run periodically to remove expired links from our
 
 ## Detailed Component Design Diagram
 
-![Detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/short-url-detail.png)
+[Detailed component design](./images/detailed-component-design_base64.md)
 
 ## Telemetry
 

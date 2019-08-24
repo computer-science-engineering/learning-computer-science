@@ -1,20 +1,20 @@
 # Designing Yelp or Nearby Friends
 
-- [Designing Yelp or Nearby Friends](#Designing-Yelp-or-Nearby-Friends)
-  - [Why Yelp or Proximity Server](#Why-Yelp-or-Proximity-Server)
-  - [Requirements and Goals of the System](#Requirements-and-Goals-of-the-System)
-  - [Scale Estimation](#Scale-Estimation)
-  - [Database Schema](#Database-Schema)
-  - [System APIs](#System-APIs)
-  - [Basic System Design and Algorithm](#Basic-System-Design-and-Algorithm)
-    - [SQL solution](#SQL-solution)
-    - [Grids](#Grids)
-    - [Dynamic size grids](#Dynamic-size-grids)
-  - [Data Partitioning](#Data-Partitioning)
-  - [Replication and Fault Tolerance](#Replication-and-Fault-Tolerance)
-  - [Cache](#Cache)
-  - [Load Balancing (LB)](#Load-Balancing-LB)
-  - [Ranking](#Ranking)
+- [Designing Yelp or Nearby Friends](#designing-yelp-or-nearby-friends)
+  - [Why Yelp or Proximity Server](#why-yelp-or-proximity-server)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+  - [Scale Estimation](#scale-estimation)
+  - [Database Schema](#database-schema)
+  - [System APIs](#system-apis)
+  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
+    - [SQL solution](#sql-solution)
+    - [Grids](#grids)
+    - [Dynamic size grids](#dynamic-size-grids)
+  - [Data Partitioning](#data-partitioning)
+  - [Replication and Fault Tolerance](#replication-and-fault-tolerance)
+  - [Cache](#cache)
+  - [Load Balancing (LB)](#load-balancing-lb)
+  - [Ranking](#ranking)
 
 Design a Yelp like service, where users can search for nearby places like restaurants, theaters, or shopping malls, etc., and can also add/view reviews of places.
 
@@ -186,7 +186,7 @@ A JSON containing information about a list of businesses matching the search que
   - All servers will have approximately equal number of Places.
   - We will still be searching all the neighboring grids within the given radius on all partitions.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/yelp-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 ## Replication and Fault Tolerance
 

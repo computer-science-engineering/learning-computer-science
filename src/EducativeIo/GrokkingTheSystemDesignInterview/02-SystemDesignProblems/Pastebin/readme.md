@@ -164,7 +164,7 @@ deletePaste(api_dev_key, api_paste_key)
 
 ## High Level Design
 
-![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/pastebin-overview.png)
+[High level design](./images/high-level-design_base64.md)
 
 ## Component Design
 
@@ -197,7 +197,7 @@ deletePaste(api_dev_key, api_paste_key)
 
 ## Detailed Component Design Diagram
 
-![Detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/pastebin-detail.png)
+[Detailed component design](./images/detailed-component-design_base64.md)
 
 ## Purging or DB Cleanup
 

@@ -1,27 +1,27 @@
 # Designing a Web Crawler
 
-- [Designing a Web Crawler](#Designing-a-Web-Crawler)
-  - [What is a Web Crawler](#What-is-a-Web-Crawler)
-  - [Requirements and Goals of the System](#Requirements-and-Goals-of-the-System)
-  - [Some Design Considerations](#Some-Design-Considerations)
-  - [Capacity Estimation and Constraints](#Capacity-Estimation-and-Constraints)
-  - [High Level design](#High-Level-design)
-    - [Basic Algorithm](#Basic-Algorithm)
-    - [How to crawl](#How-to-crawl)
-    - [Difficulties in implementing efficient web crawler](#Difficulties-in-implementing-efficient-web-crawler)
-    - [Components](#Components)
-  - [Detailed Component Design](#Detailed-Component-Design)
-    - [URL frontier](#URL-frontier)
-    - [Fetcher module](#Fetcher-module)
-    - [Document input stream](#Document-input-stream)
-    - [Document dedupe test](#Document-dedupe-test)
-    - [URL filters](#URL-filters)
-    - [Domain name resolution](#Domain-name-resolution)
-    - [URL dedupe test](#URL-dedupe-test)
-    - [Checkpointing](#Checkpointing)
-  - [Fault tolerance](#Fault-tolerance)
-  - [Data Partitioning](#Data-Partitioning)
-  - [Crawler Traps](#Crawler-Traps)
+- [Designing a Web Crawler](#designing-a-web-crawler)
+  - [What is a Web Crawler](#what-is-a-web-crawler)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+  - [Some Design Considerations](#some-design-considerations)
+  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+  - [High Level design](#high-level-design)
+    - [Basic Algorithm](#basic-algorithm)
+    - [How to crawl](#how-to-crawl)
+    - [Difficulties in implementing efficient web crawler](#difficulties-in-implementing-efficient-web-crawler)
+    - [Components](#components)
+  - [Detailed Component Design](#detailed-component-design)
+    - [URL frontier](#url-frontier)
+    - [Fetcher module](#fetcher-module)
+    - [Document input stream](#document-input-stream)
+    - [Document dedupe test](#document-dedupe-test)
+    - [URL filters](#url-filters)
+    - [Domain name resolution](#domain-name-resolution)
+    - [URL dedupe test](#url-dedupe-test)
+    - [Checkpointing](#checkpointing)
+  - [Fault tolerance](#fault-tolerance)
+  - [Data Partitioning](#data-partitioning)
+  - [Crawler Traps](#crawler-traps)
 
 Design a Web Crawler that will systematically browse and download the World Wide Web. Web crawlers are also known as web spiders, robots, worms, walkers, and bots.
 
@@ -93,7 +93,7 @@ Take a list of seed URLs as input and repeatedly execute following steps:
 4. **Duplicate Eliminator:** To make sure the same content is not extracted twice unintentionally.
 5. **Datastore:** To store retrieved pages, URLs, and other metadata.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/web-crawler-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 ## Detailed Component Design
 
@@ -113,7 +113,7 @@ Take a list of seed URLs as input and repeatedly execute following steps:
     - If the URL passes the filter, the worker checks if it has been seen before, i.e., if it is in the URL frontier, or has already been downloaded.
     - If URL is new, it is added to the frontier.
 
-![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/web-crawler-detail.png)
+[detailed component design](./images/detailed-component-design_base64.md)
 
 ### URL frontier
 

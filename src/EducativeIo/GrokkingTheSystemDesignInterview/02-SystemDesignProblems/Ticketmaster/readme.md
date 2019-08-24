@@ -1,31 +1,31 @@
 # Design Ticketmaster
 
-- [Design Ticketmaster](#Design-Ticketmaster)
-  - [What is an online movie ticket booking system](#What-is-an-online-movie-ticket-booking-system)
-  - [Requirements and Goals of the System](#Requirements-and-Goals-of-the-System)
-  - [Some Design Considerations](#Some-Design-Considerations)
-  - [Capacity Estimation](#Capacity-Estimation)
-    - [Traffic estimates](#Traffic-estimates)
-    - [Storage estimates](#Storage-estimates)
-  - [System APIs](#System-APIs)
-  - [Database Design](#Database-Design)
-    - [Movie](#Movie)
-    - [Show](#Show)
-    - [Booking](#Booking)
-    - [User](#User)
-    - [Cinema](#Cinema)
-    - [Cinema_hall](#Cinemahall)
-    - [Show_Seat](#ShowSeat)
-    - [Payment](#Payment)
-    - [City](#City)
-    - [Cinema_Seat](#CinemaSeat)
-  - [High Level Design](#High-Level-Design)
-  - [Detailed Component Design](#Detailed-Component-Design)
-  - [Concurrency](#Concurrency)
-  - [Fault Tolerance](#Fault-Tolerance)
-  - [Data Partitioning](#Data-Partitioning)
-    - [Database partitioning](#Database-partitioning)
-    - [ActiveReservationService and WaitingUserService partitioning](#ActiveReservationService-and-WaitingUserService-partitioning)
+- [Design Ticketmaster](#design-ticketmaster)
+  - [What is an online movie ticket booking system](#what-is-an-online-movie-ticket-booking-system)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+  - [Some Design Considerations](#some-design-considerations)
+  - [Capacity Estimation](#capacity-estimation)
+    - [Traffic estimates](#traffic-estimates)
+    - [Storage estimates](#storage-estimates)
+  - [System APIs](#system-apis)
+  - [Database Design](#database-design)
+    - [Movie](#movie)
+    - [Show](#show)
+    - [Booking](#booking)
+    - [User](#user)
+    - [Cinema](#cinema)
+    - [Cinema_hall](#cinemahall)
+    - [Show_Seat](#showseat)
+    - [Payment](#payment)
+    - [City](#city)
+    - [Cinema_Seat](#cinemaseat)
+  - [High Level Design](#high-level-design)
+  - [Detailed Component Design](#detailed-component-design)
+  - [Concurrency](#concurrency)
+  - [Fault Tolerance](#fault-tolerance)
+  - [Data Partitioning](#data-partitioning)
+    - [Database partitioning](#database-partitioning)
+    - [ActiveReservationService and WaitingUserService partitioning](#activereservationservice-and-waitinguserservice-partitioning)
 
 Design an online ticketing system that sells movie tickets like Ticketmaster or BookMyShow.
 
@@ -130,7 +130,7 @@ Some observations:
   - storing data in the databases
   - working with the cache servers to process reservations.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/ticketmaster-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 ## Detailed Component Design
 

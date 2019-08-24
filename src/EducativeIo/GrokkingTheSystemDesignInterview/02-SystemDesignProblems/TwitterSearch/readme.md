@@ -1,20 +1,20 @@
 # Designing Twitter Search
 
-- [Designing Twitter Search](#Designing-Twitter-Search)
-  - [What is Twitter Search](#What-is-Twitter-Search)
-  - [Requirements and Goals of the System](#Requirements-and-Goals-of-the-System)
-  - [Capacity Estimation and Constraints](#Capacity-Estimation-and-Constraints)
-    - [Storage Capacity](#Storage-Capacity)
-  - [System APIs](#System-APIs)
-  - [High Level Design](#High-Level-Design)
-  - [Detailed Component Design](#Detailed-Component-Design)
-    - [Storage](#Storage)
-    - [Index](#Index)
-    - [Detailed component design diagram](#Detailed-component-design-diagram)
-  - [Fault Tolerance](#Fault-Tolerance)
-  - [Cache](#Cache)
-  - [Load Balancing](#Load-Balancing)
-  - [Ranking](#Ranking)
+- [Designing Twitter Search](#designing-twitter-search)
+  - [What is Twitter Search](#what-is-twitter-search)
+  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+    - [Storage Capacity](#storage-capacity)
+  - [System APIs](#system-apis)
+  - [High Level Design](#high-level-design)
+  - [Detailed Component Design](#detailed-component-design)
+    - [Storage](#storage)
+    - [Index](#index)
+    - [Detailed component design diagram](#detailed-component-design-diagram)
+  - [Fault Tolerance](#fault-tolerance)
+  - [Cache](#cache)
+  - [Load Balancing](#load-balancing)
+  - [Ranking](#ranking)
 
 Twitter is one of the largest social networking service where users can share photos, news, and text-based messages. Design a service that can store and search user tweets.
 
@@ -60,7 +60,7 @@ A JSON containing information about a list of tweets matching the search query. 
 - Need to store all the statuses in a database.
 - Need to build an index that can keep track of which word appears in which tweet.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-search-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 ## Detailed Component Design
 
@@ -118,7 +118,7 @@ A JSON containing information about a list of tweets matching the search query. 
 
 ### Detailed component design diagram
 
-![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-search-detail.png)
+[detailed component design](./images/detailed-component-design_base64.md)
 
 ## Fault Tolerance
 
