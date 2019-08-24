@@ -1,0 +1,42 @@
+{
+    "type": "Coding",
+    "name": "Find the First K Missing Positive Numbers",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/q2LA7G0ANX0"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Cyclic Sort",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Arrays",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
