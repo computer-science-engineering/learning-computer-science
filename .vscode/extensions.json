@@ -3,7 +3,6 @@
 
 {
   "recommendations": [
-    "Mikael.Angular-BeastCode",
     "njpwerner.autodocstring",
     "HookyQR.beautify",
     "peymanslh.blueberry-dark-theme",
@@ -35,7 +34,6 @@
     "mdickin.markdown-shortcuts",
     "whizkydee.material-palenight-theme",
     "goessner.mdmath",
-    "Angular.ng-template",
     "liviuschera.noctis",
     "dnlytras.nord-wave",
     "christian-kohler.npm-intellisense",
