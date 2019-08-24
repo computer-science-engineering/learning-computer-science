@@ -71,14 +71,14 @@ Active connections per minute = 1 M
 
 ### Summary
 
-| Item            | Value  |
-| --------------- | ------ |
-| Total Users     | 500 M  |
-| Files per user  | 200    |
-| File size (avg) | 100 KB |
-|-----------------|--------|
-| Total Files     | 100 B  |
-| Total Storage   | 10 PB  |
+| Item              | Value    |
+| ----------------- | -------- |
+| Total Users       | 500 M    |
+| Files per user    | 200      |
+| File size (avg)   | 100 KB   |
+| ----------------- | -------- |
+| Total Files       | 100 B    |
+| Total Storage     | 10 PB    |
 
 ## High Level Design
 
@@ -88,7 +88,7 @@ Active connections per minute = 1 M
 - Servers that can facilitate updating metadata about files and users.
 - Need mechanism to notify all clients when an update happens so they can synchronize their files.
 
-![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/dropbox-overview.png)
+[High level design](./images/high-level-design_base64.md)
 
 ## Component Design
 
@@ -212,7 +212,7 @@ Should mobile clients sync remote changes immediately: Mobile clients usually sy
 
 ### Detailed Component Diagram
 
-![detailed component diagram](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/dropbox-detail.png)
+[detailed component diagram](./images/detailed-component-design_base64.md)
 
 ## File Processing Workflow
 

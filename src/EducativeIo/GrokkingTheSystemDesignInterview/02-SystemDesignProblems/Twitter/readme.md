@@ -114,7 +114,7 @@ Returns URL to access the tweet.
 - Read heavy system.
 - This traffic will be distributed unevenly throughout the day, though, at peak time we should expect at least a few thousand write requests and around 1M read requests per second.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 ## Database Schema
 
@@ -259,7 +259,7 @@ Returns URL to access the tweet.
 
 ## Detailed component design diagram
 
-![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/twitter-detail.png)
+[detailed component design](./images/detailed-component-design_base64.md)
 
 ## Timeline Generation
 

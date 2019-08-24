@@ -180,7 +180,7 @@ We have to keep certain things in mind while designing our database:
 
 ### Detailed component design diagram
 
-![detailed component design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/facebook-messenger-detail.png)
+[detailed component design](./images/detailed-component-design_base64.md)
 
 Summary
 

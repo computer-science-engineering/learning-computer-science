@@ -103,7 +103,7 @@ There are two kinds of users in our system:
   - For example, grids can grow/shrink an extra 10% before we partition/merge them.
   - This will decrease the load for grid partition or merge on high traffic grids.
 
-![high level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/uber-backend-overview.png)
+[high level design](./images/high-level-design_base64.md)
 
 - **Ride request**
   - A customer will put a request for a ride.

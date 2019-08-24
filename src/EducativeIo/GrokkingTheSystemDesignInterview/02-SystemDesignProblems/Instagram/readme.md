@@ -86,7 +86,7 @@ Space required for 10 years of photos
 - Object storage servers for photos.
 - Database server for metadata information about photos
 
-![High level design](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/instagram-overview.png)
+[High level design](./images/high-level-design_base64.md)
 
 ## Database Schema
 
@@ -195,7 +195,7 @@ For all tables for 10 years = 34 GB + 1.8 TB + 1.82 TB ~= 3.7 TB
 
 - Multiple replicas are needed.
 
-![Detailed component diagram](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/instagram-detail.png)
+[Detailed component diagram](./images/detailed-component-design_base64.md)
 
 ## Data Sharding
 

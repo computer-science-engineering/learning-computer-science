@@ -187,7 +187,7 @@ At a high level, we will need following components in our Newsfeed service:
 
 High-level architecture diagram of system. User B and C are following User A.
 
-![high level diagram](https://raw.githubusercontent.com/tuliren/grokking-system-design/master/img/facebook-newsfeed-overview.png)
+[high level diagram](./images/high-level-diagram_base64.md)
 
 ## Detailed Component Design
 
