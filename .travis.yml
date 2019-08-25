@@ -31,6 +31,7 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: false
+  commit_message: Travis CI Updates [ci skip]
   local-dir: website
   on:
     branch: master
