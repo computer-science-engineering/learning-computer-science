@@ -28,6 +28,12 @@ end note
 
 ```plantuml
 @startuml
+component null1 [
+    null
+    ]
+component null2 [
+    null
+    ]
 previous -> [2]
 [null1] <- [2]
 current -> [4]
@@ -40,6 +46,12 @@ current -> [4]
 
 ```plantuml
 @startuml
+component null1 [
+    null
+    ]
+component null2 [
+    null
+    ]
 previous -> [4]
 [null1] <- [2]
 [2] <- [4]
@@ -52,6 +64,12 @@ current -> [6]
 
 ```plantuml
 @startuml
+component null1 [
+    null
+    ]
+component null2 [
+    null
+    ]
 previous -> [6]
 [null1] <- [2]
 [2] <- [4]
@@ -64,6 +82,12 @@ current -> [8]
 
 ```plantuml
 @startuml
+component null1 [
+    null
+    ]
+component null2 [
+    null
+    ]
 previous -> [8]
 [null1] <- [2]
 [2] <- [4]
@@ -76,6 +100,12 @@ current -> [10]
 
 ```plantuml
 @startuml
+component null1 [
+    null
+    ]
+component null2 [
+    null
+    ]
 previous -> [10]
 [null1] <- [2]
 [2] <- [4]
