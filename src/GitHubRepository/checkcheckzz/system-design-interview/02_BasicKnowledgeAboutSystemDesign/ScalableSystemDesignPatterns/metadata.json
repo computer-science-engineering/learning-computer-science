@@ -1,0 +1,44 @@
+{
+    "type": "Reading",
+    "name": "Scalable System Design Patterns",
+    "origin": {
+        "name": "Notes - Blog Post",
+        "link": "http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Blogs",
+            "children": [{
+                "name": "Pragmatic Programming Techniques",
+                "children": []
+            }]
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Ricky Ho",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
