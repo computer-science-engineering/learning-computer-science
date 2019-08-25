@@ -7,6 +7,8 @@
   - [Shared Space](#shared-space)
   - [Pipe and Filter](#pipe-and-filter)
   - [Map Reduce](#map-reduce)
+  - [Bulk Synchronous Parallel](#bulk-synchronous-parallel)
+  - [Execution Orchestrator](#execution-orchestrator)
   - [References](#references)
 
 ## Load Balancer
@@ -122,12 +124,12 @@ package "Worker Pool" {
 
 ```plantuml
 @startuml
+cloud "Tuple Space"
+[Client] -> [Tuple Space]
 note top of Client
 1) Put request in space.
 2) Take request from space.
 end note
-cloud "Tuple Space"
-[Client] -> [Tuple Space]
 package "Worker Pool 1" {
     [Worker n]
     [Worker 2]
@@ -215,7 +217,172 @@ WorkerPoolNote .. [Worker m]
 - This pattern is used in many of Google's internal application, as well as implemented in open source Hadoop parallel processing framework.
 - This pattern can be used in many many application design scenarios.
 
+```plantuml
+@startuml
+package "DFS (Input)" {
+    database "db a"
+    database "db b"
+    database "db c"
+    Input .. [db a]
+    [db a] .. [db b]
+    [db b] .. [db c]
+}
+package "DFS (Output)" {
+    database "db x"
+    database "db y"
+    database "db z"
+    Output .. [db x]
+    [db x] .. [db y]
+    [db y] .. [db z]
+}
+package "Job Scheduler" {
+    Job_Scheduler .. [Mapper 1]
+    [Mapper 1] .. [Mapper 2]
+    [Mapper 2] .. [Mapper n]
+    [Reducer 1] .. [Reducer n]
+    [Mapper 1] -> [Reducer 1]
+    [Mapper 2] -> [Reducer 1]
+    [Mapper n] -> [Reducer 1]
+    [Mapper 1] -> [Reducer n]
+    [Mapper 2] -> [Reducer n]
+    [Mapper n] -> [Reducer n]
+}
+note as DFS
+DFS = Distributed File System
+end note
+[db a] -> [Mapper 1]
+[db b] -> [Mapper 2]
+[db c] -> [Mapper n]
+[Reducer 1] -> [db x]
+[Reducer n] -> [db y]
+[Client] --> Job_Scheduler
+[Client] --> Input
+Output --> [Client]
+note left of Client
+1) Load input data into input DFS.
+2) Submit job.
+3) Extract input from output DFS.
+end note
+@enduml
+```
+
+## Bulk Synchronous Parallel
+
+- This model is based on lock-step execution across all workers, coordinated by a master.
+- Each worker repeat the following steps until the exit condition is reached, when there is no more active workers.
+
+1. Each worker read data from input queue
+2. Each worker perform local processing based on the read data
+3. Each worker push local result along its direct connection
+
+- This pattern has been used in Google's [Pregel graph processing model](http://horicky.blogspot.com/2010/07/google-pregel-graph-processing.html) as well as the [Apache Hama](http://incubator.apache.org/hama/) project.
+
+```plantuml
+@startuml
+package " " {
+    frame "Worker1" {
+        InQ1 - [Worker1]
+    }
+    frame "Worker2" {
+        InQ2 - [Worker2]
+    }
+    frame "Worker3" {
+        InQ3 - [Worker3]
+    }
+    frame "Worker4" {
+        InQ4 - [Worker4]
+    }
+    frame "Worker5" {
+        InQ5 - [Worker5]
+    }
+
+    [Master] <.> [Worker1]
+    [Master] <.> [Worker2]
+    [Master] <.> [Worker3]
+    [Master] <.> [Worker4]
+    [Master] <.> [Worker5]
+
+    [Worker1] -[#black,bold]-> InQ2
+    [Worker1] -[#black,bold]-> InQ3
+    [Worker1] -[#black,bold]-> InQ4
+
+    [Worker2] -[#black,bold]-> InQ3
+
+    [Worker3] -[#black,bold]-> InQ1
+
+    [Worker4] -[#black,bold]-> InQ5
+
+    [Worker5] -[#black,bold]-> InQ3
+    [Worker5] -[#black,bold]-> InQ4
+}
+[Client] <-[bold]-> [Master]
+note top of Client
+1) Load input data into workers.
+2) Notify master to start processing.
+3) Wait for master for completion.
+4) Extract result data from workers.
+end note
+note top of Master
+1) Receive "Start Processing" from client.
+2) Repeat until no active workers.
+    - Signal all active workers to process.
+    - Wait for all workers finished.
+    - Update active worker counts.
+3) Notify client about completion.
+end note
+note bottom of Worker3
+1) Set myself active.
+2) Repeat until I am inactive.
+    - Wait for master "start" signal.
+    - Read data from InQ.
+    - Perform local processing.
+    - Send out data along connection.
+    - Update my "active" status.
+    - Notify master I am done.
+3) When data arrives in InQ
+    - Change myself back to "active".
+end note
+@enduml
+```
+
+## Execution Orchestrator
+
+- This model is based on an intelligent scheduler / orchestrator to schedule ready-to-run tasks (based on a dependency graph) across a clusters of dumb workers.
+- This pattern is used in [Microsoft's Dryad project](http://research.microsoft.com/en-us/projects/dryad/).
+
+```plantuml
+@startuml
+package " " {
+    frame "Channels" {
+        [Channel1] .. [Channel2]
+        [Channel2] .. [Channel3]
+        [Channel3] .. [Channel4]
+    }
+
+    [Worker 1] -[#black]-> [Channel1]
+    [Worker 2] -[#black]-> [Channel1]
+    [Worker n] -[#black]-> [Channel4]
+}
+[Orchestrator] <-[#black,bold]- [Worker 1]
+[Orchestrator] <-[#black,bold]- [Worker 2]
+[Orchestrator] <-[#black,bold]- [Worker n]
+
+package "Orchestrator" {
+    frame "Task Graph" {
+        () "1" -[#blue]-> () "2"
+        () "2" -[#blue]-> () "3"
+        () "1" -[#blue]-> () "4"
+        () "4" -[#blue]-> () "5"
+        () "4" -[#blue]-> () "3"
+    }
+}
+[Client] -> Orchestrator
+@enduml
+```
+
 ## References
 
 1. [Scalable System Design Patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html)
 2. [Scalable System Design](http://horicky.blogspot.com/2008/02/scalable-system-design.html)
+3. [Some very basic patterns underlying NOSQL](http://horicky.blogspot.com/2009/11/nosql-patterns.html)
+4. [Some leading implementations](http://horicky.blogspot.com/2010/10/bigtable-model-with-cassandra-and-hbase.html)
