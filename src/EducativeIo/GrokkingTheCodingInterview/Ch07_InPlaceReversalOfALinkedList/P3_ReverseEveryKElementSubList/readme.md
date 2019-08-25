@@ -12,6 +12,10 @@ The problem follows the **In-place Reversal of a LinkedList** pattern and is qui
 
 ### Time Complexity
 
+The time complexity of our algorithm will be O(N) where ‘N’ is the total number of nodes in the LinkedList.
+
 ### Space Complexity
+
+We only used constant space, therefore, the space complexity of our algorithm is O(1).
 
 ## References
