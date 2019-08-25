@@ -432,7 +432,7 @@
 - Autodesk Pixlr
 - FotoSketcher
 - Itranslator 2003 Beta
-- Mp3tag
+- [Mp3tag](https://www.mp3tag.de/en/)
 - PdfEscape
 - Freac Audio Converter
 - EaseUS Partition Master
