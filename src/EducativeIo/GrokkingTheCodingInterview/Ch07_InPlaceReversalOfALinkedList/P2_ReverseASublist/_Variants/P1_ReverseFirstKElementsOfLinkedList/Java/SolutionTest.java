@@ -1,4 +1,4 @@
-package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList.Java;
+package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList._Variants.P1_ReverseFirstKElementsOfLinkedList.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
@@ -39,8 +39,8 @@ public class SolutionTest {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
         assertTimeout(Duration.ofMillis(500), () -> {
-            List<Integer> expected = Arrays.asList(1, 4, 3, 2, 5);
-            ListNode result = Solution.reverse(head, 2, 4);
+            List<Integer> expected = Arrays.asList(3, 2, 1, 4, 5);
+            ListNode result = Solution.reverse(head, 3);
             List<Integer> actual = new ArrayList<>();
             while (result != null) {
                 actual.add(result.value);
