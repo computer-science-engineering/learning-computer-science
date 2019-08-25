@@ -382,6 +382,7 @@
 - [SageMath](http://www.sagemath.org)
 - [Junolab for Julia](http://junolab.org)
 - GNU Plot
+- [ImageMagick](https://imagemagick.org/)
 - Blender
 - Pencil animation
 - Synfig Studio
