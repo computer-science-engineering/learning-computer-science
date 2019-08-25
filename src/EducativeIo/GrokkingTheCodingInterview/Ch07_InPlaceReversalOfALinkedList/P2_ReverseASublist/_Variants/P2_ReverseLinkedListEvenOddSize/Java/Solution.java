@@ -1,5 +1,4 @@
-package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList._Variants.P1_ReverseFirstKElementsOfLinkedList.Java;
-
+package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList._Variants.P2_ReverseLinkedListEvenOddSize.Java;
 
 public class Solution {
     public static void main(String[] args) {
@@ -9,16 +8,47 @@ public class Solution {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        ListNode result = reverse(head, 3);
+        ListNode result = reverse(head);
         System.out.print("Nodes of the reversed LinkedList are: ");
         while (result != null) {
             System.out.print(result.value + " ");
             result = result.next;
         }
+
+        System.out.println();
+
+        ListNode head2 = new ListNode(1);
+        head2.next = new ListNode(2);
+        head2.next.next = new ListNode(3);
+        head2.next.next.next = new ListNode(4);
+        head2.next.next.next.next = new ListNode(5);
+        head2.next.next.next.next.next = new ListNode(6);
+
+        ListNode result2 = reverse(head2);
+        System.out.print("Nodes of the reversed LinkedList are: ");
+        while (result2 != null) {
+            System.out.print(result2.value + " ");
+            result2 = result2.next;
+        }
     }
 
-    public static ListNode reverse(ListNode head, int k) {
-        return reverseSubList(head, 1, k);
+    public static ListNode reverse(ListNode head) {
+        ListNode current = head;
+        int size = 0;
+        while (current != null) {
+            current = current.next;
+            size++;
+        }
+
+        if (size % 2 == 0) { // even
+            head = reverseSubList(head, 1, size / 2);
+            head = reverseSubList(head, (size / 2) + 1, size);
+        } else { // odd
+            head = reverseSubList(head, 1, size / 2);
+            head = reverseSubList(head, (size / 2) + 2, size);
+        }
+
+        return head;
     }
 
     private static ListNode reverseSubList(ListNode head, int p, int q) {
@@ -60,4 +90,3 @@ public class Solution {
         return head;
     }
 }
-
