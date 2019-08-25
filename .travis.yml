@@ -28,11 +28,11 @@ script:
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: false
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: false
   commit_message: Travis CI Updates [ci skip]
-  local-dir: website
+  local_dir: website
   on:
     branch: master
-  target-branch: gh-pages
+  target_branch: gh-pages
