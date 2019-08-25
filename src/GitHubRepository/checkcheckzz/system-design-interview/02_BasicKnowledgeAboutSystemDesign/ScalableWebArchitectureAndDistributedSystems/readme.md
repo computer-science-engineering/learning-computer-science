@@ -304,13 +304,13 @@ There are many options that you can employ to make this easier; four of the more
       - This is similar to a cache, but instead of storing the data/document like a cache, it is optimizing the requests or calls for those documents and acting as a proxy for those clients.
       - In a LAN proxy, for example, the clients do not need their own IPs to connect to the Internet, and the LAN will collapse calls from the clients for the same content. It is easy to get confused here though, since many proxies are also caches (as it is a very logical place to put a cache), but not all caches act as proxies.
 
-[Figure 1.14: Using a proxy server to collapse requests](http://www.aosabook.org/images/distsys/collapseRequests.png)
+![Figure 1.14: Using a proxy server to collapse requests](http://www.aosabook.org/images/distsys/collapseRequests.png)
 
 - Another great way to use the proxy is to not just collapse requests for the same data, but also to collapse requests for data that is spatially close together in the origin store (consecutively on disk). Employing such a strategy maximizes data locality for the requests, which can result in decreased request latency.
 - For example, let's say a bunch of nodes request parts of B: partB1, partB2, etc. We can set up our proxy to recognize the spatial locality of the individual requests, collapsing them into a single request and returning only bigB, greatly minimizing the reads from the data origin.
 - This can make a really big difference in request time when you are randomly accessing across TBs of data! Proxies are especially helpful under high load situations, or when you have limited caching, since they can essentially batch several requests into one.
 
-[Figure 1.15: Using a proxy to collapse requests for data that is spatially close together](http://www.aosabook.org/images/distsys/collapseRequestsSpatial.png)
+![Figure 1.15: Using a proxy to collapse requests for data that is spatially close together](http://www.aosabook.org/images/distsys/collapseRequestsSpatial.png)
 
 - It is worth noting that you can use proxies and caches together, but generally it is best to put the cache in front of the proxy, for the same reason that it is best to let the faster runners start first in a crowded marathon race.
 - This is because the cache is serving data from memory, it is very fast, and it doesn't mind multiple requests for the same result.
