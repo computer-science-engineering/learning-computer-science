@@ -1,4 +1,4 @@
-package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList.Java;
+package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList._Variants.P1_ReverseFirstKElementsOfLinkedList.Java;
 
 public class Solution {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Solution {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        ListNode result = reverse(head, 2, 4);
+        ListNode result = reverse(head, 3);
         System.out.print("Nodes of the reversed LinkedList are: ");
         while (result != null) {
             System.out.print(result.value + " ");
@@ -16,7 +16,11 @@ public class Solution {
         }
     }
 
-    public static ListNode reverse(ListNode head, int p, int q) {
+    public static ListNode reverse(ListNode head, int k) {
+        return reverseSubList(head, 1, k);
+    }
+
+    private static ListNode reverseSubList(ListNode head, int p, int q) {
         if (p == q) {
             return head;
         }

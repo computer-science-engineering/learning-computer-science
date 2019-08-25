@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Reverse First K Elements of a LinkedList",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/qVANqMonoB2"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "In-place Reversal of a LinkedList",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["LinkedList"],
+    "buckets": []
+}
