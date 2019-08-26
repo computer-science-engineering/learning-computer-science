@@ -236,16 +236,20 @@ package "DFS (Output)" {
     [db y] .. [db z]
 }
 package "Job Scheduler" {
-    Job_Scheduler .. [Mapper 1]
-    [Mapper 1] .. [Mapper 2]
-    [Mapper 2] .. [Mapper n]
-    [Reducer 1] .. [Reducer n]
-    [Mapper 1] -> [Reducer 1]
-    [Mapper 2] -> [Reducer 1]
-    [Mapper n] -> [Reducer 1]
-    [Mapper 1] -> [Reducer n]
-    [Mapper 2] -> [Reducer n]
-    [Mapper n] -> [Reducer n]
+    Job_Scheduler .. Mappers
+    frame "Mappers" {
+        [Mapper 1] .. [Mapper 2]
+        [Mapper 2] .. [Mapper n]
+    }
+    frame "Reducers" {
+        [Reducer 1] .. [Reducer n]
+    }
+    [Mapper 1] -[#black]> [Reducer 1]
+    [Mapper 2] -[#black]> [Reducer 1]
+    [Mapper n] -[#black]> [Reducer 1]
+    [Mapper 1] -[#black]> [Reducer n]
+    [Mapper 2] -[#black]> [Reducer n]
+    [Mapper n] -[#black]> [Reducer n]
 }
 note as DFS
 DFS = Distributed File System
