@@ -110,5 +110,15 @@
 		"body": [
 			"[StackOverflow - ]()"
 		]
+	},
+	"PlantUml": {
+		"scope": "markdown",
+		"prefix": "plantuml",
+		"body": [
+			"```plantuml",
+			"@startuml",
+			"@enduml",
+			"```"
+		]
 	}
 }

@@ -1,0 +1,44 @@
+{
+    "type": "Reading",
+    "name": "Introduction to architecting systems for scale",
+    "origin": {
+        "name": "Notes - Blog Post",
+        "link": "https://lethain.com/introduction-to-architecting-systems-for-scale/"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "GitHub",
+            "children": [{
+                "name": "checkcheckzz",
+                "children": [{
+                    "name": "System Design Interview",
+                    "children": []
+                }]
+            }]
+        },
+        {
+            "name": "Blogs",
+            "children": [{
+                "name": "Irrational Exuberance!",
+                "children": []
+            }]
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Will Larson",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
