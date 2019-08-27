@@ -1,4 +1,4 @@
-package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASublist._Variants.P2_ReverseLinkedListEvenOddSize.Java;
+package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList._Variants.P2_ReverseLinkedListEvenOddSize.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
