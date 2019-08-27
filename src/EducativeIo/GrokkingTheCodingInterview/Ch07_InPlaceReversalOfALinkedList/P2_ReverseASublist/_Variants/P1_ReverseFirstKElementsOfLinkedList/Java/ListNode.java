@@ -1,4 +1,4 @@
-package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASublist._Variants.P1_ReverseFirstKElementsOfLinkedList.Java;
+package EducativeIo.GrokkingTheCodingInterview.Ch07_InPlaceReversalOfALinkedList.P2_ReverseASubList._Variants.P1_ReverseFirstKElementsOfLinkedList.Java;
 
 class ListNode {
     int value = 0;
