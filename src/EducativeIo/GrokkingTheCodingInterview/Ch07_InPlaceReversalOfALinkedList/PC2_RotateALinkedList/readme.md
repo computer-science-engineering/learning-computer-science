@@ -96,3 +96,5 @@ The time complexity of our algorithm will be O(N) where ‘N’ is the total num
 We only used constant space, therefore, the space complexity of our algorithm is O(1).
 
 ## References
+
+1. [YT Video - Vivekanand Khyade - Rotate a linked list around a node(code/ Algorithm / program)](https://www.youtube.com/watch?v=Fh8BV3eMKzc)
