@@ -59,6 +59,7 @@ frame "Solution" {
     ]
     note left of 12_1
     Queue:
+    Level Size: 1
     end note
 }
 
@@ -80,7 +81,6 @@ frame "BinaryTree" {
 
 ```text
 1 of 7.
-Level Size: 1
 Start by pushing the root to the queue.
 ```
 
@@ -92,6 +92,7 @@ frame "Solution" {
     ]
     note left of 12_1
     Queue:
+    Level Size: 1
     end note
     () root --> 12_1
 }
@@ -115,7 +116,6 @@ frame "BinaryTree" {
 
 ```text
 2 of 7.
-Level Size: 1
 Count the elements of the queue (levelSize = 1), they all will
 be in the first level. Since the levelSize is "1" there will be
 one element in the first level.
@@ -135,6 +135,7 @@ frame "Solution" {
     ]
     note left of 12_1
     Queue:
+    Level Size: 1
     end note
     12_1 . 7_1
     7_1 . 1_1
@@ -172,7 +173,6 @@ frame "BinaryTree" {
 
 ```text
 3 of 7.
-Level Size: 1
 Move "one" element to the the output array representing the first level
 and push its children to the queue.
 ```
@@ -188,6 +188,7 @@ frame "Solution" {
     ]
     note left of 7_1
     Queue:
+    Level Size: 2
     end note
     7_1 . 1_1
 
@@ -227,7 +228,6 @@ frame "BinaryTree" {
 
 ```text
 4 of 7.
-Level Size: 2
 Count the elements of the queue (levelSize = 2), they all will be
 in the second level. Since the levelSize is "2" there will be two
 elements in the second level.
@@ -253,6 +253,7 @@ frame "Solution" {
     ]
     note left of 7_1
     Queue:
+    Level Size: 2
     end note
     7_1 . 1_1
     1_1 . 9_1
@@ -311,7 +312,6 @@ frame "BinaryTree" {
 
 ```text
 5 of 7.
-Level Size: 2
 Move "two" elements to the the output array representing the
 second level and push their children to the queue in the same order.
 ```
@@ -330,6 +330,7 @@ frame "Solution" {
     ]
     note left of 9_1
     Queue:
+    Level Size: 3
     end note
     9_1 . 10_1
     10_1 . 5_1
@@ -386,7 +387,6 @@ frame "BinaryTree" {
 
 ```text
 6 of 7.
-Level Size: 3
 Count the elements of the queue (levelSize = 3), they all will be in the third level.
 Since the levelSize is "3" there will be three elements in the third level.
 ```
@@ -396,6 +396,7 @@ Since the levelSize is "3" there will be three elements in the third level.
 frame "Solution" {
     note left of () Queue
     Queue:
+    Level Size: 3
     end note
     component 12_2 #lightgreen [
         12
@@ -460,7 +461,6 @@ frame "BinaryTree" {
 
 ```text
 7 of 7.
-Level Size: 3
 Move "three" elements to the the output array representing third level.
 ```
 
