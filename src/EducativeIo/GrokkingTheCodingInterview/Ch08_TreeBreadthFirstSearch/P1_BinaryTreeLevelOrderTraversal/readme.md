@@ -6,11 +6,11 @@ Given a binary tree, populate an array to represent its level-by-level traversal
 
 Example 1:
 
-```dot
+```plantuml
 digraph example1 {
     1 -> 2 -> { 4, 5 };
     1 -> 3 -> { 6, 7 };
- }
+}
 ```
 
 ```text
@@ -97,7 +97,7 @@ frame "Solution" {
     () root --> 12_1
 }
 frame "BinaryTree" {
-    frame " " {
+    rectangle " " {
         component 12
     }
     [12] --> [7]
@@ -149,7 +149,7 @@ frame "Solution" {
 }
 
 frame "BinaryTree" {
-    frame " " {
+    rectangle " " {
         component 12
     }
 
@@ -207,7 +207,7 @@ frame "BinaryTree" {
     component [10]
     component [5]
 
-    frame " " {
+    rectangle " " {
         component [7]
         component [1]
     }
@@ -289,7 +289,7 @@ frame "BinaryTree" {
     component [10]
     component [5]
 
-    frame " " {
+    rectangle " " {
         component [7]
         component [1]
     }
@@ -368,7 +368,7 @@ frame "BinaryTree" {
     [12] --> [7]
     [12] --> [1]
 
-    frame " " {
+    rectangle " " {
         component [9]
         component [10]
         component [5]
@@ -442,7 +442,7 @@ frame "BinaryTree" {
     [12] --> [7]
     [12] --> [1]
 
-    frame " " {
+    rectangle " " {
         component [9]
         component [10]
         component [5]
