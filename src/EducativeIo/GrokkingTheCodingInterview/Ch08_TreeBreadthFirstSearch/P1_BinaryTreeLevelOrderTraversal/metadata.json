@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Binary Tree Level Order Traversal",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/xV7E64m4lnz"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Easy",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Tree Breadth First Search",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Binary Tree", "Breadth First Search"],
+    "buckets": []
+}
