@@ -4,7 +4,7 @@
 
 ### 1.1 Any OS
 
-- Java SDK
+- [Java SDK](https://adoptopenjdk.net/)
   - Ubuntu
 
     ```text
@@ -79,6 +79,7 @@
     `-- windows-build-tools
     ```
 
+- [Boostnote](https://boostnote.io/)
 - Sublime Text
   - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
@@ -184,6 +185,7 @@
 - GIMP
 - Inkscape
 - VLC Media player
+- [Virtual Volumes View](http://vvvapp.sourceforge.net/)
 - Opera Browser (for free VPN)
 - [Graphviz](https://graphviz.gitlab.io)
 - KeePass Password Safe
