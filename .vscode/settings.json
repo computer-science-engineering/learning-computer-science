@@ -364,5 +364,6 @@
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.format.settings.profile": "GoogleStyle",
     "java.checkstyle.configuration": "",
-    "java.debug.settings.console": "internalConsole"
+    "java.debug.settings.console": "internalConsole",
+    "markdown.extension.toc.orderedList": true
 }
