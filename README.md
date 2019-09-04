@@ -2,6 +2,28 @@
 
 ![logo](https://github.com/manastalukdar/learning-computer-science/blob/master/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true)
 
+- [Learning Computer Science](#learning-computer-science)
+  - [Overview](#overview)
+    - [Metadata](#metadata)
+    - [Continuous Integration](#continuous-integration)
+  - [Usage](#usage)
+    - [Viewing](#viewing)
+  - [Development](#development)
+    - [Environment](#environment)
+    - [Running Tests](#running-tests)
+    - [CI, CD](#ci-cd)
+    - [Upgrading to newer versions of development environments](#upgrading-to-newer-versions-of-development-environments)
+      - [Java](#java)
+      - [Gradle](#gradle)
+      - [Python](#python)
+    - [Contributing](#contributing)
+    - [Other](#other)
+  - [Project Management](#project-management)
+  - [Links](#links)
+  - [Note](#note)
+  - [References](#references)
+  - [License](#license)
+
 ## Overview
 
 Learning data structures, algorithms, machine learning and various computer science constructs by programming practice from resources around the web.
