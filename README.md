@@ -15,12 +15,6 @@ Highly recommended to open/use this repository using [Visual Studio Code](https:
 | Java     | 12      | OpenJDK ([AdoptOpenJDK with HotSpot](https://adoptopenjdk.net/index.html)) |
 | Python   | 3.7.2   | N/A                                                                        |
 
-### Updating VSCode Extensions List
-
-1. Get json data for list of extensions using the uploaded Sync file in GitHub.
-2. Filter by `metadata.publisherId` using the website <https://jsoneditoronline.org/>.
-3. Update list in file `.vscode/extensions.json`.
-
 ## Usage
 
 ### Viewing
