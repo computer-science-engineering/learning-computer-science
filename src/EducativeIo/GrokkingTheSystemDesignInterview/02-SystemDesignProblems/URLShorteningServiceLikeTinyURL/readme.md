@@ -1,33 +1,32 @@
 # Designing a URL Shortening service like TinyURL
 
-- [Designing a URL Shortening service like TinyURL](#designing-a-url-shortening-service-like-tinyurl)
-  - [Why do we need URL shortening](#why-do-we-need-url-shortening)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
-    - [Traffic Estimates](#traffic-estimates)
-    - [Storage Estimates](#storage-estimates)
-    - [Bandwidth Estimates](#bandwidth-estimates)
-    - [Memory Estimates](#memory-estimates)
-    - [High level estimates](#high-level-estimates)
-  - [System APIs](#system-apis)
-  - [Database Design](#database-design)
-    - [Tables](#tables)
-      - [URL](#url)
-      - [User](#user)
-    - [Type of Database](#type-of-database)
-  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
-    - [Encoding actual URL](#encoding-actual-url)
-    - [Generating keys offline](#generating-keys-offline)
-  - [Data Partitioning and Replication](#data-partitioning-and-replication)
-    - [Range Based Partitioning](#range-based-partitioning)
-    - [Hash-Based Partitioning](#hash-based-partitioning)
-  - [Cache](#cache)
-  - [Load Balancer (LB)](#load-balancer-lb)
-  - [Purging or DB cleanup](#purging-or-db-cleanup)
-  - [Detailed Component Design Diagram](#detailed-component-design-diagram)
-  - [Telemetry](#telemetry)
-  - [Security and Permissions](#security-and-permissions)
-  - [References](#references)
+1. [Why do we need URL shortening](#why-do-we-need-url-shortening)
+2. [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+3. [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+   1. [Traffic Estimates](#traffic-estimates)
+   2. [Storage Estimates](#storage-estimates)
+   3. [Bandwidth Estimates](#bandwidth-estimates)
+   4. [Memory Estimates](#memory-estimates)
+   5. [High level estimates](#high-level-estimates)
+4. [System APIs](#system-apis)
+5. [Database Design](#database-design)
+   1. [Tables](#tables)
+      1. [URL](#url)
+      2. [User](#user)
+   2. [Type of Database](#type-of-database)
+6. [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
+   1. [Encoding actual URL](#encoding-actual-url)
+   2. [Generating keys offline](#generating-keys-offline)
+7. [Data Partitioning and Replication](#data-partitioning-and-replication)
+   1. [Range Based Partitioning](#range-based-partitioning)
+   2. [Hash-Based Partitioning](#hash-based-partitioning)
+8. [Cache](#cache)
+9. [Load Balancer (LB)](#load-balancer-lb)
+10. [Purging or DB cleanup](#purging-or-db-cleanup)
+11. [Detailed Component Design Diagram](#detailed-component-design-diagram)
+12. [Telemetry](#telemetry)
+13. [Security and Permissions](#security-and-permissions)
+14. [References](#references)
 
 Design a URL shortening service like TinyURL. This service will provide short aliases redirecting to long URLs.
 
@@ -196,7 +195,7 @@ The main functionality desired is the generation of a short and unique string fo
         - If user not signed in, have to ask user to choose unique key.
           - Even then if key is not unique, have to keep generating till we get a unique one.
 
-[Request flow for accessing shortened url](./images/request-flow-for-accessing-shortened-url_base64.md)
+[Request flow for shortening of a URL](./images/request-flow-for-shortening-of-a-url_base64.md)
 
 ### Generating keys offline
 
@@ -244,6 +243,8 @@ The main functionality desired is the generation of a short and unique string fo
   - Linked Hash Map or similar structure to store URLs and Hashes.
 - Replicate caching servers to distribute load.
 - Updating cache replica - Hit backend database when there is cache miss and pass new entry to all the cache replicas.
+
+[Request flow for accessing shortened url](./images/request-flow-for-accessing-shortened-url_base64.md)
 
 ## Load Balancer (LB)
 
