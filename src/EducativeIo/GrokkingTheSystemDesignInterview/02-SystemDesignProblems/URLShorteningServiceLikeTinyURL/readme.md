@@ -230,8 +230,8 @@ The main functionality desired is the generation of a short and unique string fo
 ```plantuml
 [Clients] <-> [Application Server]
 [Application Server] <- [Key Generation Service]
-[Application Server] --> [Database]
-[Key Generation Service] --> [Key-db]
+[Application Server] <--> [Database]
+[Key Generation Service] <--> [Key-db]
 ```
 
 **Diagram:** High level system design for URL shortening
