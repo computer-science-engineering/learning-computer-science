@@ -195,7 +195,17 @@ The main functionality desired is the generation of a short and unique string fo
         - If user not signed in, have to ask user to choose unique key.
           - Even then if key is not unique, have to keep generating till we get a unique one.
 
-[Request flow for shortening of a URL](./images/request-flow-for-shortening-of-a-url_base64.md)
+```plantuml
+[Client] -> [Server] : (1) Shorten a URL
+[Client] <- [Server] : (8) Return a shortened URL to client
+[Server] -> [Encoding] : (2) Encode URL
+[Encoding] <- [Server] : (5) Append sequence and encode
+[Encoding] ---> [Database] : (3) (6) Store encoded URL
+[Server] <- [Database] : (4) Failed due to duplication
+[Server] <- [Database] : (7) Successfully inserted
+```
+
+**Diagram:** Request flow for shortening of a URL
 
 ### Generating keys offline
 
@@ -217,7 +227,14 @@ The main functionality desired is the generation of a short and unique string fo
 - Key lookup: Look up key in database to get original full URL. If present we return a 302 redirect, passing original URL in _Location_ field of response. If not present, we return a 404 Not Found.
 - Size limit on custom short link: Yes. Say, 16 characters per custom short link.
 
-[High level design](./images/high-level-system-design_base64.md)
+```plantuml
+[Clients] <-> [Application Server]
+[Application Server] <- [Key Generation Service]
+[Application Server] --> [Database]
+[Key Generation Service] --> [Key-db]
+```
+
+**Diagram:** High level system design for URL shortening
 
 ## Data Partitioning and Replication
 
@@ -244,7 +261,27 @@ The main functionality desired is the generation of a short and unique string fo
 - Replicate caching servers to distribute load.
 - Updating cache replica - Hit backend database when there is cache miss and pass new entry to all the cache replicas.
 
-[Request flow for accessing shortened url](./images/request-flow-for-accessing-shortened-url_base64.md)
+```plantuml
+[Client] -> [Server] : (1) Access a shortened URL
+[Client] <- [Server] : (10) Return error, URL not found
+[Server] -> [Cache] : (2) Find original URL
+[Server] <- [Cache] : (3) URL found
+[Server] <- [Cache] : (7) URL not found
+[Cache] <---- [Database] : (12) Update cache
+[Server] -> [Database] : (8) Find original URL
+[Server] <- [Database] : (9) URL not found
+[Server] <- [Database] : (11) URL found
+component question [
+Has URL expired or
+URL does not have
+permission?
+]
+[Server] ---> question : (4) URL found
+[Client] <-- question : (5) Yes, return HTTP error 401
+[Client] <-- question : (6) No, redirect to original URL
+```
+
+**Diagram:** Request flow for accessing a shortened URL
 
 ## Load Balancer (LB)
 
@@ -262,7 +299,28 @@ A separate Cleanup service can run periodically to remove expired links from our
 
 ## Detailed Component Design Diagram
 
-[Detailed component design](./images/detailed-component-design_base64.md)
+```plantuml
+left to right direction
+component lb1 [
+Load Balancers
+]
+component lb2 [
+Load Balancers
+]
+[Clients] --> [lb1]
+[lb1] --> [Application Servers]
+[Application Servers] --> [lb2]
+[lb2] --> [Cache Servers]
+[lb2] --> [Database Servers]
+[Cache Servers] <- [Database Servers]
+[Database Servers] <- [Cleanup Service]
+[Key-DB] <-- [Cleanup Service]
+[Key-DB (standby)] <.. [Key-DB]
+[Application Servers] <- [Key generation service]
+[Key generation service] -> [Key-DB]
+```
+
+**Diagram:** Detailed component design for URL shortening
 
 ## Telemetry
 
