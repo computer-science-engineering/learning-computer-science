@@ -365,5 +365,6 @@
     "java.format.settings.profile": "GoogleStyle",
     "java.checkstyle.configuration": "",
     "java.debug.settings.console": "internalConsole",
-    "markdown.extension.toc.orderedList": true
+    "markdown.extension.toc.orderedList": true,
+    "markdown.extension.toc.levels": "2..6"
 }
