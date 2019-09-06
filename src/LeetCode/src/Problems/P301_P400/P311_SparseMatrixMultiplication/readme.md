@@ -8,7 +8,7 @@ You may assume that **A**'s column number is equal to **B**'s row number.
 
 **Example:**
 
-```text
+```plaintext
 Input:
 
 A = [

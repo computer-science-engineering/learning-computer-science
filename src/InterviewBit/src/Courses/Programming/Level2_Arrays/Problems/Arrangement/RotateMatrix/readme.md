@@ -14,7 +14,7 @@ Note that if you end up using an additional array, you will only receive partial
 
 If the array is
 
-```text
+```plaintext
 [
     [1, 2],
     [3, 4]
@@ -23,7 +23,7 @@ If the array is
 
 Then the rotated array becomes:
 
-```text
+```plaintext
 [
     [3, 1],
     [4, 2]

@@ -6,7 +6,7 @@ Find the median of two sorted arrays.
 
 eg.
 
-```text
+```plaintext
 arr1 = [1, 3, 5]
 arr2 = [2, 4, 6]
 

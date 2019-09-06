@@ -6,7 +6,7 @@ Given two 1d vectors, implement an iterator to return their elements alternately
 
 **Example:**
 
-```text
+```plaintext
 Input:
 v1 = [1,2]
 v2 = [3,4,5,6]
@@ -22,7 +22,7 @@ Explanation: By calling next repeatedly until hasNext returns false,
 Clarification for the follow up question:
 The "Zigzag" order is not clearly defined and is ambiguous for `k > 2` cases. If "Zigzag" does not look right to you, replace "Zigzag" with "Cyclic". For example:
 
-```text
+```plaintext
 Input:
 [1,2,3]
 [4,5,6,7]

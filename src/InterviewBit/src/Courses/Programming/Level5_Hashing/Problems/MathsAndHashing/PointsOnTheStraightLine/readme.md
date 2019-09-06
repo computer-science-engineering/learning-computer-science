@@ -6,7 +6,7 @@ Given n points on a 2D plane, find the maximum number of points that lie on the 
 
 Sample Input :
 
-```text
+```plaintext
 (1, 1)
 (2, 2)
 ```

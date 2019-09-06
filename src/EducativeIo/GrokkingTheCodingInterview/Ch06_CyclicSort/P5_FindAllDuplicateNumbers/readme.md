@@ -6,14 +6,14 @@ We are given an unsorted array containing ‘n’ numbers taken from the range 1
 
 Example 1:
 
-```text
+```plaintext
 Input: [3, 4, 4, 5, 5]
 Output: [4, 5]
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: [5, 4, 7, 2, 3, 5, 3]
 Output: [3, 5]
 ```

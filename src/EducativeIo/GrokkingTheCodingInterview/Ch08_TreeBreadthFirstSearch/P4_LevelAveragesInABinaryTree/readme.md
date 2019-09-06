@@ -13,7 +13,7 @@ digraph example1 {
 }
 ```
 
-```text
+```plaintext
 Level Order Traversal: [1, 2.5, 5.5]
 ```
 
@@ -26,7 +26,7 @@ digraph example1 {
 }
 ```
 
-```text
+```plaintext
 Level Order Traversal: [12.0, 4.0, 6.5]
 ```
 

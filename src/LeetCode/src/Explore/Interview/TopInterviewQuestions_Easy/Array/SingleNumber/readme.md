@@ -10,14 +10,14 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 
 **Example 1:**
 
-```text
+```plaintext
 Input: [2,2,1]
 Output: 1
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: [4,1,2,1,2]
 Output: 4
 ```

@@ -8,7 +8,7 @@ Example:
 
 Given
 
-```text
+```plaintext
          1
         / \
        2   5
@@ -18,7 +18,7 @@ Given
 
 The flattened tree should look like:
 
-```text
+```plaintext
    1
     \
      2

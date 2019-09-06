@@ -10,7 +10,7 @@ Note: Sorting should be stable. If review i and review j have the same “Goodne
 
 **Constraints:**
 
-```text
+```plaintext
 1. 1 <= No.of reviews <= 200
 2. 1 <= No. of words in a review <= 1000
 3. 1 <= Length of an individual review <= 10,000
@@ -21,14 +21,14 @@ Note: Sorting should be stable. If review i and review j have the same “Goodne
 
 **Input:**
 
-```text
+```plaintext
 S : A string S containing "Good Words" separated by  "_" character. (See example below)
 R : A vector of strings containing Hotel Reviews. Review strings are also separated by "_" character.
 ```
 
 **Output:**
 
-```text
+```plaintext
 A vector V of integer which contain the original indexes of the reviews in the sorted order of reviews. 
 
 V[i] = k  means the review R[k] comes at i-th position in the sorted order. (See example below)
@@ -37,7 +37,7 @@ In simple words, V[i]=Original index of the review which comes at i-th position 
 
 **Example:**
 
-```text
+```plaintext
 Input:
 S = "cool_ice_wifi"
 R = ["water_is_cool", "cold_ice_drink", "cool_wifi_speed"]

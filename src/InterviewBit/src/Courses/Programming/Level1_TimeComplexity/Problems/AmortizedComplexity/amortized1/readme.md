@@ -31,7 +31,7 @@ Still not convinced ?
 
 Lets assume the array passed has its element in decreasing order. We will just dry run through the code :
 
-```text
+```plaintext
 Iteration 1 : i = 0, j = 0. arr[0] < arr[0] is false. So, the inner while loop breaks.
 Iteration 2 : i =1, j = 0. arr[1] < arr[0] is true. j becomes 1.
 Iteration 3 : i = 1, j = 1. Condition false. We break. Note that j will remain 1 and is not reset back to 0.

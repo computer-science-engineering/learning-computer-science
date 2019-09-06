@@ -8,7 +8,7 @@ If you were only permitted to complete at most one transaction (ie, buy one and 
 
 **Example:**
 
-```text
+```plaintext
 Input : [1 2]
 Return :  1
 ```

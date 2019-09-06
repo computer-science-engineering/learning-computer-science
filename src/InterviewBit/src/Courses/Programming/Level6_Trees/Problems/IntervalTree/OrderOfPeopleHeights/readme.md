@@ -14,13 +14,13 @@ Consider that heights will be unique.
 
 Example:
 
-```text
+```plaintext
 Input :
 Heights: 5 3 2 6 1 4
 InFronts: 0 1 2 0 3 2
 ```
 
-```text
+```plaintext
 Output :
 actual order is: 5 3 2 1 6 4
 ```

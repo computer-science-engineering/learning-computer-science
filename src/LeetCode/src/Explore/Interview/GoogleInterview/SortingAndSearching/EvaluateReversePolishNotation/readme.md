@@ -13,7 +13,7 @@ Valid operators are `+`, `-`, `*`, `/`. Each operand may be an integer or anothe
 
 **Example 1:**
 
-```text
+```plaintext
 Input: ["2", "1", "+", "3", "*"]
 Output: 9
 Explanation: ((2 + 1) * 3) = 9
@@ -21,7 +21,7 @@ Explanation: ((2 + 1) * 3) = 9
 
 **Example 2:**
 
-```text
+```plaintext
 Input: ["4", "13", "5", "/", "+"]
 Output: 6
 Explanation: (4 + (13 / 5)) = 6
@@ -29,7 +29,7 @@ Explanation: (4 + (13 / 5)) = 6
 
 **Example 3:**
 
-```text
+```plaintext
 Input: ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
 Output: 22
 Explanation:

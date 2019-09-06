@@ -6,7 +6,7 @@ Given an array of intervals representing ‘N’ appointments, find out if a per
 
 Example 1:
 
-```text
+```plaintext
 Appointments: [[1,4], [2,5], [7,9]]
 Output: false
 Explanation: Since [1,4] and [2,5] overlap, a person cannot attend both of these appointments.
@@ -14,7 +14,7 @@ Explanation: Since [1,4] and [2,5] overlap, a person cannot attend both of these
 
 Example 2:
 
-```text
+```plaintext
 Appointments: [[6,7], [2,4], [8,12]]
 Output: true
 Explanation: None of the appointments overlap, therefore a person can attend all of them.
@@ -22,7 +22,7 @@ Explanation: None of the appointments overlap, therefore a person can attend all
 
 Example 3:
 
-```text
+```plaintext
 Appointments: [[4,5], [2,3], [3,6]]
 Output: false
 Explanation: Since [4,5] and [3,6] overlap, a person cannot attend both of these appointments.

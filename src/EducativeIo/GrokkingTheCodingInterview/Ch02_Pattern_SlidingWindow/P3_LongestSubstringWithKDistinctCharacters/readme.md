@@ -6,7 +6,7 @@ Given a string, find the length of the **longest substring** in it **with no mor
 
 Example 1:
 
-```text
+```plaintext
 Input: String="araaci", K=2
 Output: 4
 Explanation: The longest substring with no more than '2' distinct characters is "araa".
@@ -14,7 +14,7 @@ Explanation: The longest substring with no more than '2' distinct characters is 
 
 Example 2:
 
-```text
+```plaintext
 Input: String="araaci", K=1
 Output: 2
 Explanation: The longest substring with no more than '1' distinct characters is "aa".
@@ -22,7 +22,7 @@ Explanation: The longest substring with no more than '1' distinct characters is 
 
 Example 3:
 
-```text
+```plaintext
 Input: String="cbbebi", K=3
 Output: 5
 Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".

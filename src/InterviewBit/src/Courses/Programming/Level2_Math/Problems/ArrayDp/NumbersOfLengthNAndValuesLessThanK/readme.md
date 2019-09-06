@@ -8,7 +8,7 @@ NOTE: All numbers can only have digits from the given set.
 
 Examples:
 
-```text
+```plaintext
     Input:
       3 0 1 5
       1
@@ -26,7 +26,7 @@ Examples:
 
 Constraints:
 
-```text
+```plaintext
     1 <= B <= 9, 0 <= C <= 1e9 & 0 <= A[i] <= 9
 ```
 
@@ -55,7 +55,7 @@ Let d be size of A.
 
   For example:
 
-  ```text
+  ```plaintext
   First(2) of 423 is 42.
   If  A =  [0, 2] then lower[0] = 0, lower[0] = 0, lower[1]  = 1,  lower[2] = 1, lower[3] = 2
   ```

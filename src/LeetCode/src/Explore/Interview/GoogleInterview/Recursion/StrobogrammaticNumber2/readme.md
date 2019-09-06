@@ -8,7 +8,7 @@ Find all strobogrammatic numbers that are of length = n.
 
 **Example:**
 
-```text
+```plaintext
 Input:  n = 2
 Output: ["11","69","88","96"]
 ```

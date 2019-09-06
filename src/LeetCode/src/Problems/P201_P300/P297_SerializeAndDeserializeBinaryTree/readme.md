@@ -8,7 +8,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
 **Example:**
 
-```text
+```plaintext
 You may serialize the following tree:
 
     1

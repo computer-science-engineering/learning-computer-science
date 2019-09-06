@@ -9,7 +9,7 @@ Return all possible palindrome partitioning of s.
 For example, given s = `"aab"`,
 Return
 
-```text
+```plaintext
 [
   ["aa","b"],
   ["a","a","b"]
@@ -20,7 +20,7 @@ Return
 
 1. [YT Video - Tushar Roy - Palindrome Partition Dynamic Programming](https://www.youtube.com/watch?v=lDYIvtBVmgo)
 
-    ```text
+    ```plaintext
     if isPalindrome(i, j)
       T[i][j] = 0;
     else

@@ -6,7 +6,7 @@ You are given an m x n 2D image matrix where each integer represents a pixel. Fl
 
 Example:
 
-```text
+```plaintext
 Input image :
               1 0
               1 0

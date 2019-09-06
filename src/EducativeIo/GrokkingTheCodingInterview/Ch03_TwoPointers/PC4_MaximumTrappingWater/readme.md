@@ -6,7 +6,7 @@ Suppose you are given an array containing non-negative numbers representing heig
 
 Example 1:
 
-```text
+```plaintext
 Input: [1, 3, 5, 4, 1]
 Output: 6
 Explanation: The maximum water will be trapped between buildings of height 3 and 4.
@@ -14,7 +14,7 @@ Explanation: The maximum water will be trapped between buildings of height 3 and
 
 Example 2:
 
-```text
+```plaintext
 Input: [3, 2, 5, 4, 2]
 Output: 9
 Explanation: The maximum water will be trapped between buildings of height 3 and 4.
@@ -22,7 +22,7 @@ Explanation: The maximum water will be trapped between buildings of height 3 and
 
 Example 3:
 
-```text
+```plaintext
 Input: [1, 4, 3, 2, 5, 8, 4]
 Output: 20
 Explanation: The maximum water will be trapped between buildings of height 4 and 4.

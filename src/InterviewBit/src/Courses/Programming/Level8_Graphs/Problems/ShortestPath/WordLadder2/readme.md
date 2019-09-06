@@ -13,7 +13,7 @@ If there are multiple such sequence of shortest length, return all of them. Refe
 
 Given:
 
-```text
+```plaintext
 start = "hit"
 end = "cog"
 dict = ["hot","dot","dog","lot","log"]
@@ -21,7 +21,7 @@ dict = ["hot","dot","dog","lot","log"]
 
 Return
 
-```text
+```plaintext
   [
     ["hit","hot","dot","dog","cog"],
     ["hit","hot","lot","log","cog"]

@@ -8,14 +8,14 @@ The flag of the Netherlands consists of three colors: red, white and blue; and s
 
 Example 1:
 
-```text
+```plaintext
 Input: [1, 0, 2, 1, 0]
 Output: [0 0 1 1 2]
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: [2, 2, 0, 1, 2, 0]
 Output: [0 0 1 2 2 2 ]
 ```

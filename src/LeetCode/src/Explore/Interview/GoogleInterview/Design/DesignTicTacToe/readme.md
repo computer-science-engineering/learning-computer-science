@@ -12,7 +12,7 @@ You may assume the following rules:
 
 **Example:**
 
-```text
+```plaintext
 Given n = 3, assume that player 1 is "X" and player 2 is "O" in the board.
 
 TicTacToe toe = new TicTacToe(3);

@@ -16,7 +16,7 @@ the returned vector should be `[1, 2, 4]`
 
 as `123 + 1 = 124.`
 
-```text
+```plaintext
 NOTE: Certain things are intentionally left unclear in this question which you should practice asking the interviewer.
 For example, for this problem, following are some good questions to ask :
 Q : Can the input have 0’s before the most significant digit. Or in other words, is 0 1 2 3 a valid input?

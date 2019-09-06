@@ -12,7 +12,7 @@ Could you implement it without using extra memory?
 
 Example :
 
-```text
+```plaintext
 Input : [1, 2, 4, 3, 3, 2, 2, 3, 1, 1]
 Output : 4
 ```

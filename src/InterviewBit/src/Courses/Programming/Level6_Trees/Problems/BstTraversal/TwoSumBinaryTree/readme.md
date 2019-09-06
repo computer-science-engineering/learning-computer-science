@@ -12,7 +12,7 @@ Assume all values in BST are distinct.
 
 Example:
 
-```text
+```plaintext
 Input 1:
 
 T:        10

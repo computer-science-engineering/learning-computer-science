@@ -20,7 +20,7 @@ For each query, print YES on a new line if  contains hackerrank; otherwise, prin
 
 ### Sample Input 0
 
-```text
+```plaintext
 2
 hereiamstackerrank
 hackerworld
@@ -28,7 +28,7 @@ hackerworld
 
 ### Sample Output 0
 
-```text
+```plaintext
 YES
 NO
 ```

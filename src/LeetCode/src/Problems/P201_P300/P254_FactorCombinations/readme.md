@@ -4,7 +4,7 @@
 
 Numbers can be regarded as product of its factors. For example,
 
-```text
+```plaintext
 8 = 2 x 2 x 2;
   = 2 x 4.
 ```
@@ -18,21 +18,21 @@ Write a function that takes an integer n and return all possible combinations of
 
 **Example 1:**
 
-```text
+```plaintext
 Input: 1
 Output: []
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: 37
 Output:[]
 ```
 
 **Example 3:**
 
-```text
+```plaintext
 Input: 12
 Output:
 [
@@ -44,7 +44,7 @@ Output:
 
 **Example 4:**
 
-```text
+```plaintext
 Input: 32
 Output:
 [

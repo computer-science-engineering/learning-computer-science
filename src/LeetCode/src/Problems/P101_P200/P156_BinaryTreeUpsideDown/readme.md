@@ -6,7 +6,7 @@ Given a binary tree where all the right nodes are either leaf nodes with a sibli
 
 **Example:**
 
-```text
+```plaintext
 Input: [1,2,3,4,5]
 
     1
@@ -32,7 +32,7 @@ The serialization of a binary tree follows a level order traversal, where '#' si
 
 Here's an example:
 
-```text
+```plaintext
    1
   / \
  2   3

@@ -6,7 +6,7 @@ Given an array, find the length of the smallest subarray in it which when sorted
 
 Example 1:
 
-```text
+```plaintext
 Input: [1, 2, 5, 3, 7, 10, 9, 12]
 Output: 5
 Explanation: We need to sort only the subarray [5, 3, 7, 10, 9] to make the whole array sorted
@@ -14,7 +14,7 @@ Explanation: We need to sort only the subarray [5, 3, 7, 10, 9] to make the whol
 
 Example 2:
 
-```text
+```plaintext
 Input: [1, 3, 2, 0, -1, 7, 10]
 Output: 5
 Explanation: We need to sort only the subarray [1, 3, 2, 0, -1] to make the whole array sorted
@@ -22,7 +22,7 @@ Explanation: We need to sort only the subarray [1, 3, 2, 0, -1] to make the whol
 
 Example 3:
 
-```text
+```plaintext
 Input: [1, 2, 3]
 Output: 0
 Explanation: The array is already sorted
@@ -30,7 +30,7 @@ Explanation: The array is already sorted
 
 Example 4:
 
-```text
+```plaintext
 Input: [3, 2, 1]
 Output: 3
 Explanation: The whole array needs to be sorted.
@@ -42,7 +42,7 @@ As we know, once an array is sorted (in ascending order), the smallest number is
 
 Let’s try to understand this with Example-2 mentioned above. In the following array, what are the first numbers out of sorting order from the beginning and the end of the array:
 
-```text
+```plaintext
     [1, 3, 2, 0, -1, 7, 10]
 ```
 
@@ -51,7 +51,7 @@ Let’s try to understand this with Example-2 mentioned above. In the following 
 
 As you can see, sorting the numbers between ‘3’ and ‘-1’ will not sort the whole array. To see this, the following will be our original array after the sorted subarray:
 
-```text
+```plaintext
     [1, -1, 0, 2, 3, 7, 10]
 ```
 

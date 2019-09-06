@@ -6,7 +6,7 @@ Write a method that takes in a String and returns the reversed version of the St
 
 Examples:
 
-```text
+```plaintext
 reverseString("abcde") -> "edcba"
 reverseString("1") -> "1"
 reverseString("") -> ""

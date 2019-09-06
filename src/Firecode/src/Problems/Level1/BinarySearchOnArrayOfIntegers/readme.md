@@ -6,7 +6,7 @@ Write a method that searches an Array of integers for a given integer using the 
 
 Examples:
 
-```text
+```plaintext
 binarySearch({2,5,7,8,9},9) -> true
 
 binarySearch({2,8,9,12},6) -> false

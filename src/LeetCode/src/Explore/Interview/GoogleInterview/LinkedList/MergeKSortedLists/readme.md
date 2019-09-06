@@ -6,7 +6,7 @@ Merge *k* sorted linked lists and return it as one sorted list. Analyze and desc
 
 Example:
 
-```text
+```plaintext
 Input:
 [
   1->4->5,
@@ -103,7 +103,7 @@ Approach 1 - Using heap: At every instant, you need the minimum of the head of a
 
 Approach 2 - Divide and conquer: Solve the problem for first k/2 and last k/2 list. Then you have 2 sorted lists. Then simply merge the lists. Time complexity:
 
-```text
+```plaintext
 T(N) = 2 T(N/2) + N
 T(N) = O (N log N)
 ```

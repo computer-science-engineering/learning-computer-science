@@ -4,7 +4,7 @@
 
 Remove duplicates and return list. Input list is unsorted. Solve for optimal time complexity.
 
-```text
+```plaintext
 Example:
 
 Input: [1, 2, 1, 3, 2, 1, 2]

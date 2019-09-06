@@ -6,7 +6,7 @@ Given an array with non negative numbers, divide the array into two parts such t
 
 **Example:**
 
-```text
+```plaintext
 Input:
 [1 7 15 29 11 9]
 
@@ -52,7 +52,7 @@ Assume `sum of set1 = Sum_of_Set1`, with `size = size_of_set1`.
 
 Assume `sum of set2 = Sum_of_Set2`, with `size = size_of_set2`
 
-```text
+```plaintext
  SUM_of_Set1 / size_of_set1 = SUM_of_Set2 / size_of_set2
  SUM_of_Set1 = SUM_of_Set2 * (size_of_set1 / size_of_set2)
 
@@ -69,13 +69,13 @@ Assume `sum of set2 = Sum_of_Set2`, with `size = size_of_set2`
 
 Note that you need the solution with minimum `size_of_set1` if multiple solutions exist. So, just iterate on `size_of_set1`. Based on `size_of_set1`, you can determine the value of `Sum_of_Set1`. Now, the problem reduces to
 
-```text
+```plaintext
 Can I select size_of_set1 values from the array whose sum is Sum_of_Set1 (i.e., current_sum)?
 ```
 
 Lets define our function as `isPossible(ind, current_sum, current_size)` which returns true if it is possible to use elements with `index >= ind` to construct a set of size `current_size` whose sum is `current_sum`.
 
-```text
+```plaintext
 isPossible(ind, current_sum, current_size :            |
                                                        |
                                                        |  isPossible(ind + 1, current_sum, current_size)  [ Do not include current element ]

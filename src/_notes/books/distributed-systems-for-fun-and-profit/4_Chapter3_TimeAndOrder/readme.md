@@ -54,7 +54,7 @@ Note that totality implies reflexivity; so a partial order is a weaker variant o
 
 Git branches are an example of a partial order. As you probably know, the git revision control system allows you to create multiple branches from a single base branch - e.g. from a master branch. Each branch represents a history of source code changes derived based on a common ancestor:
 
-```text
+```plaintext
 [ branch A (1,2,0)]  [ master (3,0,0) ]  [ branch B (1,0,2) ]
 [ branch A (1,1,0)]  [ master (2,0,0) ]  [ branch B (1,0,1) ]
                   \  [ master (1,0,0) ]  /
@@ -166,7 +166,7 @@ A _Lamport clock_ is simple. Each process maintains a counter using the followin
 
 Expressed as code:
 
-```text
+```plaintext
 function LamportClock() {
   this.value = 1;
 }
@@ -209,7 +209,7 @@ A _vector clock_ is an extension of Lamport clock, which maintains an array [ t1
 
 Again, expressed as code:
 
-```text
+```plaintext
 function VectorClock(value) {
   // expressed as a hash keyed by node id: e.g. { node1: 1, node2: 3 }
   this.value = value || {};

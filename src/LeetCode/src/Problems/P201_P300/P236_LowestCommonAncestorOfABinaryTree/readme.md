@@ -8,7 +8,7 @@ According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/
 
 Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]
 
-```text
+```plaintext
         _______3______
        /              \
     ___5__          ___1__

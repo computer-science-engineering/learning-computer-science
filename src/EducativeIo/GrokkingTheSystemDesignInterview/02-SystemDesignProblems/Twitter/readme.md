@@ -74,7 +74,7 @@ Design a Twitter-like social networking service. Users of the service will be ab
 
 ### Storage Estimates
 
-```text
+```plaintext
 Each tweet has 140 characters.
 To store each character without compression we need 2 bytes.
 Metadata for each tweet (ID, timestamp,userID, etc.), say we need 30 bytes.
@@ -88,7 +88,7 @@ Storage needed for new media every day
 
 ### Bandwidth Estimates
 
-```text
+```plaintext
 Total ingress =  24 TB/day = 290 MB/sec
 Tweet-views per day = 28 B
 Say, users will only watch 3rd video they see in their timeline
@@ -101,7 +101,7 @@ Total egress
 
 ## System APIs
 
-```text
+```plaintext
 tweet(api_dev_key, tweet_data, tweet_location, user_location,
   media_ids, maximum_results_to_return)
 

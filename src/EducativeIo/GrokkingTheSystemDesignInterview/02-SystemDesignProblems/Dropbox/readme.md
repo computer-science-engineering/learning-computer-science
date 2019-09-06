@@ -59,7 +59,7 @@ Similar Services: OneDrive, Google Drive
 
 ## Capacity Estimation and Constraints
 
-```text
+```plaintext
 Total users = 500 M
 Daily Active Users (DAU) = 100 M
 Files per user = 200

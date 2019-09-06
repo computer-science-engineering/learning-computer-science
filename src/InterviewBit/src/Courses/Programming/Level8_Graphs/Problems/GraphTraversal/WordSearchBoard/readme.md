@@ -10,7 +10,7 @@ The word can be constructed from letters of sequentially adjacent cell, where `"
 
 Given board =
 
-```text
+```plaintext
 [
   ["ABCE"],
   ["SFCS"],
@@ -18,7 +18,7 @@ Given board =
 ]
 ```
 
-```text
+```plaintext
 word = "ABCCED", -> returns 1,
 word = "SEE", -> returns 1,
 word = "ABCB", -> returns 1,

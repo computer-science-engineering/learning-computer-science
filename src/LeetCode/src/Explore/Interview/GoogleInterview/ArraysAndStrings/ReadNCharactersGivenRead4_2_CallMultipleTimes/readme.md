@@ -12,7 +12,7 @@ By using the `read4` API, implement the function `int read(char *buf, int n)` th
 
 **Example 1:**
 
-```text
+```plaintext
 Given buf = "abc"
 read("abc", 1) // returns "a"
 read("abc", 2); // returns "bc"
@@ -21,7 +21,7 @@ read("abc", 1); // returns ""
 
 **Example 2:**
 
-```text
+```plaintext
 Given buf = "abc"
 read("abc", 4) // returns "abc"
 read("abc", 1); // returns ""

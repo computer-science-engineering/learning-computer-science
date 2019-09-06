@@ -6,14 +6,14 @@ Given a string **s**, you are allowed to convert it to a palindrome by adding ch
 
 **Example 1:**
 
-```text
+```plaintext
 Input: "aacecaaa"
 Output: "aaacecaaa"
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: "abcd"
 Output: "dcbabcd"
 ```
@@ -31,7 +31,7 @@ Output: "dcbabcd"
 
     For example, now we have a string "ababc". The KMP table will look like this:
 
-    ```text
+    ```plaintext
     a b a b c
     0 0 1 2 0
     ```
@@ -44,7 +44,7 @@ Output: "dcbabcd"
 
     Take above string as an example. Now we try to match string "ababc" with "abababc". We will initially have match as below
 
-    ```text
+    ```plaintext
     a b a b a b c (string x)
     a b a b c (string y)
     0 1 2 3 4 5 6
@@ -52,7 +52,7 @@ Output: "dcbabcd"
 
     We found char at index 4 does not match, then we can use lookup table and shift the string y wisely. We found table[3] = 2, which means we can shift the string y rightward by 2, and still have same but shorter prefix before index 4, like this:
 
-    ```text
+    ```plaintext
     a b a b a b c (string x)
     ___a b a b c (string y)
     0 1 2 3 4 5 6
@@ -64,7 +64,7 @@ Output: "dcbabcd"
 
     Say now we have a input like this:
 
-    ```text
+    ```plaintext
     a a b a a a (input String)
     0 1 2 3 4 5 (index)
     0 1 0 1 2 ? (KMP table)
@@ -94,19 +94,19 @@ Output: "dcbabcd"
 
     input string:
 
-    ```text
+    ```plaintext
     abacd
     ```
 
     longest palindrome substring starts from 0:
 
-    ```text
+    ```plaintext
     aba
     ```
 
     Insert the reverse part of substring after palindrome substring before the head:
 
-    ```text
+    ```plaintext
     dcabacd
     ```
 
@@ -114,7 +114,7 @@ Output: "dcbabcd"
 
     The trick is to build a temp string like this:
 
-    ```text
+    ```plaintext
     s + "#" + reverse(s)
     ```
 
@@ -126,19 +126,19 @@ Output: "dcbabcd"
 
     input:
 
-    ```text
+    ```plaintext
     catacb
     ```
 
     Temp String:
 
-    ```text
+    ```plaintext
     catacb # bcatac
     ```
 
     KMP table:
 
-    ```text
+    ```plaintext
     c a t a c b # b c a t a c
     0 0 0 0 1 0 0 0 1 2 3 4 5
     ```

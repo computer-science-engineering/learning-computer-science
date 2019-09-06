@@ -8,7 +8,7 @@ Bonus if you can solve it in O(n^2) or less.
 
 **Example:**
 
-```text
+```plaintext
 A : [  1 1 1
        0 1 1
        1 0 0
@@ -23,7 +23,7 @@ As the max area rectangle is created by the 2x2 rectangle created by (0,1), (0,2
 
 1. [Geeks for Geeks - Maximum size rectangle binary sub-matrix with all 1s](https://www.geeksforgeeks.org/maximum-size-rectangle-binary-sub-matrix-1s/)
 
-    ```text
+    ```plaintext
     Step 1: Find maximum area for row[0]
     Step 2:
         for each row in 1 to N - 1

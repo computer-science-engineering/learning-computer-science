@@ -8,14 +8,14 @@ Return all such possible sentences.
 
 For example, given
 
-```text
+```plaintext
 s = "catsanddog",
 dict = ["cat", "cats", "and", "sand", "dog"].
 ```
 
 A solution is
 
-```text
+```plaintext
 [
   "cat sand dog",
   "cats and dog"

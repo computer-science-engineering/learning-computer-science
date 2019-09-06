@@ -14,7 +14,7 @@ You can always assume that ``maxChoosableInteger` will not be larger than 20 and
 
 **Example:**
 
-```text
+```plaintext
 Input:
 maxChoosableInteger = 10
 desiredTotal = 11

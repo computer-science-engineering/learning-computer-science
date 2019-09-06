@@ -8,7 +8,7 @@ Example:
 
 `[1,2,3]` will have the following permutations:
 
-```text
+```plaintext
 [1,2,3]
 [1,3,2]
 [2,1,3]

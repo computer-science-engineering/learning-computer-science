@@ -10,14 +10,14 @@ For example, given `s = "aab"`,
 
 Return
 
-```text
+```plaintext
   [
     ["a","a","b"]
     ["aa","b"],
   ]
 ```
 
-```text
+```plaintext
  Ordering the results in the answer : Entry i will come before Entry j if :
 * len(Entryi[0]) < len(Entryj[0]) OR
 * (len(Entryi[0]) == len(Entryj[0]) AND len(Entryi[1]) < len(Entryj[1])) OR

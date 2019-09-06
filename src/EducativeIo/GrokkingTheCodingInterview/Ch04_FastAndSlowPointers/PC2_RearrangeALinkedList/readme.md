@@ -8,14 +8,14 @@ Your algorithm should not use any extra space and the input LinkedList should be
 
 Example 1:
 
-```text
+```plaintext
 Input: 2 -> 4 -> 6 -> 8 -> 10 -> 12 -> null
 Output: 2 -> 12 -> 4 -> 10 -> 6 -> 8 -> null
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: 2 -> 4 -> 6 -> 8 -> 10 -> null
 Output: 2 -> 10 -> 4 -> 8 -> 6 -> null
 ```

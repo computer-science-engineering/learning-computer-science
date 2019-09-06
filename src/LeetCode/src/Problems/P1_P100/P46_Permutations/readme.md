@@ -6,7 +6,7 @@ Given a collection of **distinct** integers, return all possible permutations.
 
 **Example:**
 
-```text
+```plaintext
 Input: [1,2,3]
 Output:
 [

@@ -41,13 +41,13 @@ Note that for a given `(r, c)`
 
 the following code will not be executed more than once :
 
-```text
+```plaintext
 memo[r][c] =  V[r][c] + min(findMinPath(V, r + 1, c), findMinPath(V, r, c + 1));
 ```
 
 Once memo[r][c] is set, the functions will return at
 
-```text
+```plaintext
 if (memo[r][c] != -1) return memo[r][c];
 ```
 

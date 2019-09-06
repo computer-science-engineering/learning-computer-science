@@ -8,28 +8,28 @@ You may assume no duplicates in the array.
 
 **Example 1:**
 
-```text
+```plaintext
 Input: [1,3,5,6], 5
 Output: 2
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: [1,3,5,6], 2
 Output: 1
 ```
 
 **Example 3:**
 
-```text
+```plaintext
 Input: [1,3,5,6], 7
 Output: 4
 ```
 
 **Example 4:**
 
-```text
+```plaintext
 Input: [1,3,5,6], 0
 Output: 0
 ```

@@ -17,7 +17,7 @@ Explain the correctness of your function, and analyze its time and space complex
 
 **Example:**
 
-```text
+```plaintext
 input:  n = 4
 
 output: 5 # since there are five possibilities:

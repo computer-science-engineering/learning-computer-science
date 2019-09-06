@@ -126,7 +126,7 @@ We can merge nodes that have only one branch to save storage space.
 
 ### Storage Estimation
 
-```text
+```plaintext
 Say, each query has 3 words and each word has 5 characters,
   then each query has on average 15 characters.
 Say, each character needs 2 bytes, so each query needs 30 bytes.

@@ -10,7 +10,7 @@ Given the total number of courses and a list of prerequisite **pairs**, is it po
 
 **Example 1:**
 
-```text
+```plaintext
 Input: 2, [[1,0]]
 Output: true
 Explanation: There are a total of 2 courses to take.
@@ -19,7 +19,7 @@ Explanation: There are a total of 2 courses to take.
 
 **Example 2:**
 
-```text
+```plaintext
 Input: 2, [[1,0],[0,1]]
 Output: false
 Explanation: There are a total of 2 courses to take.

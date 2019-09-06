@@ -6,7 +6,7 @@ Given a string **s** and a list of strings **dict**, you need to add a closed pa
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 s = "abcxyz123"
 dict = ["abc","123"]
@@ -16,7 +16,7 @@ Output:
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 s = "aaabbcc"
 dict = ["aaa","aab","bc"]

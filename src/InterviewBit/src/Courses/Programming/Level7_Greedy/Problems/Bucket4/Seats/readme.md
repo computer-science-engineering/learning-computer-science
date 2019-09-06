@@ -12,7 +12,7 @@ Now your target is to make the whole group sit together i.e. next to each other,
 
 **Example:**
 
-```text
+```plaintext
 Here is the row having 15 seats represented by the String (0, 1, 2, 3, ......... , 14) -
 
               . . . . x . . x x . . . x . .

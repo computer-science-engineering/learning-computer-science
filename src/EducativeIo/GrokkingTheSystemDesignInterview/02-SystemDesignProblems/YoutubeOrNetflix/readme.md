@@ -44,7 +44,7 @@ Similar Services: netflix.com, vimeo.com, dailymotion.com, veoh.com
 
 ## Capacity Estimation and Constraints
 
-```text
+```plaintext
 Total users = 1.5 B
 DAU = 800 M
 If a user views 5 videos per day, total video-views
@@ -55,7 +55,7 @@ If upload:views = 1:200, videos uploaded per second
 
 ### Storage Estimates
 
-```text
+```plaintext
 Say, in 1 minute 500 hours worth of videos are uploaded.
 If on average 1 minute of video needs 50 MB of storage,
   total storage needed for videos updated in 1 minute
@@ -66,7 +66,7 @@ Numbers are without considering video compression and replication.
 
 ### Bandwidth  Estimates
 
-```text
+```plaintext
 Video uploads per minute = 500 hours worth
 If each video takes bandwidth of 10 MB/sec, uploads per minute
  = 500 hrs * 60 mins * 10 MB = 300 GB/sec = 5 GB/sec
@@ -76,7 +76,7 @@ If upload:view = 1:200, egress bandwidth needed
 
 ## System APIs
 
-```text
+```plaintext
 uploadVideo(api_dev_key, video_title, vide_description,
   tags[], category_id, default_language,
   recording_details, video_contents)

@@ -15,7 +15,7 @@ Write a function to compute the next state (after one update) of the board given
 
 Example:
 
-```text
+```plaintext
 Input:
 [
   [0,1,0],
@@ -44,7 +44,7 @@ Output:
 
     To solve it in place, we use 2 bits to store 2 states:
 
-    ```text
+    ```plaintext
     [2nd bit, 1st bit] = [next state, current state]
 
     - 00  dead (next) <- dead (current)
@@ -67,13 +67,13 @@ Output:
 
     To get the current state, simply do
 
-    ```text
+    ```plaintext
     board[i][j] & 1
     ```
 
     To get the next state, simply do
 
-    ```text
+    ```plaintext
     board[i][j] >> 1
     ```
 

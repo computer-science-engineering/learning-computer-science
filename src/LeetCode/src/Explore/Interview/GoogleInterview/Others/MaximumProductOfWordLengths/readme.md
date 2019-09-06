@@ -6,7 +6,7 @@ Given a string array `words`, find the maximum value of `length(word[i]) * lengt
 
 **Example 1:**
 
-```text
+```plaintext
 Input: ["abcw","baz","foo","bar","xtfn","abcdef"]
 Output: 16
 Explanation: The two words can be "abcw", "xtfn".
@@ -14,7 +14,7 @@ Explanation: The two words can be "abcw", "xtfn".
 
 **Example 2:**
 
-```text
+```plaintext
 Input: ["a","ab","abc","d","cd","bcd","abcd"]
 Output: 4
 Explanation: The two words can be "ab", "cd".
@@ -22,7 +22,7 @@ Explanation: The two words can be "ab", "cd".
 
 **Example 3:**
 
-```text
+```plaintext
 Input: ["a","aa","aaa","aaaa"]
 Output: 0
 Explanation: No such pair of words.

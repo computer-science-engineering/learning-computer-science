@@ -6,7 +6,7 @@ Write a function that takes two strings and returns a string containing letters 
 
 **Examples:**
 
-```text
+```plaintext
 f("abcd", "efgh") => ""
 f("aeiou", "abcde") => "ae"
 f("aeiou", "abcabc") => "a"

@@ -13,7 +13,7 @@ Results should be printed to standard output.   Your output should be a list of 
 
 The grid represented by "abcdefghijklmnop" would be
 
-```text
+```plaintext
 a b c d
 e f g h
 i j k l
@@ -24,7 +24,7 @@ m n o p
 
 A word can be found in a grid by starting on any letter, then moving to an adjacent letter and so on.
 
-```text
+```plaintext
 Example 1.
 a b a n
 z q z d
@@ -34,7 +34,7 @@ r n r r
 
 The word "abandon" fits in the grid first horizontally, then diagonally down and to the left. The word "ran" does NOT fit in the grid because 'r' and 'a' are not adjacent.
 
-```text
+```plaintext
 Example 2.
 z z z z
 z z b z

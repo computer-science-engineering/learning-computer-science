@@ -6,7 +6,7 @@ Find shortest unique prefix to represent each word in the list.
 
 Example:
 
-```text
+```plaintext
 Input: [zebra, dog, duck, dove]
 Output: {z, dog, du, dov}
 where we can see that
@@ -31,7 +31,7 @@ dove = dov
 
     Time complexity if this step also is O(N) where N is total number of characters in all words.
 
-    ```text
+    ```plaintext
                         root
                         / \
                 (d, 3)/    \(z, 1)

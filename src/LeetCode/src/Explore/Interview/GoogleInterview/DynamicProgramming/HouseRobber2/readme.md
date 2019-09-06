@@ -8,7 +8,7 @@ Given a list of non-negative integers representing the amount of money of each h
 
 **Example 1:**
 
-```text
+```plaintext
 Input: [2,3,2]
 Output: 3
 Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2),
@@ -17,7 +17,7 @@ Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2)
 
 **Example 2:**
 
-```text
+```plaintext
 Input: [1,2,3,1]
 Output: 4
 Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).

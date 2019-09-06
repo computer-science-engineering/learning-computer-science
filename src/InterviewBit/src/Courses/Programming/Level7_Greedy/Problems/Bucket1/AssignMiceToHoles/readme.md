@@ -6,7 +6,7 @@ There are `N` mice and `N` holes are placed in a straight line. Each hole can ac
 
 **Example:**
 
-```text
+```plaintext
 positions of mice are:
 4 -4 2
 positions of holes are:
@@ -23,14 +23,14 @@ answer = 4.
 
 **Input:**
 
-```text
+```plaintext
 A :  list of positions of mice
 B :  list of positions of holes
 ```
 
 **Output:**
 
-```text
+```plaintext
 single integer value
 ```
 

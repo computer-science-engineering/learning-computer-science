@@ -6,7 +6,7 @@ Given an Iterator class interface with methods: _next()_ and _hasNext()_, design
 
 **Example:**
 
-```text
+```plaintext
 Assume that the iterator is initialized to the beginning of the list: [1,2,3].
 
 Call next() gets you 1, the first element in the list.

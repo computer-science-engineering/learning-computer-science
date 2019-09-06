@@ -81,7 +81,7 @@ Okay, so we can find the largest element. **How can we adapt this approach to fi
 
 Our first thought might be, "it's simply the parent of the largest element!" That seems obviously true when we imagine a nicely balanced tree like this one:
 
-```text
+```plaintext
 .        ( 5 )
         /     \
       (3)     (8)
@@ -91,7 +91,7 @@ Our first thought might be, "it's simply the parent of the largest element!" Tha
 
 But what if the largest element itself has a left subtree?
 
-```text
+```plaintext
 .        ( 5 )
         /     \
       (3)     (8)

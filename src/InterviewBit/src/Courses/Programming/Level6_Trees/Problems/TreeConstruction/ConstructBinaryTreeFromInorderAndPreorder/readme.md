@@ -8,7 +8,7 @@ Note: You may assume that duplicates do not exist in the tree.
 
 Example:
 
-```text
+```plaintext
 Input:
         Pre-order : [1, 2, 3]
         In-order  : [2, 1, 3]

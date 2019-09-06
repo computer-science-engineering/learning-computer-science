@@ -4,7 +4,7 @@
 
 The count-and-say sequence is the sequence of integers with the first five terms as following:
 
-```text
+```plaintext
 1.     1
 2.     11
 3.     21
@@ -22,14 +22,14 @@ Note: Each term of the sequence of integers will be represented as a string.
 
 **Example 1:**
 
-```text
+```plaintext
 Input: 1
 Output: "1"
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: 4
 Output: "1211"
 ```

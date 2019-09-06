@@ -63,7 +63,7 @@ Read-heavy service. We can assume a 5:1 ratio between read and write.
 
 ### Traffic estimates
 
-```text
+```plaintext
 1 M new pastes per day.
 5 M reads per day.
 
@@ -75,7 +75,7 @@ Paste reads per second = 5 M / (24 hours * 3600 seconds)
 
 ### Storage estimates
 
-```text
+```plaintext
 Each upload can be max of 10 MB.
 Each paste on average contains, say, 10 KB.
 Data stored per day = 1 M * 10 KB = 10 GB/day
@@ -94,7 +94,7 @@ To account for margin, i.e., we do not want to use more than 70% of total storag
 
 ### Bandwidth estimates
 
-```text
+```plaintext
 For write requests, we expect = 12 pastes/sec
 Given each paste is 10 KB, ingress = 120 KB/second
 
@@ -104,7 +104,7 @@ egress = 58 * 10 KB ~= 600 KB/sec = 0.6 MB/sec
 
 ### Memory estimates
 
-```text
+```plaintext
 80-20 rule for caching: meaning 20% hot pastes generate 80% traffic.
 Number of read requests = 5 M
 Space needed for caching 20% of 5 M
@@ -113,17 +113,17 @@ Space needed for caching 20% of 5 M
 
 ## System APIs
 
-```text
+```plaintext
 addPaste(api_dev_key, paste_data, custom_url=Null, user_name=Null, paste_name=Null, expire_date=Null)
 
 Returns: a string which represents a URL through with the paste can be accessed.
 ```
 
-```text
+```plaintext
 getPaste(api_dev_key, api_paste_key)
 ```
 
-```text
+```plaintext
 deletePaste(api_dev_key, api_paste_key)
 ```
 

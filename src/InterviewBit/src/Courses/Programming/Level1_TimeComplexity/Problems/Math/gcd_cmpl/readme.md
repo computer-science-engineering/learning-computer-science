@@ -37,7 +37,7 @@ OR n = m + k where k < m.
 
 Therefore the step
 
-```text
+```plaintext
 n = n % m will make n = k
 
 swap(n, m) will result in

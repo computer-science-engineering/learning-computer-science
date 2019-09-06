@@ -6,7 +6,7 @@ Given a 2D integer matrix M representing the gray scale of an image, you need to
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 [[1,1,1],
  [1,0,1],

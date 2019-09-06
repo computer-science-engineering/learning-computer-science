@@ -6,7 +6,7 @@ Any number will be called a happy number if, after repeatedly replacing it with 
 
 Example 1:
 
-```text
+```plaintext
 Input: 23
 Output: true (23 is a happy number)  
 Explanations: Here are the steps to find out that 23 is a happy number:
@@ -18,7 +18,7 @@ Explanations: Here are the steps to find out that 23 is a happy number:
 
 Example 2:
 
-```text
+```plaintext
 Input: 12
 Output: false (12 is not a happy number)  
 Explanations: Here are the steps to find out that 12 is not a happy number:

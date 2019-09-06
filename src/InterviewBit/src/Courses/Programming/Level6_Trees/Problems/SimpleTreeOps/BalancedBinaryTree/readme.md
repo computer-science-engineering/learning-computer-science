@@ -9,7 +9,7 @@ Return `0 / 1` (0 for false, 1 for true) for this problem.
 
 **Example:**
 
-```text
+```plaintext
 Input 1:
           1
          / \

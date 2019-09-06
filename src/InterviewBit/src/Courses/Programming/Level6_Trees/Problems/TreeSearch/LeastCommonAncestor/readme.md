@@ -8,7 +8,7 @@ Lowest common ancestor: the lowest common ancestor (LCA) of two nodes v and w in
 
 Example:
 
-```text
+```plaintext
         _______3______
        /              \
     ___5__          ___1__

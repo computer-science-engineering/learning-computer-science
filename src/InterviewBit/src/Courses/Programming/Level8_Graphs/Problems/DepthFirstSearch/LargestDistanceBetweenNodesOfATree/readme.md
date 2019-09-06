@@ -12,7 +12,7 @@ The tree is given as an array P, there is an edge between nodes P[i] and i (0 <=
 
 If given P is `[-1, 0, 0, 0, 3]`, then node `0` is the root and the whole tree looks like this:
 
-```text
+```plaintext
           0
        /  |  \
       1   2   3
@@ -48,7 +48,7 @@ Let’s prove it by contradiction: assume there is a strictly longer path betwee
 
 1. h is on path between u and x
 
-    ```text
+    ```plaintext
         u
         |
         |
@@ -64,7 +64,7 @@ Let’s prove it by contradiction: assume there is a strictly longer path betwee
 
 1. h is not on path between u and x
 
-    ```text
+    ```plaintext
         u
         |
         *---x

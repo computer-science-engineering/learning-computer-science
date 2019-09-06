@@ -6,7 +6,7 @@ Given two strings containing backspaces (identified by the character ‘#’), c
 
 Example 1:
 
-```text
+```plaintext
 Input: str1="xy#z", str2="xzz#"
 Output: true
 Explanation: After applying backspaces the strings become "xz" and "xz" respectively.
@@ -14,7 +14,7 @@ Explanation: After applying backspaces the strings become "xz" and "xz" respecti
 
 Example 2:
 
-```text
+```plaintext
 Input: str1="xy#z", str2="xyz#"
 Output: false
 Explanation: After applying backspaces the strings become "xz" and "xy" respectively.
@@ -22,7 +22,7 @@ Explanation: After applying backspaces the strings become "xz" and "xy" respecti
 
 Example 3:
 
-```text
+```plaintext
 Input: str1="xp#", str2="xyz##"
 Output: true
 Explanation: After applying backspaces the strings become "x" and "x" respectively.
@@ -31,7 +31,7 @@ In "xyz##", the first '#' removes the character 'z' and the second '#' removes t
 
 Example 4:
 
-```text
+```plaintext
 Input: str1="xywrrmp", str2="xywrrmu#p"
 Output: true
 Explanation: After applying backspaces the strings become "xywrrmp" and "xywrrmp" respectively.

@@ -8,7 +8,7 @@ Try solving it using constant additional space.
 
 Example :
 
-```text
+```plaintext
 Input :
 
                   ______

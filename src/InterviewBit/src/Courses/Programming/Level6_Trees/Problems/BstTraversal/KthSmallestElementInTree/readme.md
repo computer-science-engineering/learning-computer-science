@@ -6,7 +6,7 @@ Given a binary search tree, write a function to find the kth smallest element in
 
 Example :
 
-```text
+```plaintext
 Input:
   2
  / \

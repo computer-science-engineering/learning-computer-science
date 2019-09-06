@@ -6,21 +6,21 @@ We are given an unsorted array containing ‘n+1’ numbers taken from the range
 
 Example 1:
 
-```text
+```plaintext
 Input: [1, 4, 4, 3, 2]
 Output: 4
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: [2, 1, 3, 3, 5, 4]
 Output: 3
 ```
 
 Example 3:
 
-```text
+```plaintext
 Input: [2, 4, 1, 4, 4]
 Output: 4
 ```

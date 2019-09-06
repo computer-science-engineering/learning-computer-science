@@ -9,7 +9,7 @@ Both m and n fit in a 32 bit signed integer.
 
 Example
 
-```text
+```plaintext
 m : 6
 n : 9
 
@@ -28,7 +28,7 @@ The greatest common divisor (gcd) of two positive integers is the largest intege
 
 ### Approach
 
-```text
+```plaintext
 Lets say g is gcd(m, n) and m > n.
 
 m = g * m1

@@ -8,7 +8,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 
 **Example:**
 
-```text
+```plaintext
 Input : [1 2 3]
 Return : 2
 ```

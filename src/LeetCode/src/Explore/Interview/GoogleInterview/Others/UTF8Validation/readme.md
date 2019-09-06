@@ -9,7 +9,7 @@ A character in UTF8 can be from **1 to 4 bytes** long, subjected to the followin
 
 This is how the UTF-8 encoding would work:
 
-```text
+```plaintext
    Char. number range  |        UTF-8 octet sequence
       (hexadecimal)    |              (binary)
    --------------------+---------------------------------------------
@@ -25,7 +25,7 @@ Given an array of integers representing the data, return whether it is a valid u
 
 **Example 1:**
 
-```text
+```plaintext
 data = [197, 130, 1], which represents the octet sequence: 11000101 10000010 00000001.
 
 Return true.
@@ -34,7 +34,7 @@ It is a valid utf-8 encoding for a 2-bytes character followed by a 1-byte charac
 
 **Example 2:**
 
-```text
+```plaintext
 data = [235, 140, 4], which represented the octet sequence: 11101011 10001100 00000100.
 
 Return false.
@@ -50,7 +50,7 @@ But the second continuation byte does not start with 10, so it is invalid.
 1. [The Fake Geek's blog - UTF-8 Validation](http://shirleyisnotageek.blogspot.com/2016/10/utf-8-validation.html)
 1. [LeetCode discussion - Bit Manipulation, Java, 6ms](https://leetcode.com/explore/interview/card/google/66/others-4/458/discuss/87464/Bit-Manipulation-Java-6ms/92375)
 
-   ```text
+   ```plaintext
    Rule 2:
    Record the count of consecutive of 1.
    Move the number 5 bit right, if it equals "110" means there is one '1'.

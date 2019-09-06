@@ -13,7 +13,7 @@ Completing the circuit means starting at `i` and ending up at `i` again.
 
 **Example:**
 
-```text
+```plaintext
 Input:
       Gas :   [1, 2]
       Cost :  [2, 1]

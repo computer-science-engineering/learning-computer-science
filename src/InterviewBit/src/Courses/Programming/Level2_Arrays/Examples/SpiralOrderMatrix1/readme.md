@@ -8,7 +8,7 @@ Given a matrix of m * n elements (m rows, n columns), return all elements of the
 
 Given the following matrix:
 
-```text
+```plaintext
 [
     [ 1, 2, 3 ],
     [ 4, 5, 6 ],
@@ -18,7 +18,7 @@ Given the following matrix:
 
 You should return
 
-```text
+```plaintext
 [1, 2, 3, 6, 9, 8, 7, 4, 5]
 ```
 

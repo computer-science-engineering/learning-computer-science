@@ -6,7 +6,7 @@ A palindrome is a string or sequence of characters that reads the same backward 
 
 Examples:
 
-```text
+```plaintext
 isStringPalindrome("madam") -> true
 isStringPalindrome("aabb") -> false
 isStringPalindrome("race car") -> false

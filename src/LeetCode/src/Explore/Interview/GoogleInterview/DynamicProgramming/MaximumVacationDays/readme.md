@@ -15,7 +15,7 @@ You're given the **flights** matrix and **days** matrix, and you need to output 
 
 **Example 1:**
 
-```text
+```plaintext
 Input:flights = [[0,1,1],[1,0,1],[1,1,0]], days = [[1,3,1],[6,0,3],[3,3,3]]
 Output: 12
 Explanation:
@@ -30,7 +30,7 @@ One of the best strategies is:
 
 **Example 2:**
 
-```text
+```plaintext
 Input:flights = [[0,0,0],[0,0,0],[0,0,0]], days = [[1,1,1],[7,7,7],[7,7,7]]
 Output: 3
 Explanation:
@@ -43,7 +43,7 @@ So the maximum number of vacation days is 3.
 
 **Example 3:**
 
-```text
+```plaintext
 Input:flights = [[0,1,1],[1,0,1],[1,1,0]], days = [[7,0,0],[0,7,0],[0,0,7]]
 Output: 21
 Explanation:

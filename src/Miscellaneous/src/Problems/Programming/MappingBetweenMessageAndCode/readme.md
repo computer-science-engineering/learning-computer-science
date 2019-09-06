@@ -6,7 +6,7 @@ Function takes 2 strings, message and code. Returns a boolean indicating whether
 
 **Examples:**
 
-```text
+```plaintext
 "red green blue", "abc" --> True
 "red green blue", "abb" --> False
 "red blue blue", "abb" --> True

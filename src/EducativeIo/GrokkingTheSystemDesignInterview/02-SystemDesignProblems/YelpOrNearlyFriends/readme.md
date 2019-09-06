@@ -34,7 +34,7 @@ Similar Services: Proximity server.
 
 ## Scale Estimation
 
-```text
+```plaintext
 500 M places
 100 K QPS
 20% growth in number of places and QPS each year
@@ -66,7 +66,7 @@ Similarly, we can have a separate table to store photos for Places and Reviews.
 
 ## System APIs
 
-```text
+```plaintext
 search(api_dev_key, search_terms, user_location, radius_filter,
   maximum_results_to_return, category_filter, sort, page_token)
 

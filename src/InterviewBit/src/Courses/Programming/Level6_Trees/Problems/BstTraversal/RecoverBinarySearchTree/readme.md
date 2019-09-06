@@ -8,7 +8,7 @@ Note: A solution using O(n) space is pretty straight forward. Could you devise a
 
 Example:
 
-```text
+```plaintext
 Input:
          1
         / \
