@@ -8,14 +8,14 @@ Note: **Do not** use any built-in library function such as `sqrt`.
 
 **Example 1:**
 
-```text
+```plaintext
 Input: 16
 Returns: True
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: 14
 Returns: False
 ```

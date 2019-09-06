@@ -8,7 +8,7 @@ Note: Your solution should be in logarithmic time complexity.
 
 Example :
 
-```text
+```plaintext
 n = 5
 n! = 120
 Number of trailing zeros = 1

@@ -9,7 +9,7 @@ Example:
 
 Given binary tree
 
-```text
+```plaintext
      1
    /   \
   2     3
@@ -19,7 +19,7 @@ Given binary tree
 
 invert and return
 
-```text
+```plaintext
      1
    /   \
   3     2

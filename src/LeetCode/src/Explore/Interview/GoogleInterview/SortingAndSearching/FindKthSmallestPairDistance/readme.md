@@ -6,7 +6,7 @@ Given an integer array, return the k-th smallest **distance** among all the pair
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 nums = [1,3,1]
 k = 1
@@ -82,7 +82,7 @@ Then the 1st smallest distance pair is (1,1), and its distance is 0.
 
     We can easily find the least possible absolute difference in O(n) after sorting. The largest possible difference will be `a[n-1] - a[0]` after sorting the array.
 
-    ```text
+    ```plaintext
     Let low = minimum_difference and high = maximum_difference.
     while low < high:
         mid = (low + high)/2
@@ -96,7 +96,7 @@ Then the 1st smallest distance pair is (1,1), and its distance is 0.
 
     We need a function that will tell us number of pairs with difference <= mid efficiently. Since our array is sorted, this part can be done like this:
 
-    ```text
+    ```plaintext
     result = 0
     for i = 0 to n-1:
         result = result + (upper_bound(a+i, a+n, a[i] + mid) - (a+i+1))

@@ -169,7 +169,7 @@ To prevent inopportune failures from causing consistency guarantees to be violat
 
 [Two phase commit](http://en.wikipedia.org/wiki/Two-phase_commit_protocol) (2PC) is a protocol used in many classic relational databases. For example, MySQL Cluster (not to be confused with the regular MySQL) provides synchronous replication using 2PC. The diagram below illustrates the message flow:
 
-```text
+```plaintext
 [ Coordinator ] -> OK to commit?     [ Peers ]
                 <- Yes / No
 
@@ -287,7 +287,7 @@ To ensure that no competing proposals emerge between the time the proposer asks 
 
 Putting the pieces together, reaching a decision using Paxos requires two rounds of communication:
 
-```text
+```plaintext
 [ Proposer ] -> Prepare(n)                                [ Followers ]
              <- Promise(n; previous proposal number
                 and previous value if accepted a

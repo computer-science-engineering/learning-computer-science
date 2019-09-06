@@ -17,7 +17,7 @@ If a string has ‘n’ distinct characters it will have n!n! permutations.
 
 Example 1:
 
-```text
+```plaintext
 Input: String="oidbcaf", Pattern="abc"
 Output: true
 Explanation: The string contains "bca" which is a permutation of the given pattern.
@@ -25,7 +25,7 @@ Explanation: The string contains "bca" which is a permutation of the given patte
 
 Example 2:
 
-```text
+```plaintext
 Input: String="odicf", Pattern="dc"
 Output: false
 Explanation: No permutation of the pattern is present in the given string as a substring.
@@ -33,7 +33,7 @@ Explanation: No permutation of the pattern is present in the given string as a s
 
 Example 3:
 
-```text
+```plaintext
 Input: String="bcdxabcdy", Pattern="bcdyabcdx"
 Output: true
 Explanation: Both the string and the pattern are a permutation of each other.
@@ -41,7 +41,7 @@ Explanation: Both the string and the pattern are a permutation of each other.
 
 Example 4:
 
-```text
+```plaintext
 Input: String="aaacb", Pattern="abc"
 Output: true
 Explanation: The string contains "acb" which is a permutation of the given pattern.

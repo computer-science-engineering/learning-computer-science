@@ -9,7 +9,7 @@ i.e. minimize | max(a,b,c) - min(a,b,c) |.
 
 Example:
 
-```text
+```plaintext
 Input:
 A : [ 1, 4, 5, 8, 10 ]
 B : [ 6, 9, 15 ]

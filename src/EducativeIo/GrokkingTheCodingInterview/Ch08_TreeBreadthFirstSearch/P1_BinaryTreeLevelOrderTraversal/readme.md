@@ -13,7 +13,7 @@ digraph example1 {
 }
 ```
 
-```text
+```plaintext
 Level Order Traversal:  
     [[1],
     [2,3],
@@ -29,7 +29,7 @@ digraph example2 {
  }
 ```
 
-```text
+```plaintext
 Level Order Traversal:  
     [[12],
     [7,1],
@@ -79,7 +79,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 1 of 7.
 Start by pushing the root to the queue.
 ```
@@ -114,7 +114,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 2 of 7.
 Count the elements of the queue (levelSize = 1), they all will
 be in the first level. Since the levelSize is "1" there will be
@@ -171,7 +171,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 3 of 7.
 Move "one" element to the the output array representing the first level
 and push its children to the queue.
@@ -226,7 +226,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 4 of 7.
 Count the elements of the queue (levelSize = 2), they all will be
 in the second level. Since the levelSize is "2" there will be two
@@ -310,7 +310,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 5 of 7.
 Move "two" elements to the the output array representing the
 second level and push their children to the queue in the same order.
@@ -385,7 +385,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 6 of 7.
 Count the elements of the queue (levelSize = 3), they all will be in the third level.
 Since the levelSize is "3" there will be three elements in the third level.
@@ -459,7 +459,7 @@ frame "BinaryTree" {
 @enduml
 ```
 
-```text
+```plaintext
 7 of 7.
 Move "three" elements to the the output array representing third level.
 ```

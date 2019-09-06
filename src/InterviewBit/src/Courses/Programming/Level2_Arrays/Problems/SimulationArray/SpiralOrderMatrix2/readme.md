@@ -10,7 +10,7 @@ Given n = 3,
 
 You should return the following matrix:
 
-```text
+```plaintext
 [
   [ 1, 2, 3 ],
   [ 8, 9, 4 ],

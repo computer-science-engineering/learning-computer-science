@@ -10,7 +10,7 @@ Explain and code the most efficient solution possible, and analyze its time and 
 
 **Example:**
 
-```text
+```plaintext
 input:  arr = [2, 7, 4, 0, 9, 5, 1, 3], s = 20
 
 output: [0, 4, 7, 9] # The ordered quadruplet of (7, 4, 0, 9)

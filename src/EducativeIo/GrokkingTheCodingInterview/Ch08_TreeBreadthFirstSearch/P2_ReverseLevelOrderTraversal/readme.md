@@ -15,7 +15,7 @@ digraph example1 {
 @enddot
 ```
 
-```text
+```plaintext
 Level Order Traversal:  
     [[4,5,6,7],
     [2,3],
@@ -33,7 +33,7 @@ digraph example2 {
 @enduml
 ```
 
-```text
+```plaintext
 Level Order Traversal:  
     [[9,10,5],
     [7,1],

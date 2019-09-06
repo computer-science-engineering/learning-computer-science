@@ -12,7 +12,7 @@ Assume a BST is defined as follows:
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
     2
    / \
@@ -22,7 +22,7 @@ Output: true
 
 **Example 2:**
 
-```text
+```plaintext
     5
    / \
   1   4

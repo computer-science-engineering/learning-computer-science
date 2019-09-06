@@ -12,7 +12,7 @@ When it tries to move into a blocked cell, its bumper sensor detects the obstacl
 
 Design an algorithm to clean the entire room using only the 4 given APIs shown below.
 
-```text
+```plaintext
 interface Robot {
   // returns true if next cell is open and robot moves into the cell.
   // returns false if next cell is obstacle and robot stays on the current cell.
@@ -30,7 +30,7 @@ interface Robot {
 
 **Example:**
 
-```text
+```plaintext
 **Input:**
 
 room = [

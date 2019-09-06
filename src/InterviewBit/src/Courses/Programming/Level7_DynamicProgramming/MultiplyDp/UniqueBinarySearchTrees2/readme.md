@@ -8,7 +8,7 @@ Given `A`, how many structurally unique BST's (binary search trees) that store v
 
 Given `A = 3`, there are a total of 5 unique BST's.
 
-```text
+```plaintext
    1         3     3      2      1
     \       /     /      / \      \
      3     2     1      1   3      2

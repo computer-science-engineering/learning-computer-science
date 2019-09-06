@@ -8,7 +8,7 @@ A sequence of words forms a valid word square if the *k*th row and column read t
 
 For example, the word sequence `["ball","area","lead","lady"]` forms a word square because each word reads the same both horizontally and vertically.
 
-```text
+```plaintext
 b a l l
 a r e a
 l e a d
@@ -24,7 +24,7 @@ l a d y
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 ["area","lead","wall","lady","ball"]
 
@@ -48,7 +48,7 @@ The output consists of two word squares. The order of output does not matter (ju
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 ["abat","baba","atan","atal"]
 

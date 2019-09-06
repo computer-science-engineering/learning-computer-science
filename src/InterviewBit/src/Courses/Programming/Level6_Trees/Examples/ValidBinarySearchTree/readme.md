@@ -12,7 +12,7 @@ Both the left and right sub-trees must also be binary search trees.
 
 Example :
 
-```text
+```plaintext
 Input:
    1
   /  \

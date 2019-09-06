@@ -8,7 +8,7 @@ Given a singly linked list where elements are sorted in ascending order, convert
 
 **Example:**
 
-```text
+```plaintext
 Given A : 1 -> 2 -> 3
 
 A height balanced BST :

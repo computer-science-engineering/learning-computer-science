@@ -10,14 +10,14 @@ Since the return type is an integer, the decimal digits are truncated and only t
 
 **Example 1:**
 
-```text
+```plaintext
 Input: 4
 Output: 2
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since

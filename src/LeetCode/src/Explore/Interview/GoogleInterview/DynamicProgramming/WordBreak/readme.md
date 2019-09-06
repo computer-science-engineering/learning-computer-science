@@ -11,7 +11,7 @@ Given a **non-empty** string _s_ and a dictionary _wordDict_ containing a list o
 
 **Example 1:**
 
-```text
+```plaintext
 Input: s = "leetcode", wordDict = ["leet", "code"]
 Output: true
 Explanation: Return true because "leetcode" can be segmented as "leet code".
@@ -19,7 +19,7 @@ Explanation: Return true because "leetcode" can be segmented as "leet code".
 
 **Example 2:**
 
-```text
+```plaintext
 Input: s = "applepenapple", wordDict = ["apple", "pen"]
 Output: true
 Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
@@ -28,7 +28,7 @@ Explanation: Return true because "applepenapple" can be segmented as "apple pen 
 
 **Example 3:**
 
-```text
+```plaintext
 Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
 ```

@@ -6,14 +6,14 @@ Given two strings s and t , write a function to determine if t is an anagram of 
 
 **Example 1:**
 
-```text
+```plaintext
 Input: s = "anagram", t = "nagaram"
 Output: true
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: s = "rat", t = "car"
 Output: false
 ```

@@ -6,7 +6,7 @@ Given a string, find the first non-repeating character in it and return it's ind
 
 **Examples:**
 
-```text
+```plaintext
 s = "leetcode"
 return 0.
 

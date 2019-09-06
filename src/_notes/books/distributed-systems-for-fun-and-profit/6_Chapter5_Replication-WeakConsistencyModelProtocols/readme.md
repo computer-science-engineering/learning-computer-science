@@ -62,7 +62,7 @@ Perhaps the most obvious characteristic of systems that do not enforce single-co
 
 Let's imagine a system of three replicas, each of which is partitioned from the others. For example, the replicas might be in different datacenters and for some reason unable to communicate. Each replica remains available during the partition, accepting both reads and writes from some set of clients:
 
-```text
+```plaintext
 [Clients]   - > [A]
 
 --- Partition ---
@@ -76,7 +76,7 @@ Let's imagine a system of three replicas, each of which is partitioned from the 
 
 After some time, the partitions heal and the replica servers exchange information. They have received different updates from different clients and have diverged each other, so some sort of reconciliation needs to take place. What we would like to happen is that all of the replicas converge to the same result.
 
-```text
+```plaintext
 [A] \
     --> [merge]
 [B] /     |
@@ -86,14 +86,14 @@ After some time, the partitions heal and the replica servers exchange informatio
 
 Another way to think about systems with weak consistency guarantees is to imagine a set of clients sending messages to two replicas in some order. Because there is no coordination protocol that enforces a single total order, the messages can get delivered in different orders at the two replicas:
 
-```text
+```plaintext
 [Clients]  --> [A]  1, 2, 3
 [Clients]  --> [B]  2, 3, 1
 ```
 
 This is, in essence, the reason why we need coordination protocols. For example, assume that we are trying to concatenate a string and the operations in messages 1, 2 and 3 are:
 
-```text
+```plaintext
 1: { operation: concat('Hello ') }
 2: { operation: concat('World') }
 3: { operation: concat('!') }
@@ -101,7 +101,7 @@ This is, in essence, the reason why we need coordination protocols. For example,
 
 Then, without coordination, A will produce "Hello World!", and B will produce "World!Hello ".
 
-```text
+```plaintext
 A: concat(concat(concat('', 'Hello '), 'World'), '!') = 'Hello World!'
 B: concat(concat(concat('', 'World'), '!'), 'Hello ') = 'World!Hello '
 ```
@@ -122,7 +122,7 @@ For many features on Amazon, it is more important to avoid outages than it is to
 
 Since Dynamo is a complete system design, there are many different parts to look at beyond the core replication task. The diagram below illustrates some of the tasks; notably, how a write is routed to a node and written to multiple replicas.
 
-```text
+```plaintext
 [ Client ]
     |
 ( Mapping keys to nodes )
@@ -167,7 +167,7 @@ W and R specify the number of nodes that need to be involved to a write or a rea
 
 The usual recommendation is that `R + W > N`, because this means that the read and write quorums overlap in one node - making it less likely that a stale value is returned. A typical configuration is `N = 3` (e.g. a total of three replicas for each value); this means that the user can choose between:
 
-```text
+```plaintext
 R = 1, W = 3;
 R = 2, W = 2 or
 R = 3, W = 1
@@ -197,7 +197,7 @@ No.
 
 It's not completely off base: a system where `R + W > N` can detect read/write conflicts, since any read quorum and any write quorum share a member. E.g. at least one node is in both quorums:
 
-```text
+```plaintext
    1     2   N/2+1     N/2+2    N
   [...] [R]  [R + W]   [W]    [...]
 ```
@@ -282,28 +282,28 @@ For example, consider a system that implements a simple accounting system with t
 
 The latter implementation knows more about the internals of the data type, and so it can preserve the intent of the operations in spite of the operations being reordered. Debiting or crediting can be applied in any order, and the end result is the same:
 
-```text
+```plaintext
 100 + credit(10) + credit(20) = 130 and
 100 + credit(20) + credit(10) = 130
 ```
 
 However, writing a fixed value cannot be done in any order: if writes are reordered, the one of the writes will overwrite the other:
 
-```text
+```plaintext
 100 + write(110) + write(130) = 130 but
 100 + write(130) + write(110) = 110
 ```
 
 Let's take the example from the beginning of this chapter, but use a different operation. In this scenario, clients are sending messages to two nodes, which see the operations in different orders:
 
-```text
+```plaintext
 [Clients]  --> [A]  1, 2, 3
 [Clients]  --> [B]  2, 3, 1
 ```
 
 Instead of string concatenation, assume that we are looking to find the largest value (e.g. MAX()) for a set of integers. The messages 1, 2 and 3 are:
 
-```text
+```plaintext
 1: { operation: max(previous, 3) }
 2: { operation: max(previous, 5) }
 3: { operation: max(previous, 7) }
@@ -311,7 +311,7 @@ Instead of string concatenation, assume that we are looking to find the largest 
 
 Then, without coordination, both A and B will converge to 7, e.g.:
 
-```text
+```plaintext
 A: max(max(max(0, 3), 5), 7) = 7
 B: max(max(max(0, 5), 7), 3) = 7
 ```
@@ -340,7 +340,7 @@ Any data type that be expressed as a semilattice can be implemented as a data st
 
 For example, here are two lattices: one drawn for a set, where the merge operator is `union(items)` and one drawn for a strictly increasing integer counter, where the merge operator is `max(values)`:
 
-```text
+```plaintext
    { a, b, c }              7
   /      |    \            /  \
 {a, b} {b,c} {a,c}        5    7
@@ -437,7 +437,7 @@ There are several acceptable answers, each corresponding to a different set of a
 
 In everyday reasoning, we make what is known as the [open-world assumption](http://en.wikipedia.org/wiki/Open_world_assumption): we assume that we do not know everything, and hence cannot make conclusions from a lack of knowledge. That is, any sentence may be true, false or unknown.
 
-```text
+```plaintext
                                 OWA +             |  OWA +
                                 Monotonic logic   |  Non-monotonic logic
 Can derive P(true)      |   Can assert P(true)    |  Cannot assert P(true)
@@ -460,7 +460,7 @@ For example, under the CWA, if our database does not have an entry for a flight 
 
 We need one more thing to be able to make definite assertions: [logical circumscription](http://en.wikipedia.org/wiki/Circumscription_%28logic%29). Circumscription is a formalized rule of conjecture. Domain circumscription conjectures that the known entities are all there are. We need to be able to assume that the known entities are all there are in order to reach a definite conclusion.
 
-```text
+```plaintext
                                CWA +             |  CWA +
                                 Circumscription + |  Circumscription +
                                 Monotonic logic   |  Non-monotonic logic

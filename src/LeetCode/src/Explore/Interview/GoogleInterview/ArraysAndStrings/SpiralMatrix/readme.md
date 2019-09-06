@@ -6,7 +6,7 @@ Given a matrix of *m x n* elements (*m* rows, *n* columns), return all elements 
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 [
  [ 1, 2, 3 ],
@@ -18,7 +18,7 @@ Output: [1,2,3,6,9,8,7,4,5]
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 [
   [1, 2, 3, 4],

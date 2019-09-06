@@ -6,7 +6,7 @@ Given a list of intervals, find the point where the maximum number of intervals 
 
 Example:
 
-```text
+```plaintext
 intervals: [[1, 4], [2, 5], [9, 12], [5, 9], [5, 12]]
 First guest in array arrives at 1 and leaves at 4,
 second guest arrives at 2 and leaves at 5, and so on.

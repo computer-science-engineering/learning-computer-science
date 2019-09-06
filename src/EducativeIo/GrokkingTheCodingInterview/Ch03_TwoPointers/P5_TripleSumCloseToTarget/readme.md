@@ -6,7 +6,7 @@ Given an array of unsorted numbers and a target number, find a triplet in the ar
 
 Example 1:
 
-```text
+```plaintext
 Input: [-2, 0, 1, 2], target=2
 Output: 1
 Explanation: The triplet [-2, 1, 2] has the closest sum to the target.
@@ -14,7 +14,7 @@ Explanation: The triplet [-2, 1, 2] has the closest sum to the target.
 
 Example 2:
 
-```text
+```plaintext
 Input: [-3, -1, 1, 2], target=1
 Output: 0
 Explanation: The triplet [-3, 1, 2] has the closest sum to the target.
@@ -22,7 +22,7 @@ Explanation: The triplet [-3, 1, 2] has the closest sum to the target.
 
 Example 3:
 
-```text
+```plaintext
 Input: [1, 0, 1, 1], target=100
 Output: 3
 Explanation: The triplet [1, 1, 1] has the closest sum to the target.

@@ -4,7 +4,7 @@
 
 Design a data structure that supports the following two operations:
 
-```text
+```plaintext
 void addWord(word)
 bool search(word)
 ```
@@ -13,7 +13,7 @@ search(word) can search a literal word or a regular expression string containing
 
 **Example:**
 
-```text
+```plaintext
 addWord("bad")
 addWord("dad")
 addWord("mad")

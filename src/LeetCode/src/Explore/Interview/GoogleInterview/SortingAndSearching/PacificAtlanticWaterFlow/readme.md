@@ -15,7 +15,7 @@ Find the list of grid coordinates where water can flow to both the Pacific and A
 
 **Example:**
 
-```text
+```plaintext
 Given the following 5x5 matrix:
 
   Pacific ~   ~   ~   ~   ~
@@ -143,7 +143,7 @@ Return:
 
     Second, we think this problem in the opposite way: all the valid positions must have at least one path to connect to the ocean, so we start from the ocean to find out all the paths.
 
-    ```text
+    ```plaintext
     1, 1, 1, 1
     1, 0, 0, 0
     1, 0, 0, 0

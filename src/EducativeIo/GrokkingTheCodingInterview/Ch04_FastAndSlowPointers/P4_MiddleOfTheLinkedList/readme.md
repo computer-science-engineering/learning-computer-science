@@ -8,21 +8,21 @@ If the total number of nodes in the LinkedList is even, return the second middle
 
 Example 1:
 
-```text
+```plaintext
 Input: 1 -> 2 -> 3 -> 4 -> 5 -> null
 Output: 3
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null
 Output: 4
 ```
 
 Example 3:
 
-```text
+```plaintext
 Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> null
 Output: 4
 ```

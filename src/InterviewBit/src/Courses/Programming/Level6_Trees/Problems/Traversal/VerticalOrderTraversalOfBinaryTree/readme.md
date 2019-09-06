@@ -7,7 +7,7 @@ Given a binary tree, print a vertical order traversal of it.
 Example :
 Given binary tree:
 
-```text
+```plaintext
       6
     /   \
    3     7
@@ -17,7 +17,7 @@ Given binary tree:
 
 returns
 
-```text
+```plaintext
 
 [
     [2],

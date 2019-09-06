@@ -12,7 +12,7 @@ You have the following 3 operations permitted on a word:
 
 **Example 1:**
 
-```text
+```plaintext
 Input: word1 = "horse", word2 = "ros"
 Output: 3
 Explanation:
@@ -23,7 +23,7 @@ rose -> ros (remove 'e')
 
 **Example 2:**
 
-```text
+```plaintext
 Input: word1 = "intention", word2 = "execution"
 Output: 5
 Explanation:

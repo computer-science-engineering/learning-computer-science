@@ -8,7 +8,7 @@ You are given an array of N positive integers, A1, A2 ,…, AN. Find sum of f(Ai
 
 For example,
 
-```text
+```plaintext
 A=[1, 3, 5]
 
 We return

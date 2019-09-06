@@ -4,7 +4,7 @@
 
 Which of the given options provides the increasing order of complexity of functions f1, f2, f3 and f4:
 
-```text
+```plaintext
 f1(n) = 2^n
 
 f2(n) = n^(3/2)

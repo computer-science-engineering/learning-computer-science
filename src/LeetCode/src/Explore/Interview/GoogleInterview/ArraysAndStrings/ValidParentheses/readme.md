@@ -13,35 +13,35 @@ Note that an empty string is also considered valid.
 
 **Example 1:**
 
-```text
+```plaintext
 Input: "()"
 Output: true
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: "()[]{}"
 Output: true
 ```
 
 **Example 3:**
 
-```text
+```plaintext
 Input: "(]"
 Output: false
 ```
 
 **Example 4:**
 
-```text
+```plaintext
 Input: "([)]"
 Output: false
 ```
 
 **Example 5:**
 
-```text
+```plaintext
 Input: "{[]}"
 Output: true
 ```

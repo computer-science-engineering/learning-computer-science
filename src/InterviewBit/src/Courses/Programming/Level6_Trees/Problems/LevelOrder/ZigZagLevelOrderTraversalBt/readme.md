@@ -8,7 +8,7 @@ Example:
 
 Given binary tree
 
-```text
+```plaintext
     3
    / \
   9  20
@@ -18,7 +18,7 @@ Given binary tree
 
 return
 
-```text
+```plaintext
 [
          [3],
          [20, 9],

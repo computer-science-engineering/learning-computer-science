@@ -8,7 +8,7 @@ Explain your solution and analyze its time and space complexities.
 
 **Example:**
 
-```text
+```plaintext
     20
    /  \
   9    25

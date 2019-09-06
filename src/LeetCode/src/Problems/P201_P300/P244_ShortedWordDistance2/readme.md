@@ -7,12 +7,12 @@ Design a class which receives a list of words in the constructor, and implements
 **Example:**
 Assume that words = `["practice", "makes", "perfect", "coding", "makes"]`.
 
-```text
+```plaintext
 Input: word1 = “coding”, word2 = “practice”
 Output: 3
 ```
 
-```text
+```plaintext
 Input: word1 = "makes", word2 = "coding"
 Output: 1
 ```

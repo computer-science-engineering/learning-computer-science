@@ -11,7 +11,7 @@ Write a method to determine **if the array has a cycle**. The cycle should have 
 
 Example 1:
 
-```text
+```plaintext
 Input: [1, 2, -1, 2, 2]
 Output: true
 Explanation: The array has a cycle among indices: 0 -> 1 -> 3 -> 0
@@ -19,7 +19,7 @@ Explanation: The array has a cycle among indices: 0 -> 1 -> 3 -> 0
 
 Example 2:
 
-```text
+```plaintext
 Input: [2, 2, -1, 2]
 Output: true
 Explanation: The array has a cycle among indices: 1 -> 3 -> 1
@@ -27,7 +27,7 @@ Explanation: The array has a cycle among indices: 1 -> 3 -> 1
 
 Example 3:
 
-```text
+```plaintext
 Input: [2, 1, -1, -2]
 Output: false
 Explanation: The array does not have any cycle.

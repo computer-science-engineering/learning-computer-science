@@ -6,7 +6,7 @@ For ‘K’ employees, we are given a list of intervals representing the working
 
 Example 1:
 
-```text
+```plaintext
 Input: Employee Working Hours=[[[1,3], [5,6]], [[2,3], [6,8]]]
 Output: [3,5]
 Explanation: Both the employees are free between [3,5].
@@ -14,7 +14,7 @@ Explanation: Both the employees are free between [3,5].
 
 Example 2:
 
-```text
+```plaintext
 Input: Employee Working Hours=[[[1,3], [9,12]], [[2,4]], [[6,8]]]
 Output: [4,6], [8,9]
 Explanation: All employees are free between [4,6] and [8,9].
@@ -22,7 +22,7 @@ Explanation: All employees are free between [4,6] and [8,9].
 
 Example 3:
 
-```text
+```plaintext
 Input: Employee Working Hours=[[[1,3]], [[2,4]], [[3,5], [7,9]]]
 Output: [5,7]
 Explanation: All employees are free between [5,7].
@@ -32,14 +32,14 @@ Explanation: All employees are free between [5,7].
 
 This problem follows the **Merge Intervals** pattern. Let’s take the above-mentioned example (2) and visually draw it:
 
-```text
+```plaintext
 Input: Employee Working Hours=[[[1,3], [9,12]], [[2,4]], [[6,8]]]
 Output: [4,6], [8,9]
 ```
 
 One simple solution can be to put the working hours of all employees in a list and sort them on the start time. Then we can iterate through the list to find the gaps. Let’s dig deeper. Sorting the intervals of the above example will give us:
 
-```text
+```plaintext
 [1,3], [2,4], [6,8], [9,12]
 ```
 

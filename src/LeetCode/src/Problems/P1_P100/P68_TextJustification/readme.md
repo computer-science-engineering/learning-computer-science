@@ -18,7 +18,7 @@ For the last line of text, it should be left justified and no **extra** space is
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 words = ["This", "is", "an", "example", "of", "text", "justification."]
 maxWidth = 16
@@ -32,7 +32,7 @@ Output:
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 words = ["What","must","be","acknowledgment","shall","be"]
 maxWidth = 16
@@ -49,7 +49,7 @@ Explanation: Note that the last line is "shall be    " instead of "shall     be"
 
 **Example 3:**
 
-```text
+```plaintext
 Input:
 words = ["Science","is","what","we","understand","well","enough","to","explain",
          "to","a","computer.","Art","is","everything","else","we","do"]

@@ -14,7 +14,7 @@ Replace a character of **s** to get **t**
 
 **Example 1:**
 
-```text
+```plaintext
 Input: s = "ab", t = "acb"
 Output: true
 Explanation: We can insert 'c' into s to get t.
@@ -22,7 +22,7 @@ Explanation: We can insert 'c' into s to get t.
 
 **Example 2:**
 
-```text
+```plaintext
 Input: s = "cab", t = "ad"
 Output: false
 Explanation: We cannot get t from s by only one step.
@@ -30,7 +30,7 @@ Explanation: We cannot get t from s by only one step.
 
 **Example 3:**
 
-```text
+```plaintext
 Input: s = "1203", t = "1213"
 Output: true
 Explanation: We can replace '0' with '1' to get t.

@@ -6,7 +6,7 @@ Given an unsorted array containing numbers and a number ‘k’, find the first 
 
 Example 1:
 
-```text
+```plaintext
 Input: [3, -1, 4, 5, 5], k=3
 Output: [1, 2, 6]
 Explanation: The smallest missing positive numbers are 1, 2 and 6.
@@ -14,7 +14,7 @@ Explanation: The smallest missing positive numbers are 1, 2 and 6.
 
 Example 2:
 
-```text
+```plaintext
 Input: [2, 3, 4], k=3
 Output: [1, 5, 6]
 Explanation: The smallest missing positive numbers are 1, 5 and 6.
@@ -22,7 +22,7 @@ Explanation: The smallest missing positive numbers are 1, 5 and 6.
 
 Example 3:
 
-```text
+```plaintext
 Input: [-2, -3, 4], k=2
 Output: [1, 2]
 Explanation: The smallest missing positive numbers are 1 and 2.
@@ -36,13 +36,13 @@ We will follow a similar approach as discussed in **Find the Smallest Missing Po
 
 If we are not able to find ‘k’ missing numbers from the array, we need to add additional numbers to the output array. To find these additional numbers we will use the length of the array. For example, if the length of the array is 4, the next missing numbers will be 4, 5, 6 and so on. One tricky aspect is that any of these additional numbers could be part of the array. Remember, while sorting, we ignored all numbers that are greater than or equal to the length of the array. So all indices that have the missing numbers could possibly have these additional numbers. To handle this, we must keep track of all numbers from those indices that have missing numbers. Let’s understand this with an example:
 
-```text
+```plaintext
     nums: [2, 1, 3, 6, 5], k =2
 ```
 
 After the cyclic sort our array will look like:
 
-```text
+```plaintext
     nums: [1, 2, 3, 6, 5]
 ```
 

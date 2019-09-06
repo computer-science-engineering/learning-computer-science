@@ -11,7 +11,7 @@ Given a non-empty binary search tree and a target value, find the value in the B
 
 **Example:**
 
-```text
+```plaintext
 Input: root = [4,2,5,1,3], target = 3.714286
 
     4

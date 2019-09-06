@@ -14,7 +14,7 @@ If there isn't such day, output -1.
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 flowers: [1,3,2]
 k: 1
@@ -24,7 +24,7 @@ Explanation: In the second day, the first and the third flower have become bloom
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 flowers: [1,2,3]
 k: 1

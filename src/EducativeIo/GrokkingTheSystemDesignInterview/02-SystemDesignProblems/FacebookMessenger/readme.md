@@ -41,7 +41,7 @@ Design an instant messaging service like Facebook Messenger where users can send
 
 ## Capacity Estimation and Constraints
 
-```text
+```plaintext
 500 M DAU
 Number of daily messages each user sends = 40.
 Total messages per day = 500 M * 40 = 20 B
@@ -49,7 +49,7 @@ Total messages per day = 500 M * 40 = 20 B
 
 ### Storage Estimation
 
-```text
+```plaintext
 Average size of message = 100 bytes
 Storage needed for all messages in 1 day
  = 20 B messages * 100 bytes = 2 TB
@@ -62,7 +62,7 @@ Storage needed for 5 years of chat history
 
 ### Bandwidth Estimation
 
-```text
+```plaintext
 Data ingress per day = 2 TB
 Data ingress per second
   = 2 TB / 86400 seconds ~= 25 MB/sec

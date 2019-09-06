@@ -8,7 +8,7 @@ Given a binary tree, return the level order traversal of its nodes’ values. (i
 
 Given binary tree
 
-```text
+```plaintext
     3
    / \
   9  20
@@ -18,7 +18,7 @@ Given binary tree
 
 return its level order traversal as:
 
-```text
+```plaintext
 [
   [3],
   [9,20],

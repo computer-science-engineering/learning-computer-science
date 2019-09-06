@@ -22,7 +22,7 @@ Explain your solution and analyze its time and space complexities.
 
 Examples:
 
-```text
+```plaintext
 input:  word = "dnotq"
 output: "crime"
 

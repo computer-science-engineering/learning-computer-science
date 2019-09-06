@@ -6,7 +6,7 @@ Given an array A of integers, find the index of values that satisfy A + B = C + 
 
 Note:
 
-```text
+```plaintext
 1) Return the indices `A1 B1 C1 D1`, so that
   A[A1] + A[B1] = A[C1] + A[D1]
   A1 < B1, C1 < D1
@@ -27,7 +27,7 @@ S1 is lexicographically smaller than S2 iff
 
 Example:
 
-```text
+```plaintext
 Input: [3, 4, 7, 1, 2, 9, 8]
 Output: [0, 2, 3, 5] (O index)
 ```

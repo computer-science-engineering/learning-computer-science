@@ -9,7 +9,7 @@ The weight indicates the number of occurrences. So the output list would have to
 1. if the number of occurrences is less than the weight, the closest will be chosen
 1. if the number of occurrences is more than the weight, the spot matching the weight will be chosen and all else subsequently will be ignored.
 
-```text
+```plaintext
 Example1:
 
 Input: [1, 2, 1, 3, 2, 1]
@@ -19,7 +19,7 @@ n=2 [1, 3, 2]
 n=3 [3, 2, 1]
 ```
 
-```text
+```plaintext
 Example2:
 
 Input: [1, 2, 1, 3, 2, 1, 2]

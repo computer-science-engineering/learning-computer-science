@@ -8,7 +8,7 @@ Balanced tree: a height-balanced binary tree is defined as a binary tree in whic
 
 Example:
 
-```text
+```plaintext
 Given A: [1, 2, 3]
 A height balanced BST:
 

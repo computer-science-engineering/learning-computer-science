@@ -6,7 +6,7 @@ Given a set of candidate numbers (C) and a target number (T), find all unique co
 
 The same repeated number may be chosen from C unlimited number of times.
 
-```text
+```plaintext
 Note:
     All numbers (including target) will be positive integers.
     Elements in a combination (a1, a2, … , ak) must be in non-descending order. (ie, a1 ≤ a2 ≤ … ≤ ak).
@@ -21,7 +21,7 @@ Given candidate set 2,3,6,7 and target 7
 
 A solution set is:
 
-```text
+```plaintext
 [2, 2, 3]
 [7]
 ```

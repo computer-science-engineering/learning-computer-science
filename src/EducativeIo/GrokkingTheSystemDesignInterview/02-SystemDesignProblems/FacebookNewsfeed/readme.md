@@ -48,7 +48,7 @@ Similar Services: Twitter Newsfeed, Instagram Newsfeed, Quora Newsfeed
 
 ### Traffic estimates
 
-```text
+```plaintext
 Say, 300 M DAU.
 Each user fetches their timeline an average of 5 times a day.
 Total newsfeed requests per day
@@ -60,7 +60,7 @@ Total newsfeed requests per second
 
 ### Storage estimates
 
-```text
+```plaintext
 Say, we need 500 posts in each user's feed that
   we want to keep in memory for a quick fetch.
 Say, each post is 1 KB in size.
@@ -73,7 +73,7 @@ If one server holds 100 GB,
 
 ## System APIs
 
-```text
+```plaintext
 getUserFeed(api_dev_key, user_id, since_id, count,
   max_id, exclude_replies)
 ```
@@ -205,7 +205,7 @@ High-level architecture diagram of system. User B and C are following User A.
     - Key: UserID
     - Value:
 
-        ```text
+        ```plaintext
         Struct {
             LinkedHashMap<FeedItemID, FeedItem> feedItems;
             DateTime lastGenerated;

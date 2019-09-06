@@ -10,7 +10,7 @@ Note: You may not engage in multiple transactions at the same time (ie, you must
 
 **Example:**
 
-```text
+```plaintext
 Input : [1 2 1 2]
 Output : 2
 

@@ -4,7 +4,7 @@
 
 A message containing letters from `A-Z` is being encoded to numbers using the following mapping:
 
-```text
+```plaintext
 'A' -> 1
 'B' -> 2
 ...
@@ -43,7 +43,7 @@ The number of ways decoding `"12"` is `2`.
      Assigning `memo[n] = 1;` means when the string is empty, there is only one answer. `memo[n-1] = s.charAt(n-1) != '0' ? 1 : 0;` means when there is only one character in the string, if this character is not 0, there will be an answer, or there will be no answer. Then it starts the dp portion. When we add a letter from the end of the string, if the first two letters <=26, we can get `memo[n]=memo[n+1]+memo[n+2]`. For example, the String now is “123xxxx” and we know all the result from 2. Because 12<26, we can make this string either"12"+“3xxxx” or 1+23xxxx which is exactly `memo[n]=memo[n-1]+memo[n-2]`. if the String is"32xxxx" `memo[n]=memo[n+1]`. if there are 0s in the string, we should skip it and look at the next character because there is no answer when the string begins with 0.
 
     **Explanation 2:**
-    ```text
+    ```plaintext
     s = 123
 
     build up from right =>

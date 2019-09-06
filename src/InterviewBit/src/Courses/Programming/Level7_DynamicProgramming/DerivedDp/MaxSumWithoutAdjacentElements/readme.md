@@ -6,7 +6,7 @@ Given a `2 * N` Grid of numbers, choose numbers such that the sum of the numbers
 
 **Example:**
 
-```text
+```plaintext
 Grid:
     1 2 3 4
     2 3 4 5

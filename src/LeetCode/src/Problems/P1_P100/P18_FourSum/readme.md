@@ -10,7 +10,7 @@ The solution set must not contain duplicate quadruplets.
 
 **Example:**
 
-```text
+```plaintext
 Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.
 
 A solution set is:

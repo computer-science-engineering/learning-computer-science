@@ -15,7 +15,7 @@ Given a `rows x cols` screen and a sentence represented by a list of **non-empty
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 rows = 2, cols = 8, sentence = ["hello", "world"]
 
@@ -31,7 +31,7 @@ The character '-' signifies an empty space on the screen.
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 rows = 3, cols = 6, sentence = ["a", "bcd", "e"]
 
@@ -48,7 +48,7 @@ The character '-' signifies an empty space on the screen.
 
 **Example 3:**
 
-```text
+```plaintext
 Input:
 rows = 4, cols = 5, sentence = ["I", "had", "apple", "pie"]
 

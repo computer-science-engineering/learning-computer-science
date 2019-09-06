@@ -35,7 +35,7 @@ Similar Problems: Tweet search.
 
 ### Storage Capacity
 
-```text
+```plaintext
 New tweets every day = 400 M
 Each tweet is of size = 300 bytes
 Total storage needed = 400 M * 300
@@ -47,7 +47,7 @@ Total storage needed per second
 
 ## System APIs
 
-```text
+```plaintext
 search(api_dev_key, search_terms, maximum_results_to_return,
   sort, page_token)
 

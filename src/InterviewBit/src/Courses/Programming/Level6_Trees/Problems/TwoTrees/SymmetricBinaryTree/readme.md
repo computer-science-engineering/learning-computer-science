@@ -6,7 +6,7 @@ Given a binary tree, check whether it is a mirror of itself (ie, symmetric aroun
 
 Example:
 
-```text
+```plaintext
     1
    / \
   2   2
@@ -18,7 +18,7 @@ The above binary tree is symmetric.
 
 But the following is not:
 
-```text
+```plaintext
     1
    / \
   2   2

@@ -6,14 +6,14 @@ Given an array `arr` of unsorted numbers and a target sum, find all triplets in 
 
 Example 1:
 
-```text
+```plaintext
 Input: [-1, 0, 2, 3], target=3
 Output: [[-1, 0, 3], [-1, 0, 2]]
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: [-1, 4, 2, 1, 3], target=5
 Output: [[-1, 1, 4], [-1, 1, 3], [-1, 1, 2], [-1, 2, 3]]
 ```

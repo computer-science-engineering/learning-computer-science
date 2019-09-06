@@ -12,7 +12,7 @@ Design a max stack that supports push, pop, top, peekMax and popMax.
 
 **Example 1:**
 
-```text
+```plaintext
 MaxStack stack = new MaxStack();
 stack.push(5);
 stack.push(1);

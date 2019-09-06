@@ -6,7 +6,7 @@ Given a list of intervals, **merge all the overlapping intervals** to produce a 
 
 Example 1:
 
-```text
+```plaintext
 Intervals: [[1,4], [2,5], [7,9]]
 Output: [[1,5], [7,9]]
 Explanation: Since the first two intervals [1,4] and [2,5] overlap, we merged them into one [1,5].
@@ -14,7 +14,7 @@ Explanation: Since the first two intervals [1,4] and [2,5] overlap, we merged th
 
 Example 2:
 
-```text
+```plaintext
 Intervals: [[6,7], [2,4], [5,9]]
 Output: [[2,4], [5,9]]
 Explanation: Since the intervals [6,7] and [5,9] overlap, we merged them into one [5,9].
@@ -22,7 +22,7 @@ Explanation: Since the intervals [6,7] and [5,9] overlap, we merged them into on
 
 Example 3:
 
-```text
+```plaintext
 Intervals: [[1,4], [2,6], [3,5]]
 Output: [[1,6]]
 Explanation: Since all the given intervals overlap, we merged them into one.
@@ -41,7 +41,7 @@ Our goal is to merge the intervals whenever they overlap. For the above-mentione
 1. Sort the intervals on the start time to ensure `a.start <= b.start`.
 2. If ‘a’ overlaps ‘b’ (i.e. `b.start <= a.end`), we need to merge them into a new interval ‘c’ such that:
 
-    ```text
+    ```plaintext
     c.start = a.start
     c.end = max(a.end, b.end)
     ```

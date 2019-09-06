@@ -6,7 +6,7 @@ Merge *k* sorted linked lists and return it as one sorted list. Analyze and desc
 
 Example:
 
-```text
+```plaintext
 Input:
 [
   1->4->5,

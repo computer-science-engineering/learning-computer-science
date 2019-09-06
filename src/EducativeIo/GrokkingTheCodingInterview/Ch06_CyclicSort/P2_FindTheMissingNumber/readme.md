@@ -6,14 +6,14 @@ We are given an array containing ‘n’ distinct numbers taken from the range 0
 
 Example 1:
 
-```text
+```plaintext
 Input: [4, 0, 3, 1]
 Output: 2
 ```
 
 Example 2:
 
-```text
+```plaintext
 Input: [8, 3, 5, 2, 4, 6, 0, 1]
 Output: 7
 ```

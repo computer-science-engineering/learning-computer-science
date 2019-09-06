@@ -8,7 +8,7 @@ Note that when the count of a character C in T is N, then the count of C in mini
 
 Example :
 
-```text
+```plaintext
 S = "ADOBECODEBANC"
 T = "ABC"
 Minimum window is "BANC"

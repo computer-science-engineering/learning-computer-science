@@ -4,7 +4,7 @@
 
 What is the time, space complexity of following code :
 
-```text
+```plaintext
 int a = 0, b = 0;
 for (i = 0; i < N; i++) {
     for (j = 0; j < N; j++) {

@@ -14,28 +14,28 @@ Given a parentheses string, return the minimum number of parentheses we must add
 
 **Example 1:**
 
-```text
+```plaintext
 Input: "())"
 Output: 1
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: "((("
 Output: 3
 ```
 
 **Example 3:**
 
-```text
+```plaintext
 Input: "()"
 Output: 0
 ```
 
 **Example 4:**
 
-```text
+```plaintext
 Input: "()))(("
 Output: 4
 ```

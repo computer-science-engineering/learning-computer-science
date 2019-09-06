@@ -6,7 +6,7 @@ We are given an unsorted array containing ‘n’ numbers taken from the range 1
 
 Example 1:
 
-```text
+```plaintext
 Input: [3, 1, 2, 5, 2]
 Output: [2, 4]
 Explanation: '2' is duplicated and '4' is missing.
@@ -14,7 +14,7 @@ Explanation: '2' is duplicated and '4' is missing.
 
 Example 2:
 
-```text
+```plaintext
 Input: [3, 1, 2, 3, 6, 4]
 Output: [3, 5]
 Explanation: '3' is duplicated and '5' is missing.

@@ -11,7 +11,7 @@ Given two words (start and end), and a dictionary, find the length of shortest t
 
 Given:
 
-```text
+```plaintext
 start = "hit"
 end = "cog"
 dict = ["hot","dot","dog","lot","log"]

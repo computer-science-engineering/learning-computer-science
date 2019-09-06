@@ -21,14 +21,14 @@ Print the number of `(i, j)` pairs where `i < j` and `ai + aj` is divisible by `
 
 ### Sample Input
 
-```text
+```plaintext
 6 3
 1 3 2 6 1 2
 ```
 
 ### Sample Output
 
-```text
+```plaintext
 5
 ```
 

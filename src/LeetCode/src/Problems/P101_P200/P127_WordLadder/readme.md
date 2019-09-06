@@ -17,7 +17,7 @@ Each transformed word must exist in the word list. Note that *beginWord* is not 
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 beginWord = "hit",
 endWord = "cog",
@@ -31,7 +31,7 @@ return its length 5.
 
 **Example** 2:
 
-```text
+```plaintext
 Input:
 beginWord = "hit"
 endWord = "cog"

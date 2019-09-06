@@ -15,7 +15,7 @@ In short, you have to ensure the following properties for the max heap:
 
 Let us take an example of 4 distinct integers. Without loss of generality let us take `1 2 3 4` as our 4 distinct integers. Following are the possible max heaps from these 4 numbers:
 
-```text
+```plaintext
          4
        /  \
       3   2
@@ -23,7 +23,7 @@ Let us take an example of 4 distinct integers. Without loss of generality let us
     1
 ```
 
-```text
+```plaintext
          4
        /  \
       2   3
@@ -31,7 +31,7 @@ Let us take an example of 4 distinct integers. Without loss of generality let us
     1
 ```
 
-```text
+```plaintext
         4
        /  \
       3   1
@@ -69,7 +69,7 @@ NOTE: Note that even though constraints are mentioned for this problem, for most
 * Now point to be remembered here is that the structure of the heap will remain the same. That is only the values within the node will change however the overall structure remaining the same.
 * As structure of the heap remains the same, the number of elements that are present in the left sub-tree of the root (L) will be fixed. And similarly the number of the elements on the right sub-tree (R) of the root. And also following equality holds.
 
-    ```text
+    ```plaintext
     L + R = (n-1)
     ```
 
@@ -77,7 +77,7 @@ NOTE: Note that even though constraints are mentioned for this problem, for most
 * So now there are `(n-1)CL` ways to pickup L elements from (n-1) elements. And then recurse the solution.
 * So final equation will be as follows :
 
-    ```text
+    ```plaintext
     (n-1)CL * getNumberOfMaxHeaps(L) * getNumberOfMaxHeaps(R)
     ```
 
@@ -90,7 +90,7 @@ NOTE: Note that even though constraints are mentioned for this problem, for most
   * However if it is half filled then it will reduced by the number of elements in last level left to fill exactly half of the last level.
   * So final equation for L will be as follows :
 
-        ```text
+        ```plaintext
         L   = 2h - 1 if p >= m/2
             = 2h - 1 - (m/2 - p) if p<(m/2)
         ```

@@ -4,7 +4,7 @@
 
 What is the time complexity of the following code :
 
-```text
+```plaintext
 int i, j, k = 0;
 for (i  = n/2; i <= n; i++) {
     for (j = 2; j <= n; j = j * 2) {
@@ -27,7 +27,7 @@ for (i  = n/2; i <= n; i++) {
 
 Lets look at the code we are evaluating :
 
-```text
+```plaintext
   int i, j, k = 0;
     for (i  = n/2; i <= n; i++) {
         for (j = 2; j <= n; j = j * 2) {
@@ -38,7 +38,7 @@ Lets look at the code we are evaluating :
 
 Now, lets just assume n = 8 for now. We will try to see, the values of j corresponding to each i.
 
-```text
+```plaintext
 i = 4, j = 2, 4, 8
 i = 5, j = 2, 4, 8
 i = 6, j = 2, 4, 8
@@ -50,7 +50,7 @@ If you notice, j keeps doubling till it is less than or equal to n. Number of ti
 
 Lets take more examples here to convince ourselves.
 
-```text
+```plaintext
  n = 16, j = 2, 4, 8, 16
  n = 32, j = 2, 4, 8, 16, 32
 ```

@@ -8,7 +8,7 @@ Given a _m_ x _n_ grid filled with non-negative numbers, find a path from top le
 
 **Example:**
 
-```text
+```plaintext
 Input:
 [
   [1,3,1],

@@ -10,7 +10,7 @@ A Range Module is a module that tracks ranges of numbers. Your task is to design
 
 **Example 1:**
 
-```text
+```plaintext
 addRange(10, 20): null
 removeRange(14, 16): null
 queryRange(10, 14): true (Every number in [10, 14) is being tracked)

@@ -6,7 +6,7 @@ Given two binary strings, return their sum (also a binary string).
 
 Example:
 
-```text
+```plaintext
 a = "100"
 b = "11"
 Return a + b = “111”.
@@ -16,7 +16,7 @@ Return a + b = “111”.
 
 1. [Geeks for Geeks problem](http://www.geeksforgeeks.org/add-two-bit-strings/)
 
-    ```text
+    ```plaintext
     1. Make them equal sized by adding 0s at the beginning of smaller string.
     2. Perform bit addition
     …..Boolean expression for adding 3 bits a, b, c

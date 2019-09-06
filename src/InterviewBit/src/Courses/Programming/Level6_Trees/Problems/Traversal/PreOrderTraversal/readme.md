@@ -6,7 +6,7 @@ Given a binary tree, return the pre-order traversal of its nodes’ values.
 
 Example: Given binary tree
 
-```text
+```plaintext
    1
     \
      2

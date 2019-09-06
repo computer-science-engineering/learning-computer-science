@@ -8,14 +8,14 @@ If there is no common prefix, return an empty string `""`.
 
 **Example 1:**
 
-```text
+```plaintext
 Input: ["flower","flow","flight"]
 Output: "fl"
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.

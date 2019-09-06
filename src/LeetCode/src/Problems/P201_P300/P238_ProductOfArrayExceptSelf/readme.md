@@ -6,7 +6,7 @@ Given an array `nums` of *n* integers where *n > 1*,  return an array `output` s
 
 **Example:**
 
-```text
+```plaintext
 Input:  [1,2,3,4]
 Output: [24,12,8,6]
 ```

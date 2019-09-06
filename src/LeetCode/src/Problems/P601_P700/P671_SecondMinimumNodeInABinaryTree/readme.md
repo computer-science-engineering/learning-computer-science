@@ -10,7 +10,7 @@ If no such second minimum value exists, output -1 instead.
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
     2
    / \
@@ -24,7 +24,7 @@ Explanation: The smallest value is 2, the second smallest value is 5.
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
     2
    / \

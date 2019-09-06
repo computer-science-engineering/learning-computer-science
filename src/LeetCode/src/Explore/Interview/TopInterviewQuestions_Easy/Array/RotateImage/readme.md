@@ -12,7 +12,7 @@ You have to rotate the image [in-place](https://en.wikipedia.org/wiki/In-place_a
 
 **Example 1:**
 
-```text
+```plaintext
 Given input matrix =
 [
   [1,2,3],
@@ -30,7 +30,7 @@ rotate the input matrix in-place such that it becomes:
 
 **Example 2:**
 
-```text
+```plaintext
 Given input matrix =
 [
   [ 5, 1, 9,11],
@@ -53,7 +53,7 @@ rotate the input matrix in-place such that it becomes:
 1. [LeetCode solution](https://leetcode.com/problems/rotate-image/solution/)
 1. [LeetCode discussion - A common method to rotate the image](https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/discuss/18872/A-common-method-to-rotate-the-image)
 
-    ```text
+    ```plaintext
     /*
     * clockwise rotate
     * first reverse up to down, then swap the symmetry 

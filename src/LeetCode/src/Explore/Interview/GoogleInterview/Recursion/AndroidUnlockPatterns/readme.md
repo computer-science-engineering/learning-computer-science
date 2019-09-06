@@ -15,7 +15,7 @@ Given an Android **3x3** key lock screen and two integers **m** and **n**, where
 
 **Explanation:**
 
-```text
+```plaintext
 | 1 | 2 | 3 |
 | 4 | 5 | 6 |
 | 7 | 8 | 9 |
@@ -39,7 +39,7 @@ Line 1 - 9 is valid because it passes through key 5, which had been selected in 
 
 **Example:**
 
-```text
+```plaintext
 Input: m = 1, n = 1
 Output: 9
 ```

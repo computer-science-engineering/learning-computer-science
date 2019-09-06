@@ -6,14 +6,14 @@ Find the **k**th largest element in an unsorted array. Note that it is the kth l
 
 **Example 1:**
 
-```text
+```plaintext
 Input: [3,2,1,5,6,4] and k = 2
 Output: 5
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: [3,2,3,1,2,4,5,5,6] and k = 4
 Output: 4
 ```

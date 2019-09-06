@@ -8,7 +8,7 @@ You may assume the given input string is always valid. For example, "01:34", "12
 
 **Example 1:**
 
-```text
+```plaintext
 Input: "19:34"
 Output: "19:39"
 Explanation: The next closest time choosing from digits 1, 9, 3, 4, is 19:39, which occurs 5 minutes later.  It is not 19:33, because this occurs 23 hours and 59 minutes later.
@@ -16,7 +16,7 @@ Explanation: The next closest time choosing from digits 1, 9, 3, 4, is 19:39, wh
 
 **Example 2:**
 
-```text
+```plaintext
 Input: "23:59"
 Output: "22:22"
 Explanation: The next closest time choosing from digits 2, 3, 5, 9, is 22:22. It may be assumed that the returned time is next day's time since it is smaller than the input time numerically.

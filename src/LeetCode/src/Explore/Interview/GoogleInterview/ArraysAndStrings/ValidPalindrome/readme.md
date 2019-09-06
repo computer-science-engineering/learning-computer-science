@@ -8,14 +8,14 @@ Given a string, determine if it is a palindrome, considering only alphanumeric c
 
 **Example 1:**
 
-```text
+```plaintext
 Input: "A man, a plan, a canal: Panama"
 Output: true
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: "race a car"
 Output: false
 ```

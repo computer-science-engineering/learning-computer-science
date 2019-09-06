@@ -6,7 +6,7 @@ Given a string with lowercase letters only, if you are allowed to **replace no m
 
 Example 1:
 
-```text
+```plaintext
 Input: String="aabccbb", k=2
 Output: 5
 Explanation: Replace the two 'c' with 'b' to have a longest repeating substring "bbbbb".
@@ -14,7 +14,7 @@ Explanation: Replace the two 'c' with 'b' to have a longest repeating substring 
 
 Example 2:
 
-```text
+```plaintext
 Input: String="abbcb", k=1
 Output: 4
 Explanation: Replace the 'c' with 'b' to have a longest repeating substring "bbbb".
@@ -22,7 +22,7 @@ Explanation: Replace the 'c' with 'b' to have a longest repeating substring "bbb
 
 Example 3:
 
-```text
+```plaintext
 Input: String="abccde", k=1
 Output: 3
 Explanation: Replace the 'b' or 'd' with 'c' to have the longest repeating substring "ccc".

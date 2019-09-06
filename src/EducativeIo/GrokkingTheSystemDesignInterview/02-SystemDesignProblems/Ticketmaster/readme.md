@@ -77,14 +77,14 @@ Similar Services: bookmyshow.com, ticketmaster.com
 
 ## System APIs
 
-```text
+```plaintext
 SearchMovies(api_dev_key, keyword, city, lat_long, radius, start_datetime, end_datetime, postal_code,
 includeSpellcheck, results_per_page, sorting_order)
 
 Return JSON.
 ```
 
-```text
+```plaintext
 ReserveSeats(api_dev_key, session_id, movie_id, show_id, seats_to_reserve[])
 
 Returns: (JSON)

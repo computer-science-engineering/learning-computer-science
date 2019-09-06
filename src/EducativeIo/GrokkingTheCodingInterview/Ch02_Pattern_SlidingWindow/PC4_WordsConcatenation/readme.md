@@ -6,7 +6,7 @@ Given a string and a list of words, find all the starting indices of substrings 
 
 Example 1:
 
-```text
+```plaintext
 Input: String="catfoxcat", Words=["cat", "fox"]
 Output: [0, 3]
 Explanation: The two substring containing both the words are "catfox" & "foxcat".
@@ -14,7 +14,7 @@ Explanation: The two substring containing both the words are "catfox" & "foxcat"
 
 Example 2:
 
-```text
+```plaintext
 Input: String="catcatfoxfox", Words=["cat", "fox"]
 Output: [3]
 Explanation: The only substring containing both the words is "catfox".

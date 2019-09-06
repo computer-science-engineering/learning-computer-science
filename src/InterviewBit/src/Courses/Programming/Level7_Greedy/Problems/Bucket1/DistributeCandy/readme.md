@@ -13,13 +13,13 @@ What is the minimum candies you must give?
 
 **Sample Input:**
 
-```text
+```plaintext
 Ratings : [1 2]
 ```
 
 **Sample Output:**
 
-```text
+```plaintext
 3
 ```
 

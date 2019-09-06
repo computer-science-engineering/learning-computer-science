@@ -8,7 +8,7 @@ Note: The length of path between two nodes is represented by the number of edges
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 
               5
@@ -22,7 +22,7 @@ Output: 2
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 
               1

@@ -6,7 +6,7 @@ Given a non-negative integer `c`, your task is to decide whether there're two in
 
 **Example 1:**
 
-```text
+```plaintext
 Input: 5
 Output: True
 Explanation: 1 * 1 + 2 * 2 = 5
@@ -14,7 +14,7 @@ Explanation: 1 * 1 + 2 * 2 = 5
 
 **Example 2:**
 
-```text
+```plaintext
 Input: 3
 Output: False
 ```

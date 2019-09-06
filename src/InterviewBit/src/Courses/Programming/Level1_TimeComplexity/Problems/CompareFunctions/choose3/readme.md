@@ -6,7 +6,7 @@ In a competition, four different functions are observed. All the functions use a
 
 Consider the following for loops:
 
-```text
+```plaintext
   A) for(i = 0; i < n; i++)
 
   B) for(i = 0; i < n; i += 2)

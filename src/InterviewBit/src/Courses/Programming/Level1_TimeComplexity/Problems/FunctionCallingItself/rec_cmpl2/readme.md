@@ -39,7 +39,7 @@ Note that in every function call, we end up making 2 calls.
 
 So, the function calls ends up looking like a tree :
 
-```text
+```plaintext
                    F(0,0)
                 /          \
             F(0, 1)         F(1, 0)
@@ -50,7 +50,7 @@ So, the function calls ends up looking like a tree :
 
 The function calls end up making a complete binary tree.
 
-```text
+```plaintext
   Number of calls on Level 0 = 1
   Number of calls on Level 1 = 2
   Number of calls on Level 2 = 4
@@ -58,7 +58,7 @@ The function calls end up making a complete binary tree.
   Number of calls on level i = 2^i.
 ```
 
-```text
+```plaintext
 Total number of calls = 1 + 2 + 4 + ... 2^i + ... 2^(M + N - 2)
                       = O(2^(M + N))
 ```

@@ -8,7 +8,7 @@ You may assume that the array is non-empty and the majority element always exist
 
 **Example:**
 
-```text
+```plaintext
 Input : [2, 1, 2]
 Return : 2 which occurs 2 times which is greater than 3/2.
 ```

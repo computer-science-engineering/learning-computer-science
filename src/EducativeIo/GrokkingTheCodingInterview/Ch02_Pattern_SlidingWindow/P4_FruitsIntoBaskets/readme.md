@@ -10,7 +10,7 @@ Write a function to return the maximum number of fruits in both the baskets.
 
 Example 1:
 
-```text
+```plaintext
 Input: Fruit=['A', 'B', 'C', 'A', 'C']
 Output: 3
 Explanation: We can put 2 'C' in one basket and one 'A' in the other from the subarray ['C', 'A', 'C']
@@ -18,7 +18,7 @@ Explanation: We can put 2 'C' in one basket and one 'A' in the other from the su
 
 Example 2:
 
-```text
+```plaintext
 Input: Fruit=['A', 'B', 'C', 'B', 'B', 'C']
 Output: 5
 Explanation: We can put 3 'B' in one basket and two 'C' in the other basket.

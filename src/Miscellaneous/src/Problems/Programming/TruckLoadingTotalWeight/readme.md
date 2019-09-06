@@ -4,13 +4,13 @@
 
 Given a string, return the total weight carried by a truck over several waypoints. Each waypoint in the string is separated by a whitespace. The string is of the form:
 
-```text
+```plaintext
 +6b25 +50 -2b25 +10b20 -50
 ```
 
 ### Explanation
 
-```text
+```plaintext
 +6b25
 
 + = add to truck

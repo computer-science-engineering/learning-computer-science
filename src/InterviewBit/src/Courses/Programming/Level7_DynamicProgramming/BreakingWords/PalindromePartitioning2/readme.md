@@ -22,7 +22,7 @@ Return `1` since the palindrome partitioning `["aa","b"]` could be produced usin
 
     Say that it started at `s[i] = 'b'`, and `s[i-1,i+1]` is a palindrome “aba”:
 
-    ```text
+    ```plaintext
     .......aba...
     |<-X->| ^
     |<---Y-->|
@@ -48,7 +48,7 @@ Return `1` since the palindrome partitioning `["aa","b"]` could be produced usin
 
 1. [YT Video - Tushar Roy - Palindrome Partition Dynamic Programming](https://www.youtube.com/watch?v=lDYIvtBVmgo)
 
-    ```text
+    ```plaintext
     if isPalindrome(i, j)
       T[i][j] = 0;
     else

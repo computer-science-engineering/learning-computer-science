@@ -14,7 +14,7 @@ Note: You may not slant the container.
 
 Example:
 
-```text
+```plaintext
 Input : [1, 5, 4, 3]
 Output : 6
 

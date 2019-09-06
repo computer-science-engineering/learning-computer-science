@@ -12,7 +12,7 @@ Two sequences `A_1, A_2, ...` and `B_1, B_2, ...` are different if there is some
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 S = 'bccb'
 Output: 6
@@ -23,7 +23,7 @@ Note that 'bcb' is counted only once, even though it occurs twice.
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 S = 'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
 Output: 104860361

@@ -8,14 +8,14 @@ Return the index of the first occurrence of needle in haystack, or **-1** if nee
 
 **Example 1:**
 
-```text
+```plaintext
 Input: haystack = "hello", needle = "ll"
 Output: 2
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: haystack = "aaaaa", needle = "bba"
 Output: -1
 ```

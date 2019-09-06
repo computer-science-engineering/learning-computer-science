@@ -8,7 +8,7 @@ Each word must be constructed from letters of sequentially adjacent cell, where 
 
 **Example:**
 
-```text
+```plaintext
 Input:
 words = ["oath","pea","eat","rain"] and board =
 [

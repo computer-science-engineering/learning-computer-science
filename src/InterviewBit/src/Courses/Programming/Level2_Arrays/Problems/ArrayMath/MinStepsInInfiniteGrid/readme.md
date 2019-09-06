@@ -4,7 +4,7 @@
 
 You are in an infinite 2D grid where you can move in any of the 8 directions :
 
-```text
+```plaintext
 (x, y) to
 (x+1, y),
 (x-1, y),
@@ -20,7 +20,7 @@ You are given a sequence of points and **the order in which you need to cover th
 
 **Example :**
 
-```text
+```plaintext
 Input : [(0, 0), (1, 1), (1, 2)]
 Output : 2
 ```

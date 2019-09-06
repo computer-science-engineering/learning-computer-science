@@ -10,7 +10,7 @@ By using the `read4` API, implement the function `int read(char *buf, int n)` th
 
 **Example 1:**
 
-```text
+```plaintext
 Input: buf = "abc", n = 4
 Output: "abc"
 Explanation: The actual number of characters read is 3, which is "abc".
@@ -18,7 +18,7 @@ Explanation: The actual number of characters read is 3, which is "abc".
 
 **Example 2:**
 
-```text
+```plaintext
 Input: buf = "abcde", n = 5
 Output: "abcde"
 ```

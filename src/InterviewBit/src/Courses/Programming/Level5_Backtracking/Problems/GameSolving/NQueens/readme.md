@@ -13,7 +13,7 @@ Each solution contains a distinct board configuration of the n-queens’ placeme
 For example,
 There exist two distinct solutions to the 4-queens puzzle:
 
-```text
+```plaintext
 [
  [".Q..",  // Solution 1
   "...Q",

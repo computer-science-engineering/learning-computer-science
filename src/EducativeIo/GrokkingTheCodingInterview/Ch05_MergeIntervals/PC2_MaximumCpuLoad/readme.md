@@ -6,7 +6,7 @@ We are given a list of Jobs. Each job has a Start time, an End time, and a CPU l
 
 Example 1:
 
-```text
+```plaintext
 Jobs: [[1,4,3], [2,5,4], [7,9,6]]
 Output: 7
 Explanation: Since [1,4,3] and [2,5,4] overlap, their maximum CPU load (3+4=7) will be when both the
@@ -15,7 +15,7 @@ jobs are running at the same time i.e., during the time interval (2,4).
 
 Example 2:
 
-```text
+```plaintext
 Jobs: [[6,7,10], [2,4,11], [8,12,15]]
 Output: 15
 Explanation: None of the jobs overlap, therefore we will take the maximum load of any job which is 15.
@@ -23,7 +23,7 @@ Explanation: None of the jobs overlap, therefore we will take the maximum load o
 
 Example 3:
 
-```text
+```plaintext
 Jobs: [[1,4,2], [2,4,1], [3,6,5]]
 Output: 8
 Explanation: Maximum CPU load will be 8 as all jobs overlap during the time interval [3,4].

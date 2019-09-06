@@ -55,7 +55,7 @@ System will be ready heavy. Say, read:write = 100:1.
 
 ### Traffic Estimates
 
-```text
+```plaintext
 New shortenings per month = 500 M
 Number of redirections = 100 * 500 M = 50 B
 QPS = 500 M / (30 days * 24 hours * 3600 seconds) = ~ 200 URLs/s
@@ -65,7 +65,7 @@ With 100:1 read:write ratio, URL redirects per second
 
 ### Storage Estimates
 
-```text
+```plaintext
 All short links are stored for: 5 years
 Given 500 M new URLs per month, total number of objects
   = 500 M * 5 years * 12 months = 30 B
@@ -76,7 +76,7 @@ Total storage needed = 30 B * 500 bytes
 
 ### Bandwidth Estimates
 
-```text
+```plaintext
 Number of new URL writes = 200 /s
 Total ingress data = 200 * 500 bytes
   = 100000 bytes/s = 100 KB/s
@@ -87,7 +87,7 @@ Total egress data = 20000 * 500 bytes
 
 ### Memory Estimates
 
-```text
+```plaintext
 80-20 rule
 RPS = 20K
 Requests per day
@@ -112,13 +112,13 @@ Memory needed to cache 20%
 
 ## System APIs
 
-```text
+```plaintext
 createURL(api_dev_key, original_url, custom_short_link=null, expire_date=null)
 
 Returns: short link
 ```
 
-```text
+```plaintext
 deleteURL(api_dev_key, short_link)
 ```
 

@@ -8,14 +8,14 @@ NOTE: A solution will always exist. read [Goldbach’s conjecture](https://en.wi
 
 Example:
 
-```text
+```plaintext
 Input : 4
 Output: 2 + 2 = 4
 ```
 
 If there are more than one solutions possible, return the lexicographically smaller solution.
 
-```text
+```plaintext
 If [a, b] is one solution with a <= b,
 and [c, d] is another solution with c <= d, then
 

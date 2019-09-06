@@ -7,7 +7,7 @@ Given a binary tree and a sum, find all root-to-leaf paths where each path’s s
 For example:
 Given the below binary tree and sum = 22,
 
-```text
+```plaintext
               5
              / \
             4   8
@@ -19,7 +19,7 @@ Given the below binary tree and sum = 22,
 
 return
 
-```text
+```plaintext
 [
    [5,4,11,2],
    [5,8,4,5]

@@ -8,7 +8,7 @@
 
 **Example:**
 
-```text
+```plaintext
 Input : [0 1 0 1]
 Return : 4
 

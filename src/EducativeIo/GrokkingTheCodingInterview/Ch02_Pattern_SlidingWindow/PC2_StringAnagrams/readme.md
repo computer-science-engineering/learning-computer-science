@@ -17,7 +17,7 @@ Write a function to return a list of starting indices of the anagrams of the pat
 
 Example 1:
 
-```text
+```plaintext
 Input: String="ppqp", Pattern="pq"
 Output: [1, 2]
 Explanation: The two anagrams of the pattern in the given string are "pq" and "qp".
@@ -25,7 +25,7 @@ Explanation: The two anagrams of the pattern in the given string are "pq" and "q
 
 Example 2:
 
-```text
+```plaintext
 Input: String="abbcabc", Pattern="abc"
 Output: [2, 3, 4]
 Explanation: The three anagrams of the pattern in the given string are "bca", "cab", and "abc".

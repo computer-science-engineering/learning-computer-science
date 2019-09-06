@@ -10,7 +10,7 @@ The path may start and end at any node in the tree.
 
 Given the below binary tree,
 
-```text
+```plaintext
        1
       / \
      2   3

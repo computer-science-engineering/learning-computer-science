@@ -61,7 +61,7 @@ Design a simpler version of Instagram, where a user can share photos and can als
 
 ## Capacity Estimation and Constraints
 
-```text
+```plaintext
 Total users = 500 M
 DAU = 1 M
 New photos every day = 2 M =>
@@ -144,7 +144,7 @@ Storage estimation for 10 years.
 
 ### User Table
 
-```text
+```plaintext
 Assumption: int and datetime is 4 bytes, each row in User's table:
 
 UserID (4 bytes) + Name (20 bytes) + Email (32 bytes)
@@ -156,7 +156,7 @@ Storage for 500 M users: 500 M * 68 bytes = 34 GB
 
 ### Photo Table
 
-```text
+```plaintext
 PhotoID (4 bytes) + UserID (4 bytes) + PhotoPath (256 bytes)
   + PhotoLatitude (4 bytes) + PhotoLongitude(4 bytes)
   + UserLatitude (4 bytes) + UserLongitude (4 bytes)
@@ -171,7 +171,7 @@ Storage needed for 10 years
 
 ### UserFollow Table
 
-```text
+```plaintext
 Each row in the UserFollow table will consist of 8 bytes.
 If we have 500 million users and on average each user follows 500 users,
   total storage needed

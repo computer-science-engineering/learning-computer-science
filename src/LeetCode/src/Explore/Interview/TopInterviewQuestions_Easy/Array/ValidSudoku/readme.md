@@ -16,7 +16,7 @@ The Sudoku board could be partially filled, where empty cells are filled with th
 
 **Example 1:**
 
-```text
+```plaintext
 Input:
 [
   ["5","3",".",".","7",".",".",".","."],
@@ -34,7 +34,7 @@ Output: true
 
 **Example 2:**
 
-```text
+```plaintext
 Input:
 [
   ["8","3",".",".","7",".",".",".","."],
@@ -70,7 +70,7 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
 
     Just see this:
 
-    ```text
+    ```plaintext
     for i in 1..9:
         # traversing cube i
         for j in 1..9:
@@ -80,7 +80,7 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
 
     To achieve the iteration above, I would instead do traversal like
 
-    ```text
+    ```plaintext
     for i_cube in 0..2: for j_cube in 0..2: for i in 0..2: for j in 0..2:
         (x, y) = (3 * i_cube + i, 3 * j_cube + j) for board[x, y]
     ```

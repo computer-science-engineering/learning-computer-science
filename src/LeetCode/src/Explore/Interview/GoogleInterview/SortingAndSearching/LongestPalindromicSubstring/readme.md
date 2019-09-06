@@ -6,7 +6,7 @@ Given a string **s**, find the longest palindromic substring in **s**. You may a
 
 **Example 1:**
 
-```text
+```plaintext
 Input: "babad"
 Output: "bab"
 Note: "aba" is also a valid answer.
@@ -14,7 +14,7 @@ Note: "aba" is also a valid answer.
 
 **Example 2:**
 
-```text
+```plaintext
 Input: "cbbd"
 Output: "bb"
 ```
@@ -89,7 +89,7 @@ Output: "bb"
 
     For friends who are confused about the key idea to check only new palindrome with length = current length +2 or +1, I add some more explanation here.
 
-    ```text
+    ```plaintext
     Example: "xxxbcbxxxxxa", (x is random character, not all x are equal) now we 
             are dealing with the last character 'a'. The current longest palindrome
             is "bcb" with length 3.

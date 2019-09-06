@@ -16,7 +16,7 @@ NOTE: If you are using any global variables, make sure to clear them in the cons
 
 Example :
 
-```text
+```plaintext
 Input :
          capacity = 2
          set(1, 10)

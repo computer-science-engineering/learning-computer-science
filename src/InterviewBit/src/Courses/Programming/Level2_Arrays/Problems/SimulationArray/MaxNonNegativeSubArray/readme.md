@@ -8,7 +8,7 @@ Maximum sub-array is defined in terms of the sum of the elements in the sub-arra
 
 **Example:**
 
-```text
+```plaintext
 A : [1, 2, 5, -7, 2, 3]
 The two sub-arrays are [1, 2, 5] [2, 3].
 The answer is [1, 2, 5] as its sum is larger than [2, 3]

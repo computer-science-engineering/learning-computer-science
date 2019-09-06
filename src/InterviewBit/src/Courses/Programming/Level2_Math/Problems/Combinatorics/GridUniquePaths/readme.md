@@ -14,7 +14,7 @@ Note: A and B will be such that the resulting answer fits in a 32 bit signed int
 
 Example:
 
-```text
+```plaintext
 Input : A = 2, B = 2
 Output : 2
 

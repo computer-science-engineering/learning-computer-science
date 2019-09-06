@@ -10,21 +10,21 @@ All occurrences of a character must be replaced with another character while pre
 
 **Example 1:**
 
-```text
+```plaintext
 Input: s = "egg", t = "add"
 Output: true
 ```
 
 **Example 2:**
 
-```text
+```plaintext
 Input: s = "foo", t = "bar"
 Output: false
 ```
 
 **Example 3:**
 
-```text
+```plaintext
 Input: s = "paper", t = "title"
 Output: true
 ```

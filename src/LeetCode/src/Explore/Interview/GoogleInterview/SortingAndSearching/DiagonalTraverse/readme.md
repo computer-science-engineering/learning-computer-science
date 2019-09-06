@@ -6,7 +6,7 @@ Given a matrix of M x N elements (M rows, N columns), return all elements of the
 
 **Example:**
 
-```text
+```plaintext
 Input:
 [
  [ 1, 2, 3 ],

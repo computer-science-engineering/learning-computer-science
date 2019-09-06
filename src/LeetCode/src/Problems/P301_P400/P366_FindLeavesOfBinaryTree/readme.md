@@ -8,7 +8,7 @@ Given a binary tree, collect a tree's nodes as if you were doing this: Collect a
 
 Given binary tree
 
-```text
+```plaintext
           1
          / \
         2   3
@@ -22,7 +22,7 @@ Returns `[4, 5, 3], [2], [1]`.
 
 1. Removing the leaves `[4, 5, 3]` would result in this tree:
 
-```text
+```plaintext
           1
          /
         2
@@ -30,13 +30,13 @@ Returns `[4, 5, 3], [2], [1]`.
 
 1. Now removing the leaf `[2]` would result in this tree:
 
-```text
+```plaintext
           1
 ```
 
 1. Now removing the leaf `[1]` would result in the empty tree:
 
-```text
+```plaintext
           []
 ```
 

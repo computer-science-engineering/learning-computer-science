@@ -8,7 +8,7 @@ Given 2 sorted arrays, find all the elements which occur in both the arrays.
 
 Example :
 
-```text
+```plaintext
 Input :
     A : [1 2 3 3 4 5 6]
     B : [3 3 5]

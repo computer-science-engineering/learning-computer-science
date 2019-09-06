@@ -19,7 +19,7 @@ Lets say N = size of the array. Then, following holds true:
 
 1. [GfG problem](http://www.geeksforgeeks.org/rearrange-given-array-place/)
 
-    ```text
+    ```plaintext
     ex: arr[]={2,1,0};
     1st loop:
     arr[0]=arr[0]+(arr[arr[0]]%3)*3 = 2+(arr[2]%3)*3 = 2+(0%3)*3 = 2
@@ -33,7 +33,7 @@ Lets say N = size of the array. Then, following holds true:
 
 1. [CareerCup post](https://www.careercup.com/question?id=4909367207919616)
 
-    ```text
+    ```plaintext
     (x + y*z)/z = y    provided x and y is less than z.
     (x + y*z)%z = x    provided x and y is less than z.
     This is the concept used here.

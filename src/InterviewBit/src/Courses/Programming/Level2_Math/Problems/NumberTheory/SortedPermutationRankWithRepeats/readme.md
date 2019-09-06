@@ -8,7 +8,7 @@ Look at the example for more details.
 
 Example :
 
-```text
+```plaintext
 Input : 'aba'
 Output : 2
 

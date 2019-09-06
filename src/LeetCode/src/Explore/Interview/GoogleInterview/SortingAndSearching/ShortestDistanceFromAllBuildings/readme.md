@@ -10,7 +10,7 @@ You want to build a house on an *empty* land which reaches all buildings in the 
 
 **Example:**
 
-```text
+```plaintext
 Input: [[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]
 
 1 - 0 - 2 - 0 - 1

@@ -8,7 +8,7 @@ Example:
 
 Given the tree
 
-```text
+```plaintext
 
                100
               /   \

@@ -8,7 +8,7 @@ Find all starting indices of substring(s) in S that is a concatenation of each w
 
 Example :
 
-```text
+```plaintext
 S: "barfoothefoobarman"
 L: ["foo", "bar"]
 ```

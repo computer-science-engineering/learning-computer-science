@@ -6,7 +6,7 @@ Given a string, find the **length of the longest substring** which has **no repe
 
 Example 1:
 
-```text
+```plaintext
 Input: String="aabccbb"
 Output: 3
 Explanation: The longest substring without any repeating characters is "abc".
@@ -14,7 +14,7 @@ Explanation: The longest substring without any repeating characters is "abc".
 
 Example 2:
 
-```text
+```plaintext
 Input: String="abbbb"
 Output: 2
 Explanation: The longest substring without any repeating characters is "ab".
@@ -22,7 +22,7 @@ Explanation: The longest substring without any repeating characters is "ab".
 
 Example 3:
 
-```text
+```plaintext
 Input: String="abccde"
 Output: 3
 Explanation: Longest substrings without any repeating characters are "abc" & "cde".
