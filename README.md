@@ -4,13 +4,13 @@
 
 1. [Overview](#overview)
 2. [Project](#project)
+   1. [Project Management](#project-management)
 3. [Product](#product)
 4. [Development](#development)
    1. [Contributing](#contributing)
-5. [Project Management](#project-management)
-6. [Links](#links)
-7. [Notes](#notes)
-8. [License](#license)
+5. [Links](#links)
+6. [Notes](#notes)
+7. [License](#license)
 
 ## Overview
 
@@ -21,6 +21,10 @@ Learning data structures, algorithms, machine learning and various computer scie
 | Document | Link                                                                       |
 | -------- | -------------------------------------------------------------------------- |
 | Metadata | [./documentation/project/metadata.md](./documentation/project/metadata.md) |
+
+### Project Management
+
+[GitHub Projects](https://github.com/manastalukdar/learning-computer-science/projects)
 
 ## Product
 
@@ -41,10 +45,6 @@ Learning data structures, algorithms, machine learning and various computer scie
 ### Contributing
 
 [./.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)
-
-## Project Management
-
-[GitHub Projects](https://github.com/manastalukdar/learning-computer-science/projects)
 
 ## Links
 
