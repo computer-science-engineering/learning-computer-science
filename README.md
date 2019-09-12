@@ -28,10 +28,10 @@ Learning data structures, algorithms, machine learning and various computer scie
 
 ## Product
 
-| Document     | Link                                                                     |
-| ------------ | ------------------------------------------------------------------------ |
-| Installation | [./documentation/product/install.md](./documentation/product/install.md) |
-| Usage        | [./documentation/product/usage.md](./documentation/product/usage.md)     |
+| Document     | Link                                                                               |
+| ------------ | ---------------------------------------------------------------------------------- |
+| Installation | [./documentation/product/installation.md](./documentation/product/installation.md) |
+| Usage        | [./documentation/product/usage.md](./documentation/product/usage.md)               |
 
 ## Development
 
