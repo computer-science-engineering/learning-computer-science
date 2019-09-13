@@ -41,7 +41,7 @@ pythontests:
 	python ${workspaceFolder}/scripts/run_unit_tests.py
 
 pythontestcoverage:
-	coverage3 run ${workspaceFolder}/scripts/run_unit_tests.py
+	coverage run ${workspaceFolder}/scripts/run_unit_tests.py
 
 pythoncode: pythontestcoverage
 
