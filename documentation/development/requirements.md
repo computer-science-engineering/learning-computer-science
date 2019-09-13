@@ -16,6 +16,15 @@
 
 It is highly recommended to open/use this repository using [Visual Studio Code](https://code.visualstudio.com/).
 
+If you are on Windows, I highly recommend installing [msys2](http://www.msys2.org/). After installation, run the following from the msys2 shell:
+
+```plaintext
+pacman -Syu
+pacman -S base-devel
+pacman -S mingw-w64-x86_64-toolchain
+pacman -S mingw-w64-x86_64-cmake
+```
+
 ### Upgrading to newer versions of development environments
 
 #### Java
