@@ -21,3 +21,9 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Make pythoncode
         run: make pythoncode
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: "2.2.103"
+      - run: dotnet --version
+      - name: Make csharpcode
+        run: make csharpcode
