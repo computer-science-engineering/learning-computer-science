@@ -16,7 +16,7 @@
 
 Learning data structures, algorithms, machine learning and various computer science constructs by programming practice from resources around the web.
 
-![Discord](https://img.shields.io/discord/611637065913729036) [![CircleCI](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master) [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science)
+![Discord](https://img.shields.io/discord/611637065913729036) [![CircleCI](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/manastalukdar/learning-computer-science/tree/master) [![Actions Status](https://github.com/manastalukdar/learning-computer-science/workflows/build-test/badge.svg)](https://github.com/manastalukdar/learning-computer-science/actions) [![codecov](https://codecov.io/gh/manastalukdar/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/manastalukdar/learning-computer-science)
 
 [More project metadata badges [here](./documentation/project/metadata.md). More CI/CD badges [here](./documentation/development/ci-cd.md#current-status).]
 
