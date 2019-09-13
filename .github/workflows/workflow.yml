@@ -13,4 +13,4 @@ jobs:
       - run: java -version
       - name: Make
         working-directory: ./
-        run: sudo make javacode
+        run: make javacode
