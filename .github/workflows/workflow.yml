@@ -12,4 +12,4 @@ jobs:
           architecture: x64
       - name: Make
         working-directory: ./
-        run: make javacode
+        run: sudo make javacode
