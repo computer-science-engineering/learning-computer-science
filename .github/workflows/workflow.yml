@@ -11,6 +11,13 @@ jobs:
           java-version: "12.0.1"
           architecture: x64
       - run: java -version
-      - name: Make
-        working-directory: ./
+      - name: Make javacode
         run: make javacode
+      - uses: actions/setup-python@v1
+        with:
+          python-version: "3.7"
+          architecture: "x64"
+      - run: python --version
+      - run: sudo pip install -r requirements.txt
+      - name: Make pythoncode
+        run: make pythoncode
