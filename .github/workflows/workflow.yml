@@ -18,6 +18,6 @@ jobs:
           python-version: "3.7"
           architecture: "x64"
       - run: python --version
-      - run: sudo pip install -r requirements.txt
+      - run: pip install -r requirements.txt
       - name: Make pythoncode
         run: make pythoncode
