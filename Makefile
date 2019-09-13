@@ -4,6 +4,9 @@ workspaceFolder := "./"
 # Java code tasks
 #*****************
 
+javadependencies:
+	./gradlew dependencies
+
 javabuild:
 	./gradlew build
 
@@ -16,7 +19,7 @@ javaclean:
 javatestcoverage:
 	./gradlew test jacocoJupTestReport
 
-javacode: javaclean javatestcoverage
+javacode: javadependencies javaclean javatestcoverage
 
 #*****************
 # C# code tasks
