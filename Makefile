@@ -16,7 +16,7 @@ javaclean:
 javatestcoverage:
 	./gradlew test jacocoJupTestReport
 
-javacode: javaclean javacodecoverage
+javacode: javaclean javatestcoverage
 
 #*****************
 # C# code tasks
@@ -25,11 +25,13 @@ javacode: javaclean javacodecoverage
 xunittests:
 	python ${workspaceFolder}/scripts/run_xunit_tests.py
 
+csharpcode: xunittests
+
 #*******************
 # Python code tasks
 #*******************
 
-pipinstallrequirements:
+pythonrequirements:
 	pip install -r requirements.txt
 
 pythontests:
@@ -40,11 +42,16 @@ pythontestcoverage:
 
 pythoncode: pythontestcoverage
 
-
 #*****************
 # Project tasks
 #*****************
 
 createproblemslist:
 	python ${workspaceFolder}/scripts/create_problems_list.py
+
+#*****************
+# All tasks
+#*****************
+
+all: createproblemslist javacode pythoncode csharpcode
 
