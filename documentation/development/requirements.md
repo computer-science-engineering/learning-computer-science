@@ -14,9 +14,9 @@
 | Java     | 12      | OpenJDK ([AdoptOpenJDK with HotSpot](https://adoptopenjdk.net/index.html)) |
 | Python   | 3.7.2   | N/A                                                                        |
 
-It is highly recommended to open/use this repository using [Visual Studio Code](https://code.visualstudio.com/).
+I recommended using [VS Code](https://code.visualstudio.com/).
 
-If you are on Windows, I highly recommend installing [msys2](http://www.msys2.org/). After installation, run the following from the msys2 shell:
+If you are on Windows, I highly recommend installing [msys2](http://www.msys2.org/). After installation, run the following from the `msys2` shell:
 
 ```plaintext
 pacman -Syu
