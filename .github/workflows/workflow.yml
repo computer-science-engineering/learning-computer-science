@@ -1,8 +1,8 @@
-name: Workflow
+name: Build, Test
 on: [push]
 jobs:
   build:
-    name: Build
+    name: Build, Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
