@@ -10,6 +10,7 @@ jobs:
         with:
           java-version: "12.0.1"
           architecture: x64
+      - run: java -version
       - name: Make
         working-directory: ./
         run: sudo make javacode
