@@ -35,6 +35,29 @@ class TreeNode {
         }
     }
 
+    List<List<Integer>> getLevelOrder() {
+        List<List<Integer>> result = new ArrayList<>();
+        TreeNode nextLevelRoot = this;
+        while (nextLevelRoot != null) {
+            TreeNode current = nextLevelRoot;
+            nextLevelRoot = null;
+            List<Integer> currentLevel = new ArrayList<>();
+            while (current != null) {
+                currentLevel.add(current.val);
+                if (nextLevelRoot == null) {
+                    if (current.left != null) {
+                        nextLevelRoot = current.left;
+                    } else if (current.right != null) {
+                        nextLevelRoot = current.right;
+                    }
+                }
+                current = current.next;
+            }
+            result.add(currentLevel);
+        }
+        return result;
+    }
+
     public static TreeNode fromArray(int[] nodeValues) {
         TreeNode root = null;
 
