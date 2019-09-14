@@ -340,7 +340,11 @@
         "yusun",
         "zrzahid"
     ],
+    "editor.formatOnType": true,
     "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.enable": true,
+    "prettier.singleQuote": true,
     "python.unitTest.unittestEnabled": false,
     "python.unitTest.unittestArgs": [
         "-v",
@@ -366,5 +370,15 @@
     "java.checkstyle.configuration": "",
     "java.debug.settings.console": "internalConsole",
     "markdown.extension.toc.orderedList": true,
-    "markdown.extension.toc.levels": "2..6"
+    "markdown.extension.toc.levels": "2..6",
+    "eslint.workingDirectories": [{
+            "directory": "./",
+            "changeProcessCWD": true
+        },
+        {
+            "directory": "./website-react-next",
+            "changeProcessCWD": true
+        }
+    ],
+    "editor.formatOnPaste": true
 }
