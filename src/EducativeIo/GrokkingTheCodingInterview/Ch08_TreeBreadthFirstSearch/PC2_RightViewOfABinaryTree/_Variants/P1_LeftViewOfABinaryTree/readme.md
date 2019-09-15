@@ -2,25 +2,9 @@
 
 ## Description
 
-Given a binary tree, return an array containing nodes in its right view. The right view of a binary tree is the set of **nodes visible when the tree is seen from the right side**.
+Given a binary tree, return an array containing nodes in its left view. The left view of a binary tree is the set of nodes visible when the tree is seen from the left side.
 
 Example 1:
-
-```dot
-digraph example1 {
-    1 -> 2 -> { 4, 5 };
-    1 -> 3 -> { 6, 7 };
-    1[style=filled;color=lightblue];
-    3[style=filled;color=lightblue];
-    7[style=filled;color=lightblue];
-}
-```
-
-```plaintext
-Right View: [1, 3, 7]
-```
-
-Example 2:
 
 ```dot
 digraph example1 {
@@ -28,19 +12,19 @@ digraph example1 {
     7 -> 9 -> 3;
     1 -> {10, 5}
     12[style=filled;color=lightblue];
-    1[style=filled;color=lightblue];
-    5[style=filled;color=lightblue];
+    7[style=filled;color=lightblue];
+    9[style=filled;color=lightblue];
     3[style=filled;color=lightblue];
 }
 ```
 
 ```plaintext
-Right View: [12, 1, 5, 3]
+Right View: [12, 7, 9, 3]
 ```
 
 ## Discussion
 
-This problem follows the **Binary Tree Level Order Traversal** pattern. We can follow the same **BFS** approach. The only additional thing we will be do is to append the last node of each level to the result array.
+This problem follows the **Binary Tree Level Order Traversal** pattern. We can follow the same **BFS** approach. The only additional thing we will be do is to append the first node of each level to the result array.
 
 ### Time Complexity
 
