@@ -1,4 +1,4 @@
-package EducativeIo.GrokkingTheCodingInterview.Ch08_TreeBreadthFirstSearch.P7_ConnectLevelOrderSiblings.Java;
+package EducativeIo.GrokkingTheCodingInterview.Ch08_TreeBreadthFirstSearch.PC1_ConnectAllLevelOrderSiblings.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,10 +40,9 @@ public class SolutionTest {
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
         assertTimeout(Duration.ofMillis(500), () -> {
-            List<List<Integer>> expected =
-                    Arrays.asList(Arrays.asList(12), Arrays.asList(7, 1), Arrays.asList(9, 10, 5));
+            List<Integer> expected = Arrays.asList(12, 7, 1, 9, 10, 5);
             Solution.connect(root);
-            List<List<Integer>> actual = root.getLevelOrder();
+            List<Integer> actual = root.getTree();
             assertEquals(expected, actual);
         });
     }
