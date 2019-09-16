@@ -3,6 +3,9 @@ package EducativeIo.GrokkingTheCodingInterview.Ch08_TreeBreadthFirstSearch.PC3_T
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,11 +34,24 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        TreeNode root = new TreeNode(12);
+        root.left = new TreeNode(7);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(4);
+        root.left.left.left = new TreeNode(9);
+        root.left.right = new TreeNode(3);
+        root.left.right.left = new TreeNode(15);
+        root.right.left = new TreeNode(10);
+        root.right.right = new TreeNode(5);
+        root.right.right.left = new TreeNode(6);
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            List<Integer> expected = Arrays.asList(12, 7, 4, 9, 15, 10, 6, 5, 1);
+            List<TreeNode> result = Solution.findBoundary(root);
+            List<Integer> actual = new ArrayList<>();
+            for (TreeNode node : result) {
+                actual.add(node.val);
+            }
+            assertEquals(expected, actual);
         });
     }
 }
