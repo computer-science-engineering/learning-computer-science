@@ -226,7 +226,11 @@ As the right-child returned 'true', return 'true', we have found the path.
 
 ### Time Complexity
 
+The time complexity of the above algorithm is O(N), where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node once.
+
 ### Space Complexity
+
+The space complexity of the above algorithm will be O(N) in the worst case. This space will be used to store the recursion stack. The worst case will happen when the given tree is a linked list (i.e., every node has only one child).
 
 ## Notes
 
