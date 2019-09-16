@@ -62,7 +62,7 @@ How can we estimate the space used for the `allPaths` array? Take the example of
 digraph example1 {
     1 -> {2, 3};
     2 -> {4, 5};
-    3 -> {6, 7}
+    3 -> {6, 7};
 }
 ```
 
