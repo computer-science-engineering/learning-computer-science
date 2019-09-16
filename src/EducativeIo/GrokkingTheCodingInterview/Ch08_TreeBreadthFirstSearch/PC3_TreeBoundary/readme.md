@@ -92,7 +92,11 @@ To find the leaves in the left to right order we can’t use **BFS** because any
 
 ### Time Complexity
 
+The time complexity of the above algorithm is O(N), where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node twice, one for BFS and one for DFS.
+
 ### Space Complexity
+
+The space complexity of the above algorithm will be O(N) as we need to return a list containing the boundary nodes. We will also need O(N) space for the queue. Since we can have a maximum of N/2 nodes at any level (this could happen only at the lowest level of a complete binary tree), therefore we will need O(N) space to store them in the queue. We will also need O(N) space for DFS.
 
 ## Notes
 
