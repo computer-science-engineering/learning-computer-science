@@ -81,15 +81,18 @@ public class Solution {
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode currentNode = stack.pop();
-            if (currentNode.left == null && currentNode.right == null)
+            if (currentNode.left == null && currentNode.right == null) {
                 leaves.add(currentNode);
+            }
 
             // insert the children of current node in the stack
             // add the right child first, this way left child will be at the top and processed first
-            if (currentNode.right != null)
+            if (currentNode.right != null) {
                 stack.push(currentNode.right);
-            if (currentNode.left != null)
+            }
+            if (currentNode.left != null) {
                 stack.push(currentNode.left);
+            }
         }
         return leaves;
     }
