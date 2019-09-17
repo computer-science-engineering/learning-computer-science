@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+    static int maxSum = Integer.MIN_VALUE;
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(12);
         root.left = new TreeNode(7);
@@ -16,37 +18,35 @@ public class Solution {
     }
 
     public static List<Integer> findPath(TreeNode root) {
-        List<Integer> maxPath = new ArrayList<>();
+        List<List<Integer>> maxPaths = new ArrayList<>();
         List<Integer> currentPath = new ArrayList<Integer>();
-        int maxSum = Integer.MIN_VALUE;
-        findPathsRecursive(root, maxSum, currentPath, maxPath);
-        return maxPath;
+        int runningSum = 0;
+        findPathsRecursive(root, runningSum, currentPath, maxPaths);
+        System.out.println(maxPaths);
+        return maxPaths.isEmpty() ? null : maxPaths.get(maxPaths.size() - 1);
     }
 
-    private static void findPathsRecursive(TreeNode currentNode, int maxSum,
-            List<Integer> currentPath, List<Integer> maxPath) {
+    private static void findPathsRecursive(TreeNode currentNode, int runningSum,
+            List<Integer> currentPath, List<List<Integer>> maxPaths) {
         if (currentNode == null) {
             return;
         }
-        System.out.println("here: " + maxSum);
 
         // add the current node to the path
         currentPath.add(currentNode.val);
+        runningSum += currentNode.val;
 
         if (currentNode.left == null && currentNode.right == null) {
-            Integer sum = 0;
-            for (Integer item : currentPath) {
-                sum += item;
-            }
-            if (sum >= maxSum) {
-                maxSum = sum;
-                maxPath = new ArrayList<Integer>(currentPath);
+            if (runningSum >= maxSum) {
+                maxSum = runningSum;
+                runningSum = 0;
+                maxPaths.add(new ArrayList<Integer>(currentPath));
             }
         } else {
             // traverse the left sub-tree
-            findPathsRecursive(currentNode.left, maxSum, currentPath, maxPath);
+            findPathsRecursive(currentNode.left, runningSum, currentPath, maxPaths);
             // traverse the right sub-tree
-            findPathsRecursive(currentNode.right, maxSum, currentPath, maxPath);
+            findPathsRecursive(currentNode.right, runningSum, currentPath, maxPaths);
         }
 
         // remove the current node from the path to backtrack,
