@@ -19,7 +19,7 @@ digraph example1 {
 
 ## Discussion
 
-We can follow a similar approach as in the **ALL Paths for a Sum** problem. We just need to remove the “check for the path sum”.
+We can follow a similar approach as in the **All Paths for a Sum** problem. We just need to remove the “check for the path sum”.
 
 ### Time Complexity
 
