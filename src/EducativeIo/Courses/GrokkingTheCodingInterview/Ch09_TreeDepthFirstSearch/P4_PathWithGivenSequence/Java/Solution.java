@@ -39,7 +39,7 @@ public class Solution {
         }
 
         // recursively call to traverse the left and right sub-tree
-        // return true if any of the two recusrive call return true
+        // return true if any of the two recursive call return true
         return findPathRecursive(currentNode.left, sequence, sequenceIndex + 1)
                 || findPathRecursive(currentNode.right, sequence, sequenceIndex + 1);
     }
