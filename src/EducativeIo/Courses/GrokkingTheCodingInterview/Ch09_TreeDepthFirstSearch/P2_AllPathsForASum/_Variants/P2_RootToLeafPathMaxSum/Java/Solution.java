@@ -33,7 +33,6 @@ public class Solution {
         // add the current node to the path
         currentPath.add(currentNode.val);
 
-        // if the current node is a leaf and its value is equal to sum, save the current path
         if (currentNode.left == null && currentNode.right == null) {
             Integer sum = 0;
             for (Integer item : currentPath) {

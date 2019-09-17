@@ -3,8 +3,6 @@ package EducativeIo.Courses.GrokkingTheCodingInterview.Ch09_TreeDepthFirstSearch
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
