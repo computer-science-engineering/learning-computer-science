@@ -45,8 +45,8 @@ jacocoTestCoverageVerification {
 }
 
 compileTestJava {
-   sourceCompatibility = 12
-   targetCompatibility = 12
+   sourceCompatibility = 13
+   targetCompatibility = 13
    options.compilerArgs += ['-parameters', '-g']
 }
 
