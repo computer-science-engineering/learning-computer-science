@@ -31,11 +31,40 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        Solution solution = new Solution();
+        solution.insertNum(3);
+        solution.insertNum(1);
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            double expected = 2.0;
+            double actual = solution.findMedian();
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        Solution solution = new Solution();
+        solution.insertNum(3);
+        solution.insertNum(1);
+        solution.insertNum(5);
+        assertTimeout(Duration.ofMillis(500), () -> {
+            double expected = 3.0;
+            double actual = solution.findMedian();
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase3() {
+        Solution solution = new Solution();
+        solution.insertNum(3);
+        solution.insertNum(1);
+        solution.insertNum(5);
+        solution.insertNum(4);
+        assertTimeout(Duration.ofMillis(500), () -> {
+            double expected = 3.5;
+            double actual = solution.findMedian();
+            assertEquals(expected, actual);
         });
     }
 }
