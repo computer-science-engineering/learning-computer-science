@@ -75,7 +75,7 @@ dependencies {
     // Enable use of the JUnitPlatform Runner within the IDE
 	//testCompile("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
     // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
-	//testRuntime("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
+	//testRuntimeOnly("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
     
 	// To avoid compiler warnings about @API annotations in JUnit code
 	testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
