@@ -29,7 +29,7 @@ pacman -S mingw-w64-x86_64-cmake
 
 #### Java
 
-1. Install latest version of Java: OpenJDK (Red Hat for Windows).
+1. Install latest version of Java: OpenJDK.
 1. On Windows, update the Path environment variable to point to new Java install location. Look out for JAVA_HOME env var, and javapath in the Path env var.
 1. Update build.gradle script (`sourceCompatibility` and `targetCompatibility`).
 1. Download and update the (latest) version of gradle compatible with the new version of Java.
