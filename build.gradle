@@ -79,14 +79,14 @@ dependencies {
     
 	// To avoid compiler warnings about @API annotations in JUnit code
 	testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
-    compile('org.apiguardian:apiguardian-api:1.0.0')
+    implementation('org.apiguardian:apiguardian-api:1.0.0')
 
     // To use Log4J's LogManager
-	testRuntime("org.apache.logging.log4j:log4j-core:${log4jVersion}")
-	testRuntime("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
+	testRuntimeOnly("org.apache.logging.log4j:log4j-core:${log4jVersion}")
+	testRuntimeOnly("org.apache.logging.log4j:log4j-jul:${log4jVersion}")
 
-    compile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
-    compile "junit:junit:${junit4Version}"
+    implementation("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    implementation "junit:junit:${junit4Version}"
 }
 
 mainClassName = ' '
