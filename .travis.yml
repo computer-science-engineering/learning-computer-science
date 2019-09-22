@@ -19,9 +19,9 @@ script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.7 --version
   - pyenv versions
-  #- pyenv global 3.7.1
-  - python3.7 -m pip install --upgrade pip
-  - python3.7 -m pip install -r requirements.txt
+  - pyenv global 3.7.1
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
   - coverage3 run scripts/run_unit_tests.py
   - python3.7 scripts/create_problems_list.py
 
