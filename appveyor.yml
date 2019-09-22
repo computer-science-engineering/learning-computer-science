@@ -7,7 +7,7 @@ branches:
 skip_tags: true
 
 image:
-  - Visual Studio 2019
+  #  - Visual Studio 2019
   - Ubuntu
 
 stack: node 12, jdk 13, python 3.7.3 x64
