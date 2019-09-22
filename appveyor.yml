@@ -2,16 +2,15 @@ version: 1.0.{build}
 
 branches:
   except:
-  - gh-pages
+    - gh-pages
 
 skip_tags: true
 
 image:
-- Visual Studio 2017
-- Ubuntu
+  - Visual Studio 2019
+  - Ubuntu
 
-# todo: https://github.com/appveyor/ci/issues/2160
-stack: node 9, jdk 12, python 3.7.1 x64
+stack: node Current, jdk 13, python 3.7.4 x64
 
 install:
   - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk12"
@@ -22,7 +21,7 @@ install:
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
   - sh: whereis python3.7
-  - sh: . /home/appveyor/venv3.7.1/bin/activate
+  - sh: . /home/appveyor/venv3.7.4/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
 

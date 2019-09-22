@@ -3,7 +3,7 @@ dist: xenial
 language: java
 
 jdk:
-  - openjdk12
+  - openjdk13
 
 branches:
   only:
@@ -19,7 +19,7 @@ script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.7 --version
   - pyenv versions
-  - pyenv global 3.7.1
+  - pyenv global 3.7.4
   - pip install --upgrade pip
   - pip install -r requirements.txt
   - coverage3 run scripts/run_unit_tests.py

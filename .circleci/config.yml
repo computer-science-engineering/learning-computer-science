@@ -13,8 +13,8 @@ version: 2.1
 orbs:
   build-tools: circleci/build-tools@2.6.3
   jq: circleci/jq@1.9.0
-  docker: circleci/docker@0.5.3 # needs jq above
-  node: circleci/node@1.1.2
+  docker: circleci/docker@0.5.13 # needs jq above
+  node: circleci/node@1.1.6
 
 jobs:
   download_from_code_climate:
@@ -23,7 +23,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - run:
-          name:  Download cc-test-reporter
+          name: Download cc-test-reporter
           command: |
             mkdir -p tmp/
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./tmp/cc-test-reporter
@@ -33,14 +33,14 @@ jobs:
           root: tmp
           paths:
             - cc-test-reporter
-  
+
   build_test_java:
     <<: *defaults
     docker:
       # specify the version you desire here
       # https://circleci.com/docs/2.0/docker-image-tags.json
       # circleci/openjdk:11-jdk-node-browsers
-      - image: adoptopenjdk:12.0.1_12-jdk-hotspot
+      - image: adoptopenjdk/openjdk13
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -53,7 +53,7 @@ jobs:
       # Customize the JVM maximum heap limit
       JVM_OPTS: -Xmx3200m
       TERM: dumb
-    
+
     steps:
       - checkout
       - build-tools/install-ci-tools
@@ -67,9 +67,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "build.gradle" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "build.gradle" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run: bash ./gradlew dependencies
 
@@ -77,26 +77,26 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-        
+
       # run tests!
       - run: bash ./gradlew test jacocoJupTestReport
 
       #upload test coverage to codecov
       - run: bash <(curl -s https://codecov.io/bash) #-cF java
 
-      # run test coverage to code climate // https://github.com/codeclimate/test-reporter/issues/243      
-      - run: 
+      # run test coverage to code climate // https://github.com/codeclimate/test-reporter/issues/243
+      - run:
           name: Run CodeClimate
           command: |
             cd ./src/
             ../tmp/cc-test-reporter format-coverage --add-prefix src/ --prefix /home/circleci/repo/src -t jacoco ../build/reports/jacoco/report.xml -o ../tmp/codeclimate.java.json
       - persist_to_workspace:
           root: tmp
-          paths: 
+          paths:
             - codeclimate.java.json
-    
-      # run test coverage to coveralls      
-      - run: 
+
+      # run test coverage to coveralls
+      - run:
           name: Upload to coveralls
           command: |
             bash ./gradlew test jacocoJupTestReport coveralls
@@ -109,9 +109,9 @@ jobs:
             curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
             fossa init
             fossa analyze
-      
+
       # upload test coverage to codacy
-      # - run: 
+      # - run:
       #     command: |
       #       wget -O codacy-coverage-reporter-assembly.jar https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
       #       java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r build/reports/jacoco/report.xml
@@ -120,15 +120,15 @@ jobs:
 
   build_test_python:
     <<: *defaults
-    docker:      
-      - image: circleci/python:3.7.2
+    docker:
+      - image: circleci/python:3.7.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
           CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN
 
     working_directory: ~/repo
-        
+
     steps:
       - checkout
 
@@ -148,16 +148,16 @@ jobs:
       - run: bash <(curl -s https://codecov.io/bash) #-cF python
 
       # run test coverage to code climate
-      - run: 
+      - run:
           name: Run CodeClimate
           command: |
             tmp/cc-test-reporter format-coverage --prefix /home/circleci/repo -t coverage.py coverage.xml -o tmp/codeclimate.python.json
       - persist_to_workspace:
           root: tmp
-          paths: 
+          paths:
             - codeclimate.python.json
-      
-      # run test coverage to coveralls      
+
+      # run test coverage to coveralls
       - run:
           name: Upload to coveralls
           command: |
@@ -173,8 +173,8 @@ jobs:
 
   upload_to_code_climate:
     <<: *defaults
-    docker:      
-      - image: circleci/python:3.7.2
+    docker:
+      - image: circleci/python:3.7.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
@@ -202,14 +202,14 @@ workflows:
                 - master
           requires:
             - download_from_code_climate
-      - build_test_python:        
+      - build_test_python:
           filters:
             branches:
               only:
                 - master
           requires:
             - download_from_code_climate
-      - upload_to_code_climate:        
+      - upload_to_code_climate:
           filters:
             branches:
               only:
