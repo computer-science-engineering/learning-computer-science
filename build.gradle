@@ -25,7 +25,7 @@ repositories {
 ext.junit4Version        = '4.12'
 ext.junitVintageVersion  = '4.12.1'
 ext.junitPlatformVersion = '1.1.0'
-ext.junitJupiterVersion  = '5.1.0'
+ext.junitJupiterVersion  = '5.5.2'
 ext.log4jVersion         = '2.9.0'
 
 apply plugin: 'java'
@@ -161,7 +161,8 @@ tasks.withType(Test) {
         showCauses true
         showExceptions true
         showStackTraces true
-        //showStandardStreams true
+        // uncomment line below for print outouts to show
+        showStandardStreams true
 
         // set options for log level DEBUG and INFO
         debug {
