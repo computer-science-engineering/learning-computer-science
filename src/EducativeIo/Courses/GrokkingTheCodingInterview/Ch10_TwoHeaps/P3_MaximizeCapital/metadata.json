@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Maximize Capital",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/B6x69OLX4jY"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Two Heaps",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Two Heaps"],
+    "buckets": []
+}
