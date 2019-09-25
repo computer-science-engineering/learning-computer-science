@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "1. Add two numbers as a linked list",
+    "origin": {
+        "name": "Daily Interview Pro",
+        "link": "https://www.techseries.dev/daily"
+    },
+    "companies": [
+        "Microsoft"
+    ],
+    "categories": [{
+            "name": "",
+            "children": [{
+                "name": "",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Linked List"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
