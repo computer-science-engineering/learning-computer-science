@@ -51,6 +51,34 @@ while result:
 ## References
 
 1. [LeetCode discussion - Is this Algorithm optimal or what?](https://leetcode.com/problems/add-two-numbers/discuss/1010/Is-this-Algorithm-optimal-or-what)
+
+    ```java
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode c1 = l1;
+        ListNode c2 = l2;
+        ListNode sentinel = new ListNode(0);
+        ListNode d = sentinel;
+        int sum = 0;
+        while (c1 != null || c2 != null) {
+            sum /= 10;
+            if (c1 != null) {
+                sum += c1.value;
+                c1 = c1.next;
+            }
+            if (c2 != null) {
+                sum += c2.value;
+                c2 = c2.next;
+            }
+            d.next = new ListNode(sum % 10);
+            d = d.next;
+        }
+        if (sum / 10 == 1) {
+            d.next = new ListNode(1);
+        }
+        return sentinel.next;
+    }
+    ```
+
 2. [LeetCode discussion - My accepted Java solution](https://leetcode.com/problems/add-two-numbers/discuss/1059/My-accepted-Java-solution)
 
     ```java
