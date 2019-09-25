@@ -38,8 +38,10 @@ public class SolutionTest {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(5, 3, 1),
                     Arrays.asList(3, 5, 1), Arrays.asList(3, 1, 5), Arrays.asList(5, 1, 3),
                     Arrays.asList(1, 5, 3), Arrays.asList(1, 3, 5));
-            List<List<Integer>> actual = Solution.findPermutations(nums);
-            assertEquals(expected, actual);
+            List<List<Integer>> actual1 = Solution.findPermutations(nums);
+            assertEquals(expected, actual1);
+            List<List<Integer>> actual2 = Solution.generatePermutations(nums);
+            assertEquals(expected, actual2);
         });
     }
 }
