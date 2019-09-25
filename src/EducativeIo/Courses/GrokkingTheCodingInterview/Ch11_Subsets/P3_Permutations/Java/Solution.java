@@ -25,10 +25,11 @@ public class Solution {
                 for (int j = 0; j <= oldPermutation.size(); j++) {
                     List<Integer> newPermutation = new ArrayList<Integer>(oldPermutation);
                     newPermutation.add(j, currentNumber);
-                    if (newPermutation.size() == nums.length)
+                    if (newPermutation.size() == nums.length) {
                         result.add(newPermutation);
-                    else
+                    } else {
                         permutations.add(newPermutation);
+                    }
                 }
             }
         }
