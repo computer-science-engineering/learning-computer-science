@@ -43,7 +43,7 @@ If we look closely, we will realize that when we add a new number (5), we take e
 
 ### Time Complexity
 
-We know that there are a total of N!N! permutations of a set with ‘N’ numbers. In the algorithm above, we are iterating through all of these permutations with the help of the two ‘for’ loops. In each iteration, we go through all the current permutations to insert a new number in them on the line `newPermutation.add(j, currentNumber);`. This operation will take O(N), which makes the overall time complexity of our algorithm O(N*N!).
+We know that there are a total of N! permutations of a set with ‘N’ numbers. In the algorithm above, we are iterating through all of these permutations with the help of the two ‘for’ loops. In each iteration, we go through all the current permutations to insert a new number in them on the line `newPermutation.add(j, currentNumber);`. This operation will take O(N), which makes the overall time complexity of our algorithm O(N*N!).
 
 ### Space Complexity
 
