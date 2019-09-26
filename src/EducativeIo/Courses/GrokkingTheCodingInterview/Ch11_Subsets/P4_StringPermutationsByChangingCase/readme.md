@@ -36,7 +36,11 @@ If we look closely, we will realize that in the 5th step, when we processed the 
 
 ### Time Complexity
 
+Since we can have 2^N permutations at the most and while processing each permutation we convert it into a character array, the overall time complexity of the algorithm will be O(N*2^N).
+
 ### Space Complexity
+
+All the additional space used by our algorithm is for the output list. Since we can have a total of O(2^N) permutations, the space complexity of our algorithm is O(2^N).
 
 ## Notes
 
