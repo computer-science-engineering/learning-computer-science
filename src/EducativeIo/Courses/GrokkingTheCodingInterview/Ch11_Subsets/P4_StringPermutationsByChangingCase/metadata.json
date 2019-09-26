@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "String Permutations by changing case",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/xVlKmyX542P"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Subsets",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Subsets"],
+    "buckets": []
+}
