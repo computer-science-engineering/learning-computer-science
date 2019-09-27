@@ -1,0 +1,34 @@
+{
+    "type": "Coding",
+    "name": "2. Longest Substring Without Repeating Characters",
+    "origin": {
+        "name": "Daily Interview Pro",
+        "link": "https://www.techseries.dev/daily"
+    },
+    "companies": [
+        "Microsoft"
+    ],
+    "categories": [{
+            "name": "",
+            "children": [{
+                "name": "",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Arrays",
+        "Sliding Window"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
