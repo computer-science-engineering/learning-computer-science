@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "3. Longest Palindromic Substring",
+    "origin": {
+        "name": "Daily Interview Pro",
+        "link": "https://www.techseries.dev/daily"
+    },
+    "companies": [
+        "Twitter"
+    ],
+    "categories": [{
+            "name": "",
+            "children": [{
+                "name": "",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Arrays",
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
