@@ -1,12 +1,12 @@
 {
     "type": "Coding",
-    "name": "3. Longest Palindromic Substring",
+    "name": "4. Validate Balanced Parentheses",
     "origin": {
         "name": "Daily Interview Pro",
         "link": "https://www.techseries.dev/daily"
     },
     "companies": [
-        "Twitter"
+        "Uber"
     ],
     "categories": [{
             "name": "",
