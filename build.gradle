@@ -164,7 +164,7 @@ tasks.withType(Test) {
         showExceptions true
         showStackTraces true
         // uncomment line below for print outouts to show
-        showStandardStreams true
+        //showStandardStreams true
 
         // set options for log level DEBUG and INFO
         debug {
