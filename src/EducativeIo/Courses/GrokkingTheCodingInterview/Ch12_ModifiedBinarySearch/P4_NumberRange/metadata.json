@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Number Range",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/R1B78K9oBEz"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Modified Binary Search",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Modified Binary Search"],
+    "buckets": []
+}
