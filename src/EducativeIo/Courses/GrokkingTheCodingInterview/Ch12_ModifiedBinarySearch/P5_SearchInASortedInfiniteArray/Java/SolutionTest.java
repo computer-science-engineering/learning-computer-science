@@ -31,11 +31,47 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        ArrayReader reader =
+                new ArrayReader(new int[] {4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30});
+        int key = 16;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 6;
+            int actual = Solution.search(reader, key);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        ArrayReader reader =
+                new ArrayReader(new int[] {4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30});
+        int key = 11;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = -1;
+            int actual = Solution.search(reader, key);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase3() {
+        ArrayReader reader = new ArrayReader(new int[] {1, 3, 8, 10, 15});
+        int key = 15;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 4;
+            int actual = Solution.search(reader, key);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase4() {
+        ArrayReader reader = new ArrayReader(new int[] {1, 3, 8, 10, 15});
+        int key = 200;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = -1;
+            int actual = Solution.search(reader, key);
+            assertEquals(expected, actual);
         });
     }
 }
