@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Search in Rotated Array",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/N8XZQ1q1O46"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Modified Binary Search",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Modified Binary Search"],
+    "buckets": []
+}
