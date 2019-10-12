@@ -31,11 +31,45 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        int[] arr = new int[] {1, 3, 8, 4, 3};
+        int key = 4;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 3;
+            int actual = Solution.search(arr, key);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        int[] arr = new int[] {3, 8, 3, 1};
+        int key = 8;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 1;
+            int actual = Solution.search(arr, key);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase3() {
+        int[] arr = new int[] {1, 3, 8, 12};
+        int key = 12;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 3;
+            int actual = Solution.search(arr, key);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase4() {
+        int[] arr = new int[] {10, 9, 8};
+        int key = 10;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 0;
+            int actual = Solution.search(arr, key);
+            assertEquals(expected, actual);
         });
     }
 }
