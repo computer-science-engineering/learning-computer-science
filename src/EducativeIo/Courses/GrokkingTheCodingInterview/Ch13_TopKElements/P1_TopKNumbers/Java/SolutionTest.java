@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch13_TopKElements.TopKNumbers.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch13_TopKElements.P1_TopKNumbers.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 
