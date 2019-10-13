@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch13_TopKElements.TopKNumbers.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch13_TopKElements.P1_TopKNumbers.Java;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +16,9 @@ public class Solution {
     public static List<Integer> findKLargestNumbers(int[] nums, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
         // put first 'K' numbers in the min heap
-        for (int i = 0; i < k; i++)
+        for (int i = 0; i < k; i++) {
             minHeap.add(nums[i]);
+        }
 
         // go through the remaining numbers of the array, if the number from the array is bigger
         // than the
