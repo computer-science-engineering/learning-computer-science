@@ -13,8 +13,9 @@ public class Solution {
     public static int minimumCostToConnectRopes(int[] ropeLengths) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
         // add all ropes to the min heap
-        for (int i = 0; i < ropeLengths.length; i++)
+        for (int i = 0; i < ropeLengths.length; i++) {
             minHeap.add(ropeLengths[i]);
+        }
 
         // go through the values of the heap, in each step take top (lowest) rope lengths from the
         // min heap
