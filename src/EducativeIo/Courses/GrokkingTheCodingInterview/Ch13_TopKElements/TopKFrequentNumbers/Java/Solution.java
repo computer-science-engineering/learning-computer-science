@@ -18,8 +18,9 @@ public class Solution {
     public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {
         // find the frequency of each number
         Map<Integer, Integer> numFrequencyMap = new HashMap<>();
-        for (int n : nums)
+        for (int n : nums) {
             numFrequencyMap.put(n, numFrequencyMap.getOrDefault(n, 0) + 1);
+        }
 
         PriorityQueue<Map.Entry<Integer, Integer>> minHeap =
                 new PriorityQueue<Map.Entry<Integer, Integer>>(
