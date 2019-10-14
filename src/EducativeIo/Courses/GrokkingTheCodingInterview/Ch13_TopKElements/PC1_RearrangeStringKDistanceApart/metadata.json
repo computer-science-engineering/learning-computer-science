@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Rearrange String K Distance Apart",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/m2E4y26k3LE"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Top K Elements",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Top K Elements"],
+    "buckets": []
+}
