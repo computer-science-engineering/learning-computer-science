@@ -26,8 +26,9 @@ public class Solution {
 
         PriorityQueue<Entry> minHeap = new PriorityQueue<>((n1, n2) -> n1.key - n2.key);
         // add all candidate elements to the min heap, sorted by their absolute difference from 'X'
-        for (int i = low; i <= high; i++)
+        for (int i = low; i <= high; i++) {
             minHeap.add(new Entry(Math.abs(arr[i] - X), i));
+        }
 
         // we need the top 'K' elements having smallest difference from 'X'
         List<Integer> result = new ArrayList<>();
@@ -48,10 +49,11 @@ public class Solution {
             if (leftPointer >= 0 && rightPointer < arr.length) {
                 int diff1 = Math.abs(X - arr[leftPointer]);
                 int diff2 = Math.abs(X - arr[rightPointer]);
-                if (diff1 <= diff2)
+                if (diff1 <= diff2) {
                     result.add(0, arr[leftPointer--]); // append in the beginning
-                else
+                } else {
                     result.add(arr[rightPointer++]); // append at the end
+                }
             } else if (leftPointer >= 0) {
                 result.add(0, arr[leftPointer--]);
             } else if (rightPointer < arr.length) {
@@ -66,8 +68,9 @@ public class Solution {
         int high = arr.length - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (arr[mid] == target)
+            if (arr[mid] == target) {
                 return mid;
+            }
             if (arr[mid] < target) {
                 low = mid + 1;
             } else {
