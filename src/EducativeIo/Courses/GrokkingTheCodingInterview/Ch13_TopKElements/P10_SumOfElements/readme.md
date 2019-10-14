@@ -38,7 +38,7 @@ Since we need to put all the numbers in a min-heap, the time complexity of the a
 
 ### Space Complexity
 
-The space complexity will be O(N)O(N), as we need to store all the ‘N’ numbers in the heap.
+The space complexity will be O(N), as we need to store all the ‘N’ numbers in the heap.
 
 ## Alternate Solution
 
