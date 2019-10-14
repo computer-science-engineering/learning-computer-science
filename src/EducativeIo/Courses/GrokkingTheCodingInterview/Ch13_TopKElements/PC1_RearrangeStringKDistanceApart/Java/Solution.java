@@ -20,8 +20,9 @@ public class Solution {
         }
 
         Map<Character, Integer> charFrequencyMap = new HashMap<>();
-        for (char chr : str.toCharArray())
+        for (char chr : str.toCharArray()) {
             charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);
+        }
 
         PriorityQueue<Map.Entry<Character, Integer>> maxHeap =
                 new PriorityQueue<Map.Entry<Character, Integer>>(
@@ -40,8 +41,9 @@ public class Solution {
             queue.offer(currentEntry);
             if (queue.size() == k) {
                 Map.Entry<Character, Integer> entry = queue.poll();
-                if (entry.getValue() > 0)
+                if (entry.getValue() > 0) {
                     maxHeap.add(entry);
+                }
             }
         }
 
