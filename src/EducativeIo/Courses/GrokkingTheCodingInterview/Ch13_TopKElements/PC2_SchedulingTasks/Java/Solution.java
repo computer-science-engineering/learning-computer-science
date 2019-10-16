@@ -20,8 +20,9 @@ public class Solution {
     public static int scheduleTasks(char[] tasks, int k) {
         int intervalCount = 0;
         Map<Character, Integer> taskFrequencyMap = new HashMap<>();
-        for (char chr : tasks)
+        for (char chr : tasks) {
             taskFrequencyMap.put(chr, taskFrequencyMap.getOrDefault(chr, 0) + 1);
+        }
 
         PriorityQueue<Map.Entry<Character, Integer>> maxHeap =
                 new PriorityQueue<Map.Entry<Character, Integer>>(
@@ -42,8 +43,9 @@ public class Solution {
                 }
             }
             maxHeap.addAll(waitList); // put all the waiting list back on the heap
-            if (!maxHeap.isEmpty())
+            if (!maxHeap.isEmpty()) {
                 intervalCount += n; // we'll be having 'n' idle intervals for the next iteration
+            }
         }
 
         return intervalCount;
