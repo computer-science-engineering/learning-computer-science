@@ -31,11 +31,23 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        char[] tasks = new char[] {'a', 'a', 'a', 'b', 'c', 'c'};
+        int k = 2;
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            int expected = 7;
+            int actual = Solution.scheduleTasks(tasks, k);
+            assertEquals(expected, actual);
+        });
+    }
+
+    @Test
+    public void TrivialCase2() {
+        char[] tasks = new char[] {'a', 'b', 'a'};
+        int k = 3;
+        assertTimeout(Duration.ofMillis(500), () -> {
+            int expected = 5;
+            int actual = Solution.scheduleTasks(tasks, k);
+            assertEquals(expected, actual);
         });
     }
 }
