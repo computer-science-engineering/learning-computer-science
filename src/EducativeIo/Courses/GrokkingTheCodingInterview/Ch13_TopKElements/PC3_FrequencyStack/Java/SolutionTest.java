@@ -1,11 +1,10 @@
 package EducativeIo.Courses.GrokkingTheCodingInterview.Ch13_TopKElements.PC3_FrequencyStack.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.time.Duration;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class SolutionTest {
 
@@ -31,11 +30,18 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        // input = ;
+        Solution frequencyStack = new Solution();
+        frequencyStack.push(1);
+        frequencyStack.push(2);
+        frequencyStack.push(3);
+        frequencyStack.push(2);
+        frequencyStack.push(1);
+        frequencyStack.push(2);
+        frequencyStack.push(5);
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            assertEquals(2, frequencyStack.pop());
+            assertEquals(1, frequencyStack.pop());
+            assertEquals(2, frequencyStack.pop());
         });
     }
 }
