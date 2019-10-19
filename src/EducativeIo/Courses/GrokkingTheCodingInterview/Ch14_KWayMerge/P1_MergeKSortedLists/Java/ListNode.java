@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.MergeKSortedLists.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.P1_MergeKSortedLists.Java;
 
 class ListNode {
     int value;

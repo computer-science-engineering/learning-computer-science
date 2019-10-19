@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.KthSmallestNumberInMSortedLists._Variants.MedianAmongMSortedArrays.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.P2_KthSmallestNumberInMSortedLists._Variants.P2_MergeKSortedArrays.Java;
 
 class Node {
     int elementIndex;

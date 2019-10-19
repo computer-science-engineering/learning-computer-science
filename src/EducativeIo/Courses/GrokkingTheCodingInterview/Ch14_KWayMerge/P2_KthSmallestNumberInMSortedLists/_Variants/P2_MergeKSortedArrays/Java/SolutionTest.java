@@ -1,6 +1,8 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.MergeKSortedLists.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.P2_KthSmallestNumberInMSortedLists._Variants.P2_MergeKSortedArrays.Java;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,25 +35,16 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase1() {
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(6);
-        l1.next.next = new ListNode(8);
-
-        ListNode l2 = new ListNode(3);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(7);
-
-        ListNode l3 = new ListNode(1);
-        l3.next = new ListNode(3);
-        l3.next.next = new ListNode(4);
+        Integer[] l1 = new Integer[] {2, 6, 8};
+        Integer[] l2 = new Integer[] {3, 6, 7};
+        Integer[] l3 = new Integer[] {1, 3, 4};
+        List<Integer[]> lists = new ArrayList<Integer[]>();
+        lists.add(l1);
+        lists.add(l2);
+        lists.add(l3);
         assertTimeout(Duration.ofMillis(500), () -> {
             List<Integer> expected = Arrays.asList(1, 2, 3, 3, 4, 6, 6, 7, 8);
-            List<Integer> actual = new ArrayList<>();
-            ListNode result = Solution.merge(new ListNode[] {l1, l2, l3});
-            while (result != null) {
-                actual.add(result.value);
-                result = result.next;
-            }
+            List<Integer> actual = Solution.merge(lists);
             assertEquals(expected, actual);
         });
     }

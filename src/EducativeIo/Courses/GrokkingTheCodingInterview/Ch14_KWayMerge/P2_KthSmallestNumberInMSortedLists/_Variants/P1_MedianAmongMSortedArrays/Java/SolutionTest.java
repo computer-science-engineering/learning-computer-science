@@ -1,7 +1,7 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.KthSmallestNumberInMSortedLists.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.P2_KthSmallestNumberInMSortedLists._Variants.P1_MedianAmongMSortedArrays.Java;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -41,10 +41,9 @@ public class SolutionTest {
         lists.add(l1);
         lists.add(l2);
         lists.add(l3);
-        int k = 5;
         assertTimeout(Duration.ofMillis(500), () -> {
-            int expected = 4;
-            int actual = Solution.findKthSmallest(lists, k);
+            int expected = 3;
+            int actual = Solution.findMedian(lists);
             assertEquals(expected, actual);
         });
     }
