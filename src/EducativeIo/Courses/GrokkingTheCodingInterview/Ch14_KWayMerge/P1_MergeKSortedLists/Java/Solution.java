@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.MergeKSortedLists.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.P1_MergeKSortedLists.Java;
 
 import java.util.PriorityQueue;
 

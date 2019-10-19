@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.KthSmallestNumberInMSortedLists._Variants.MedianAmongMSortedArrays.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch14_KWayMerge.P2_KthSmallestNumberInMSortedLists._Variants.P2_MergeKSortedArrays.Java;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,23 +13,13 @@ public class Solution {
         lists.add(l1);
         lists.add(l2);
         lists.add(l3);
-        int result = findMedian(lists);
+        List<Integer> result = merge(lists);
         // 1, 2, 3, 3, 4, 6, 6, 7, 8
-        System.out.print("Median is: " + result);
+        System.out.print(result);
     }
 
-    public static int findMedian(List<Integer[]> lists) {
-        int n = 0;
-        for (int i = 0; i < lists.size(); i++) {
-            if (lists.get(i) != null) {
-                n += lists.get(i).length;
-            }
-        }
-        int k = n / 2;
-        return findKthSmallest(lists, k);
-    }
-
-    private static int findKthSmallest(List<Integer[]> lists, int k) {
+    public static List<Integer> merge(List<Integer[]> lists) {
+        List<Integer> result = new ArrayList<>();
         PriorityQueue<Node> minHeap =
                 new PriorityQueue<Node>((n1, n2) -> lists.get(n1.arrayIndex)[n1.elementIndex]
                         - lists.get(n2.arrayIndex)[n2.elementIndex]);
@@ -44,13 +34,9 @@ public class Solution {
         // take the smallest (top) element form the min heap, if the running count is equal to k
         // return the number
         // if the array of the top element has more elements, add the next element to the heap
-        int numberCount = 0, result = 0;
         while (!minHeap.isEmpty()) {
             Node node = minHeap.poll();
-            result = lists.get(node.arrayIndex)[node.elementIndex];
-            if (++numberCount == k) {
-                break;
-            }
+            result.add(lists.get(node.arrayIndex)[node.elementIndex]);
             node.elementIndex++;
             if (lists.get(node.arrayIndex).length > node.elementIndex) {
                 minHeap.add(node);
