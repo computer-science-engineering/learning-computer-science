@@ -42,3 +42,5 @@ The space complexity will be O(M) because, at any time, our min-heap will be sto
 ## Notes
 
 ## References
+
+1. [Geeks for Geeks - Find m-th smallest value in k sorted arrays](https://www.geeksforgeeks.org/find-m-th-smallest-value-in-k-sorted-arrays/)
