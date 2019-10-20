@@ -24,11 +24,12 @@ public class Solution {
 
         int rangeStart = 0, rangeEnd = Integer.MAX_VALUE, currentMaxNumber = Integer.MIN_VALUE;
         // put the 1st element of each array in the min heap
-        for (int i = 0; i < lists.size(); i++)
+        for (int i = 0; i < lists.size(); i++) {
             if (lists.get(i) != null) {
                 minHeap.add(new Node(0, i));
                 currentMaxNumber = Math.max(currentMaxNumber, lists.get(i)[0]);
             }
+        }
 
         // take the smallest (top) element form the min heap, if it gives us smaller range, update
         // the ranges
