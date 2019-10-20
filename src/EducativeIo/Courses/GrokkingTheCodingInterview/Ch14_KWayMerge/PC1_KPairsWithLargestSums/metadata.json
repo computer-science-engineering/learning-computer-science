@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "K Pairs with Largest Sums",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/B1JKxRB8EDJ"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "K Way Merge",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["K Way Merge"],
+    "buckets": []
+}
