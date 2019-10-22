@@ -5,6 +5,9 @@
    1. [Basic Solution - Brute Force](#basic-solution---brute-force)
       1. [Time Complexity](#time-complexity)
       2. [Space Complexity](#space-complexity)
+   2. [Top-down Dynamic Programming with Memoization](#top-down-dynamic-programming-with-memoization)
+      1. [Time Complexity - Top-down Dynamic Programming with Memoization](#time-complexity---top-down-dynamic-programming-with-memoization)
+      2. [Space Complexity - Top-down Dynamic Programming with Memoization](#space-complexity---top-down-dynamic-programming-with-memoization)
 3. [Notes](#notes)
 4. [References](#references)
 
@@ -61,6 +64,20 @@ The time complexity of the above algorithm is exponential O(2^n), where ‘n’ 
 #### Space Complexity
 
 The space complexity is O(n), which will be used to store the recursion stack.
+
+### Top-down Dynamic Programming with Memoization
+
+We can use memoization to overcome the overlapping sub-problems. As stated in previous lessons, memoization is when we store the results of all the previously solved sub-problems so we can return the results from memory if we encounter a problem that has already been solved.
+
+Since we need to store the results for every subset and for every possible sum, therefore we will be using a two-dimensional array to store the results of the solved sub-problems. The first dimension of the array will represent different subsets and the second dimension will represent different ‘sums’ that we can calculate from each subset. These two dimensions of the array can also be inferred from the two changing values (sum and currentIndex) in our recursive function `canPartitionRecursive()`.
+
+#### Time Complexity - Top-down Dynamic Programming with Memoization
+
+O(N∗S), where ‘N’ represents total numbers and ‘S’ is the total sum of all the numbers.
+
+#### Space Complexity - Top-down Dynamic Programming with Memoization
+
+O(N∗S), where ‘N’ represents total numbers and ‘S’ is the total sum of all the numbers.
 
 ## Notes
 
