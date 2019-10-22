@@ -13,6 +13,8 @@
    3. [Bottom-up Dynamic Programming](#bottom-up-dynamic-programming)
       1. [Time Complexity - Bottom-up Dynamic Programming](#time-complexity---bottom-up-dynamic-programming)
       2. [Space Complexity - Bottom-up Dynamic Programming](#space-complexity---bottom-up-dynamic-programming)
+      3. [How can we find the selected items](#how-can-we-find-the-selected-items)
+   4. [Bottom-up Dynamic Programming - Space Complexity Optimization](#bottom-up-dynamic-programming---space-complexity-optimization)
 3. [Notes](#notes)
 4. [References](#references)
 
@@ -104,6 +106,63 @@ O(N∗C), where ‘N’ represents total items and ‘C’ is the maximum capaci
 #### Space Complexity - Bottom-up Dynamic Programming
 
 O(N∗C), where ‘N’ represents total items and ‘C’ is the maximum capacity.
+
+#### How can we find the selected items
+
+As we know, the final profit is at the bottom-right corner. Therefore, we will start from there to find the items that will be going into the knapsack.
+
+As you remember, at every step we had two options: include an item or skip it. If we skip an item, we take the profit from the remaining items (i.e. from the cell right above it); if we include the item, then we jump to the remaining profit to find more items.
+
+### Bottom-up Dynamic Programming - Space Complexity Optimization
+
+The solution above is similar to the previous solution, the only difference is that we use `i%2`instead if `i` and `(i-1)%2` instead of `i-1`. This solution has a space complexity of O(2*C) = O(C), where ‘C’ is the maximum capacity of the knapsack.
+
+This space optimization solution can also be implemented using a single array. It is a bit tricky, but the intuition is to use the same array for the previous and the next iteration!
+
+If you see closely, we need two values from the previous iteration: `dp[c]` and `dp[c-weight[i]]`
+
+Since our inner loop is iterating over `c:0-->capacity`, let’s see how this might affect our two required values:
+
+1. When we access `dp[c]`, it has not been overridden yet for the current iteration, so it should be fine.
+2. `dp[c-weight[i]]` might be overridden if “weight[i] > 0”. Therefore we can’t use this value for the current iteration.
+
+To solve the second case, we can change our inner loop to process in the reverse direction: `c:capacity-->0`. This will ensure that whenever we change a value in `dp[]`, we will not need it again in the current iteration.
+
+```java
+static int solveKnapsack(int[] profits, int[] weights, int capacity) {
+   // basic checks
+   if (capacity <= 0 || profits.length == 0 || weights.length != profits.length) {
+      return 0;
+   }
+
+   int n = profits.length;
+   int[] dp = new int[capacity + 1];
+
+   // if we have only one weight, we will take it if it is not more than the
+   // capacity
+   for (int c = 0; c <= capacity; c++) {
+   if (weights[0] <= c)
+      dp[c] = profits[0];
+   }
+
+   // process all sub-arrays for all the capacities
+   for (int i = 1; i < n; i++) {
+      for (int c = capacity; c >= 0; c--) {
+         int profit1 = 0, profit2 = 0;
+         // include the item, if it is not more than the capacity
+         if (weights[i] <= c) {
+            profit1 = profits[i] + dp[c - weights[i]];
+         }
+         // exclude the item
+         profit2 = dp[c];
+         // take maximum
+         dp[c] = Math.max(profit1, profit2);
+      }
+   }
+
+   return dp[capacity];
+}
+```
 
 ## Notes
 
