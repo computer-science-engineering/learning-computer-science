@@ -8,13 +8,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class SolutionTestBottomUpDp {
+public class SolutionTest1BruteForce {
 
-    SolutionBottomUpDp solution;
+    Solution1BruteForce solution;
 
     @BeforeEach
     public void setUp() throws Exception {
-        solution = new SolutionBottomUpDp();
+        solution = new Solution1BruteForce();
     }
 
     @AfterEach
@@ -26,13 +26,13 @@ public class SolutionTestBottomUpDp {
     public void MainFunction() {
         assertTimeout(Duration.ofMillis(500), () -> {
             String[] args = new String[0];
-            assertAll(() -> SolutionBottomUpDp.main(args));
+            assertAll(() -> Solution1BruteForce.main(args));
         });
     }
 
     @Test
     public void TrivialCase1() {
-        SolutionBottomUpDp ks = new SolutionBottomUpDp();
+        Solution1BruteForce ks = new Solution1BruteForce();
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 7;
@@ -45,7 +45,7 @@ public class SolutionTestBottomUpDp {
 
     @Test
     public void TrivialCase2() {
-        SolutionBottomUpDp ks = new SolutionBottomUpDp();
+        Solution1BruteForce ks = new Solution1BruteForce();
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 6;

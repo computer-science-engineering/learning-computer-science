@@ -8,13 +8,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class SolutionTestTopDownDpWithMemoization {
+public class SolutionTest4BottomUpDpSpaceOptimized {
 
-    SolutionTopDownDpWithMemoization solution;
+    Solution4BottomUpDpSpaceOptimized solution;
 
     @BeforeEach
     public void setUp() throws Exception {
-        solution = new SolutionTopDownDpWithMemoization();
+        solution = new Solution4BottomUpDpSpaceOptimized();
     }
 
     @AfterEach
@@ -26,32 +26,32 @@ public class SolutionTestTopDownDpWithMemoization {
     public void MainFunction() {
         assertTimeout(Duration.ofMillis(500), () -> {
             String[] args = new String[0];
-            assertAll(() -> SolutionTopDownDpWithMemoization.main(args));
+            assertAll(() -> Solution4BottomUpDpSpaceOptimized.main(args));
         });
     }
 
     @Test
     public void TrivialCase1() {
-        SolutionTopDownDpWithMemoization ks = new SolutionTopDownDpWithMemoization();
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 7;
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 22;
-            int actual = ks.solveKnapsack(profits, weights, capacity);
+            int actual =
+                    Solution4BottomUpDpSpaceOptimized.solveKnapsack(profits, weights, capacity);
             assertEquals(expected, actual);
         });
     }
 
     @Test
     public void TrivialCase2() {
-        SolutionTopDownDpWithMemoization ks = new SolutionTopDownDpWithMemoization();
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 6;
         assertTimeout(Duration.ofMillis(500), () -> {
             int expected = 17;
-            int actual = ks.solveKnapsack(profits, weights, capacity);
+            int actual =
+                    Solution4BottomUpDpSpaceOptimized.solveKnapsack(profits, weights, capacity);
             assertEquals(expected, actual);
         });
     }
