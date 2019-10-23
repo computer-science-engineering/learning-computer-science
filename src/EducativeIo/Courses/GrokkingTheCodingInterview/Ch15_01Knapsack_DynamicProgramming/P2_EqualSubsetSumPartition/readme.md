@@ -8,6 +8,9 @@
    2. [Top-down Dynamic Programming with Memoization](#top-down-dynamic-programming-with-memoization)
       1. [Time Complexity - Top-down Dynamic Programming with Memoization](#time-complexity---top-down-dynamic-programming-with-memoization)
       2. [Space Complexity - Top-down Dynamic Programming with Memoization](#space-complexity---top-down-dynamic-programming-with-memoization)
+   3. [Bottom-up Dynamic Programming](#bottom-up-dynamic-programming)
+      1. [Time Complexity - Bottom-up Dynamic Programming](#time-complexity---bottom-up-dynamic-programming)
+      2. [Space Complexity - Bottom-up Dynamic Programming](#space-complexity---bottom-up-dynamic-programming)
 3. [Notes](#notes)
 4. [References](#references)
 
@@ -76,6 +79,25 @@ Since we need to store the results for every subset and for every possible sum, 
 O(N∗S), where ‘N’ represents total numbers and ‘S’ is the total sum of all the numbers.
 
 #### Space Complexity - Top-down Dynamic Programming with Memoization
+
+O(N∗S), where ‘N’ represents total numbers and ‘S’ is the total sum of all the numbers.
+
+### Bottom-up Dynamic Programming
+
+Let’s try to populate our `dp[][]` array from the above solution by working in a bottom-up fashion. Essentially, we want to find if we can make all possible sums with every subset. This means, `dp[i][s]` **will be ‘true’ if we can make the sum ‘s’ from the first ‘i’ numbers**.
+
+So, for each number at index ‘i’ (0 <= i < num.length) and sum ‘s’ (0 <= s <= S/2), we have two options:
+
+1. Exclude the number. In this case, we will see if we can get ‘s’ from the subset excluding this number: `dp[i-1][s]`
+2. Include the number if its value is not more than ‘s’. In this case, we will see if we can find a subset to get the remaining sum: `dp[i-1][s-num[i]]`
+
+If either of the two above scenarios is true, we can find a subset of numbers with a sum equal to ‘s’.
+
+#### Time Complexity - Bottom-up Dynamic Programming
+
+O(N∗S), where ‘N’ represents total numbers and ‘S’ is the total sum of all the numbers.
+
+#### Space Complexity - Bottom-up Dynamic Programming
 
 O(N∗S), where ‘N’ represents total numbers and ‘S’ is the total sum of all the numbers.
 
