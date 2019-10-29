@@ -337,3 +337,4 @@ Statistics about the system: how many times a short URL has been used
 
 1. [YT Video - Tushar Roy - System Design : Design a service like TinyUrl](https://www.youtube.com/watch?v=fMZMm_0ZhK4)
 2. [Grokking the System Design Interview - Designing a URL Shortening service like TinyURL](https://www.educative.io/collection/5668639101419520/5649050225344512)
+3. [YT Video - Tech Dummies - Narendra L - URL shortener system design | tinyurl system design | bitly system design](https://www.youtube.com/watch?v=JQDHz72OA3c)
