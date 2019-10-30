@@ -370,6 +370,7 @@
   "java.debug.settings.console": "internalConsole",
   "markdown.extension.toc.orderedList": true,
   "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.list.indentationSize": "inherit",
   "eslint.workingDirectories": [{
       "directory": "./",
       "changeProcessCWD": true
