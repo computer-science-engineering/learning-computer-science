@@ -1,18 +1,17 @@
 # Designing Typeahead Suggestion
 
-- [Designing Typeahead Suggestion](#designing-typeahead-suggestion)
-  - [What is Typeahead Suggestion](#what-is-typeahead-suggestion)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
-  - [Permanent Storage of the Trie](#permanent-storage-of-the-trie)
-  - [Scale Estimation](#scale-estimation)
-    - [Storage Estimation](#storage-estimation)
-  - [Data Partition](#data-partition)
-  - [Cache](#cache)
-  - [Replication and Load Balancer](#replication-and-load-balancer)
-  - [Fault Tolerance](#fault-tolerance)
-  - [Typeahead Client](#typeahead-client)
-  - [Personalization](#personalization)
+1. [What is Typeahead Suggestion](#what-is-typeahead-suggestion)
+2. [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+3. [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
+4. [Permanent Storage of the Trie](#permanent-storage-of-the-trie)
+5. [Scale Estimation](#scale-estimation)
+    1. [Storage Estimation](#storage-estimation)
+6. [Data Partition](#data-partition)
+7. [Cache](#cache)
+8. [Replication and Load Balancer](#replication-and-load-balancer)
+9. [Fault Tolerance](#fault-tolerance)
+10. [Typeahead Client](#typeahead-client)
+11. [Personalization](#personalization)
 
 Design a real-time suggestion service, which will recommend terms to users as they enter text for searching.
 
