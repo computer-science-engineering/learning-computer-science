@@ -49,7 +49,7 @@ We can merge nodes that have only one branch to save storage space.
   - Storage can be optimized by storing only references of the terminal nodes rather than storing the entire phrase.
   - To find the suggested terms we need to traverse back using the parent reference from the terminal node.
   - We will also need to store the frequency with each reference to keep track of top suggestions.
-- **How would be build the trie:**
+- **How would we build the trie:**
   - Bottom up.
   - Each parent node will recursively call all child nodes to calculate top suggestions and their counts.
   - Parent nodes will combine top suggestions from all their children to determine their top suggestions.
