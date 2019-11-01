@@ -1,31 +1,30 @@
 # Design Ticketmaster
 
-- [Design Ticketmaster](#design-ticketmaster)
-  - [What is an online movie ticket booking system](#what-is-an-online-movie-ticket-booking-system)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Some Design Considerations](#some-design-considerations)
-  - [Capacity Estimation](#capacity-estimation)
-    - [Traffic estimates](#traffic-estimates)
-    - [Storage estimates](#storage-estimates)
-  - [System APIs](#system-apis)
-  - [Database Design](#database-design)
-    - [Movie](#movie)
-    - [Show](#show)
-    - [Booking](#booking)
-    - [User](#user)
-    - [Cinema](#cinema)
-    - [Cinema_hall](#cinemahall)
-    - [Show_Seat](#showseat)
-    - [Payment](#payment)
-    - [City](#city)
-    - [Cinema_Seat](#cinemaseat)
-  - [High Level Design](#high-level-design)
-  - [Detailed Component Design](#detailed-component-design)
-  - [Concurrency](#concurrency)
-  - [Fault Tolerance](#fault-tolerance)
-  - [Data Partitioning](#data-partitioning)
-    - [Database partitioning](#database-partitioning)
-    - [ActiveReservationService and WaitingUserService partitioning](#activereservationservice-and-waitinguserservice-partitioning)
+1. [What is an online movie ticket booking system](#what-is-an-online-movie-ticket-booking-system)
+2. [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+3. [Some Design Considerations](#some-design-considerations)
+4. [Capacity Estimation](#capacity-estimation)
+    1. [Traffic estimates](#traffic-estimates)
+    2. [Storage estimates](#storage-estimates)
+5. [System APIs](#system-apis)
+6. [Database Design](#database-design)
+    1. [Movie](#movie)
+    2. [Show](#show)
+    3. [Booking](#booking)
+    4. [User](#user)
+    5. [Cinema](#cinema)
+    6. [Cinema_hall](#cinema_hall)
+    7. [Show_Seat](#show_seat)
+    8. [Payment](#payment)
+    9. [City](#city)
+    10. [Cinema_Seat](#cinema_seat)
+7. [High Level Design](#high-level-design)
+8. [Detailed Component Design](#detailed-component-design)
+9. [Concurrency](#concurrency)
+10. [Fault Tolerance](#fault-tolerance)
+11. [Data Partitioning](#data-partitioning)
+    1. [Database partitioning](#database-partitioning)
+    2. [ActiveReservationService and WaitingUserService partitioning](#activereservationservice-and-waitinguserservice-partitioning)
 
 Design an online ticketing system that sells movie tickets like Ticketmaster or BookMyShow.
 
@@ -78,8 +77,8 @@ Similar Services: bookmyshow.com, ticketmaster.com
 ## System APIs
 
 ```plaintext
-SearchMovies(api_dev_key, keyword, city, lat_long, radius, start_datetime, end_datetime, postal_code,
-includeSpellcheck, results_per_page, sorting_order)
+SearchMovies(api_dev_key, keyword, city, lat_long, radius, start_datetime, end_datetime,
+    postal_code, includeSpellcheck, results_per_page, sorting_order)
 
 Return JSON.
 ```
@@ -88,7 +87,10 @@ Return JSON.
 ReserveSeats(api_dev_key, session_id, movie_id, show_id, seats_to_reserve[])
 
 Returns: (JSON)
-Returns the status of the reservation, which would be one of the following: 1) "Reservation Successful" 2) "Reservation Failed - Show Full", 3) "Reservation Failed - Retry, as other users are holding reserved seats".
+Returns the status of the reservation, which would be one of the following:
+1) "Reservation Successful"
+2) "Reservation Failed - Show Full",
+3) "Reservation Failed - Retry, as other users are holding reserved seats".
 ```
 
 ## Database Design
