@@ -1,20 +1,19 @@
 # Designing Yelp or Nearby Friends
 
-- [Designing Yelp or Nearby Friends](#designing-yelp-or-nearby-friends)
-  - [Why Yelp or Proximity Server](#why-yelp-or-proximity-server)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Scale Estimation](#scale-estimation)
-  - [Database Schema](#database-schema)
-  - [System APIs](#system-apis)
-  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
-    - [SQL solution](#sql-solution)
-    - [Grids](#grids)
-    - [Dynamic size grids](#dynamic-size-grids)
-  - [Data Partitioning](#data-partitioning)
-  - [Replication and Fault Tolerance](#replication-and-fault-tolerance)
-  - [Cache](#cache)
-  - [Load Balancing (LB)](#load-balancing-lb)
-  - [Ranking](#ranking)
+1. [Why Yelp or Proximity Server](#why-yelp-or-proximity-server)
+2. [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+3. [Scale Estimation](#scale-estimation)
+4. [Database Schema](#database-schema)
+5. [System APIs](#system-apis)
+6. [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
+    1. [SQL solution](#sql-solution)
+    2. [Grids](#grids)
+    3. [Dynamic size grids](#dynamic-size-grids)
+7. [Data Partitioning](#data-partitioning)
+8. [Replication and Fault Tolerance](#replication-and-fault-tolerance)
+9. [Cache](#cache)
+10. [Load Balancing (LB)](#load-balancing-lb)
+11. [Ranking](#ranking)
 
 Design a Yelp like service, where users can search for nearby places like restaurants, theaters, or shopping malls, etc., and can also add/view reviews of places.
 
@@ -71,7 +70,8 @@ search(api_dev_key, search_terms, user_location, radius_filter,
   maximum_results_to_return, category_filter, sort, page_token)
 
 Return: (JSON)
-A JSON containing information about a list of businesses matching the search query. Each result entry will have the business name, address, category, rating, and thumbnail.
+A JSON containing information about a list of businesses matching the search query.
+Each result entry will have the business name, address, category, rating, and thumbnail.
 ```
 
 ## Basic System Design and Algorithm
@@ -157,7 +157,7 @@ A JSON containing information about a list of businesses matching the search que
       - either we find required number of places, or
       - exhaust search based on maximum radius.
 - **Memory needed to store the QuadTree**
-  - For each place, if we cache only LocationID and Latitude/LOngitude, we need: 24 * 500 M = 12 GB.
+  - For each place, if we cache only LocationID and Latitude/Longitude, we need: 24 * 500 M = 12 GB.
   - Given each grid can have maximum of 500 places, and we have 500 M locations, total grids = 500 M / 500 = 1 M grids.
   - So, number of leaf nodes = 1 M and they will hold 12 GB of location data.
   - A QuadTree with 1 M leaf nodes will have approximately (1/3)rd internal nodes and each internal node will have 4 pointers, for its children.

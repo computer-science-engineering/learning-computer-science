@@ -1,13 +1,12 @@
 # Designing Uber backend
 
-- [Designing Uber backend](#designing-uber-backend)
-  - [What is Uber](#what-is-uber)
-  - [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
-  - [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
-  - [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
-  - [Fault Tolerance and Replication](#fault-tolerance-and-replication)
-  - [Ranking](#ranking)
-  - [Advanced Issues](#advanced-issues)
+1. [What is Uber](#what-is-uber)
+2. [Requirements and Goals of the System](#requirements-and-goals-of-the-system)
+3. [Capacity Estimation and Constraints](#capacity-estimation-and-constraints)
+4. [Basic System Design and Algorithm](#basic-system-design-and-algorithm)
+5. [Fault Tolerance and Replication](#fault-tolerance-and-replication)
+6. [Ranking](#ranking)
+7. [Advanced Issues](#advanced-issues)
 
 Design a ride-sharing service like Uber, which connects passengers who need a ride with drivers who have a car.
 
