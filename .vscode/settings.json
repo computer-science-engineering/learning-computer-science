@@ -381,6 +381,5 @@
     }
   ],
   "editor.formatOnPaste": true,
-  "java.home": "C:\\Programs\\zulu12.3.11-ca-jdk12.0.2-win_x64",
   "markdown.extension.toc.githubCompatibility": true
 }
