@@ -1,29 +1,26 @@
 dist: bionic
 
-language: java
+jobs:
+  include:
+    - language: java
+      jdk: openjdk13
+      before_install:
+        - chmod +x gradlew
+      script:
+        - bash ./gradlew test jacocoJupTestReport
 
-jdk:
-  - openjdk13
+    - language: python
+      python: 3.8
+      script:
+        - python --version
+        - pip install --upgrade pip
+        - pip install -r requirements.txt
+        - coverage3 run scripts/run_unit_tests.py
+        - python scripts/create_problems_list.py
 
 branches:
   only:
     - master
-
-before_install:
-  - sudo add-apt-repository ppa:deadsnakes/ppa -y
-  - sudo apt-get update -y
-  - sudo apt-get install python3.8 -y
-  - chmod +x gradlew
-
-script:
-  - bash ./gradlew test jacocoJupTestReport
-  - python3.8 --version
-  - pyenv versions
-  - pyenv global 3.7.1
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
-  - coverage3 run scripts/run_unit_tests.py
-  - python3.8 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
 deploy:
