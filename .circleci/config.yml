@@ -12,8 +12,8 @@ version: 2.1
 # https://circleci.com/orbs/registry/?filterBy=all
 orbs:
   build-tools: circleci/build-tools@2.6.3
-  jq: circleci/jq@1.9.0
-  docker: circleci/docker@0.5.13 # needs jq above
+  jq: circleci/jq@1.9.1
+  docker: circleci/docker@0.5.17 # needs jq above
   node: circleci/node@1.1.6
 
 jobs:
@@ -121,7 +121,7 @@ jobs:
   build_test_python:
     <<: *defaults
     docker:
-      - image: circleci/python:3.7.4
+      - image: circleci/python:3.8.0
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -140,8 +140,8 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             python3 -m pip install -r requirements.txt
-            coverage-3.7 run scripts/run_unit_tests.py
-            coverage-3.7 xml
+            coverage-3.8 run scripts/run_unit_tests.py
+            coverage-3.8 xml
             python3 scripts/create_problems_list.py
 
       # upload test coverage to codecov
@@ -174,7 +174,7 @@ jobs:
   upload_to_code_climate:
     <<: *defaults
     docker:
-      - image: circleci/python:3.7.4
+      - image: circleci/python:3.8.0
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
