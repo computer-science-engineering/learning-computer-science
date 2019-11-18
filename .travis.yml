@@ -1,4 +1,4 @@
-dist: xenial
+dist: bionic
 
 language: java
 
@@ -19,10 +19,10 @@ script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.8 --version
   - pyenv versions
-  - pyenv update
-  - pyenv global 3.8.0
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
+  # - pyenv update
+  # - pyenv global 3.8.0
+  - python3.8 -m pip install --upgrade pip
+  - python3.8 -m pip install -r requirements.txt
   - coverage3 run scripts/run_unit_tests.py
   - python3.8 scripts/create_problems_list.py
 
