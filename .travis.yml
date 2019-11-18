@@ -19,7 +19,8 @@ script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.8 --version
   - pyenv versions
-  - pyenv global 3.8
+  - pyenv update
+  - pyenv global 3.8.0
   - pip install --upgrade pip
   - pip install -r requirements.txt
   - coverage3 run scripts/run_unit_tests.py
