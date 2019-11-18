@@ -18,7 +18,7 @@ before_install:
 script:
   - bash ./gradlew test jacocoJupTestReport
   - python3.8 --version
-  - pyenv versions
+  # - pyenv versions
   # - pyenv update
   # - pyenv global 3.8.0
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
