@@ -21,9 +21,11 @@ script:
   - pyenv versions
   # - pyenv update
   # - pyenv global 3.8.0
+  - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  - python3.8 get-pip.py
   - python3.8 -m pip install --upgrade pip
   - python3.8 -m pip install -r requirements.txt
-  - coverage3 run scripts/run_unit_tests.py
+  - python3.8 -m coverage3 run scripts/run_unit_tests.py
   - python3.8 scripts/create_problems_list.py
 
 #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
