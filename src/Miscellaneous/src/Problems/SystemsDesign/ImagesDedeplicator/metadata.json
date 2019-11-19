@@ -1,0 +1,34 @@
+{
+    "type": "Systems Design",
+    "name": "Images Deduplicator",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "Netflix",
+        ""
+    ],
+    "categories": [{
+            "name": "",
+            "children": [{
+                "name": "",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
