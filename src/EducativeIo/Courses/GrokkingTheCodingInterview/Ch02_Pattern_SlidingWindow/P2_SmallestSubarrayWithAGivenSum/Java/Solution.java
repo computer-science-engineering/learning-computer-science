@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        int result = findMinSubArray(7, new int[] { 2, 1, 5, 2, 3, 2 });
+        int result = findMinSubArray(7, new int[] {2, 1, 5, 2, 3, 2});
         System.out.println("Smallest subarray length: " + result);
-        result = findMinSubArray(7, new int[] { 2, 1, 5, 2, 8 });
+        result = findMinSubArray(7, new int[] {2, 1, 5, 2, 8});
         System.out.println("Smallest subarray length: " + result);
-        result = findMinSubArray(8, new int[] { 3, 4, 1, 1, 6 });
+        result = findMinSubArray(8, new int[] {3, 4, 1, 1, 6});
         System.out.println("Smallest subarray length: " + result);
     }
 
@@ -23,7 +23,7 @@ public class Solution {
             while (windowSum >= S) {
                 int windowSize = (windowEnd - windowStart) + 1;
 
-                if(windowSize <= result) {
+                if (windowSize <= result) {
                     windowStartFinal = windowStart;
                     windowEndFinal = windowEnd;
                 }
@@ -36,11 +36,11 @@ public class Solution {
 
         int index = 0;
         int[] resultArray = new int[result];
-        for (int i=windowStartFinal; i<=windowEndFinal; i++) {
+        for (int i = windowStartFinal; i <= windowEndFinal; i++) {
             resultArray[index++] = arr[i];
         }
         System.out.println(Arrays.toString(resultArray));
-        
+
         return result;
-      }
+    }
 }
