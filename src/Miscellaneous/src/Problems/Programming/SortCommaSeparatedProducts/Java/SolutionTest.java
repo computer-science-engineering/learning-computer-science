@@ -3,6 +3,9 @@ package Miscellaneous.src.Problems.Programming.SortCommaSeparatedProducts.Java;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,9 +42,24 @@ public class SolutionTest {
                 "Jenga Classic Game,100,7", "Ink Cartridges,88,45", "Instant Pot,98,59",
                 "Hoze Nozzle,74,26", "Gift Card,45,25", "Keyboard,82,19"};
         assertTimeout(Duration.ofMillis(500), () -> {
-            // expected = ;
-            // actual = Solution.;
-            // assertEquals(expected, actual);
+            List<String> expected = Arrays.asList("Jenga Classic Game", "Selfie Stick",
+                    "Instant Pot", "iPhone Case", "Blue Light Blocking Glasses", "Ink Cartridges",
+                    "Keyboard", "Hoze Nozzle", "Baseball Cards", "AA Batteries", "Water Filter",
+                    "Wyze Cam", "Fire TV Stick", "Ice Maker", "Video Doorbell", "Gift Card",
+                    "Microphone", "Disinfecting Wipes", "Winter Gloves", "Pet Kennel");
+            List<Solution.Item> items = new ArrayList<Solution.Item>();
+            for (String eachInput : INPUT) {
+                String[] temps = eachInput.split(",");
+                Solution.Item temp = new Solution.Item(temps[0], Integer.parseInt(temps[1]),
+                        Integer.parseInt(temps[2]));
+                items.add(temp);
+            }
+            List<Solution.Item> resultAll = Solution.getSorted(items);
+            List<String> actual = new ArrayList<>();
+            for (Solution.Item eachItem : resultAll) {
+                actual.add(eachItem.name);
+            }
+            assertEquals(expected, actual);
         });
     }
 }

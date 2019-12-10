@@ -34,7 +34,7 @@ public class Solution {
         return items;
     }
 
-    static class Item implements Comparable<Item> {
+    public static class Item implements Comparable<Item> {
         String name;
         int sales;
         int price;
