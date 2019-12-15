@@ -1,0 +1,35 @@
+{
+    "type": "Systems Design",
+    "name": "Scaling Read Requests",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "",
+            "children": [{
+                "name": "",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Easy",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems Design",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
