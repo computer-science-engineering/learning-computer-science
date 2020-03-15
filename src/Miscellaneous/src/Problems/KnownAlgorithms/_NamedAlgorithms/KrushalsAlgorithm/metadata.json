@@ -1,0 +1,35 @@
+{
+    "type": "Coding",
+    "name": "Krushal's Algorithm",
+    "origin": {
+        "name": "Miscellaneous",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Known Algorithms",
+            "children": [{
+                "name": "Named Algorithms",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Tree",
+        "Graph"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
