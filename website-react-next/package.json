@@ -24,6 +24,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-select": "^3.0.8"
+    "react-select": "^3.0.8",
+    "minimist": ">=1.2.2"
   }
 }
