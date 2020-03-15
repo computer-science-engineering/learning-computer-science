@@ -48,3 +48,6 @@ obj
 
 # fossa file
 .fossa.yml
+
+# scala
+.metals 
