@@ -9,7 +9,7 @@
     "formulahendry.code-runner",
     "streetsidesoftware.code-spell-checker",
     "ms-vscode.cpptools",
-    "ms-vscode.csharp",
+    "ms-dotnettools.csharp",
     "msjsdiag.debugger-for-chrome",
     "joelday.docthis",
     "EditorConfig.EditorConfig",
