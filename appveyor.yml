@@ -10,10 +10,10 @@ image:
   - Visual Studio 2019
   - Ubuntu
 
-stack: node 13, jdk 14, python 3.8.0 x64
+stack: node 13, jdk 14, python 3.8.1 x64
 
 install:
-  - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk13"
+  - cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk14"
   - cmd: "SET PATH=%JAVA_HOME%\\bin;%path%"
   - cmd: "SET PYTHON3=C:\\Python38-x64"
   - cmd: "SET PATH=%PYTHON3%;%PYTHON3%\\Scripts;%path%"
@@ -21,7 +21,7 @@ install:
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
   - sh: whereis python3.8
-  - sh: . /home/appveyor/venv3.8.0/bin/activate
+  - sh: . /home/appveyor/venv3.8.1/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
 
