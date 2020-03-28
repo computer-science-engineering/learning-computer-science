@@ -26,7 +26,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         int[] nums1 = new int[] {9, 8, 2};
         int[] nums2 = new int[] {6, 3, 1};
         int k = 3;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<int[]> expected =
                     Arrays.asList(new int[] {9, 3}, new int[] {9, 6}, new int[] {8, 6});
             List<int[]> actual = Solution.findKLargestPairs(nums1, nums2, k);

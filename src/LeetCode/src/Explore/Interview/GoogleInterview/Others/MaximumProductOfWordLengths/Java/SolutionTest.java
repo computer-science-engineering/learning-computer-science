@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String[] words = {"abcw","baz","foo","bar","xtfn","abcdef"};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 16;
             int actual = Solution.maxProduct(words);
             assertEquals(expected, actual);
@@ -42,7 +42,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String[] words = {"a","ab","abc","d","cd","bcd","abcd"};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 4;
             int actual = Solution.maxProduct(words);
             assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         String[] words = {"a","aa","aaa","aaaa"};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 0;
             int actual = Solution.maxProduct(words);
             assertEquals(expected, actual);

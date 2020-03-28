@@ -39,7 +39,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -47,7 +47,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {        
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 98;
             int actual1 = Solution.getSuccessor(a, 97).val;
             assertEquals(expected, actual1);
@@ -58,7 +58,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase2() {        
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 97;
             int actual1 = Solution.getSuccessor(a, 96).val;
             assertEquals(expected, actual1);
@@ -69,7 +69,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase3() {        
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 100;
             int actual1 = Solution.getSuccessor(a, 99).val;
             assertEquals(expected, actual1);
@@ -80,7 +80,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase1() {        
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             TreeNode expected = null;
             TreeNode actual1 = Solution.getSuccessor(a, 102);
             assertEquals(expected, actual1);

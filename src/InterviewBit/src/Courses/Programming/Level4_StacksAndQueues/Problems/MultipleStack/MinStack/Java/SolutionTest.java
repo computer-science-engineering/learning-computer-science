@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         Solution minStack = new Solution();
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = new int[]{-3, 0, -2};
             int[] actual = new int[3];
             minStack.push(-2);

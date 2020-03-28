@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         double x = 2.00000;
         int n = 10;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             double expected = 1024.0;
             double actual = Solution.myPow(x, n);
             assertEquals(expected, actual);

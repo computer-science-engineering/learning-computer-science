@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(6);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(4, 5, 6, 1, 2, 3);
             ListNode result = Solution.rotate(head, 3);
             List<Integer> actual = new ArrayList<>();
@@ -58,7 +58,7 @@ public class SolutionTest {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(3, 4, 5, 1, 2);
             ListNode result = Solution.rotate(head, 8);
             List<Integer> actual = new ArrayList<>();

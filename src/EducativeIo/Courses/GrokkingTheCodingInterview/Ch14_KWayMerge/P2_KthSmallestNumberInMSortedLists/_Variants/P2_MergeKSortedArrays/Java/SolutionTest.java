@@ -27,7 +27,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -42,7 +42,7 @@ public class SolutionTest {
         lists.add(l1);
         lists.add(l2);
         lists.add(l3);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(1, 2, 3, 3, 4, 6, 6, 7, 8);
             List<Integer> actual = Solution.merge(lists);
             assertEquals(expected, actual);

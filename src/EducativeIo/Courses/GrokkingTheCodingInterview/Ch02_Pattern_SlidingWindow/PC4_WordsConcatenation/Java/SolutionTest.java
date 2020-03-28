@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String str = "catfoxcat";
         String[] words = new String[] {"cat", "fox"};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(0, 3);
             List<Integer> actual = Solution.findWordConcatenation(str, words);
             assertEquals(expected, actual);
@@ -45,7 +45,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String str = "catcatfoxfox";
         String[] words = new String[] {"cat", "fox"};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(3);
             List<Integer> actual = Solution.findWordConcatenation(str, words);
             assertEquals(expected, actual);

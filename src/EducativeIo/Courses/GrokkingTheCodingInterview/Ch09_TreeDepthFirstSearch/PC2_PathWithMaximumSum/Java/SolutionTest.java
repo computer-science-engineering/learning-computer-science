@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 6;
             int actual = Solution.findMaximumPathSum(root);
             assertEquals(expected, actual);
@@ -53,7 +53,7 @@ public class SolutionTest {
         root.right.left.left = new TreeNode(7);
         root.right.left.right = new TreeNode(8);
         root.right.right.left = new TreeNode(9);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 31;
             int actual = Solution.findMaximumPathSum(root);
             assertEquals(expected, actual);
@@ -64,7 +64,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         TreeNode root = new TreeNode(-1);
         root.left = new TreeNode(-3);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = -1;
             int actual = Solution.findMaximumPathSum(root);
             assertEquals(expected, actual);

@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 200;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String actual = Solution.findDigitsInBinary(input);
             String expected = "11001000";
             assertEquals(expected, actual);
@@ -42,7 +42,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         int input = 0;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String actual = Solution.findDigitsInBinary(input);
             String expected = "0";
             assertEquals(expected, actual);

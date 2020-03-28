@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         root.left.right = new TreeNode(2);
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Double> expected = Arrays.asList(12.0, 4.0, 6.5);
             List<Double> actual = Solution.findLevelAverages(root);
             assertEquals(expected, actual);

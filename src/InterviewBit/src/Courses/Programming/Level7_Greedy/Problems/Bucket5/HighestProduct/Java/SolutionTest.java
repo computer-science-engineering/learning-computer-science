@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         ArrayList<Integer> A = new ArrayList<Integer>(Arrays.asList(0, -1, 3, 100, 70, 50));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 350000;
             int actual = Solution.maxp3(A);
             assertEquals(expected, actual);

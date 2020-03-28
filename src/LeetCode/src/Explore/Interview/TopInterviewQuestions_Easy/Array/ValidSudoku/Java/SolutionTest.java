@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -43,7 +43,7 @@ public class SolutionTest {
             {'.','.','.','4','1','9','.','.','5'},
             {'.','.','.','.','8','.','.','7','9'}
         };
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual1 = Solution.isValidSudoku(board);
             boolean actual2 = Solution.isValidSudoku_threeHashSets(board);
@@ -66,7 +66,7 @@ public class SolutionTest {
             {'.','.','.','4','1','9','.','.','5'},
             {'.','.','.','.','8','.','.','7','9'}
         };
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual1 = Solution.isValidSudoku(board);
             boolean actual2 = Solution.isValidSudoku_threeHashSets(board);

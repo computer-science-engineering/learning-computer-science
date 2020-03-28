@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         TreeNode b2 = new TreeNode(3);
         a.left = b1;
         a.right = b2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 0;
             int actual = Solution.isValidBST(a);
             assertEquals(expected, actual);
@@ -50,7 +50,7 @@ public class SolutionTest {
         TreeNode b2 = new TreeNode(3);
         a.left = b1;
         a.right = b2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 1;
             int actual = Solution.isValidBST(a);
             assertEquals(expected, actual);

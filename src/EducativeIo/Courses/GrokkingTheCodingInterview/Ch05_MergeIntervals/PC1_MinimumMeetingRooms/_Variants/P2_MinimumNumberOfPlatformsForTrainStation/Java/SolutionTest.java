@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
         Interval intervals[] = new Interval[] {new Interval(900, 910), new Interval(940, 1200),
                 new Interval(950, 1120), new Interval(1100, 1130), new Interval(1500, 1900),
                 new Interval(1800, 2000)};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 3;
             int actual = Solution.findMinNumberOfPlatforms(intervals);
             assertEquals(expected, actual);

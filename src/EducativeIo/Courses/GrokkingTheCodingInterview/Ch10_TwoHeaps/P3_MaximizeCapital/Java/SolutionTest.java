@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest {
         int[] profits = new int[] {1, 2, 3};
         int numberOfProjects = 2;
         int initialCapital = 1;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 6;
             int actual =
                     Solution.findMaximumCapital(capital, profits, numberOfProjects, initialCapital);
@@ -49,7 +49,7 @@ public class SolutionTest {
         int[] profits = new int[] {1, 2, 3, 5};
         int numberOfProjects = 3;
         int initialCapital = 0;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 8;
             int actual =
                     Solution.findMaximumCapital(capital, profits, numberOfProjects, initialCapital);

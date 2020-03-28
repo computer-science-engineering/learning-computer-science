@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String s = "ab", t = "acb";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isOneEditDistance(s, t);
             assertEquals(expected, actual);
@@ -42,7 +42,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String s = "cab", t = "ad";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.isOneEditDistance(s, t);
             assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         String s = "1203", t = "1213";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isOneEditDistance(s, t);
             assertEquals(expected, actual);

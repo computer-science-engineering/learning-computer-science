@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -31,7 +31,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] arr = new int[] {1, 2, -1, 2, 2};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.loopExists(arr);
             assertEquals(expected, actual);
@@ -41,7 +41,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[] arr = new int[] {2, 2, -1, 2};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.loopExists(arr);
             assertEquals(expected, actual);
@@ -51,7 +51,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         int[] arr = new int[] {2, 1, -1, -2};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.loopExists(arr);
             assertEquals(expected, actual);

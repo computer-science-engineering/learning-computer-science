@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         UndirectedGraphNode c = new UndirectedGraphNode(3);
         a.neighbors.add(b);
         a.neighbors.add(c);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
             UndirectedGraphNode clone = Solution.cloneGraph(a);
             ArrayList<Integer> actual = Solution.dfs(clone);

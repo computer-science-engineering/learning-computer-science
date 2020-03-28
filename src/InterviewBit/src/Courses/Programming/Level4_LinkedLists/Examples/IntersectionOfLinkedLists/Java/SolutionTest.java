@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -44,7 +44,7 @@ public class SolutionTest {
         b2.next = b3;
         b3.next = c1;
         c1.next = c2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 6;
             int actual = Solution.getIntersectionNode(a1, b1).val;
             assertEquals(expected, actual);
@@ -68,7 +68,7 @@ public class SolutionTest {
         b3.next = c1;
         c1.next = c2;
         c2.next = c3;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 8;
             int actual = Solution.getIntersectionNode(a1, b1).val;
             assertEquals(expected, actual);

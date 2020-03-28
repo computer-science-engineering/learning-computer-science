@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         TreeNode B2 = new TreeNode(20);
         A.left = B1;
         A.right = B2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 1;
             int actual = Solution.t2Sum(A, 19);
             assertEquals(expected, actual);
@@ -50,7 +50,7 @@ public class SolutionTest {
         TreeNode B2 = new TreeNode(20);
         A.left = B1;
         A.right = B2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 0;
             int actual = Solution.t2Sum(A, 40);
             assertEquals(expected, actual);

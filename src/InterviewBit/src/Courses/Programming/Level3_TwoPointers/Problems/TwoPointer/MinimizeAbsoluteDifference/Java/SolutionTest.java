@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         int[] A = {1, 4, 5, 8, 10}; 
         int[] B = {6, 9, 15};
         int[] C = {2, 3, 6, 6};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 1;
             int actual = Solution.solve(A, B, C);
             assertEquals(expected, actual);

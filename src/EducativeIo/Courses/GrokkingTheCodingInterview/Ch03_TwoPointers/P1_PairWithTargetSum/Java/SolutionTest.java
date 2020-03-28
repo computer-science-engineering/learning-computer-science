@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] arr = new int[] {1, 2, 3, 4, 6};
         int targetSum = 6;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = new int[] {1, 3};
             int[] actual_TwoPointers = Solution.search_TwoPointers(arr, targetSum);
             int[] actual_TwoPointers_IntOverflowFix =
@@ -48,7 +48,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] arr = new int[] {2, 5, 9, 11};
         int targetSum = 11;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = new int[] {0, 2};
             int[] actual_TwoPointers = Solution.search_TwoPointers(arr, targetSum);
             int[] actual_TwoPointers_IntOverflowFix =

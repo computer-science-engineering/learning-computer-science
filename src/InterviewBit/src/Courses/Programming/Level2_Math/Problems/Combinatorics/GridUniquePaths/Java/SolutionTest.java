@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -31,7 +31,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 2;
             int actual = Solution.uniquePaths(2, 2);
             assertEquals(expected, actual);
@@ -40,7 +40,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase2() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 6;
             int actual = Solution.uniquePaths(3, 3);
             assertEquals(expected, actual);
@@ -49,7 +49,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase3() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 20;
             int actual = Solution.uniquePaths(4, 4);
             assertEquals(expected, actual);
@@ -58,7 +58,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase4() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 319770;
             int actual = Solution.uniquePaths(15, 9);
             assertEquals(expected, actual);
@@ -67,7 +67,7 @@ public class SolutionTest {
 
     @Test
     public void TrivialCase5() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 10400600;
             int actual = Solution.uniquePaths(14, 14);
             assertEquals(expected, actual);

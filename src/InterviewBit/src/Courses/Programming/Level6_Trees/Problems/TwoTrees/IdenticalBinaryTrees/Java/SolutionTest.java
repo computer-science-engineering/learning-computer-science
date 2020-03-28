@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         TreeNode B2 = new TreeNode(3);
         A.left = B1;
         A.right = B2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 1;
             int actual = Solution.isSameTree(A, A);
             assertEquals(expected, actual);
@@ -56,7 +56,7 @@ public class SolutionTest {
         TreeNode c = new TreeNode(1);
         a.left = b;
         b.left = c;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 0;
             int actual = Solution.isSameTree(A,a);
             assertEquals(expected, actual);

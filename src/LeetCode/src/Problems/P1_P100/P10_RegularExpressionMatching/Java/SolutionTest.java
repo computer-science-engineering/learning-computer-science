@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String s = "";
         String p = "a*";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isMatch(s, p);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String s = "aa";
         String p = "a";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.isMatch(s, p);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         String s = "aa";
         String p = "a*";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isMatch(s, p);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         String s = "ab";
         String p = ".*";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isMatch(s, p);
             assertEquals(expected, actual);
@@ -77,7 +77,7 @@ public class SolutionTest {
     public void TrivialCase5() {
         String s = "aab";
         String p = "c*a*b";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isMatch(s, p);
             assertEquals(expected, actual);
@@ -88,7 +88,7 @@ public class SolutionTest {
     public void TrivialCase6() {
         String s = "mississippi";
         String p = "mis*is*p*.";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.isMatch(s, p);
             assertEquals(expected, actual);

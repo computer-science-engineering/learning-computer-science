@@ -24,7 +24,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         ArrayList<Integer> nums1 = new ArrayList<Integer>(Arrays.asList(1, 0, -1, 0, -2, 2));
         int[] nums2 = {1, 0, -1, 0, -2, 2};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<ArrayList<Integer>> expected1 = new ArrayList<ArrayList<Integer>>();
             expected1.add(new ArrayList<Integer>(Arrays.asList(-2, -1, 1, 2)));
             expected1.add(new ArrayList<Integer>(Arrays.asList(-2, 0, 0, 2)));

@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String message = "red green blue";
         String code = "abc";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.doesMappingExist(message, code);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String message = "red green blue";
         String code = "abb";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.doesMappingExist(message, code);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         String message = "red blue blue";
         String code = "abb";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.doesMappingExist(message, code);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         String message = "red blue red";
         String code = "abaa";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.doesMappingExist(message, code);
             assertEquals(expected, actual);
@@ -77,7 +77,7 @@ public class SolutionTest {
     public void TrivialCase5() {
         String message = "red blue red";
         String code = "abaa";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.doesMappingExist(message, code);
             assertEquals(expected, actual);

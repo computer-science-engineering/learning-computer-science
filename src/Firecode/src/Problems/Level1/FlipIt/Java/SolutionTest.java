@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[][] matrix = {{1,2,3}, {4,5,6}, {7,8,9}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[][] expected = {{3,2,1},{6,5,4},{9,8,7}};
             Solution.flipItVerticalAxis(matrix);;
             assertArrayEquals(expected, matrix);
@@ -42,7 +42,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[][] matrix = {{1,0,0}, {0,0,1}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[][] expected = {{0,0,1},{1,0,0}};
             Solution.flipItVerticalAxis(matrix);;
             assertArrayEquals(expected, matrix);
@@ -52,7 +52,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         int[][] matrix = {{1,0,1}, {1,0,1}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[][] expected = {{1,0,1}, {1,0,1}};
             Solution.flipItVerticalAxis(matrix);;
             assertArrayEquals(expected, matrix);
@@ -62,7 +62,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase2() {
         int[][] matrix = {{1,0}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[][] expected = {{0,1}};
             Solution.flipItVerticalAxis(matrix);;
             assertArrayEquals(expected, matrix);
@@ -72,7 +72,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase3() {
         int[][] matrix = {{1}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[][] expected = {{1}};
             Solution.flipItVerticalAxis(matrix);;
             assertArrayEquals(expected, matrix);

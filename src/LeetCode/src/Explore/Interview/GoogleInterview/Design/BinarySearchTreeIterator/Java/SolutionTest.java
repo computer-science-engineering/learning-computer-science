@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
             11, -1, 13, 4,
             7, 2, -1, -1, -1, -1, 5, 1};            
         TreeNode root = TreeNode.fromArray(values);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = {7, 11, 2, 4, 5, 13, 8, 5, 4, 1};
             int[] actual  = new int[expected.length];
             BstIterator i = new BstIterator(root);

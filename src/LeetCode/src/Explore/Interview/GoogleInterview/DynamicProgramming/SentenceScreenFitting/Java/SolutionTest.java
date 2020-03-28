@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {        
         String[] sentence = {"a", "bcd", "e"};
         int rows = 3, cols = 6;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 2;
             int actual = Solution.wordsTyping(sentence, rows, cols);
             int actual_opt = Solution.wordsTyping_opt(sentence, rows, cols);

@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] values = {12, 7, 1, 9, -1, 10, 5};
         TreeNode root = TreeNode.fromArray(values);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected =
                     Arrays.asList(Arrays.asList(12), Arrays.asList(7, 1), Arrays.asList(9, 10, 5));
             List<List<Integer>> actual = Solution.traverse(root);

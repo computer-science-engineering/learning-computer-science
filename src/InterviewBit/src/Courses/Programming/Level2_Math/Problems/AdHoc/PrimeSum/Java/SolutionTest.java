@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int input = 10;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(3, 7));
             ArrayList<Integer> actual = Solution.primeSum(input);
             assertEquals(expected, actual);

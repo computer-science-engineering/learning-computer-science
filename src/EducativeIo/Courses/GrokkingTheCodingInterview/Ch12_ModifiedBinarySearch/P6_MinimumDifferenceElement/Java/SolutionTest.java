@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] arr = new int[] {4, 6, 10};
         int key = 7;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 6;
             int actual = Solution.searchMinDiffElement(arr, key);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] arr = new int[] {4, 6, 10};
         int key = 4;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 4;
             int actual = Solution.searchMinDiffElement(arr, key);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         int[] arr = new int[] {1, 3, 8, 10, 15};
         int key = 12;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 10;
             int actual = Solution.searchMinDiffElement(arr, key);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         int[] arr = new int[] {4, 6, 10};
         int key = 17;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 10;
             int actual = Solution.searchMinDiffElement(arr, key);
             assertEquals(expected, actual);

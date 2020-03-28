@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] arr = new int[] {-3, 0, 1, 2, -1, 1, -2};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(-3, 1, 2),
                     Arrays.asList(-2, 0, 2), Arrays.asList(-2, 1, 1), Arrays.asList(-1, 0, 1));
             List<List<Integer>> actual = Solution.searchTriplets(arr);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[] arr = new int[] {-5, 2, -1, -2, 3};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected =
                     Arrays.asList(Arrays.asList(-5, 2, 3), Arrays.asList(-2, -1, 3));
             List<List<Integer>> actual = Solution.searchTriplets(arr);

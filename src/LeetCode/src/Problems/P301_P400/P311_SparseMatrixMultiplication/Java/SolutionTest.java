@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[][] A = {{1, 0, 0}, {-1, 0, 3}};
         int[][] B = {{7, 0, 0}, {0, 0, 0}, {0, 0, 1}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[][] expected = {{7, 0, 0}, {-7, 0, 3}};
             int[][] actual = Solution.multiply(A, B);
             int[][] actual_opt = Solution.multiply_opt(A, B);

@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] nums = new int[] {2, 3, 1, 8, 2, 3, 5, 1};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(4, 6, 7);
             List<Integer> actual = Solution.findNumbers(nums);
             assertEquals(expected, actual);
@@ -43,7 +43,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[] nums = new int[] {2, 4, 1, 2};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(3);
             List<Integer> actual = Solution.findNumbers(nums);
             assertEquals(expected, actual);
@@ -53,7 +53,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         int[] nums = new int[] {2, 3, 2, 1};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(4);
             List<Integer> actual = Solution.findNumbers(nums);
             assertEquals(expected, actual);

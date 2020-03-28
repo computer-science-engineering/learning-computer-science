@@ -19,7 +19,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -28,7 +28,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         Solution solution = new Solution(2);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             solution.set(1, 10);
             solution.set(5, 12);
             assertEquals(12, solution.get(5));

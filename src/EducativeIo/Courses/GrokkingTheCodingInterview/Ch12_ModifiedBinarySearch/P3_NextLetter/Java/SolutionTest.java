@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         char[] letters = new char[] {'a', 'c', 'f', 'h'};
         char key = 'f';
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             char expected = 'h';
             char actual = Solution.searchNextLetter(letters, key);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         char[] letters = new char[] {'a', 'c', 'f', 'h'};
         char key = 'b';
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             char expected = 'c';
             char actual = Solution.searchNextLetter(letters, key);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         char[] letters = new char[] {'a', 'c', 'f', 'h'};
         char key = 'm';
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             char expected = 'a';
             char actual = Solution.searchNextLetter(letters, key);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         char[] letters = new char[] {'a', 'c', 'f', 'h'};
         char key = 'h';
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             char expected = 'a';
             char actual = Solution.searchNextLetter(letters, key);
             assertEquals(expected, actual);
