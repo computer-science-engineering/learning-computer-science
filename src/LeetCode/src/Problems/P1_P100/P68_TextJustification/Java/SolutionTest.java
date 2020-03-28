@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String[] input = {"This", "is", "an", "example", "of", "text", "justification."};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<String> expected = Arrays.asList("This    is    an",  "example  of text", "justification.  ");
             List<String> actual = Solution.fullJustify(input, 16);;
             assertEquals(expected, actual);
@@ -45,7 +45,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String[] input = {"What", "must", "be", "shall", "be."};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<String> expected = Arrays.asList("What must be", "shall be.   ");
             List<String> actual = Solution.fullJustify(input, 12);;
             assertEquals(expected, actual);

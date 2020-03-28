@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         int[] nums = new int[] {1, 3, 12, 5, 15, 11};
         int k1 = 3;
         int k2 = 6;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 23;
             int actual1 = Solution.findSumOfElements(nums, k1, k2);
             assertEquals(expected, actual1);
@@ -48,7 +48,7 @@ public class SolutionTest {
         int[] nums = new int[] {3, 5, 8, 7};
         int k1 = 1;
         int k2 = 4;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 12;
             int actual1 = Solution.findSumOfElements(nums, k1, k2);
             assertEquals(expected, actual1);

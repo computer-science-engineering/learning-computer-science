@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -40,7 +40,7 @@ public class SolutionTest {
         a2.next = a3;
         a3.next = a4;
         a4.next = a5;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = {1, 5, 2, 4, 3};
             ListNode result = Solution.reorderList(a1);
             int[] actual = new int[5];
@@ -57,7 +57,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         ListNode a1 = new ListNode(1);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = {1};
             ListNode result = Solution.reorderList(a1);
             int[] actual = new int[1];

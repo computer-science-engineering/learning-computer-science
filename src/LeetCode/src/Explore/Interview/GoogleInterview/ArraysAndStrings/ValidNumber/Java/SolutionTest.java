@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String s = "0";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual1 = Solution.isNumber(s);
             boolean actual2 = Solution.isNumber2(s);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String s = " 0.1 ";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isNumber(s);
             boolean actual2 = Solution.isNumber2(s);
@@ -56,7 +56,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         String s = "abc";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.isNumber(s);
             boolean actual2 = Solution.isNumber2(s);
@@ -68,7 +68,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase4() {
         String s = "1 a";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.isNumber(s);
             boolean actual2 = Solution.isNumber2(s);
@@ -80,7 +80,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase5() {
         String s = "2e10";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.isNumber(s);
             boolean actual2 = Solution.isNumber2(s);

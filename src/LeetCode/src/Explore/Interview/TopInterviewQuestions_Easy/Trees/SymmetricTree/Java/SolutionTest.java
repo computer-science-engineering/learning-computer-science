@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
             2, 2,
             3, 4, 4, 3};
         TreeNode root = TreeNode.fromArray(values);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual_recursive = Solution.isSymmetric(root);
             assertEquals(expected, actual_recursive);
@@ -52,7 +52,7 @@ public class SolutionTest {
             2, 2,
             -1, 3, -1, 3};
         TreeNode root = TreeNode.fromArray(values);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual_recursive = Solution.isSymmetric(root);
             assertEquals(expected, actual_recursive);

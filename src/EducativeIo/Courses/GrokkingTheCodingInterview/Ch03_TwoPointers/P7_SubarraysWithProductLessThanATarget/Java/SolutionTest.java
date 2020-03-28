@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] arr = new int[] {2, 5, 3, 10};
         int target = 30;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(2), Arrays.asList(5),
                     Arrays.asList(2, 5), Arrays.asList(3), Arrays.asList(5, 3), Arrays.asList(10));
             List<List<Integer>> actual = Solution.findSubarrays(arr, target);
@@ -46,7 +46,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] arr = new int[] {8, 2, 6, 5};
         int target = 50;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(8), Arrays.asList(2),
                     Arrays.asList(8, 2), Arrays.asList(6), Arrays.asList(2, 6), Arrays.asList(5),
                     Arrays.asList(6, 5));

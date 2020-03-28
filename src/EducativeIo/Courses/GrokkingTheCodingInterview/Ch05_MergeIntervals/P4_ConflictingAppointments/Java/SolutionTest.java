@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -31,7 +31,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         Interval[] intervals = {new Interval(1, 4), new Interval(2, 5), new Interval(7, 9)};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.canAttendAllAppointments(intervals);
             assertEquals(expected, actual);
@@ -41,7 +41,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         Interval[] intervals = {new Interval(6, 7), new Interval(2, 4), new Interval(8, 12)};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.canAttendAllAppointments(intervals);
             assertEquals(expected, actual);
@@ -51,7 +51,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         Interval[] intervals = {new Interval(4, 5), new Interval(2, 3), new Interval(3, 6)};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.canAttendAllAppointments(intervals);
             assertEquals(expected, actual);

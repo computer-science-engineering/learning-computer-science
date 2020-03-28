@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -40,7 +40,7 @@ public class SolutionTest {
         a2.next = a3;
         a3.next = a4;
         a4.next = a5;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = {4, 5, 1, 2};
             ListNode result = Solution.removeNthFromEnd(a1, 2);
             int[] actual = new int[4];

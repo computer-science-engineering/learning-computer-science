@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int numCourses = 2;
         int[][] prerequisites = {{1,0}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual_bfs = Solution.canFinish_bfs(numCourses, prerequisites);
             boolean actual_dfs = Solution.canFinish_dfs(numCourses, prerequisites);
@@ -46,7 +46,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int numCourses = 2;
         int[][] prerequisites = {{1,0},{0,1}};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual_bfs = Solution.canFinish_bfs(numCourses, prerequisites);
             boolean actual_dfs = Solution.canFinish_dfs(numCourses, prerequisites);

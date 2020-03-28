@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] nums1 = {1, 3, 8, 9, 15};
         int[] nums2 = {7, 11, 19, 21, 18, 25};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             double expected = 11.0;
             double actual = Solution.findMedianSortedArrays(nums1, nums2);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] nums1 = {1, 3, 5};
         int[] nums2 = {2, 4, 6};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             double expected = 3.5;
             double actual = Solution.findMedianSortedArrays(nums1, nums2);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void SpecialCase1() {
         int[] nums1 = {2};
         int[] nums2 = {};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             double expected = 2.0;
             double actual = Solution.findMedianSortedArrays(nums1, nums2);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void SpecialCase2() {
         int[] nums1 = {1,2,3,5,6};
         int[] nums2 = {4};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             double expected = 3.5;
             double actual = Solution.findMedianSortedArrays(nums1, nums2);
             assertEquals(expected, actual);

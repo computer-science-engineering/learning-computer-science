@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String s = "loveleetcode";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 2;
             int actual1 = Solution.firstUniqChar(s);
             assertEquals(expected, actual1);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String s = "dogdog";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = -1;
             int actual = Solution.firstUniqChar(s);
             assertEquals(expected, actual);

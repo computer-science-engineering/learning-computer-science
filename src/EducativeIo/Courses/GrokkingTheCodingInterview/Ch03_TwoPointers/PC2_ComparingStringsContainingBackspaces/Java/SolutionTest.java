@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String str1 = "xy#z";
         String str2 = "xzz#";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.compare(str1, str2);
             boolean actual2 = Solution.compare2(str1, str2);
@@ -45,7 +45,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String str1 = "xy#z";
         String str2 = "xyz#";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.compare(str1, str2);
             boolean actual2 = Solution.compare2(str1, str2);
@@ -58,7 +58,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         String str1 = "xp#";
         String str2 = "xyz##";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.compare(str1, str2);
             boolean actual2 = Solution.compare2(str1, str2);
@@ -71,7 +71,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         String str1 = "xywrrmp";
         String str2 = "xywrrmu#p";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.compare(str1, str2);
             boolean actual2 = Solution.compare2(str1, str2);

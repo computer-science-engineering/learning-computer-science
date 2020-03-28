@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -40,7 +40,7 @@ public class SolutionTest {
         a1.next = a2;
         a2.next = a3;
         a3.next = a1;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(3,4,1,2));
             Node result = Solution.insert(a1, 2);
             ArrayList<Integer> actual = getList(result);

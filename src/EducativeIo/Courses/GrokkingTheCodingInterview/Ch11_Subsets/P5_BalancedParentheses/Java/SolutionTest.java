@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int num = 2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<String> expected = Arrays.asList("(())", "()()");
             List<String> actual1 = Solution.generateValidParentheses(num);
             assertEquals(expected, actual1);
@@ -46,7 +46,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int num = 3;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<String> expected = Arrays.asList("((()))", "(()())", "(())()", "()(())", "()()()");
             List<String> actual1 = Solution.generateValidParentheses(num);
             assertEquals(expected, actual1);

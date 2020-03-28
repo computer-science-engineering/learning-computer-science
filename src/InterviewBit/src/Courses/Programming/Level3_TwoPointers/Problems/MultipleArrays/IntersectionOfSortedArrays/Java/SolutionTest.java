@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] A = {1, 2, 3, 3, 4, 5, 6};
         int[] B = {3, 3, 5};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = {3, 3, 5};
             int[] actual = Solution.intersect(A, B);
             assertArrayEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] A = {1, 2, 3, 3, 4, 5, 6};
         int[] B = {3, 5};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int[] expected = {3, 5};
             int[] actual = Solution.intersect(A, B);
             assertArrayEquals(expected, actual);

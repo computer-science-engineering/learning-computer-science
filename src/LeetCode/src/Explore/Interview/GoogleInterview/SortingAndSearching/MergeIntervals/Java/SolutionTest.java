@@ -27,7 +27,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         input.add(new Interval(1, 3));
         input.add(new Interval(2, 5));
         input.add(new Interval(6, 9));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Interval> actual = Solution.merge(input);
             List<Interval> actual2 = Solution.merge2(input);
             List<Interval> expected = Arrays.asList(new Interval(1, 5), new Interval(6, 9));
@@ -67,7 +67,7 @@ public class SolutionTest {
         input.add(new Interval(8, 10));
         input.add(new Interval(12, 16));
         input.add(new Interval(4, 9));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Interval> actual = Solution.merge(input);
             List<Interval> actual2 = Solution.merge2(input);
             List<Interval> expected = Arrays.asList(new Interval(1, 2), new Interval(3, 10), new Interval(12, 16));
@@ -92,7 +92,7 @@ public class SolutionTest {
         input.add(new Interval(3, 6));
         input.add(new Interval(8, 10));
         input.add(new Interval(1, 2));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Interval> actual = Solution.merge(input);
             List<Interval> actual2 = Solution.merge2(input);
             List<Interval> expected = Arrays.asList(new Interval(1, 2), new Interval(3, 6), new Interval(8, 10));
@@ -117,7 +117,7 @@ public class SolutionTest {
         input.add(new Interval(1, 2));
         input.add(new Interval(3, 6));
         input.add(new Interval(8, 10));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Interval> actual = Solution.merge(input);
             List<Interval> actual2 = Solution.merge2(input);
             List<Interval> expected = Arrays.asList(new Interval(1, 2), new Interval(3, 6), new Interval(8, 10));
@@ -142,7 +142,7 @@ public class SolutionTest {
         input.add(new Interval(2, 3));
         input.add(new Interval(5, 6));
         input.add(new Interval(1, 10));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Interval> actual = Solution.merge(input);
             List<Interval> actual2 = Solution.merge2(input);
             List<Interval> expected = Arrays.asList(new Interval(1, 10));

@@ -26,7 +26,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         Point[] points = new Point[] {new Point(1, 3), new Point(3, 4), new Point(2, -1)};
         int k = 2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<Integer> expected = Arrays.asList(1, 3, 2, -1);
             List<Point> result = Solution.findClosestPoints(points, k);
             List<Integer> actual = new ArrayList<>();

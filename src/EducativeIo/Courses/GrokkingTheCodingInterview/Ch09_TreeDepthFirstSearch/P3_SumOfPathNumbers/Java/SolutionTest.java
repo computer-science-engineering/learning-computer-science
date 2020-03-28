@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         root.left.left = new TreeNode(1);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(5);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 332;
             int actual = Solution.findSumOfPathNumbers(root);
             assertEquals(expected, actual);

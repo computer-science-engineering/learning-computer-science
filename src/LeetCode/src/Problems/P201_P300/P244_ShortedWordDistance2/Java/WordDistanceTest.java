@@ -23,7 +23,7 @@ public class WordDistanceTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class WordDistanceTest {
         String[] words = {"practice", "makes", "perfect", "coding", "makes"};
         String word1 = "coding";
         String word2 = "practice";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 3;
             WordDistance obj = new WordDistance(words);
             int actual = obj.shortest(word1, word2);
@@ -49,7 +49,7 @@ public class WordDistanceTest {
         String[] words = {"practice", "makes", "perfect", "coding", "makes"};
         String word1 = "coding";
         String word2 = "makes";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 1;
             WordDistance obj = new WordDistance(words);
             int actual = obj.shortest(word1, word2);

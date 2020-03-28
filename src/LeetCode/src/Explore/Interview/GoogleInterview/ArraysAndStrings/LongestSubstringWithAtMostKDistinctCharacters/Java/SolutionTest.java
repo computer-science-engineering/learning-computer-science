@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String s = "eceba";
         int k = 2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 3;
             int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String s = "aa";
         int k = 1;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 2;
             int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void SpecialCase1() {
         String s = "aa";
         int k = 0;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 0;
             int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void SpecialCase2() {
         String s = "aba";
         int k = 1;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 1;
             int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);
@@ -77,7 +77,7 @@ public class SolutionTest {
     public void SpecialCase3() {
         String s = "aac";
         int k = 1;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 2;
             int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);
@@ -88,7 +88,7 @@ public class SolutionTest {
     public void SpecialCase4() {
         String s = "ababcbcbaaabbdef";
         int k = 2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 6;
             int actual = Solution.lengthOfLongestSubstringKDistinct(s, k);
             assertEquals(expected, actual);

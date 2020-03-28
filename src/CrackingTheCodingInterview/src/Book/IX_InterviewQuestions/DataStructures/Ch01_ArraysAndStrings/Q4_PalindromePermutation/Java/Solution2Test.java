@@ -23,7 +23,7 @@ public class Solution2Test {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution2.main(args));
         });
@@ -32,7 +32,7 @@ public class Solution2Test {
     @Test
     public void TrivialCase1() {
         String palindrome = "Rats live on no evil star";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             Boolean expected = true;
             Boolean actual = Solution2.isPermutationOfPalindrome(palindrome);
             assertEquals(expected, actual);
@@ -42,7 +42,7 @@ public class Solution2Test {
     @Test
     public void TrivialCase2() {
         String palindrome = "Zeus was deified, saw Suez";
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             Boolean expected = true;
             Boolean actual = Solution2.isPermutationOfPalindrome(palindrome);
             assertEquals(expected, actual);

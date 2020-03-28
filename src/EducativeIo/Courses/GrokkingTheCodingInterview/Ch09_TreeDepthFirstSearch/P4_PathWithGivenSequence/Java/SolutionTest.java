@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -38,7 +38,7 @@ public class SolutionTest {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(5);
         int[] sequence = new int[] {1, 0, 7};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.findPath(root, sequence);
             assertEquals(expected, actual);
@@ -54,7 +54,7 @@ public class SolutionTest {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(5);
         int[] sequence = new int[] {1, 1, 6};
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.findPath(root, sequence);
             assertEquals(expected, actual);

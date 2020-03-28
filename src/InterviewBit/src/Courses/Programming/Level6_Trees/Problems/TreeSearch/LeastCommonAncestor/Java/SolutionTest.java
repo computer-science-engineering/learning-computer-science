@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
             6, 2, 0, 8 ,
             -1, -1, 7, 4, -1, -1, -1, -1};
         TreeNode A = TreeNode.fromArray(values);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected1 = -1;
             int actual1 = Solution.lca(A, 5, 50);
             assertEquals(expected1, actual1);

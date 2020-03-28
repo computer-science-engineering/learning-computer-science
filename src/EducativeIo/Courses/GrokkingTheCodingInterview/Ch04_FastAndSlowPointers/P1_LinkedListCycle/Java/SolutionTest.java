@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(6);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = false;
             boolean actual = Solution.hasCycle(head);
             assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(6);
         head.next.next.next.next.next.next = head.next.next;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.hasCycle(head);
             assertEquals(expected, actual);
@@ -69,7 +69,7 @@ public class SolutionTest {
         head.next.next.next.next.next = new ListNode(6);
         head.next.next.next.next.next.next = head.next.next;
         head.next.next.next.next.next.next = head.next.next.next;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             boolean expected = true;
             boolean actual = Solution.hasCycle(head);
             assertEquals(expected, actual);

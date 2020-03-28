@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int weight = 1;
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 3, 2, 1));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 2, 3));;
             ArrayList<Integer> actual = Solution.removeDuplicates(weight, input);
             assertEquals(expected, actual);
@@ -47,7 +47,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int weight = 2;
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 3, 2, 1));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 3, 2));;
             ArrayList<Integer> actual = Solution.removeDuplicates(weight, input);
             assertEquals(expected, actual);
@@ -58,7 +58,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         int weight = 3;
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 3, 2, 1));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(3, 2, 1));;
             ArrayList<Integer> actual = Solution.removeDuplicates(weight, input);
             assertEquals(expected, actual);
@@ -69,7 +69,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         int weight = 3;
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 3, 2, 1, 2));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(3, 1, 2));;
             ArrayList<Integer> actual = Solution.removeDuplicates(weight, input);
             assertEquals(expected, actual);

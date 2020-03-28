@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] arr = new int[] { 2, 1, 5, 1, 3, 2 };
         int k = 3;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 9;
             int actual_naive = Solution.findMaxSumSubArray_naive(k, arr);
             int actual = Solution.findMaxSumSubArray(k, arr);
@@ -46,7 +46,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] arr = new int[] { 2, 3, 4, 1, 5 };
         int k = 2;
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 7;
             int actual_naive = Solution.findMaxSumSubArray_naive(k, arr);
             int actual = Solution.findMaxSumSubArray(k, arr);

@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         List<Integer> a = Arrays.asList(1, 4, 5);
         List<Integer> b = Arrays.asList(2, 3);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             double expected = 3.0;
             double actual1 = Solution.findMedianSortedArrays(a, b);
             double actual2 = Solution.findMedianSortedArrays2(a, b);

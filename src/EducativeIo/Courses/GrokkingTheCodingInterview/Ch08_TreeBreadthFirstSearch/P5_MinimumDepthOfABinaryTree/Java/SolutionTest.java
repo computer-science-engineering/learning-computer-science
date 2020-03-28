@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         root.right = new TreeNode(1);
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 2;
             int actual = Solution.findDepth(root);
             assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
         root.right.right = new TreeNode(5);
         root.left.left = new TreeNode(9);
         root.right.left.left = new TreeNode(11);
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             int expected = 3;
             int actual = Solution.findDepth(root);
             assertEquals(expected, actual);

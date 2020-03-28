@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         intervals.add(new Interval(1, 4));
         intervals.add(new Interval(2, 5));
         intervals.add(new Interval(7, 9));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(1, 5), Arrays.asList(7, 9));
             List<List<Integer>> actual = new ArrayList<>();
             List<Interval> result = Solution.merge(intervals);
@@ -54,7 +54,7 @@ public class SolutionTest {
         intervals.add(new Interval(6, 7));
         intervals.add(new Interval(2, 4));
         intervals.add(new Interval(5, 9));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(2, 4), Arrays.asList(5, 9));
             List<List<Integer>> actual = new ArrayList<>();
             List<Interval> result = Solution.merge(intervals);
@@ -71,7 +71,7 @@ public class SolutionTest {
         intervals.add(new Interval(1, 4));
         intervals.add(new Interval(2, 6));
         intervals.add(new Interval(3, 5));
-        assertTimeout(Duration.ofMillis(500), () -> {
+        assertTimeout(Duration.ofMillis(700), () -> {
             List<List<Integer>> expected = Arrays.asList(Arrays.asList(1, 6));
             List<List<Integer>> actual = new ArrayList<>();
             List<Interval> result = Solution.merge(intervals);
