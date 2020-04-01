@@ -383,5 +383,8 @@
   ],
   "editor.formatOnPaste": true,
   "markdown.extension.toc.githubCompatibility": true,
-  "python.linting.enabled": true
+  "python.linting.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
