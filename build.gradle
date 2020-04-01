@@ -30,6 +30,7 @@ ext.junitJupiterVersion  = '5.5.2'
 ext.log4jVersion         = '2.9.0'
 
 apply plugin: 'java'
+apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'com.github.kt3k.coveralls'
 
@@ -45,14 +46,29 @@ jacocoTestCoverageVerification {
     }
 }
 
+
+sourceCompatibility = JavaVersion.VERSION_14
+targetCompatibility = JavaVersion.VERSION_14
+
+compileJava {
+    options.compilerArgs += ["--enable-preview"]
+}
+
 compileTestJava {
-   sourceCompatibility = 14
-   targetCompatibility = 14
-   options.compilerArgs += ['-parameters', '-g']
+    options.compilerArgs += ['-parameters', '-g', '--enable-preview']
+}
+
+//Buildship doesn't use that hook (https://discuss.gradle.org/t/when-does-buildship-eclipse-customization-run/20781/2)
+//you need to run `gradle eclipse` separately
+eclipse.jdt.file.withProperties { props ->
+    props['org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures']= 'enabled'
+    props['org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures']= 'ignore'
 }
 
 // gradle support from JUnit5 team that we removed after gradle native support for JUnit5: http://junit.org/junit5/docs/current/user-guide/#running-tests-build-gradle
 test {
+    jvmArgs '--enable-preview'
+    
     // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html
     // Enable JUnit 5 (Gradle 4.6+).
     useJUnitPlatform {
