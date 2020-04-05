@@ -348,7 +348,6 @@
   ],
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
   "eslint.enable": true,
   "prettier.singleQuote": true,
   "python.testing.unittestEnabled": false,
