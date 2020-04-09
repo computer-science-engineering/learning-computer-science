@@ -40,4 +40,4 @@ Sorting the array will take O(N* logN. Overall `searchTriplet()` will take O(N *
 
 ### Space complexity
 
-The space complexity of the above algorithm will be O(N)O(N) which is required for sorting.
+The space complexity of the above algorithm will be O(N) which is required for sorting.
