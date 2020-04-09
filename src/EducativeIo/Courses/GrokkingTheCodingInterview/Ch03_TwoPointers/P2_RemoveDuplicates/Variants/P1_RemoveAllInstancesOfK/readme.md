@@ -30,4 +30,4 @@ The time complexity of the Two Pointers algorithm will be O(N), where ‘N’ is
 
 ### Space Complexity
 
-The Two Pointers algorithm runs in constant space O(1)O(1).
+The Two Pointers algorithm runs in constant space O(1).
