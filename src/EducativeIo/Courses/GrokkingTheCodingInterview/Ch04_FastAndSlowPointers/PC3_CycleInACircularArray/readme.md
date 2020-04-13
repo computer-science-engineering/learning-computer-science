@@ -40,4 +40,12 @@ This problem involves finding a cycle in the array and, as we know, the **Fast &
 1. As mentioned in the problem, the cycle should have more than one element. This means that when we move a pointer forward, if the pointer points to the same element after the move, we have a one-element cycle. Therefore, we can finish our cycle search for the current element.
 2. The other requirement mentioned in the problem is that the cycle should not contain both forward and backward movements. We will handle this by remembering the direction of each element while searching for the cycle. If the number is positive, the direction will be forward and if the number is negative, the direction will be backward. So whenever we move a pointer forward, if there is a change in the direction, we will finish our cycle search right there for the current element.
 
+### Time Complexity
+
+The above algorithm will have a time complexity of O(N^2) where ‘N’ is the number of elements in the array. This complexity is due to the fact that we are iterating all elements of the array and trying to find a cycle for each element.
+
+### Space Complexity
+
+The algorithm runs in constant space O(1).
+
 ## References
