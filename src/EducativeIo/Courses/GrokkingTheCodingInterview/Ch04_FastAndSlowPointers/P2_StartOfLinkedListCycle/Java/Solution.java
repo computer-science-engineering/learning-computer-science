@@ -26,11 +26,21 @@ public class Solution {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
-                cycleLength = CalculateLength(slow);
+                cycleLength = calculateLength(slow);
                 break;
             }
         }
         return findStart(head, cycleLength);
+    }
+
+    private static int calculateLength(ListNode start) {
+        int length = 0;
+        ListNode startPointer = start;
+        do {
+            start = start.next;
+            length++;
+        } while (start != startPointer);
+        return length;
     }
 
     private static ListNode findStart(ListNode head, int cycleLength) {
@@ -48,15 +58,5 @@ public class Solution {
         }
 
         return pointer1;
-    }
-
-    private static int CalculateLength(ListNode start) {
-        int length = 0;
-        ListNode startPointer = start;
-        do {
-            start = start.next;
-            length++;
-        } while (start != startPointer);
-        return length;
     }
 }
