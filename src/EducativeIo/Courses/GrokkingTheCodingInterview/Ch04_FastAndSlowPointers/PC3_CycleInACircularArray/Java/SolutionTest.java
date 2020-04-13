@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch04_FastAndSlowPointers.PC4_CycleInACircularArray.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch04_FastAndSlowPointers.PC3_CycleInACircularArray.Java;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
