@@ -48,4 +48,8 @@ The above algorithm will have a time complexity of O(N^2) where ‘N’ is the n
 
 The algorithm runs in constant space O(1).
 
+### An Alternate Approach
+
+In our algorithm, we don’t keep a record of all the numbers that have been evaluated for cycles. We know that all such numbers will not produce a cycle for any other instance as well. If we can remember all the numbers that have been visited, our algorithm will improve to O(N) as, then, each number will be evaluated for cycles only once. We can keep track of this by creating a separate array however the space complexity of our algorithm will increase to O(N).
+
 ## References
