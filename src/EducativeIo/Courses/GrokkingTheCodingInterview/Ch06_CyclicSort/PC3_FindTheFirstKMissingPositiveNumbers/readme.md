@@ -54,6 +54,6 @@ The time complexity of the above algorithm is O(n + k), as the last two `for` lo
 
 ### Space Complexity
 
-The algorithm needs O(k)O(k) space to store the `extraNumbers`.
+The algorithm needs O(k) space to store the `extraNumbers`.
 
 ## References
