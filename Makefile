@@ -1,23 +1,28 @@
-workspaceFolder := "./"
+workspaceFolder := 
+
+# https://gist.github.com/sighingnow/deee806603ec9274fd47
+ifneq ($(OS),Windows_NT)
+	workspaceFolder += ./
+endif
 
 #*****************
 # Java code tasks
 #*****************
 
 javadependencies:
-	./gradlew dependencies
+	${workspaceFolder}gradlew dependencies
 
 javabuild:
-	./gradlew build
+	${workspaceFolder}gradlew build
 
 javatest:
-	./gradlew test
+	${workspaceFolder}gradlew test
 
 javaclean:
-	./gradlew clean
+	${workspaceFolder}gradlew clean
 
 javatestcoverage:
-	./gradlew test jacocoJupTestReport
+	${workspaceFolder}gradlew test jacocoJupTestReport
 
 javacode: javadependencies javaclean javatestcoverage
 
@@ -26,7 +31,7 @@ javacode: javadependencies javaclean javatestcoverage
 #*****************
 
 xunittests:
-	python ${workspaceFolder}/scripts/run_xunit_tests.py
+	python ${workspaceFolder}scripts/run_xunit_tests.py
 
 csharpcode: xunittests
 
@@ -38,10 +43,10 @@ pythonrequirements:
 	pip install -r requirements.txt
 
 pythontests:
-	python ${workspaceFolder}/scripts/run_unit_tests.py
+	python ${workspaceFolder}scripts/run_unit_tests.py
 
 pythontestcoverage:
-	coverage run ${workspaceFolder}/scripts/run_unit_tests.py
+	coverage run ${workspaceFolder}scripts/run_unit_tests.py
 
 pythoncode: pythontestcoverage
 
@@ -50,7 +55,7 @@ pythoncode: pythontestcoverage
 #*****************
 
 createproblemslist:
-	python ${workspaceFolder}/scripts/create_problems_list.py
+	python ${workspaceFolder}scripts/create_problems_list.py
 
 #*****************
 # All tasks
