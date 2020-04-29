@@ -1,28 +1,30 @@
 workspaceFolder := 
+gradlewScript :=
 
 # https://gist.github.com/sighingnow/deee806603ec9274fd47
 ifneq ($(OS),Windows_NT)
 	workspaceFolder += ./
 endif
+	gradlewScript += .\gradlew.bat
 
 #*****************
 # Java code tasks
 #*****************
 
 javadependencies:
-	${workspaceFolder}gradlew dependencies
+	${workspaceFolder}${gradlewScript} dependencies
 
 javabuild:
-	${workspaceFolder}gradlew build
+	${workspaceFolder}${gradlewScript} build
 
 javatest:
-	${workspaceFolder}gradlew test
+	${workspaceFolder}${gradlewScript} test
 
 javaclean:
-	${workspaceFolder}gradlew clean
+	${workspaceFolder}${gradlewScript} clean
 
 javatestcoverage:
-	${workspaceFolder}gradlew test jacocoJupTestReport
+	${workspaceFolder}${gradlewScript} test jacocoJupTestReport
 
 javacode: javadependencies javaclean javatestcoverage
 

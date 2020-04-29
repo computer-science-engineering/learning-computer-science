@@ -1,4 +1,4 @@
-package EducativeIo.Courses.GrokkingTheCodingInterview.Ch08_TreeBreadthFirstSearch.P5_MinimumDepthOfABinaryTree._Variants.Java;
+package EducativeIo.Courses.GrokkingTheCodingInterview.Ch08_TreeBreadthFirstSearch.P5_MinimumDepthOfABinaryTree._Variants.P1_MaximumDepthOfABinaryTree.Java;
 
 import java.util.LinkedList;
 import java.util.Queue;
