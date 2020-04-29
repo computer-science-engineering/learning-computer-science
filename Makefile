@@ -5,8 +5,9 @@ gradlewScript :=
 ifneq ($(OS),Windows_NT)
 	workspaceFolder += ./
 	gradlewScript += gradlew
-endif
+else
 	gradlewScript += .\gradlew.bat
+endif
 
 #*****************
 # Java code tasks
