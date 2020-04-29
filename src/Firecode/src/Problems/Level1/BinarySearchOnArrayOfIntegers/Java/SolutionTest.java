@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] arr = {2,5,7,8,9,12};
         int n = 8;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         int[] arr = {2,5,7,9,12};
         int n = 8;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);
@@ -55,7 +55,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         int[] arr = {2,5,7,9,12};
         int n = 12;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         int[] arr = {2,5,7,9,12};
         int n = 2;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);
@@ -77,7 +77,7 @@ public class SolutionTest {
     public void SpecialCase1() {
         int[] arr = {2};
         int n = 4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);
@@ -88,7 +88,7 @@ public class SolutionTest {
     public void SpecialCase2() {
         int[] arr = {2};
         int n = 2;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);
@@ -99,7 +99,7 @@ public class SolutionTest {
     public void SpecialCase3() {
         int[] arr = {};
         int n = 4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = Solution.binarySearch(arr, n);
             assertEquals(expected, actual);

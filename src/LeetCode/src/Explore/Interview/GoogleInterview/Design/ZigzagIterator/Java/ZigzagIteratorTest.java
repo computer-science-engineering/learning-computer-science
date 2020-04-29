@@ -29,7 +29,7 @@ public class ZigzagIteratorTest {
     public void TrivialCase1() {
         List<Integer> v1 = Arrays.asList(1,2);
         List<Integer> v2 = Arrays.asList(3,4,5,6);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(1, 3, 2, 4, 5, 6);
             List<Integer> actual = new ArrayList<Integer>();
             ZigzagIterator i = new ZigzagIterator(v1, v2);
@@ -47,7 +47,7 @@ public class ZigzagIteratorTest {
         listOfLists.add(v1);
         listOfLists.add(v2);
         listOfLists.add(v3);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(1,4,8,2,5,9,3,6,7);
             List<Integer> actual = new ArrayList<Integer>();
             ZigzagIterator i = new ZigzagIterator(listOfLists);

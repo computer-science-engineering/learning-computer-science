@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         root.left.left = new TreeNode(4);
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(12, 1, 10);
             List<Integer> actual = Solution.findPath(root);
             assertEquals(expected, actual);

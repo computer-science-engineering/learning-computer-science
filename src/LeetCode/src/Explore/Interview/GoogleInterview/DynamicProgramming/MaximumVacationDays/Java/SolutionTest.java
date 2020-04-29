@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[][] flights = {{0,1,1},{1,0,1},{1,1,0}}, days = {{1,3,1},{6,0,3},{3,3,3}};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 12;
             int actual = Solution.maxVacationDays(flights, days);
             assertEquals(expected, actual);

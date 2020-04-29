@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -31,7 +31,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ListNode a1 = new ListNode(4);
             ListNode a2 = new ListNode(5);
             ListNode a3 = new ListNode(1);

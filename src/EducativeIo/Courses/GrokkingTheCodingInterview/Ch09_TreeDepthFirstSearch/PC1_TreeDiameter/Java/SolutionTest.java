@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         root.left.left = new TreeNode(4);
         root.right.left = new TreeNode(5);
         root.right.right = new TreeNode(6);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 5;
             int actual = Solution.findDiameter(root);
             assertEquals(expected, actual);
@@ -58,7 +58,7 @@ public class SolutionTest {
         root.right.right.left = new TreeNode(9);
         root.right.left.right.left = new TreeNode(10);
         root.right.right.left.left = new TreeNode(11);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 7;
             int actual = Solution.findDiameter(root);
             assertEquals(expected, actual);

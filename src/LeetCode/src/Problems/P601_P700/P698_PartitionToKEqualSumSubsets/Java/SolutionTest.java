@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] nums = {4, 3, 2, 3, 5, 2, 1};
         int k = 4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.canPartitionKSubsets(nums, k);
             assertEquals(expected, actual);

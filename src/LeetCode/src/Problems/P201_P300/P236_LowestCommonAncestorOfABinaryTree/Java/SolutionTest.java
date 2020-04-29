@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         TreeNode root = TreeNode.fromArray(values);
         int p = 5;        
         int q = 4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 5;
             int actual = Solution.lowestCommonAncestor(root, p, q).val;
             assertEquals(expected, actual);

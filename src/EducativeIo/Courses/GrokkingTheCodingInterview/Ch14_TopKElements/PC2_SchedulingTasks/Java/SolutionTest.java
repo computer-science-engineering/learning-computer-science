@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         char[] tasks = new char[] {'a', 'a', 'a', 'b', 'c', 'c'};
         int k = 2;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 7;
             int actual = Solution.scheduleTasks(tasks, k);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         char[] tasks = new char[] {'a', 'b', 'a'};
         int k = 3;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 5;
             int actual = Solution.scheduleTasks(tasks, k);
             assertEquals(expected, actual);

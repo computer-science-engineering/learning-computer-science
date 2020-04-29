@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -44,7 +44,7 @@ public class SolutionTest {
         B1.right = C2;
         B2.left = C3;
         B2.right = C4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 1;
             int actual = Solution.isSymmetric(A);
             assertEquals(expected, actual);
@@ -62,7 +62,7 @@ public class SolutionTest {
         M.right = N2;
         N1.right = O1;
         N2.right = O2;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 0;
             int actual = Solution.isSymmetric(M);
             assertEquals(expected, actual);

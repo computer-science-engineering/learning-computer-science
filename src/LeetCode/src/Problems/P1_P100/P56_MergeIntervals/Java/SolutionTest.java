@@ -27,7 +27,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -41,7 +41,7 @@ public class SolutionTest {
             new Interval(8,10),
             new Interval(15,18)
         );
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(1, 6, 8, 10, 15, 18);
             List<Interval> result = Solution.merge(intervals);
             List<Interval> result_opt = Solution.merge_opt(intervals);

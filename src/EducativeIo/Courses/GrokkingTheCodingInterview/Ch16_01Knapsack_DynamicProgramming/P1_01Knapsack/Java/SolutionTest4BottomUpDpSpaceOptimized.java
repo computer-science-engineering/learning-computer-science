@@ -24,7 +24,7 @@ public class SolutionTest4BottomUpDpSpaceOptimized {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution4BottomUpDpSpaceOptimized.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest4BottomUpDpSpaceOptimized {
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 7;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 22;
             int actual =
                     Solution4BottomUpDpSpaceOptimized.solveKnapsack(profits, weights, capacity);
@@ -48,7 +48,7 @@ public class SolutionTest4BottomUpDpSpaceOptimized {
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 6;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 17;
             int actual =
                     Solution4BottomUpDpSpaceOptimized.solveKnapsack(profits, weights, capacity);

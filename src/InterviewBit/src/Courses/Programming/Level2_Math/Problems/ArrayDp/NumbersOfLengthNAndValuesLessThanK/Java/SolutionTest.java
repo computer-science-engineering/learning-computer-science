@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         ArrayList<Integer> A = new ArrayList<Integer>(Arrays.asList(3, 0, 1, 5));
         int B = 1;
         int C = 2;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual1 = Solution.solve(A, B, C);
             assertEquals(expected, actual1);
@@ -51,7 +51,7 @@ public class SolutionTest {
     //     ArrayList<Integer> A = new ArrayList<Integer>(Arrays.asList(4, 0, 1, 2, 5));
     //     int B = 2;
     //     int C = 21;
-    //     assertTimeout(Duration.ofMillis(700), () -> {
+    //     assertTimeout(Duration.ofMillis(1000), () -> {
     //         int expected = 5;
     //         int actual = Solution.solve(A, B, C);
     //         assertEquals(expected, actual);

@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         Solution.addWord("bad");
         Solution.addWord("dad");
         Solution.addWord("mad");
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             Boolean expected1 = false;
             Boolean actual1 = Solution.search("pad");
             assertEquals(expected1, actual1);

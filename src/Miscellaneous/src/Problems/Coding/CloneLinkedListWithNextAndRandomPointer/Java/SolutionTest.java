@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -51,7 +51,7 @@ public class SolutionTest {
             list.head.next.next.next.next.next; 
         list.head.next.next.next.next.random = 
             list.head.next; 
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expectedData = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
             ArrayList<Integer> expectedRandomData = new ArrayList<Integer>(Arrays.asList(3, 4, 5, -1, 2));
             // Making a clone of the original linked list. 

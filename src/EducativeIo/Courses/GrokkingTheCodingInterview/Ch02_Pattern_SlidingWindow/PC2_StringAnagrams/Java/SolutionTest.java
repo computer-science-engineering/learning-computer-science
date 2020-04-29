@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String str = "ppqp";
         String pattern = "pq";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(1, 2);
             List<Integer> actual = Solution.findStringAnagrams(str, pattern);
             assertEquals(expected, actual);
@@ -47,7 +47,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String str = "abbcabc";
         String pattern = "abc";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(2, 3, 4);
             List<Integer> actual = Solution.findStringAnagrams(str, pattern);
             assertEquals(expected, actual);

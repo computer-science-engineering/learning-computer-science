@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String A = "catsanddog";
         ArrayList<String> B = new ArrayList<String>(Arrays.asList("cat", "cats", "and", "sand", "dog"));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<String> expected = new ArrayList<String>(Arrays.asList("cat sand dog", "cats and dog"));
             ArrayList<String> actual = Solution.wordBreak(A, B);
             assertEquals(expected, actual);

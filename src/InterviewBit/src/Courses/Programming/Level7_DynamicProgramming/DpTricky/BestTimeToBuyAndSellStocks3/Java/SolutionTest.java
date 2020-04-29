@@ -27,7 +27,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         int[] A = {1, 2, 1, 2};
         List<Integer> a = Arrays.stream(A).boxed().collect(Collectors.toList());
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual = Solution.maxProfit(A);
             assertEquals(expected, actual);

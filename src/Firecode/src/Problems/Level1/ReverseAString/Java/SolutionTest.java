@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String input = "abcd";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "dcba";
             String actual = Solution.reverseString(input);
             assertEquals(expected, actual);
@@ -42,7 +42,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         String input = "a";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "a";
             String actual = Solution.reverseString(input);
             assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase2() {
         String input = "";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "";
             String actual = Solution.reverseString(input);
             assertEquals(expected, actual);
@@ -62,7 +62,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase3() {
         String input = null;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = null;
             String actual = Solution.reverseString(input);
             assertEquals(expected, actual);

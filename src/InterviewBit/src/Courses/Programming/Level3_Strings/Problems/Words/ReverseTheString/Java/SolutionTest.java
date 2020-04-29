@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String input = "the sky is blue";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "blue is sky the";
             String actual = Solution.reverseWords(input);
             assertEquals(expected, actual);

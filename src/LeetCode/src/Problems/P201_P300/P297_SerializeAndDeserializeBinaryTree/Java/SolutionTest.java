@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
             4, 8,
             11, -1, 13, 4,
             7, 2, -1, -1, -1, -1, 5, 1};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expectedString = "5,4,11,7,X,X,2,X,X,X,8,13,X,X,4,5,X,X,1,X,X,";            
             String actual = Solution.serialize(TreeNode.fromArray(values));
             TreeNode deserializedNode = Solution.deserialize(actual);

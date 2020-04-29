@@ -24,7 +24,7 @@ public class SolutionTest3BottomUpDp {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution3BottomUpDp.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest3BottomUpDp {
     public void TrivialCase1() {
         int[] num = {1, 2, 3, 4};
         Solution3BottomUpDp ps = new Solution3BottomUpDp();
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = ps.canPartition(num);
             assertEquals(expected, actual);
@@ -45,7 +45,7 @@ public class SolutionTest3BottomUpDp {
     public void TrivialCase2() {
         int[] num = {1, 1, 3, 4, 7};
         Solution3BottomUpDp ps = new Solution3BottomUpDp();
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = ps.canPartition(num);
             assertEquals(expected, actual);
@@ -56,7 +56,7 @@ public class SolutionTest3BottomUpDp {
     public void TrivialCase3() {
         int[] num = {2, 3, 4, 6};
         Solution3BottomUpDp ps = new Solution3BottomUpDp();
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = ps.canPartition(num);
             assertEquals(expected, actual);

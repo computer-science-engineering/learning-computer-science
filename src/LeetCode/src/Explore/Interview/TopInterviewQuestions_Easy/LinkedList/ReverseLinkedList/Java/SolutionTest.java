@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -45,7 +45,7 @@ public class SolutionTest {
         b1.next = b2;
         b2.next = b3;
         b3.next = b4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int[] expected = {3, 5, 8, 1};
             
             ListNode result_iter = Solution.reverseList(a1);

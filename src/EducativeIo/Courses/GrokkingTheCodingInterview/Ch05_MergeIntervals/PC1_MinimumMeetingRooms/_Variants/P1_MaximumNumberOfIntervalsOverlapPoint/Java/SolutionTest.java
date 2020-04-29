@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         Interval intervals[] = new Interval[] {new Interval(1, 4), new Interval(2, 5),
                 new Interval(9, 12), new Interval(5, 9), new Interval(5, 12)};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 5;
             int actual = Solution.findMaxOverlapPoint(intervals);
             assertEquals(expected, actual);

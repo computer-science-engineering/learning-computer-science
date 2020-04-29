@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         String word = "BAT";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<String> expected =
                     Arrays.asList("3", "2T", "1A1", "1AT", "B2", "B1T", "BA1", "BAT");
             List<String> actual1 = Solution.generateGeneralizedAbbreviation(word);
@@ -47,7 +47,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         String word = "code";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<String> expected = Arrays.asList("4", "3e", "2d1", "2de", "1o2", "1o1e", "1od1",
                     "1ode", "c3", "c2e", "c1d1", "c1de", "co2", "co1e", "cod1", "code");
             List<String> actual1 = Solution.generateGeneralizedAbbreviation(word);

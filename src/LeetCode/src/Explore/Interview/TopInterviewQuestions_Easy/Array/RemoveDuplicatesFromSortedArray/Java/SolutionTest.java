@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] nums  = {0,0,1,1,1,2,2,3,3,4};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 5;
             int actual = Solution.removeDuplicates(nums);
             assertEquals(expected, actual);

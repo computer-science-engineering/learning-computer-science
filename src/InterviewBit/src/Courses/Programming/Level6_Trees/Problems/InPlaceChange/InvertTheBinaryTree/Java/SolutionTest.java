@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -47,7 +47,7 @@ public class SolutionTest {
         b1.right = c2;
         b2.left = c3;
         b2.right = c4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             TreeNode x = new TreeNode(1);
 
             TreeNode y1 = new TreeNode(3);

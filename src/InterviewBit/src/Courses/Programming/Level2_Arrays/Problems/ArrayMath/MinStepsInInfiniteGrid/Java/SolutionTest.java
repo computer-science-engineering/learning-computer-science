@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -43,7 +43,7 @@ public class SolutionTest {
         Y.add(5);
         Y.add(3);
         Y.add(8);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 12;
             int actual = Solution.coverPoints(X, Y);
             assertEquals(expected, actual);

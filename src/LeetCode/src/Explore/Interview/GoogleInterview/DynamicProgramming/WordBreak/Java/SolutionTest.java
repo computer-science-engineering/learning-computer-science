@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String s = "applepenapple";
         List<String> wordDict = Arrays.asList("apple", "pen");
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.wordBreak(s, wordDict);
             assertEquals(expected, actual);
@@ -47,7 +47,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String s = "leetcode";
         List<String> wordDict = Arrays.asList("leet", "code");
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.wordBreak(s, wordDict);
             assertEquals(expected, actual);
@@ -58,7 +58,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         String s = "catsandog";
         List<String> wordDict = Arrays.asList("cats", "dog", "sand", "and", "cat");
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = Solution.wordBreak(s, wordDict);
             assertEquals(expected, actual);

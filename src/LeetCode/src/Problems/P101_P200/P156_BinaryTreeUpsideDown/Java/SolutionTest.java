@@ -27,7 +27,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -41,7 +41,7 @@ public class SolutionTest {
             4, 5, -1, -1};
         TreeNode root1 = TreeNode.fromArray(values);
         TreeNode root2 = TreeNode.fromArray(values);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<List<Integer>> expected = Arrays.asList(
                 Arrays.asList(4),
                 Arrays.asList(5, 2),

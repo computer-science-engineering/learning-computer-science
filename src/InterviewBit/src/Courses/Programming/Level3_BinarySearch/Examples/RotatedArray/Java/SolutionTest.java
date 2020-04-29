@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         List<Integer> input = Arrays.asList(4, 5, 6, 7, 0, 1, 2);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 0;
             int actual = Solution.findMin(input);
             assertEquals(expected, actual);

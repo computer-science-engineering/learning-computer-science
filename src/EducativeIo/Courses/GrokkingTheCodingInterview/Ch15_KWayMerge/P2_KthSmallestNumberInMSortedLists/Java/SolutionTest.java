@@ -26,7 +26,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -42,7 +42,7 @@ public class SolutionTest {
         lists.add(l2);
         lists.add(l3);
         int k = 5;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 4;
             int actual = Solution.findKthSmallest(lists, k);
             assertEquals(expected, actual);

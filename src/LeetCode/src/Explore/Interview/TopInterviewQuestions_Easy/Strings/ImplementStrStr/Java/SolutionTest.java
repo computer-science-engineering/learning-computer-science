@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -33,7 +33,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         String haystack = "hello";
         String needle = "ll";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual = Solution.strStr(haystack, needle);
             assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         String haystack = "aaaaa";
         String needle = "bba";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = -1;
             int actual = Solution.strStr(haystack, needle);
             assertEquals(expected, actual);

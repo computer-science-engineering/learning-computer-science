@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -39,7 +39,7 @@ public class SolutionTest {
         ListNode c = new ListNode(3);
         a.next = b;
         b.next = c;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2, 1, 3));
             TreeNode result = Solution.sortedListToBST(a);
             ArrayList<Integer> actual = Solution.levelOrder(result);

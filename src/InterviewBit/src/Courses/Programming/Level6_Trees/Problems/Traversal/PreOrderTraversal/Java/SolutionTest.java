@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -40,7 +40,7 @@ public class SolutionTest {
 
         a.right = b;
         b.left = c;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
             ArrayList<Integer> actual = Solution.preorderTraversal(a);
             assertEquals(expected, actual);
