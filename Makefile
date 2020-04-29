@@ -1,12 +1,12 @@
-workspaceFolder := 
+workspaceFolder :=
 gradlewScript :=
 
 # https://gist.github.com/sighingnow/deee806603ec9274fd47
 ifneq ($(OS),Windows_NT)
-	workspaceFolder += ./
-	gradlewScript += gradlew
+	workspaceFolder = ./
+	gradlewScript = gradlew
 else
-	gradlewScript += .\gradlew.bat
+	gradlewScript = .\gradlew.bat
 endif
 
 #*****************
