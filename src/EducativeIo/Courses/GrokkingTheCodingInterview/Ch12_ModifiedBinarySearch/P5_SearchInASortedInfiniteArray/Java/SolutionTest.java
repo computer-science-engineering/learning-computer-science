@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         ArrayReader reader =
                 new ArrayReader(new int[] {4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30});
         int key = 16;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 6;
             int actual = Solution.search(reader, key);
             assertEquals(expected, actual);
@@ -46,7 +46,7 @@ public class SolutionTest {
         ArrayReader reader =
                 new ArrayReader(new int[] {4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30});
         int key = 11;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = -1;
             int actual = Solution.search(reader, key);
             assertEquals(expected, actual);
@@ -57,7 +57,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         ArrayReader reader = new ArrayReader(new int[] {1, 3, 8, 10, 15});
         int key = 15;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 4;
             int actual = Solution.search(reader, key);
             assertEquals(expected, actual);
@@ -68,7 +68,7 @@ public class SolutionTest {
     public void TrivialCase4() {
         ArrayReader reader = new ArrayReader(new int[] {1, 3, 8, 10, 15});
         int key = 200;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = -1;
             int actual = Solution.search(reader, key);
             assertEquals(expected, actual);

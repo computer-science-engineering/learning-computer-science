@@ -24,7 +24,7 @@ public class SolutionTest3BottomUpDp {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution3BottomUpDp.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest3BottomUpDp {
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 7;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 22;
             int actual = ks.solveKnapsack(profits, weights, capacity);
             assertEquals(expected, actual);
@@ -49,7 +49,7 @@ public class SolutionTest3BottomUpDp {
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int capacity = 6;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 17;
             int actual = ks.solveKnapsack(profits, weights, capacity);
             assertEquals(expected, actual);

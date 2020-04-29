@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         String[][] equations = {{"a", "b"}, {"b", "c"}};
         double[] values = {2.0, 3.0};
         String[][] queries = {{"a", "c"}, {"b", "a"}, {"a", "e"}, {"a", "a"}, {"x", "x"}};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Double> expected = new ArrayList<Double>((Arrays.asList(6.0, 0.5, -1.0, 1.0, -1.0)));
             double[] result = Solution.calcEquation(equations, values, queries);
             ArrayList<Double> actual = new ArrayList<Double>();

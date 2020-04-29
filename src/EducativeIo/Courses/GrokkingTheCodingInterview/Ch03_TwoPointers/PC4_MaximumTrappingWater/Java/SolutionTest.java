@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -31,7 +31,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] buildingHeights = new int[] {1, 3, 5, 4, 1};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 6;
             int actual = Solution.findMaxWater(buildingHeights);
             assertEquals(expected, actual);
@@ -41,7 +41,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[] buildingHeights = new int[] {3, 2, 5, 4, 2};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 9;
             int actual = Solution.findMaxWater(buildingHeights);
             assertEquals(expected, actual);
@@ -51,7 +51,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase3() {
         int[] buildingHeights = new int[] {1, 4, 3, 2, 5, 8, 4};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 20;
             int actual = Solution.findMaxWater(buildingHeights);
             assertEquals(expected, actual);

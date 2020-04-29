@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[] input = {1,5,23,2,6,3,1,8,12,3};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "[1, 3]";
             String actual = Solution.duplicate(input);
             assertEquals(expected, actual);
@@ -42,7 +42,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[] input = {1,3,3,4};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "[3]";
             String actual = Solution.duplicate(input);
             assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase1() {
         int[] input = {4};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "[]";
             String actual = Solution.duplicate(input);
             assertEquals(expected, actual);
@@ -62,7 +62,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase2() {
         int[] input = {4, 3, 1};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String expected = "[]";
             String actual = Solution.duplicate(input);
             assertEquals(expected, actual);

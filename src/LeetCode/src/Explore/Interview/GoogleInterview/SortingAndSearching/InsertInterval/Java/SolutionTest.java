@@ -27,7 +27,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -42,7 +42,7 @@ public class SolutionTest {
         intervals.add(new Interval(8, 10));
         intervals.add(new Interval(12, 16));
         Interval newInterval = new Interval(4, 8);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(1,2,3,10,12,16);
             List<Interval> result = Solution.insert(intervals, newInterval);
             List<Integer> actual = new ArrayList<>();

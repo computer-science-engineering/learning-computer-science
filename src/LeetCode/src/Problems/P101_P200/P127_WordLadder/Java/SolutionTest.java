@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         String beginWord = "hit";
         String endWord = "cog";
         List<String> wordList = Arrays.asList("hot","dot","dog","lot","log", "cog");
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 5;
             int actual = Solution.ladderLength(beginWord, endWord, wordList);
             assertEquals(expected, actual);
@@ -49,7 +49,7 @@ public class SolutionTest {
         String beginWord = "hit";
         String endWord = "cog";
         List<String> wordList = Arrays.asList("hot","dot","dog","lot","log");
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 0;
             int actual = Solution.ladderLength(beginWord, endWord, wordList);
             assertEquals(expected, actual);

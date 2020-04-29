@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -41,7 +41,7 @@ public class SolutionTest {
         ListNode b3 = new ListNode(4);
         b1.next = b2;
         b2.next = b3;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int[] expected = {1, 1, 2, 3, 4, 4};
 
             ListNode result_recursive = Solution.mergeTwoLists(a1, b1);
@@ -68,7 +68,7 @@ public class SolutionTest {
         ListNode b3 = new ListNode(4);
         b1.next = b2;
         b2.next = b3;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int[] expected = {1, 1, 2, 3, 4, 4};
             ListNode result_iterative = Solution.mergeTwoLists_Iterative(a1, b1);
             int[] actual_iterative = new int[6];

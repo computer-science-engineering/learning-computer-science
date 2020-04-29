@@ -25,7 +25,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -49,7 +49,7 @@ public class SolutionTest {
         c1.next = c2;
         c2.next = c3;
         ArrayList<ListNode> input = new ArrayList<ListNode>(Arrays.asList(a1, b1, c1));
-        assertTimeout(Duration.ofMillis(700), () ->  {
+        assertTimeout(Duration.ofMillis(1000), () ->  {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 3, 4, 8, 9, 10, 11, 13, 20));
             ListNode result = Solution.mergeKLists(input);
             ArrayList<Integer> actual = new ArrayList<Integer>();

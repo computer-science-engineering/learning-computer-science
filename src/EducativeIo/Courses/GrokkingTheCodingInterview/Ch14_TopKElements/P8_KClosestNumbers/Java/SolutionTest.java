@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
         int[] arr = new int[] {5, 6, 7, 8, 9};
         int K = 3;
         int X = 7;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(6, 7, 8);
             List<Integer> actual = Solution.findClosestElements(arr, K, X);
             assertEquals(expected, actual);
@@ -50,7 +50,7 @@ public class SolutionTest {
         int[] arr = new int[] {2, 4, 5, 6, 9};
         int K = 3;
         int X = 6;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(4, 5, 6);
             List<Integer> actual = Solution.findClosestElements(arr, K, X);
             assertEquals(expected, actual);
@@ -64,7 +64,7 @@ public class SolutionTest {
         int[] arr = new int[] {2, 4, 5, 6, 9};
         int K = 3;
         int X = 10;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(5, 6, 9);
             List<Integer> actual = Solution.findClosestElements(arr, K, X);
             assertEquals(expected, actual);

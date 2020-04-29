@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         ListNode a1 = new ListNode(1);
         ListNode a2 = new ListNode(2);
         a1.next = a2;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = Solution.isPalindrome(a1);
             assertEquals(expected, actual);
@@ -50,7 +50,7 @@ public class SolutionTest {
         a1.next = a2;
         a2.next = a3;
         a3.next = a4;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = Solution.isPalindrome(a1);
             assertEquals(expected, actual);

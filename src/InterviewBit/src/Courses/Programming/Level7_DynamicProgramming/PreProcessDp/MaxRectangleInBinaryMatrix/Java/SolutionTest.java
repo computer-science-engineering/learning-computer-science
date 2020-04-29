@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -36,7 +36,7 @@ public class SolutionTest {
                       {1, 1, 1, 1},
                       {1, 1, 0, 0},
                     };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 8;
             int actual = Solution.maximalRectangle(A);
             assertEquals(expected, actual);
@@ -49,7 +49,7 @@ public class SolutionTest {
                       {0, 1, 1},
                       {1, 0, 0},
                     };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 4;
             int actual = Solution.maximalRectangle(A);
             assertEquals(expected, actual);
@@ -60,7 +60,7 @@ public class SolutionTest {
     public void SpecialCase1() {
         int A[][] = { {1}
                     };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 1;
             int actual = Solution.maximalRectangle(A);
             assertEquals(expected, actual);

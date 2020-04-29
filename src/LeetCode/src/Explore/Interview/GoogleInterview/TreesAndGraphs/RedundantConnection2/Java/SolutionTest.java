@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -32,7 +32,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         int[][] edges = {{1,2}, {1,3}, {2,3}};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int[] expected = {2, 3};
             int[] actual_1 = Solution.findRedundantDirectedConnection(edges);
             int[] actual_2 = Solution.findRedundantDirectedConnection_2(edges);
@@ -44,7 +44,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         int[][] edges = {{1,2}, {2,3}, {3,4}, {4,1}, {1,5}};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int[] expected = {4, 1};
             int[] actual_1 = Solution.findRedundantDirectedConnection(edges);
             int[] actual_2 = Solution.findRedundantDirectedConnection_2(edges);

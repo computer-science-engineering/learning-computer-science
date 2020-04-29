@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         String[] words = {"practice", "makes", "perfect", "coding", "makes"};
         String word1 = "coding";
         String word2 = "practice";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 3;
             int actual = Solution.shortestDistance(words, word1, word2);
             assertEquals(expected, actual);
@@ -46,7 +46,7 @@ public class SolutionTest {
         String[] words = {"practice", "makes", "perfect", "coding", "makes"};
         String word1 = "coding";
         String word2 = "makes";
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 1;
             int actual = Solution.shortestDistance(words, word1, word2);
             assertEquals(expected, actual);

@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         String start = "hit";
         String end = "cog";
         ArrayList<String> dict = new ArrayList<String>(Arrays.asList("hot","dot","dog","lot","log"));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<ArrayList<String>> expected = new ArrayList<ArrayList<String>>();
             expected.add(new ArrayList<String>(Arrays.asList("hit", "hot", "dot", "dog", "cog")));
             expected.add(new ArrayList<String>(Arrays.asList("hit", "hot", "lot", "log", "cog")));

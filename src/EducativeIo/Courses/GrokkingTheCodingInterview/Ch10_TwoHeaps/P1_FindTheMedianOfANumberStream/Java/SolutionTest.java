@@ -23,7 +23,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest {
         Solution solution = new Solution();
         solution.insertNum(3);
         solution.insertNum(1);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             double expected = 2.0;
             double actual = solution.findMedian();
             assertEquals(expected, actual);
@@ -47,7 +47,7 @@ public class SolutionTest {
         solution.insertNum(3);
         solution.insertNum(1);
         solution.insertNum(5);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             double expected = 3.0;
             double actual = solution.findMedian();
             assertEquals(expected, actual);
@@ -61,7 +61,7 @@ public class SolutionTest {
         solution.insertNum(1);
         solution.insertNum(5);
         solution.insertNum(4);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             double expected = 3.5;
             double actual = solution.findMedian();
             assertEquals(expected, actual);

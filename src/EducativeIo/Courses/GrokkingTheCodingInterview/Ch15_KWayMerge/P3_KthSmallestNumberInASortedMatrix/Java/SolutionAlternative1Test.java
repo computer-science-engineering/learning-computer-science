@@ -24,7 +24,7 @@ public class SolutionAlternative1Test {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionAlternative1Test {
     public void TrivialCase1() {
         int matrix[][] = {{2, 6, 8}, {3, 7, 10}, {5, 8, 11}};
         int k = 5;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 7;
             int actual = SolutionAlternative1.findKthSmallest(matrix, k);
             assertEquals(expected, actual);

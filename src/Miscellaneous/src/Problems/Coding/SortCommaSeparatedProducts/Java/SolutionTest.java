@@ -26,7 +26,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -41,7 +41,7 @@ public class SolutionTest {
                 "Winter Gloves,32,112", "Microphone,44,22", "Pet Kennel,5,24",
                 "Jenga Classic Game,100,7", "Ink Cartridges,88,45", "Instant Pot,98,59",
                 "Hoze Nozzle,74,26", "Gift Card,45,25", "Keyboard,82,19"};
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<String> expected = Arrays.asList("Jenga Classic Game", "Selfie Stick",
                     "Instant Pot", "iPhone Case", "Blue Light Blocking Glasses", "Ink Cartridges",
                     "Keyboard", "Hoze Nozzle", "Baseball Cards", "AA Batteries", "Water Filter",

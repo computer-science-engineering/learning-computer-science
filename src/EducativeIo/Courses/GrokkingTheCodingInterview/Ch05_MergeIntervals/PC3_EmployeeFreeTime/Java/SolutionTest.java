@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -38,7 +38,7 @@ public class SolutionTest {
                 new ArrayList<Interval>(Arrays.asList(new Interval(1, 3), new Interval(5, 6))));
         schedule.add(
                 new ArrayList<Interval>(Arrays.asList(new Interval(2, 3), new Interval(6, 8))));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(3, 5);
             List<Integer> actual = new ArrayList<>();
             List<Interval> result = Solution.findEmployeeFreeTime(schedule);
@@ -57,7 +57,7 @@ public class SolutionTest {
                 new ArrayList<Interval>(Arrays.asList(new Interval(1, 3), new Interval(9, 12))));
         schedule.add(new ArrayList<Interval>(Arrays.asList(new Interval(2, 4))));
         schedule.add(new ArrayList<Interval>(Arrays.asList(new Interval(6, 8))));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(4, 6, 8, 9);
             List<Integer> actual = new ArrayList<>();
             List<Interval> result = Solution.findEmployeeFreeTime(schedule);
@@ -76,7 +76,7 @@ public class SolutionTest {
         schedule.add(new ArrayList<Interval>(Arrays.asList(new Interval(2, 4))));
         schedule.add(
                 new ArrayList<Interval>(Arrays.asList(new Interval(3, 5), new Interval(7, 9))));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(5, 7);
             List<Integer> actual = new ArrayList<>();
             List<Interval> result = Solution.findEmployeeFreeTime(schedule);

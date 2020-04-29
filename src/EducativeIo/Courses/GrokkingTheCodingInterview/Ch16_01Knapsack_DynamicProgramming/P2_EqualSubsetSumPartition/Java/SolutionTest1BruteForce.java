@@ -24,7 +24,7 @@ public class SolutionTest1BruteForce {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution1BruteForce.main(args));
         });
@@ -34,7 +34,7 @@ public class SolutionTest1BruteForce {
     public void TrivialCase1() {
         int[] num = {1, 2, 3, 4};
         Solution1BruteForce ps = new Solution1BruteForce();
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = ps.canPartition(num);
             assertEquals(expected, actual);
@@ -45,7 +45,7 @@ public class SolutionTest1BruteForce {
     public void TrivialCase2() {
         int[] num = {1, 1, 3, 4, 7};
         Solution1BruteForce ps = new Solution1BruteForce();
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = true;
             boolean actual = ps.canPartition(num);
             assertEquals(expected, actual);
@@ -56,7 +56,7 @@ public class SolutionTest1BruteForce {
     public void TrivialCase3() {
         int[] num = {2, 3, 4, 6};
         Solution1BruteForce ps = new Solution1BruteForce();
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             boolean expected = false;
             boolean actual = ps.canPartition(num);
             assertEquals(expected, actual);

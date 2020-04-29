@@ -26,7 +26,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
              String[] args = new String[0];
              assertAll(() -> Solution.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase1() {
         ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 2, 4));
             ArrayList<Integer> actual = Solution.plusOne(a);
             assertEquals(expected, actual);
@@ -45,7 +45,7 @@ public class SolutionTest {
     @Test
     public void TrivialCase2() {
         ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(1, 2, 9));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 3, 0));
             ArrayList<Integer> actual = Solution.plusOne(a);
             assertEquals(expected, actual);
@@ -57,7 +57,7 @@ public class SolutionTest {
         ArrayList<Integer> a = new ArrayList<Integer>();
         a.add(0);
         a.add(0);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1));
             ArrayList<Integer> actual = Solution.plusOne(a);
             assertEquals(expected, actual);
@@ -67,7 +67,7 @@ public class SolutionTest {
     @Test
     public void SpecialCase2() {
         ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(9, 9, 9, 9));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 0, 0, 0, 0));
             ArrayList<Integer> actual = Solution.plusOne(a);
             assertEquals(expected, actual);

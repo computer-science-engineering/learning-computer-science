@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -35,7 +35,7 @@ public class SolutionTest {
     public void TrivialCase1() {
         List<Job> jobs = new ArrayList<Job>(
                 Arrays.asList(new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 7;
             int actual = Solution.findMaxCPULoad(jobs);
             assertEquals(expected, actual);
@@ -46,7 +46,7 @@ public class SolutionTest {
     public void TrivialCase2() {
         List<Job> jobs = new ArrayList<Job>(
                 Arrays.asList(new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 15;
             int actual = Solution.findMaxCPULoad(jobs);
             assertEquals(expected, actual);
@@ -57,7 +57,7 @@ public class SolutionTest {
     public void TrivialCase3() {
         List<Job> jobs = new ArrayList<Job>(
                 Arrays.asList(new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)));
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 8;
             int actual = Solution.findMaxCPULoad(jobs);
             assertEquals(expected, actual);

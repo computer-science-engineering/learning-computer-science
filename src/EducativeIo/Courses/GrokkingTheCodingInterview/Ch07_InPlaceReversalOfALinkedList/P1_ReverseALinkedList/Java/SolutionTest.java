@@ -25,7 +25,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -38,7 +38,7 @@ public class SolutionTest {
         head.next.next = new ListNode(6);
         head.next.next.next = new ListNode(8);
         head.next.next.next.next = new ListNode(10);
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             List<Integer> expected = Arrays.asList(10, 8, 6, 4, 2);
             ListNode result = Solution.reverse(head);
             List<Integer> actual = new ArrayList<>();

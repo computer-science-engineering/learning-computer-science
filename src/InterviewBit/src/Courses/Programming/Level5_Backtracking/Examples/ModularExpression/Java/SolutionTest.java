@@ -23,7 +23,7 @@ public class SolutionTest {
     
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -31,7 +31,7 @@ public class SolutionTest {
     
     @Test
     public void TrivialCase1() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual = Solution.Mod(2, 3, 3);
             assertEquals(expected, actual);
@@ -40,7 +40,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase1() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 19;
             int actual = Solution.Mod(-1, 1, 20);
             assertEquals(expected, actual);
@@ -49,7 +49,7 @@ public class SolutionTest {
 
     @Test
     public void SpecialCase2() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 20805472;
             int actual = Solution.Mod(71045970, 41535484, 64735492);
             assertEquals(expected, actual);

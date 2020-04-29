@@ -24,7 +24,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -41,7 +41,7 @@ public class SolutionTest {
                 add(new Meeting(7, 9));
             }
         };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual = Solution.findMinimumMeetingRooms(meetings);
             assertEquals(expected, actual);
@@ -59,7 +59,7 @@ public class SolutionTest {
                 add(new Meeting(8, 12));
             }
         };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 1;
             int actual = Solution.findMinimumMeetingRooms(meetings);
             assertEquals(expected, actual);
@@ -77,7 +77,7 @@ public class SolutionTest {
                 add(new Meeting(3, 6));
             }
         };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual = Solution.findMinimumMeetingRooms(meetings);
             assertEquals(expected, actual);
@@ -96,7 +96,7 @@ public class SolutionTest {
                 add(new Meeting(3, 5));
             }
         };
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 2;
             int actual = Solution.findMinimumMeetingRooms(meetings);
             assertEquals(expected, actual);

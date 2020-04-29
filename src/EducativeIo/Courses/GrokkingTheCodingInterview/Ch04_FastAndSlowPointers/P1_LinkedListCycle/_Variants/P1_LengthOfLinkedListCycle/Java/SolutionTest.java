@@ -22,7 +22,7 @@ public class SolutionTest {
 
     @Test
     public void MainFunction() {
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             String[] args = new String[0];
             assertAll(() -> Solution.main(args));
         });
@@ -37,7 +37,7 @@ public class SolutionTest {
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(6);
         head.next.next.next.next.next.next = head.next.next;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 4;
             int actual = Solution.findCycleLength(head);
             assertEquals(expected, actual);
@@ -54,7 +54,7 @@ public class SolutionTest {
         head.next.next.next.next.next = new ListNode(6);
         head.next.next.next.next.next.next = head.next.next;
         head.next.next.next.next.next.next = head.next.next.next;
-        assertTimeout(Duration.ofMillis(700), () -> {
+        assertTimeout(Duration.ofMillis(1000), () -> {
             int expected = 3;
             int actual = Solution.findCycleLength(head);
             assertEquals(expected, actual);
