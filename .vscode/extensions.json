@@ -4,7 +4,6 @@
   "recommendations": [
     "njpwerner.autodocstring",
     "HookyQR.beautify",
-    "cake-build.cake-vscode",
     "formulahendry.code-runner",
     "streetsidesoftware.code-spell-checker",
     "ms-vscode.cpptools",
