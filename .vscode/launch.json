@@ -20,15 +20,6 @@
         },
         {
             "type": "java",
-            "name": "Debug (Launch) Java",
-            "request": "launch",
-            "mainClass": "EducativeIo.GrokkingTheCodingInterview.Ch02_Pattern_SlidingWindow.P1_MaximumSumSubarrayOfSizeK.Java.Solution",
-            "projectName": "learning-computer-science",
-            "args": "",
-            "stopOnEntry": false
-        },
-        {
-            "type": "java",
             "name": "Debug (Attach) Java",
             "request": "attach",
             "hostName": "localhost",
@@ -39,23 +30,17 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "${config:python.pythonPath}",
+            "pythonPath": "${config:python.interpreterPath}",
             "program": "${file}",
             "cwd": "${workspaceRoot}",
             "env": {},
-            "envFile": "${workspaceRoot}/.env",
-            "debugOptions": [
-                "RedirectOutput"
-            ]
+            "envFile": "${workspaceRoot}/.env"
         },
         {
             "name": "Attach (Remote Debug) Python",
             "type": "python",
             "request": "attach",
-            "localRoot": "${workspaceRoot}",
-            "remoteRoot": "${workspaceRoot}",
             "port": 3000,
-            "secret": "my_secret",
             "host": "localhost"
         },
         {
