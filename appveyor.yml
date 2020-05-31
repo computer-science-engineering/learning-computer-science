@@ -21,7 +21,7 @@ install:
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
   - sh: whereis python3.8
-  - sh: . /home/appveyor/venv3.8.1/bin/activate
+  - sh: . /home/appveyor/venv3.8/bin/activate
   - sh: python --version
   - sh: pip install -r requirements.txt
 
