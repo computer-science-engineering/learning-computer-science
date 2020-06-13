@@ -355,7 +355,6 @@
   "python.testing.promptToConfigure": false,
   "python.testing.pytestEnabled": false,
   "python.testing.nosetestsEnabled": false,
-  "python.pythonPath": "C:\\Program Files\\Python38\\python.exe",
   "python.linting.pylintEnabled": true,
   "java.test.config": [{
     "name": "myConfig",
