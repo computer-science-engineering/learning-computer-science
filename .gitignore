@@ -51,3 +51,6 @@ obj
 
 # scala
 .metals 
+
+# jenv
+.java-version
