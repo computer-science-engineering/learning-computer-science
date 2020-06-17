@@ -351,15 +351,24 @@
   "eslint.enable": true,
   "prettier.singleQuote": true,
   "python.testing.unittestEnabled": false,
-  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "*test.py"],
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    ".",
+    "-p",
+    "*test.py"
+  ],
   "python.testing.promptToConfigure": false,
   "python.testing.pytestEnabled": false,
   "python.testing.nosetestsEnabled": false,
   "python.linting.pylintEnabled": true,
-  "java.test.config": [{
-    "name": "myConfig",
-    "workingDirectory": "${workspaceFolder}"
-  }],
+  "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home",
+  "java.test.config": [
+    {
+      "name": "myConfig",
+      "workingDirectory": "${workspaceFolder}"
+    }
+  ],
   "java.test.defaultConfig": "myConfig",
   "markdown.extension.print.onFileSave": false,
   "markdownShortcuts.bullets.marker": "-",
@@ -370,7 +379,8 @@
   "markdown.extension.toc.orderedList": true,
   "markdown.extension.toc.levels": "2..6",
   "markdown.extension.list.indentationSize": "inherit",
-  "eslint.workingDirectories": [{
+  "eslint.workingDirectories": [
+    {
       "directory": "./",
       "changeProcessCWD": true
     },
