@@ -362,7 +362,6 @@
   "python.testing.pytestEnabled": false,
   "python.testing.nosetestsEnabled": false,
   "python.linting.pylintEnabled": true,
-  "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home",
   "java.test.config": [
     {
       "name": "myConfig",
