@@ -2,7 +2,7 @@ name: build-test
 on: [push]
 jobs:
   build-javacode:
-    name: Build, Test
+    name: Build, Test javacode
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -18,7 +18,7 @@ jobs:
       - name: Make javacode
         run: make javacode
   build-pythoncode:
-    name: Build, Test
+    name: Build, Test pythoncode
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -35,7 +35,7 @@ jobs:
       - name: Make pythoncode
         run: make pythoncode
   build-csharpcode:
-    name: Build, Test
+    name: Build, Test csharpcode
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -46,6 +46,10 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.100'
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
       - run: dotnet --version
       - name: Make csharpcode
         run: make csharpcode
