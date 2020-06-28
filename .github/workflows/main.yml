@@ -2,7 +2,7 @@ name: build-test
 on: [push]
 jobs:
   build-javacode:
-    name: Build, Test javacode
+    name: javacode
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -18,7 +18,7 @@ jobs:
       - name: Make javacode
         run: make javacode
   build-pythoncode:
-    name: Build, Test pythoncode
+    name: pythoncode
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -35,7 +35,7 @@ jobs:
       - name: Make pythoncode
         run: make pythoncode
   build-csharpcode:
-    name: Build, Test csharpcode
+    name: csharpcode
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
