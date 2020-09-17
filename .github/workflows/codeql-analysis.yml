@@ -64,20 +64,18 @@ jobs:
           java-version: '14.0.0'
           architecture: x64
       - run: java -version
+
       - name: setup python
-      - uses: actions/setup-python@v1
+        uses: actions/setup-python@v1
         with:
           python-version: '3.8'
           architecture: 'x64'
       - run: python --version
+
       - name: setup dotnet
-      - uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.100'
-      - uses: actions/setup-python@v1
-        with:
-          python-version: '3.8'
-          architecture: 'x64'
       - run: dotnet --version
 
       - run: |
