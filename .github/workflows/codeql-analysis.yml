@@ -71,6 +71,7 @@ jobs:
           python-version: '3.8'
           architecture: 'x64'
       - run: python --version
+      - run: pip install -r requirements.txt
 
       - name: setup dotnet
         uses: actions/setup-dotnet@v1
