@@ -65,5 +65,7 @@ createproblemslist:
 # All tasks
 #*****************
 
-all: createproblemslist javacode pythoncode csharpcode
+code: javacode pythoncode csharpcode
+
+all: createproblemslist code
 
