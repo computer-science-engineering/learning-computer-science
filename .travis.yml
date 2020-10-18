@@ -16,7 +16,7 @@ jobs:
 
     - stage: build-test
       language: python
-      python: 3.8
+      python: 3.9
       script:
         - python --version
         - pip install --upgrade pip
