@@ -42,7 +42,7 @@ jobs:
       # circleci/openjdk:11-jdk-node-browsers
       # https://circleci.com/docs/2.0/circleci-images/#openjdk
       # https://hub.docker.com/r/circleci/openjdk/
-      - image: adoptopenjdk/openjdk14
+      - image: adoptopenjdk/openjdk15
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
