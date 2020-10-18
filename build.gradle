@@ -36,6 +36,9 @@ apply plugin: 'com.github.kt3k.coveralls'
 
 // https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
+jacoco {
+    toolVersion = '0.8.6'
+}
 jacocoTestCoverageVerification {
     violationRules {
         rule {
@@ -46,9 +49,8 @@ jacocoTestCoverageVerification {
     }
 }
 
-
-sourceCompatibility = JavaVersion.VERSION_14
-targetCompatibility = JavaVersion.VERSION_14
+sourceCompatibility = JavaVersion.VERSION_15
+targetCompatibility = JavaVersion.VERSION_15
 
 compileJava {
     options.compilerArgs += ["--enable-preview"]

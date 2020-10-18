@@ -34,7 +34,7 @@ pacman -S mingw-w64-x86_64-cmake
 1. Update build.gradle script (`sourceCompatibility` and `targetCompatibility`).
 1. Download and update the (latest) version of gradle compatible with the new version of Java.
 1. In Windows, update the Path environment variable to point to new gradle install location.
-1. In the repository root, from admin command prompt, run `./gradlew wrapper --gradle-version <new gradle version>`.
+1. In the repository root, from admin command prompt, run `./gradlew wrapper --gradle-version <new gradle version> --distribution-type=bin`.
 1. Make sure `distributionUrl` in `gradle/wrapper/gradle-wrapper.properties` points to new gradle version.
 1. Delete .project and .classpath files.
 1. Delete all contents of bin directory.
@@ -48,7 +48,7 @@ pacman -S mingw-w64-x86_64-cmake
 
 #### Gradle
 
-From the project root, run `.\gradlew.bat wrapper --gradle-version=x.x.x`. For Linux, run gradlew from the root, instead of the .bat file. Use the desired version in the command. Verify that the `distributionUrl` field in the file `gradle-wrapper.properties` has been updated to reflect the correct version. [[Reference](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)]
+From the project root, run `.\gradlew.bat wrapper --gradle-version=x.x.x --distribution-type=bin`. For Linux, run gradlew from the root, instead of the .bat file. Use the desired version in the command. Verify that the `distributionUrl` field in the file `gradle-wrapper.properties` has been updated to reflect the correct version. [[Reference](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)]
 
 #### Python
 
