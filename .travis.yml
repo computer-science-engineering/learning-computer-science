@@ -25,7 +25,7 @@ jobs:
 
     - stage: deploy
       language: python
-      python: 3.8
+      python: 3.9
       script:
         - python scripts/create_problems_list.py
       #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
