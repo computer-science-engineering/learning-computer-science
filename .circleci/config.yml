@@ -83,7 +83,7 @@ jobs:
       # run tests!
       - run: bash ./gradlew test jacocoJupTestReport
 
-      #upload test coverage to codecov
+      # upload test coverage to codecov
       - run: bash <(curl -s https://codecov.io/bash) #-cF java
 
       # run test coverage to code climate // https://github.com/codeclimate/test-reporter/issues/243
