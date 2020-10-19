@@ -1,6 +1,7 @@
 # Learning Computer Science
 
 ![logo](https://github.com/manastalukdar/learning-computer-science/blob/master/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcomputer-science-engineering%2Flearning-computer-science.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcomputer-science-engineering%2Flearning-computer-science?ref=badge_shield)
 
 1. [Overview](#overview)
 2. [Project](#project)
@@ -63,3 +64,6 @@ Learning data structures, algorithms, machine learning and various computer scie
 ## License
 
 [MIT](https://github.com/manastalukdar/learning-computer-science/blob/master/LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcomputer-science-engineering%2Flearning-computer-science.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcomputer-science-engineering%2Flearning-computer-science?ref=badge_large)
