@@ -59,4 +59,50 @@ def test_get_max():
 test_get_max()
 ```
 
+```java
+import java.io.*;
+
+class MyCode {
+  public static void main (String[] args) {
+    System.out.println("Hello Java");
+  }
+  
+  public static class Pair {
+    int offset;
+    //int maxValue
+  }
+  
+  class Node {
+    Node next;
+    Node prev;
+    int offset;
+  }
+  public static int[] transform(int[] a) {
+    final int[] result = new int[a.length];
+
+    Node tail = null;
+
+    int i = 0;
+    int max = Integer.MIN_VALUE;
+    while (i < a.length) {
+      if (tail == null) {
+        result[i] = 1;
+      }
+      if (max <= a[i]) {
+
+      } else {
+        if (tail == null) {
+          tail = new Node(i-1);
+        } else {
+          Node n = new Node(i-1);
+          tail.next = n;
+          n.prev = tail;
+          tail = n;
+        }
+      }
+    }
+  }
+}
+```
+
 ## References
