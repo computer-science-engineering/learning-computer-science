@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
@@ -29,7 +36,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "${command:python.interpreterPath}",
+            "python": "${command:python.interpreterPath}",
             "program": "${file}",
             "cwd": "${workspaceRoot}",
             "env": {},

@@ -1,0 +1,31 @@
+{
+  "type": "Coding",
+  "name": "Dam Design",
+  "origin": {
+    "name": "HackerRank",
+    "link": ""
+  },
+  "companies": ["", ""],
+  "categories": [
+    {
+      "name": "",
+      "children": [
+        {
+          "name": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Difficulty",
+      "children": [
+        {
+          "name": "Easy",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "tags": ["Arrays", ""],
+  "buckets": ["", ""]
+}
