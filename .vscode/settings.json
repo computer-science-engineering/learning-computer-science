@@ -348,7 +348,6 @@
   ],
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
-  "eslint.enable": true,
   "prettier.singleQuote": true,
   "python.testing.unittestEnabled": false,
   "python.testing.unittestArgs": [
@@ -389,12 +388,12 @@
     }
   ],
   "editor.formatOnPaste": true,
-  "markdown.extension.toc.githubCompatibility": true,
   "python.linting.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "files.watcherExclude": {
     "**/target": true
-  }
+  },
+  "c3.rootPackage": ""
 }

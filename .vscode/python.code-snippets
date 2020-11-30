@@ -37,15 +37,15 @@
 			"import unittest",
 			"",
 			"class TrivialCase(unittest.TestCase):",
-			"\tdef test_trivial_case_1(self):",
-			"\t\t\"\"\"\"trivial case 1\"\"\"",
-			"\t\texpected = ",
-			"\t\tsol = solution.Solution()",
-			"\t\tactual = sol.",
-			"\t\tself.assertEqual(expected, actual)",
+			"\t\tdef test_trivial_case_1(self):",
+			"\t\t\t\t\"\"\"\"trivial case 1\"\"\"",
+			"\t\t\t\texpected = ",
+			"\t\t\t\tsol = solution.Solution()",
+			"\t\t\t\tactual = sol.",
+			"\t\t\t\tself.assertEqual(expected, actual)",
 			"",
 			"if __name__ == \"__main__\":",
-			"\tunittest.main()"
+			"\t\tunittest.main()"
 		]
 	}
 }

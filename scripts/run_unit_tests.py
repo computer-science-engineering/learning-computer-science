@@ -5,7 +5,7 @@ import re
 
 
 def run_tests():
-    lsPaths = []
+    ls_paths = []
     cwd = os.getcwd()
 
     #Find all relevant subdirectories that contain unit tests
@@ -15,10 +15,10 @@ def run_tests():
         for file in files:
             if "pycache" not in root and 'test_' in file:
                 test_folder = os.path.join(cwd, root)
-                lsPaths.append(test_folder)
+                ls_paths.append(test_folder)
 
     #loop through subdirectories and run individually
-    for path in lsPaths:
+    for path in ls_paths:
         sys.path.append(path)
         loader = unittest.TestLoader()
         suite = loader.discover(path)
