@@ -1,17 +1,5 @@
 {
   "type": "Coding",
   "name": "Learning Computer Science",
-  "origin": {
-    "name": "",
-    "link": ""
-  },
-  "companies": ["", ""],
-  "categories": [
-    {
-      "name": "",
-      "children": []
-    }
-  ],
-  "tags": ["", ""],
-  "buckets": ["", ""]
+  "skip_for_problems_list": "True"
 }
