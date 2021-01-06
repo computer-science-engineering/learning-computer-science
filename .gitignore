@@ -22,7 +22,7 @@ build
 .classpath
 .project
 bin
-website/problems_list.json
+scripts/problems_list.json
 scripts/problems_list.md
 
 htmlcov
