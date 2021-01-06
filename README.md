@@ -58,7 +58,7 @@ Learning data structures, algorithms, machine learning and various computer scie
 ## Notes
 
 1. Problems in the repository are not necessarily solved by me. The goal is to learn. Sometimes in the interest of time, that involves understanding an existing solution rather than spending an inordinate amount of time trying to solve it by myself. Where applicable I have provided references to the original solution.
-2. Problems in this repository are not unique. Given that the same (or similar) problem may exist in multiple origins, more than a few problems are repeated. It is my goal to provide some sort of querying mechanism via a [website](https://github.com/computer-science-engineering/learning-computer-science/projects/1) for users to view only a unique instance of a problem, either from a "first or default" origin or a specified origin.
+2. Problems in this repository are not unique. Given that the same (or similar) problem may exist in multiple origins, more than a few problems are repeated. It is my goal to provide some sort of querying mechanism via a [website](https://github.com/computer-science-engineering/computer-science-engineering.github.io/projects/2) for users to view only a unique instance of a problem, either from a "first or default" origin or a specified origin.
 
 ## License
 
