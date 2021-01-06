@@ -7,8 +7,10 @@
             "label": "echo",
             "type": "shell",
             "command": "echo",
-            "args": ["Hello"]
-        }, 
+            "args": [
+                "Hello"
+            ]
+        },
         {
             "label": "gradlew-build",
             "type": "shell",
@@ -40,21 +42,22 @@
             "windows": {
                 "command": ".\\gradlew.bat test jacocoJupTestReport"
             }
-        },        {
+        },
+        {
             "label": "run-xunit-tests",
             "type": "shell",
             "command": "python ${workspaceFolder}/scripts/run_xunit_tests.py"
-        }, 
+        },
         {
-            "label": "create-problems-list",
+            "label": "get-problems-count",
             "type": "shell",
-            "command": "python ${workspaceFolder}/scripts/create_problems_list.py"
-        },  
+            "command": "python ${workspaceFolder}/scripts/get_problems_count.py"
+        },
         {
             "label": "run-python-unit-tests",
             "type": "shell",
             "command": "python ${workspaceFolder}/scripts/run_unit_tests.py"
-        },  
+        },
         {
             "label": "run-python-unit-tests-coverage",
             "type": "shell",

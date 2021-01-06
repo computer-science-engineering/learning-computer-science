@@ -144,7 +144,7 @@ jobs:
             python3 -m pip install -r requirements.txt
             coverage-3.9 run scripts/run_unit_tests.py
             coverage-3.9 xml
-            python3 scripts/create_problems_list.py
+            python3 scripts/get_problems_count.py
 
       # upload test coverage to codecov
       - run: bash <(curl -s https://codecov.io/bash) #-cF python

@@ -37,5 +37,5 @@ test_script:
   - sh: coverage-3.9 run scripts/run_unit_tests.py
 
 after_test:
-  - cmd: python scripts\\create_problems_list.py
-  - sh: python3.9 scripts/create_problems_list.py
+  - cmd: python scripts\\get_problems_count.py
+  - sh: python3.9 scripts/get_problems_count.py

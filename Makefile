@@ -58,8 +58,8 @@ pythoncode: pythontestcoverage
 # Project tasks
 #*****************
 
-createproblemslist:
-	python ${workspaceFolder}scripts/create_problems_list.py
+getproblemscount:
+	python ${workspaceFolder}scripts/get_problems_count.py
 
 #*****************
 # All tasks
@@ -67,5 +67,5 @@ createproblemslist:
 
 code: javacode pythoncode csharpcode
 
-all: createproblemslist code
+all: getproblemscount code
 
