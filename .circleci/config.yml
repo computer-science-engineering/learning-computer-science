@@ -143,6 +143,14 @@ jobs:
           at: ~/repo/tmp
 
       - run:
+          name: Upgrade Git
+          command: |
+            sudo add-apt-repository ppa:git-core/ppa -y
+            sudo apt-get update
+            sudo apt-get install git -y
+            git --version
+
+      - run:
           name: Get Git Submodules
           command: |
             make git
