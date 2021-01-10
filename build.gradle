@@ -23,7 +23,7 @@ repositories {
     mavenCentral()
 }
 
-ext.junit4Version        = '4.12'
+ext.junit4Version        = '4.13.1'
 ext.junitVintageVersion  = '4.12.1'
 ext.junitPlatformVersion = '1.5.2'
 ext.junitJupiterVersion  = '5.7.0'
