@@ -42,7 +42,8 @@ jobs:
       # circleci/openjdk:11-jdk-node-browsers
       # https://circleci.com/docs/2.0/circleci-images/#openjdk
       # https://hub.docker.com/r/circleci/openjdk/
-      - image: adoptopenjdk/openjdk15
+      # adoptopenjdk/openjdk15
+      - image: cimg/openjdk:15.0.1
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -128,7 +129,7 @@ jobs:
   build_test_python:
     <<: *defaults
     docker:
-      - image: circleci/python:3.9.1
+      - image: cimg/python:3.9.1 # circleci/python:3.9.1
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
