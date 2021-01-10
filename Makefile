@@ -68,14 +68,10 @@ get-problems-count:
 git-version:
 	git --version
 
-git-submodules-setup-1:
+git-submodules-setup:
 	git submodule sync --recursive
-
-git-submodules-setup-2:
 	git submodule foreach --recursive git fetch
-
-git-submodules-setup-3:
-	git submodule foreach git pull
+	# git submodule foreach git pull
 
 git-get-submodules:
 	git submodule update --init --recursive --remote --merge
@@ -84,7 +80,7 @@ git-get-submodules:
 # All tasks
 #*****************
 
-git: git-version git-submodules-setup-1 git-submodules-setup-2 git-submodules-setup-3 git-get-submodules
+git: git-version git-submodules-setup git-get-submodules
 
 code: java-code python-code csharp-code
 

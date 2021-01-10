@@ -76,7 +76,7 @@ jobs:
       - run:
           name: Get Git Submodules
           command: |
-            make git
+            bash make git
 
       - run: bash ./gradlew dependencies
 
