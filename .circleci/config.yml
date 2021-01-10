@@ -76,7 +76,10 @@ jobs:
       - run:
           name: Get Git Submodules
           command: |
-            bash make git
+            git --version
+            git submodule sync --recursive
+            git submodule foreach --recursive git fetch
+            git submodule update --init --recursive --remote --merge
 
       - run: bash ./gradlew dependencies
 
