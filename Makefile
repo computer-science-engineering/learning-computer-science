@@ -73,14 +73,14 @@ git-submodules-setup:
 	git submodule foreach --recursive git fetch
 	git submodule foreach git pull origin main
 
-get-git-submodules:
+git-get-submodules:
 	git submodule update --init --recursive --remote --merge
 
 #*****************
 # All tasks
 #*****************
 
-git: git-version git-submodules-pull get-git-submodules
+git: git-version git-submodules-setup git-get-submodules
 
 code: javacode pythoncode csharpcode
 
