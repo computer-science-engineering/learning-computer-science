@@ -76,8 +76,6 @@ jobs:
       - run:
           name: Get Git Submodules
           command: |
-            git --version
-            git pull --recurse-submodules
             make git
 
       - run: bash ./gradlew dependencies
@@ -147,8 +145,6 @@ jobs:
       - run:
           name: Get Git Submodules
           command: |
-            git --version
-            git pull --recurse-submodules
             make git
 
       - run:
