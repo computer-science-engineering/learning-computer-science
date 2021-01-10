@@ -73,7 +73,11 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: make git
+      - run:
+          name: Get Git Submodules
+          command: |
+            git pull --recurse-submodules
+            make git
 
       - run: bash ./gradlew dependencies
 
@@ -139,7 +143,11 @@ jobs:
       - attach_workspace:
           at: ~/repo/tmp
 
-      - run: make git
+      - run:
+          name: Get Git Submodules
+          command: |
+            git pull --recurse-submodules
+            make git
 
       - run:
           command: |
