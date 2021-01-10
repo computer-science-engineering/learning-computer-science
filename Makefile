@@ -71,7 +71,6 @@ git-version:
 git-submodules-setup:
 	git submodule sync --recursive
 	git submodule foreach --recursive git fetch
-	git submodule foreach got 
 	git submodule foreach git pull
 
 git-get-submodules:
