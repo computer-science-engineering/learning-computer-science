@@ -28,7 +28,7 @@ java-clean:
 java-test-coverage:
 	${workspaceFolder}${gradlewScript} test jacocoJupTestReport
 
-javacode: javadependencies javaclean javatestcoverage
+java-code: java-dependencies java-clean java-test-coverage
 
 #*****************
 # C# code tasks
@@ -37,7 +37,7 @@ javacode: javadependencies javaclean javatestcoverage
 csharp-xunit-tests:
 	python ${workspaceFolder}scripts/run_xunit_tests.py
 
-csharp-code: xunittests
+csharp-code: csharp-xunit-tests
 
 #*******************
 # Python code tasks
@@ -52,7 +52,7 @@ python-tests:
 python-test-coverage:
 	coverage run ${workspaceFolder}scripts/run_unit_tests.py
 
-python-code: pythontestcoverage
+python-code: python-test-coverage
 
 #*****************
 # Project tasks
@@ -74,6 +74,7 @@ git-submodules-setup:
 	git submodule foreach git pull
 
 git-get-submodules:
+	git submodule update --init --recursive --remote
 	#git submodule update --init --recursive --remote --merge
 
 #*****************
