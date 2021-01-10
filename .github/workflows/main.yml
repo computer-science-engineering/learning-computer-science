@@ -17,8 +17,8 @@ jobs:
           java-version: '15.0.0'
           architecture: x64
       - run: java -version
-      - name: Make javacode
-        run: make javacode
+      - name: Make java-code
+        run: make java-code
   build-pythoncode:
     name: pythoncode
     runs-on: ${{ matrix.os }}
@@ -36,8 +36,8 @@ jobs:
           architecture: 'x64'
       - run: python --version
       - run: pip install -r requirements.txt
-      - name: Make pythoncode
-        run: make pythoncode
+      - name: Make python-code
+        run: make python-code
   build-csharpcode:
     name: csharpcode
     runs-on: ${{ matrix.os }}
@@ -57,5 +57,5 @@ jobs:
           python-version: '3.9'
           architecture: 'x64'
       - run: dotnet --version
-      - name: Make csharpcode
-        run: make csharpcode
+      - name: Make csharp-code
+        run: make csharp-code
