@@ -73,6 +73,8 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
+      - run: make git
+
       - run: bash ./gradlew dependencies
 
       - save_cache:
@@ -136,6 +138,8 @@ jobs:
 
       - attach_workspace:
           at: ~/repo/tmp
+
+      - run: make git
 
       - run:
           command: |
