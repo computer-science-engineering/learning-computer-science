@@ -68,6 +68,14 @@ get-problems-count:
 git-version:
 	git --version
 
+git-upgrade-ubuntu:
+	sudo apt-get install software-properties-common
+	sudo add-apt-repository ppa:git-core/ppa -y
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install git -y
+	git --version
+
 git-submodules-setup:
 	git submodule sync --recursive
 	git submodule foreach --recursive git fetch
@@ -80,7 +88,7 @@ git-get-submodules:
 # All tasks
 #*****************
 
-git: git-version git-submodules-setup git-get-submodules
+git: git-version git-get-submodules
 
 code: java-code python-code csharp-code
 

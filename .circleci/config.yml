@@ -75,6 +75,11 @@ jobs:
             - v1-dependencies-
 
       - run:
+          name: Upgrade Git
+          command: |
+            make git-upgrade-ubuntu
+
+      - run:
           name: Get Git Submodules
           command: |
             make git
@@ -146,12 +151,7 @@ jobs:
       - run:
           name: Upgrade Git
           command: |
-            sudo apt-get install software-properties-common
-            sudo add-apt-repository ppa:git-core/ppa -y
-            sudo apt-get update
-            sudo apt-get upgrade
-            sudo apt-get install git -y
-            git --version
+            make git-upgrade-ubuntu
 
       - run:
           name: Get Git Submodules
