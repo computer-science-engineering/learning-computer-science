@@ -13,19 +13,19 @@ endif
 # Java code tasks
 #*****************
 
-javadependencies:
+java-dependencies:
 	${workspaceFolder}${gradlewScript} dependencies
 
-javabuild:
+java-build:
 	${workspaceFolder}${gradlewScript} build
 
-javatest:
+java-test:
 	${workspaceFolder}${gradlewScript} test
 
-javaclean:
+java-clean:
 	${workspaceFolder}${gradlewScript} clean
 
-javatestcoverage:
+java-test-coverage:
 	${workspaceFolder}${gradlewScript} test jacocoJupTestReport
 
 javacode: javadependencies javaclean javatestcoverage
@@ -34,31 +34,31 @@ javacode: javadependencies javaclean javatestcoverage
 # C# code tasks
 #*****************
 
-xunittests:
+csharp-xunit-tests:
 	python ${workspaceFolder}scripts/run_xunit_tests.py
 
-csharpcode: xunittests
+csharp-code: xunittests
 
 #*******************
 # Python code tasks
 #*******************
 
-pythonrequirements:
+python-requirements:
 	pip install -r requirements.txt
 
-pythontests:
+python-tests:
 	python ${workspaceFolder}scripts/run_unit_tests.py
 
-pythontestcoverage:
+python-test-coverage:
 	coverage run ${workspaceFolder}scripts/run_unit_tests.py
 
-pythoncode: pythontestcoverage
+python-code: pythontestcoverage
 
 #*****************
 # Project tasks
 #*****************
 
-getproblemscount:
+get-problems-count:
 	python ${workspaceFolder}scripts/get_problems_count.py
 
 #*****************
@@ -71,7 +71,7 @@ git-version:
 git-submodules-setup:
 	git submodule sync --recursive
 	git submodule foreach --recursive git fetch
-	git submodule foreach git pull origin main
+	git submodule foreach git pull
 
 git-get-submodules:
 	git submodule update --init --recursive --remote --merge
@@ -82,7 +82,7 @@ git-get-submodules:
 
 git: git-version git-submodules-setup git-get-submodules
 
-code: javacode pythoncode csharpcode
+code: java-code python-code csharp-code
 
-all: git getproblemscount code
+all: git get-problems-count code
 
