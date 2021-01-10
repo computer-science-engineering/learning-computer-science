@@ -74,8 +74,7 @@ git-submodules-setup:
 	git submodule foreach git pull
 
 git-get-submodules:
-	git submodule update --init --recursive --remote
-	#git submodule update --init --recursive --remote --merge
+	git submodule update --init --recursive --remote --merge
 
 #*****************
 # All tasks
