@@ -395,5 +395,10 @@
   "files.watcherExclude": {
     "**/target": true
   },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
   "c3.rootPackage": ""
 }
