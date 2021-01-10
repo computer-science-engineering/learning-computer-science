@@ -12,7 +12,7 @@ version: 2.1
 # https://circleci.com/orbs/registry/?filterBy=all
 orbs:
   build-tools: circleci/build-tools@2.7.1
-  jq: circleci/jq@1.9.1
+  jq: circleci/jq@1.10.0
   docker: circleci/docker@1.0.0 # needs jq above
   node: circleci/node@1.1.6
 
