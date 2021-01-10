@@ -61,6 +61,16 @@ pythoncode: pythontestcoverage
 getproblemscount:
 	python ${workspaceFolder}scripts/get_problems_count.py
 
+#*****************
+# Git tasks
+#*****************
+
+git-version:
+	git --version
+
+git-submodules-pull:
+	git submodule foreach git pull origin main
+
 get-git-submodules:
 	git submodule update --init --recursive --remote --merge
 
@@ -68,7 +78,7 @@ get-git-submodules:
 # All tasks
 #*****************
 
-git: get-git-submodules
+git: git-submodules-pull get-git-submodules
 
 code: javacode pythoncode csharpcode
 
