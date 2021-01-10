@@ -68,7 +68,9 @@ getproblemscount:
 git-version:
 	git --version
 
-git-submodules-pull:
+git-submodules-setup:
+	git submodule sync --recursive
+	git submodule foreach --recursive git fetch
 	git submodule foreach git pull origin main
 
 get-git-submodules:
@@ -78,7 +80,7 @@ get-git-submodules:
 # All tasks
 #*****************
 
-git: git-submodules-pull get-git-submodules
+git: git-version git-submodules-pull get-git-submodules
 
 code: javacode pythoncode csharpcode
 
