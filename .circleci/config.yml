@@ -145,6 +145,8 @@ jobs:
       - run:
           name: Get Git Submodules
           command: |
+            git submodule sync
+            git submodule update --init
             make git
 
       - run:
