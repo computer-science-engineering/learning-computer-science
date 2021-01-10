@@ -71,10 +71,10 @@ git-version:
 git-submodules-setup:
 	git submodule sync --recursive
 	git submodule foreach --recursive git fetch
-	# git submodule foreach git pull
+	git submodule foreach git pull
 
 git-get-submodules:
-	git submodule update --init --recursive --remote --merge
+	#git submodule update --init --recursive --remote --merge
 
 #*****************
 # All tasks
