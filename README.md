@@ -1,6 +1,6 @@
 # Learning Computer Science
 
-![logo](https://github.com/computer-science-engineering/learning-computer-science/blob/master/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true)
+![logo](https://github.com/computer-science-engineering/learning-computer-science/blob/main/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true)
 
 1. [Overview](#overview)
 2. [Project](#project)
@@ -16,10 +16,10 @@
 
 Learning data structures, algorithms, machine learning and various computer science constructs by programming practice from resources around the web.
 
-[![Discord](https://img.shields.io/discord/611637065913729036)](https://discord.gg/bv5FU8t) [![CircleCI](https://circleci.com/gh/computer-science-engineering/learning-computer-science/tree/master.svg?style=svg)](https://circleci.com/gh/computer-science-engineering/learning-computer-science/tree/master) 
+[![Discord](https://img.shields.io/discord/611637065913729036)](https://discord.gg/bv5FU8t) [![CircleCI](https://circleci.com/gh/computer-science-engineering/learning-computer-science/tree/main.svg?style=svg)](https://circleci.com/gh/computer-science-engineering/learning-computer-science/tree/main) 
 [![Actions Status](https://github.com/computer-science-engineering/learning-computer-science/workflows/build-test/badge.svg)](https://github.com/computer-science-engineering/learning-computer-science/actions)
 [![GitHub Super-Linter](https://github.com/computer-science-engineering/learning-computer-science/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/computer-science-engineering/learning-computer-science/actions)
-[![codecov](https://codecov.io/gh/computer-science-engineering/learning-computer-science/branch/master/graph/badge.svg)](https://codecov.io/gh/computer-science-engineering/learning-computer-science)
+[![codecov](https://codecov.io/gh/computer-science-engineering/learning-computer-science/branch/main/graph/badge.svg)](https://codecov.io/gh/computer-science-engineering/learning-computer-science)
 
 [More project metadata badges [here](./documentation/project/metadata.md). More CI/CD badges [here](./documentation/development/ci-cd.md#current-status).]
 
@@ -65,4 +65,4 @@ Learning data structures, algorithms, machine learning and various computer scie
 
 ## License
 
-[MIT](https://github.com/computer-science-engineering/learning-computer-science/blob/master/LICENSE)
+[MIT](https://github.com/computer-science-engineering/learning-computer-science/blob/main/LICENSE)

@@ -119,7 +119,7 @@ jobs:
           name: Run fossa
           command: |
             cd ./src/
-            curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+            curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/main/install.sh | bash
             fossa init
             fossa analyze
 
@@ -217,26 +217,26 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
       - build_test_java:
           filters:
             branches:
               only:
-                - master
+                - main
           requires:
             - download_from_code_climate
       - build_test_python:
           filters:
             branches:
               only:
-                - master
+                - main
           requires:
             - download_from_code_climate
       - upload_to_code_climate:
           filters:
             branches:
               only:
-                - master
+                - main
           requires:
             - build_test_java
             - build_test_python

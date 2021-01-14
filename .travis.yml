@@ -38,9 +38,9 @@ jobs:
     #   commit_message: Travis CI Updates [ci skip]
     #   local_dir: website
     #   on:
-    #     branch: master
+    #     branch: main
     #   target_branch: gh-pages
 
 branches:
   only:
-    - master
+    - main
