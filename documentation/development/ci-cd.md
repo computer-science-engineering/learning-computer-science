@@ -20,4 +20,3 @@
 | N/A                   | Coveralls   | Code coverage using Circle CI           | [![Coverage Status](https://coveralls.io/repos/github/computer-science-engineering/learning-computer-science/badge.svg?branch=master)](https://coveralls.io/github/computer-science-engineering/learning-computer-science?branch=master) [[Known issue](https://github.com/computer-science-engineering/learning-computer-science/issues/35)] |
 
 ## Methodology
-
