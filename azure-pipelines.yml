@@ -17,7 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-
+- task: CmdLine@2
+  inputs:
+    script: |
+      java -version
+      make java-code
+    failOnStderr: true
 - task: Gradle@2
   inputs:
     workingDirectory: ''
