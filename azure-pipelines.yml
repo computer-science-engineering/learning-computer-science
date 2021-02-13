@@ -6,16 +6,25 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+- job: java
+  pool:
+    vmImage: ubuntu-latest
+  container: adoptopenjdk:15-jdk
+  steps:
+  - task: CmdLine@2
+    inputs:
+      script: |
+        java -version
+        make java-code
+      failOnStderr: true
+- job: python
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+  - script: |
+      python --version
+      pip install -r requirements.txt
+      make python-code
+    displayName: 'Run a multi-line script'
 
-container: adoptopenjdk:15-jdk
-
-steps:
-
-- task: CmdLine@2
-  inputs:
-    script: |
-      java -version
-      make java-code
-    failOnStderr: true
