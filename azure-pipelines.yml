@@ -9,7 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-container: adoptopenjdk:15-jdk
+# container: adoptopenjdk:15-jdk
+
+
 
 steps:
 - script: echo Hello, world!
@@ -19,6 +21,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '15'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 
 - task: CmdLine@2
   inputs:
