@@ -197,7 +197,7 @@ jobs:
   upload_to_code_climate:
     <<: *defaults
     docker:
-      - image: cimg/python:3.9.1
+      - image: cimg/python:3.9.2
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
