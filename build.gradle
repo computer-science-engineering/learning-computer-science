@@ -23,11 +23,11 @@ repositories {
     mavenCentral()
 }
 
-ext.junit4Version        = '4.13.1'
+ext.junit4Version        = '4.13.2'
 ext.junitVintageVersion  = '4.12.1'
 ext.junitPlatformVersion = '1.5.2'
 ext.junitJupiterVersion  = '5.7.1'
-ext.log4jVersion         = '2.14.0'
+ext.log4jVersion         = '2.14.1'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -49,8 +49,8 @@ jacocoTestCoverageVerification {
     }
 }
 
-sourceCompatibility = JavaVersion.VERSION_15
-targetCompatibility = JavaVersion.VERSION_15
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 compileJava {
     options.compilerArgs += ["--enable-preview"]
