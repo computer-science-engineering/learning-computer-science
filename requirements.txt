@@ -1,6 +1,6 @@
 markdown
 BeautifulSoup4
-coverage<5.5 # manual enforcement for coveralls dependency: coveralls 1.9.2 has requirement coverage<5.0,>=3.6
+coverage<5.6 # manual enforcement for coveralls dependency: coveralls 1.9.2 has requirement coverage<5.0,>=3.6
 codacy-coverage
 codecov
 coveralls
