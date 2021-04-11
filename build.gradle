@@ -150,7 +150,7 @@ afterEvaluate {
     coverallsJacoco {
         def jacocoJupTestReportTask = project.tasks.getByName('jacocoJupTestReport')
         reportPath = "${buildDir}/reports/jacoco/report.xml"
-        reportSourceSets = jacocoJupTestReportTask.sourceDirectories.collect{ it.listFiles }.flatten()
+        reportSourceSets = files(jacocoJupTestReportTask.sourceDirectories.collect{ it.listFiles() }.flatten())
     } 
 }
 
