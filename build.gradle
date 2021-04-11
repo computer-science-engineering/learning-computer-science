@@ -9,8 +9,7 @@ buildscript {
 
 plugins {
     id "org.sonarqube" version "3.1.1"
-    id 'com.github.kt3k.coveralls' version '2.8.4'
-    id("com.github.nbaztec.coveralls-jacoco") version "1.2.12"
+    id "com.github.nbaztec.coveralls-jacoco" version "1.2.12"
 }
 
 repositories { 
@@ -32,8 +31,6 @@ apply plugin: 'application'
 
 // https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
-apply plugin: 'com.github.kt3k.coveralls'
-apply plugin: 'com.github.nbaztec.coveralls-jacoco'
 jacoco {
     toolVersion = '0.8.6'
 }
@@ -149,6 +146,12 @@ afterEvaluate {
     }
 
     check.dependsOn jacocoJupTestReport
+
+    coverallsJacoco {
+        def jacocoJupTestReportTask = project.tasks.getByName('jacocoJupTestReport')
+        reportPath = "${buildDir}/reports/jacoco/report.xml"
+        reportSourceSets = jacocoJupTestReportTask.sourceDirectories.collect{ it.listFiles }.flatten()
+    } 
 }
 
 // https://github.com/codeclimate/test-reporter/issues/243
@@ -160,16 +163,6 @@ afterEvaluate {
 //     }
 //     filter { line -> line.replaceAll("com/", "webapp/src/main/java/com/") }
 // }
-
-// https://github.com/ben-manes/caffeine/blob/master/build.gradle
-coveralls {
-    jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
-}  
-
-coverallsJacoco {
-    reportPath = "${buildDir}/reports/jacoco/report.xml"
-    //reportSourceSets = projects.jacocoJupTestReport.sourceDirectories.collect{ it.getFiles() }.flatten()
-} 
 
 // https://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
 tasks.withType(Test) {
