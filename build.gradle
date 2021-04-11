@@ -4,23 +4,18 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
     }
-/*     dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.4'
-    } */
 }
 
 plugins {
     id "org.sonarqube" version "3.1.1"
-    id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.8.4'
+    id("com.github.nbaztec.coveralls-jacoco") version "1.2.12"
 }
 
 repositories { 
     // https://stackoverflow.com/questions/36029754/force-gradle-to-use-http-instead-of-https
     // https://discuss.gradle.org/t/how-to-change-gradle-plugin-portal-from-https-to-http/10847/12
-    jcenter()
     mavenLocal()
     mavenCentral()
 }
@@ -34,10 +29,11 @@ ext.log4jVersion         = '2.14.1'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
-apply plugin: 'com.github.kt3k.coveralls'
 
 // https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'com.github.nbaztec.coveralls-jacoco'
 jacoco {
     toolVersion = '0.8.6'
 }
@@ -48,13 +44,6 @@ jacocoTestCoverageVerification {
                 minimum = 0.5
             }
         }
-    }
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
     }
 }
 
@@ -174,8 +163,13 @@ afterEvaluate {
 
 // https://github.com/ben-manes/caffeine/blob/master/build.gradle
 coveralls {
-  jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
-}
+    jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
+}  
+
+coverallsJacoco {
+    reportPath = "${buildDir}/reports/jacoco/report.xml"
+    //reportSourceSets = projects.jacocoJupTestReport.sourceDirectories.collect{ it.getFiles() }.flatten()
+} 
 
 // https://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
 tasks.withType(Test) {
