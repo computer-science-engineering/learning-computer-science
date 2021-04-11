@@ -147,18 +147,18 @@ afterEvaluate {
     }
 
     check.dependsOn jacocoJupTestReport
+
+    coverallsJacoco {
+        def jacocoJupTestReportTask = project.tasks.getByName('jacocoJupTestReport')
+        reportPath = "${buildDir}/reports/jacoco/report.xml"
+        reportSourceSets = files(jacocoJupTestReportTask.sourceDirectories.collect{ it.listFiles() }.flatten())
+    } 
 }
 
 // https://github.com/ben-manes/caffeine/blob/master/build.gradle
 coveralls {
     jacocoReportPath = "${buildDir}/reports/jacoco/report.xml"
 }  
-
-coverallsJacoco {
-    def jacocoJupTestReportTask = project.tasks.getByName('jacocoJupTestReport')
-    reportPath = "${buildDir}/reports/jacoco/report.xml"
-    reportSourceSets = files(jacocoJupTestReportTask.sourceDirectories.collect{ it.listFiles() }.flatten())
-} 
 
 // https://github.com/codeclimate/test-reporter/issues/243
 // task jacocoFixForCodeClimate(type: Copy) {
