@@ -8,7 +8,7 @@ buildscript {
 }
 
 plugins {
-    id "org.sonarqube" version "3.1.1"
+    id "org.sonarqube" version "3.2.0"
     id "com.github.nbaztec.coveralls-jacoco" version "1.2.12"
     id 'com.github.kt3k.coveralls' version '2.12.0'
 }
@@ -23,7 +23,7 @@ repositories {
 ext.junit4Version        = '4.13.2'
 ext.junitVintageVersion  = '4.12.1'
 ext.junitPlatformVersion = '1.5.2'
-ext.junitJupiterVersion  = '5.7.1'
+ext.junitJupiterVersion  = '5.7.2'
 ext.log4jVersion         = '2.14.1'
 
 apply plugin: 'java'
