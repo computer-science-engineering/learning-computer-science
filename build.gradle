@@ -9,7 +9,7 @@ buildscript {
 
 plugins {
     id "org.sonarqube" version "3.3"
-    id "com.github.nbaztec.coveralls-jacoco" version "1.2.12"
+    id "com.github.nbaztec.coveralls-jacoco" version "1.2.13"
     id 'com.github.kt3k.coveralls' version '2.12.0'
 }
 
