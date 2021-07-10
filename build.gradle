@@ -94,7 +94,7 @@ dependencies {
 	//testRuntimeOnly("org.junit.platform:junit-platform-launcher:${junitPlatformVersion}")
     
 	// To avoid compiler warnings about @API annotations in JUnit code
-	testCompileOnly('org.apiguardian:apiguardian-api:1.1.1')
+	testCompileOnly('org.apiguardian:apiguardian-api:1.1.2')
     implementation('org.apiguardian:apiguardian-api:1.0.0')
 
     // To use Log4J's LogManager
