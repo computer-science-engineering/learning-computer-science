@@ -9,10 +9,10 @@
 
 ## Environment
 
-| Language | Version | Package                                                                    |
-| -------- | ------- | -------------------------------------------------------------------------- |
-| Java     | 12      | OpenJDK ([AdoptOpenJDK with HotSpot](https://adoptopenjdk.net/index.html)) |
-| Python   | 3.7.2   | N/A                                                                        |
+| Language | Version    | Package                                                |
+| -------- | ---------- | ------------------------------------------------------ |
+| Java     | Latest     | OpenJDK ([OpenJDK with HotSpot](https://adoptium.net)) |
+| Python   | Latest 3.x | N/A                                                    |
 
 I recommended using [VS Code](https://code.visualstudio.com/).
 
