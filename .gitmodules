@@ -16,3 +16,6 @@
 [submodule "src/_notes/books/distributed-systems-for-fun-and-profit"]
 	path = src/_notes/books/distributed-systems-for-fun-and-profit
 	url = https://github.com/computer-science-engineering/notes-book_dsffp
+[submodule "src/EducativeIo/Courses/GrokkingTheCodingInterview"]
+	path = src/EducativeIo/Courses/GrokkingTheCodingInterview
+	url = https://github.com/computer-science-engineering/educativeio-courses_grokking-coding-interview
