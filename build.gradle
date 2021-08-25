@@ -95,7 +95,7 @@ dependencies {
     
 	// To avoid compiler warnings about @API annotations in JUnit code
 	testCompileOnly('org.apiguardian:apiguardian-api:1.1.2')
-    implementation('org.apiguardian:apiguardian-api:1.0.0')
+    implementation('org.apiguardian:apiguardian-api:1.1.2')
 
     // To use Log4J's LogManager
 	testRuntimeOnly("org.apache.logging.log4j:log4j-core:${log4jVersion}")
