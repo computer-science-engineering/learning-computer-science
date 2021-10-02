@@ -22,7 +22,7 @@ install:
   - cmd: java --version
   - cmd: python --version"
   - cmd: python -m pip install -r requirements.txt
-  - sh: java --version
+  - sh: java -version
   - sh: whereis python3.9
   - sh: . /home/appveyor/venv3.9/bin/activate
   - sh: python --version
