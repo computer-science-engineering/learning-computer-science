@@ -44,7 +44,7 @@ jobs:
       # https://hub.docker.com/r/circleci/openjdk/
       # adoptopenjdk/openjdk15
       # https://circleci.com/developer/images/image/cimg/openjdk
-      - image: cimg/openjdk:16.0.2
+      - image: cimg/openjdk:17.0.0
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -60,6 +60,7 @@ jobs:
 
     steps:
       - checkout
+      - run: java --version
       - build-tools/install-ci-tools
       - jq/install
       - docker/install-docker-tools

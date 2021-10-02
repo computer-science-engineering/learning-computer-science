@@ -43,7 +43,7 @@ pacman -S mingw-w64-x86_64-cmake
 1. Restart VSCode.
 1. Make sure new .project and .classpath files have been generated. Verify that .classpath now points to the new version of Java. This may take a good few minutes.
 1. Run gradlew test and code coverage tasks.
-1. Update CI scripts (appveyor, circle-ci, travis) to point to new Java version.
+1. Update CI scripts (GitHub, appveyor, circle-ci, travis) to point to new Java version.
    1. For circle-ci, docker image tags can be viewed [here](https://circleci.com/docs/2.0/docker-image-tags.json).
 
 #### Gradle

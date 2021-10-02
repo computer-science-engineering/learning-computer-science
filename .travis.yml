@@ -8,7 +8,7 @@ jobs:
   include:
     - stage: build-test
       language: java
-      jdk: openjdk16
+      jdk: openjdk17
       before_install:
         - chmod +x gradlew
       script:

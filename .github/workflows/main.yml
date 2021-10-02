@@ -18,8 +18,8 @@ jobs:
         run: make git
       - uses: actions/setup-java@v2
         with:
-          distribution: 'adopt'
-          java-version: '16.0.0'
+          distribution: 'temurin'
+          java-version: '17.0.0'
           architecture: x64
       - run: java -version
       - name: Make java-code
