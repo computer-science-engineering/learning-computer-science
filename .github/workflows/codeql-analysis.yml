@@ -30,8 +30,8 @@ jobs:
       - name: setup java
         uses: actions/setup-java@v2
         with:
-          distribution: 'adopt'
-          java-version: '16.0.0'
+          distribution: 'temurin'
+          java-version: '17.0.0'
           architecture: x64
       - run: java -version
 
@@ -46,7 +46,8 @@ jobs:
       - name: setup dotnet
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.100'
+          dotnet-version: '6.0.x'
+          include-prerelease: true
       - run: dotnet --version
 
       # Initializes the CodeQL tools for scanning.
