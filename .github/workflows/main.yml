@@ -37,7 +37,7 @@ jobs:
         run: make git
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.10'
           architecture: 'x64'
       - run: python --version
       - run: pip install -r requirements.txt
@@ -60,7 +60,7 @@ jobs:
           include-prerelease: true
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.10'
           architecture: 'x64'
       - run: dotnet --version
       - name: Make csharp-code
