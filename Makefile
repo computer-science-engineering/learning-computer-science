@@ -44,7 +44,7 @@ csharp-code: csharp-xunit-tests
 #*******************
 
 python-requirements:
-	pip install -r requirements.txt
+	python -m pip install -r requirements.txt
 
 python-tests:
 	python ${workspaceFolder}scripts/run_unit_tests.py
