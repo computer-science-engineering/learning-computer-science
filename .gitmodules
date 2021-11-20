@@ -16,6 +16,9 @@
 [submodule "src/_notes/books/distributed-systems-for-fun-and-profit"]
 	path = src/_notes/books/distributed-systems-for-fun-and-profit
 	url = https://github.com/computer-science-engineering/notes-book_dsffp
+[submodule "src/_notes/books/machine-learning-for-humans_maini_sabri"]
+	path = src/_notes/books/machine-learning-for-humans_maini_sabri
+	url = https://github.com/computer-science-engineering/notes-book_ml-for-humans_maini_sabri
 [submodule "src/EducativeIo/Courses/GrokkingTheCodingInterview"]
 	path = src/EducativeIo/Courses/GrokkingTheCodingInterview
 	url = https://github.com/computer-science-engineering/educativeio-courses_grokking-coding-interview
