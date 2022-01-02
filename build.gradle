@@ -139,9 +139,9 @@ afterEvaluate {
         //files(sourceSets.main.output)
 
         reports {
-            xml.enabled true
+            xml.required = true
             xml.destination file("${buildDir}/reports/jacoco/report.xml")
-            html.enabled true
+            html.required = true
             html.destination file("${buildDir}/reports/jacoco/html")
         }
     }
