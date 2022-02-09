@@ -44,7 +44,7 @@ jobs:
       # https://hub.docker.com/r/circleci/openjdk/
       # adoptopenjdk/openjdk15
       # https://circleci.com/developer/images/image/cimg/openjdk
-      - image: cimg/openjdk:17.0.1
+      - image: cimg/openjdk:17.0.2
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
