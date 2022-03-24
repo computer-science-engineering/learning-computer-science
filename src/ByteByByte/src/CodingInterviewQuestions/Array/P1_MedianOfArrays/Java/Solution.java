@@ -16,12 +16,12 @@ public class Solution {
         int r = len1;
         //find the m1 so that nums1[m1] >= nums2[m2 - 1]
         while(l < r){
-            int m1 = l + (r - l) / 2;
-            int m2 = k - m1;
-            if (nums1[m1] < nums2[m2 - 1]) {
-                l = m1 + 1;
+            int nums1ArrayIndex = l + (r - l) / 2;
+            int nums2ArrayIndex = k - nums1ArrayIndex;
+            if (nums1[nums1ArrayIndex] < nums2[nums2ArrayIndex - 1]) {
+                l = nums1ArrayIndex + 1;
             } else {
-                r = m1;
+                r = nums1ArrayIndex;
             }
         }
         int m1 = l;

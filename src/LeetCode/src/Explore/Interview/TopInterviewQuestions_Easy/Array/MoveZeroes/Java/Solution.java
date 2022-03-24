@@ -1,5 +1,7 @@
 package LeetCode.src.Explore.Interview.TopInterviewQuestions_Easy.Array.MoveZeroes.Java;
 
+import static LeetCode.src.SwapNumbersInArray.swap;
+
 public class Solution {
     public static void main(String[] args) {
         int[] nums = {1,1,0,3,12};
@@ -35,9 +37,9 @@ public class Solution {
         }
     }
 
-    private static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
+//    private static void swap(int[] nums, int i, int j) {
+//        int temp = nums[i];
+//        nums[i] = nums[j];
+//        nums[j] = temp;
+//    }
 }

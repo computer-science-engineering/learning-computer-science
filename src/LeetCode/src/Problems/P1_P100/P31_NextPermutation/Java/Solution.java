@@ -1,5 +1,7 @@
 package LeetCode.src.Problems.P1_P100.P31_NextPermutation.Java;
 
+import static LeetCode.src.SwapNumbersInArray.swap;
+
 public class Solution {
     public static void main(String[] args) {
         int[] nums = {1,2,3};
@@ -38,9 +40,9 @@ public class Solution {
         }
     }
 
-    private static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
+//    private static void swap(int[] nums, int i, int j) {
+//        int temp = nums[i];
+//        nums[i] = nums[j];
+//        nums[j] = temp;
+//    }
 }

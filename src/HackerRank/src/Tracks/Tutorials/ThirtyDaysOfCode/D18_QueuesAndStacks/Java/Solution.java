@@ -23,6 +23,14 @@ class Main {
         }
 
         // Pop/Dequeue the chars at the head of both data structures and compare them:
+        boolean isPalindrome = isPalindrome(s, p);
+
+        //Finally, print whether string s is palindrome or not.
+        System.out.println( "The word, " + input + ", is "
+                + ( (!isPalindrome) ? "not a palindrome." : "a palindrome." ) );
+    }
+
+    private static boolean isPalindrome(char[] s, Solution p) {
         boolean isPalindrome = true;
         for (int i = 0; i < s.length/2; i++) {
             if (p.popCharacter() != p.dequeueCharacter()) {
@@ -30,10 +38,7 @@ class Main {
                 break;
             }
         }
-
-        //Finally, print whether string s is palindrome or not.
-        System.out.println( "The word, " + input + ", is "
-                + ( (!isPalindrome) ? "not a palindrome." : "a palindrome." ) );
+        return isPalindrome;
     }
 }
 
