@@ -14,7 +14,7 @@ orbs:
   build-tools: circleci/build-tools@3.0.0
   jq: circleci/jq@2.2.0
   docker: circleci/docker@1.7.0 # needs jq above
-  node: circleci/node@5.0.1
+  node: circleci/node@5.0.2
 
 jobs:
   download_from_code_climate:
