@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "EducativeIo.Courses.GrokkingTheCodingInterview.Ch02_Pattern_SlidingWindow.P2_SmallestSubarrayWithAGivenSum.Java.Solution",
+            "projectName": "learning-computer-science"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

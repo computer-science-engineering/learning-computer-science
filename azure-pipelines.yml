@@ -4,27 +4,26 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
 
 jobs:
-- job: java
-  pool:
-    vmImage: ubuntu-latest
-  container: adoptopenjdk:15-jdk
-  steps:
-  - task: CmdLine@2
-    inputs:
-      script: |
-        java -version
-        make java-code
-      failOnStderr: true
-- job: python
-  pool:
-    vmImage: ubuntu-latest
-  steps:
-  - script: |
-      python --version
-      pip install -r requirements.txt
-      make python-code
-    displayName: 'Run a multi-line script'
-
+  - job: java
+    pool:
+      vmImage: ubuntu-latest
+    container: adoptopenjdk:18-jdk
+    steps:
+      - task: CmdLine@2
+        inputs:
+          script: |
+            java -version
+            make java-code
+          failOnStderr: true
+  - job: python
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - script: |
+          python --version
+          pip install -r requirements.txt
+          make python-code
+        displayName: 'Run a multi-line script'

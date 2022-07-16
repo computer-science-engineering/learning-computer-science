@@ -33,7 +33,7 @@ apply plugin: 'application'
 // https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
 jacoco {
-    toolVersion = '0.8.7'
+    toolVersion = '0.8.8'
 }
 jacocoTestCoverageVerification {
     violationRules {
@@ -45,8 +45,8 @@ jacocoTestCoverageVerification {
     }
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = JavaVersion.VERSION_18
+targetCompatibility = JavaVersion.VERSION_18
 
 compileJava {
     options.compilerArgs += ["--enable-preview"]

@@ -1,0 +1,446 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-msys
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Sat Jul 16 16:01:33 2022
+
+# Variables
+
+# environment
+SYSTEMDRIVE = C:
+# environment
+JAVA_HOME = C:\Program Files\Eclipse Adoptium\jdk-18.0.1.10-hotspot\
+# environment
+PYENV = C:\Users\ripuhan\.pyenv\pyenv-win\
+# environment
+LC_ALL = C
+# environment
+CAMLIBS = C:\Program Files\darktable\lib\libgphoto2\2.5.27
+# environment
+USERPROFILE = C:\Users\ripuhan
+# environment
+LOCALAPPDATA = C:\Users\ripuhan\AppData\Local
+# environment
+PYTHON_INSTALL_LOC = C:\\Program Files\\Python38\\python.exe
+# environment
+VSCODE_CWD = C:\Program Files\Microsoft VS Code Insiders
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make
+# environment
+GOPATH = G:\dev\go
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_21064_MHAUDIBOIIARKYUF
+# environment
+IOLIBS = C:\Program Files\darktable\lib\libgphoto2_port\0.12.0
+# environment
+ONEDRIVECOMMERCIAL = C:\Users\ripuhan\OneDrive - C3.ai, INC
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\ripuhan\AppData\Roaming\Code - Insiders\CachedData\1cd90cceddf3c413673963ab6f154d2ff294b17c
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = /c/Users/ripuhan/AppData/Local/Temp
+# default
+.INCLUDE_DIRS = /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\ripuhan\OneDrive - C3.ai, INC
+# environment
+POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Pro
+# makefile
+CURDIR := /g/dev/_my-projects/_orgs/computer-science-engineering/learning-computer-science
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PROGRAMFILES = C:\Program Files
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 9)
+gradlewScript = .\gradlew.bat
+# environment
+VSCODE_PID = 21064
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\ripuhan\OneDrive
+# default
+MAKE_HOST := x86_64-pc-msys
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := /bin/sh
+# environment
+HOMEPATH = \Users\ripuhan
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /c/Program Files/Eclipse Adoptium/jdk-18.0.1.10-hotspot/bin:/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files/Python310/Scripts:/c/Program Files/Python310:/c/Program Files/Python39/Scripts:/c/Program Files/Python39:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/mingw64/bin:/usr/bin:/c/ProgramData/chocolatey/bin:/c/Programs/_64/ffmpeg-win64-static/bin:/g/dev/go/bin:/c/Program Files (x86)/Common Files/Acronis/VirtualFile:/c/Program Files (x86)/Common Files/Acronis/VirtualFile64:/c/Program Files (x86)/Common Files/Acronis/FileProtector:/c/Program Files (x86)/Common Files/Acronis/FileProtector64:/c/Program Files (x86)/Common Files/Acronis/SnapAPI:/c/Program Files/Pandoc:/c/Programs/_64/protoc-3.13.0-win64/bin:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Programs/tools:/c/Program Files/nu/bin:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/c/Program Files (x86)/Calibre2:/c/Program Files/MiKTeX/miktex/bin/x64:/c/Program Files (x86)/sbt/bin:/c/Program Files/Microsoft SQL Server/140/Tools/Binn:/c/Program Files/wkhtmltopdf/bin:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/Programs/_64/Android/Sdk/platform-tools:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Go/bin:/c/Program Files/nodejs:/c/Program Files/dotnet:/c/Program Files/PowerShell/7:/c/Program Files/starship/bin:/c/Program Files/Git/cmd:/c/Program Files (x86)/GitExtensions:/c/Program Files/GitHub CLI:/c/Program Files/Neovim/bin:/c/Program Files (x86)/q-TextAsData:/c/Program Files/Microsoft VS Code Insiders/bin:/c/Users/ripuhan/.dotnet/tools:/c/Program Files/Onivim2:/c/Users/ripuhan/AppData/Local/Microsoft/WindowsApps:/c/Users/ripuhan/go/bin:/c/Users/ripuhan/AppData/Local/GitHubDesktop/bin:/c/Users/ripuhan/AppData/Roaming/npm
+# environment
+ZES_ENABLE_SYSMAN = 1
+# environment
+COMPUTERNAME = RUDRA
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132553168738515425
+# environment
+JAVA8_HOME = C:\Programs\_64\zulu8.44.0.11-ca-jdk8.0.242-win_x64
+# environment
+GOROOT = C:\Program Files\Go
+# makefile (from 'Makefile', line 1)
+workspaceFolder := 
+# environment
+LOGONSERVER = \\RUDRA
+# environment
+USERNAME = ripuhan
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+SBT_HOME = C:\Program Files (x86)\sbt\
+# environment
+USERDOMAIN = RUDRA
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+!G: = g:\dev\_my-projects\_orgs\computer-science-engineering\learning-computer-science
+# environment
+OS = Windows_NT
+# environment
+MAGICK_HOME = C:\Program Files\darktable\lib\GraphicsMagick-1.3.36\modules-Q8\coders
+# makefile
+.DEFAULT_GOAL := java-dependencies
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+USERDOMAIN_ROAMINGPROFILE = RUDRA
+# environment
+NUMBER_OF_PROCESSORS = 12
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\ripuhan\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/ripuhan
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = /c/Users/ripuhan/AppData/Local/Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\e790b205022855d3a50629d88167338d-1.70.0-insider-main-sock
+# environment
+TERM = xterm-256color
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+PROCESSOR_REVISION = a600
+# environment
+PYENV_HOME = C:\Users\ripuhan\.pyenv\pyenv-win\
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 166 Stepping 0, GenuineIntel
+# variable set hash-table stats:
+# Load=108/1024=11%, Rehash=0, Collisions=11/140=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 1909419319, inode 11821949021851974): 38 files, no impossibilities.
+
+# 38 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+git-submodules-setup:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 80):
+	git submodule sync --recursive
+	git submodule foreach --recursive git fetch
+	git submodule foreach git pull
+
+java-code: java-dependencies java-clean java-test-coverage
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+java-test-coverage:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	${workspaceFolder}${gradlewScript} test jacocoJupTestReport
+
+java-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 20):
+	${workspaceFolder}${gradlewScript} build
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-05 19:35:03.2509504
+#  File has been updated.
+#  Successfully updated.
+
+java-clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
+	${workspaceFolder}${gradlewScript} clean
+
+code: java-code python-code csharp-code
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+get-problems-count:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 62):
+	python ${workspaceFolder}scripts/get_problems_count.py
+
+git: git-version git-get-submodules
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+python-requirements:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	python -m pip install -r requirements.txt
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: git get-problems-count code
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+java-dependencies:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 17):
+	${workspaceFolder}${gradlewScript} dependencies
+
+python-tests:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 50):
+	python ${workspaceFolder}scripts/run_unit_tests.py
+
+git-upgrade-ubuntu:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 72):
+	sudo apt-get install software-properties-common
+	sudo add-apt-repository ppa:git-core/ppa -y
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install git -y
+	git --version
+
+java-test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 23):
+	${workspaceFolder}${gradlewScript} test
+
+git-version:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := git-version
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 69):
+	git --version
+
+python-test-coverage:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 53):
+	coverage run ${workspaceFolder}scripts/run_unit_tests.py
+
+python-code: python-test-coverage
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+git-get-submodules:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 85):
+	git submodule update --init --recursive --remote --rebase
+
+csharp-xunit-tests:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 38):
+	python ${workspaceFolder}scripts/run_xunit_tests.py
+
+csharp-code: csharp-xunit-tests
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=23/1024=2%, Rehash=0, Collisions=0/48=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 61 / storage = 709 B / avg = 11 B
+# current buf: size = 8162 B / used = 709 B / count = 61 / avg = 11 B
+
+# strcache performance: lookups = 100 / hit rate = 39%
+# hash-table stats:
+# Load=61/8192=1%, Rehash=0, Collisions=0/100=0%
+# Finished Make data base on Sat Jul 16 16:01:33 2022
+
+ 

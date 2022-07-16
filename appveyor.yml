@@ -10,12 +10,12 @@ image:
   - Visual Studio 2019
   - Ubuntu
 
-stack: node 15, jdk 17, python 3.10 x64
+stack: node 16, jdk 18, python 3.10 x64
 
 install:
   - cmd: choco install openjdk
   #- cmd: "SET JAVA_HOME=C:\\Program Files\\Java\\jdk16"
-  - cmd: "SET JAVA_HOME=C:\\Program Files\\OpenJDK\\jdk-17"
+  - cmd: "SET JAVA_HOME=C:\\Program Files\\OpenJDK\\jdk-18"
   - cmd: "SET PATH=%JAVA_HOME%\\bin;%path%"
   - cmd: "SET PYTHON3=C:\\Python310-x64"
   - cmd: "SET PATH=%PYTHON3%;%PYTHON3%\\Scripts;%path%"
