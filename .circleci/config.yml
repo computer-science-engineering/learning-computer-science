@@ -44,7 +44,7 @@ jobs:
       # https://hub.docker.com/r/circleci/openjdk/
       # adoptopenjdk/openjdk15
       # https://circleci.com/developer/images/image/cimg/openjdk
-      - image: cimg/openjdk:18.0.1
+      - image: cimg/openjdk:18.0.2
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -202,7 +202,7 @@ jobs:
   upload_to_code_climate:
     <<: *defaults
     docker:
-      - image: cimg/python:3.10.5
+      - image: cimg/python:3.10.6
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
