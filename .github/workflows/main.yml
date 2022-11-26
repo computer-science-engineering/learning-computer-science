@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '18.0.0'
+          java-version: '19.0.0'
           architecture: x64
       - run: java -version
       - name: Make java-code
