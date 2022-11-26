@@ -16,7 +16,7 @@ jobs:
 
     - stage: build-test
       language: python
-      python: 3.10
+      python: 3.11
       script:
         - python --version
         - pip install --upgrade pip
@@ -25,7 +25,7 @@ jobs:
 
     # - stage: deploy
     #   language: python
-    #   python: 3.9
+    #   python: 3.11
     #   script:
     #     - python scripts/get_problems_count.py
     #https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/
