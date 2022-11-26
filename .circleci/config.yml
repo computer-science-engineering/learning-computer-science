@@ -113,10 +113,10 @@ jobs:
             - codeclimate.java.json
 
       # run test coverage to coveralls
-      - run:
-          name: Upload to coveralls
-          command: |
-            bash ./gradlew test jacocoJupTestReport coverallsJacoco
+      # - run:
+      #     name: Upload to coveralls
+      #     command: |
+      #       bash ./gradlew test jacocoJupTestReport coverallsJacoco
 
       # Run fossa
       - run:
@@ -186,12 +186,12 @@ jobs:
             - codeclimate.python.json
 
       # run test coverage to coveralls
-      - run:
-          name: Upload to coveralls
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            coveralls
+      # - run:
+      #     name: Upload to coveralls
+      #     command: |
+      #       python3 -m venv venv
+      #       . venv/bin/activate
+      #       coveralls
 
       # upload test coverage to codacy
       # - run:
