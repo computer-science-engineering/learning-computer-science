@@ -22,3 +22,6 @@
 [submodule "src/EducativeIo/Courses/GrokkingTheCodingInterview"]
 	path = src/EducativeIo/Courses/GrokkingTheCodingInterview
 	url = https://github.com/computer-science-engineering/educativeio-courses_grokking-coding-interview
+[submodule "src/ByteByteGo/Courses/SystemDesignInterview"]
+	path = src/ByteByteGo/Courses/SystemDesignInterview
+	url = https://github.com/computer-science-engineering/bytebytego-courses_system-design-interview
