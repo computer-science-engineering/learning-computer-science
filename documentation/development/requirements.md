@@ -62,3 +62,4 @@ From the project root, run `.\gradlew.bat wrapper --gradle-version=x.x.x --distr
     1. There is a `Makefile` at the root of this repository for building and running tests.
     1. Instructions will be provided at a later time for command line usage to add new problems, run tests, etc. [[Ref](https://github.com/manastalukdar/learning-computer-science/issues/51)]
 1. I do not recommend using any sort of bloated IDE. They tend to add a lot of files simply for their specific plumbing.
+1. Added a new submodule: `git submodule add https://github.com/computer-science-engineering/bytebytego-courses_system-design-interview src\ByteByteGo\Courses\system-design-interview`
