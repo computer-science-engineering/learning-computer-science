@@ -33,7 +33,7 @@ apply plugin: 'application'
 // https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
 jacoco {
-    toolVersion = '0.8.8'
+    toolVersion = '0.8.9'
 }
 jacocoTestCoverageVerification {
     violationRules {
