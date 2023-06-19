@@ -139,7 +139,7 @@ jobs:
     <<: *defaults
     docker:
       # https://circleci.com/developer/images/image/cimg/python
-      - image: cimg/python:3.11.3
+      - image: cimg/python:3.11.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -203,7 +203,7 @@ jobs:
   upload_to_code_climate:
     <<: *defaults
     docker:
-      - image: cimg/python:3.11.3
+      - image: cimg/python:3.11.4
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
