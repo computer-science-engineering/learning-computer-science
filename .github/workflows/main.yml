@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Checkout submodules
         run: make git
-      - uses: actions/setup-java@v3
+      - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '19.0.0'
