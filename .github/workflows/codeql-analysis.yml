@@ -45,7 +45,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: setup dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0'
           include-prerelease: true
