@@ -24,7 +24,7 @@ ext.junit4Version        = '4.13.2'
 ext.junitVintageVersion  = '4.12.1'
 ext.junitPlatformVersion = '1.5.2'
 ext.junitJupiterVersion  = '5.10.1'
-ext.log4jVersion         = '2.22.0'
+ext.log4jVersion         = '2.22.1'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
