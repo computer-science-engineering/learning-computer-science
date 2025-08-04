@@ -1,6 +1,7 @@
 package LeetCode.src.Explore.Interview.GoogleInterview.ArraysAndStrings.FirstMissingPositive.Java;
+import LeetCode.src.SwapNumbersInArray;
 
-public class Solution {
+public class Solution extends SwapNumbersInArray {
     public static void main(String[] args) {
         int[] input = {3, 4, -1, 1};
         int result = findMissingPositive(input);
@@ -37,9 +38,4 @@ public class Solution {
 
     }
 
-    private static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
 }
