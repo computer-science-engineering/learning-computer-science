@@ -4,3 +4,7 @@ coverage<7.11 # manual enforcement for coveralls dependency: coveralls 1.9.2 has
 codacy-coverage
 codecov
 coveralls
+certifi>=2024.7.4 # not directly required, pinned by Snyk to avoid a vulnerability
+idna>=3.7 # not directly required, pinned by Snyk to avoid a vulnerability
+requests>=2.31.0 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
