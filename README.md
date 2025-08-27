@@ -1,10 +1,8 @@
-# Learning Computer Science
+# Learning Technical
 
 <div align="center">
 
-![Learning Computer Science Logo](https://github.com/manastalukdar/learning-technical/blob/main/resources/images/logo/Logo%20LCS%20color/logo%20LCS%20color%20low%20res.png?raw=true)
-
-**A comprehensive repository for mastering data structures, algorithms, and system design through hands-on practice**
+**Documenting learnings of technical topics**
 
 [![GitHub Actions](https://github.com/manastalukdar/learning-technical/workflows/build-test/badge.svg)](https://github.com/manastalukdar/learning-technical/actions)
 [![GitHub Super-Linter](https://github.com/manastalukdar/learning-technical/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/manastalukdar/learning-technical/actions)
