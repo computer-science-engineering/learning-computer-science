@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Subsets",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/gx2OqlvEnWG"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Easy",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Subsets",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Subsets"],
+    "buckets": []
+}

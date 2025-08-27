@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Next Interval",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/gkkmqXO6zrY"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Hard",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Two Heaps",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Two Heaps"],
+    "buckets": []
+}

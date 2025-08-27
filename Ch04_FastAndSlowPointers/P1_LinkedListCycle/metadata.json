@@ -1,0 +1,42 @@
+{
+    "type": "Coding",
+    "name": "LinkedList Cycle",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/6556337280385024"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Easy",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Fast and Slow Pointers",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Linked List",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "Coding",
+    "name": "Intervals Intersection",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/collection/page/5668639101419520/5671464854355968/6518042546667520"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Merge Intervals",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Arrays",
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
