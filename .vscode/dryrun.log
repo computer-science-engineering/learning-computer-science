@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/g/dev/_my-projects/_orgs/computer-science-engineering/learning-computer-science'
+make: Entering directory '/g/dev/_my-projects/_orgs/manastalukdar/learning-technical'
 .\gradlew.bat dependencies
-make: Leaving directory '/g/dev/_my-projects/_orgs/computer-science-engineering/learning-computer-science'
+make: Leaving directory '/g/dev/_my-projects/_orgs/manastalukdar/learning-technical'
  

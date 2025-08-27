@@ -9,7 +9,7 @@
             "name": "Launch Solution",
             "request": "launch",
             "mainClass": "EducativeIo.Courses.GrokkingTheCodingInterview.Ch02_Pattern_SlidingWindow.P2_SmallestSubarrayWithAGivenSum.Java.Solution",
-            "projectName": "learning-computer-science"
+            "projectName": "learning-technical"
         },
         {
             "name": "Python: Current File",
@@ -29,7 +29,7 @@
             "name": "CodeLens (Launch) - Solution",
             "request": "launch",
             "mainClass": "EducativeIo.Courses.GrokkingTheCodingInterview.Ch02_Pattern_SlidingWindow.P1_MaximumSumSubarrayOfSizeK.Java.Solution",
-            "projectName": "learning-computer-science"
+            "projectName": "learning-technical"
         },
         {
             "type": "java",

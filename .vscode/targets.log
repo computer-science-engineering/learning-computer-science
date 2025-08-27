@@ -76,7 +76,7 @@ ONEDRIVE = C:\Users\ripuhan\OneDrive - C3.ai, INC
 # environment
 POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Pro
 # makefile
-CURDIR := /g/dev/_my-projects/_orgs/computer-science-engineering/learning-computer-science
+CURDIR := /g/dev/_my-projects/_orgs/manastalukdar/learning-technical
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -172,7 +172,7 @@ USERDOMAIN = RUDRA
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-!G: = g:\dev\_my-projects\_orgs\computer-science-engineering\learning-computer-science
+!G: = g:\dev\_my-projects\_orgs\manastalukdar\learning-technical
 # environment
 OS = Windows_NT
 # environment

@@ -61,4 +61,4 @@ Strive for simplicity in your code and data structures. A simple, concise progra
 ## Notes
 
 1. [Geeks for Geeks - Boggle (Find all possible words in a board of characters) | Set 1](https://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/)
-1. [GitHub - Learning Computer Science -  WordSearchBoard](https://github.com/manastalukdar/learning-computer-science/tree/master/src/InterviewBit/src/Courses/Programming/Level8_Graphs/Problems/GraphTraversal/WordSearchBoard)
+1. [GitHub - Learning Computer Science -  WordSearchBoard](https://github.com/manastalukdar/learning-technical/tree/master/src/InterviewBit/src/Courses/Programming/Level8_Graphs/Problems/GraphTraversal/WordSearchBoard)

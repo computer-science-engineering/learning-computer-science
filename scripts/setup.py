@@ -14,7 +14,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'learning-computer-science'
+NAME = 'learning-technical'
 DESCRIPTION = 'Learning data structures, algorithms, machine learning and various computer science constructs by programming practice from resources around the web.'
 URL = 'https://github.com/manastalukdar/learning_computer-science'
 EMAIL = ''
