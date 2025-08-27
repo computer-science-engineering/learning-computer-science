@@ -1,0 +1,6 @@
+.vscode/.ropeproject
+node_modules
+__pycache__
+
+# scala
+.metals 

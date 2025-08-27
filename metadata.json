@@ -1,0 +1,34 @@
+{
+    "type": "Reading",
+    "name": "Building Microservices -  Designing Fine-Grained Systems",
+    "origin": {
+        "name": "Notes - Book",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Books",
+            "children": []
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Sam Neuman",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems",
+        "Cloud Computing",
+        "DevOps",
+        "Microservices"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
