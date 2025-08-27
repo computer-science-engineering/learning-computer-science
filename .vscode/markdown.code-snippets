@@ -1,0 +1,134 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Problem Definition": {
+		"scope": "markdown",
+		"prefix": "cse: problem-definition",
+		"body": [
+			"# Problem Definition",
+			"",
+			"## Description",
+			"",
+			"## Discussion",
+			"",
+			"### Approach",
+			"",
+			"#### Time Complexity",
+			"",
+			"#### Space Complexity",
+			"",
+			"### Alternate Approach 1",
+			"",
+			"#### Time Complexity - Alternate Approach 1",
+			"",
+			"#### Space Complexity - Alternate Approach 1",
+			"",
+			"## Notes",
+			"",
+			"## References",
+			""
+		]
+	},
+	"YouTube Video - ": {
+		"scope": "markdown",
+		"prefix": "cse: YouTube Video",
+		"body": [
+			"[YT Video -  - ]()"
+		]
+	},
+	"YouTube Video - Tushar Roy": {
+		"scope": "markdown",
+		"prefix": "cse: YouTube Video - Tushar Roy",
+		"body": [
+			"[YT Video - Tushar Roy - ]()"
+		]
+	},
+	"YouTube Video - Vivekanand Khyade": {
+		"scope": "markdown",
+		"prefix": "cse: YouTube Video - Vivekanand Khyade",
+		"body": [
+			"[YT Video - Vivekanand Khyade - ]()"
+		]
+	},
+	"Geeks for Geeks post": {
+		"scope": "markdown",
+		"prefix": "cse: Geeks for Geeks post",
+		"body": [
+			"[Geeks for Geeks - ]()"
+		]
+	},
+	"ProgramCreek post": {
+		"scope": "markdown",
+		"prefix": "cse: ProgramCreek post",
+		"body": [
+			"[ProgramCreek - ]()"
+		]
+	},
+	"LeetCode discussion": {
+		"scope": "markdown",
+		"prefix": "cse: LeetCode discussion",
+		"body": [
+			"[LeetCode discussion - ]()"
+		]
+	},
+	"LeetCode article": {
+		"scope": "markdown",
+		"prefix": "cse: LeetCode article",
+		"body": [
+			"[LeetCode article]()"
+		]
+	},
+	"LeetCode solution": {
+		"scope": "markdown",
+		"prefix": "cse: LeetCode solution",
+		"body": [
+			"[LeetCode solution]()"
+		]
+	},
+	"LeetCode top submission": {
+		"scope": "markdown",
+		"prefix": "cse: LeetCode sample submission",
+		"body": [
+			"LeetCode sample submission - X ms"
+		]
+	},
+	"GitHub": {
+		"scope": "markdown",
+		"prefix": "cse: GitHub",
+		"body": [
+			"[GitHub - ]()"
+		]
+	},
+	"StackOverflow": {
+		"scope": "markdown",
+		"prefix": "cse: StackOverflow",
+		"body": [
+			"[StackOverflow - ]()"
+		]
+	},
+	"PlantUml": {
+		"scope": "markdown",
+		"prefix": "cse: plantuml",
+		"body": [
+			"```plantuml",
+			"@startuml",
+			"@enduml",
+			"```"
+		]
+	}
+}
