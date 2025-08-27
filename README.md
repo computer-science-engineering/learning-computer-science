@@ -239,18 +239,16 @@ We welcome contributions! Here's how to get started:
 
 ### 🌐 External Links
 
-- 🔍 [**Sourcegraph**](https://sourcegraph.com/github.com/manastalukdar/learning-technical/) - Code exploration
-- 💬 [**Discord Community**](https://discord.gg/bv5FU8t) - Join our learning community
 - 📊 [**GitHub Projects**](https://github.com/manastalukdar/learning-technical/projects) - Project management
 
 ### 📚 Documentation
 
-| Document                                                             | Purpose                       |
-| -------------------------------------------------------------------- | ----------------------------- |
-| [📋 Requirements](./documentation/development/requirements.md)        | Development environment setup |
-| [🏗️ Architecture](./documentation/development/design-architecture.md) | System design and structure   |
-| [🔄 CI/CD](./documentation/development/ci-cd.md)                      | Build and deployment pipeline |
-| [📊 Metadata](./documentation/project/metadata.md)                    | Project statistics and badges |
+| Document                                                    | Purpose                       |
+| ----------------------------------------------------------- | ----------------------------- |
+| [📋 Requirements](./docs/development/requirements.md)        | Development environment setup |
+| [🏗️ Architecture](./docs/development/design-architecture.md) | System design and structure   |
+| [🔄 CI/CD](./docs/development/ci-cd.md)                      | Build and deployment pipeline |
+| [📊 Metadata](./docs/project/metadata.md)                    | Project statistics and badges |
 
 ## ⚠️ Important Notes
 

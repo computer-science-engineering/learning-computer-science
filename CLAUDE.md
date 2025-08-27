@@ -2,7 +2,7 @@
 
 ## Repository Overview
 
-This is a comprehensive **Learning Computer Science** repository containing coding interview problems, algorithms, data structures, and system design resources from multiple platforms and educational sources.
+This is a comprehensive **Learning Technical** repository containing coding interview problems, algorithms, data structures, and system design resources from multiple platforms and educational sources.
 
 ## Key Information
 
