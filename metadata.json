@@ -1,0 +1,34 @@
+{
+    "type": "Reading",
+    "name": "I Heart Logs: Event Data, Stream Processing, and Data Integration",
+    "origin": {
+        "name": "Notes - Book",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Books",
+            "children": []
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Jay Kreps",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems",
+        "Event Data",
+        "Data Integration",
+        "Stream Processing"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
