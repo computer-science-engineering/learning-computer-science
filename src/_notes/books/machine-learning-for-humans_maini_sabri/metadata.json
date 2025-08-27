@@ -1,0 +1,36 @@
+{
+    "type": "Reading",
+    "name": "Machine Learning for Humans",
+    "origin": {
+        "name": "Notes - Book",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Books",
+            "children": []
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Vishal Maini",
+                "children": []
+            },
+            {
+                "name": "Samer Sabri",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Machine Learning",
+        "Artificial Intelligence"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
