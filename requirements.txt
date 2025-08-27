@@ -4,3 +4,4 @@ coverage<7.11 # manual enforcement for coveralls dependency: coveralls 1.9.2 has
 codacy-coverage
 codecov
 coveralls
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
