@@ -1,0 +1,26 @@
+{
+  "type": "Course",
+  "name": "System Design Interview",
+  "origin": {
+      "name": "ByteByteGo",
+      "link": "https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users"
+  },
+  "companies": [
+      "",
+      ""
+  ],
+  "categories": [{
+      "name": "Courses",
+      "children": [{
+          "name": "ByteByteGo - System Design Interview",
+          "children": []
+      }]
+  }],
+  "tags": [
+      ""
+  ],
+  "buckets": [
+      "",
+      ""
+  ]
+}
