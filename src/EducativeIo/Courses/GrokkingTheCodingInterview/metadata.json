@@ -1,0 +1,26 @@
+{
+    "type": "Course",
+    "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/collection/5668639101419520/5671464854355968"
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+        "name": "Courses",
+        "children": [{
+            "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+            "children": []
+        }]
+    }],
+    "tags": [
+        ""
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}

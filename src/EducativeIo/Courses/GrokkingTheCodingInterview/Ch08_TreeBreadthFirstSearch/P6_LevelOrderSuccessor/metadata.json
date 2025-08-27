@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Level Order Successor",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/7nO4VmA74Lr"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Easy",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Tree Breadth First Search",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Binary Tree", "Breadth First Search"],
+    "buckets": []
+}

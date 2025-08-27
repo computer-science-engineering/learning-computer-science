@@ -1,0 +1,6 @@
+{
+  "files.watcherExclude": {
+    "**/target": true
+  },
+  "c3.rootPackage": ""
+}

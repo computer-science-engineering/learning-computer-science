@@ -1,0 +1,33 @@
+{
+    "type": "Coding",
+    "name": "Search in a Sorted Infinite Array",
+    "origin": {
+        "name": "Educative",
+        "link": "https://www.educative.io/courses/grokking-the-coding-interview/B1ZW38kXJB2"
+    },
+    "companies": ["", ""],
+    "categories": [{
+            "name": "Courses",
+            "children": [{
+                "name": "Grokking the Coding Interview: Patterns for Coding Questions",
+                "children": []
+            }]
+        },
+        {
+            "name": "Difficulty",
+            "children": [{
+                "name": "Medium",
+                "children": []
+            }]
+        },
+        {
+            "name": "Pattern",
+            "children": [{
+                "name": "Modified Binary Search",
+                "children": []
+            }]
+        }
+    ],
+    "tags": ["Modified Binary Search"],
+    "buckets": []
+}

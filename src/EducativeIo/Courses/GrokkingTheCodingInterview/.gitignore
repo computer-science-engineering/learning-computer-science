@@ -1,0 +1,7 @@
+.class
+.metals
+.vscode/.ropeproject
+.project
+
+__pycache__
+null
