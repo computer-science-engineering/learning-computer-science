@@ -8,7 +8,7 @@ buildscript {
 }
 
 plugins {
-    id "org.sonarqube" version "5.0.0.4638"
+    id "org.sonarqube" version "6.2.0.5505"
     //id "com.github.nbaztec.coveralls-jacoco" version "1.2.15"
     //id 'com.github.kt3k.coveralls' version '2.12.0'
 }
@@ -23,8 +23,8 @@ repositories {
 ext.junit4Version        = '4.13.2'
 ext.junitVintageVersion  = '4.12.1'
 ext.junitPlatformVersion = '1.5.2'
-ext.junitJupiterVersion  = '5.10.2'
-ext.log4jVersion         = '2.23.1'
+ext.junitJupiterVersion  = '5.13.4'
+ext.log4jVersion         = '2.25.1'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -33,7 +33,7 @@ apply plugin: 'application'
 // https://stackoverflow.com/questions/46233314/gradle-android-jacoco-and-junit5
 apply plugin: 'jacoco'
 jacoco {
-    toolVersion = '0.8.12'
+    toolVersion = '0.8.13'
 }
 jacocoTestCoverageVerification {
     violationRules {

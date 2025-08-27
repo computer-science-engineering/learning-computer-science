@@ -12,9 +12,9 @@ version: 2.1
 # https://circleci.com/orbs/registry/?filterBy=all
 orbs:
   build-tools: circleci/build-tools@3.0.0
-  jq: circleci/jq@3.0.0
-  docker: circleci/docker@2.6.0 # needs jq above
-  node: circleci/node@5.3.0
+  jq: circleci/jq@3.0.2
+  docker: circleci/docker@3.0.0 # needs jq above
+  node: circleci/node@7.1.1
 
 jobs:
   download_from_code_climate:
@@ -44,7 +44,7 @@ jobs:
       # https://hub.docker.com/r/circleci/openjdk/
       # adoptopenjdk/openjdk15
       # https://circleci.com/developer/images/image/cimg/openjdk
-      - image: cimg/openjdk:21.0.2
+      - image: cimg/openjdk:21.0.8
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -139,7 +139,7 @@ jobs:
     <<: *defaults
     docker:
       # https://circleci.com/developer/images/image/cimg/python
-      - image: cimg/python:3.12.3
+      - image: cimg/python:3.13.7
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
           COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
@@ -203,7 +203,7 @@ jobs:
   upload_to_code_climate:
     <<: *defaults
     docker:
-      - image: cimg/python:3.12.3
+      - image: cimg/python:3.13.7
         environment:
           CC_TEST_REPORTER_ID: $CC_TEST_REPORTER_ID
     working_directory: ~/repo
