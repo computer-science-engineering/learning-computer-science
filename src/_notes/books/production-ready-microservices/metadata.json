@@ -1,0 +1,35 @@
+{
+    "type": "Reading",
+    "name": "Production-Ready Microservices",
+    "origin": {
+        "name": "Notes - Book",
+        "link": ""
+    },
+    "companies": [
+        "",
+        ""
+    ],
+    "categories": [{
+            "name": "Books",
+            "children": []
+        },
+        {
+            "name": "Authors",
+            "children": [{
+                "name": "Susan Fowler",
+                "children": []
+            }]
+        }
+    ],
+    "tags": [
+        "Distributed Systems",
+        "Cloud Computing",
+        "Microservices",
+        "DevOps",
+        "Site Reliability Engineering"
+    ],
+    "buckets": [
+        "",
+        ""
+    ]
+}
