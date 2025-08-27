@@ -1,0 +1,30 @@
+{
+  "type": "Reading",
+  "name": "Scaling Teams: Strategies for Building Successful Teams and Organizations",
+  "origin": {
+    "name": "Notes - Book",
+    "link": ""
+  },
+  "companies": ["", ""],
+  "categories": [
+    {
+      "name": "Books",
+      "children": []
+    },
+    {
+      "name": "Authors",
+      "children": [
+        {
+          "name": "Alexander Grosse",
+          "children": []
+        },
+        {
+          "name": "David Loftesness",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "tags": ["Engineering Leadership"],
+  "buckets": ["", ""]
+}
