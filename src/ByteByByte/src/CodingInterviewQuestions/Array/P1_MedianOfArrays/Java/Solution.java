@@ -16,21 +16,21 @@ public class Solution {
         int r = len1;
         //find the m1 so that nums1[m1] >= nums2[m2 - 1]
         while(l < r){
-            int m1 = l + (r - l) / 2;
-            int m2 = k - m1;
-            if (nums1[m1] < nums2[m2 - 1]) {
-                l = m1 + 1;
+            int nums1ArrayIndex = l + (r - l) / 2;
+            int nums2ArrayIndex = k - nums1ArrayIndex;
+            if (nums1[nums1ArrayIndex] < nums2[nums2ArrayIndex - 1]) {
+                l = nums1ArrayIndex + 1;
             } else {
-                r = m1;
+                r = nums1ArrayIndex;
             }
         }
-        int m1 = l;
-        int m2 = k - l;
-        int c1 = Math.max(m1 <= 0 ? Integer.MIN_VALUE : nums1[m1 - 1],
-                         m2 <= 0? Integer.MIN_VALUE: nums2[m2 - 1]);
+        int nums1ArrayIndex = l;
+        int nums2ArrayIndex = k - l;
+        int c1 = Math.max(nums1ArrayIndex <= 0 ? Integer.MIN_VALUE : nums1[nums1ArrayIndex - 1],
+                nums2ArrayIndex <= 0? Integer.MIN_VALUE: nums2[nums2ArrayIndex - 1]);
         if ((len1 + len2) % 2 ==1) return c1;
-        int c2 = Math.min(m1 >= len1 ? Integer.MAX_VALUE : nums1[m1],
-                         m2 >= len2 ? Integer.MAX_VALUE: nums2[m2]);
+        int c2 = Math.min(nums1ArrayIndex >= len1 ? Integer.MAX_VALUE : nums1[nums1ArrayIndex],
+                nums2ArrayIndex >= len2 ? Integer.MAX_VALUE: nums2[nums2ArrayIndex]);
         return (c1 + c2) / 2.0;
     }
 }
